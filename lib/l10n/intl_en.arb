@@ -1,0 +1,13 @@
+{
+  "tagline": "Welcome to ePhyLi!",
+  "welcomeText": "Welcome text",
+
+  "english": "English",
+  "greek": "Greek",
+  "italian": "Italian",
+  "french": "French",
+  "luxenbourgese": "Luxenbourgese",
+  "polish": "Polish",
+
+  "start": "Start"
+}

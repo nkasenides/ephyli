@@ -1,0 +1,73 @@
+import 'package:ephyli/widgets/language_selection_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../theme/app_images.dart';
+import '../theme/themes.dart';
+
+class WelcomeScreen extends StatefulWidget {
+  const WelcomeScreen({super.key});
+
+  @override
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: Themes.standardPadding,
+          child: Column(
+            children: [
+
+              //Ephyli logo
+              Image.asset(AppImages.logo, width: MediaQuery.of(context).size.width * 2/3,),
+
+              const Gap(30),
+
+              //Tagline
+              Text(
+                AppLocalizations.of(context)!.tagline,
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+
+              const Gap(40),
+
+              //Text info:
+              Text(
+                AppLocalizations.of(context)!.welcomeText,
+              ),
+
+              const Gap(30),
+
+              LanguageSelectionWidget(
+                refreshParentCallback: () {
+                  setState(() {});
+                },
+              ),
+
+              const Gap(30),
+
+              SizedBox(
+                height: 50,
+                width: MediaQuery.of(context).size.width * 2/3,
+                child: OutlinedButton(
+                  onPressed: () {
+                    //todo
+                  },
+                  child: Text(AppLocalizations.of(context)!.start.toUpperCase()),
+                ),
+              )
+
+
+            ],
+          ),
+        )
+      ),
+
+    );
+  }
+}

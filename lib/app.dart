@@ -1,15 +1,41 @@
+import 'package:ephyli/theme/themes.dart';
+import 'package:ephyli/utils/language.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'home_screen.dart';
+import 'screen/welcome_screen.dart';
 
-class EPhyLiApp extends StatelessWidget {
+class EPhyLiApp extends StatefulWidget {
   const EPhyLiApp({super.key});
+
+  @override
+  State<EPhyLiApp> createState() => _EPhyLiAppState();
+
+  static _EPhyLiAppState? of(BuildContext context) => context.findAncestorStateOfType<_EPhyLiAppState>();
+
+}
+
+class _EPhyLiAppState extends State<EPhyLiApp> {
+
+  void update() {
+    setState(() { });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "ePhyLi app",
-      home: HomeScreen(),
+      title: "ePhyLi",
+      home: const WelcomeScreen(),
+      theme: Themes.mainTheme,
+      locale: Language.getCurrentLocale(),
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: Language.allLocales,
     );
   }
 }
