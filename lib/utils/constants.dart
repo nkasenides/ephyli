@@ -1,0 +1,1 @@
+const String defaultAvatarData = '{"topType":0,"accessoriesType":0,"hairColor":0,"facialHairType":0,"facialHairColor":0,"clotheType":0,"eyeType":0,"eyebrowType":0,"mouthType":7,"skinColor":0,"clotheColor":0,"style":0,"graphicType":0}';

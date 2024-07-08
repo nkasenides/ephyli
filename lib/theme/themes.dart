@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 
 class Themes {
 
-  static final Color primaryColorDark = Color.fromARGB(255, 63, 42, 161);
-  static final Color primaryColor = Color.fromARGB(255, 211, 13, 136);
-  static final Color secondaryColor = Color.fromARGB(255, 255, 170, 1);
+  //Colors
+
+  static const Color primaryColorDark = Color.fromARGB(255, 63, 42, 161);
+  static const Color primaryColor = Color.fromARGB(255, 211, 13, 136);
+  static const Color secondaryColor = Color.fromARGB(255, 255, 170, 1);
+
+  //Paddings
 
   static const EdgeInsets standardPadding = EdgeInsets.all(15);
+
+  //Themes
 
   static final ThemeData mainTheme = ThemeData(
     primaryColor: primaryColor,
@@ -32,5 +38,16 @@ class Themes {
         )
     ),
   );
+
+  //Special buttons
+
+  static ButtonStyle bottomButtonStyle = ElevatedButton.styleFrom(
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.zero,
+    ),
+  );
+
+  //Sizing
+  static double bottomButtonHeight = 70;
 
 }

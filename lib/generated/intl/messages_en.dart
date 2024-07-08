@@ -22,14 +22,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "customizeAvatar":
+            MessageLookupByLibrary.simpleMessage("Customize your avatar"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
         "greek": MessageLookupByLibrary.simpleMessage("Greek"),
+        "invalidPersonName":
+            MessageLookupByLibrary.simpleMessage("Invalid name"),
         "italian": MessageLookupByLibrary.simpleMessage("Italian"),
         "luxenbourgese": MessageLookupByLibrary.simpleMessage("Luxenbourgese"),
+        "pleaseProvideAValue":
+            MessageLookupByLibrary.simpleMessage("Please provide a value"),
         "polish": MessageLookupByLibrary.simpleMessage("Polish"),
+        "proceed": MessageLookupByLibrary.simpleMessage("Proceed"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
-        "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text")
+        "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),
+        "whatIsYourName":
+            MessageLookupByLibrary.simpleMessage("What is your name?")
       };
 }

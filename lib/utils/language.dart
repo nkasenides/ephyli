@@ -94,6 +94,10 @@ class Language {
   static Locale parseToLocale(String locale) {
     if (locale.startsWith("en")) return englishLocale;
     if (locale.startsWith("el")) return greekLocale;
+    if (locale.startsWith("fr")) return franceLocale;
+    if (locale.startsWith("it")) return italyLocale;
+    if (locale.startsWith("lb")) return luxembourgLocale;
+    if (locale.startsWith("pl")) return polandLocale;
     throw Exception("Invalid language: $locale");
   }
 

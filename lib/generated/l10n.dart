@@ -139,6 +139,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Proceed`
+  String get proceed {
+    return Intl.message(
+      'Proceed',
+      name: 'proceed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is your name?`
+  String get whatIsYourName {
+    return Intl.message(
+      'What is your name?',
+      name: 'whatIsYourName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customize your avatar`
+  String get customizeAvatar {
+    return Intl.message(
+      'Customize your avatar',
+      name: 'customizeAvatar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please provide a value`
+  String get pleaseProvideAValue {
+    return Intl.message(
+      'Please provide a value',
+      name: 'pleaseProvideAValue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid name`
+  String get invalidPersonName {
+    return Intl.message(
+      'Invalid name',
+      name: 'invalidPersonName',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

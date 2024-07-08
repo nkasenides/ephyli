@@ -9,5 +9,11 @@
   "luxenbourgese": "Luxenbourgese",
   "polish": "Polish",
 
-  "start": "Start"
+  "start": "Start",
+  "proceed": "Proceed",
+  "whatIsYourName": "What is your name?",
+  "customizeAvatar": "Customize your avatar",
+  "pleaseProvideAValue": "Please provide a value",
+  "invalidPersonName": "Invalid name"
+
 }

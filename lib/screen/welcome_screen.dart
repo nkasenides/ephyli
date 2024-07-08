@@ -5,6 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../theme/app_images.dart';
 import '../theme/themes.dart';
+import 'onboard_name_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -51,16 +52,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
               const Gap(30),
 
+              //Start button
               SizedBox(
                 height: 50,
                 width: MediaQuery.of(context).size.width * 2/3,
-                child: OutlinedButton(
+                child: ElevatedButton(
                   onPressed: () {
-                    //todo
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const OnboardNameScreen(),)
+                    );
                   },
                   child: Text(AppLocalizations.of(context)!.start.toUpperCase()),
                 ),
-              )
+              ),
 
 
             ],

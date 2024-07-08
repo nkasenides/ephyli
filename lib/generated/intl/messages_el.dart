@@ -22,8 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "customizeAvatar":
+            MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
+        "invalidPersonName":
+            MessageLookupByLibrary.simpleMessage("Μη έγκυρο όνομα"),
+        "pleaseProvideAValue":
+            MessageLookupByLibrary.simpleMessage("Παρακαλώ δώστε μια τιμή"),
+        "proceed": MessageLookupByLibrary.simpleMessage("Συνέχεια"),
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
         "tagline":
-            MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!")
+            MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),
+        "whatIsYourName":
+            MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;")
       };
 }

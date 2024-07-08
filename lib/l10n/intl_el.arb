@@ -2,6 +2,11 @@
   "tagline": "Καλωσορίσατε στο ePhyLi!",
 
 
-  "start": "Ξεκινηστε"
+  "start": "Ξεκινηστε",
+  "proceed": "Συνέχεια",
+  "whatIsYourName": "Ποιό είναι το όνομά σας;",
+  "customizeAvatar": "Προσαρμόστε το avatar σας",
+  "pleaseProvideAValue": "Παρακαλώ δώστε μια τιμή",
+  "invalidPersonName": "Μη έγκυρο όνομα"
 
 }
