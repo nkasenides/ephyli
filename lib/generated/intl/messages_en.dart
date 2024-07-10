@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Customize your avatar"),
+        "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi Buddy"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Your ePhyLi buddy"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
@@ -35,10 +36,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid name"),
         "italian": MessageLookupByLibrary.simpleMessage("Italian"),
         "luxenbourgese": MessageLookupByLibrary.simpleMessage("Luxenbourgese"),
+        "news": MessageLookupByLibrary.simpleMessage("News"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Please provide a value"),
         "polish": MessageLookupByLibrary.simpleMessage("Polish"),
         "proceed": MessageLookupByLibrary.simpleMessage("Proceed"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),

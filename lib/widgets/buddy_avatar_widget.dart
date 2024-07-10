@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttermoji/fluttermojiFunctions.dart';
 
-class BuddyAvatar extends StatelessWidget {
+class PersonalizedAvatar extends StatelessWidget {
 
   final String avatarData;
+  final double backgroundRadius;
+  final double avatarSize;
 
-  const BuddyAvatar(this.avatarData, {super.key});
+  const PersonalizedAvatar(this.avatarData, {super.key, this.backgroundRadius = 75, this.avatarSize = 100});
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +16,13 @@ class BuddyAvatar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CircleAvatar(
-          radius: 75,
+          radius: backgroundRadius,
           backgroundColor: Colors.grey.shade100,
           child: ClipRRect(
             child: SvgPicture.string(
               FluttermojiFunctions().decodeFluttermojifromString(avatarData),
-              height: 100,
-              width: 100,
+              height: avatarSize,
+              width: avatarSize
             ),
           ),
         ),

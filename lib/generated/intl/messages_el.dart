@@ -26,13 +26,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
+        "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi φίλος"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Ο ePhyLi φίλος σας"),
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Μη έγκυρο όνομα"),
+        "news": MessageLookupByLibrary.simpleMessage("Ενημέρωση"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Παρακαλώ δώστε μια τιμή"),
         "proceed": MessageLookupByLibrary.simpleMessage("Συνέχεια"),
+        "profile": MessageLookupByLibrary.simpleMessage("Προφίλ"),
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),

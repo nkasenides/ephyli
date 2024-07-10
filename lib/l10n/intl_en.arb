@@ -15,7 +15,10 @@
   "customizeAvatar": "Customize your avatar",
   "pleaseProvideAValue": "Please provide a value",
   "invalidPersonName": "Invalid name",
+  "ePhyLiBuddy": "ePhyLi Buddy",
   "ePhyLiBuddyIntroHeadline": "Your ePhyLi buddy",
-  "buddyIntro": "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click 'Proceed'."
+  "buddyIntro": "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click 'Proceed'.",
+  "news": "News",
+  "profile": "Profile"
 
 }

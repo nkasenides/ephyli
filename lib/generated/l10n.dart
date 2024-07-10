@@ -190,6 +190,16 @@ class S {
     );
   }
 
+  /// `ePhyLi Buddy`
+  String get ePhyLiBuddy {
+    return Intl.message(
+      'ePhyLi Buddy',
+      name: 'ePhyLiBuddy',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Your ePhyLi buddy`
   String get ePhyLiBuddyIntroHeadline {
     return Intl.message(
@@ -205,6 +215,26 @@ class S {
     return Intl.message(
       'This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'.',
       name: 'buddyIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `News`
+  String get news {
+    return Intl.message(
+      'News',
+      name: 'news',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
       desc: '',
       args: [],
     );
