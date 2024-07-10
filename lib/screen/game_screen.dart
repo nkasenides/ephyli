@@ -1,11 +1,15 @@
+import 'package:ephyli/fragments/tutorial_step_1.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fragment_navigate/navigate-control.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../fragments/fragments.dart';
 import '../utils/pref_utils.dart';
 
 class GameScreen extends StatefulWidget {
@@ -31,6 +35,8 @@ class _GameScreenState extends State<GameScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    Fragments.navigator.setDrawerContext = context;
 
     return FutureBuilder(
       future: dataFuture,
@@ -80,14 +86,35 @@ class _GameScreenState extends State<GameScreen> {
                 tooltip: AppLocalizations.of(context)!.profile,
               ),
 
-
             ],
 
           ),
+
+          body: StreamBuilder(
+            stream: Fragments.navigator.outStreamFragment,
+            builder: (context, snapshot) {
+
+              if (snapshot.data != null) {
+                return DefaultTabController(
+                  length: snapshot.data!.bottom?.length ?? 1,
+                  child: ScreenNavigate(
+                    control: Fragments.navigator,
+                    child: AnimatedContainer(
+                      curve: Curves.bounceIn,
+                      duration: const Duration(milliseconds: 200),
+                      child: snapshot.data!.fragment,
+                    ),
+                  ),
+                );
+              }
+              return Container();
+            },
+          ),
+
         );
       },
     );
 
-
   }
+
 }
