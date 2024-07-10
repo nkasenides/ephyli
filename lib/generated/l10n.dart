@@ -189,6 +189,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Your ePhyLi buddy`
+  String get ePhyLiBuddyIntroHeadline {
+    return Intl.message(
+      'Your ePhyLi buddy',
+      name: 'ePhyLiBuddyIntroHeadline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click 'Proceed'.`
+  String get buddyIntro {
+    return Intl.message(
+      'This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'.',
+      name: 'buddyIntro',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

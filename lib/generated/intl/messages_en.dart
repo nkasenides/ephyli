@@ -22,8 +22,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "buddyIntro": MessageLookupByLibrary.simpleMessage(
+            "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Customize your avatar"),
+        "ePhyLiBuddyIntroHeadline":
+            MessageLookupByLibrary.simpleMessage("Your ePhyLi buddy"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
         "greek": MessageLookupByLibrary.simpleMessage("Greek"),

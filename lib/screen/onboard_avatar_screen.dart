@@ -7,6 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fluttermoji/fluttermoji.dart';
 import 'package:fluttermoji/fluttermojiCustomizer.dart';
 import 'package:fluttermoji/fluttermojiFunctions.dart';
+import 'package:fluttermoji/fluttermojiSaveWidget.dart';
 import 'package:fluttermoji/fluttermojiThemeData.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:gap/gap.dart';
@@ -42,8 +43,10 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
           children: [
 
             //Avatar:
-            FluttermojiCircleAvatar(
-              backgroundColor: Colors.grey.shade100,
+            SizedBox(
+              child: FluttermojiCircleAvatar(
+                backgroundColor: Colors.grey.shade100,
+              ),
             ),
 
             const Gap(40),
@@ -75,6 +78,9 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
                   //Save to prefs and move on:
                   var prefs = await SharedPreferences.getInstance();
                   prefs.setString(PrefUtils.user_avatar, avatarData).then((value) {
+
+                    debugPrint("Saved user avatar in prefs: ${avatarData}");
+
                     Navigator.push(
                       context,
                       PageRouteBuilder(

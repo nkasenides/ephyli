@@ -102,6 +102,9 @@ class _OnboardNameScreenState extends State<OnboardNameScreen> {
 
                       var prefs = await SharedPreferences.getInstance();
                       prefs.setString(PrefUtils.username, nameController.text).then((value) {
+
+                        debugPrint("Saved username in prefs: ${nameController.text}");
+
                         Navigator.push(
                           context,
                           PageRouteBuilder(
