@@ -22,7 +22,7 @@ class Themes {
         backgroundColor: primaryColorDark,
         foregroundColor: Colors.white,
         elevation: 3,
-        textStyle: const TextStyle(fontSize: 18),
+        textStyle: const TextStyle(fontSize: 14),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         )
@@ -31,7 +31,7 @@ class Themes {
     outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
             foregroundColor: primaryColorDark,
-            textStyle: const TextStyle(fontSize: 18),
+            textStyle: const TextStyle(fontSize: 14),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             )

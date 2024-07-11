@@ -24,21 +24,38 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
+        "buddy_description": MessageLookupByLibrary.simpleMessage(
+            "Μπορείτε επίσης να με καλέσετε εάν χρειάζεστε βοήθεια με μια δραστηριότητα. Μπορώ να σας παράσχω επιπλέον βοήθεια ή συμβουλές."),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi φίλος"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Ο ePhyLi φίλος σας"),
+        "exploreChallenges": MessageLookupByLibrary.simpleMessage(
+            "Εντάξει, ας εξερευνήσουμε τις προκλήσεις!"),
+        "glossary": MessageLookupByLibrary.simpleMessage("Γλωσσάρι"),
+        "glossary_description": MessageLookupByLibrary.simpleMessage(
+            "Μπορείτε να βρείτε ορολογία που σχετίζεται με τον Φυσικό Γραμματισμό στο Γλωσσάρι."),
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Μη έγκυρο όνομα"),
         "news": MessageLookupByLibrary.simpleMessage("Ενημέρωση"),
+        "news_description": MessageLookupByLibrary.simpleMessage(
+            "Εδώ μπορείτε να διαβάσετε άρθρα, αναρτήσεις και άλλα σχετικά με τον Φυσικό Γραμματισμό."),
+        "next": MessageLookupByLibrary.simpleMessage("Επόμενο"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Παρακαλώ δώστε μια τιμή"),
         "proceed": MessageLookupByLibrary.simpleMessage("Συνέχεια"),
         "profile": MessageLookupByLibrary.simpleMessage("Προφίλ"),
+        "profile_description": MessageLookupByLibrary.simpleMessage(
+            "Μπορείτε επίσης να διαχειριστείτε το προφίλ και τις προτιμήσεις σας εδώ."),
+        "ready_letsgo": MessageLookupByLibrary.simpleMessage("Ναι, πάμε!"),
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),
+        "tutorial_text": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ήρθατε στο ePhyLi, το ταξίδι σας στον Φυσικό Γραμματισμό πρόκειται να ξεκινήσει!\n\nΞεκινήστε μια μοναδική αποστολή για να μεταμορφώσετε τη ζωή σας μέσω της γνώσης, της δραστηριότητας και της κοινότητας. Περιηγηθείτε στις προκλήσεις και ξεκλειδώστε τα μυστικά ενός υγιεινού τρόπου ζωής. Το καθήκον σας δεν είναι απλώς να παίξετε αλλά να εξελιχθείτε, μαθαίνοντας για τη σωματική υγεία και ευεξία. Λύστε εργασίες και προκλήσεις, κάντε σημαντικές επιλογές και σχεδιάστε την πρόοδό σας σε έναν ελκυστικό κόσμο όπου κάθε βήμα μετράει για τον απώτερο στόχο σας: να κατακτήσετε τον Φυσικό Γραμματισμό.\n\nΕίστε έτοιμοι να ξεκινήσετε την περιπέτειά σας;"),
+        "tutorial_text_buddy": MessageLookupByLibrary.simpleMessage(
+            "Γεια, είμαι ο φίλος σας στο ePhyLi, ένας εικονικός σύντροφος που έχει σχεδιαστεί για να σας καθοδηγεί και να σας βοηθά σε όλη τη διάρκεια του παιχνιδιού. Επιτρέψτε μου να σας παρουσιάσω το παιχνίδι με ένα σύντομο σεμινάριο."),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;")
       };

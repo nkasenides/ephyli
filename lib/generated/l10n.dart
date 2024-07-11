@@ -220,6 +220,16 @@ class S {
     );
   }
 
+  /// `You can also call me if you need help with an activity. I can provide extra help or hints.`
+  String get buddy_description {
+    return Intl.message(
+      'You can also call me if you need help with an activity. I can provide extra help or hints.',
+      name: 'buddy_description',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `News`
   String get news {
     return Intl.message(
@@ -230,11 +240,111 @@ class S {
     );
   }
 
+  /// `Here you can read news articles, posts, and more, related to Physical Literacy.`
+  String get news_description {
+    return Intl.message(
+      'Here you can read news articles, posts, and more, related to Physical Literacy.',
+      name: 'news_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Glossary`
+  String get glossary {
+    return Intl.message(
+      'Glossary',
+      name: 'glossary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can find terminology related to Physical Literacy in the Glossary.`
+  String get glossary_description {
+    return Intl.message(
+      'You can find terminology related to Physical Literacy in the Glossary.',
+      name: 'glossary_description',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Profile`
   String get profile {
     return Intl.message(
       'Profile',
       name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can also manage your profile and preferences here.`
+  String get profile_description {
+    return Intl.message(
+      'You can also manage your profile and preferences here.',
+      name: 'profile_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to ePhyLi, your journey into Physical Literacy is going to start!\n\nEmbark on a unique mission to transform your life through knowledge, activity, and community. Navigate through challenges, and unlock the secrets of a healthy lifestyle. Your task is not just to play but to evolve, learning about physical health and well-being. Solve tasks and challenges, make impactful choices, and chart your progress in an engaging world where every step counts towards your ultimate goal: mastering Physical Literacy.\n\nReady to begin your adventure?`
+  String get tutorial_text {
+    return Intl.message(
+      'Welcome to ePhyLi, your journey into Physical Literacy is going to start!\n\nEmbark on a unique mission to transform your life through knowledge, activity, and community. Navigate through challenges, and unlock the secrets of a healthy lifestyle. Your task is not just to play but to evolve, learning about physical health and well-being. Solve tasks and challenges, make impactful choices, and chart your progress in an engaging world where every step counts towards your ultimate goal: mastering Physical Literacy.\n\nReady to begin your adventure?',
+      name: 'tutorial_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes, let's go!`
+  String get ready_letsgo {
+    return Intl.message(
+      'Yes, let\'s go!',
+      name: 'ready_letsgo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hi, I am your ePhyLi buddy, a virtual companion designed to guide and assist you throughout the game. Let me introduce you to the game with a brief tutorial.`
+  String get tutorial_text_buddy {
+    return Intl.message(
+      'Hi, I am your ePhyLi buddy, a virtual companion designed to guide and assist you throughout the game. Let me introduce you to the game with a brief tutorial.',
+      name: 'tutorial_text_buddy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! Now I am going to explain how you can start playing. The game consists of several challenges that you must complete in order.\n\nI have already unlocked the first challenge for you. Once you complete a challenge, the next will be unlocked. Each challenge will reward you with points, which can help you level up your avatar. You can also gather badges through the challenges, or various other activities, by interacting with the various features of the app.`
+  String get tutorialTextChallenges {
+    return Intl.message(
+      'Well done! Now I am going to explain how you can start playing. The game consists of several challenges that you must complete in order.\n\nI have already unlocked the first challenge for you. Once you complete a challenge, the next will be unlocked. Each challenge will reward you with points, which can help you level up your avatar. You can also gather badges through the challenges, or various other activities, by interacting with the various features of the app.',
+      name: 'tutorialTextChallenges',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ok, let's explore the challenges!`
+  String get exploreChallenges {
+    return Intl.message(
+      'Ok, let\'s explore the challenges!',
+      name: 'exploreChallenges',
       desc: '',
       args: [],
     );

@@ -12,21 +12,16 @@ class PersonalizedAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CircleAvatar(
-          radius: backgroundRadius,
-          backgroundColor: Colors.grey.shade100,
-          child: ClipRRect(
-            child: SvgPicture.string(
-              FluttermojiFunctions().decodeFluttermojifromString(avatarData),
-              height: avatarSize,
-              width: avatarSize
-            ),
-          ),
+    return CircleAvatar(
+      radius: backgroundRadius,
+      backgroundColor: Colors.grey.shade100,
+      child: ClipRRect(
+        child: SvgPicture.string(
+          FluttermojiFunctions().decodeFluttermojifromString(avatarData),
+          height: avatarSize,
+          width: avatarSize
         ),
-      ],
+      ),
     );
   }
 }

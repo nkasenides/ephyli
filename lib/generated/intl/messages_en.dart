@@ -24,26 +24,45 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
+        "buddy_description": MessageLookupByLibrary.simpleMessage(
+            "You can also call me if you need help with an activity. I can provide extra help or hints."),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Customize your avatar"),
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi Buddy"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Your ePhyLi buddy"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "exploreChallenges": MessageLookupByLibrary.simpleMessage(
+            "Ok, let\'s explore the challenges!"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
+        "glossary": MessageLookupByLibrary.simpleMessage("Glossary"),
+        "glossary_description": MessageLookupByLibrary.simpleMessage(
+            "You can find terminology related to Physical Literacy in the Glossary."),
         "greek": MessageLookupByLibrary.simpleMessage("Greek"),
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Invalid name"),
         "italian": MessageLookupByLibrary.simpleMessage("Italian"),
         "luxenbourgese": MessageLookupByLibrary.simpleMessage("Luxenbourgese"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
+        "news_description": MessageLookupByLibrary.simpleMessage(
+            "Here you can read news articles, posts, and more, related to Physical Literacy."),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Please provide a value"),
         "polish": MessageLookupByLibrary.simpleMessage("Polish"),
         "proceed": MessageLookupByLibrary.simpleMessage("Proceed"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "profile_description": MessageLookupByLibrary.simpleMessage(
+            "You can also manage your profile and preferences here."),
+        "ready_letsgo": MessageLookupByLibrary.simpleMessage("Yes, let\'s go!"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
+        "tutorialTextChallenges": MessageLookupByLibrary.simpleMessage(
+            "Well done! Now I am going to explain how you can start playing. The game consists of several challenges that you must complete in order.\n\nI have already unlocked the first challenge for you. Once you complete a challenge, the next will be unlocked. Each challenge will reward you with points, which can help you level up your avatar. You can also gather badges through the challenges, or various other activities, by interacting with the various features of the app."),
+        "tutorial_text": MessageLookupByLibrary.simpleMessage(
+            "Welcome to ePhyLi, your journey into Physical Literacy is going to start!\n\nEmbark on a unique mission to transform your life through knowledge, activity, and community. Navigate through challenges, and unlock the secrets of a healthy lifestyle. Your task is not just to play but to evolve, learning about physical health and well-being. Solve tasks and challenges, make impactful choices, and chart your progress in an engaging world where every step counts towards your ultimate goal: mastering Physical Literacy.\n\nReady to begin your adventure?"),
+        "tutorial_text_buddy": MessageLookupByLibrary.simpleMessage(
+            "Hi, I am your ePhyLi buddy, a virtual companion designed to guide and assist you throughout the game. Let me introduce you to the game with a brief tutorial."),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("What is your name?")

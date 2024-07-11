@@ -2,6 +2,7 @@ import 'package:ephyli/fragments/tutorial_step_1.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
+import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,6 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../fragments/fragments.dart';
+import '../utils/feature_explorer.dart';
 import '../utils/pref_utils.dart';
 
 class GameScreen extends StatefulWidget {
@@ -30,6 +32,15 @@ class _GameScreenState extends State<GameScreen> {
   @override
   void initState() {
     super.initState();
+
+    //TODO REMOVE!
+    FeatureDiscovery.clearPreferences(context, <String>{
+      FeatureExplorer.newsFeatureID,
+      FeatureExplorer.glossaryFeatureID,
+      FeatureExplorer.profileFeatureID,
+      FeatureExplorer.buddyFeatureID,
+    });
+
     dataFuture = _getData();
   }
 
@@ -47,43 +58,112 @@ class _GameScreenState extends State<GameScreen> {
             foregroundColor: Colors.white,
             leading: snapshot.hasData ? SizedBox(
               height: 50,
-              child: IconButton(
-                icon: PersonalizedAvatar(
+              child: DescribedFeatureOverlay(
+                featureId: FeatureExplorer.buddyFeatureID,
+                tapTarget: PersonalizedAvatar(
                   buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
                   avatarSize: 25,
                   backgroundRadius: 15,
                 ),
-                onPressed: () {
-                  //TODO - Implement
+                title: Text(AppLocalizations.of(context)!.ePhyLiBuddy),
+                description: Text(AppLocalizations.of(context)!.buddy_description),
+                barrierDismissible: false,
+                backgroundDismissible: false,
+                backgroundColor: Themes.secondaryColor,
+                textColor: Colors.black,
+                onComplete: () async {
+                  debugPrint("Feature discovered!");
+                  return true;
                 },
-                tooltip: AppLocalizations.of(context)!.ePhyLiBuddy,
+
+                child: IconButton(
+                  icon: PersonalizedAvatar(
+                    buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
+                    avatarSize: 25,
+                    backgroundRadius: 15,
+                  ),
+                  onPressed: () {
+                    //TODO - Implement
+                  },
+                  tooltip: AppLocalizations.of(context)!.ePhyLiBuddy,
+                ),
               ),
             ) : const Icon(Icons.account_circle),
 
             actions: [
 
-              IconButton(
-                icon: const Icon(Icons.newspaper_rounded),
-                onPressed: () {
-                  //TODO
+              //NEWS:
+              DescribedFeatureOverlay(
+                featureId: FeatureExplorer.newsFeatureID,
+                tapTarget: const Icon(Icons.newspaper_rounded),
+                title: Text(AppLocalizations.of(context)!.news),
+                description: Text(AppLocalizations.of(context)!.news_description),
+                barrierDismissible: false,
+                backgroundDismissible: false,
+                backgroundColor: Themes.secondaryColor,
+                textColor: Colors.black,
+                onComplete: () async {
+                  debugPrint("Feature discovered!");
+                  return true;
                 },
-                tooltip: AppLocalizations.of(context)!.news,
+
+                child: IconButton(
+                  icon: const Icon(Icons.newspaper_rounded),
+                  onPressed: () {
+                    //TODO
+                  },
+                  tooltip: AppLocalizations.of(context)!.news,
+                ),
               ),
 
-              IconButton(
-                icon: const Icon(Icons.text_snippet_rounded),
-                onPressed: () {
-                  //TODO
+              //GLOSSARY
+              DescribedFeatureOverlay(
+                featureId: FeatureExplorer.glossaryFeatureID,
+                tapTarget: const Icon(Icons.text_snippet_rounded),
+                title: Text(AppLocalizations.of(context)!.glossary),
+                description: Text(AppLocalizations.of(context)!.glossary_description),
+                barrierDismissible: false,
+                backgroundDismissible: false,
+                backgroundColor: Themes.secondaryColor,
+                textColor: Colors.black,
+                onComplete: () async {
+                  debugPrint("Feature discovered!");
+                  return true;
                 },
-                tooltip: AppLocalizations.of(context)!.news,
+
+                child: IconButton(
+                  icon: const Icon(Icons.text_snippet_rounded),
+                  onPressed: () {
+                    //TODO
+                  },
+                  tooltip: AppLocalizations.of(context)!.glossary,
+                ),
               ),
 
-              IconButton(
-                icon: const Icon(Icons.person_rounded),
-                onPressed: () {
-                  //TODO
+
+              //PROFILE
+              DescribedFeatureOverlay(
+                featureId: FeatureExplorer.profileFeatureID,
+                tapTarget: const Icon(Icons.person_rounded),
+                title: Text(AppLocalizations.of(context)!.profile),
+                description: Text(AppLocalizations.of(context)!.profile_description),
+                barrierDismissible: false,
+                backgroundDismissible: false,
+                backgroundColor: Themes.secondaryColor,
+                textColor: Colors.black,
+                onComplete: () async {
+                  debugPrint("Feature discovered!");
+                  Fragments.navigator.putPosit(key: Fragments.TUTORIAL_STEP_3_KEY);
+                  return true;
                 },
-                tooltip: AppLocalizations.of(context)!.profile,
+
+                child: IconButton(
+                  icon: const Icon(Icons.person_rounded),
+                  onPressed: () {
+                    //TODO
+                  },
+                  tooltip: AppLocalizations.of(context)!.profile,
+                ),
               ),
 
             ],

@@ -4,10 +4,8 @@ import 'package:chat_bubbles/bubbles/bubble_normal_image.dart';
 import 'package:chat_bubbles/bubbles/bubble_special_one.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
-import 'package:ephyli/utils/feature_explorer.dart';
 import 'package:ephyli/utils/pref_utils.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
-import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -17,15 +15,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/chat_bubble.dart';
 import 'fragments.dart';
 
-class TutorialStep2 extends StatefulWidget {
+class TutorialStep3 extends StatefulWidget {
 
-  const TutorialStep2({super.key});
+  const TutorialStep3({super.key});
 
   @override
-  State<TutorialStep2> createState() => _TutorialStep2State();
+  State<TutorialStep3> createState() => _TutorialStep3State();
 }
 
-class _TutorialStep2State extends State<TutorialStep2> {
+class _TutorialStep3State extends State<TutorialStep3> {
 
   late Future<SharedPreferences> future;
   bool messageShown = false;
@@ -66,9 +64,9 @@ class _TutorialStep2State extends State<TutorialStep2> {
                       child: AnimatedTextKit(
                         animatedTexts: [
                           TypewriterAnimatedText(
-                            AppLocalizations.of(context)!.tutorial_text_buddy,
+                            AppLocalizations.of(context)!.tutorialTextChallenges,
                             textStyle: const TextStyle(color: Colors.white,),
-                            speed: const Duration(milliseconds: 50),
+                            speed: Duration(milliseconds: 50),
                           ),
                         ],
                         displayFullTextOnTap: true,
@@ -93,17 +91,9 @@ class _TutorialStep2State extends State<TutorialStep2> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     ElevatedButton(
-                      child: Text(AppLocalizations.of(context)!.next),
+                      child: Text(AppLocalizations.of(context)!.exploreChallenges),
                       onPressed: () {
-                        FeatureDiscovery.discoverFeatures(
-                          context,
-                          const <String>{
-                            FeatureExplorer.newsFeatureID,
-                            FeatureExplorer.glossaryFeatureID,
-                            FeatureExplorer.profileFeatureID,
-                            FeatureExplorer.buddyFeatureID,
-                          },
-                        );
+                        Fragments.navigator.putPosit(key: Fragments.CHALLENGES_KEY);
                       },
                     ),
                   ],

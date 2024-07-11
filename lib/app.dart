@@ -1,8 +1,10 @@
 import 'package:ephyli/screen/game_screen.dart';
 import 'package:ephyli/screen/splash_screen.dart';
 import 'package:ephyli/theme/themes.dart';
+import 'package:ephyli/utils/feature_explorer.dart';
 import 'package:ephyli/utils/language.dart';
 import 'package:ephyli/utils/pref_utils.dart';
+import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -41,30 +43,32 @@ class _EPhyLiAppState extends State<EPhyLiApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "ePhyLi",
-      home: FutureBuilder(
-        future: dataFuture,
-        builder: (context, snapshot) {
-          if (snapshot.hasData && !snapshot.hasError) {
-            bool onboarded = snapshot.data!.getBool(PrefUtils.onboarding_completed) ?? false;
-            if (onboarded) {
-              return const GameScreen();
+    return FeatureDiscovery(
+      child: MaterialApp(
+        title: "ePhyLi",
+        home: FutureBuilder(
+          future: dataFuture,
+          builder: (context, snapshot) {
+            if (snapshot.hasData && !snapshot.hasError) {
+              bool onboarded = snapshot.data!.getBool(PrefUtils.onboarding_completed) ?? false;
+              if (onboarded) {
+                return const GameScreen();
+              }
+              return const WelcomeScreen();
             }
-            return const WelcomeScreen();
-          }
-          return const SplashScreen();
-        },
+            return const SplashScreen();
+          },
+        ),
+        theme: Themes.mainTheme,
+        locale: Language.getCurrentLocale(),
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: Language.allLocales,
       ),
-      theme: Themes.mainTheme,
-      locale: Language.getCurrentLocale(),
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: Language.allLocales,
     );
   }
 }
