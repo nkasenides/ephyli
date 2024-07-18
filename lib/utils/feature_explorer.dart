@@ -1,8 +1,8 @@
 class FeatureExplorer {
 
-  static const String newsFeatureID = "news";
-  static const String glossaryFeatureID = "glossary";
-  static const String profileFeatureID = "profile";
-  static const String buddyFeatureID = "buddy";
+  static const String newsFeatureID = "feature_news";
+  static const String glossaryFeatureID = "feature_glossary";
+  static const String profileFeatureID = "feature_profile";
+  static const String buddyFeatureID = "feature_buddy";
 
 }

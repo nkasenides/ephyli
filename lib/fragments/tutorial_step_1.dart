@@ -6,12 +6,14 @@ import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/utils/pref_utils.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
+import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../utils/feature_explorer.dart';
 import '../widgets/chat_bubble.dart';
 import 'fragments.dart';
 
@@ -35,6 +37,12 @@ class _TutorialStep1State extends State<TutorialStep1> {
   @override
   void initState() {
     future = getData();
+    FeatureDiscovery.clearPreferences(context, <String>{
+      FeatureExplorer.newsFeatureID,
+      FeatureExplorer.glossaryFeatureID,
+      FeatureExplorer.profileFeatureID,
+      FeatureExplorer.buddyFeatureID,
+    });
     super.initState();
   }
 
@@ -45,61 +53,63 @@ class _TutorialStep1State extends State<TutorialStep1> {
       future: future,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return Padding(
-            padding: Themes.standardPadding,
-            child: Column(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+          return SingleChildScrollView(
+            child: Padding(
+              padding: Themes.standardPadding,
+              child: Column(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
 
-                    PersonalizedAvatar(
-                      buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
-                      backgroundRadius: 25,
-                      avatarSize: 35,
-                    ),
+                      PersonalizedAvatar(
+                        buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
+                        backgroundRadius: 25,
+                        avatarSize: 35,
+                      ),
 
-                    ChatBubble(
-                      margin: const EdgeInsets.only(left: 50),
-                      child: AnimatedTextKit(
-                        animatedTexts: [
-                          TypewriterAnimatedText(
-                            AppLocalizations.of(context)!.tutorial_text,
-                            textStyle: const TextStyle(color: Colors.white,),
-                            speed: Duration(milliseconds: 50),
-                          ),
-                        ],
-                        displayFullTextOnTap: true,
-                        isRepeatingAnimation: false,
-                        onFinished: () {
-                          setState(() {
-                            messageShown = true;
-                          });
-                        },
-                        onTap: () {
-                          setState(() {
-                            messageShown = true;
-                          });
+                      ChatBubble(
+                        margin: const EdgeInsets.only(left: 50),
+                        child: AnimatedTextKit(
+                          animatedTexts: [
+                            TypewriterAnimatedText(
+                              AppLocalizations.of(context)!.tutorial_text,
+                              textStyle: const TextStyle(color: Colors.white,),
+                              speed: Duration(milliseconds: 50),
+                            ),
+                          ],
+                          displayFullTextOnTap: true,
+                          isRepeatingAnimation: false,
+                          onFinished: () {
+                            setState(() {
+                              messageShown = true;
+                            });
+                          },
+                          onTap: () {
+                            setState(() {
+                              messageShown = true;
+                            });
+                          },
+                        ),
+                      )
+
+                    ],
+                  ),
+
+                  messageShown ? Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      ElevatedButton(
+                        child: Text(AppLocalizations.of(context)!.ready_letsgo),
+                        onPressed: () {
+                          Fragments.navigator.putPosit(key: Fragments.TUTORIAL_STEP_2_KEY);
                         },
                       ),
-                    )
+                    ],
+                  ) : Container(),
 
-                  ],
-                ),
-
-                messageShown ? Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    ElevatedButton(
-                      child: Text(AppLocalizations.of(context)!.ready_letsgo),
-                      onPressed: () {
-                        Fragments.navigator.putPosit(key: Fragments.TUTORIAL_STEP_2_KEY);
-                      },
-                    ),
-                  ],
-                ) : Container(),
-
-              ],
+                ],
+              ),
             ),
           );
         }

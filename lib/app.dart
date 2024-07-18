@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:ephyli/model/game_badge.dart';
 import 'package:ephyli/screen/game_screen.dart';
 import 'package:ephyli/screen/splash_screen.dart';
 import 'package:ephyli/theme/themes.dart';
@@ -49,6 +52,16 @@ class _EPhyLiAppState extends State<EPhyLiApp> {
         home: FutureBuilder(
           future: dataFuture,
           builder: (context, snapshot) {
+
+            //Load or initialize the badges:
+            GameBadge.loadBadgesFromPrefs()
+            .onError((error, stackTrace) {
+              debugPrint("Badge load failed, initializing now.");
+              GameBadge.initializeGameBadges(context);
+              GameBadge.saveBadgesToPrefs();
+            },);
+
+
             if (snapshot.hasData && !snapshot.hasError) {
               bool onboarded = snapshot.data!.getBool(PrefUtils.onboarding_completed) ?? false;
               if (onboarded) {

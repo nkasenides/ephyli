@@ -349,6 +349,86 @@ class S {
       args: [],
     );
   }
+
+  /// `These are the challenges you must complete. Each of these challenges may consist of multiple activities, and once you complete all activities in a challenge, I will unlock the next challenge for you. Always remember to use my help if you get stuck in an activity, and remember to use the resources in the news and glossary sections.\n\nOur tutorial is finished. I think you are ready to get started!`
+  String get challengesTextTutorial {
+    return Intl.message(
+      'These are the challenges you must complete. Each of these challenges may consist of multiple activities, and once you complete all activities in a challenge, I will unlock the next challenge for you. Always remember to use my help if you get stuck in an activity, and remember to use the resources in the news and glossary sections.\n\nOur tutorial is finished. I think you are ready to get started!',
+      name: 'challengesTextTutorial',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have completed %1 challenges so far. Would you like to try the next challenge?`
+  String get challengesTextNormal {
+    return Intl.message(
+      'You have completed %1 challenges so far. Would you like to try the next challenge?',
+      name: 'challengesTextNormal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OK`
+  String get ok {
+    return Intl.message(
+      'OK',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Badge collected`
+  String get newBadgeTitle {
+    return Intl.message(
+      'Badge collected',
+      name: 'newBadgeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Congratulations! You have received a new badge. Well done!`
+  String get newBadgeText {
+    return Intl.message(
+      'Congratulations! You have received a new badge. Well done!',
+      name: 'newBadgeText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View badges`
+  String get viewBadges {
+    return Intl.message(
+      'View badges',
+      name: 'viewBadges',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tutorial Badge`
+  String get tutorialBadgeTitle {
+    return Intl.message(
+      'Tutorial Badge',
+      name: 'tutorialBadgeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This badge is awarded to players who have completed the tutorial.`
+  String get tutorialBadgeDescription {
+    return Intl.message(
+      'This badge is awarded to players who have completed the tutorial.',
+      name: 'tutorialBadgeDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

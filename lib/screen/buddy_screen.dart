@@ -160,7 +160,7 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
   }
 
   void _nextPage() {
-    if (_currentPageIndex < avatarData.length - 1) {
+    if (_currentPageIndex < buddyAvatars.length - 1) {
       _currentPageIndex++;
       _updateCurrentPageIndex(_currentPageIndex);
     }

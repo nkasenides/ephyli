@@ -32,15 +32,6 @@ class _GameScreenState extends State<GameScreen> {
   @override
   void initState() {
     super.initState();
-
-    //TODO REMOVE!
-    FeatureDiscovery.clearPreferences(context, <String>{
-      FeatureExplorer.newsFeatureID,
-      FeatureExplorer.glossaryFeatureID,
-      FeatureExplorer.profileFeatureID,
-      FeatureExplorer.buddyFeatureID,
-    });
-
     dataFuture = _getData();
   }
 
@@ -58,6 +49,8 @@ class _GameScreenState extends State<GameScreen> {
             foregroundColor: Colors.white,
             leading: snapshot.hasData ? SizedBox(
               height: 50,
+
+              //Buddy:
               child: DescribedFeatureOverlay(
                 featureId: FeatureExplorer.buddyFeatureID,
                 tapTarget: PersonalizedAvatar(
@@ -72,7 +65,7 @@ class _GameScreenState extends State<GameScreen> {
                 backgroundColor: Themes.secondaryColor,
                 textColor: Colors.black,
                 onComplete: () async {
-                  debugPrint("Feature discovered!");
+                  debugPrint("Feature discovered - Buddy");
                   return true;
                 },
 
@@ -103,7 +96,7 @@ class _GameScreenState extends State<GameScreen> {
                 backgroundColor: Themes.secondaryColor,
                 textColor: Colors.black,
                 onComplete: () async {
-                  debugPrint("Feature discovered!");
+                  debugPrint("Feature discovered - News");
                   return true;
                 },
 
@@ -127,7 +120,7 @@ class _GameScreenState extends State<GameScreen> {
                 backgroundColor: Themes.secondaryColor,
                 textColor: Colors.black,
                 onComplete: () async {
-                  debugPrint("Feature discovered!");
+                  debugPrint("Feature discovered - Glossary");
                   return true;
                 },
 
@@ -152,7 +145,7 @@ class _GameScreenState extends State<GameScreen> {
                 backgroundColor: Themes.secondaryColor,
                 textColor: Colors.black,
                 onComplete: () async {
-                  debugPrint("Feature discovered!");
+                  debugPrint("Feature discovered - Profile");
                   Fragments.navigator.putPosit(key: Fragments.TUTORIAL_STEP_3_KEY);
                   return true;
                 },
@@ -172,17 +165,22 @@ class _GameScreenState extends State<GameScreen> {
 
           body: StreamBuilder(
             stream: Fragments.navigator.outStreamFragment,
-            builder: (context, snapshot) {
+            builder: (context, streamSnapshot) {
+              if (streamSnapshot.data != null) {
 
-              if (snapshot.data != null) {
+                //If the tutorial has been completed, start at the challenges screen.
+                if (snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false) {
+                  Fragments.navigator.putPosit(key: Fragments.CHALLENGES_KEY);
+                }
+
                 return DefaultTabController(
-                  length: snapshot.data!.bottom?.length ?? 1,
+                  length: streamSnapshot.data!.bottom?.length ?? 1,
                   child: ScreenNavigate(
                     control: Fragments.navigator,
                     child: AnimatedContainer(
                       curve: Curves.bounceIn,
                       duration: const Duration(milliseconds: 200),
-                      child: snapshot.data!.fragment,
+                      child: streamSnapshot.data!.fragment,
                     ),
                   ),
                 );

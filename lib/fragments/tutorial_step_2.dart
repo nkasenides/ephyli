@@ -95,15 +95,17 @@ class _TutorialStep2State extends State<TutorialStep2> {
                     ElevatedButton(
                       child: Text(AppLocalizations.of(context)!.next),
                       onPressed: () {
+
                         FeatureDiscovery.discoverFeatures(
                           context,
                           const <String>{
+                            FeatureExplorer.buddyFeatureID,
                             FeatureExplorer.newsFeatureID,
                             FeatureExplorer.glossaryFeatureID,
                             FeatureExplorer.profileFeatureID,
-                            FeatureExplorer.buddyFeatureID,
                           },
                         );
+
                       },
                     ),
                   ],
