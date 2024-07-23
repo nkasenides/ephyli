@@ -1,7 +1,8 @@
 class AppImages {
 
   //Logo:
-  static const String logo = "assets/img/ephyli_logo.jpg";
+  static const String logo = "assets/img/ephyli_logo.png";
+  static const String logoBlackAndWhite = "assets/img/ephyli_logo_bw.png";
 
   //Countries:
   static const String uk = "assets/img/united-kingdom.png";

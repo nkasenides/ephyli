@@ -31,10 +31,9 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.only(
-            top: 50,
-            bottom: 15,
             left: 15,
             right: 15
         ),

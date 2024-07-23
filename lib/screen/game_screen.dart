@@ -24,6 +24,10 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
 
   late Future<SharedPreferences> dataFuture;
+  bool buddyFeatureEnabled = false;
+  bool newsFeatureEnabled = false;
+  bool glossaryFeatureEnabled = false;
+  bool profileFeatureEnabled = false;
 
   Future<SharedPreferences> _getData() async {
     return await SharedPreferences.getInstance();
@@ -43,6 +47,19 @@ class _GameScreenState extends State<GameScreen> {
     return FutureBuilder(
       future: dataFuture,
       builder: (context, snapshot) {
+
+        if (snapshot.connectionState != ConnectionState.done) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        }
+
+        var prefs = snapshot.data!;
+        buddyFeatureEnabled = prefs.containsKey(FeatureExplorer.buddyFeatureID);
+        newsFeatureEnabled = prefs.containsKey(FeatureExplorer.newsFeatureID);
+        glossaryFeatureEnabled = prefs.containsKey(FeatureExplorer.glossaryFeatureID);
+        profileFeatureEnabled = prefs.containsKey(FeatureExplorer.profileFeatureID);
+
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Themes.primaryColorDark,
@@ -66,6 +83,7 @@ class _GameScreenState extends State<GameScreen> {
                 textColor: Colors.black,
                 onComplete: () async {
                   debugPrint("Feature discovered - Buddy");
+                  buddyFeatureEnabled = true;
                   return true;
                 },
 
@@ -74,10 +92,11 @@ class _GameScreenState extends State<GameScreen> {
                     buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
                     avatarSize: 25,
                     backgroundRadius: 15,
+                    isEnabled: buddyFeatureEnabled,
                   ),
-                  onPressed: () {
+                  onPressed: buddyFeatureEnabled ? () {
                     //TODO - Implement
-                  },
+                  } : null,
                   tooltip: AppLocalizations.of(context)!.ePhyLiBuddy,
                 ),
               ),
@@ -97,14 +116,15 @@ class _GameScreenState extends State<GameScreen> {
                 textColor: Colors.black,
                 onComplete: () async {
                   debugPrint("Feature discovered - News");
+                  newsFeatureEnabled = true;
                   return true;
                 },
 
                 child: IconButton(
                   icon: const Icon(Icons.newspaper_rounded),
-                  onPressed: () {
+                  onPressed: newsFeatureEnabled ? () {
                     //TODO
-                  },
+                  } : null,
                   tooltip: AppLocalizations.of(context)!.news,
                 ),
               ),
@@ -121,14 +141,15 @@ class _GameScreenState extends State<GameScreen> {
                 textColor: Colors.black,
                 onComplete: () async {
                   debugPrint("Feature discovered - Glossary");
+                  glossaryFeatureEnabled = true;
                   return true;
                 },
 
                 child: IconButton(
                   icon: const Icon(Icons.text_snippet_rounded),
-                  onPressed: () {
+                  onPressed: glossaryFeatureEnabled ? () {
                     //TODO
-                  },
+                  } : null,
                   tooltip: AppLocalizations.of(context)!.glossary,
                 ),
               ),
@@ -146,15 +167,16 @@ class _GameScreenState extends State<GameScreen> {
                 textColor: Colors.black,
                 onComplete: () async {
                   debugPrint("Feature discovered - Profile");
+                  profileFeatureEnabled = true; //TODO - Not working correctly, profile is not enabled on time.
                   Fragments.navigator.putPosit(key: Fragments.TUTORIAL_STEP_3_KEY);
                   return true;
                 },
 
                 child: IconButton(
                   icon: const Icon(Icons.person_rounded),
-                  onPressed: () {
+                  onPressed: profileFeatureEnabled ? () {
                     //TODO
-                  },
+                  } : null,
                   tooltip: AppLocalizations.of(context)!.profile,
                 ),
               ),

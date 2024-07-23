@@ -47,10 +47,9 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.only(
-            top: 50,
-            bottom: 15,
             left: 15,
             right: 15
         ),
@@ -69,6 +68,8 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
               AppLocalizations.of(context)!.buddyIntro,
             ),
 
+            const Gap(20),
+
             Stack(
               alignment: Alignment.bottomCenter,
               children: [
@@ -81,11 +82,11 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
                     controller: _pageController,
                     onPageChanged: _handlePageViewChanged,
                     children: [
-                      PersonalizedAvatar(buddyAvatars[0]),
-                      PersonalizedAvatar(buddyAvatars[1]),
-                      PersonalizedAvatar(buddyAvatars[2]),
-                      PersonalizedAvatar(buddyAvatars[3]),
-                      PersonalizedAvatar(buddyAvatars[4]),
+                      PersonalizedAvatar(buddyAvatars[0], avatarSize: 150),
+                      PersonalizedAvatar(buddyAvatars[1], avatarSize: 150),
+                      PersonalizedAvatar(buddyAvatars[2], avatarSize: 150),
+                      PersonalizedAvatar(buddyAvatars[3], avatarSize: 150),
+                      PersonalizedAvatar(buddyAvatars[4], avatarSize: 150),
                     ],
                   ),
                 ),
