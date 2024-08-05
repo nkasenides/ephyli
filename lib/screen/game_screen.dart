@@ -24,10 +24,7 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
 
   late Future<SharedPreferences> dataFuture;
-  bool buddyFeatureEnabled = false;
-  bool newsFeatureEnabled = false;
-  bool glossaryFeatureEnabled = false;
-  bool profileFeatureEnabled = false;
+  bool navBarFeaturesEnabled = false;
 
   Future<SharedPreferences> _getData() async {
     return await SharedPreferences.getInstance();
@@ -55,10 +52,7 @@ class _GameScreenState extends State<GameScreen> {
         }
 
         var prefs = snapshot.data!;
-        buddyFeatureEnabled = prefs.containsKey(FeatureExplorer.buddyFeatureID);
-        newsFeatureEnabled = prefs.containsKey(FeatureExplorer.newsFeatureID);
-        glossaryFeatureEnabled = prefs.containsKey(FeatureExplorer.glossaryFeatureID);
-        profileFeatureEnabled = prefs.containsKey(FeatureExplorer.profileFeatureID);
+        navBarFeaturesEnabled = prefs.getBool(PrefUtils.navBarFeaturesEnabled) ?? false;
 
         return Scaffold(
           appBar: AppBar(
@@ -83,7 +77,6 @@ class _GameScreenState extends State<GameScreen> {
                 textColor: Colors.black,
                 onComplete: () async {
                   debugPrint("Feature discovered - Buddy");
-                  buddyFeatureEnabled = true;
                   return true;
                 },
 
@@ -92,9 +85,9 @@ class _GameScreenState extends State<GameScreen> {
                     buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
                     avatarSize: 25,
                     backgroundRadius: 15,
-                    isEnabled: buddyFeatureEnabled,
+                    isEnabled: navBarFeaturesEnabled,
                   ),
-                  onPressed: buddyFeatureEnabled ? () {
+                  onPressed: navBarFeaturesEnabled ? () {
                     //TODO - Implement
                   } : null,
                   tooltip: AppLocalizations.of(context)!.ePhyLiBuddy,
@@ -116,13 +109,12 @@ class _GameScreenState extends State<GameScreen> {
                 textColor: Colors.black,
                 onComplete: () async {
                   debugPrint("Feature discovered - News");
-                  newsFeatureEnabled = true;
                   return true;
                 },
 
                 child: IconButton(
                   icon: const Icon(Icons.newspaper_rounded),
-                  onPressed: newsFeatureEnabled ? () {
+                  onPressed: navBarFeaturesEnabled ? () {
                     //TODO
                   } : null,
                   tooltip: AppLocalizations.of(context)!.news,
@@ -141,13 +133,12 @@ class _GameScreenState extends State<GameScreen> {
                 textColor: Colors.black,
                 onComplete: () async {
                   debugPrint("Feature discovered - Glossary");
-                  glossaryFeatureEnabled = true;
                   return true;
                 },
 
                 child: IconButton(
                   icon: const Icon(Icons.text_snippet_rounded),
-                  onPressed: glossaryFeatureEnabled ? () {
+                  onPressed: navBarFeaturesEnabled ? () {
                     //TODO
                   } : null,
                   tooltip: AppLocalizations.of(context)!.glossary,
@@ -167,14 +158,14 @@ class _GameScreenState extends State<GameScreen> {
                 textColor: Colors.black,
                 onComplete: () async {
                   debugPrint("Feature discovered - Profile");
-                  profileFeatureEnabled = true; //TODO - Not working correctly, profile is not enabled on time.
+                  enableNavBarFeatures(prefs);
                   Fragments.navigator.putPosit(key: Fragments.TUTORIAL_STEP_3_KEY);
                   return true;
                 },
 
                 child: IconButton(
                   icon: const Icon(Icons.person_rounded),
-                  onPressed: profileFeatureEnabled ? () {
+                  onPressed: navBarFeaturesEnabled ? () {
                     //TODO
                   } : null,
                   tooltip: AppLocalizations.of(context)!.profile,
@@ -215,6 +206,14 @@ class _GameScreenState extends State<GameScreen> {
       },
     );
 
+  }
+
+  enableNavBarFeatures(SharedPreferences prefs) {
+    prefs.setBool(PrefUtils.navBarFeaturesEnabled, true).then((value) {
+      setState(() {
+        navBarFeaturesEnabled = true;
+      });
+    },);
   }
 
 }

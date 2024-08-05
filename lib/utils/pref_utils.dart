@@ -7,5 +7,6 @@ class PrefUtils {
   static const String onboarding_completed = "onboarding_completed_key"; //bool
   static const String tutorial_completed = "tutorial_completed_key"; //bool
   static const String badge_data = "badge_data_key"; //String
+  static const String navBarFeaturesEnabled = "navBarFeaturesEnabled_key"; //bool
 
 }

@@ -3,6 +3,7 @@ import 'package:chat_bubbles/bubbles/bubble_normal.dart';
 import 'package:chat_bubbles/bubbles/bubble_normal_image.dart';
 import 'package:chat_bubbles/bubbles/bubble_special_one.dart';
 import 'package:ephyli/model/game_badge_type.dart';
+import 'package:ephyli/theme/app_images.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/utils/pref_utils.dart';
@@ -31,7 +32,7 @@ class ChallengesFragment extends StatefulWidget {
 class _ChallengesFragmentState extends State<ChallengesFragment> {
   late Future<SharedPreferences> future;
   bool messageShown = false;
-  bool tutorialMode = true;
+  bool tutorialCompleted = false;
 
   Future<SharedPreferences> getData() async {
     return await SharedPreferences.getInstance();
@@ -44,6 +45,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
   }
 
   createTutorialView(AsyncSnapshot<SharedPreferences> snapshot) {
+    debugPrint("Tutorial view");
     return Column(
       children: [
         Column(
@@ -90,22 +92,13 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                     child: Text(AppLocalizations.of(context)!.ok),
                     onPressed: () {
 
-                      showDialog(context: context, builder: (context) {
-                        //Complete the tutorial:
-
-
-                        //Show dialog for badge:
-                        return UIUtils.createBadgeDialog(GameBadge.gameBadges[GameBadgeType.TUTORIAL_BADGE]!, context);
-                      },).then((value) {
-                        print("ha");
-
-                        //Update mode:
-                        snapshot.data!.setBool(PrefUtils.tutorial_completed, true).then((value) {
-                          setState(() { }); //todo not working...
+                      snapshot.data!.setBool(PrefUtils.tutorial_completed, true).then((value) {
+                        setState(() { });
+                        showDialog(context: context, builder: (context) {
+                          //Show dialog for badge:
+                          return UIUtils.createBadgeDialog(GameBadge.gameBadges[GameBadgeType.TUTORIAL_BADGE]!, context);
                         },);
-
                       },);
-
 
                     },
                   ),
@@ -117,96 +110,100 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
   }
 
   createNormalView(snapshot) {
-    return Column(children: [
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          PersonalizedAvatar(
-            buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
-            backgroundRadius: 25,
-            avatarSize: 35,
-          ),
-          ChatBubble(
-            margin: const EdgeInsets.only(left: 50),
-            child: AnimatedTextKit(
-              animatedTexts: [
-                TypewriterAnimatedText(
-                  AppLocalizations.of(context)!.challengesTextNormal,
-                  textStyle: const TextStyle(
-                    color: Colors.white,
-                  ),
-                  speed: const Duration(milliseconds: 5),
-                ),
-              ],
-              displayFullTextOnTap: true,
-              isRepeatingAnimation: false,
-              onFinished: () {
-                setState(() {
-                  //TODO
-                });
-              },
-              onTap: () {
-                setState(() {
-                  //TODO
-                });
-              },
+    debugPrint("Normal view");
+    return Container(
+      child: Column(children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            PersonalizedAvatar(
+              buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
+              backgroundRadius: 25,
+              avatarSize: 35,
             ),
-          )
-        ],
-      ),
-      messageShown ? Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                ElevatedButton(
-                  child: Text(AppLocalizations.of(context)!.ok),
-                  onPressed: () {
-                    //remove tutorial text and start challenge mode normally.
-                  },
-                ),
-              ],
+            ChatBubble(
+              margin: const EdgeInsets.only(left: 50),
+              child: AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    AppLocalizations.of(context)!.challengesTextNormal,
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                    ),
+                    speed: const Duration(milliseconds: 5),
+                  ),
+                ],
+                displayFullTextOnTap: true,
+                isRepeatingAnimation: false,
+                onFinished: () {
+                  setState(() {
+                    //TODO
+                  });
+                },
+                onTap: () {
+                  setState(() {
+                    //TODO
+                  });
+                },
+              ),
             )
-          : Container(),
-    ]);
+          ],
+        ),
+        messageShown ? Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ElevatedButton(
+                    child: Text(AppLocalizations.of(context)!.ready_letsgo),
+                    onPressed: () {
+                      setState(() { });
+                    },
+                  ),
+                ],
+              )
+            : Container(),
+      ]),
+    );
   }
 
   List<Challenge> challenges = [
     Challenge(
-        completedImage: Image.asset("assets/img/ephyli_logo.jpg"),
-        incompleteImage: Image.asset("assets/img/ephyli_logo.jpg"),
+        completedImage: Image.asset(AppImages.logo),
+        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
         description:
             "this is a descriptionasdkjfhalksdjfhalkjsdhflkajsdhflkajshdflkjahsdf",
         name: "Challenge 1"),
     Challenge(
-        completedImage: Image.asset("assets/img/ephyli_logo.jpg"),
-        incompleteImage: Image.asset("assets/img/ephyli_logo.jpg"),
+        completedImage: Image.asset(AppImages.logo),
+        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
         description: "this is a description",
         name: "Challenge 1"),
     Challenge(
-        completedImage: Image.asset("assets/img/ephyli_logo.jpg"),
-        incompleteImage: Image.asset("assets/img/ephyli_logo.jpg"),
+        completedImage: Image.asset(AppImages.logo),
+        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
         description: "this is a description",
         name: "Challenge 1"),
     Challenge(
-        completedImage: Image.asset("assets/img/ephyli_logo.jpg"),
-        incompleteImage: Image.asset("assets/img/ephyli_logo.jpg"),
+        completedImage: Image.asset(AppImages.logo),
+        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
         description: "this is a description",
         name: "Challenge 1"),
     Challenge(
-        completedImage: Image.asset("assets/img/ephyli_logo.jpg"),
-        incompleteImage: Image.asset("assets/img/ephyli_logo.jpg"),
+        completedImage: Image.asset(AppImages.logo),
+        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
         description: "this is a description",
         name: "Challenge 1"),
   ];
 
   @override
   Widget build(BuildContext context) {
+    debugPrint("build()");
     return FutureBuilder(
       future: future,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
 
-          tutorialMode = snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false;
-          tutorialMode = !tutorialMode;
+          tutorialCompleted = snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false;
+          debugPrint("tutorialCompleted: $tutorialCompleted");
 
           return Padding(
               padding: Themes.standardPadding,
@@ -214,7 +211,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                 children: [
 
                   Expanded(
-                    child: tutorialMode ? createTutorialView(snapshot)
+                    child: !tutorialCompleted ? createTutorialView(snapshot)
                         : createNormalView(snapshot),
                   ),
 
