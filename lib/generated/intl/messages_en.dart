@@ -27,8 +27,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "You can also call me if you need help with an activity. I can provide extra help or hints."),
+        "challengeLocked":
+            MessageLookupByLibrary.simpleMessage("This challenge is locked"),
+        "challengeLockedMessage": MessageLookupByLibrary.simpleMessage(
+            "This challenge is locked. Complete the previous challenges to unlock."),
         "challengesTextNormal": MessageLookupByLibrary.simpleMessage(
             "You have completed %1 out of %2 challenges so far. Would you like to try the next challenge?"),
+        "challengesTextNormalInitial": MessageLookupByLibrary.simpleMessage(
+            "It\'s time to get started! Would you like to try the next challenge?"),
         "challengesTextTutorial": MessageLookupByLibrary.simpleMessage(
             "These are the challenges you must complete. Each of these challenges may consist of multiple activities, and once you complete all activities in a challenge, I will unlock the next challenge for you. Always remember to use my help if you get stuck in an activity, and remember to use the resources in the news and glossary sections.\n\nOur tutorial is finished. I think you are ready to get started!"),
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
@@ -57,6 +63,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "news_description": MessageLookupByLibrary.simpleMessage(
             "Here you can read news articles, posts, and more, related to Physical Literacy."),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "nextChallengeUnlocked": MessageLookupByLibrary.simpleMessage(
+            "The next challenge has been unlocked."),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Please provide a value"),

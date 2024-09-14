@@ -113,6 +113,18 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
   createNormalView(snapshot) {
     debugPrint("Normal view");
+
+    int totalChallenges = Challenge.challenges.length;
+    int challengesCompleted = 0;
+
+    for (var challenge in Challenge.challenges) {
+      challenge.getNumOfCompletedActivities().then((value) {
+        if (value >= challenge.activityIDs.length) {
+          challengesCompleted++;
+        }
+      },);
+    }
+
     return Container(
       child: Column(children: [
         Column(
@@ -128,7 +140,13 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
               child: AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
-                    AppLocalizations.of(context)!.challengesTextNormal, //TODO - Replace %1 and %2 with values for completed challenges.
+
+                    challengesCompleted > 0 ?
+                    AppLocalizations.of(context)!.challengesTextNormal
+                        .replaceAll("%1", "$challengesCompleted")
+                        .replaceAll("%2", "$totalChallenges") :
+                    AppLocalizations.of(context)!.challengesTextNormalInitial,
+
                     textStyle: const TextStyle(
                       color: Colors.white,
                     ),
@@ -177,8 +195,6 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
           tutorialCompleted = snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false;
           debugPrint("tutorialCompleted: $tutorialCompleted");
-
-          List<String> completedActivities = snapshot.data!.getStringList(PrefUtils.activity_completion_key) ?? [];
 
           return Padding(
               padding: Themes.standardPadding,

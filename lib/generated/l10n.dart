@@ -430,6 +430,46 @@ class S {
     );
   }
 
+  /// `It's time to get started! Would you like to try the next challenge?`
+  String get challengesTextNormalInitial {
+    return Intl.message(
+      'It\'s time to get started! Would you like to try the next challenge?',
+      name: 'challengesTextNormalInitial',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The next challenge has been unlocked.`
+  String get nextChallengeUnlocked {
+    return Intl.message(
+      'The next challenge has been unlocked.',
+      name: 'nextChallengeUnlocked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This challenge is locked`
+  String get challengeLocked {
+    return Intl.message(
+      'This challenge is locked',
+      name: 'challengeLocked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This challenge is locked. Complete the previous challenges to unlock.`
+  String get challengeLockedMessage {
+    return Intl.message(
+      'This challenge is locked. Complete the previous challenges to unlock.',
+      name: 'challengeLockedMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tutorial Badge`
   String get tutorialBadgeTitle {
     return Intl.message(

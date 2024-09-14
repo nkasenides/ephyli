@@ -8,6 +8,7 @@ class PrefUtils {
   static const String tutorial_completed = "tutorial_completed_key"; //bool
   static const String badge_data = "badge_data_key"; //String
   static const String navBarFeaturesEnabled = "navBarFeaturesEnabled_key"; //bool
-  static const String activity_completion_key = "activity_completion_key"; //List
+  static const String activity_completion = "activity_completion_key"; //List
+  static const String unlocked_challenges = "unlocked_challenges_key"; //List
 
 }

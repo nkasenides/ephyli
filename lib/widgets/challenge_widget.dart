@@ -1,6 +1,7 @@
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/widgets/badge_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -37,7 +38,8 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
         ),
         borderRadius: BorderRadius.circular(5)
       ),
-      child: InkWell(
+      child: widget.challenge.unlocked ? InkWell(
+
         onTap: !widget.challenge.completed ? () {
           //TODO - Proceed with the next activity.
         } : null,
@@ -87,16 +89,31 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(AppLocalizations.of(context)!.completed, style: TextStyle(color: Colors.white),),
+                      Text(AppLocalizations.of(context)!.completed, style: const TextStyle(color: Colors.white),),
                       const Gap(10),
                       const Icon(Icons.check, color: Colors.white, size: 20,)
                     ],
                   ),
                 )
                 : Text("${widget.challenge.activityIDs.length} ${AppLocalizations.of(context)!.activities}",
-            style: TextStyle(color: Colors.grey),),
+            style: const TextStyle(color: Colors.grey),),
 
           ],
+        ),
+      ) : InkWell(
+        onTap: () {
+          Fluttertoast.showToast(msg: AppLocalizations.of(context)!.challengeLockedMessage, backgroundColor: Colors.red, textColor: Colors.white);
+        },
+        child: Padding(
+          padding: Themes.standardPadding,
+          child: Column(
+            children: [
+              const Gap(30),
+              Opacity(opacity: 0.5,child: Icon(Icons.lock, color: Colors.lime.shade900, size: 75),),
+              const Spacer(),
+              Text(AppLocalizations.of(context)!.challengeLocked, style: TextStyle(color: Colors.grey),),
+            ],
+          ),
         ),
       ),
     );
@@ -114,7 +131,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
   onActivityCompleted(context) {
     debugPrint("onActivityCompleted");
     SharedPreferences.getInstance().then((prefs) {
-      List<String> activityCompletionList = prefs.getStringList(PrefUtils.activity_completion_key) ?? [];
+      List<String> activityCompletionList = prefs.getStringList(PrefUtils.activity_completion) ?? [];
 
       bool challengeCompleted = true;
 
@@ -131,8 +148,26 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
           for (String badgeID in widget.challenge.badgeIDs) {
             var badge = GameBadge.findBadge(badgeID);
             if (badge != null) {
-              //Earn the badge for the challenge, and update the state of the UI:
+              //Earn the badge for the challenge
               badge.earn(context);
+
+              bool unlocksFutureChallenges = false;
+
+              //Unlock next challenge(s):
+              for (var nextChallengeID in widget.challenge.unlocksChallengesIDs) {
+                Challenge? nextChallenge = Challenge.findChallenge(nextChallengeID);
+                if (nextChallenge != null) {
+                  nextChallenge.unlock();
+                  unlocksFutureChallenges = true;
+                }
+              }
+
+              if (unlocksFutureChallenges) {
+                setState(() { });
+                Fluttertoast.showToast(
+                    msg: AppLocalizations.of(context)!.nextChallengeUnlocked);
+              }
+
             }
           }
         }

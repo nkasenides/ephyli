@@ -13,7 +13,9 @@ class Challenge {
   String descriptionRes;
   List<String> activityIDs;
   bool completed = false;
+  bool unlocked;
   List<String> badgeIDs;
+  List<String> unlocksChallengesIDs;
 
   Challenge({
     required this.id,
@@ -22,13 +24,17 @@ class Challenge {
     required this.nameRes,
     required this.descriptionRes,
     required this.activityIDs,
-    required this.badgeIDs
+    required this.badgeIDs,
+    required this.unlocksChallengesIDs,
+    this.unlocked = false,
   });
 
   static final List<Challenge> challenges = [
     challenge1,
     challenge2,
   ];
+
+  // * --------------- CHALLENGES
 
   static final Challenge challenge1 = Challenge(
     id: "challenge1",
@@ -42,7 +48,11 @@ class Challenge {
     ],
     badgeIDs: [
       "challenge1Badge"
-    ]
+    ],
+    unlocksChallengesIDs: [
+      "challenge2",
+    ],
+    unlocked: true
   );
 
   static final Challenge challenge2 = Challenge(
@@ -52,10 +62,26 @@ class Challenge {
       imageCompletedRes: AppImages.logo,
       imageIncompleteRes: AppImages.logoBlackAndWhite,
       activityIDs: [
+
       ],
       badgeIDs: [
+
+      ],
+      unlocksChallengesIDs: [
+
       ]
   );
+
+  static Challenge? findChallenge(String challengeID) {
+    for (Challenge c in challenges) {
+      if (c.id == challengeID) {
+        return c;
+      }
+    }
+    return null;
+  }
+
+  /*---------------------------------------------------------------------------*/
 
   //Completes an activity of a challenge.
   void completeActivity(String activityID) {
@@ -63,10 +89,10 @@ class Challenge {
     //Save completion to prefs:
     SharedPreferences.getInstance().then((prefs) {
       List<String> activityCompletionList = prefs.getStringList(
-          PrefUtils.activity_completion_key) ?? [];
+          PrefUtils.activity_completion) ?? [];
       activityCompletionList.add(activityID);
       prefs.setStringList(
-          PrefUtils.activity_completion_key, activityCompletionList);
+          PrefUtils.activity_completion, activityCompletionList);
     });
   }
 
@@ -75,10 +101,10 @@ class Challenge {
     debugPrint("resetActivity");
     SharedPreferences.getInstance().then((prefs) {
       List<String> activityCompletionList = prefs.getStringList(
-          PrefUtils.activity_completion_key) ?? [];
+          PrefUtils.activity_completion) ?? [];
       activityCompletionList.remove(activityID);
       prefs.setStringList(
-          PrefUtils.activity_completion_key, activityCompletionList);
+          PrefUtils.activity_completion, activityCompletionList);
     });
   }
 
@@ -86,18 +112,13 @@ class Challenge {
   Future<bool> isActivityCompleted(String activityID) async {
     var prefs = await SharedPreferences.getInstance();
     List<String> activityCompletionList =
-        prefs.getStringList(PrefUtils.activity_completion_key) ?? [];
+        prefs.getStringList(PrefUtils.activity_completion) ?? [];
     return activityCompletionList.contains(activityID);
   }
 
-  //Gets the completion of the challenge's activities as a %
-  Future<double> getProgress() async {
-    var prefs = await SharedPreferences.getInstance();
-    List<String> activityCompletionList =
-        prefs.getStringList(PrefUtils.activity_completion_key) ?? [];
-
+  //Gets how many activities have been completed in this challenge
+  Future<int> getNumOfCompletedActivities() async {
     //Count completed activities
-    int totalActivities = activityIDs.length;
     int completedActivities = 0;
 
     for (var activityID in activityIDs) {
@@ -106,9 +127,16 @@ class Challenge {
         completedActivities++;
       }
     }
+    return completedActivities;
+  }
 
-    //Translate into %:
-    return completedActivities / totalActivities;
+  //Unlocks a challenge
+  Future<void> unlock() async {
+    unlocked = true;
+    var prefs = await SharedPreferences.getInstance();
+    List<String> unlockedChallenges = prefs.getStringList(PrefUtils.unlocked_challenges) ?? [];
+    unlockedChallenges.add(id);
+    prefs.setStringList(PrefUtils.unlocked_challenges, unlockedChallenges);
   }
 
 }

@@ -27,8 +27,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε επίσης να με καλέσετε εάν χρειάζεστε βοήθεια με μια δραστηριότητα. Μπορώ να σας παράσχω επιπλέον βοήθεια ή συμβουλές."),
+        "challengeLocked": MessageLookupByLibrary.simpleMessage(
+            "Αυτή η πρόκληση είναι κλειδωμένη"),
+        "challengeLockedMessage": MessageLookupByLibrary.simpleMessage(
+            "Αυτή η πρόκληση είναι κλειδωμένη. Ολοκληρώστε τις προηγούμενες προκλήσεις για να την ξεκλειδώσετε."),
         "challengesTextNormal": MessageLookupByLibrary.simpleMessage(
             "Έχετε ολοκληρώσει %1 απο τις %2 προκλήσεις μέχρι στιγμής. Θέλετε να δοκιμάσετε την επόμενη πρόκληση;"),
+        "challengesTextNormalInitial": MessageLookupByLibrary.simpleMessage(
+            "Ώρα να ξεκινήσετε! Θα θέλατε να δοκιμάσετε την επόμενη πρόκληση;"),
         "challengesTextTutorial": MessageLookupByLibrary.simpleMessage(
             "Αυτές είναι οι προκλήσεις που πρέπει να ολοκληρώσετε. Κάθε μία από αυτές τις προκλήσεις μπορεί να αποτελείται από πολλές δραστηριότητες και μόλις ολοκληρώσετε όλες τις δραστηριότητες σε μια πρόκληση, θα ξεκλειδώσω την επόμενη πρόκληση. Να θυμάστε πάντα οτι μπορείτε να χρησιμοποιείτε τη βοήθειά μου εάν κολλήστε σε μια δραστηριότητα και να χρησιμοποιήσετε τα άρθρα νέων και το γλωσσάρι για να βρείτε απαντήσεις.\n\nΤο σεμινάριο μας ολοκληρώθηκε. Eίστε έτοιμοι να ξεκινήσετε!"),
         "completed": MessageLookupByLibrary.simpleMessage("Ολοκληρώθηκε"),
@@ -52,6 +58,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "news_description": MessageLookupByLibrary.simpleMessage(
             "Εδώ μπορείτε να διαβάσετε άρθρα, αναρτήσεις και άλλα σχετικά με τον Φυσικό Γραμματισμό."),
         "next": MessageLookupByLibrary.simpleMessage("Επόμενο"),
+        "nextChallengeUnlocked": MessageLookupByLibrary.simpleMessage(
+            "Η επόμενη πρόκληση ξεκλειδώθηκε."),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Παρακαλώ δώστε μια τιμή"),
