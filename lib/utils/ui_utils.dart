@@ -20,7 +20,7 @@ class UIUtils {
     confettiController.play();
 
     return AlertDialog(
-      title: Text(badge.name, textAlign: TextAlign.center,),
+      title: Text(badge.nameRes, textAlign: TextAlign.center,),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -46,7 +46,7 @@ class UIUtils {
 
           const Gap(20),
 
-          Text(badge.description, textAlign: TextAlign.center,),
+          Text(badge.descriptionRes, textAlign: TextAlign.center,),
 
 
         ],

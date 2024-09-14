@@ -32,13 +32,17 @@
   "tutorialTextChallenges": "Well done! Now I am going to explain how you can start playing. The game consists of several challenges that you must complete in order.\n\nI have already unlocked the first challenge for you. Once you complete a challenge, the next will be unlocked. Each challenge will reward you with points, which can help you level up your avatar. You can also gather badges through the challenges, or various other activities, by interacting with the various features of the app.",
   "exploreChallenges": "Ok, let's explore the challenges!",
   "challengesTextTutorial": "These are the challenges you must complete. Each of these challenges may consist of multiple activities, and once you complete all activities in a challenge, I will unlock the next challenge for you. Always remember to use my help if you get stuck in an activity, and remember to use the resources in the news and glossary sections.\n\nOur tutorial is finished. I think you are ready to get started!",
-  "challengesTextNormal": "You have completed %1 challenges so far. Would you like to try the next challenge?",
+  "challengesTextNormal": "You have completed %1 out of %2 challenges so far. Would you like to try the next challenge?",
   "ok": "OK",
   "newBadgeTitle": "Badge collected",
   "newBadgeText": "Congratulations! You have received a new badge. Well done!",
   "viewBadges": "View badges",
+  "completed": "Completed",
+  "activities": "activities",
 
   "tutorialBadgeTitle": "Tutorial Badge",
-  "tutorialBadgeDescription": "This badge is awarded to players who have completed the tutorial."
+  "tutorialBadgeDescription": "This badge is awarded to players who have completed the tutorial.",
+  "useBuddyBadgeTitle": "Buddy Badge",
+  "useBuddyBadgeDescription": "This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities."
 
 }

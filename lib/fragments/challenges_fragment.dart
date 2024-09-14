@@ -94,10 +94,12 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
                       snapshot.data!.setBool(PrefUtils.tutorial_completed, true).then((value) {
                         setState(() { });
-                        showDialog(context: context, builder: (context) {
-                          //Show dialog for badge:
-                          return UIUtils.createBadgeDialog(GameBadge.gameBadges[GameBadgeType.TUTORIAL_BADGE]!, context);
-                        },);
+                        GameBadge.tutorialBadge.earn(context);
+                        //TODO - Remove once confirmed working.
+                        // showDialog(context: context, builder: (context) {
+                        //   //Show dialog for badge:
+                        //   return UIUtils.createBadgeDialog(GameBadge.tutorialBadge, context);
+                        // },);
                       },);
 
                     },
@@ -126,7 +128,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
               child: AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
-                    AppLocalizations.of(context)!.challengesTextNormal,
+                    AppLocalizations.of(context)!.challengesTextNormal, //TODO - Replace %1 and %2 with values for completed challenges.
                     textStyle: const TextStyle(
                       color: Colors.white,
                     ),
@@ -165,35 +167,6 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
     );
   }
 
-  List<Challenge> challenges = [
-    Challenge(
-        completedImage: Image.asset(AppImages.logo),
-        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
-        description:
-            "this is a descriptionasdkjfhalksdjfhalkjsdhflkajsdhflkajshdflkjahsdf",
-        name: "Challenge 1"),
-    Challenge(
-        completedImage: Image.asset(AppImages.logo),
-        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
-        description: "this is a description",
-        name: "Challenge 1"),
-    Challenge(
-        completedImage: Image.asset(AppImages.logo),
-        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
-        description: "this is a description",
-        name: "Challenge 1"),
-    Challenge(
-        completedImage: Image.asset(AppImages.logo),
-        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
-        description: "this is a description",
-        name: "Challenge 1"),
-    Challenge(
-        completedImage: Image.asset(AppImages.logo),
-        incompleteImage: Image.asset(AppImages.logoBlackAndWhite),
-        description: "this is a description",
-        name: "Challenge 1"),
-  ];
-
   @override
   Widget build(BuildContext context) {
     debugPrint("build()");
@@ -204,6 +177,8 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
           tutorialCompleted = snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false;
           debugPrint("tutorialCompleted: $tutorialCompleted");
+
+          List<String> completedActivities = snapshot.data!.getStringList(PrefUtils.activity_completion_key) ?? [];
 
           return Padding(
               padding: Themes.standardPadding,
@@ -221,7 +196,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                     child: GridView.count(
                       // scrollDirection: Axis.horizontal,
                       crossAxisCount: 2,
-                      children: challenges.map((e) {
+                      children: Challenge.challenges.map((e) {
                         return ChallengeWidget(e);
                       }).toList(),
                     ),

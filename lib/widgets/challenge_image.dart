@@ -13,7 +13,9 @@ class ChallengeImage extends StatelessWidget {
       height: 75,
       child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
-          child: challenge.completed ? challenge.completedImage : challenge.incompleteImage
+          child: challenge.completed ?
+          Image.asset(challenge.imageCompletedRes) :
+          Image.asset(challenge.imageIncompleteRes)
       ),
     );
   }

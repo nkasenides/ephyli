@@ -1,4 +1,4 @@
-import 'package:ephyli/fragments/challenges.dart';
+import 'package:ephyli/fragments/challenges_fragment.dart';
 import 'package:ephyli/fragments/tutorial_step_1.dart';
 import 'package:ephyli/fragments/tutorial_step_2.dart';
 import 'package:ephyli/fragments/tutorial_step_3.dart';

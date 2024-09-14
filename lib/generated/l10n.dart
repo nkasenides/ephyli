@@ -360,10 +360,10 @@ class S {
     );
   }
 
-  /// `You have completed %1 challenges so far. Would you like to try the next challenge?`
+  /// `You have completed %1 out of %2 challenges so far. Would you like to try the next challenge?`
   String get challengesTextNormal {
     return Intl.message(
-      'You have completed %1 challenges so far. Would you like to try the next challenge?',
+      'You have completed %1 out of %2 challenges so far. Would you like to try the next challenge?',
       name: 'challengesTextNormal',
       desc: '',
       args: [],
@@ -410,6 +410,26 @@ class S {
     );
   }
 
+  /// `Completed`
+  String get completed {
+    return Intl.message(
+      'Completed',
+      name: 'completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `activities`
+  String get activities {
+    return Intl.message(
+      'activities',
+      name: 'activities',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tutorial Badge`
   String get tutorialBadgeTitle {
     return Intl.message(
@@ -425,6 +445,26 @@ class S {
     return Intl.message(
       'This badge is awarded to players who have completed the tutorial.',
       name: 'tutorialBadgeDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Buddy Badge`
+  String get useBuddyBadgeTitle {
+    return Intl.message(
+      'Buddy Badge',
+      name: 'useBuddyBadgeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities.`
+  String get useBuddyBadgeDescription {
+    return Intl.message(
+      'This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities.',
+      name: 'useBuddyBadgeDescription',
       desc: '',
       args: [],
     );

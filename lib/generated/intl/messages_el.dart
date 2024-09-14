@@ -22,14 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "activities": MessageLookupByLibrary.simpleMessage("Δραστηριότητες"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε επίσης να με καλέσετε εάν χρειάζεστε βοήθεια με μια δραστηριότητα. Μπορώ να σας παράσχω επιπλέον βοήθεια ή συμβουλές."),
         "challengesTextNormal": MessageLookupByLibrary.simpleMessage(
-            "Έχετε ολοκληρώσει %1 προκλήσεις μέχρι στιγμής. Θέλετε να δοκιμάσετε την επόμενη πρόκληση;"),
+            "Έχετε ολοκληρώσει %1 απο τις %2 προκλήσεις μέχρι στιγμής. Θέλετε να δοκιμάσετε την επόμενη πρόκληση;"),
         "challengesTextTutorial": MessageLookupByLibrary.simpleMessage(
             "Αυτές είναι οι προκλήσεις που πρέπει να ολοκληρώσετε. Κάθε μία από αυτές τις προκλήσεις μπορεί να αποτελείται από πολλές δραστηριότητες και μόλις ολοκληρώσετε όλες τις δραστηριότητες σε μια πρόκληση, θα ξεκλειδώσω την επόμενη πρόκληση. Να θυμάστε πάντα οτι μπορείτε να χρησιμοποιείτε τη βοήθειά μου εάν κολλήστε σε μια δραστηριότητα και να χρησιμοποιήσετε τα άρθρα νέων και το γλωσσάρι για να βρείτε απαντήσεις.\n\nΤο σεμινάριο μας ολοκληρώθηκε. Eίστε έτοιμοι να ξεκινήσετε!"),
+        "completed": MessageLookupByLibrary.simpleMessage("Ολοκληρώθηκε"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi φίλος"),

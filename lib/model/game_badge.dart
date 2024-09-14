@@ -1,94 +1,98 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../utils/pref_utils.dart';
-import 'game_badge_type.dart';
+import '../theme/app_images.dart';
+import '../utils/ui_utils.dart';
 
 class GameBadge {
 
-  final String name;
-  final String description;
-  final String imageCompletedResource;
-  final String imageIncompleteResource;
+  final String id;
+  final String nameRes;
+  final String descriptionRes;
+  final String imageCompletedRes;
+  final String imageIncompleteRes;
   bool isOwned = false;
 
   GameBadge({
-    required this.name,
-    required this.description,
-    required this.imageCompletedResource,
-    required this.imageIncompleteResource,
+    required this.id,
+    required this.nameRes,
+    required this.descriptionRes,
+    required this.imageCompletedRes,
+    required this.imageIncompleteRes,
   });
 
-  GameBadge.fromJson(Map<String, dynamic> json) :
-        name = json['name'] as String,
-        description = json['description'] as String,
-        imageCompletedResource = json["imageCompletedResource"] as String,
-        imageIncompleteResource = json["imageIncompleteResource"] as String
-  ;
+  static final List<GameBadge> gameBadges = [
 
-  Map<String, dynamic> toJson() => {
-    'name': name,
-    'description': description,
-    'imageCompletedResource': imageCompletedResource,
-    'imageIncompleteResource': imageIncompleteResource,
-  };
+    //Introductory badges:
+    tutorialBadge,
+    buddyBadge,
 
-  static final Map<GameBadgeType, GameBadge> gameBadges = {};
+    //Challenge badges:
+    challenge1Badge,
+  ];
 
-  static void initializeGameBadges(BuildContext context) {
-
-    gameBadges[GameBadgeType.TUTORIAL_BADGE] = GameBadge(
-      name: AppLocalizations.of(context)!.tutorialBadgeTitle,
-      description: AppLocalizations.of(context)!.tutorialBadgeDescription,
-      imageCompletedResource: "assets/img/greece.png",
-      imageIncompleteResource: "assets/img/france.png",
-    );
-
-  }
-
-  static void completeBadge(GameBadgeType badge) {
-    GameBadge? gameBadge = gameBadges[badge];
-    if (gameBadge != null) {
-      gameBadge.isOwned = true;
-      gameBadges[badge] = gameBadge;
-      saveBadgesToPrefs();
+  //Finds and returns a badge:
+  static GameBadge? findBadge(String badgeID) {
+    for (var badge in gameBadges) {
+      if (badge.id == badgeID) {
+        return badge;
+      }
     }
+    return null;
   }
 
-  static Future saveBadgesToPrefs() async {
-    //Convert to String -> GameBadge first:
-    Map<String, GameBadge> badgesMap = {};
-    gameBadges.forEach((key, value) {
-      badgesMap[key.toJson()] = value;
+  /// ---- BADGES ----*
+  /*-----------------------------------------------------------*/
+
+  //TODO - Customize the images of each of the badges.
+
+  static final GameBadge tutorialBadge = GameBadge(
+    id: "tutorialBadge",
+    nameRes: "tutorialBadgeTitle",
+    descriptionRes: "tutorialBadgeDescription",
+    imageCompletedRes: AppImages.logo,
+    imageIncompleteRes: AppImages.logoBlackAndWhite,
+  );
+
+  static final GameBadge buddyBadge = GameBadge(
+    id: "buddyBadge",
+    nameRes: "buddyBadgeTitle",
+    descriptionRes: "buddyBadgeDescription",
+    imageCompletedRes: AppImages.logo,
+    imageIncompleteRes: AppImages.logoBlackAndWhite,
+  );
+
+  static final GameBadge challenge1Badge = GameBadge(
+    id: "challenge1Badge",
+    nameRes: "challenge1Badge",
+    descriptionRes: "challenge1BadgeDescription",
+    imageCompletedRes: AppImages.logo,
+    imageIncompleteRes: AppImages.logoBlackAndWhite,
+  );
+
+  /*-----------------------------------------------------------*/
+
+  //Earns the player the badge by saving it into prefs and showing a dialog.
+  earn(BuildContext context) {
+    isOwned = true;
+    //Save badge earned to prefs:
+    SharedPreferences.getInstance().then((prefs) {
+      prefs.setBool("badge_$id", true).then((value) {
+        //Show UI dialog to congratulate player:
+        showDialog(context: context, builder: (context) {
+          //Show dialog for badge:
+          return UIUtils.createBadgeDialog(this, context);
+        },);
+      },
+      );
     },);
-
-    //Serialize and save to prefs:
-    String jsonData = jsonEncode(badgesMap);
-    debugPrint("Saved badges to prefs");
-    debugPrint(jsonData);
-    var prefs = await SharedPreferences.getInstance();
-    prefs.setString(PrefUtils.badge_data, jsonData);
   }
 
-  static Future loadBadgesFromPrefs() async {
+  //Checks if a badge is earned.
+  Future<bool> isEarned() async {
     var prefs = await SharedPreferences.getInstance();
-    String? jsonData = prefs.getString(PrefUtils.badge_data);
-
-    if (jsonData == null || jsonData.isEmpty) {
-      throw Exception("No badge data found!");
-    }
-
-    Map<String, dynamic> data = jsonDecode(jsonData);
-    gameBadges.clear();
-
-    data.forEach((key, value) {
-      final GameBadge badge = GameBadge.fromJson(value);
-      final GameBadgeType badgeType = GameBadgeOptionExtension.fromJson(key);
-      gameBadges[badgeType] = badge;
-    });
+    return prefs.getBool("badge_$id") ?? false;
   }
+
 
 }

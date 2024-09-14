@@ -15,8 +15,8 @@ class BadgeWidget extends StatelessWidget {
       child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: badge.isOwned ?
-          Image.asset(badge.imageCompletedResource)
-              : Image.asset(badge.imageIncompleteResource)
+          Image.asset(badge.imageCompletedRes) :
+          Image.asset(badge.imageIncompleteRes)
       ),
     );
   }

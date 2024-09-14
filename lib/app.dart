@@ -53,15 +53,6 @@ class _EPhyLiAppState extends State<EPhyLiApp> {
           future: dataFuture,
           builder: (context, snapshot) {
 
-            //Load or initialize the badges:
-            GameBadge.loadBadgesFromPrefs()
-            .onError((error, stackTrace) {
-              debugPrint("Badge load failed, initializing now.");
-              GameBadge.initializeGameBadges(context);
-              GameBadge.saveBadgesToPrefs();
-            },);
-
-
             if (snapshot.hasData && !snapshot.hasError) {
               bool onboarded = snapshot.data!.getBool(PrefUtils.onboarding_completed) ?? false;
               if (onboarded) {
