@@ -35,7 +35,21 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
   bool tutorialCompleted = false;
 
   Future<SharedPreferences> getData() async {
-    return await SharedPreferences.getInstance();
+    var prefs = await SharedPreferences.getInstance();
+
+    List<String> unlockedChallenges = prefs.getStringList(PrefUtils.unlocked_challenges) ?? [];
+
+    for (var e in Challenge.challenges) {
+      //Determine if challenge is unlocked:
+      if (unlockedChallenges.contains(e.id)) {
+        e.unlocked = true;
+      }
+
+      //Determine if challenge is completed:
+      e.completed = await e.isCompleted();
+    }
+
+    return prefs;
   }
 
   @override

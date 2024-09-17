@@ -130,6 +130,11 @@ class Challenge {
     return completedActivities;
   }
 
+  //Checks if all activities are completed.
+  Future<bool> isCompleted() async {
+    return (await getNumOfCompletedActivities()) >= activityIDs.length;
+  }
+
   //Unlocks a challenge
   Future<void> unlock() async {
     unlocked = true;
