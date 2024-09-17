@@ -1,4 +1,7 @@
 import 'package:ephyli/fragments/tutorial_step_1.dart';
+import 'package:ephyli/screen/glossary_screen.dart';
+import 'package:ephyli/screen/news_screen.dart';
+import 'package:ephyli/screen/profile_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
@@ -6,6 +9,7 @@ import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:fragment_navigate/navigate-control.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -88,7 +92,7 @@ class _GameScreenState extends State<GameScreen> {
                     isEnabled: navBarFeaturesEnabled,
                   ),
                   onPressed: navBarFeaturesEnabled ? () {
-                    //TODO - Implement
+                    Fluttertoast.showToast(msg: "TODO - Context specific action."); //TODO Change later
                   } : null,
                   tooltip: AppLocalizations.of(context)!.ePhyLiBuddy,
                 ),
@@ -115,7 +119,7 @@ class _GameScreenState extends State<GameScreen> {
                 child: IconButton(
                   icon: const Icon(Icons.newspaper_rounded),
                   onPressed: navBarFeaturesEnabled ? () {
-                    //TODO
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const NewsScreen(),));
                   } : null,
                   tooltip: AppLocalizations.of(context)!.news,
                 ),
@@ -139,7 +143,7 @@ class _GameScreenState extends State<GameScreen> {
                 child: IconButton(
                   icon: const Icon(Icons.text_snippet_rounded),
                   onPressed: navBarFeaturesEnabled ? () {
-                    //TODO
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const GlossaryScreen(),));
                   } : null,
                   tooltip: AppLocalizations.of(context)!.glossary,
                 ),
@@ -166,7 +170,7 @@ class _GameScreenState extends State<GameScreen> {
                 child: IconButton(
                   icon: const Icon(Icons.person_rounded),
                   onPressed: navBarFeaturesEnabled ? () {
-                    //TODO
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ProfileScreen(),));
                   } : null,
                   tooltip: AppLocalizations.of(context)!.profile,
                 ),
