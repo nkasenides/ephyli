@@ -125,7 +125,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
     );
   }
 
-  createNormalView(snapshot) {
+  createNormalView(AsyncSnapshot<SharedPreferences> snapshot) {
     debugPrint("Normal view");
 
     int totalChallenges = Challenge.challenges.length;
@@ -159,7 +159,8 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                     AppLocalizations.of(context)!.challengesTextNormal
                         .replaceAll("%1", "$challengesCompleted")
                         .replaceAll("%2", "$totalChallenges") :
-                    AppLocalizations.of(context)!.challengesTextNormalInitial,
+                    AppLocalizations.of(context)!.challengesTextNormalInitial
+                        .replaceAll("%1", snapshot.data!.getString(PrefUtils.username)!),
 
                     textStyle: const TextStyle(
                       color: Colors.white,

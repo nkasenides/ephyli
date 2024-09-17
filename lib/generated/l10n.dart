@@ -430,10 +430,10 @@ class S {
     );
   }
 
-  /// `It's time to get started! Would you like to try the next challenge?`
+  /// `Hey %1! It's time to get started! Would you like to try the next challenge?`
   String get challengesTextNormalInitial {
     return Intl.message(
-      'It\'s time to get started! Would you like to try the next challenge?',
+      'Hey %1! It\'s time to get started! Would you like to try the next challenge?',
       name: 'challengesTextNormalInitial',
       desc: '',
       args: [],

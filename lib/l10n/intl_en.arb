@@ -39,7 +39,7 @@
   "viewBadges": "View badges",
   "completed": "Completed",
   "activities": "activities",
-  "challengesTextNormalInitial": "It's time to get started! Would you like to try the next challenge?",
+  "challengesTextNormalInitial": "Hey %1! It's time to get started! Would you like to try the next challenge?",
   "nextChallengeUnlocked": "The next challenge has been unlocked.",
   "challengeLocked": "This challenge is locked",
   "challengeLockedMessage": "This challenge is locked. Complete the previous challenges to unlock.",
