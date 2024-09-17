@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "activities": MessageLookupByLibrary.simpleMessage("Δραστηριότητες"),
+        "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
+            "Αυτή η δραστηριότητα είναι κλειδωμένη. Ολοκληρώστε τις προηγούμενες δραστηριότητες για να την ξεκλειδώσετε."),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
@@ -43,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi φίλος"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Ο ePhyLi φίλος σας"),
+        "error":
+            MessageLookupByLibrary.simpleMessage("Έχει παρουσιαστεί σφάλμα."),
         "exploreChallenges": MessageLookupByLibrary.simpleMessage(
             "Εντάξει, ας εξερευνήσουμε τις προκλήσεις!"),
         "glossary": MessageLookupByLibrary.simpleMessage("Γλωσσάρι"),

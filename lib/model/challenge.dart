@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../theme/app_images.dart';
 import '../utils/pref_utils.dart';
+import 'activity.dart';
 
 class Challenge {
 
@@ -83,6 +84,18 @@ class Challenge {
 
   /*---------------------------------------------------------------------------*/
 
+  //Finds an activity using its ID.
+  static Activity? findActivity(String id) {
+    Activity? activity;
+    Activity.activities.forEach((key, value) {
+      if (key == id) {
+        activity = value;
+        return;
+      }
+    },);
+    return activity;
+  }
+
   //Completes an activity of a challenge.
   void completeActivity(String activityID) {
     debugPrint("completeActivity");
@@ -128,6 +141,18 @@ class Challenge {
       }
     }
     return completedActivities;
+  }
+
+  //Finds the next incomplete activity in the challenge
+  Future<Activity?> findNextIncompleteActivity() async {
+    var prefs = await SharedPreferences.getInstance();
+    List<String> completedActivities = prefs.getStringList(PrefUtils.activity_completion) ?? [];
+    for (String activityID in activityIDs) {
+      if (!completedActivities.contains(activityID)) {
+        return findActivity(activityID);
+      }
+    }
+    return null;
   }
 
   //Checks if all activities are completed.

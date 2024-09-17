@@ -8,13 +8,15 @@ class Activity {
   String descriptionRes;
   String instructionsRes;
   bool completed = false;
+  bool unlocked;
 
   Activity({
     required this.id,
     required this.nameRes,
     required this.challengeID,
     required this.descriptionRes,
-    required this.instructionsRes
+    required this.instructionsRes,
+    this.unlocked = false,
   });
 
   static Map<String, Activity> activities = {
@@ -25,6 +27,7 @@ class Activity {
       nameRes: "challenge1_activity1_name",
       descriptionRes: "challenge1_activity1_description",
       instructionsRes: "challenge1_activity1_instructions",
+      unlocked: true
     ),
 
     "c1a2": Activity(
@@ -36,5 +39,7 @@ class Activity {
     ),
 
   };
+
+
 
 }

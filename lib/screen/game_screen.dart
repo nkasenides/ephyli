@@ -58,6 +58,10 @@ class _GameScreenState extends State<GameScreen> {
         var prefs = snapshot.data!;
         navBarFeaturesEnabled = prefs.getBool(PrefUtils.navBarFeaturesEnabled) ?? false;
 
+        if (snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false) {
+          Fragments.navigator.putAndClean(key: Fragments.CHALLENGES_KEY);
+        }
+
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Themes.primaryColorDark,
@@ -185,10 +189,14 @@ class _GameScreenState extends State<GameScreen> {
             builder: (context, streamSnapshot) {
               if (streamSnapshot.data != null) {
 
-                //If the tutorial has been completed, start at the challenges screen.
-                if (snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false) {
-                  Fragments.navigator.putPosit(key: Fragments.CHALLENGES_KEY);
-                }
+                // //If the tutorial has been completed, start at the challenges screen.
+                // if (snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false) {
+                //   Fragments.navigator.stack.forEach((element) => print(element.key),);
+                //   //Only switch if the user is coming from the tutorial:
+                //   if (Fragments.navigator.stack.last.key == Fragments.TUTORIAL_STEP_1_KEY) {
+                //
+                //   }
+                // }
 
                 return DefaultTabController(
                   length: streamSnapshot.data!.bottom?.length ?? 1,

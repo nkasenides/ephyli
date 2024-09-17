@@ -5,6 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../fragments/fragments.dart';
 import '../model/activity.dart';
 import '../model/challenge.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -40,8 +41,14 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
       ),
       child: widget.challenge.unlocked ? InkWell(
 
-        onTap: !widget.challenge.completed ? () {
-          //TODO - Proceed with the next activity.
+        onTap: !widget.challenge.completed ? () async {
+          Activity? nextActivity = await widget.challenge.findNextIncompleteActivity();
+          if (nextActivity != null) {
+            Fragments.navigator.putPosit(key: Fragments.CHALLENGE_OVERVIEW_KEY, params: widget.challenge);
+          }
+          else {
+            Fluttertoast.showToast(msg: AppLocalizations.of(context)!.error);
+          }
         } : null,
 
         //TODO - DEBUGGING ONLY REMOVE LATER

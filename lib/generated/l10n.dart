@@ -470,6 +470,26 @@ class S {
     );
   }
 
+  /// `This activity is locked. Complete the previous activities to unlock.`
+  String get activityLockedMessage {
+    return Intl.message(
+      'This activity is locked. Complete the previous activities to unlock.',
+      name: 'activityLockedMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error has occured.`
+  String get error {
+    return Intl.message(
+      'An error has occured.',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tutorial Badge`
   String get tutorialBadgeTitle {
     return Intl.message(

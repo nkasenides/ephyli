@@ -43,6 +43,8 @@
   "nextChallengeUnlocked": "The next challenge has been unlocked.",
   "challengeLocked": "This challenge is locked",
   "challengeLockedMessage": "This challenge is locked. Complete the previous challenges to unlock.",
+  "activityLockedMessage": "This activity is locked. Complete the previous activities to unlock.",
+  "error": "An error has occured.",
 
   "tutorialBadgeTitle": "Tutorial Badge",
   "tutorialBadgeDescription": "This badge is awarded to players who have completed the tutorial.",

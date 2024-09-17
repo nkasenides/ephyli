@@ -109,11 +109,6 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                       snapshot.data!.setBool(PrefUtils.tutorial_completed, true).then((value) {
                         setState(() { });
                         GameBadge.tutorialBadge.earn(context);
-                        //TODO - Remove once confirmed working.
-                        // showDialog(context: context, builder: (context) {
-                        //   //Show dialog for badge:
-                        //   return UIUtils.createBadgeDialog(GameBadge.tutorialBadge, context);
-                        // },);
                       },);
 
                     },
