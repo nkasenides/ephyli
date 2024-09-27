@@ -490,6 +490,16 @@ class S {
     );
   }
 
+  /// `Let's start!`
+  String get lets_start {
+    return Intl.message(
+      'Let\'s start!',
+      name: 'lets_start',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tutorial Badge`
   String get tutorialBadgeTitle {
     return Intl.message(
@@ -525,6 +535,16 @@ class S {
     return Intl.message(
       'This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities.',
       name: 'useBuddyBadgeDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
+  String get c1a1_welcome {
+    return Intl.message(
+      'Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?',
+      name: 'c1a1_welcome',
       desc: '',
       args: [],
     );

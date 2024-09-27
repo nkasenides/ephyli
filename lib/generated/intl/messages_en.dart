@@ -29,6 +29,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "You can also call me if you need help with an activity. I can provide extra help or hints."),
+        "c1a1_welcome": MessageLookupByLibrary.simpleMessage(
+            "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),
         "challengeLockedMessage": MessageLookupByLibrary.simpleMessage(
@@ -57,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Invalid name"),
         "italian": MessageLookupByLibrary.simpleMessage("Italian"),
+        "lets_start": MessageLookupByLibrary.simpleMessage("Let\'s start!"),
         "luxenbourgese": MessageLookupByLibrary.simpleMessage("Luxenbourgese"),
         "newBadgeText": MessageLookupByLibrary.simpleMessage(
             "Congratulations! You have received a new badge. Well done!"),

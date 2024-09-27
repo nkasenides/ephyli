@@ -75,7 +75,7 @@ class _TutorialStep1State extends State<TutorialStep1> {
                             TypewriterAnimatedText(
                               AppLocalizations.of(context)!.tutorial_text,
                               textStyle: const TextStyle(color: Colors.white,),
-                              speed: Duration(milliseconds: 50),
+                              speed: const Duration(milliseconds: 50),
                             ),
                           ],
                           displayFullTextOnTap: true,

@@ -29,6 +29,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε επίσης να με καλέσετε εάν χρειάζεστε βοήθεια με μια δραστηριότητα. Μπορώ να σας παράσχω επιπλέον βοήθεια ή συμβουλές."),
+        "c1a1_welcome": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ορίσατε στην πρώτη πρόκληση. Αντιστοιχίστε τις έννοιες που παρουσιάζονται στον πίνακα με τις κατάλληλες περιγραφές. Προσοχή! Εάν κάνετε πέντε λάθη, η πρόκληση θα ξεκινήσει ξανά από την αρχή. Είστε έτοιμοι;"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),
         "challengeLockedMessage": MessageLookupByLibrary.simpleMessage(
@@ -54,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Μπορείτε να βρείτε ορολογία που σχετίζεται με τον Φυσικό Γραμματισμό στο Γλωσσάρι."),
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Μη έγκυρο όνομα"),
+        "lets_start": MessageLookupByLibrary.simpleMessage("Πάμε!"),
         "newBadgeText": MessageLookupByLibrary.simpleMessage(
             "Συγχαρητήρια! Πήρατε μια νέα κονκάρδα!"),
         "newBadgeTitle":
@@ -83,6 +86,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Καλώς ήρθατε στο ePhyLi, το ταξίδι σας στον Φυσικό Γραμματισμό πρόκειται να ξεκινήσει!\n\nΞεκινήστε μια μοναδική αποστολή για να μεταμορφώσετε τη ζωή σας μέσω της γνώσης, της δραστηριότητας και της κοινότητας. Περιηγηθείτε στις προκλήσεις και ξεκλειδώστε τα μυστικά ενός υγιεινού τρόπου ζωής. Το καθήκον σας δεν είναι απλώς να παίξετε αλλά να εξελιχθείτε, μαθαίνοντας για τη σωματική υγεία και ευεξία. Λύστε εργασίες και προκλήσεις, κάντε σημαντικές επιλογές και σχεδιάστε την πρόοδό σας σε έναν ελκυστικό κόσμο όπου κάθε βήμα μετράει για τον απώτερο στόχο σας: να κατακτήσετε τον Φυσικό Γραμματισμό.\n\nΕίστε έτοιμοι να ξεκινήσετε την περιπέτειά σας;"),
         "tutorial_text_buddy": MessageLookupByLibrary.simpleMessage(
             "Γεια, είμαι ο φίλος σας στο ePhyLi, ένας εικονικός σύντροφος που έχει σχεδιαστεί για να σας καθοδηγεί και να σας βοηθά σε όλη τη διάρκεια του παιχνιδιού. Επιτρέψτε μου να σας παρουσιάσω το παιχνίδι με ένα σύντομο σεμινάριο."),
+        "useBuddyBadgeDescription": MessageLookupByLibrary.simpleMessage(
+            "Αυτό το σήμα απονέμεται σε παίκτες που έχουν χρησομοποιήσει τον ePhyLi buddy τουλάχιστον μία φορά για να τους βοηθήσει με τις δραστηριότητες."),
+        "useBuddyBadgeTitle":
+            MessageLookupByLibrary.simpleMessage("Κονκάρδα φίλου"),
         "viewBadges": MessageLookupByLibrary.simpleMessage("Προβολή κονκάρδων"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;")

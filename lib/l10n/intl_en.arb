@@ -45,10 +45,17 @@
   "challengeLockedMessage": "This challenge is locked. Complete the previous challenges to unlock.",
   "activityLockedMessage": "This activity is locked. Complete the previous activities to unlock.",
   "error": "An error has occured.",
+  "lets_start": "Let's start!",
+
+
 
   "tutorialBadgeTitle": "Tutorial Badge",
   "tutorialBadgeDescription": "This badge is awarded to players who have completed the tutorial.",
   "useBuddyBadgeTitle": "Buddy Badge",
-  "useBuddyBadgeDescription": "This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities."
+  "useBuddyBadgeDescription": "This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities.",
+
+
+  "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?"
+
 
 }

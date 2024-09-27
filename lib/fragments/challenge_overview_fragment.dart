@@ -1,8 +1,10 @@
 import 'package:ephyli/theme/themes.dart';
+import 'package:ephyli/utils/text_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../controller/activity_manager.dart';
 import '../model/activity.dart';
 import '../model/challenge.dart';
 import '../utils/pref_utils.dart';
@@ -34,7 +36,14 @@ class _ChallengeOverviewFragmentState extends State<ChallengeOverviewFragment> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
+
+    return Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.arrow_back),
+        title: Text(AppLocalizations.of(context)!.activities.capitalizeFirstLetter(),
+        ),
+      ),
+      body: FutureBuilder(
       future: future,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
@@ -76,7 +85,7 @@ class _ChallengeOverviewFragmentState extends State<ChallengeOverviewFragment> {
                     subtitle: Text(activity.descriptionRes, style: const TextStyle(overflow: TextOverflow.ellipsis),), //TODO - Translate to actual i10n name.
                     // trailing: isCompleted ? const Icon(Icons.check, color: Colors.green,) : Container(),
                     onTap: isUnlocked ? () {
-                      //TODO
+                      _startActivity(context, widget.challenge.id, activity.id);
                     } : () {
                       Fluttertoast.showToast(msg: AppLocalizations.of(context)!.activityLockedMessage);
                     },
@@ -88,6 +97,12 @@ class _ChallengeOverviewFragmentState extends State<ChallengeOverviewFragment> {
         }
         return const Center(child: CircularProgressIndicator());
       },
+      ),
     );
   }
+
+  _startActivity(BuildContext context, String challengeID, String activityID) {
+    ActivityManager.navigateToActivity(context, challengeID, activityID);
+  }
+
 }
