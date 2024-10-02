@@ -500,6 +500,16 @@ class S {
     );
   }
 
+  /// `Reset game`
+  String get resetGame {
+    return Intl.message(
+      'Reset game',
+      name: 'resetGame',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tutorial Badge`
   String get tutorialBadgeTitle {
     return Intl.message(

@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile_description": MessageLookupByLibrary.simpleMessage(
             "You can also manage your profile and preferences here."),
         "ready_letsgo": MessageLookupByLibrary.simpleMessage("Yes, let\'s go!"),
+        "resetGame": MessageLookupByLibrary.simpleMessage("Reset game"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
         "tutorialBadgeDescription": MessageLookupByLibrary.simpleMessage(

@@ -58,9 +58,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Μη έγκυρο όνομα"),
         "lets_start": MessageLookupByLibrary.simpleMessage("Πάμε!"),
         "newBadgeText": MessageLookupByLibrary.simpleMessage(
-            "Συγχαρητήρια! Πήρατε μια νέα κονκάρδα!"),
+            "Συγχαρητήρια! Πήρατε ενα νέο σήμα!"),
         "newBadgeTitle":
-            MessageLookupByLibrary.simpleMessage("Συλλογή κονκάρδας"),
+            MessageLookupByLibrary.simpleMessage("Συλλογή σήματος"),
         "news": MessageLookupByLibrary.simpleMessage("Ενημέρωση"),
         "news_description": MessageLookupByLibrary.simpleMessage(
             "Εδώ μπορείτε να διαβάσετε άρθρα, αναρτήσεις και άλλα σχετικά με τον Φυσικό Γραμματισμό."),
@@ -75,13 +75,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε επίσης να διαχειριστείτε το προφίλ και τις προτιμήσεις σας εδώ."),
         "ready_letsgo": MessageLookupByLibrary.simpleMessage("Ναι, πάμε!"),
+        "resetGame": MessageLookupByLibrary.simpleMessage("Επανεκκίνηση"),
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),
         "tutorialBadgeDescription": MessageLookupByLibrary.simpleMessage(
             "Αυτό το σήμα απονέμεται σε παίκτες που έχουν ολοκληρώσει το σεμινάριο."),
         "tutorialBadgeTitle":
-            MessageLookupByLibrary.simpleMessage("Κονκάρδα εκμάθησης"),
+            MessageLookupByLibrary.simpleMessage("Σήμα εκμάθησης"),
         "tutorial_text": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στο ePhyLi, το ταξίδι σας στον Φυσικό Γραμματισμό πρόκειται να ξεκινήσει!\n\nΞεκινήστε μια μοναδική αποστολή για να μεταμορφώσετε τη ζωή σας μέσω της γνώσης, της δραστηριότητας και της κοινότητας. Περιηγηθείτε στις προκλήσεις και ξεκλειδώστε τα μυστικά ενός υγιεινού τρόπου ζωής. Το καθήκον σας δεν είναι απλώς να παίξετε αλλά να εξελιχθείτε, μαθαίνοντας για τη σωματική υγεία και ευεξία. Λύστε εργασίες και προκλήσεις, κάντε σημαντικές επιλογές και σχεδιάστε την πρόοδό σας σε έναν ελκυστικό κόσμο όπου κάθε βήμα μετράει για τον απώτερο στόχο σας: να κατακτήσετε τον Φυσικό Γραμματισμό.\n\nΕίστε έτοιμοι να ξεκινήσετε την περιπέτειά σας;"),
         "tutorial_text_buddy": MessageLookupByLibrary.simpleMessage(
@@ -89,8 +90,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "useBuddyBadgeDescription": MessageLookupByLibrary.simpleMessage(
             "Αυτό το σήμα απονέμεται σε παίκτες που έχουν χρησομοποιήσει τον ePhyLi buddy τουλάχιστον μία φορά για να τους βοηθήσει με τις δραστηριότητες."),
         "useBuddyBadgeTitle":
-            MessageLookupByLibrary.simpleMessage("Κονκάρδα φίλου"),
-        "viewBadges": MessageLookupByLibrary.simpleMessage("Προβολή κονκάρδων"),
+            MessageLookupByLibrary.simpleMessage("Σήμα φίλου ePhyLi"),
+        "viewBadges": MessageLookupByLibrary.simpleMessage("Προβολή σημάτων"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;")
       };
