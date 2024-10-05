@@ -197,7 +197,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("build()");
+    UIUtils.portraitOrientation();
     return FutureBuilder(
       future: future,
       builder: (context, snapshot) {

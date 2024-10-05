@@ -1,5 +1,6 @@
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/text_utils.dart';
+import 'package:ephyli/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -8,6 +9,7 @@ import '../controller/activity_manager.dart';
 import '../model/activity.dart';
 import '../model/challenge.dart';
 import '../utils/pref_utils.dart';
+import 'fragments.dart';
 
 class ChallengeOverviewFragment extends StatefulWidget {
 
@@ -36,10 +38,18 @@ class _ChallengeOverviewFragmentState extends State<ChallengeOverviewFragment> {
 
   @override
   Widget build(BuildContext context) {
+    UIUtils.portraitOrientation();
+    UIUtils.disableFullscreen();
+
 
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text(AppLocalizations.of(context)!.activities.capitalizeFirstLetter(),
         ),
       ),
@@ -83,12 +93,12 @@ class _ChallengeOverviewFragmentState extends State<ChallengeOverviewFragment> {
                   child: ListTile(
                     title: Text(activity.nameRes), //TODO - Translate to actual i10n name.
                     subtitle: Text(activity.descriptionRes, style: const TextStyle(overflow: TextOverflow.ellipsis),), //TODO - Translate to actual i10n name.
-                    // trailing: isCompleted ? const Icon(Icons.check, color: Colors.green,) : Container(),
                     onTap: isUnlocked ? () {
                       _startActivity(context, widget.challenge.id, activity.id);
                     } : () {
                       Fluttertoast.showToast(msg: AppLocalizations.of(context)!.activityLockedMessage);
                     },
+                    // trailing: isCompleted ? const Icon(Icons.check, color: Themes.primaryColor,) : Container(),
                   ),
                 );
 

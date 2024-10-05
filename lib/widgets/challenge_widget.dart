@@ -1,3 +1,4 @@
+import 'package:ephyli/fragments/challenge_overview_fragment.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/widgets/badge_widget.dart';
 import 'package:flutter/material.dart';
@@ -43,11 +44,14 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
 
         onTap: !widget.challenge.completed ? () async {
           Activity? nextActivity = await widget.challenge.findNextIncompleteActivity();
-          if (nextActivity != null) {
-            Fragments.navigator.putPosit(key: Fragments.CHALLENGE_OVERVIEW_KEY, params: widget.challenge);
-          }
-          else {
-            Fluttertoast.showToast(msg: AppLocalizations.of(context)!.error);
+          if (context.mounted) {
+            if (nextActivity != null) {
+              Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                  ChallengeOverviewFragment(widget.challenge),));
+            }
+            else {
+              Fluttertoast.showToast(msg: AppLocalizations.of(context)!.error);
+            }
           }
         } : null,
 

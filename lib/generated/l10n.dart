@@ -510,6 +510,56 @@ class S {
     );
   }
 
+  /// `Are you sure?`
+  String get areYouSure {
+    return Intl.message(
+      'Are you sure?',
+      name: 'areYouSure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This will reset your current progress.`
+  String get resetLoseProgressMessage {
+    return Intl.message(
+      'This will reset your current progress.',
+      name: 'resetLoseProgressMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Finish`
+  String get finish {
+    return Intl.message(
+      'Finish',
+      name: 'finish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Game over`
+  String get gameOver {
+    return Intl.message(
+      'Game over',
+      name: 'gameOver',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tutorial Badge`
   String get tutorialBadgeTitle {
     return Intl.message(
@@ -555,6 +605,36 @@ class S {
     return Intl.message(
       'Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?',
       name: 'c1a1_welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! All concepts are correctly matched to the related descriptions. You scored %1 points!`
+  String get c1a1_congrats {
+    return Intl.message(
+      'Well done! All concepts are correctly matched to the related descriptions. You scored %1 points!',
+      name: 'c1a1_congrats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Read the scientific article extract reported below to start the next step of the challenge.`
+  String get c1a1_reading_instruction {
+    return Intl.message(
+      'Read the scientific article extract reported below to start the next step of the challenge.',
+      name: 'c1a1_reading_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have made 5 mistakes, and the game will restart.`
+  String get c1a1_5mistakesReset {
+    return Intl.message(
+      'You have made 5 mistakes, and the game will restart.',
+      name: 'c1a1_5mistakesReset',
       desc: '',
       args: [],
     );

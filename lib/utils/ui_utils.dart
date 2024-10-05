@@ -98,14 +98,14 @@ class UIUtils {
     return path;
   }
 
-  static forceLandscape() {
+  static landscapeOrientation() {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
     ]);
   }
 
-  static forcePortrait() {
+  static portraitOrientation() {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
@@ -119,6 +119,14 @@ class UIUtils {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+  }
+
+  static enableFullScreen() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+  }
+
+  static disableFullscreen() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
   }
 
 }

@@ -25,12 +25,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "activities": MessageLookupByLibrary.simpleMessage("activities"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "This activity is locked. Complete the previous activities to unlock."),
+        "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "You can also call me if you need help with an activity. I can provide extra help or hints."),
+        "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
+            "You have made 5 mistakes, and the game will restart."),
+        "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
+            "Well done! All concepts are correctly matched to the related descriptions. You scored %1 points!"),
+        "c1a1_reading_instruction": MessageLookupByLibrary.simpleMessage(
+            "Read the scientific article extract reported below to start the next step of the challenge."),
         "c1a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),
         "challengeLockedMessage": MessageLookupByLibrary.simpleMessage(
@@ -51,7 +59,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("An error has occured."),
         "exploreChallenges": MessageLookupByLibrary.simpleMessage(
             "Ok, let\'s explore the challenges!"),
+        "finish": MessageLookupByLibrary.simpleMessage("Finish"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
+        "gameOver": MessageLookupByLibrary.simpleMessage("Game over"),
         "glossary": MessageLookupByLibrary.simpleMessage("Glossary"),
         "glossary_description": MessageLookupByLibrary.simpleMessage(
             "You can find terminology related to Physical Literacy in the Glossary."),
@@ -81,6 +91,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "You can also manage your profile and preferences here."),
         "ready_letsgo": MessageLookupByLibrary.simpleMessage("Yes, let\'s go!"),
         "resetGame": MessageLookupByLibrary.simpleMessage("Reset game"),
+        "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
+            "This will reset your current progress."),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
         "tutorialBadgeDescription": MessageLookupByLibrary.simpleMessage(

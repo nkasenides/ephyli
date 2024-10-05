@@ -25,12 +25,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "activities": MessageLookupByLibrary.simpleMessage("Δραστηριότητες"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "Αυτή η δραστηριότητα είναι κλειδωμένη. Ολοκληρώστε τις προηγούμενες δραστηριότητες για να την ξεκλειδώσετε."),
+        "areYouSure": MessageLookupByLibrary.simpleMessage("Είστε σίγουροι;"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε επίσης να με καλέσετε εάν χρειάζεστε βοήθεια με μια δραστηριότητα. Μπορώ να σας παράσχω επιπλέον βοήθεια ή συμβουλές."),
+        "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
+            "Έχετε κάνει 5 λάθη και το παιχνίδι θα ξεκινήσει απο την αρχή."),
+        "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
+            "Συγχαρητήρια! Όλες οι έννοιες έχουν αντιστοιχιστεί σωστά με τις σχετικές περιγραφές. Κερδίσατε %1 βαθμούς!"),
+        "c1a1_reading_instruction": MessageLookupByLibrary.simpleMessage(
+            "Διαβάστε το απόσπασμα επιστημονικού άρθρου που αναφέρεται παρακάτω για να ξεκινήσετε το επόμενο βήμα της πρόκλησης."),
         "c1a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Καλώς ορίσατε στην πρώτη πρόκληση. Αντιστοιχίστε τις έννοιες που παρουσιάζονται στον πίνακα με τις κατάλληλες περιγραφές. Προσοχή! Εάν κάνετε πέντε λάθη, η πρόκληση θα ξεκινήσει ξανά από την αρχή. Είστε έτοιμοι;"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),
         "challengeLockedMessage": MessageLookupByLibrary.simpleMessage(
@@ -51,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Έχει παρουσιαστεί σφάλμα."),
         "exploreChallenges": MessageLookupByLibrary.simpleMessage(
             "Εντάξει, ας εξερευνήσουμε τις προκλήσεις!"),
+        "finish": MessageLookupByLibrary.simpleMessage("Τέλος"),
+        "gameOver": MessageLookupByLibrary.simpleMessage("Τέλος παιχνιδιού"),
         "glossary": MessageLookupByLibrary.simpleMessage("Γλωσσάρι"),
         "glossary_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε να βρείτε ορολογία που σχετίζεται με τον Φυσικό Γραμματισμό στο Γλωσσάρι."),
@@ -76,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Μπορείτε επίσης να διαχειριστείτε το προφίλ και τις προτιμήσεις σας εδώ."),
         "ready_letsgo": MessageLookupByLibrary.simpleMessage("Ναι, πάμε!"),
         "resetGame": MessageLookupByLibrary.simpleMessage("Επανεκκίνηση"),
+        "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
+            "Αυτό θα επαναφέρει την τρέχουσα πρόοδό σας."),
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),
