@@ -11,17 +11,17 @@ import '../model/activity.dart';
 import '../model/challenge.dart';
 import '../utils/pref_utils.dart';
 
-class ChallengeOverviewScreen extends StatefulWidget {
+class ViewActivitiesScreen extends StatefulWidget {
 
   Challenge challenge;
 
-  ChallengeOverviewScreen(this.challenge, {super.key});
+  ViewActivitiesScreen(this.challenge, {super.key});
 
   @override
-  State<ChallengeOverviewScreen> createState() => _ChallengeOverviewScreenState();
+  State<ViewActivitiesScreen> createState() => _ViewActivitiesScreenState();
 }
 
-class _ChallengeOverviewScreenState extends State<ChallengeOverviewScreen> {
+class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
 
   late Future<SharedPreferences> future;
 

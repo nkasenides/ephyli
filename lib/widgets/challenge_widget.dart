@@ -1,4 +1,4 @@
-import 'package:ephyli/screen/challenge_overview_screen.dart';
+import 'package:ephyli/screen/view_activities_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/widgets/badge_widget.dart';
@@ -48,7 +48,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
           if (context.mounted) {
             if (nextActivity != null) {
               Navigator.push(context, MaterialPageRoute(builder: (context) =>
-                  ChallengeOverviewScreen(widget.challenge),));
+                  ViewActivitiesScreen(widget.challenge),));
             }
             else {
               Fluttertoast.showToast(msg: AppLocalizations.of(context)!.error);
