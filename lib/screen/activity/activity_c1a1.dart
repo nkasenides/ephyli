@@ -657,6 +657,14 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
     );
   }
 
+
+  @override
+  void dispose() {
+    UIUtils.portraitOrientation();
+    UIUtils.disableFullscreen();
+    super.dispose();
+  }
+
   resetGame() {
     score = 0;
     mistakeCounter = 0;

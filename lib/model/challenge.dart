@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../theme/app_images.dart';
 import '../utils/pref_utils.dart';
 import 'activity.dart';
@@ -39,8 +39,8 @@ class Challenge {
 
   static final Challenge challenge1 = Challenge(
     id: "challenge1",
-    nameRes: "Challenge 1",
-    descriptionRes: "challenge1Description",
+    nameRes: "c1_name",
+    descriptionRes: "c1_description",
     imageCompletedRes: AppImages.logo,
     imageIncompleteRes: AppImages.logoBlackAndWhite,
     activityIDs: [
@@ -58,8 +58,8 @@ class Challenge {
 
   static final Challenge challenge2 = Challenge(
       id: "challenge2",
-      nameRes: "Challenge 2",
-      descriptionRes: "challenge2Description",
+      nameRes: "c2_name",
+      descriptionRes: "c2_description",
       imageCompletedRes: AppImages.logo,
       imageIncompleteRes: AppImages.logoBlackAndWhite,
       activityIDs: [

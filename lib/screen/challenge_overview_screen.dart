@@ -1,4 +1,5 @@
 import 'package:ephyli/theme/themes.dart';
+import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/text_utils.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
@@ -9,19 +10,18 @@ import '../controller/activity_manager.dart';
 import '../model/activity.dart';
 import '../model/challenge.dart';
 import '../utils/pref_utils.dart';
-import 'fragments.dart';
 
-class ChallengeOverviewFragment extends StatefulWidget {
+class ChallengeOverviewScreen extends StatefulWidget {
 
   Challenge challenge;
 
-  ChallengeOverviewFragment(this.challenge, {super.key});
+  ChallengeOverviewScreen(this.challenge, {super.key});
 
   @override
-  State<ChallengeOverviewFragment> createState() => _ChallengeOverviewFragmentState();
+  State<ChallengeOverviewScreen> createState() => _ChallengeOverviewScreenState();
 }
 
-class _ChallengeOverviewFragmentState extends State<ChallengeOverviewFragment> {
+class _ChallengeOverviewScreenState extends State<ChallengeOverviewScreen> {
 
   late Future<SharedPreferences> future;
 
@@ -38,10 +38,6 @@ class _ChallengeOverviewFragmentState extends State<ChallengeOverviewFragment> {
 
   @override
   Widget build(BuildContext context) {
-    UIUtils.portraitOrientation();
-    UIUtils.disableFullscreen();
-
-
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -91,8 +87,8 @@ class _ChallengeOverviewFragmentState extends State<ChallengeOverviewFragment> {
 
                 return Card(
                   child: ListTile(
-                    title: Text(activity.nameRes), //TODO - Translate to actual i10n name.
-                    subtitle: Text(activity.descriptionRes, style: const TextStyle(overflow: TextOverflow.ellipsis),), //TODO - Translate to actual i10n name.
+                    title: Text(I10N.getI10nString(activity.nameRes)!),
+                    subtitle: Text(I10N.getI10nString(activity.descriptionRes)!, style: const TextStyle(overflow: TextOverflow.ellipsis),), //TODO - Translate to actual i10n name.
                     onTap: isUnlocked ? () {
                       _startActivity(context, widget.challenge.id, activity.id);
                     } : () {

@@ -1,5 +1,6 @@
-import 'package:ephyli/fragments/challenge_overview_fragment.dart';
+import 'package:ephyli/screen/challenge_overview_screen.dart';
 import 'package:ephyli/theme/themes.dart';
+import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/widgets/badge_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -47,7 +48,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
           if (context.mounted) {
             if (nextActivity != null) {
               Navigator.push(context, MaterialPageRoute(builder: (context) =>
-                  ChallengeOverviewFragment(widget.challenge),));
+                  ChallengeOverviewScreen(widget.challenge),));
             }
             else {
               Fluttertoast.showToast(msg: AppLocalizations.of(context)!.error);
@@ -79,10 +80,10 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
                 children: [
-                  Text(widget.challenge.nameRes, style: Theme.of(context).textTheme.titleMedium,),
+                  Text(I10N.getI10nString(widget.challenge.nameRes)!, style: Theme.of(context).textTheme.titleMedium,),
 
                   Text(
-                    widget.challenge.descriptionRes,
+                    I10N.getI10nString(widget.challenge.descriptionRes)!,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                     style: TextStyle(color: Colors.grey.shade700),

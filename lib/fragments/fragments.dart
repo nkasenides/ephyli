@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:fragment_navigate/navigate-control.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'challenge_overview_fragment.dart';
+import '../screen/challenge_overview_screen.dart';
 
 class Fragments {
 
@@ -44,7 +44,7 @@ class Fragments {
     Posit(
       key: CHALLENGE_OVERVIEW_KEY,
       title: CHALLENGE_OVERVIEW_KEY,
-      fragmentBuilder: (params) => ChallengeOverviewFragment(params),
+      fragmentBuilder: (params) => ChallengeOverviewScreen(params),
     ),
 
   ];

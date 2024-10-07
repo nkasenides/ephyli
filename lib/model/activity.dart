@@ -6,7 +6,6 @@ class Activity {
   String challengeID;
   String nameRes;
   String descriptionRes;
-  String instructionsRes;
   bool completed = false;
   bool unlocked;
 
@@ -15,7 +14,6 @@ class Activity {
     required this.nameRes,
     required this.challengeID,
     required this.descriptionRes,
-    required this.instructionsRes,
     this.unlocked = false,
   });
 
@@ -24,18 +22,16 @@ class Activity {
     "c1a1": Activity(
       id: "c1a1",
       challengeID: Challenge.challenge1.id,
-      nameRes: "challenge1_activity1_name",
-      descriptionRes: "challenge1_activity1_description",
-      instructionsRes: "challenge1_activity1_instructions",
+      nameRes: "c1a1_name",
+      descriptionRes: "c1a1_description",
       unlocked: true
     ),
 
     "c1a2": Activity(
       id: "c1a2",
       challengeID: Challenge.challenge1.id,
-      nameRes: "challenge1_activity2_name",
-      descriptionRes: "challenge1_activity2_description",
-      instructionsRes: "challenge1_activity2_instructions",
+      nameRes: "c1a2_name",
+      descriptionRes: "c1a2_description",
     ),
 
   };
