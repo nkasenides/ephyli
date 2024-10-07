@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "activities": MessageLookupByLibrary.simpleMessage("activities"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "This activity is locked. Complete the previous activities to unlock."),
+        "alreadyPlayedActivity": MessageLookupByLibrary.simpleMessage(
+            "You have already participated in this activity. Would you like to replay it?"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
@@ -81,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "nextChallengeUnlocked": MessageLookupByLibrary.simpleMessage(
             "The next challenge has been unlocked."),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Please provide a value"),
@@ -105,6 +108,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Welcome to ePhyLi, your journey into Physical Literacy is going to start!\n\nEmbark on a unique mission to transform your life through knowledge, activity, and community. Navigate through challenges, and unlock the secrets of a healthy lifestyle. Your task is not just to play but to evolve, learning about physical health and well-being. Solve tasks and challenges, make impactful choices, and chart your progress in an engaging world where every step counts towards your ultimate goal: mastering Physical Literacy.\n\nReady to begin your adventure?"),
         "tutorial_text_buddy": MessageLookupByLibrary.simpleMessage(
             "Hi, I am your ePhyLi buddy, a virtual companion designed to guide and assist you throughout the game. Let me introduce you to the game with a brief tutorial."),
+        "unableToStartActivity": MessageLookupByLibrary.simpleMessage(
+            "Error - This activity cannot be started."),
         "useBuddyBadgeDescription": MessageLookupByLibrary.simpleMessage(
             "This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities."),
         "useBuddyBadgeTitle":
@@ -112,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewBadges": MessageLookupByLibrary.simpleMessage("View badges"),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),
         "whatIsYourName":
-            MessageLookupByLibrary.simpleMessage("What is your name?")
+            MessageLookupByLibrary.simpleMessage("What is your name?"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

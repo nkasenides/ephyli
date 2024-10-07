@@ -8,7 +8,7 @@ import '../utils/pref_utils.dart';
 
 class ActivityManager {
 
-  static Future<void> navigateToActivity(BuildContext context, String challengeID, String activityID) async {
+  static Future<void> navigateToActivity(BuildContext context, String challengeID, String activityID, void Function(void Function()) setState) async {
     var challenge = Challenge.findChallenge(challengeID);
     var activity = Challenge.findActivity(activityID);
 
@@ -17,24 +17,51 @@ class ActivityManager {
     }
 
     //Check if challenge & activity are not completed
-    var prefs = await SharedPreferences.getInstance();
-    var completedActivities = prefs.getStringList(PrefUtils.activity_completion) ?? [];
-    if (completedActivities.contains(activityID)) {
-      throw Exception("The activity has already been finished (a: $activityID)");
-    }
+    // var prefs = await SharedPreferences.getInstance();
+    // var completedActivities = prefs.getStringList(PrefUtils.activity_completion) ?? [];
+    // if (completedActivities.contains(activityID)) {
+    //   throw Exception("The activity has already been finished (a: $activityID)");
+    // }
 
     // Navigate to the appropriate activity screen
     if (context.mounted) {
       switch (activityID) {
         case "c1a1":
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ActivityC1a1(),));
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ActivityC1a1(),)).then((value) {
+            setState(() {});
+          },);
           break;
         default:
           throw Exception("Cannot navigate to activity. No widget match for activity ID $activityID.");
       }
     }
+  }
 
+  // static Future<void> unlockActivity(String activityID) async {
+  //   var prefs = await SharedPreferences.getInstance();
+  //   List<String>? unlockedActivityIDs = prefs.getStringList(PrefUtils.unlocked_activities) ?? ["c1a1"];
+  //   unlockedActivityIDs.add(activityID);
+  //   prefs.setStringList(PrefUtils.unlocked_activities, unlockedActivityIDs);
+  // }
 
+  static Future<void> completeActivity(String activityID) async {
+    var prefs = await SharedPreferences.getInstance();
+    List<String>? completedActivityIDs = prefs.getStringList(PrefUtils.activity_completion) ?? [];
+    completedActivityIDs.add(activityID);
+    prefs.setStringList(PrefUtils.activity_completion, completedActivityIDs);
+
+    //Unlock next activity:
+    var activity = Activity.activities[activityID];
+    for (String toBeUnlockedID in activity!.unlocksActivitiesIDs) {
+
+    }
+  }
+
+  static Future<void> resetActivity(String activityID) async {
+    var prefs = await SharedPreferences.getInstance();
+    List<String>? completedActivityIDs = prefs.getStringList(PrefUtils.activity_completion) ?? [];
+    completedActivityIDs.remove(activityID);
+    prefs.setStringList(PrefUtils.activity_completion, completedActivityIDs);
   }
 
 }

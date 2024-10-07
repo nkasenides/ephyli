@@ -52,6 +52,11 @@
   "cancel": "Cancel",
   "finish": "Finish",
   "gameOver": "Game over",
+  "alreadyPlayedActivity": "You have already participated in this activity. Would you like to replay it?",
+  "yes": "Yes",
+  "no": "No",
+  "unableToStartActivity": "Error - This activity cannot be started.",
+
 
   "tutorialBadgeTitle": "Tutorial Badge",
   "tutorialBadgeDescription": "This badge is awarded to players who have completed the tutorial.",

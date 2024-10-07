@@ -1,14 +1,17 @@
 import 'dart:math';
 
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:ephyli/controller/activity_manager.dart';
 import 'package:ephyli/fragments/fragments.dart';
 import 'package:ephyli/theme/themes.dart';
+import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../model/activity.dart';
+import '../../model/game_badge.dart';
 import '../../model/match_game/matching_pair.dart';
 import '../../model/match_game/matching_pairs.dart';
 import '../../model/match_game/term.dart';
@@ -392,9 +395,9 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
                                     matchingPairs.wrongPair2!.id);
                               }
 
-                              debugPrint("Not shown: ${_termsNotShown}");
-                              debugPrint("Shown: ${_termsShown}");
-                              debugPrint("Completed: ${_termsCompleted}");
+                              debugPrint("Not shown: $_termsNotShown");
+                              debugPrint("Shown: $_termsShown");
+                              debugPrint("Completed: $_termsCompleted");
 
                               if (_termsNotShown.isEmpty) {
                                 setState(() {
@@ -442,7 +445,7 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
                               width: 500,
                               child: Text(
                                 definition,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 16,
                                     fontStyle: FontStyle.italic,
                                     color: Colors.blue,
@@ -463,6 +466,7 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
     );
   }
 
+  //TODO - Fix overflow
   Widget getReadingView() {
     UIUtils.portraitOrientation();
     return Column(
@@ -518,12 +522,9 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
               child: Text(AppLocalizations.of(context)!.finish),
               onPressed: () {
                 setState(() {
-
-                  PrefUtils.finishActivity("c1a1").then((value) {
-                    Navigator.pop(context);
-                    //TODO - Refresh the activities page so that the activity appears to be completed.
+                  ActivityManager.completeActivity("c1a1").then((value) {
+                    Navigator.pop(context, "_");
                   },);
-
                 });
               },
             ),
@@ -581,7 +582,7 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
         ),
         backgroundColor: Themes.primaryColorDark,
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(Activity.activities["c1a1"]!.nameRes, style: const TextStyle(color: Colors.white),), //TODO - Get name out of resource
+        title: Text(I10N.getI10nString(Activity.activities["c1a1"]!.nameRes)!, style: const TextStyle(color: Colors.white),), //TODO - Get name out of resource
         actions: stage == C1A1Stage.activity ? [
 
           Text(

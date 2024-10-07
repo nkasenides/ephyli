@@ -560,6 +560,46 @@ class S {
     );
   }
 
+  /// `You have already participated in this activity. Would you like to replay it?`
+  String get alreadyPlayedActivity {
+    return Intl.message(
+      'You have already participated in this activity. Would you like to replay it?',
+      name: 'alreadyPlayedActivity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error - This activity cannot be started.`
+  String get unableToStartActivity {
+    return Intl.message(
+      'Error - This activity cannot be started.',
+      name: 'unableToStartActivity',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tutorial Badge`
   String get tutorialBadgeTitle {
     return Intl.message(
