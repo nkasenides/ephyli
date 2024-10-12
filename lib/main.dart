@@ -1,5 +1,6 @@
 import 'package:ephyli/utils/language.dart';
 import 'package:ephyli/utils/pref_utils.dart';
+import 'package:ephyli/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -17,5 +18,6 @@ main() async {
     Language.changeLocale(locale);
   }
 
+  UIUtils.enableFullScreen();
   runApp(const EPhyLiApp());
 }

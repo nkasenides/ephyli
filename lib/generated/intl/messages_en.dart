@@ -40,6 +40,20 @@ class MessageLookup extends MessageLookupByLibrary {
             "Read the scientific article extract reported below to start the next step of the challenge."),
         "c1a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?"),
+        "c1a2_bubble1": MessageLookupByLibrary.simpleMessage(
+            "Advances in technology and lifestyle changes"),
+        "c1a2_bubble2": MessageLookupByLibrary.simpleMessage(
+            "minimize the need for physical interaction with the environment."),
+        "c1a2_bubble3": MessageLookupByLibrary.simpleMessage(
+            "For example, public or private transport decreases the need for (physical) movement to get around."),
+        "c1a2_bubble4": MessageLookupByLibrary.simpleMessage(
+            "This leads to an increased risk of developing pathologies."),
+        "c1a2_bubble5": MessageLookupByLibrary.simpleMessage(
+            "Sedentary behaviours affect health, but they also have profound implications for mental and emotional well-being."),
+        "c1a2_bubbles_instructions": MessageLookupByLibrary.simpleMessage(
+            "Read and then press each bubble to reveal the next."),
+        "c1a2_finish": MessageLookupByLibrary.simpleMessage(
+            "Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more."),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),
@@ -51,6 +65,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Hey %1! It\'s time to get started! Would you like to try the next challenge?"),
         "challengesTextTutorial": MessageLookupByLibrary.simpleMessage(
             "These are the challenges you must complete. Each of these challenges may consist of multiple activities, and once you complete all activities in a challenge, I will unlock the next challenge for you. Always remember to use my help if you get stuck in an activity, and remember to use the resources in the news and glossary sections.\n\nOur tutorial is finished. I think you are ready to get started!"),
+        "clickOnImageToZoom": MessageLookupByLibrary.simpleMessage(
+            "Press the image to zoom in for more detail."),
+        "clickToViewArticle": MessageLookupByLibrary.simpleMessage(
+            "Click here to read the article"),
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Customize your avatar"),

@@ -19,8 +19,9 @@ import 'challenge_image.dart';
 class ChallengeWidget extends StatefulWidget {
 
   final Challenge challenge;
+  final Function refresher;
 
-  const ChallengeWidget(this.challenge, {super.key});
+  const ChallengeWidget(this.challenge, {super.key, required this.refresher});
 
   @override
   State<ChallengeWidget> createState() => _ChallengeWidgetState();
@@ -48,7 +49,9 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
           if (context.mounted) {
             if (nextActivity != null) {
               Navigator.push(context, MaterialPageRoute(builder: (context) =>
-                  ViewActivitiesScreen(widget.challenge),));
+                  ViewActivitiesScreen(widget.challenge),)).then((value) {
+                    widget.refresher();
+                  },);
             }
             else {
               Fluttertoast.showToast(msg: AppLocalizations.of(context)!.error);

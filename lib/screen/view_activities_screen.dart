@@ -108,7 +108,7 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
 
 
                 return Card(
-                  color: isCompleted ? Colors.green.shade50 : null,
+                  color: isCompleted ? Colors.green.shade100 : null,
                   child: ListTile(
                     title: Text(I10N.getI10nString(activity.nameRes)!),
                     subtitle: Text(I10N.getI10nString(activity.descriptionRes)!, style: const TextStyle(overflow: TextOverflow.ellipsis),), //TODO - Translate to actual i10n name.
@@ -149,7 +149,7 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
                         }
                       }
                     },
-                    trailing: isCompleted ? const Icon(Icons.check, color: Themes.primaryColor,) : const SizedBox(),
+                    trailing: isCompleted ? const Icon(Icons.check, color: Colors.green,) : const SizedBox(),
 
                     //TODO - Testing only, remove!
                     onLongPress: () {

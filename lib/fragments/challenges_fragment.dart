@@ -223,7 +223,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                       // scrollDirection: Axis.horizontal,
                       crossAxisCount: 2,
                       children: Challenge.challenges.map((e) {
-                        return ChallengeWidget(e);
+                        return ChallengeWidget(e, refresher: _refresh);
                       }).toList(),
                     ),
                   ),
@@ -234,4 +234,9 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
       },
     );
   }
+
+  _refresh() {
+    setState(() {});
+  }
+
 }

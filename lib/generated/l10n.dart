@@ -600,6 +600,26 @@ class S {
     );
   }
 
+  /// `Press the image to zoom in for more detail.`
+  String get clickOnImageToZoom {
+    return Intl.message(
+      'Press the image to zoom in for more detail.',
+      name: 'clickOnImageToZoom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click here to read the article`
+  String get clickToViewArticle {
+    return Intl.message(
+      'Click here to read the article',
+      name: 'clickToViewArticle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tutorial Badge`
   String get tutorialBadgeTitle {
     return Intl.message(
@@ -675,6 +695,76 @@ class S {
     return Intl.message(
       'You have made 5 mistakes, and the game will restart.',
       name: 'c1a1_5mistakesReset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Advances in technology and lifestyle changes`
+  String get c1a2_bubble1 {
+    return Intl.message(
+      'Advances in technology and lifestyle changes',
+      name: 'c1a2_bubble1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `minimize the need for physical interaction with the environment.`
+  String get c1a2_bubble2 {
+    return Intl.message(
+      'minimize the need for physical interaction with the environment.',
+      name: 'c1a2_bubble2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For example, public or private transport decreases the need for (physical) movement to get around.`
+  String get c1a2_bubble3 {
+    return Intl.message(
+      'For example, public or private transport decreases the need for (physical) movement to get around.',
+      name: 'c1a2_bubble3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This leads to an increased risk of developing pathologies.`
+  String get c1a2_bubble4 {
+    return Intl.message(
+      'This leads to an increased risk of developing pathologies.',
+      name: 'c1a2_bubble4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sedentary behaviours affect health, but they also have profound implications for mental and emotional well-being.`
+  String get c1a2_bubble5 {
+    return Intl.message(
+      'Sedentary behaviours affect health, but they also have profound implications for mental and emotional well-being.',
+      name: 'c1a2_bubble5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Read and then press each bubble to reveal the next.`
+  String get c1a2_bubbles_instructions {
+    return Intl.message(
+      'Read and then press each bubble to reveal the next.',
+      name: 'c1a2_bubbles_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more.`
+  String get c1a2_finish {
+    return Intl.message(
+      'Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more.',
+      name: 'c1a2_finish',
       desc: '',
       args: [],
     );

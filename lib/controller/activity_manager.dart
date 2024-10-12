@@ -1,5 +1,6 @@
 import 'package:ephyli/model/challenge.dart';
 import 'package:ephyli/screen/activity/activity_c1a1.dart';
+import 'package:ephyli/screen/activity/activity_c1a2.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -28,6 +29,11 @@ class ActivityManager {
       switch (activityID) {
         case "c1a1":
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ActivityC1a1(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c1a2":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ActivityC1a2(),)).then((value) {
             setState(() {});
           },);
           break;

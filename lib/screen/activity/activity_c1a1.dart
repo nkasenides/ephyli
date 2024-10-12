@@ -6,10 +6,13 @@ import 'package:ephyli/fragments/fragments.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/ui_utils.dart';
+import 'package:ephyli/widgets/text_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttermoji/fluttermojiCircleAvatar.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:widget_zoom/widget_zoom.dart';
 import '../../model/activity.dart';
 import '../../model/game_badge.dart';
 import '../../model/match_game/matching_pair.dart';
@@ -32,10 +35,12 @@ enum C1A1Stage {
   intro,
   activity,
   congrats,
-  reading
+  reading,
 }
 
-class _ActivityC1a1State extends State<ActivityC1a1> {
+class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderStateMixin {
+
+  final String activityID = "c1a1";
 
   C1A1Stage stage = C1A1Stage.intro;
 
@@ -57,11 +62,36 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
 
   int mistakeCounter = 0;
 
+  late AnimationController _controller;
+  late Animation<Offset> _animation;
+  bool handVisible = true;
 
   @override
   void initState() {
     future = loadData();
+
+    // Initialize the AnimationController
+    _controller = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    );
+
+    // Start the animation after 2 seconds
+    Future.delayed(const Duration(seconds: 2)).then((value) {
+      _controller.forward().then((value) {
+        setState(() {
+          handVisible = false;
+        });
+      },);
+    },);
+
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   //Finds a term by its ID
@@ -314,161 +344,197 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
 
   //Matching Activity
   Widget puzzleView() {
-    return Expanded(
-      child: Column(
-        children: [
-          Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
 
-                // Draggable words (Keys)
-                Expanded(
-                  flex: 3,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: _termTexts.map((word) {
-                      return Container(
-                        padding: const EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: Colors.blueAccent),
-                        ),
-                        margin: const EdgeInsets.symmetric(vertical: 8),
-                        child: Draggable<String>(
-                          data: word,
-                          feedback: Material(
-                            color: Colors.transparent,
-                            child: Text(
-                              word,
-                              style: const TextStyle(
-                                color: Themes.primaryColorDark,
-                                fontSize: 18,
-                              ),
-                            ),
-                          ),
-                          childWhenDragging: Opacity(
-                            opacity: 0.5,
-                            child: Text(word),
-                          ),
-                          child: Text(
-                            word,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(fontSize: 18),
-                          ),
-                        ),
-                      );
-                    }).toList(),
+    // Define the Tween for the hand's movement between two positions
+    _animation = Tween<Offset>(
+      begin: Offset(25, MediaQuery.of(context).size.height * 1/3),
+      end: Offset(MediaQuery.of(context).size.width * 2/3, MediaQuery.of(context).size.height / 2),
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeInOut,
+    ));
+
+
+    return Stack(
+      children: [
+
+        //Background view (game):
+    Column(
+    children: [
+    Expanded(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+
+        // Draggable words (Keys)
+        Expanded(
+          flex: 3,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: _termTexts.map((word) {
+              return Container(
+                padding: const EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.blueAccent),
+                ),
+                margin: const EdgeInsets.symmetric(vertical: 8),
+                child: Draggable<String>(
+                  data: word,
+                  feedback: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      word,
+                      style: const TextStyle(
+                        color: Themes.primaryColorDark,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                  childWhenDragging: Opacity(
+                    opacity: 0.5,
+                    child: Text(word),
+                  ),
+                  child: Text(
+                    word,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ),
-
-                const Gap(20),
-
-                // Drag Targets (Values)
-                Expanded(
-                  flex: 7,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: _termDescriptions.map((definition) {
-                      return DragTarget<String>(
-                        onAccept: (receivedWord) {
-                          if (isMatch(receivedWord, definition)) {
-                            setState(() {
-                              score += 100;
-
-                              //Move the term to completed from shown:
-                              _termsCompleted.add(getIDByTerm(receivedWord)!);
-                              _termsShown.remove(getIDByTerm(receivedWord));
-
-                              //Move the other terms from shown back to not shown:
-                              _termsShown.remove(matchingPairs.wrongPair1!.id);
-                              _termsShown.remove(matchingPairs.wrongPair2!.id);
-
-                              if (!_termsCompleted.contains(matchingPairs.wrongPair1!.id)) {
-                                _termsNotShown.add(
-                                    matchingPairs.wrongPair1!.id);
-                              }
-
-                              if (!_termsCompleted.contains(matchingPairs.wrongPair2!.id)) {
-                                _termsNotShown.add(
-                                    matchingPairs.wrongPair2!.id);
-                              }
-
-                              debugPrint("Not shown: $_termsNotShown");
-                              debugPrint("Shown: $_termsShown");
-                              debugPrint("Completed: $_termsCompleted");
-
-                              if (_termsNotShown.isEmpty) {
-                                setState(() {
-                                  stage = C1A1Stage.congrats;
-                                });
-                              }
-                              else {
-                                _findMatchingPairs();
-                              }
-
-                            });
-                          } else {
-                            setState(() {
-                              score -= 100;
-                              mistakeCounter++;
-                              if (mistakeCounter >= 5) {
-                                showDialog(context: context, builder: (context) {
-                                  return AlertDialog(
-                                    title: Text(AppLocalizations.of(context)!.gameOver),
-                                    content: Text(AppLocalizations.of(context)!.c1a1_5mistakesReset),
-                                    actions: [
-                                      TextButton(
-                                        onPressed: () {
-                                          resetGame();
-                                          Navigator.pop(context);
-                                        },
-                                        child: Text(AppLocalizations.of(context)!.ok),
-                                      )
-                                    ],
-                                  );
-                                }, barrierDismissible: false);
-                              }
-                            });
-                          }
-                        },
-                        builder: (context, candidateData, rejectedData) {
-                          return Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Themes.secondaryColor),
-                            ),
-                            margin: EdgeInsets.symmetric(vertical: 8),
-                            child: SizedBox(
-                              width: 500,
-                              child: Text(
-                                definition,
-                                style: const TextStyle(
-                                    fontSize: 16,
-                                    fontStyle: FontStyle.italic,
-                                    color: Colors.blue,
-                                ),
-                              ),
-                            ),
-                          );
-                        },
-                      );
-                    }).toList(),
-                  ),
-                ),
-              ],
-            ),
+              );
+            }).toList(),
           ),
-        ],
-      ),
+        ),
+
+        const Gap(20),
+
+        // Drag Targets (Values)
+        Expanded(
+          flex: 7,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: _termDescriptions.map((definition) {
+              return DragTarget<String>(
+                onAccept: (receivedWord) {
+                  if (isMatch(receivedWord, definition)) {
+                    setState(() {
+                      score += 100;
+
+                      //Move the term to completed from shown:
+                      _termsCompleted.add(getIDByTerm(receivedWord)!);
+                      _termsShown.remove(getIDByTerm(receivedWord));
+
+                      //Move the other terms from shown back to not shown:
+                      _termsShown.remove(matchingPairs.wrongPair1!.id);
+                      _termsShown.remove(matchingPairs.wrongPair2!.id);
+
+                      if (!_termsCompleted.contains(matchingPairs.wrongPair1!.id)) {
+                        _termsNotShown.add(
+                            matchingPairs.wrongPair1!.id);
+                      }
+
+                      if (!_termsCompleted.contains(matchingPairs.wrongPair2!.id)) {
+                        _termsNotShown.add(
+                            matchingPairs.wrongPair2!.id);
+                      }
+
+                      debugPrint("Not shown: $_termsNotShown");
+                      debugPrint("Shown: $_termsShown");
+                      debugPrint("Completed: $_termsCompleted");
+
+                      if (_termsNotShown.isEmpty) {
+                        setState(() {
+                          stage = C1A1Stage.congrats;
+                        });
+                      }
+                      else {
+                        _findMatchingPairs();
+                      }
+
+                    });
+                  } else {
+                    setState(() {
+                      score -= 100;
+                      mistakeCounter++;
+                      if (mistakeCounter >= 5) {
+                        showDialog(context: context, builder: (context) {
+                          return AlertDialog(
+                            title: Text(AppLocalizations.of(context)!.gameOver),
+                            content: Text(AppLocalizations.of(context)!.c1a1_5mistakesReset),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  resetGame();
+                                  Navigator.pop(context);
+                                },
+                                child: Text(AppLocalizations.of(context)!.ok),
+                              )
+                            ],
+                          );
+                        }, barrierDismissible: false);
+                      }
+                    });
+                  }
+                },
+                builder: (context, candidateData, rejectedData) {
+                  return Container(
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: Themes.secondaryColor),
+                    ),
+                    margin: EdgeInsets.symmetric(vertical: 8),
+                    child: SizedBox(
+                      width: 500,
+                      child: Text(
+                        definition,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            }).toList(),
+          ),
+        ),
+      ],
+    ),
+    ),
+    ],
+    ),
+
+
+        //Hand animations:
+        Visibility(
+          visible: handVisible,
+          child: AnimatedBuilder(
+            animation: _animation,
+            builder: (context, child) {
+              return Positioned(
+                left: _animation.value.dx,
+                top: _animation.value.dy,
+                child: Icon(
+                  Icons.back_hand,
+                  size: 50,
+                  color: Colors.red.shade900,
+                ),
+              );
+            },
+          ),
+        ),
+
+      ],
     );
+
+
   }
 
-  //TODO - Fix overflow
   Widget getReadingView() {
-    UIUtils.portraitOrientation();
     return Column(
       children: [
         Column(
@@ -511,7 +577,14 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
 
         const Gap(20),
 
-        Image.asset("assets/img/a1c1-extract.png", width: MediaQuery.of(context).size.width,),
+        WidgetZoom(
+          heroAnimationTag: "extract-img",
+          zoomWidget: Image.asset("assets/img/a1c1-extract.png", width: MediaQuery.of(context).size.width,)
+        ),
+
+        const Gap(5),
+
+        Text(AppLocalizations.of(context)!.clickOnImageToZoom),
 
         const Gap(20),
 
@@ -519,10 +592,10 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             ElevatedButton(
-              child: Text(AppLocalizations.of(context)!.finish),
+              child: Text(AppLocalizations.of(context)!.next),
               onPressed: () {
                 setState(() {
-                  ActivityManager.completeActivity("c1a1").then((value) {
+                  ActivityManager.completeActivity(activityID).then((value) {
                     Navigator.pop(context, "_");
                   },);
                 });
@@ -536,8 +609,6 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
 
   @override
   Widget build(BuildContext context) {
-    UIUtils.landscapeOrientation();
-    UIUtils.enableFullScreen();
 
     return Scaffold(
       appBar: AppBar(
@@ -582,7 +653,7 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
         ),
         backgroundColor: Themes.primaryColorDark,
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(I10N.getI10nString(Activity.activities["c1a1"]!.nameRes)!, style: const TextStyle(color: Colors.white),), //TODO - Get name out of resource
+        title: Text(I10N.getI10nString(Activity.activities[activityID]!.nameRes)!, style: const TextStyle(color: Colors.white),), //TODO - Get name out of resource
         actions: stage == C1A1Stage.activity ? [
 
           Text(
@@ -656,14 +727,6 @@ class _ActivityC1a1State extends State<ActivityC1a1> {
         }
       ),
     );
-  }
-
-
-  @override
-  void dispose() {
-    UIUtils.portraitOrientation();
-    UIUtils.disableFullscreen();
-    super.dispose();
   }
 
   resetGame() {

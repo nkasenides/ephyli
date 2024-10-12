@@ -56,6 +56,8 @@
   "yes": "Yes",
   "no": "No",
   "unableToStartActivity": "Error - This activity cannot be started.",
+  "clickOnImageToZoom": "Press the image to zoom in for more detail.",
+  "clickToViewArticle": "Click here to read the article",
 
 
   "tutorialBadgeTitle": "Tutorial Badge",
@@ -67,7 +69,14 @@
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
   "c1a1_congrats": "Well done! All concepts are correctly matched to the related descriptions. You scored %1 points!",
   "c1a1_reading_instruction": "Read the scientific article extract reported below to start the next step of the challenge.",
-  "c1a1_5mistakesReset": "You have made 5 mistakes, and the game will restart."
+  "c1a1_5mistakesReset": "You have made 5 mistakes, and the game will restart.",
 
+  "c1a2_bubble1": "Advances in technology and lifestyle changes",
+  "c1a2_bubble2": "minimize the need for physical interaction with the environment.",
+  "c1a2_bubble3": "For example, public or private transport decreases the need for (physical) movement to get around.",
+  "c1a2_bubble4": "This leads to an increased risk of developing pathologies.",
+  "c1a2_bubble5": "Sedentary behaviours affect health, but they also have profound implications for mental and emotional well-being.",
+  "c1a2_bubbles_instructions": "Read and then press each bubble to reveal the next.",
+  "c1a2_finish": "Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more."
 
 }
