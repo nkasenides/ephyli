@@ -74,17 +74,19 @@ class GameBadge {
 
   //Earns the player the badge by saving it into prefs and showing a dialog.
   earn(BuildContext context) {
-    isOwned = true;
     //Save badge earned to prefs:
     SharedPreferences.getInstance().then((prefs) {
-      prefs.setBool("badge_$id", true).then((value) {
-        //Show UI dialog to congratulate player:
-        showDialog(context: context, builder: (context) {
-          //Show dialog for badge:
-          return UIUtils.createBadgeDialog(this, context);
+      bool owned = prefs.getBool("badge_$id") ?? false;
+      if (!owned) {
+        isOwned = true;
+        prefs.setBool("badge_$id", true).then((value) {
+          //Show UI dialog to congratulate player:
+          showDialog(context: context, builder: (context) {
+            //Show dialog for badge:
+            return UIUtils.createBadgeDialog(this, context);
+          },);
         },);
-      },
-      );
+      }
     },);
   }
 
