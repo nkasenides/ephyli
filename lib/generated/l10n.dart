@@ -620,6 +620,16 @@ class S {
     );
   }
 
+  /// `Click OK to continue`
+  String get clickOKToContinue {
+    return Intl.message(
+      'Click OK to continue',
+      name: 'clickOKToContinue',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(
@@ -630,10 +640,10 @@ class S {
     );
   }
 
-  /// `Well done! All concepts are correctly matched to the related descriptions. You scored %1 points!`
+  /// `Well done! All concepts are correctly matched to the related descriptions.`
   String get c1a1_congrats {
     return Intl.message(
-      'Well done! All concepts are correctly matched to the related descriptions. You scored %1 points!',
+      'Well done! All concepts are correctly matched to the related descriptions.',
       name: 'c1a1_congrats',
       desc: '',
       args: [],

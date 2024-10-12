@@ -211,16 +211,14 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
               child: Column(
                 children: [
 
-                  Expanded(
-                    flex: 1,
-                    child: !tutorialCompleted ? createTutorialView(snapshot)
-                        : createNormalView(snapshot),
-                  ),
+                  !tutorialCompleted ? createTutorialView(snapshot)
+                      : createNormalView(snapshot),
+
+                  const Gap(20),
 
                   //TODO ---
 
                   Expanded(
-                    flex: 2,
                     child: GridView.count(
                       // scrollDirection: Axis.horizontal,
                       crossAxisCount: 2,

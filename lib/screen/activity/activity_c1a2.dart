@@ -8,6 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../controller/activity_manager.dart';
 import '../../model/activity.dart';
+import '../../model/challenge.dart';
+import '../../model/game_badge.dart';
 import '../../theme/themes.dart';
 import '../../utils/constants.dart';
 import '../../utils/i10n.dart';
@@ -242,6 +244,13 @@ class _ActivityC1a2State extends State<ActivityC1a2> {
                     onPressed: () {
                       setState(() {
                         ActivityManager.completeActivity(activityID).then((value) {
+
+                          //Find all badges related to this activity and award them:
+                          Challenge.challenge1.badgeIDs.forEach((badgeID) {
+                            var badge = GameBadge.findBadge(badgeID);
+                            badge!.earn(context);
+                          },);
+
                           Navigator.pop(context, "_");
                           Navigator.pop(context, "_");
                         },);

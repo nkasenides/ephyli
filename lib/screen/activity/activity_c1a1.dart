@@ -297,62 +297,65 @@ class _ActivityC1a1State extends State<ActivityC1a1>
 
   //Step finished view
   Widget stepFinishedView() {
-    return Column(
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            PersonalizedAvatar(
-              buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
-              backgroundRadius: 25,
-              avatarSize: 35,
-            ),
-            ChatBubble(
-              margin: const EdgeInsets.only(left: 50),
-              child: AnimatedTextKit(
-                animatedTexts: [
-                  TypewriterAnimatedText(
-                    AppLocalizations.of(context)!
-                        .c1a1_congrats
-                        .replaceAll("%1", score.toString()),
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                    ),
-                    speed: const Duration(milliseconds: 0),
-                  ),
-                ],
-                displayFullTextOnTap: true,
-                isRepeatingAnimation: false,
-                onFinished: () {
-                  setState(() {
-                    step1MessageShown = true;
-                  });
-                },
-                onTap: () {
-                  setState(() {
-                    step1MessageShown = true;
-                  });
-                },
+    return Padding(
+      padding: Themes.standardPadding,
+      child: Column(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              PersonalizedAvatar(
+                buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
+                backgroundRadius: 25,
+                avatarSize: 35,
               ),
-            )
-          ],
-        ),
-        step1MessageShown
-            ? Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  ElevatedButton(
-                    child: Text(AppLocalizations.of(context)!.next),
-                    onPressed: () {
-                      setState(() {
-                        stage = C1A1Stage.reading;
-                      });
-                    },
-                  ),
-                ],
+              ChatBubble(
+                margin: const EdgeInsets.only(left: 50),
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      AppLocalizations.of(context)!
+                          .c1a1_congrats
+                          .replaceAll("%1", score.toString()),
+                      textStyle: const TextStyle(
+                        color: Colors.white,
+                      ),
+                      speed: const Duration(milliseconds: 0),
+                    ),
+                  ],
+                  displayFullTextOnTap: true,
+                  isRepeatingAnimation: false,
+                  onFinished: () {
+                    setState(() {
+                      step1MessageShown = true;
+                    });
+                  },
+                  onTap: () {
+                    setState(() {
+                      step1MessageShown = true;
+                    });
+                  },
+                ),
               )
-            : Container(),
-      ],
+            ],
+          ),
+          step1MessageShown
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ElevatedButton(
+                      child: Text(AppLocalizations.of(context)!.next),
+                      onPressed: () {
+                        setState(() {
+                          stage = C1A1Stage.reading;
+                        });
+                      },
+                    ),
+                  ],
+                )
+              : Container(),
+        ],
+      ),
     );
   }
 
@@ -360,9 +363,8 @@ class _ActivityC1a1State extends State<ActivityC1a1>
   Widget puzzleView() {
     // Define the Tween for the hand's movement between two positions
     _animation = Tween<Offset>(
-      begin: Offset(25, MediaQuery.of(context).size.height * 1 / 3),
-      end: Offset(MediaQuery.of(context).size.width * 2 / 3,
-          MediaQuery.of(context).size.height / 2),
+      begin: Offset(25, MediaQuery.of(context).size.height / 2 - 100),
+      end: Offset(MediaQuery.of(context).size.width * 2 / 3, MediaQuery.of(context).size.height / 2 - 100),
     ).animate(CurvedAnimation(
       parent: _controller,
       curve: Curves.easeInOut,
@@ -588,74 +590,77 @@ class _ActivityC1a1State extends State<ActivityC1a1>
   }
 
   Widget getReadingView() {
-    return Column(
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            PersonalizedAvatar(
-              buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
-              backgroundRadius: 25,
-              avatarSize: 35,
-            ),
-            ChatBubble(
-              margin: const EdgeInsets.only(left: 50),
-              child: AnimatedTextKit(
-                animatedTexts: [
-                  TypewriterAnimatedText(
-                    AppLocalizations.of(context)!.c1a1_reading_instruction,
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                    ),
-                    speed: const Duration(milliseconds: 0),
-                  ),
-                ],
-                displayFullTextOnTap: true,
-                isRepeatingAnimation: false,
-                onFinished: () {
-                  setState(() {
-                    step1MessageShown = true;
-                  });
-                },
-                onTap: () {
-                  setState(() {
-                    step1MessageShown = true;
-                  });
-                },
+    return Padding(
+      padding: Themes.standardPadding,
+      child: Column(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              PersonalizedAvatar(
+                buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
+                backgroundRadius: 25,
+                avatarSize: 35,
               ),
-            )
-          ],
-        ),
-        const Gap(20),
-        WidgetZoom(
-            heroAnimationTag: "extract-img",
-            zoomWidget: Image.asset(
-              "assets/img/a1c1-extract.png",
-              width: MediaQuery.of(context).size.width,
-            )),
-        const Gap(5),
-        Text(AppLocalizations.of(context)!.clickOnImageToZoom),
-        const Gap(20),
-        step1MessageShown
-            ? Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  ElevatedButton(
-                    child: Text(AppLocalizations.of(context)!.next),
-                    onPressed: () {
-                      setState(() {
-                        ActivityManager.completeActivity(activityID).then(
-                          (value) {
-                            Navigator.pop(context, "_");
-                          },
-                        );
-                      });
-                    },
-                  ),
-                ],
+              ChatBubble(
+                margin: const EdgeInsets.only(left: 50),
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      AppLocalizations.of(context)!.c1a1_reading_instruction,
+                      textStyle: const TextStyle(
+                        color: Colors.white,
+                      ),
+                      speed: const Duration(milliseconds: 0),
+                    ),
+                  ],
+                  displayFullTextOnTap: true,
+                  isRepeatingAnimation: false,
+                  onFinished: () {
+                    setState(() {
+                      step1MessageShown = true;
+                    });
+                  },
+                  onTap: () {
+                    setState(() {
+                      step1MessageShown = true;
+                    });
+                  },
+                ),
               )
-            : Container(),
-      ],
+            ],
+          ),
+          const Gap(20),
+          WidgetZoom(
+              heroAnimationTag: "extract-img",
+              zoomWidget: Image.asset(
+                "assets/img/a1c1-extract.png",
+                width: MediaQuery.of(context).size.width,
+              )),
+          const Gap(5),
+          Text(AppLocalizations.of(context)!.clickOnImageToZoom),
+          const Gap(20),
+          step1MessageShown
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ElevatedButton(
+                      child: Text(AppLocalizations.of(context)!.next),
+                      onPressed: () {
+                        setState(() {
+                          ActivityManager.completeActivity(activityID).then(
+                            (value) {
+                              Navigator.pop(context, "_");
+                            },
+                          );
+                        });
+                      },
+                    ),
+                  ],
+                )
+              : Container(),
+        ],
+      ),
     );
   }
 

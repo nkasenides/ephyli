@@ -35,7 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "You have made 5 mistakes, and the game will restart."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
-            "Well done! All concepts are correctly matched to the related descriptions. You scored %1 points!"),
+            "Well done! All concepts are correctly matched to the related descriptions."),
         "c1a1_reading_instruction": MessageLookupByLibrary.simpleMessage(
             "Read the scientific article extract reported below to start the next step of the challenge."),
         "c1a1_welcome": MessageLookupByLibrary.simpleMessage(
@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Hey %1! It\'s time to get started! Would you like to try the next challenge?"),
         "challengesTextTutorial": MessageLookupByLibrary.simpleMessage(
             "These are the challenges you must complete. Each of these challenges may consist of multiple activities, and once you complete all activities in a challenge, I will unlock the next challenge for you. Always remember to use my help if you get stuck in an activity, and remember to use the resources in the news and glossary sections.\n\nOur tutorial is finished. I think you are ready to get started!"),
+        "clickOKToContinue":
+            MessageLookupByLibrary.simpleMessage("Click OK to continue"),
         "clickOnImageToZoom": MessageLookupByLibrary.simpleMessage(
             "Press the image to zoom in for more detail."),
         "clickToViewArticle": MessageLookupByLibrary.simpleMessage(

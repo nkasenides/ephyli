@@ -35,7 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "Έχετε κάνει 5 λάθη και το παιχνίδι θα ξεκινήσει απο την αρχή."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
-            "Συγχαρητήρια! Όλες οι έννοιες έχουν αντιστοιχιστεί σωστά με τις σχετικές περιγραφές. Κερδίσατε %1 βαθμούς!"),
+            "Συγχαρητήρια! Όλες οι έννοιες έχουν αντιστοιχιστεί σωστά με τις σχετικές περιγραφές."),
         "c1a1_reading_instruction": MessageLookupByLibrary.simpleMessage(
             "Διαβάστε το απόσπασμα επιστημονικού άρθρου που αναφέρεται παρακάτω για να ξεκινήσετε το επόμενο βήμα της πρόκλησης."),
         "c1a1_welcome": MessageLookupByLibrary.simpleMessage(
@@ -55,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "%1, είναι ώρα να ξεκινήσεις τις προκλήσεις! Θέλετε να δοκιμάσετε την επόμενη πρόκληση;"),
         "challengesTextTutorial": MessageLookupByLibrary.simpleMessage(
             "Αυτές είναι οι προκλήσεις που πρέπει να ολοκληρώσετε. Κάθε μία από αυτές τις προκλήσεις μπορεί να αποτελείται από πολλές δραστηριότητες και μόλις ολοκληρώσετε όλες τις δραστηριότητες σε μια πρόκληση, θα ξεκλειδώσω την επόμενη πρόκληση. Να θυμάστε πάντα οτι μπορείτε να χρησιμοποιείτε τη βοήθειά μου εάν κολλήστε σε μια δραστηριότητα και να χρησιμοποιήσετε τα άρθρα νέων και το γλωσσάρι για να βρείτε απαντήσεις.\n\nΤο σεμινάριο μας ολοκληρώθηκε. Eίστε έτοιμοι να ξεκινήσετε!"),
+        "clickOKToContinue": MessageLookupByLibrary.simpleMessage(
+            "Κάντε κλικ στο OK για να συνεχίσετε"),
         "clickOnImageToZoom": MessageLookupByLibrary.simpleMessage(
             "Πατήστε την εικόνα για μεγέθυνση (περισσότερες λεπτομέρειες)."),
         "clickToViewArticle": MessageLookupByLibrary.simpleMessage(
