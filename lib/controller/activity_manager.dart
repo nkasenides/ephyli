@@ -43,24 +43,11 @@ class ActivityManager {
     }
   }
 
-  // static Future<void> unlockActivity(String activityID) async {
-  //   var prefs = await SharedPreferences.getInstance();
-  //   List<String>? unlockedActivityIDs = prefs.getStringList(PrefUtils.unlocked_activities) ?? ["c1a1"];
-  //   unlockedActivityIDs.add(activityID);
-  //   prefs.setStringList(PrefUtils.unlocked_activities, unlockedActivityIDs);
-  // }
-
   static Future<void> completeActivity(String activityID) async {
     var prefs = await SharedPreferences.getInstance();
     List<String>? completedActivityIDs = prefs.getStringList(PrefUtils.activity_completion) ?? [];
     completedActivityIDs.add(activityID);
     prefs.setStringList(PrefUtils.activity_completion, completedActivityIDs);
-
-    //Unlock next activity:
-    var activity = Activity.activities[activityID];
-    for (String toBeUnlockedID in activity!.unlocksActivitiesIDs) {
-
-    }
   }
 
   static Future<void> resetActivity(String activityID) async {

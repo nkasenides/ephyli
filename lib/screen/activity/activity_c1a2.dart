@@ -3,6 +3,7 @@ import 'package:ephyli/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:fluttermoji/fluttermojiCircleAvatar.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -243,16 +244,37 @@ class _ActivityC1a2State extends State<ActivityC1a2> {
                     child: Text(AppLocalizations.of(context)!.finish),
                     onPressed: () {
                       setState(() {
-                        ActivityManager.completeActivity(activityID).then((value) {
+                        ActivityManager.completeActivity(activityID).then((value) async {
 
                           //Find all badges related to this activity and award them:
-                          Challenge.challenge1.badgeIDs.forEach((badgeID) {
+                          for (var badgeID in Challenge.challenge1.badgeIDs) {
                             var badge = GameBadge.findBadge(badgeID);
                             badge!.earn(context);
-                          },);
+                          }
 
-                          Navigator.pop(context, "_");
-                          Navigator.pop(context, "_");
+                          //Unlock next challenges:
+                          List<Future> unlockFutures = [];
+                          for (var challengeID in Challenge.challenge1.unlocksChallengesIDs) {
+                            Challenge challenge = Challenge.findChallenge(challengeID)!;
+                            challenge.isUnlocked().then((value) {
+                              if (!value) {
+                                unlockFutures.add(challenge.unlock());
+                              }
+                            },);
+                          }
+
+                          //Show toast and move back:
+                          Future.wait(unlockFutures).then((value) {
+                            if (unlockFutures.isNotEmpty) {
+                              Fluttertoast.showToast(
+                                  msg: AppLocalizations.of(context)!
+                                      .challenges_unlocked.replaceAll(
+                                      "%1", unlockFutures.length.toString()));
+                            }
+                            Navigator.pop(context, "_");
+                            Navigator.pop(context, "_");
+                          },);
+                          
                         },);
                       });
                     },

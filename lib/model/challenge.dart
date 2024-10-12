@@ -169,4 +169,11 @@ class Challenge {
     prefs.setStringList(PrefUtils.unlocked_challenges, unlockedChallenges);
   }
 
+  //Checks if a challenge is unlocked
+  Future<bool> isUnlocked() async {
+    var prefs = await SharedPreferences.getInstance();
+    List<String> unlockedChallenges = prefs.getStringList(PrefUtils.unlocked_challenges) ?? [];
+    return unlockedChallenges.contains(id);
+  }
+
 }
