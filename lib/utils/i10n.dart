@@ -2,7 +2,62 @@ import 'package:ephyli/utils/language.dart';
 
 class I10N {
 
-  static Map<String, Map<String, String>> _translations = {
+  static final Map<String, Map<String, String>> _translations = {
+
+    //----- Badges
+    "tutorial_badge_name": {
+      "en": "Tutorial Badge",
+      "el": "Σήμα μαθητευόμενου",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "tutorial_badge_description": {
+      "en": "This badge is awarded to players who have completed the tutorial.",
+      "el": "Αυτό το σήμα απονέμεται σε παίκτες που έχουν ολοκληρώσει το μάθημα χρήσης του παιχνιδιού.",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "buddy_badge_name": {
+      "en": "Buddy Badge",
+      "el": "Σήμα ePhyLi Buddy",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "buddy_badge_description": {
+      "en": "This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities.",
+      "el": "Αυτό το σήμα απονέμεται σε παίκτες που έχουν χρησομοποιήσει τον ePhyLi buddy τουλάχιστον μία φορά για να τους βοηθήσει με τις δραστηριότητες.",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c1_badge_name": {
+      "en": "Challenge 1 Badge",
+      "el": "Σήμα Πρόκλησης 1",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c1_badge_description": {
+      "en": "This badge is awarded to players who have completed the first challenge.",
+      "el": "Αυτό το σήμα απονέμεται σε παίκτες που έχουν ολοκληρώσει την πρώτη πρόκληση.",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
 
     //----- Challenges
 

@@ -210,10 +210,10 @@ class S {
     );
   }
 
-  /// `This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click 'Proceed'.`
+  /// `This is your ePhyLi buddy. They can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click 'Proceed'.`
   String get buddyIntro {
     return Intl.message(
-      'This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'.',
+      'This is your ePhyLi buddy. They can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'.',
       name: 'buddyIntro',
       desc: '',
       args: [],
@@ -615,46 +615,6 @@ class S {
     return Intl.message(
       'Click here to read the article',
       name: 'clickToViewArticle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Tutorial Badge`
-  String get tutorialBadgeTitle {
-    return Intl.message(
-      'Tutorial Badge',
-      name: 'tutorialBadgeTitle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `This badge is awarded to players who have completed the tutorial.`
-  String get tutorialBadgeDescription {
-    return Intl.message(
-      'This badge is awarded to players who have completed the tutorial.',
-      name: 'tutorialBadgeDescription',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Buddy Badge`
-  String get useBuddyBadgeTitle {
-    return Intl.message(
-      'Buddy Badge',
-      name: 'useBuddyBadgeTitle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities.`
-  String get useBuddyBadgeDescription {
-    return Intl.message(
-      'This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities.',
-      name: 'useBuddyBadgeDescription',
       desc: '',
       args: [],
     );

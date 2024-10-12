@@ -1,6 +1,7 @@
 import 'package:ephyli/screen/buddy_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
+import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -31,70 +32,84 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.only(
-            left: 15,
-            right: 15
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+      body: EphyliGradient(
+        child: Padding(
+          padding: const EdgeInsets.only(
+              left: 15,
+              right: 15
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
 
-            //Avatar:
-            SizedBox(
-              child: FluttermojiCircleAvatar(
-                backgroundColor: Colors.grey.shade100,
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(Icons.arrow_back),
+                  )
+                ],
               ),
-            ),
 
-            const Gap(40),
+              const Gap(10),
 
-            //Customizer:
-            FluttermojiCustomizer(
-              autosave: false,
-              theme: FluttermojiThemeData(
-                  labelTextStyle: Theme.of(context).textTheme.titleSmall,
-                  secondaryBgColor: Colors.white
+              //Avatar:
+              SizedBox(
+                child: FluttermojiCircleAvatar(
+                  backgroundColor: Colors.grey.shade100,
+                ),
               ),
-            ),
 
-            const Gap(20),
+              const Gap(40),
 
-            //Proceed button:
-            SizedBox(
-              height: 50,
-              width: MediaQuery.of(context).size.width * 2/3,
-              child: ElevatedButton(
-                child: Text(AppLocalizations.of(context)!.proceed.toUpperCase()),
-                onPressed: () async {
-
-                  //Encode avatar data:
-                  FluttermojiFunctions().encodeMySVGtoString().then((value) {
-                    avatarData = value;
-                  },);
-
-                  //Save to prefs and move on:
-                  var prefs = await SharedPreferences.getInstance();
-                  prefs.setString(PrefUtils.user_avatar, avatarData).then((value) {
-
-                    debugPrint("Saved user avatar in prefs: ${avatarData}");
-
-                    Navigator.push(
-                      context,
-                      PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => const BuddyScreen(),
-                        transitionDuration: const Duration(milliseconds: 200),
-                        transitionsBuilder: (_, a, __, c) => FadeTransition(opacity: a, child: c),
-                      ),
-                    );
-                  },);
-
-                },
+              //Customizer:
+              FluttermojiCustomizer(
+                autosave: false,
+                theme: FluttermojiThemeData(
+                    labelTextStyle: Theme.of(context).textTheme.titleSmall,
+                    secondaryBgColor: Colors.white
+                ),
               ),
-            ),
 
-          ],
+              const Gap(20),
+
+              //Proceed button:
+              SizedBox(
+                height: 50,
+                width: MediaQuery.of(context).size.width * 2/3,
+                child: ElevatedButton(
+                  child: Text(AppLocalizations.of(context)!.proceed.toUpperCase()),
+                  onPressed: () async {
+
+                    //Encode avatar data:
+                    FluttermojiFunctions().encodeMySVGtoString().then((value) {
+                      avatarData = value;
+                    },);
+
+                    //Save to prefs and move on:
+                    var prefs = await SharedPreferences.getInstance();
+                    prefs.setString(PrefUtils.user_avatar, avatarData).then((value) {
+
+                      debugPrint("Saved user avatar in prefs: ${avatarData}");
+
+                      Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => const BuddyScreen(),
+                          transitionDuration: const Duration(milliseconds: 200),
+                          transitionsBuilder: (_, a, __, c) => FadeTransition(opacity: a, child: c),
+                        ),
+                      );
+                    },);
+
+                  },
+                ),
+              ),
+
+            ],
+          ),
         ),
       ),
     );

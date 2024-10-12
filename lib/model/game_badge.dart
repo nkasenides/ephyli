@@ -48,24 +48,24 @@ class GameBadge {
 
   static final GameBadge tutorialBadge = GameBadge(
     id: "tutorialBadge",
-    nameRes: "tutorialBadgeTitle",
-    descriptionRes: "tutorialBadgeDescription",
+    nameRes: "tutorial_badge_name",
+    descriptionRes: "tutorial_badge_description",
     imageCompletedRes: AppImages.logo,
     imageIncompleteRes: AppImages.logoBlackAndWhite,
   );
 
   static final GameBadge buddyBadge = GameBadge(
     id: "buddyBadge",
-    nameRes: "buddyBadgeTitle",
-    descriptionRes: "buddyBadgeDescription",
+    nameRes: "buddy_badge_name",
+    descriptionRes: "buddy_badge_description",
     imageCompletedRes: AppImages.logo,
     imageIncompleteRes: AppImages.logoBlackAndWhite,
   );
 
   static final GameBadge challenge1Badge = GameBadge(
     id: "challenge1Badge",
-    nameRes: "challenge1Badge",
-    descriptionRes: "challenge1BadgeDescription",
+    nameRes: "c1_badge_name",
+    descriptionRes: "c1_badge_description",
     imageCompletedRes: AppImages.logo,
     imageIncompleteRes: AppImages.logoBlackAndWhite,
   );

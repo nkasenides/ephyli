@@ -44,10 +44,8 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
       ),
       child: widget.challenge.unlocked ? InkWell(
 
-        onTap: !widget.challenge.completed ? () async {
-          Activity? nextActivity = await widget.challenge.findNextIncompleteActivity();
+        onTap: () async {
           if (context.mounted) {
-            if (nextActivity != null) {
               Navigator.push(context, MaterialPageRoute(builder: (context) =>
                   ViewActivitiesScreen(widget.challenge),)).then((value) {
                     widget.refresher();
@@ -56,8 +54,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
             else {
               Fluttertoast.showToast(msg: AppLocalizations.of(context)!.error);
             }
-          }
-        } : null,
+        },
 
         //TODO - DEBUGGING ONLY REMOVE LATER
         onLongPress: !widget.challenge.completed ? () {

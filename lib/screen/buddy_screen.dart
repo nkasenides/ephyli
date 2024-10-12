@@ -1,6 +1,7 @@
 import 'package:ephyli/screen/game_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
+import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttermoji/fluttermojiCircleAvatar.dart';
@@ -47,95 +48,109 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.only(
-            left: 15,
-            right: 15
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+      body: EphyliGradient(
+        child: Padding(
+          padding: const EdgeInsets.only(
+              left: 15,
+              right: 15
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
 
-            Text(
-              AppLocalizations.of(context)!.ePhyLiBuddyIntroHeadline,
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-
-            const Gap(20),
-
-            Text(
-              AppLocalizations.of(context)!.buddyIntro,
-            ),
-
-            const Gap(20),
-
-            Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-
-
-                SizedBox(
-                  height: 300,
-                  child: PageView(
-                    physics: const NeverScrollableScrollPhysics(),
-                    controller: _pageController,
-                    onPageChanged: _handlePageViewChanged,
-                    children: [
-                      PersonalizedAvatar(buddyAvatars[0], avatarSize: 150),
-                      PersonalizedAvatar(buddyAvatars[1], avatarSize: 150),
-                      PersonalizedAvatar(buddyAvatars[2], avatarSize: 150),
-                      PersonalizedAvatar(buddyAvatars[3], avatarSize: 150),
-                      PersonalizedAvatar(buddyAvatars[4], avatarSize: 150),
-                    ],
-                  ),
-                ),
-
-                PageIndicator(
-                  tabController: _tabController,
-                  currentPageIndex: _currentPageIndex,
-                  numOfPages: buddyAvatars.length,
-                  onNextPage: _nextPage,
-                  onPreviousPage: _previousPage,
-                  isOnDesktopAndWeb: _isOnDesktopAndWeb,
-                ),
-
-              ],
-            ),
-
-            const Gap(20),
-
-            //Proceed button:
-            SizedBox(
-              height: 50,
-              width: MediaQuery.of(context).size.width * 2/3,
-              child: ElevatedButton(
-                child: Text(AppLocalizations.of(context)!.proceed.toUpperCase()),
-                onPressed: () async {
-
-                  //Save to prefs and move on:
-                  var prefs = await SharedPreferences.getInstance();
-                  prefs.setInt(PrefUtils.buddy_selection, _currentPageIndex).then((value) {
-
-                    debugPrint("Saved buddy in prefs: $_currentPageIndex");
-
-                    prefs.setBool(PrefUtils.onboarding_completed, true);
-
-                    Navigator.push(
-                      context,
-                      PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => const GameScreen(),
-                        transitionDuration: const Duration(milliseconds: 200),
-                        transitionsBuilder: (_, a, __, c) => FadeTransition(opacity: a, child: c),
-                      ),
-                    );
-                  },);
-
-                },
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(Icons.arrow_back),
+                  )
+                ],
               ),
-            ),
 
-          ],
+              const Gap(10),
+
+              Text(
+                AppLocalizations.of(context)!.ePhyLiBuddyIntroHeadline,
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+
+              const Gap(20),
+
+              Text(
+                AppLocalizations.of(context)!.buddyIntro,
+              ),
+
+              const Gap(20),
+
+              Stack(
+                alignment: Alignment.bottomCenter,
+                children: [
+
+
+                  SizedBox(
+                    height: 300,
+                    child: PageView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      controller: _pageController,
+                      onPageChanged: _handlePageViewChanged,
+                      children: [
+                        PersonalizedAvatar(buddyAvatars[0], avatarSize: 150),
+                        PersonalizedAvatar(buddyAvatars[1], avatarSize: 150),
+                        PersonalizedAvatar(buddyAvatars[2], avatarSize: 150),
+                        PersonalizedAvatar(buddyAvatars[3], avatarSize: 150),
+                        PersonalizedAvatar(buddyAvatars[4], avatarSize: 150),
+                      ],
+                    ),
+                  ),
+
+                  PageIndicator(
+                    tabController: _tabController,
+                    currentPageIndex: _currentPageIndex,
+                    numOfPages: buddyAvatars.length,
+                    onNextPage: _nextPage,
+                    onPreviousPage: _previousPage,
+                    isOnDesktopAndWeb: _isOnDesktopAndWeb,
+                  ),
+
+                ],
+              ),
+
+              const Gap(20),
+
+              //Proceed button:
+              SizedBox(
+                height: 50,
+                width: MediaQuery.of(context).size.width * 2/3,
+                child: ElevatedButton(
+                  child: Text(AppLocalizations.of(context)!.proceed.toUpperCase()),
+                  onPressed: () async {
+
+                    //Save to prefs and move on:
+                    var prefs = await SharedPreferences.getInstance();
+                    prefs.setInt(PrefUtils.buddy_selection, _currentPageIndex).then((value) {
+
+                      debugPrint("Saved buddy in prefs: $_currentPageIndex");
+
+                      prefs.setBool(PrefUtils.onboarding_completed, true);
+
+                      Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => const GameScreen(),
+                          transitionDuration: const Duration(milliseconds: 200),
+                          transitionsBuilder: (_, a, __, c) => FadeTransition(opacity: a, child: c),
+                        ),
+                      );
+                    },);
+
+                  },
+                ),
+              ),
+
+            ],
+          ),
         ),
       ),
     );

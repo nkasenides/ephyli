@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -38,8 +39,8 @@ enum C1A1Stage {
   reading,
 }
 
-class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderStateMixin {
-
+class _ActivityC1a1State extends State<ActivityC1a1>
+    with SingleTickerProviderStateMixin {
   final String activityID = "c1a1";
 
   C1A1Stage stage = C1A1Stage.intro;
@@ -77,13 +78,17 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
     );
 
     // Start the animation after 2 seconds
-    Future.delayed(const Duration(seconds: 2)).then((value) {
-      _controller.forward().then((value) {
-        setState(() {
-          handVisible = false;
-        });
-      },);
-    },);
+    Future.delayed(const Duration(seconds: 2)).then(
+      (value) {
+        _controller.forward().then(
+          (value) {
+            setState(() {
+              handVisible = false;
+            });
+          },
+        );
+      },
+    );
 
     super.initState();
   }
@@ -125,19 +130,18 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
   }
 
   void _findMatchingPairs() {
-
     //Initialize matching pairs object, if not initialized:
     matchingPairs = MatchingPairs();
 
     List<String> titles = [];
     List<String> descriptions = [];
 
-
     //Find correct pair:
     int randomIndex = Random().nextInt(_termsNotShown.length);
     String correctTermID = _termsNotShown[randomIndex];
     Term? correctTerm = getTermByID(correctTermID);
-    MatchingPair correctPair = MatchingPair(correctTerm!.id, correctTerm.text, correctTerm.correctDescription);
+    MatchingPair correctPair = MatchingPair(
+        correctTerm!.id, correctTerm.text, correctTerm.correctDescription);
     matchingPairs.correctPair = correctPair;
 
     _termsNotShown.remove(correctTerm.id);
@@ -174,7 +178,9 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
     List<String> allWrongDescriptions = [];
     for (Term t in terms) {
       allWrongDescriptions.add(t.wrongDescription);
-      if (t.id != correctTerm.id && t.id != extraTermID1 && t.id != extraTermID2) {
+      if (t.id != correctTerm.id &&
+          t.id != extraTermID1 &&
+          t.id != extraTermID2) {
         allWrongDescriptions.add(t.correctDescription);
       }
     }
@@ -191,8 +197,10 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
     descriptions.add(allWrongDescriptions[randomWrongIndex2]);
 
     //Create the matched pairs:
-    matchingPairs.wrongPair1 = MatchingPair(extraTermID1, extraTerm1.text, allWrongDescriptions[randomWrongIndex1]);
-    matchingPairs.wrongPair2 = MatchingPair(extraTermID2, extraTerm2.text, allWrongDescriptions[randomWrongIndex2]);
+    matchingPairs.wrongPair1 = MatchingPair(
+        extraTermID1, extraTerm1.text, allWrongDescriptions[randomWrongIndex1]);
+    matchingPairs.wrongPair2 = MatchingPair(
+        extraTermID2, extraTerm2.text, allWrongDescriptions[randomWrongIndex2]);
 
     //Randomize the lists and set for UI:
     titles.shuffle();
@@ -203,21 +211,25 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
     debugPrint(_termTexts.toString());
 
     debugPrint(_termDescriptions.toString());
-
   }
 
   Future<void> loadData() async {
     await Future.wait([
-      Term.readTermsFromJSONFile("assets/activity_data/activity1/test_terms.json")
-          .then((value) {
-            terms = value;
-            //Add all terms as not completed:
-            for (Term t in terms) {
-              _termsNotShown.add(t.id);
-            }
-            _findMatchingPairs();
-          },),
-      SharedPreferences.getInstance().then((value) => prefs = value,),
+      Term.readTermsFromJSONFile(
+              "assets/activity_data/activity1/test_terms.json")
+          .then(
+        (value) {
+          terms = value;
+          //Add all terms as not completed:
+          for (Term t in terms) {
+            _termsNotShown.add(t.id);
+          }
+          _findMatchingPairs();
+        },
+      ),
+      SharedPreferences.getInstance().then(
+        (value) => prefs = value,
+      ),
     ]);
   }
 
@@ -230,20 +242,20 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               PersonalizedAvatar(
                 buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
                 backgroundRadius: 25,
                 avatarSize: 35,
               ),
-
               ChatBubble(
                 margin: const EdgeInsets.only(left: 50),
                 child: AnimatedTextKit(
                   animatedTexts: [
                     TypewriterAnimatedText(
                       AppLocalizations.of(context)!.c1a1_welcome,
-                      textStyle: const TextStyle(color: Colors.white,),
+                      textStyle: const TextStyle(
+                        color: Colors.white,
+                      ),
                       speed: const Duration(milliseconds: 50),
                     ),
                   ],
@@ -261,23 +273,23 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
                   },
                 ),
               )
-
             ],
           ),
-
-          step1MessageShown ? Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              ElevatedButton(
-                child: Text(AppLocalizations.of(context)!.lets_start),
-                onPressed: () {
-                  setState(() {
-                    stage = C1A1Stage.activity;
-                  });
-                },
-              ),
-            ],
-          ) : Container(),
+          step1MessageShown
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ElevatedButton(
+                      child: Text(AppLocalizations.of(context)!.lets_start),
+                      onPressed: () {
+                        setState(() {
+                          stage = C1A1Stage.activity;
+                        });
+                      },
+                    ),
+                  ],
+                )
+              : Container(),
         ],
       ),
     );
@@ -290,20 +302,22 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             PersonalizedAvatar(
               buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
               backgroundRadius: 25,
               avatarSize: 35,
             ),
-
             ChatBubble(
               margin: const EdgeInsets.only(left: 50),
               child: AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
-                    AppLocalizations.of(context)!.c1a1_congrats.replaceAll("%1", score.toString()),
-                    textStyle: const TextStyle(color: Colors.white,),
+                    AppLocalizations.of(context)!
+                        .c1a1_congrats
+                        .replaceAll("%1", score.toString()),
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                    ),
                     speed: const Duration(milliseconds: 0),
                   ),
                 ],
@@ -321,193 +335,235 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
                 },
               ),
             )
-
           ],
         ),
-
-        step1MessageShown ? Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            ElevatedButton(
-              child: Text(AppLocalizations.of(context)!.next),
-              onPressed: () {
-                setState(() {
-                  stage = C1A1Stage.reading;
-                });
-              },
-            ),
-          ],
-        ) : Container(),
+        step1MessageShown
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ElevatedButton(
+                    child: Text(AppLocalizations.of(context)!.next),
+                    onPressed: () {
+                      setState(() {
+                        stage = C1A1Stage.reading;
+                      });
+                    },
+                  ),
+                ],
+              )
+            : Container(),
       ],
     );
   }
 
   //Matching Activity
   Widget puzzleView() {
-
     // Define the Tween for the hand's movement between two positions
     _animation = Tween<Offset>(
-      begin: Offset(25, MediaQuery.of(context).size.height * 1/3),
-      end: Offset(MediaQuery.of(context).size.width * 2/3, MediaQuery.of(context).size.height / 2),
+      begin: Offset(25, MediaQuery.of(context).size.height * 1 / 3),
+      end: Offset(MediaQuery.of(context).size.width * 2 / 3,
+          MediaQuery.of(context).size.height / 2),
     ).animate(CurvedAnimation(
       parent: _controller,
       curve: Curves.easeInOut,
     ));
 
-
     return Stack(
       children: [
-
         //Background view (game):
-    Column(
-    children: [
-    Expanded(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-
-        // Draggable words (Keys)
-        Expanded(
-          flex: 3,
+        Padding(
+          padding: Themes.standardPadding,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: _termTexts.map((word) {
-              return Container(
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.blueAccent),
-                ),
-                margin: const EdgeInsets.symmetric(vertical: 8),
-                child: Draggable<String>(
-                  data: word,
-                  feedback: Material(
-                    color: Colors.transparent,
-                    child: Text(
-                      word,
-                      style: const TextStyle(
-                        color: Themes.primaryColorDark,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                  childWhenDragging: Opacity(
-                    opacity: 0.5,
-                    child: Text(word),
-                  ),
-                  child: Text(
-                    word,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 18),
-                  ),
-                ),
-              );
-            }).toList(),
-          ),
-        ),
+            children: [
+              // const Gap(20),
+              // Container(
+              //   decoration: BoxDecoration(
+              //     color: Themes.secondaryColor,
+              //     borderRadius: const BorderRadius.all(Radius.circular(10)),
+              //     border: Border.all(
+              //       color: Colors.black,
+              //     ),
+              //   ),
+              //   child: Padding(
+              //     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              //     child: Text(
+              //       'Score: $score',
+              //     ),
+              //   ),
+              // ),
 
-        const Gap(20),
-
-        // Drag Targets (Values)
-        Expanded(
-          flex: 7,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: _termDescriptions.map((definition) {
-              return DragTarget<String>(
-                onAccept: (receivedWord) {
-                  if (isMatch(receivedWord, definition)) {
-                    setState(() {
-                      score += 100;
-
-                      //Move the term to completed from shown:
-                      _termsCompleted.add(getIDByTerm(receivedWord)!);
-                      _termsShown.remove(getIDByTerm(receivedWord));
-
-                      //Move the other terms from shown back to not shown:
-                      _termsShown.remove(matchingPairs.wrongPair1!.id);
-                      _termsShown.remove(matchingPairs.wrongPair2!.id);
-
-                      if (!_termsCompleted.contains(matchingPairs.wrongPair1!.id)) {
-                        _termsNotShown.add(
-                            matchingPairs.wrongPair1!.id);
-                      }
-
-                      if (!_termsCompleted.contains(matchingPairs.wrongPair2!.id)) {
-                        _termsNotShown.add(
-                            matchingPairs.wrongPair2!.id);
-                      }
-
-                      debugPrint("Not shown: $_termsNotShown");
-                      debugPrint("Shown: $_termsShown");
-                      debugPrint("Completed: $_termsCompleted");
-
-                      if (_termsNotShown.isEmpty) {
-                        setState(() {
-                          stage = C1A1Stage.congrats;
-                        });
-                      }
-                      else {
-                        _findMatchingPairs();
-                      }
-
-                    });
-                  } else {
-                    setState(() {
-                      score -= 100;
-                      mistakeCounter++;
-                      if (mistakeCounter >= 5) {
-                        showDialog(context: context, builder: (context) {
-                          return AlertDialog(
-                            title: Text(AppLocalizations.of(context)!.gameOver),
-                            content: Text(AppLocalizations.of(context)!.c1a1_5mistakesReset),
-                            actions: [
-                              TextButton(
-                                onPressed: () {
-                                  resetGame();
-                                  Navigator.pop(context);
-                                },
-                                child: Text(AppLocalizations.of(context)!.ok),
-                              )
-                            ],
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Draggable words (Keys)
+                    Expanded(
+                      flex: 3,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: _termTexts.map((word) {
+                          return Container(
+                            padding: const EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              color: Themes.primaryColor,
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: Themes.secondaryColor),
+                            ),
+                            margin: const EdgeInsets.symmetric(vertical: 8),
+                            child: Draggable<String>(
+                              data: word,
+                              feedback: Material(
+                                color: Colors.transparent,
+                                child: Container(
+                                  padding: const EdgeInsets.all(5),
+                                  decoration: BoxDecoration(
+                                    color: Themes.primaryColor,
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(color: Themes.secondaryColor),
+                                  ),
+                                  child: Text(
+                                    word,
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              childWhenDragging: Opacity(
+                                opacity: 0.5,
+                                child: Text(word),
+                              ),
+                              child: Text(
+                                word,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(fontSize: 18, color: Colors.white),
+                              ),
+                            ),
                           );
-                        }, barrierDismissible: false);
-                      }
-                    });
-                  }
-                },
-                builder: (context, candidateData, rejectedData) {
-                  return Container(
-                    padding: const EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: Themes.secondaryColor),
-                    ),
-                    margin: EdgeInsets.symmetric(vertical: 8),
-                    child: SizedBox(
-                      width: 500,
-                      child: Text(
-                        definition,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.blue,
-                        ),
+                        }).toList(),
                       ),
                     ),
-                  );
-                },
-              );
-            }).toList(),
+
+                    const Gap(20),
+
+                    // Drag Targets (Values)
+                    Expanded(
+                      flex: 7,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: _termDescriptions.map((definition) {
+                          return DragTarget<String>(
+                            onAccept: (receivedWord) {
+                              if (isMatch(receivedWord, definition)) {
+                                setState(() {
+                                  score += 100;
+                                  showFeedbackBar(true);
+
+                                  //Move the term to completed from shown:
+                                  _termsCompleted.add(getIDByTerm(receivedWord)!);
+                                  _termsShown.remove(getIDByTerm(receivedWord));
+
+                                  //Move the other terms from shown back to not shown:
+                                  _termsShown
+                                      .remove(matchingPairs.wrongPair1!.id);
+                                  _termsShown
+                                      .remove(matchingPairs.wrongPair2!.id);
+
+                                  if (!_termsCompleted
+                                      .contains(matchingPairs.wrongPair1!.id)) {
+                                    _termsNotShown
+                                        .add(matchingPairs.wrongPair1!.id);
+                                  }
+
+                                  if (!_termsCompleted
+                                      .contains(matchingPairs.wrongPair2!.id)) {
+                                    _termsNotShown
+                                        .add(matchingPairs.wrongPair2!.id);
+                                  }
+
+                                  debugPrint("Not shown: $_termsNotShown");
+                                  debugPrint("Shown: $_termsShown");
+                                  debugPrint("Completed: $_termsCompleted");
+
+                                  if (_termsNotShown.isEmpty) {
+                                    setState(() {
+                                      stage = C1A1Stage.congrats;
+                                    });
+                                  } else {
+                                    _findMatchingPairs();
+                                  }
+                                });
+                              } else {
+                                setState(() {
+                                  score -= 100;
+                                  showFeedbackBar(false);
+
+                                  mistakeCounter++;
+                                  if (mistakeCounter >= 5) {
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return AlertDialog(
+                                            title: Text(
+                                                AppLocalizations.of(context)!
+                                                    .gameOver),
+                                            content: Text(
+                                                AppLocalizations.of(context)!
+                                                    .c1a1_5mistakesReset),
+                                            actions: [
+                                              TextButton(
+                                                onPressed: () {
+                                                  resetGame();
+                                                  Navigator.pop(context);
+                                                },
+                                                child: Text(
+                                                    AppLocalizations.of(context)!
+                                                        .ok),
+                                              )
+                                            ],
+                                          );
+                                        },
+                                        barrierDismissible: false);
+                                  }
+                                });
+                              }
+                            },
+                            builder: (context, candidateData, rejectedData) {
+                              return Container(
+                                padding: const EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  border:
+                                      Border.all(color: Themes.primaryColor),
+                                ),
+                                margin: EdgeInsets.symmetric(vertical: 8),
+                                child: SizedBox(
+                                  width: 500,
+                                  child: Text(
+                                    definition,
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontStyle: FontStyle.italic,
+                                      color: Colors.blueGrey,
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+            ],
           ),
         ),
-      ],
-    ),
-    ),
-    ],
-    ),
-
 
         //Hand animations:
         Visibility(
@@ -527,11 +583,8 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
             },
           ),
         ),
-
       ],
     );
-
-
   }
 
   Widget getReadingView() {
@@ -540,20 +593,20 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             PersonalizedAvatar(
               buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
               backgroundRadius: 25,
               avatarSize: 35,
             ),
-
             ChatBubble(
               margin: const EdgeInsets.only(left: 50),
               child: AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
                     AppLocalizations.of(context)!.c1a1_reading_instruction,
-                    textStyle: const TextStyle(color: Colors.white,),
+                    textStyle: const TextStyle(
+                      color: Colors.white,
+                    ),
                     speed: const Duration(milliseconds: 0),
                   ),
                 ],
@@ -571,45 +624,43 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
                 },
               ),
             )
-
           ],
         ),
-
         const Gap(20),
-
         WidgetZoom(
-          heroAnimationTag: "extract-img",
-          zoomWidget: Image.asset("assets/img/a1c1-extract.png", width: MediaQuery.of(context).size.width,)
-        ),
-
+            heroAnimationTag: "extract-img",
+            zoomWidget: Image.asset(
+              "assets/img/a1c1-extract.png",
+              width: MediaQuery.of(context).size.width,
+            )),
         const Gap(5),
-
         Text(AppLocalizations.of(context)!.clickOnImageToZoom),
-
         const Gap(20),
-
-        step1MessageShown ? Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            ElevatedButton(
-              child: Text(AppLocalizations.of(context)!.next),
-              onPressed: () {
-                setState(() {
-                  ActivityManager.completeActivity(activityID).then((value) {
-                    Navigator.pop(context, "_");
-                  },);
-                });
-              },
-            ),
-          ],
-        ) : Container(),
+        step1MessageShown
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ElevatedButton(
+                    child: Text(AppLocalizations.of(context)!.next),
+                    onPressed: () {
+                      setState(() {
+                        ActivityManager.completeActivity(activityID).then(
+                          (value) {
+                            Navigator.pop(context, "_");
+                          },
+                        );
+                      });
+                    },
+                  ),
+                ],
+              )
+            : Container(),
       ],
     );
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -625,107 +676,98 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
                   builder: (BuildContext context) {
                     return AlertDialog(
                         title: Text(AppLocalizations.of(context)!.areYouSure),
-                        content: Text(AppLocalizations.of(context)!.resetLoseProgressMessage),
+                        content: Text(AppLocalizations.of(context)!
+                            .resetLoseProgressMessage),
                         actions: [
-
                           TextButton(
                             onPressed: () {
                               Navigator.pop(context);
                               Navigator.pop(context);
                             },
-                            child: Text(AppLocalizations.of(context)!.resetGame),
+                            child:
+                                Text(AppLocalizations.of(context)!.resetGame),
                           ),
-
                           TextButton(
                             onPressed: () {
                               Navigator.pop(context);
                             },
                             child: Text(AppLocalizations.of(context)!.cancel),
                           ),
-
-                        ]
-                    );
-                  }
-              );
+                        ]);
+                  });
             }
           },
           icon: const Icon(Icons.arrow_back),
         ),
         backgroundColor: Themes.primaryColorDark,
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(I10N.getI10nString(Activity.activities[activityID]!.nameRes)!, style: const TextStyle(color: Colors.white),), //TODO - Get name out of resource
-        actions: stage == C1A1Stage.activity ? [
+        title: Text(
+          I10N.getI10nString(Activity.activities[activityID]!.nameRes)!,
+          style: const TextStyle(color: Colors.white),
+        ),
+        //TODO - Get name out of resource
+        actions: stage == C1A1Stage.activity
+            ? [
+                OutlinedButton(
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                              title: Text(
+                                  AppLocalizations.of(context)!.areYouSure),
+                              content: Text(AppLocalizations.of(context)!
+                                  .resetLoseProgressMessage),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                    setState(() {
+                                      resetGame();
+                                    });
+                                  },
+                                  child: Text(
+                                      AppLocalizations.of(context)!.resetGame),
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text(
+                                      AppLocalizations.of(context)!.cancel),
+                                ),
+                              ]);
+                        });
 
-          Text(
-            'Score: $score',
-            style: const TextStyle(fontSize: 20, color: Colors.white),
-          ),
-
-          const Gap(20),
-
-          OutlinedButton(
-            onPressed: () {
-
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    title: Text(AppLocalizations.of(context)!.areYouSure),
-                    content: Text(AppLocalizations.of(context)!.resetLoseProgressMessage),
-                    actions: [
-
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                          setState(() {
-                            resetGame();
-                          });
-                        },
-                        child: Text(AppLocalizations.of(context)!.resetGame),
-                      ),
-
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Text(AppLocalizations.of(context)!.cancel),
-                      ),
-
-                    ]
-                  );
-                }
-              );
-
-              setState(() {
-                score = 0; // Reset score
-                setState(() {
-                  _findMatchingPairs();
-                });
-              });
-            },
-            child: Text(AppLocalizations.of(context)!.resetGame, style: const TextStyle(color: Colors.white),),
-          ),
-
-          const Gap(20),
-        ] : [],
+                    setState(() {
+                      score = 0; // Reset score
+                      setState(() {
+                        _findMatchingPairs();
+                      });
+                    });
+                  },
+                  child: Text(
+                    AppLocalizations.of(context)!.resetGame,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                ),
+                const Gap(20),
+              ]
+            : [],
       ),
       body: FutureBuilder(
-        future: future,
-        builder: (context, snapshot) {
+          future: future,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              // debugPrint(terms.toString());
 
-          if (snapshot.connectionState == ConnectionState.done) {
-
-            // debugPrint(terms.toString());
-
-            return Padding(
-              padding: const EdgeInsets.all(2),
-              child: getChildView()
+              return Padding(
+                  padding: const EdgeInsets.all(2), child: getChildView());
+            }
+            return const Center(
+              child: CircularProgressIndicator(),
             );
-
-          }
-          return const Center(child: CircularProgressIndicator(),);
-        }
-      ),
+          }),
     );
   }
 
@@ -737,7 +779,7 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
     _termsCompleted = [];
     _termTexts = [];
     future = loadData();
-    setState(() { });
+    setState(() {});
   }
 
   Widget getChildView() {
@@ -751,6 +793,17 @@ class _ActivityC1a1State extends State<ActivityC1a1> with SingleTickerProviderSt
       case C1A1Stage.reading:
         return getReadingView();
     }
+  }
+
+  showFeedbackBar(bool rightAnswer) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        duration: const Duration(seconds: 1),
+        padding: Themes.standardPadding,
+        backgroundColor: rightAnswer ? Colors.green : Colors.red,
+        content: Icon(rightAnswer ? Icons.check : Icons.close, color: Colors.white,),
+      )
+    );
   }
 
 }

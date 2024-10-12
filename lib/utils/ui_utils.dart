@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:ephyli/model/game_badge.dart';
 import 'package:ephyli/theme/themes.dart';
+import 'package:ephyli/utils/i10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -22,7 +23,7 @@ class UIUtils {
     confettiController.play();
 
     return AlertDialog(
-      title: Text(badge.nameRes, textAlign: TextAlign.center,),
+      title: Text(I10N.getI10nString(badge.nameRes)!, textAlign: TextAlign.center,),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -48,7 +49,7 @@ class UIUtils {
 
           const Gap(20),
 
-          Text(badge.descriptionRes, textAlign: TextAlign.center,),
+          Text(I10N.getI10nString(badge.descriptionRes)!, textAlign: TextAlign.center,),
 
 
         ],

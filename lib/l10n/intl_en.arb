@@ -17,7 +17,7 @@
   "invalidPersonName": "Invalid name",
   "ePhyLiBuddy": "ePhyLi Buddy",
   "ePhyLiBuddyIntroHeadline": "Your ePhyLi buddy",
-  "buddyIntro": "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click 'Proceed'.",
+  "buddyIntro": "This is your ePhyLi buddy. They can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click 'Proceed'.",
   "buddy_description": "You can also call me if you need help with an activity. I can provide extra help or hints.",
   "news": "News",
   "news_description": "Here you can read news articles, posts, and more, related to Physical Literacy.",
@@ -58,12 +58,6 @@
   "unableToStartActivity": "Error - This activity cannot be started.",
   "clickOnImageToZoom": "Press the image to zoom in for more detail.",
   "clickToViewArticle": "Click here to read the article",
-
-
-  "tutorialBadgeTitle": "Tutorial Badge",
-  "tutorialBadgeDescription": "This badge is awarded to players who have completed the tutorial.",
-  "useBuddyBadgeTitle": "Buddy Badge",
-  "useBuddyBadgeDescription": "This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities.",
 
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",

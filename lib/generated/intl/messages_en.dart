@@ -29,7 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "You have already participated in this activity. Would you like to replay it?"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
-            "This is your ePhyLi buddy. He can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
+            "This is your ePhyLi buddy. They can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "You can also call me if you need help with an activity. I can provide extra help or hints."),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
@@ -116,10 +116,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "This will reset your current progress."),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
-        "tutorialBadgeDescription": MessageLookupByLibrary.simpleMessage(
-            "This badge is awarded to players who have completed the tutorial."),
-        "tutorialBadgeTitle":
-            MessageLookupByLibrary.simpleMessage("Tutorial Badge"),
         "tutorialTextChallenges": MessageLookupByLibrary.simpleMessage(
             "Well done! Now I am going to explain how you can start playing. The game consists of several challenges that you must complete in order.\n\nI have already unlocked the first challenge for you. Once you complete a challenge, the next will be unlocked. Each challenge will reward you with points, which can help you level up your avatar. You can also gather badges through the challenges, or various other activities, by interacting with the various features of the app."),
         "tutorial_text": MessageLookupByLibrary.simpleMessage(
@@ -128,10 +124,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "Hi, I am your ePhyLi buddy, a virtual companion designed to guide and assist you throughout the game. Let me introduce you to the game with a brief tutorial."),
         "unableToStartActivity": MessageLookupByLibrary.simpleMessage(
             "Error - This activity cannot be started."),
-        "useBuddyBadgeDescription": MessageLookupByLibrary.simpleMessage(
-            "This badge is awarded to players who have the ePhyLi buddy at least once to help them with the activities."),
-        "useBuddyBadgeTitle":
-            MessageLookupByLibrary.simpleMessage("Buddy Badge"),
         "viewBadges": MessageLookupByLibrary.simpleMessage("View badges"),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),
         "whatIsYourName":

@@ -157,7 +157,7 @@ class Challenge {
 
   //Checks if all activities are completed.
   Future<bool> isCompleted() async {
-    return (await getNumOfCompletedActivities()) >= activityIDs.length;
+    return (await getNumOfCompletedActivities()) >= activityIDs.length && activityIDs.isNotEmpty;
   }
 
   //Unlocks a challenge
