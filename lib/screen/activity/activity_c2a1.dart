@@ -30,9 +30,8 @@ enum C2A1Stage {
 class _ActivityC2A1State extends State<ActivityC2A1> {
 
   // Card Data: The cards and their correct timeline positions
-  final List<String> events = [];
-  final List<String> timelineDates = ["1884", "1920", "1933", "1937", "2001", "2017"];
-  List<String> shownEvents = [];
+  List<Map<String, String>> events = [];
+  List<Map<String, String>> shuffledEvents = [];
 
   // Keep track of which cards are correctly matched
   final Map<int, bool> matched = {};
@@ -61,6 +60,11 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
     super.initState();
   }
 
+  // Function to shuffle the event cards
+  void _shuffleEvents() {
+    shuffledEvents = List.from(events);
+    shuffledEvents.shuffle();
+  }
 
   @override
   void dispose() {
@@ -140,17 +144,16 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
 
     //Initialize the events:
     if (events.isEmpty) {
-      events.addAll([
-        AppLocalizations.of(context)!.c2a1_term1,
-        AppLocalizations.of(context)!.c2a1_term2,
-        AppLocalizations.of(context)!.c2a1_term3,
-        AppLocalizations.of(context)!.c2a1_term4,
-        AppLocalizations.of(context)!.c2a1_term5,
-        AppLocalizations.of(context)!.c2a1_term6,
-      ]);
+      events = [
+        {"event": AppLocalizations.of(context)!.c2a1_term1, "date": "1884"},
+        {"event": AppLocalizations.of(context)!.c2a1_term2, "date": "1920"},
+        {"event": AppLocalizations.of(context)!.c2a1_term3, "date": "1933"},
+        {"event": AppLocalizations.of(context)!.c2a1_term4, "date": "1937"},
+        {"event": AppLocalizations.of(context)!.c2a1_term5, "date": "2001"},
+        {"event": AppLocalizations.of(context)!.c2a1_term6, "date": "2017"},
+      ];
 
-      shownEvents.addAll(events);
-      shownEvents.shuffle();
+      _shuffleEvents();
 
       // Initialize all card placements to false (not placed)
       for (int i = 0; i < events.length; i++) {
@@ -160,9 +163,6 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
 
     }
 
-    bool isCorrectPlacement(int index, String value) {
-      return timelineDates[index] == value;
-    }
 
     return Column(
       children: [
@@ -172,7 +172,7 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
           flex: 1,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: List.generate(timelineDates.length, (index) {
+            children: List.generate(events.length, (index) {
               return Column(
                 children: [
                   Container(
@@ -189,7 +189,7 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
                     child: Center(
                       child: matched[index]!
                           ? Text(
-                        "${timelineDates[index]}, ${events[index]}",
+                        "${events[index]["date"]}, ${events[index]["event"]}",
                         style: const TextStyle(color: Colors.green, fontSize: 14),
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
@@ -200,7 +200,7 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
                           return Center(
                             child: Text(
                               overflow: TextOverflow.ellipsis,
-                              draggedData[index] == '' ? timelineDates[index] : "✔️",
+                              draggedData[index] == '' ? events[index]["date"]! : "✔️",
                               style: const TextStyle(color: Colors.black, fontSize: 14),
                               textAlign: TextAlign.center,
                             ),
@@ -208,12 +208,29 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
                         },
                         onWillAccept: (data) {
                           // Accept the drag if the data matches the correct event
-                          return data == events[index];
+                          return data == events[index]["event"];
                         },
                         onAccept: (data) {
                           setState(() {
                             matched[index] = true;
                             draggedData[index] = data;
+
+                            ///TODO - IMPORTANT!
+                            ///REMOVE THE APPROPRIATE ITEM MATCHED FROM THE LIST OF EVENTS
+
+                            int itemIndex = -1;
+                            for (int i = 0; i < events.length; i++) {
+                              var pair = events[i];
+                              if (pair["event"] == data) {
+                                itemIndex = i;
+                                break;
+                              }
+                            }
+                            if (itemIndex != -1) {
+                              debugPrint("Would remove item at: $index");
+                              // events.removeAt(itemIndex);
+                            }
+
                           });
                         },
                       ),
@@ -231,58 +248,51 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
           flex: 3,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: List.generate(events.length, (index) {
-              return matched[index]!
-                  ? Container(
+            children: List.generate(shuffledEvents.length, (index) {
+              return Container(
                 width: MediaQuery.of(context).size.width / events.length - 10,
-                height: 60,
+                height: MediaQuery.of(context).size.height / 2,
                 margin: const EdgeInsets.symmetric(horizontal: 2),
-                child: const Center(
-                  child: Text(
-                    'Placed',
-                    style: TextStyle(color: Colors.green, fontSize: 16),
-                  ),
-                ),
-              )
-                  : Draggable<String>(
-                data: events[index],
-                feedback: Card(
-                  color: Colors.orangeAccent,
-                  child: Container(
-                    width: MediaQuery.of(context).size.width / events.length - 10,
-                    height: 60,
-                    padding: const EdgeInsets.all(10),
-                    child: Center(
-                      child: Text(
-                        events[index],
-                        style: const TextStyle(color: Colors.white),
-                        textAlign: TextAlign.center,
+                child: Draggable<String>(
+                  data: shuffledEvents[index]["event"]!,
+                  feedback: Card(
+                    color: Colors.orangeAccent,
+                    child: Container(
+                      width: 120,
+                      height: 60,
+                      padding: EdgeInsets.all(10),
+                      child: Center(
+                        child: Text(
+                          shuffledEvents[index]["event"]!,
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                childWhenDragging: Container(
-                  width: 120,
-                  height: 60,
-                  margin: const EdgeInsets.symmetric(horizontal: 2),
-                  child: const Center(
-                    child: Text(
-                      'Dragging...',
-                      style: TextStyle(color: Colors.grey),
+                  childWhenDragging: Container(
+                    width: 120,
+                    height: 60,
+                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    child: Center(
+                      child: Text(
+                        'Dragging...',
+                        style: TextStyle(color: Colors.grey, fontSize: 14),
+                      ),
                     ),
                   ),
-                ),
-                child: Card(
-                  color: Colors.blueAccent,
-                  child: Container(
-                    width: MediaQuery.of(context).size.width / events.length - 10,
-                    height: MediaQuery.of(context).size.height / 2,
-                    padding: const EdgeInsets.all(10),
-                    child: Center(
-                      child: AutoSizeText(
-                        events[index],
-                        style: const TextStyle(color: Colors.white),
-                        textAlign: TextAlign.center,
+                  child: Card(
+                    color: Colors.blueAccent,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / events.length - 10,
+                      height: MediaQuery.of(context).size.height / 2,
+                      padding: EdgeInsets.all(10),
+                      child: Center(
+                        child: AutoSizeText(
+                          shuffledEvents[index]["event"]!,
+                          style: TextStyle(color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
                   ),
