@@ -215,20 +215,17 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
                             matched[index] = true;
                             draggedData[index] = data;
 
-                            ///TODO - IMPORTANT!
-                            ///REMOVE THE APPROPRIATE ITEM MATCHED FROM THE LIST OF EVENTS
-
                             int itemIndex = -1;
-                            for (int i = 0; i < events.length; i++) {
-                              var pair = events[i];
+                            for (int i = 0; i < shuffledEvents.length; i++) {
+                              var pair = shuffledEvents[i];
                               if (pair["event"] == data) {
                                 itemIndex = i;
                                 break;
                               }
                             }
                             if (itemIndex != -1) {
-                              debugPrint("Would remove item at: $index");
-                              // events.removeAt(itemIndex);
+                              debugPrint("Would remove item at: $itemIndex");
+                              shuffledEvents.removeAt(itemIndex);
                             }
 
                           });
