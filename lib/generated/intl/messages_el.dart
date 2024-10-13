@@ -40,10 +40,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "Διαβάστε το απόσπασμα επιστημονικού άρθρου που αναφέρεται παρακάτω για να ξεκινήσετε το επόμενο βήμα της πρόκλησης."),
         "c1a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Καλώς ορίσατε στην πρώτη πρόκληση. Αντιστοιχίστε τις έννοιες που παρουσιάζονται στον πίνακα με τις κατάλληλες περιγραφές. Προσοχή! Εάν κάνετε πέντε λάθη, η πρόκληση θα ξεκινήσει ξανά από την αρχή. Είστε έτοιμοι;"),
+        "c1a2_bubble1": MessageLookupByLibrary.simpleMessage(
+            "Πρόοδος στην τεχνολογία και αλλαγές στον τρόπο ζωής"),
+        "c1a2_bubble2": MessageLookupByLibrary.simpleMessage(
+            "ελαχιστοποιήστε την ανάγκη για φυσική αλληλεπίδραση με το περιβάλλον."),
+        "c1a2_bubble3": MessageLookupByLibrary.simpleMessage(
+            "Για παράδειγμα, οι δημόσιες ή ιδιωτικές συγκοινωνίες μειώνουν την ανάγκη για (φυσική) κίνηση για να μετακινηθείτε."),
+        "c1a2_bubble4": MessageLookupByLibrary.simpleMessage(
+            "Αυτό οδηγεί σε αυξημένο κίνδυνο ανάπτυξης παθολογιών."),
+        "c1a2_bubble5": MessageLookupByLibrary.simpleMessage(
+            "Οι καθιστικές συμπεριφορές επηρεάζουν την υγεία, αλλά έχουν επίσης βαθιές επιπτώσεις στην ψυχική και συναισθηματική ευεξία."),
         "c1a2_bubbles_instructions": MessageLookupByLibrary.simpleMessage(
             "Διαβάστε και μετά πατήστε κάθε συννεφάκι για να εμφανιστεί το επόμενο."),
         "c1a2_finish": MessageLookupByLibrary.simpleMessage(
             "Η αναζωπύρωση της σχέσης μας με τη σωματική δραστηριότητα και το περιβάλλον είναι επιτακτική ανάγκη για μια υγιή και ικανοποιητική ζωή. Διαβάστε αυτό το επιστημονικό άρθρο για να μάθετε περισσότερα."),
+        "c2a1_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ήρθατε στα τέλη του 19ου αιώνα. Τοποθετήστε τις κάρτες στη λωρίδα χρόνου που ταιριάζουν με την έννοια του Φυσικού Αλφαβητισμού με τα ιστορικά δεδομένα. Έτοιμοι; Ας ξεκινήσουμε!"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),
@@ -103,6 +115,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetGame": MessageLookupByLibrary.simpleMessage("Επανεκκίνηση"),
         "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
             "Αυτό θα επαναφέρει την τρέχουσα πρόοδό σας."),
+        "screen_flip_notice": MessageLookupByLibrary.simpleMessage(
+            "Η οθόνη σας θα αλλάξει σε οριζόντια λειτουργία για αυτή τη δραστηριότητα."),
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),

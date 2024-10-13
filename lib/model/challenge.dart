@@ -63,13 +63,13 @@ class Challenge {
       imageCompletedRes: AppImages.logo,
       imageIncompleteRes: AppImages.logoBlackAndWhite,
       activityIDs: [
-
+        "c2a1"
       ],
       badgeIDs: [
-
+        //TODO
       ],
       unlocksChallengesIDs: [
-
+        //TODO
       ]
   );
 

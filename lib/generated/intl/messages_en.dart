@@ -54,6 +54,20 @@ class MessageLookup extends MessageLookupByLibrary {
             "Read and then press each bubble to reveal the next."),
         "c1a2_finish": MessageLookupByLibrary.simpleMessage(
             "Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more."),
+        "c2a1_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Welcome to the end of the XIX century. Arrange the cards on the golden timeline matching the concept of Physical Literacy with the historical data. Ready? Let\'s start!"),
+        "c2a1_term1": MessageLookupByLibrary.simpleMessage(
+            "American Army Captain used the word “Physical Literacy” to describe the physicality or movement quality of an indigenous culture."),
+        "c2a1_term2": MessageLookupByLibrary.simpleMessage(
+            "American educators stated: “We must prepare for physical literacy as well as for mental literacy”, responding to an upcoming era of modernization and army recruitment."),
+        "c2a1_term3": MessageLookupByLibrary.simpleMessage(
+            "Margaret Whitehead promotes discussion on the Physical Literacy concept."),
+        "c2a1_term4": MessageLookupByLibrary.simpleMessage(
+            "The word \'Physical Literacy\' was used to describe \'A disciplined command over the body\'."),
+        "c2a1_term5": MessageLookupByLibrary.simpleMessage(
+            "Margaret Whitehead published a scientific article in the European Journal of Physical Education to promote an open debate on the Physical Literacy concept."),
+        "c2a1_term6": MessageLookupByLibrary.simpleMessage(
+            "Holistic approach to the concept of Physical Literacy, identifying four dimensions: physical, emotional, social and cognitive dimensions."),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),
@@ -118,6 +132,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetGame": MessageLookupByLibrary.simpleMessage("Reset game"),
         "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
             "This will reset your current progress."),
+        "screen_flip_notice": MessageLookupByLibrary.simpleMessage(
+            "Your screen will change to landscape mode for this activity."),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
         "tutorialTextChallenges": MessageLookupByLibrary.simpleMessage(

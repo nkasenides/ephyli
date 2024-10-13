@@ -60,6 +60,7 @@
   "clickToViewArticle": "Click here to read the article",
   "clickOKToContinue": "Click OK to continue",
   "challenges_unlocked": "%1 challenge(s) were unlocked!",
+  "screen_flip_notice": "Your screen will change to landscape mode for this activity.",
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
   "c1a1_congrats": "Well done! All concepts are correctly matched to the related descriptions.",
@@ -72,6 +73,14 @@
   "c1a2_bubble4": "This leads to an increased risk of developing pathologies.",
   "c1a2_bubble5": "Sedentary behaviours affect health, but they also have profound implications for mental and emotional well-being.",
   "c1a2_bubbles_instructions": "Read and then press each bubble to reveal the next.",
-  "c1a2_finish": "Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more."
+  "c1a2_finish": "Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more.",
+
+  "c2a1_intro_message": "Welcome to the end of the XIX century. Arrange the cards on the golden timeline matching the concept of Physical Literacy with the historical data. Ready? Let's start!",
+  "c2a1_term1": "American Army Captain used the word “Physical Literacy” to describe the physicality or movement quality of an indigenous culture.",
+  "c2a1_term2": "American educators stated: “We must prepare for physical literacy as well as for mental literacy”, responding to an upcoming era of modernization and army recruitment.",
+  "c2a1_term3": "Margaret Whitehead promotes discussion on the Physical Literacy concept.",
+  "c2a1_term4": "The word 'Physical Literacy' was used to describe 'A disciplined command over the body'.",
+  "c2a1_term5": "Margaret Whitehead published a scientific article in the European Journal of Physical Education to promote an open debate on the Physical Literacy concept.",
+  "c2a1_term6": "Holistic approach to the concept of Physical Literacy, identifying four dimensions: physical, emotional, social and cognitive dimensions."
 
 }

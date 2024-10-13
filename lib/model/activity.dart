@@ -37,9 +37,17 @@ class Activity {
       challengeID: Challenge.challenge1.id,
       nameRes: "c1a2_name",
       descriptionRes: "c1a2_description",
-      unlocksActivitiesIDs: [
-        //todo
-      ]
+      unlocksActivitiesIDs: []
+    ),
+
+    "c2a1": Activity(
+        id: "c2a1",
+        challengeID: Challenge.challenge2.id,
+        nameRes: "c2a1_name",
+        descriptionRes: "c2a1_description",
+        unlocksActivitiesIDs: [
+          //todo
+        ]
     ),
 
   };

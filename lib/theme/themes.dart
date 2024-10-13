@@ -52,4 +52,10 @@ class Themes {
   //Sizing
   static double bottomButtonHeight = 70;
 
+  //Text
+  static TextStyle instructionsTextStyle = const TextStyle(
+    fontStyle: FontStyle.italic,
+    color: Colors.blueGrey
+  );
+
 }

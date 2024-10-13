@@ -640,6 +640,16 @@ class S {
     );
   }
 
+  /// `Your screen will change to landscape mode for this activity.`
+  String get screen_flip_notice {
+    return Intl.message(
+      'Your screen will change to landscape mode for this activity.',
+      name: 'screen_flip_notice',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(
@@ -745,6 +755,76 @@ class S {
     return Intl.message(
       'Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more.',
       name: 'c1a2_finish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to the end of the XIX century. Arrange the cards on the golden timeline matching the concept of Physical Literacy with the historical data. Ready? Let's start!`
+  String get c2a1_intro_message {
+    return Intl.message(
+      'Welcome to the end of the XIX century. Arrange the cards on the golden timeline matching the concept of Physical Literacy with the historical data. Ready? Let\'s start!',
+      name: 'c2a1_intro_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `American Army Captain used the word “Physical Literacy” to describe the physicality or movement quality of an indigenous culture.`
+  String get c2a1_term1 {
+    return Intl.message(
+      'American Army Captain used the word “Physical Literacy” to describe the physicality or movement quality of an indigenous culture.',
+      name: 'c2a1_term1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `American educators stated: “We must prepare for physical literacy as well as for mental literacy”, responding to an upcoming era of modernization and army recruitment.`
+  String get c2a1_term2 {
+    return Intl.message(
+      'American educators stated: “We must prepare for physical literacy as well as for mental literacy”, responding to an upcoming era of modernization and army recruitment.',
+      name: 'c2a1_term2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Margaret Whitehead promotes discussion on the Physical Literacy concept.`
+  String get c2a1_term3 {
+    return Intl.message(
+      'Margaret Whitehead promotes discussion on the Physical Literacy concept.',
+      name: 'c2a1_term3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The word 'Physical Literacy' was used to describe 'A disciplined command over the body'.`
+  String get c2a1_term4 {
+    return Intl.message(
+      'The word \'Physical Literacy\' was used to describe \'A disciplined command over the body\'.',
+      name: 'c2a1_term4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Margaret Whitehead published a scientific article in the European Journal of Physical Education to promote an open debate on the Physical Literacy concept.`
+  String get c2a1_term5 {
+    return Intl.message(
+      'Margaret Whitehead published a scientific article in the European Journal of Physical Education to promote an open debate on the Physical Literacy concept.',
+      name: 'c2a1_term5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Holistic approach to the concept of Physical Literacy, identifying four dimensions: physical, emotional, social and cognitive dimensions.`
+  String get c2a1_term6 {
+    return Intl.message(
+      'Holistic approach to the concept of Physical Literacy, identifying four dimensions: physical, emotional, social and cognitive dimensions.',
+      name: 'c2a1_term6',
       desc: '',
       args: [],
     );
