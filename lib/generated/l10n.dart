@@ -829,6 +829,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Well done! All the cards are correctly arranged! Let's move on to the next activity.`
+  String get c2a1_finish_message {
+    return Intl.message(
+      'Well done! All the cards are correctly arranged! Let\'s move on to the next activity.',
+      name: 'c2a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -54,8 +54,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "Διαβάστε και μετά πατήστε κάθε συννεφάκι για να εμφανιστεί το επόμενο."),
         "c1a2_finish": MessageLookupByLibrary.simpleMessage(
             "Η αναζωπύρωση της σχέσης μας με τη σωματική δραστηριότητα και το περιβάλλον είναι επιτακτική ανάγκη για μια υγιή και ικανοποιητική ζωή. Διαβάστε αυτό το επιστημονικό άρθρο για να μάθετε περισσότερα."),
+        "c2a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Μπράβο! Όλες οι κάρτες είναι σωστά τοποθετημένες! Ας προχωρήσουμε στην επόμενη δραστηριότητα."),
         "c2a1_intro_message": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στα τέλη του 19ου αιώνα. Τοποθετήστε τις κάρτες στη λωρίδα χρόνου που ταιριάζουν με την έννοια του Φυσικού Αλφαβητισμού με τα ιστορικά δεδομένα. Έτοιμοι; Ας ξεκινήσουμε!"),
+        "c2a1_term1": MessageLookupByLibrary.simpleMessage(
+            "Ο αρχηγός του αμερικανικού στρατού χρησιμοποίησε τη λέξη \'Φυσικός γραμματισμός\' για να περιγράψει τη σωματικότητα ή την ποιότητα κίνησης ενός ιθαγενούς πολιτισμού."),
+        "c2a1_term2": MessageLookupByLibrary.simpleMessage(
+            "Αμερικανοί εκπαιδευτικοί δήλωσαν: \'Πρέπει να προετοιμαστούμε για σωματικό αλφαβητισμό καθώς και για πνευματικό αλφαβητισμό\', ανταποκρινόμενοι σε μια επερχόμενη εποχή εκσυγχρονισμού και στρατολόγησης στρατού."),
+        "c2a1_term3": MessageLookupByLibrary.simpleMessage(
+            "Η Margaret Whitehead προωθεί τη συζήτηση για την έννοια του Φυσικού Αλφαβητισμού."),
+        "c2a1_term4": MessageLookupByLibrary.simpleMessage(
+            "Η λέξη \'Φυσικός Αλφαβητισμός\' χρησιμοποιήθηκε για να περιγράψει \'Μια πειθαρχημένη εντολή πάνω στο σώμα\'"),
+        "c2a1_term5": MessageLookupByLibrary.simpleMessage(
+            "Η Margaret Whitehead δημοσίευσε ένα επιστημονικό άρθρο στο European Journal of Physical Education για να προωθήσει μια ανοιχτή συζήτηση σχετικά με την έννοια του Physical Literacy."),
+        "c2a1_term6": MessageLookupByLibrary.simpleMessage(
+            "Ολιστική προσέγγιση της έννοιας του Φυσικού Αλφαβητισμού, προσδιορίζοντας τέσσερις διαστάσεις: σωματικές, συναισθηματικές, κοινωνικές και γνωστικές διαστάσεις."),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),

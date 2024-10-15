@@ -1,8 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:ephyli/controller/activity_manager.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/ui_utils.dart';
+import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -175,61 +177,77 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
             children: List.generate(events.length, (index) {
               return Column(
                 children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width / events.length - 10,
-                    height: 60,
-                    margin: const EdgeInsets.symmetric(vertical: 10),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: matched[index]! ? Colors.green : Colors.blue,
-                        width: 2,
+                  Expanded(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width / events.length - 10,
+                      height: 60,
+                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: matched[index]! ? Colors.green : Colors.blue,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: matched[index]!
-                          ? Text(
-                        "${events[index]["date"]}, ${events[index]["event"]}",
-                        style: const TextStyle(color: Colors.green, fontSize: 14),
-                        textAlign: TextAlign.center,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
-                      )
-                          : DragTarget<String>(
-                        builder: (context, candidateData, rejectedData) {
-                          return Center(
-                            child: Text(
-                              overflow: TextOverflow.ellipsis,
-                              draggedData[index] == '' ? events[index]["date"]! : "✔️",
-                              style: const TextStyle(color: Colors.black, fontSize: 14),
-                              textAlign: TextAlign.center,
-                            ),
-                          );
-                        },
-                        onWillAccept: (data) {
-                          // Accept the drag if the data matches the correct event
-                          return data == events[index]["event"];
-                        },
-                        onAccept: (data) {
-                          setState(() {
-                            matched[index] = true;
-                            draggedData[index] = data;
+                      child: Center(
+                        child: matched[index]!
+                            ? Text(
+                          "${events[index]["date"]}, ${events[index]["event"]}",
+                          style: const TextStyle(color: Colors.green, fontSize: 14),
+                          textAlign: TextAlign.center,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 3,
+                        )
+                            : DragTarget<String>(
+                          builder: (context, candidateData, rejectedData) {
+                            return Center(
+                              child: Text(
+                                overflow: TextOverflow.ellipsis,
+                                draggedData[index] == '' ? events[index]["date"]! : "✔️",
+                                style: const TextStyle(color: Colors.black, fontSize: 14),
+                                textAlign: TextAlign.center,
+                              ),
+                            );
+                          },
+                          onWillAccept: (data) {
+                            // Accept the drag if the data matches the correct event
+                            return data == events[index]["event"];
+                          },
+                          onAccept: (data) {
+                            if (data != events[index]["event"]) {
+                              UIUtils.showFeedbackBar(context, false);
+                            }
 
-                            int itemIndex = -1;
-                            for (int i = 0; i < shuffledEvents.length; i++) {
-                              var pair = shuffledEvents[i];
-                              if (pair["event"] == data) {
-                                itemIndex = i;
-                                break;
+                            setState(() {
+                              matched[index] = true;
+                              draggedData[index] = data;
+
+                              int itemIndex = -1;
+                              for (int i = 0; i < shuffledEvents.length; i++) {
+                                var pair = shuffledEvents[i];
+                                if (pair["event"] == data) {
+                                  itemIndex = i;
+                                  break;
+                                }
                               }
-                            }
-                            if (itemIndex != -1) {
-                              debugPrint("Would remove item at: $itemIndex");
-                              shuffledEvents.removeAt(itemIndex);
-                            }
+                              if (itemIndex != -1) {
+                                shuffledEvents.removeAt(itemIndex);
+                              }
 
-                          });
-                        },
+                              //Finish the game if no cards are left:
+                              if (shuffledEvents.isEmpty) {
+                                UIUtils.portraitOrientation();
+                                UIUtils.showFeedbackBar(context, true);
+                                ActivityManager.completeActivity(activityID).then((value) {
+                                  setState(() {
+                                    stage = C2A1Stage.activity1_finish;
+                                  });
+                                },);
+                              }
+
+                            });
+                          },
+                        ),
                       ),
                     ),
                   ),
@@ -303,7 +321,15 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
   }
 
   Widget activity1FinishView() {
-    return Container();
+    return InstructionsWidget(
+        prefs,
+        AppLocalizations.of(context)!.c2a1_finish_message,
+        AppLocalizations.of(context)!.finish,
+        () {
+          //Move back to activities
+          Navigator.pop(context);
+        }
+    );
   }
 
   Widget activity2IntroView() {

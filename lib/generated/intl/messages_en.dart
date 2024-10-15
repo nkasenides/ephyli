@@ -54,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Read and then press each bubble to reveal the next."),
         "c1a2_finish": MessageLookupByLibrary.simpleMessage(
             "Rekindling our relationship with physical activity and the environment is imperative to leading a healthy and fulfilling life. Read this scientific article to find out more."),
+        "c2a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Well done! All the cards are correctly arranged! Let\'s move on to the next activity."),
         "c2a1_intro_message": MessageLookupByLibrary.simpleMessage(
             "Welcome to the end of the XIX century. Arrange the cards on the golden timeline matching the concept of Physical Literacy with the historical data. Ready? Let\'s start!"),
         "c2a1_term1": MessageLookupByLibrary.simpleMessage(

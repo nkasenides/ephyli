@@ -100,22 +100,22 @@ class UIUtils {
     return path;
   }
 
-  static landscapeOrientation() {
-    SystemChrome.setPreferredOrientations([
+  static Future<void> landscapeOrientation() async {
+    await SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
     ]);
   }
 
-  static portraitOrientation() {
-    SystemChrome.setPreferredOrientations([
+  static Future<void> portraitOrientation() async {
+    await SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
   }
 
-  static restoreAllOrientations() {
-    SystemChrome.setPreferredOrientations([
+  static Future<void> restoreAllOrientations() async {
+    await SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.portraitUp,
@@ -123,12 +123,12 @@ class UIUtils {
     ]);
   }
 
-  static enableFullScreen() {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+  static Future<void> enableFullScreen() async {
+    await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
   }
 
-  static disableFullscreen() {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+  static Future<void> disableFullscreen() async {
+    await SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
   }
 
   static visitLink(String url) async {
@@ -136,6 +136,17 @@ class UIUtils {
     if (!await launchUrl(uri)) {
       throw Exception('Could not launch $uri');
     }
+  }
+
+  static showFeedbackBar(BuildContext context, bool rightAnswer) {
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          duration: const Duration(seconds: 1),
+          padding: Themes.standardPadding,
+          backgroundColor: rightAnswer ? Colors.green : Colors.red,
+          content: Icon(rightAnswer ? Icons.check : Icons.close, color: Colors.white,),
+        )
+    );
   }
 
 }

@@ -235,6 +235,7 @@ class _ActivityC1a1State extends State<ActivityC1a1>
 
   //Intro
   Widget instructionsView() {
+    //TODO - Replace with InstructionsWidget
     return Padding(
       padding: Themes.standardPadding,
       child: Column(
@@ -461,7 +462,7 @@ class _ActivityC1a1State extends State<ActivityC1a1>
                               if (isMatch(receivedWord, definition)) {
                                 setState(() {
                                   score += 100;
-                                  showFeedbackBar(true);
+                                  UIUtils.showFeedbackBar(context, true);
 
                                   //Move the term to completed from shown:
                                   _termsCompleted.add(getIDByTerm(receivedWord)!);
@@ -500,7 +501,7 @@ class _ActivityC1a1State extends State<ActivityC1a1>
                               } else {
                                 setState(() {
                                   score -= 100;
-                                  showFeedbackBar(false);
+                                  UIUtils.showFeedbackBar(context, false);
 
                                   mistakeCounter++;
                                   if (mistakeCounter >= 5) {
@@ -798,17 +799,6 @@ class _ActivityC1a1State extends State<ActivityC1a1>
       case C1A1Stage.reading:
         return getReadingView();
     }
-  }
-
-  showFeedbackBar(bool rightAnswer) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        duration: const Duration(seconds: 1),
-        padding: Themes.standardPadding,
-        backgroundColor: rightAnswer ? Colors.green : Colors.red,
-        content: Icon(rightAnswer ? Icons.check : Icons.close, color: Colors.white,),
-      )
-    );
   }
 
 }
