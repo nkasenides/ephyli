@@ -70,6 +70,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Margaret Whitehead published a scientific article in the European Journal of Physical Education to promote an open debate on the Physical Literacy concept."),
         "c2a1_term6": MessageLookupByLibrary.simpleMessage(
             "Holistic approach to the concept of Physical Literacy, identifying four dimensions: physical, emotional, social and cognitive dimensions."),
+        "c2a2_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Congratulations! You have finished this challenge!"),
+        "c2a2_instruction": MessageLookupByLibrary.simpleMessage(
+            "Click on the selection you think is correct."),
+        "c2a2_intro_message": MessageLookupByLibrary.simpleMessage(
+            "In recent years, different countries have adopted different definitions of physical literacy. In the following activity you must link the definition of physical literacy to the country in which it is adopted."),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),

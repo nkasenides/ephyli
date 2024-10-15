@@ -73,6 +73,7 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
   }
 
   Widget activity1IntroView() {
+    //TODO - Replace with InstructionWidget
     return Container(
       padding: Themes.standardPadding,
       child: Column(

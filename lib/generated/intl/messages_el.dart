@@ -70,6 +70,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Η Margaret Whitehead δημοσίευσε ένα επιστημονικό άρθρο στο European Journal of Physical Education για να προωθήσει μια ανοιχτή συζήτηση σχετικά με την έννοια του Physical Literacy."),
         "c2a1_term6": MessageLookupByLibrary.simpleMessage(
             "Ολιστική προσέγγιση της έννοιας του Φυσικού Αλφαβητισμού, προσδιορίζοντας τέσσερις διαστάσεις: σωματικές, συναισθηματικές, κοινωνικές και γνωστικές διαστάσεις."),
+        "c2a2_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Συγχαρητήρια! Η πρόκληση ολοκληρώθηκε!"),
+        "c2a2_instruction": MessageLookupByLibrary.simpleMessage(
+            "Κάντε κλικ στην επιλογή που πιστεύετε ότι είναι σωστή."),
+        "c2a2_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Τα τελευταία χρόνια, διαφορετικές χώρες έχουν υιοθετήσει διαφορετικούς ορισμούς του σωματικού αλφαβητισμού. Στην παρακάτω δραστηριότητα πρέπει να συνδέσετε τον ορισμό του σωματικού αλφαβητισμού με τη χώρα στην οποία έχει υιοθετηθεί."),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),

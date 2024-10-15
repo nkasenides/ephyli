@@ -46,8 +46,16 @@ class Activity {
         nameRes: "c2a1_name",
         descriptionRes: "c2a1_description",
         unlocksActivitiesIDs: [
-          //todo
+          "c2a2"
         ]
+    ),
+
+    "c2a2": Activity(
+        id: "c2a2",
+        challengeID: Challenge.challenge2.id,
+        nameRes: "c2a2_name",
+        descriptionRes: "c2a2_description",
+        unlocksActivitiesIDs: []
     ),
 
   };

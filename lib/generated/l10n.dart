@@ -839,6 +839,36 @@ class S {
       args: [],
     );
   }
+
+  /// `In recent years, different countries have adopted different definitions of physical literacy. In the following activity you must link the definition of physical literacy to the country in which it is adopted.`
+  String get c2a2_intro_message {
+    return Intl.message(
+      'In recent years, different countries have adopted different definitions of physical literacy. In the following activity you must link the definition of physical literacy to the country in which it is adopted.',
+      name: 'c2a2_intro_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Congratulations! You have finished this challenge!`
+  String get c2a2_finish_message {
+    return Intl.message(
+      'Congratulations! You have finished this challenge!',
+      name: 'c2a2_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click on the selection you think is correct.`
+  String get c2a2_instruction {
+    return Intl.message(
+      'Click on the selection you think is correct.',
+      name: 'c2a2_instruction',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
