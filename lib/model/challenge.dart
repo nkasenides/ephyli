@@ -67,10 +67,10 @@ class Challenge {
         "c2a2"
       ],
       badgeIDs: [
-        //TODO
+        "challenge2Badge"
       ],
       unlocksChallengesIDs: [
-        //TODO
+        //TODO - Unlock challenge 3
       ]
   );
 

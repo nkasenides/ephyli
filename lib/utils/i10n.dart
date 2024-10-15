@@ -59,6 +59,24 @@ class I10N {
       "pl": "#MISSING#",
     },
 
+    "c2_badge_name": {
+      "en": "Challenge 2 Badge",
+      "el": "Σήμα Πρόκλησης 2",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c2_badge_description": {
+      "en": "This badge is awarded to players who have completed the second challenge.",
+      "el": "Αυτό το σήμα απονέμεται σε παίκτες που έχουν ολοκληρώσει την δεύτερη πρόκληση.",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
     //----- Challenges
 
     "c1_name": {

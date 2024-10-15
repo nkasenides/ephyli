@@ -7,6 +7,7 @@ import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
@@ -36,7 +37,7 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
 
 
   C2A2Stage stage = C2A2Stage.introduction;
-  final String activityID = "c2a1";
+  final String activityID = "c2a2";
   late Activity activity;
   late SharedPreferences prefs;
   late Future<void> future;
@@ -118,7 +119,7 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
   }
 
   Widget activityGameView() {
-    timer = Timer(const Duration(seconds: 5), () {
+    timer = Timer(const Duration(seconds: kDebugMode ? 0 : 5), () {
       setState(() {
         showPrompt = true;
       });
@@ -237,7 +238,7 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
             timer.cancel();
           }
 
-          timer = Timer(const Duration(seconds: 5), () {
+          timer = Timer(const Duration(seconds: kDebugMode ? 0 : 5), () {
             setState(() {
               showPrompt = true;
             });
@@ -254,7 +255,6 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
       } else {
         wrong++;
         UIUtils.showFeedbackBar(context, false);
-        nextDefinition();
       }
     });
   }
@@ -281,7 +281,11 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
             //Find all badges related to this activity and award them:
             for (var badgeID in Challenge.challenge2.badgeIDs) {
               var badge = GameBadge.findBadge(badgeID);
-              badge!.earn(context);
+              badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                if (!value) {
+                  badge.earn(context);
+                }
+              },);
             }
 
             //Unlock next challenges:
