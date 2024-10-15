@@ -33,6 +33,7 @@ class Challenge {
   static final List<Challenge> challenges = [
     challenge1,
     challenge2,
+    challenge3,
   ];
 
   // * --------------- CHALLENGES
@@ -70,7 +71,24 @@ class Challenge {
         "challenge2Badge"
       ],
       unlocksChallengesIDs: [
-        //TODO - Unlock challenge 3
+        "challenge3"
+      ]
+  );
+
+  static final Challenge challenge3 = Challenge(
+      id: "challenge3",
+      nameRes: "c3_name",
+      descriptionRes: "c3_description",
+      imageCompletedRes: AppImages.logo,
+      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      activityIDs: [
+        "c3a1",
+      ],
+      badgeIDs: [
+        "challenge3Badge"
+      ],
+      unlocksChallengesIDs: [
+        //TODO - Unlock challenge 4
       ]
   );
 
