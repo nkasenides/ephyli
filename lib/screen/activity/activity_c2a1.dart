@@ -24,9 +24,7 @@ class ActivityC2A1 extends StatefulWidget {
 enum C2A1Stage {
   activity1_introduction,
   activity1,
-  activity1_finish,
-  activity2_introduction,
-  activity2,
+  activity1_finish
 }
 
 class _ActivityC2A1State extends State<ActivityC2A1> {
@@ -332,14 +330,6 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
     );
   }
 
-  Widget activity2IntroView() {
-    return Container();
-  }
-
-  Widget activity2view() {
-    return Container();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -364,10 +354,6 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
         return activity1View();
       case C2A1Stage.activity1_finish:
         return activity1FinishView();
-      case C2A1Stage.activity2_introduction:
-      return activity2IntroView();
-      case C2A1Stage.activity2:
-        return activity2view();
     }
   }
 
