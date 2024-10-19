@@ -34,6 +34,7 @@ class Challenge {
     challenge1,
     challenge2,
     challenge3,
+    challenge4,
   ];
 
   // * --------------- CHALLENGES
@@ -88,9 +89,28 @@ class Challenge {
         "challenge3Badge"
       ],
       unlocksChallengesIDs: [
-        //TODO - Unlock challenge 4
+        "challenge4"
       ]
   );
+
+  static final Challenge challenge4 = Challenge(
+      id: "challenge4",
+      nameRes: "c4_name",
+      descriptionRes: "c4_description",
+      imageCompletedRes: AppImages.logo,
+      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      activityIDs: [
+        "c4a1",
+      ],
+      badgeIDs: [
+        "challenge4Badge"
+      ],
+      unlocksChallengesIDs: [
+        //TODO - Unlock challenge 5
+      ]
+  );
+
+  /*---------------------------------------------------------------------------*/
 
   static Challenge? findChallenge(String challengeID) {
     for (Challenge c in challenges) {
@@ -100,8 +120,6 @@ class Challenge {
     }
     return null;
   }
-
-  /*---------------------------------------------------------------------------*/
 
   //Finds an activity using its ID.
   static Activity? findActivity(String id) {

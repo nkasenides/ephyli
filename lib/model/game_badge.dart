@@ -31,6 +31,7 @@ class GameBadge {
     challenge1Badge,
     challenge2Badge,
     challenge3Badge,
+    challenge4Badge,
   ];
 
   //Finds and returns a badge:
@@ -84,6 +85,14 @@ class GameBadge {
     id: "challenge3Badge",
     nameRes: "c3_badge_name",
     descriptionRes: "c3_badge_description",
+    imageCompletedRes: AppImages.logo,
+    imageIncompleteRes: AppImages.logoBlackAndWhite,
+  );
+
+  static final GameBadge challenge4Badge = GameBadge(
+    id: "challenge4Badge",
+    nameRes: "c4_badge_name",
+    descriptionRes: "c4_badge_description",
     imageCompletedRes: AppImages.logo,
     imageIncompleteRes: AppImages.logoBlackAndWhite,
   );
