@@ -480,10 +480,10 @@ class S {
     );
   }
 
-  /// `An error has occured.`
+  /// `An error has occurred.`
   String get error {
     return Intl.message(
-      'An error has occured.',
+      'An error has occurred.',
       name: 'error',
       desc: '',
       args: [],
@@ -645,6 +645,66 @@ class S {
     return Intl.message(
       'Your screen will change to landscape mode for this activity.',
       name: 'screen_flip_notice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drop here`
+  String get drop_here {
+    return Intl.message(
+      'Drop here',
+      name: 'drop_here',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Available cards`
+  String get available_cards {
+    return Intl.message(
+      'Available cards',
+      name: 'available_cards',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dragging...`
+  String get dragging {
+    return Intl.message(
+      'Dragging...',
+      name: 'dragging',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done!`
+  String get well_done {
+    return Intl.message(
+      'Well done!',
+      name: 'well_done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try again`
+  String get try_again {
+    return Intl.message(
+      'Try again',
+      name: 'try_again',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check solution`
+  String get check_solution {
+    return Intl.message(
+      'Check solution',
+      name: 'check_solution',
       desc: '',
       args: [],
     );
@@ -865,6 +925,59 @@ class S {
     return Intl.message(
       'Click on the selection you think is correct.',
       name: 'c2a2_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arrange the cards in chronological order (top to bottom), matching the Jurbala’s spiral of physical literacy development. Ready?`
+  String get c3a1_intro_message {
+    return Intl.message(
+      'Arrange the cards in chronological order (top to bottom), matching the Jurbala’s spiral of physical literacy development. Ready?',
+      name: 'c3a1_intro_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drag the cards to sort them in the correct order based on Jurbala’s spiral of physical literacy. You can scroll through the slots on the top or the cards at the bottom to see all options.`
+  String get c3a1_activity_message {
+    return Intl.message(
+      'Drag the cards to sort them in the correct order based on Jurbala’s spiral of physical literacy. You can scroll through the slots on the top or the cards at the bottom to see all options.',
+      name: 'c3a1_activity_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You sorted the cards correctly!`
+  String get c3a1_success {
+    return Intl.message(
+      'Well done! You sorted the cards correctly!',
+      name: 'c3a1_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count, plural, =0{There are no mistakes.} =1{There is 1 mistake in the card order.} other{There are {count} mistakes in the card order.}}`
+  String c3a1_fail(num count) {
+    return Intl.plural(
+      count,
+      zero: 'There are no mistakes.',
+      one: 'There is 1 mistake in the card order.',
+      other: 'There are $count mistakes in the card order.',
+      name: 'c3a1_fail',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Congratulations, you have finished the challenge. Click 'Finish' to earn a badge!`
+  String get c3a1_finish_message {
+    return Intl.message(
+      'Congratulations, you have finished the challenge. Click \'Finish\' to earn a badge!',
+      name: 'c3a1_finish_message',
       desc: '',
       args: [],
     );

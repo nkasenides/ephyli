@@ -44,7 +44,7 @@
   "challengeLocked": "This challenge is locked",
   "challengeLockedMessage": "This challenge is locked. Complete the previous challenges to unlock.",
   "activityLockedMessage": "This activity is locked. Complete the previous activities to unlock.",
-  "error": "An error has occured.",
+  "error": "An error has occurred.",
   "lets_start": "Let's start!",
   "resetGame": "Reset game",
   "areYouSure": "Are you sure?",
@@ -61,6 +61,13 @@
   "clickOKToContinue": "Click OK to continue",
   "challenges_unlocked": "%1 challenge(s) were unlocked!",
   "screen_flip_notice": "Your screen will change to landscape mode for this activity.",
+  "drop_here": "Drop here",
+  "available_cards": "Available cards",
+  "dragging": "Dragging...",
+  "well_done": "Well done!",
+  "try_again": "Try again",
+  "check_solution": "Check solution",
+
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
   "c1a1_congrats": "Well done! All concepts are correctly matched to the related descriptions.",
@@ -86,6 +93,20 @@
 
   "c2a2_intro_message": "In recent years, different countries have adopted different definitions of physical literacy. In the following activity you must link the definition of physical literacy to the country in which it is adopted.",
   "c2a2_finish_message": "Congratulations! You have finished this challenge!",
-  "c2a2_instruction": "Click on the selection you think is correct."
+  "c2a2_instruction": "Click on the selection you think is correct.",
+
+  "c3a1_intro_message": "Arrange the cards in chronological order (top to bottom), matching the Jurbala’s spiral of physical literacy development. Ready?",
+  "c3a1_activity_message": "Drag the cards to sort them in the correct order based on Jurbala’s spiral of physical literacy. You can scroll through the slots on the top or the cards at the bottom to see all options.",
+  "c3a1_success": "Well done! You sorted the cards correctly!",
+  "c3a1_fail": "{count, plural, =0{There are no mistakes.} =1{There is 1 mistake in the card order.} other{There are {count} mistakes in the card order.}}",
+  "@c3a1_fail": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "c3a1_finish_message": "Congratulations, you have finished the challenge. Click 'Finish' to earn a badge!"
 
 }

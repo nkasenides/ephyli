@@ -20,6 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'el';
 
+  static String m0(count) =>
+      "${Intl.plural(count, zero: 'Δεν υπάρχουν λάθη.', one: 'Υπάρχει 1 λάθος στη σειρά των καρτών.', other: 'Υπάρχουν ${count} λάθη στη σειρά των καρτών.')}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "activities": MessageLookupByLibrary.simpleMessage("Δραστηριότητες"),
@@ -28,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyPlayedActivity": MessageLookupByLibrary.simpleMessage(
             "Έχετε ήδη λάβει μέρος σε αυτή την δραστηριότητα. Θα θέλατε να την επαναλάβετε;"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Είστε σίγουροι;"),
+        "available_cards":
+            MessageLookupByLibrary.simpleMessage("Διαθέσιμες κάρτες"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
@@ -76,6 +81,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Κάντε κλικ στην επιλογή που πιστεύετε ότι είναι σωστή."),
         "c2a2_intro_message": MessageLookupByLibrary.simpleMessage(
             "Τα τελευταία χρόνια, διαφορετικές χώρες έχουν υιοθετήσει διαφορετικούς ορισμούς του σωματικού αλφαβητισμού. Στην παρακάτω δραστηριότητα πρέπει να συνδέσετε τον ορισμό του σωματικού αλφαβητισμού με τη χώρα στην οποία έχει υιοθετηθεί."),
+        "c3a1_activity_message": MessageLookupByLibrary.simpleMessage(
+            "Σύρετε τις κάρτες για να τις ταξινομήσετε με τη σωστή σειρά με βάση τη σπείρα φυσικής παιδείας του Jurbala. Μπορείτε να μετακινηθείτε στις υποδοχές στο επάνω μέρος ή στις κάρτες στο κάτω μέρος για να δείτε όλες τις επιλογές."),
+        "c3a1_fail": m0,
+        "c3a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Συγχαρητήρια, ολοκληρώσατε την πρόκληση. Κάντε κλικ στο \'Τέλος\' για να κερδίσετε ένα σήμα!"),
+        "c3a1_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Ταξινομήστε τις κάρτες με χρονολογική σειρά (από πάνω προς τα κάτω), που ταιριάζουν με τη σπείρα ανάπτυξης του σωματικού αλφαβητισμού του Jurbala. Έτοιμοι;"),
+        "c3a1_success": MessageLookupByLibrary.simpleMessage(
+            "Μπράβο! Οι κάρτες βρίσκονται στη σωστή σειρά!"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),
@@ -89,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Αυτές είναι οι προκλήσεις που πρέπει να ολοκληρώσετε. Κάθε μία από αυτές τις προκλήσεις μπορεί να αποτελείται από πολλές δραστηριότητες και μόλις ολοκληρώσετε όλες τις δραστηριότητες σε μια πρόκληση, θα ξεκλειδώσω την επόμενη πρόκληση. Να θυμάστε πάντα οτι μπορείτε να χρησιμοποιείτε τη βοήθειά μου εάν κολλήστε σε μια δραστηριότητα και να χρησιμοποιήσετε τα άρθρα νέων και το γλωσσάρι για να βρείτε απαντήσεις.\n\nΤο σεμινάριο μας ολοκληρώθηκε. Eίστε έτοιμοι να ξεκινήσετε!"),
         "challenges_unlocked": MessageLookupByLibrary.simpleMessage(
             "%1 πρόκληση/εις ξεκλειδώθηκαν!"),
+        "check_solution": MessageLookupByLibrary.simpleMessage("Έλεγχος λύσης"),
         "clickOKToContinue": MessageLookupByLibrary.simpleMessage(
             "Κάντε κλικ στο OK για να συνεχίσετε"),
         "clickOnImageToZoom": MessageLookupByLibrary.simpleMessage(
@@ -98,6 +113,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed": MessageLookupByLibrary.simpleMessage("Ολοκληρώθηκε"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
+        "dragging": MessageLookupByLibrary.simpleMessage("Σε μετακίνηση..."),
+        "drop_here": MessageLookupByLibrary.simpleMessage("Ρίξτε εδώ"),
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi φίλος"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Ο ePhyLi φίλος σας"),
@@ -140,11 +157,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),
+        "try_again": MessageLookupByLibrary.simpleMessage("Δοκιμάστε ξανά"),
         "tutorial_text": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στο ePhyLi, το ταξίδι σας στον Φυσικό Γραμματισμό πρόκειται να ξεκινήσει!\n\nΞεκινήστε μια μοναδική αποστολή για να μεταμορφώσετε τη ζωή σας μέσω της γνώσης, της δραστηριότητας και της κοινότητας. Περιηγηθείτε στις προκλήσεις και ξεκλειδώστε τα μυστικά ενός υγιεινού τρόπου ζωής. Το καθήκον σας δεν είναι απλώς να παίξετε αλλά να εξελιχθείτε, μαθαίνοντας για τη σωματική υγεία και ευεξία. Λύστε εργασίες και προκλήσεις, κάντε σημαντικές επιλογές και σχεδιάστε την πρόοδό σας σε έναν ελκυστικό κόσμο όπου κάθε βήμα μετράει για τον απώτερο στόχο σας: να κατακτήσετε τον Φυσικό Γραμματισμό.\n\nΕίστε έτοιμοι να ξεκινήσετε την περιπέτειά σας;"),
         "tutorial_text_buddy": MessageLookupByLibrary.simpleMessage(
             "Γεια, είμαι ο φίλος σας στο ePhyLi, ένας εικονικός σύντροφος που έχει σχεδιαστεί για να σας καθοδηγεί και να σας βοηθά σε όλη τη διάρκεια του παιχνιδιού. Επιτρέψτε μου να σας παρουσιάσω το παιχνίδι με ένα σύντομο σεμινάριο."),
         "viewBadges": MessageLookupByLibrary.simpleMessage("Προβολή σημάτων"),
+        "well_done": MessageLookupByLibrary.simpleMessage("Μπράβο!"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;"),
         "yes": MessageLookupByLibrary.simpleMessage("Ναί")

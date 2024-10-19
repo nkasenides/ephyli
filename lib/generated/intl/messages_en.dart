@@ -20,6 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(count) =>
+      "${Intl.plural(count, zero: 'There are no mistakes.', one: 'There is 1 mistake in the card order.', other: 'There are ${count} mistakes in the card order.')}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "activities": MessageLookupByLibrary.simpleMessage("activities"),
@@ -28,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyPlayedActivity": MessageLookupByLibrary.simpleMessage(
             "You have already participated in this activity. Would you like to replay it?"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
+        "available_cards":
+            MessageLookupByLibrary.simpleMessage("Available cards"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "This is your ePhyLi buddy. They can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
@@ -76,6 +81,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Click on the selection you think is correct."),
         "c2a2_intro_message": MessageLookupByLibrary.simpleMessage(
             "In recent years, different countries have adopted different definitions of physical literacy. In the following activity you must link the definition of physical literacy to the country in which it is adopted."),
+        "c3a1_activity_message": MessageLookupByLibrary.simpleMessage(
+            "Drag the cards to sort them in the correct order based on Jurbala’s spiral of physical literacy. You can scroll through the slots on the top or the cards at the bottom to see all options."),
+        "c3a1_fail": m0,
+        "c3a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Congratulations, you have finished the challenge. Click \'Finish\' to earn a badge!"),
+        "c3a1_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Arrange the cards in chronological order (top to bottom), matching the Jurbala’s spiral of physical literacy development. Ready?"),
+        "c3a1_success": MessageLookupByLibrary.simpleMessage(
+            "Well done! You sorted the cards correctly!"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),
@@ -89,6 +103,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "These are the challenges you must complete. Each of these challenges may consist of multiple activities, and once you complete all activities in a challenge, I will unlock the next challenge for you. Always remember to use my help if you get stuck in an activity, and remember to use the resources in the news and glossary sections.\n\nOur tutorial is finished. I think you are ready to get started!"),
         "challenges_unlocked": MessageLookupByLibrary.simpleMessage(
             "%1 challenge(s) were unlocked!"),
+        "check_solution":
+            MessageLookupByLibrary.simpleMessage("Check solution"),
         "clickOKToContinue":
             MessageLookupByLibrary.simpleMessage("Click OK to continue"),
         "clickOnImageToZoom": MessageLookupByLibrary.simpleMessage(
@@ -98,11 +114,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Customize your avatar"),
+        "dragging": MessageLookupByLibrary.simpleMessage("Dragging..."),
+        "drop_here": MessageLookupByLibrary.simpleMessage("Drop here"),
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi Buddy"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Your ePhyLi buddy"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
-        "error": MessageLookupByLibrary.simpleMessage("An error has occured."),
+        "error": MessageLookupByLibrary.simpleMessage("An error has occurred."),
         "exploreChallenges": MessageLookupByLibrary.simpleMessage(
             "Ok, let\'s explore the challenges!"),
         "finish": MessageLookupByLibrary.simpleMessage("Finish"),
@@ -144,6 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your screen will change to landscape mode for this activity."),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
+        "try_again": MessageLookupByLibrary.simpleMessage("Try again"),
         "tutorialTextChallenges": MessageLookupByLibrary.simpleMessage(
             "Well done! Now I am going to explain how you can start playing. The game consists of several challenges that you must complete in order.\n\nI have already unlocked the first challenge for you. Once you complete a challenge, the next will be unlocked. Each challenge will reward you with points, which can help you level up your avatar. You can also gather badges through the challenges, or various other activities, by interacting with the various features of the app."),
         "tutorial_text": MessageLookupByLibrary.simpleMessage(
@@ -154,6 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Error - This activity cannot be started."),
         "viewBadges": MessageLookupByLibrary.simpleMessage("View badges"),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),
+        "well_done": MessageLookupByLibrary.simpleMessage("Well done!"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("What is your name?"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
