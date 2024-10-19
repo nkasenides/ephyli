@@ -1413,10 +1413,10 @@ class S {
     );
   }
 
-  /// `That was hard. Well done! You have completed the fourth challenge. Press 'Finish' to get your badge!`
+  /// `Well done! You have completed the fourth challenge. For more information read the scientific article in the news section. Press 'Finish' to get your badge!`
   String get c4a3_finish_message {
     return Intl.message(
-      'That was hard. Well done! You have completed the fourth challenge. Press \'Finish\' to get your badge!',
+      'Well done! You have completed the fourth challenge. For more information read the scientific article in the news section. Press \'Finish\' to get your badge!',
       name: 'c4a3_finish_message',
       desc: '',
       args: [],
