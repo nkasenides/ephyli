@@ -148,6 +148,20 @@ class MessageLookup extends MessageLookupByLibrary {
             "Telling stories sitting on the sofa"),
         "c4a1_term6": MessageLookupByLibrary.simpleMessage(
             "Walking in the neighbourhood with family members"),
+        "c4a2_instruction_message": MessageLookupByLibrary.simpleMessage(
+            "It\'s a sunny elementary school day. Assume the role of a PE teacher and assign qualities to each activity to identify which ones could be proposed to your students to improve their Physical Literacy during the breaks."),
+        "c4a2_term1": MessageLookupByLibrary.simpleMessage(
+            "Playing with tablet and smartphone."),
+        "c4a2_term2":
+            MessageLookupByLibrary.simpleMessage("Drawing and painting"),
+        "c4a2_term3": MessageLookupByLibrary.simpleMessage(
+            "Telling stories while sitting on the schoolyard"),
+        "c4a2_term4": MessageLookupByLibrary.simpleMessage(
+            "Telling a story that requires children to imitate movements of animals"),
+        "c4a2_term5":
+            MessageLookupByLibrary.simpleMessage("Playing with a ball"),
+        "c4a2_term6":
+            MessageLookupByLibrary.simpleMessage("Playing seek and hide"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),

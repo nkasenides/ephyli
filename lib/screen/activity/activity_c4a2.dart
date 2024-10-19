@@ -23,13 +23,13 @@ import '../../widgets/buddy_avatar_widget.dart';
 import '../../widgets/chat_bubble.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class ActivityC4A1 extends StatefulWidget {
+class ActivityC4A2 extends StatefulWidget {
   @override
-  _ActivityC4A1State createState() => _ActivityC4A1State();
+  _ActivityC4A2State createState() => _ActivityC4A2State();
 }
 
-enum C4A1Stage {
-  introduction,
+enum C4A2Stage {
+  // introduction,
   activity,
   finish
 }
@@ -45,11 +45,11 @@ enum Correctness {
   const Correctness(this.color);
 }
 
-class _ActivityC4A1State extends State<ActivityC4A1> {
+class _ActivityC4A2State extends State<ActivityC4A2> {
 
 
-  C4A1Stage stage = C4A1Stage.introduction;
-  final String activityID = "c4a1";
+  C4A2Stage stage = C4A2Stage.activity;
+  final String activityID = "c4a2";
   late Activity activity;
   late SharedPreferences prefs;
   late Future<void> future;
@@ -89,28 +89,19 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
   }
 
   Widget activityIntroView() {
-    return InstructionsWidget(
-        prefs,
-        AppLocalizations.of(context)!.c4a1_intro_message,
-        AppLocalizations.of(context)!.lets_start,
-        () {
-          setState(() {
-            stage = C4A1Stage.activity;
-          });
-        }
-    );
+    return Container();
   }
 
   Widget activityGameView() {
 
     if (prompts.isEmpty) {
       prompts = [
-        AppLocalizations.of(context)!.c4a1_term1,
-        AppLocalizations.of(context)!.c4a1_term2,
-        AppLocalizations.of(context)!.c4a1_term3,
-        AppLocalizations.of(context)!.c4a1_term4,
-        AppLocalizations.of(context)!.c4a1_term5,
-        AppLocalizations.of(context)!.c4a1_term6,
+        AppLocalizations.of(context)!.c4a2_term1,
+        AppLocalizations.of(context)!.c4a2_term2,
+        AppLocalizations.of(context)!.c4a2_term3,
+        AppLocalizations.of(context)!.c4a2_term4,
+        AppLocalizations.of(context)!.c4a2_term5,
+        AppLocalizations.of(context)!.c4a2_term6,
       ];
     }
 
@@ -125,12 +116,12 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
 
     if (correctness.isEmpty) {
       correctness = [
-        [Correctness.correct, Correctness.wrong, Correctness.conditionallyCorrect, Correctness.wrong],
+        [Correctness.correct, Correctness.conditionallyCorrect, Correctness.wrong, Correctness.wrong],
         [Correctness.correct, Correctness.correct, Correctness.conditionallyCorrect, Correctness.wrong],
+        [Correctness.correct, Correctness.correct, Correctness.wrong, Correctness.wrong],
         [Correctness.correct, Correctness.correct, Correctness.correct, Correctness.correct],
         [Correctness.correct, Correctness.conditionallyCorrect, Correctness.correct, Correctness.correct],
-        [Correctness.correct, Correctness.correct, Correctness.wrong, Correctness.wrong],
-        [Correctness.conditionallyCorrect, Correctness.correct, Correctness.correct, Correctness.wrong]
+        [Correctness.correct, Correctness.correct, Correctness.correct, Correctness.correct],
       ];
     }
 
@@ -202,7 +193,7 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
                 }
                 else { //No more prompts, move to finish
                   setState(() {
-                    stage = C4A1Stage.finish;
+                    stage = C4A2Stage.finish;
                   });
                 }
               }
@@ -252,7 +243,7 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
   Widget build(BuildContext context) {
     UIUtils.enableFullScreen();
     return Scaffold(
-      appBar: AppBar(title: Text(I10N.getI10nString("c4a1_name")!)),
+      appBar: AppBar(title: Text(I10N.getI10nString("c4a2_name")!)),
       body: FutureBuilder(
         future: future,
         builder: (context, snapshot) {
@@ -267,11 +258,9 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
 
   Widget chooseView() {
     switch (stage) {
-      case C4A1Stage.introduction:
-        return activityIntroView();
-      case C4A1Stage.activity:
+      case C4A2Stage.activity:
         return activityGameView();
-      case C4A1Stage.finish:
+      case C4A2Stage.finish:
         return activityFinishView();
     }
   }

@@ -150,6 +150,20 @@ class MessageLookup extends MessageLookupByLibrary {
             "Αφήγηση ιστοριών καθισμένος στον καναπέ"),
         "c4a1_term6": MessageLookupByLibrary.simpleMessage(
             "Περπατώντας στη γειτονιά με μέλη της οικογένειας"),
+        "c4a2_instruction_message": MessageLookupByLibrary.simpleMessage(
+            "Είναι μια ηλιόλουστη μέρα του δημοτικού σχολείου. Αναλάβετε το ρόλο ενός δασκάλου σωματικής άσκησης και εκχωρήστε ιδιότητες σε κάθε δραστηριότητα για να προσδιορίσετε ποιες θα μπορούσαν να προταθούν στους μαθητές σας για να βελτιώσουν τον Φυσικό Γραμματισμό τους στα διαλείμματα."),
+        "c4a2_term1": MessageLookupByLibrary.simpleMessage(
+            "Παίζω με tablet και smartphone."),
+        "c4a2_term2":
+            MessageLookupByLibrary.simpleMessage("Σχέδιο και ζωγραφική"),
+        "c4a2_term3": MessageLookupByLibrary.simpleMessage(
+            "Λέγοντας ιστορίες ενώ κάθεστε στην αυλή του σχολείου"),
+        "c4a2_term4": MessageLookupByLibrary.simpleMessage(
+            "Αφήγηση μιας ιστορίας που απαιτεί από τα παιδιά να μιμούνται τις κινήσεις των ζώων"),
+        "c4a2_term5":
+            MessageLookupByLibrary.simpleMessage("Παίζοντας με μια μπάλα"),
+        "c4a2_term6": MessageLookupByLibrary.simpleMessage(
+            "Αναπαραγωγή αναζήτησης και απόκρυψης"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),

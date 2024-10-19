@@ -1312,6 +1312,76 @@ class S {
       args: [],
     );
   }
+
+  /// `It's a sunny elementary school day. Assume the role of a PE teacher and assign qualities to each activity to identify which ones could be proposed to your students to improve their Physical Literacy during the breaks.`
+  String get c4a2_instruction_message {
+    return Intl.message(
+      'It\'s a sunny elementary school day. Assume the role of a PE teacher and assign qualities to each activity to identify which ones could be proposed to your students to improve their Physical Literacy during the breaks.',
+      name: 'c4a2_instruction_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Playing with tablet and smartphone.`
+  String get c4a2_term1 {
+    return Intl.message(
+      'Playing with tablet and smartphone.',
+      name: 'c4a2_term1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drawing and painting`
+  String get c4a2_term2 {
+    return Intl.message(
+      'Drawing and painting',
+      name: 'c4a2_term2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Telling stories while sitting on the schoolyard`
+  String get c4a2_term3 {
+    return Intl.message(
+      'Telling stories while sitting on the schoolyard',
+      name: 'c4a2_term3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Telling a story that requires children to imitate movements of animals`
+  String get c4a2_term4 {
+    return Intl.message(
+      'Telling a story that requires children to imitate movements of animals',
+      name: 'c4a2_term4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Playing with a ball`
+  String get c4a2_term5 {
+    return Intl.message(
+      'Playing with a ball',
+      name: 'c4a2_term5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Playing seek and hide`
+  String get c4a2_term6 {
+    return Intl.message(
+      'Playing seek and hide',
+      name: 'c4a2_term6',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

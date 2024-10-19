@@ -101,6 +101,8 @@ class Challenge {
       imageIncompleteRes: AppImages.logoBlackAndWhite,
       activityIDs: [
         "c4a1",
+        "c4a2",
+        "c4a3",
       ],
       badgeIDs: [
         "challenge4Badge"

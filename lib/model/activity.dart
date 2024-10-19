@@ -71,6 +71,26 @@ class Activity {
         challengeID: Challenge.challenge4.id,
         nameRes: "c4a1_name",
         descriptionRes: "c4a1_description",
+        unlocksActivitiesIDs: [
+          "c4a2",
+        ]
+    ),
+
+    "c4a2": Activity(
+        id: "c4a2",
+        challengeID: Challenge.challenge4.id,
+        nameRes: "c4a2_name",
+        descriptionRes: "c4a2_description",
+        unlocksActivitiesIDs: [
+          "c4a3"
+        ]
+    ),
+
+    "c4a3": Activity(
+        id: "c4a3",
+        challengeID: Challenge.challenge4.id,
+        nameRes: "c4a3_name",
+        descriptionRes: "c4a3_description",
         unlocksActivitiesIDs: []
     ),
 

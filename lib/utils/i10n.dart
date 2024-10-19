@@ -297,6 +297,42 @@ class I10N {
       "pl": "#MISSING#",
     },
 
+    "c4a2_name": {
+      "en": "Activity 2",
+      "el": "Δραστηριότητα 2",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c4a2_description": {
+      "en": "Activity 2 Description",
+      "el": "Δραστηριότητα 2 Περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c4a3_name": {
+      "en": "Activity 3",
+      "el": "Δραστηριότητα 3",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c4a3_description": {
+      "en": "Activity 3 Description",
+      "el": "Δραστηριότητα 3 Περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
   };
 
   static String? getI10nString(String id) {
