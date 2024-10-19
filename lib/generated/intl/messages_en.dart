@@ -81,6 +81,19 @@ class MessageLookup extends MessageLookupByLibrary {
             "Click on the selection you think is correct."),
         "c2a2_intro_message": MessageLookupByLibrary.simpleMessage(
             "In recent years, different countries have adopted different definitions of physical literacy. In the following activity you must link the definition of physical literacy to the country in which it is adopted."),
+        "c2a2_option1": MessageLookupByLibrary.simpleMessage(
+            "IPLA, Ireland, Northern Ireland, Canada"),
+        "c2a2_option2": MessageLookupByLibrary.simpleMessage("Australia"),
+        "c2a2_option3": MessageLookupByLibrary.simpleMessage("USA"),
+        "c2a2_option4": MessageLookupByLibrary.simpleMessage("England"),
+        "c2a2_term1": MessageLookupByLibrary.simpleMessage(
+            "Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life."),
+        "c2a2_term2": MessageLookupByLibrary.simpleMessage(
+            "Physical literacy is about building the skills, knowledge, and behaviors that give us the confidence and motivation to lead active lives."),
+        "c2a2_term3": MessageLookupByLibrary.simpleMessage(
+            "Physical literacy is the ability, confidence, and desire to be physically active for life."),
+        "c2a2_term4": MessageLookupByLibrary.simpleMessage(
+            "Physical literacy is our relationship with movement and physical activity throughout life."),
         "c3a1_activity_message": MessageLookupByLibrary.simpleMessage(
             "Drag the cards to sort them in the correct order based on Jurbala’s spiral of physical literacy. You can scroll through the slots on the top or the cards at the bottom to see all options."),
         "c3a1_fail": m0,
@@ -90,6 +103,33 @@ class MessageLookup extends MessageLookupByLibrary {
             "Arrange the cards in chronological order (top to bottom), matching the Jurbala’s spiral of physical literacy development. Ready?"),
         "c3a1_success": MessageLookupByLibrary.simpleMessage(
             "Well done! You sorted the cards correctly!"),
+        "c3a1_term1": MessageLookupByLibrary.simpleMessage(
+            "Enriched movement environment"),
+        "c3a1_term10":
+            MessageLookupByLibrary.simpleMessage("Increased participation"),
+        "c3a1_term11": MessageLookupByLibrary.simpleMessage("Improved health"),
+        "c3a1_term12":
+            MessageLookupByLibrary.simpleMessage("Improved quality of life"),
+        "c3a1_term2": MessageLookupByLibrary.simpleMessage(
+            "Extensive developmental participation"),
+        "c3a1_term3": MessageLookupByLibrary.simpleMessage(
+            "Increased movement repertoire"),
+        "c3a1_term4": MessageLookupByLibrary.simpleMessage(
+            "Improved proficiency across repertoire"),
+        "c3a1_term5": MessageLookupByLibrary.simpleMessage(
+            "Improved adaptability to new movements"),
+        "c3a1_term6":
+            MessageLookupByLibrary.simpleMessage("Increased self-efficacy"),
+        "c3a1_term7": MessageLookupByLibrary.simpleMessage(
+            "Increased disposition to try new activities"),
+        "c3a1_term8": MessageLookupByLibrary.simpleMessage(
+            "Increased success in new activities"),
+        "c3a1_term9":
+            MessageLookupByLibrary.simpleMessage("Retention in new activities"),
+        "c4a1_instruction_message": MessageLookupByLibrary.simpleMessage(
+            "It’s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy."),
+        "c4a1_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),

@@ -49,36 +49,10 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
   /**activity data**/
 
   // Definitions and their respective countries
-  final List<Map<String, String>> definitions = [
-    {
-      "definition":
-      "Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.",
-      "country": "IPLA, Ireland, Northern Ireland, Canada"
-    },
-    {
-      "definition":
-      "Physical literacy is about building the skills, knowledge, and behaviors that give us the confidence and motivation to lead active lives.",
-      "country": "Australia"
-    },
-    {
-      "definition":
-      "Physical literacy is the ability, confidence, and desire to be physically active for life.",
-      "country": "USA"
-    },
-    {
-      "definition":
-      "Physical literacy is our relationship with movement and physical activity throughout life.",
-      "country": "England"
-    }
-  ];
+  List<Map<String, String>> definitions = [];
 
   // List of countries and their flag image paths
-  final List<Map<String, String>> countries = [
-    {"name": "IPLA, Ireland, Northern Ireland, Canada", "flag": "assets/img/ipla-ireland-canada.png"}, // Replace with actual paths to your flag images
-    {"name": "Australia", "flag": "assets/img/australia.png"},
-    {"name": "USA", "flag": "assets/img/united-states-of-america.png"},
-    {"name": "England", "flag": "assets/img/england.png"},
-  ];
+  List<Map<String, String>> countries = [];
 
 
   // Tracks which definitions have been matched to the correct country
@@ -119,6 +93,37 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
   }
 
   Widget activityGameView() {
+
+    if (definitions.isEmpty) {
+      definitions = [
+        {
+          "definition": AppLocalizations.of(context)!.c2a2_term1,
+          "country": AppLocalizations.of(context)!.c2a2_option1
+        },
+        {
+          "definition": AppLocalizations.of(context)!.c2a2_term2,
+          "country": AppLocalizations.of(context)!.c2a2_option2
+        },
+        {
+          "definition": AppLocalizations.of(context)!.c2a2_term3,
+          "country": AppLocalizations.of(context)!.c2a2_option3
+        },
+        {
+          "definition": AppLocalizations.of(context)!.c2a2_term4,
+          "country": AppLocalizations.of(context)!.c2a2_option4
+        }
+      ];
+    }
+
+    if (countries.isEmpty) {
+      countries = [
+        {"name": AppLocalizations.of(context)!.c2a2_option1, "flag": "assets/img/ipla-ireland-canada.png"}, // Replace with actual paths to your flag images
+        {"name": AppLocalizations.of(context)!.c2a2_option2, "flag": "assets/img/australia.png"},
+        {"name": AppLocalizations.of(context)!.c2a2_option3, "flag": "assets/img/united-states-of-america.png"},
+        {"name": AppLocalizations.of(context)!.c2a2_option4, "flag": "assets/img/england.png"},
+      ];
+    }
+
     timer = Timer(const Duration(seconds: kDebugMode ? 0 : 5), () {
       setState(() {
         showPrompt = true;

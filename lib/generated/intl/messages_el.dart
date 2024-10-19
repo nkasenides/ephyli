@@ -90,6 +90,33 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ταξινομήστε τις κάρτες με χρονολογική σειρά (από πάνω προς τα κάτω), που ταιριάζουν με τη σπείρα ανάπτυξης του σωματικού αλφαβητισμού του Jurbala. Έτοιμοι;"),
         "c3a1_success": MessageLookupByLibrary.simpleMessage(
             "Μπράβο! Οι κάρτες βρίσκονται στη σωστή σειρά!"),
+        "c3a1_term1": MessageLookupByLibrary.simpleMessage(
+            "Εμπλουτισμένο περιβάλλον κίνησης"),
+        "c3a1_term10":
+            MessageLookupByLibrary.simpleMessage("Αυξημένη συμμετοχή"),
+        "c3a1_term11": MessageLookupByLibrary.simpleMessage("Βελτιωμένη υγεία"),
+        "c3a1_term12":
+            MessageLookupByLibrary.simpleMessage("Βελτιωμένη ποιότητα ζωής"),
+        "c3a1_term2": MessageLookupByLibrary.simpleMessage(
+            "Εκτεταμένη αναπτυξιακή συμμετοχή"),
+        "c3a1_term3": MessageLookupByLibrary.simpleMessage(
+            "Αυξημένο ρεπερτόριο κινήσεων"),
+        "c3a1_term4": MessageLookupByLibrary.simpleMessage(
+            "Βελτιωμένη επάρκεια σε όλο το ρεπερτόριο"),
+        "c3a1_term5": MessageLookupByLibrary.simpleMessage(
+            "Βελτιωμένη προσαρμοστικότητα σε νέες κινήσεις"),
+        "c3a1_term6": MessageLookupByLibrary.simpleMessage(
+            "Αυξημένη αυτό-αποτελεσματικότητα"),
+        "c3a1_term7": MessageLookupByLibrary.simpleMessage(
+            "Αυξημένη διάθεση για δοκιμή νέων δραστηριοτήτων"),
+        "c3a1_term8": MessageLookupByLibrary.simpleMessage(
+            "Αυξημένη επιτυχία σε νέες δραστηριότητες"),
+        "c3a1_term9": MessageLookupByLibrary.simpleMessage(
+            "Διατήρηση σε νέες δραστηριότητες"),
+        "c4a1_instruction_message": MessageLookupByLibrary.simpleMessage(
+            "Είναι μια ηλιόλουστη Κυριακή. Αποφασίστε ποια δραστηριότητα αναψυχής θα ήταν η καλύτερη για ένα παιδί. Προσδιορίσετε ποιες δραστηριότητες θα μπορούσαν να προταθούν για την αύξηση του σωματικού γραμματισμού του παιδιού,  πατώντας στις ιδιότητες που εμφανίζονται στην οθόνη σε κάθε δραστηριότητα."),
+        "c4a1_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ήρθατε στην Πρόκληση 4. Θα βυθιστείτε σε διαφορετικά σενάρια της ζωής. Σκεφτείτε τους παράγοντες ή τις στρατηγικές που επηρεάζουν το κίνητρο για σωματική δραστηριότητα/κίνηση. Είστε έτοιμοι;"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),

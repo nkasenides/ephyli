@@ -68,7 +68,7 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
   Widget activityIntroView() {
     return InstructionsWidget(
         prefs,
-        AppLocalizations.of(context)!.c3a1_intro_message,
+        AppLocalizations.of(context)!.c4a1_intro_message,
         AppLocalizations.of(context)!.lets_start,
         () {
           setState(() {
@@ -79,8 +79,18 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
   }
 
   Widget activityGameView() {
+    return Padding(
+      padding: Themes.standardPadding,
+      child: Column(
+        children: [
 
-    return Container();
+          Text(AppLocalizations.of(context)!.c4a1_instruction_message),
+
+
+
+        ],
+      ),
+    );
   }
 
   Widget activityFinishView() {

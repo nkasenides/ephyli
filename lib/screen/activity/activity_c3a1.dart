@@ -45,25 +45,7 @@ class _ActivityC3A1State extends State<ActivityC3A1> {
 
   /**activity data**/
 // Correct order of card descriptions
-  final List<String> correctOrder = kDebugMode ? [
-    "A",
-    "B",
-    "C",
-    "D"
-  ] : [
-    "Enriched movement environment",
-    "Extensive developmental participation",
-    "Increased movement repertoire",
-    "Improved proficiency across repertoire",
-    "Improved adaptability to new movements",
-    "Increased self-efficacy",
-    "Increased disposition to try new activities",
-    "Increased success in new activities",
-    "Retention in new activities",
-    "Increased participation",
-    "Improved health",
-    "Improved quality of life"
-  ];
+  List<String> correctOrder = [];
 
   // Cards list, which will be shuffled
   List<String> shuffledCards = [];
@@ -77,7 +59,6 @@ class _ActivityC3A1State extends State<ActivityC3A1> {
   void initState() {
     //Initialize prefs & activity data:
     future = loadData();
-    _shuffleCards();
     super.initState();
   }
 
@@ -101,6 +82,29 @@ class _ActivityC3A1State extends State<ActivityC3A1> {
   }
 
   Widget activityGameView() {
+
+    if (correctOrder.isEmpty) {
+      correctOrder = kDebugMode ? [
+        "A",
+        "B",
+        "C",
+        "D"
+      ] : [
+        AppLocalizations.of(context)!.c3a1_term1,
+        AppLocalizations.of(context)!.c3a1_term2,
+        AppLocalizations.of(context)!.c3a1_term3,
+        AppLocalizations.of(context)!.c3a1_term4,
+        AppLocalizations.of(context)!.c3a1_term5,
+        AppLocalizations.of(context)!.c3a1_term6,
+        AppLocalizations.of(context)!.c3a1_term7,
+        AppLocalizations.of(context)!.c3a1_term8,
+        AppLocalizations.of(context)!.c3a1_term9,
+        AppLocalizations.of(context)!.c3a1_term10,
+        AppLocalizations.of(context)!.c3a1_term11,
+        AppLocalizations.of(context)!.c3a1_term12,
+      ];
+      _shuffleCards();
+    }
 
     return Padding(
       padding: const EdgeInsets.all(16.0),

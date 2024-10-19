@@ -930,6 +930,86 @@ class S {
     );
   }
 
+  /// `Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.`
+  String get c2a2_term1 {
+    return Intl.message(
+      'Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.',
+      name: 'c2a2_term1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical literacy is about building the skills, knowledge, and behaviors that give us the confidence and motivation to lead active lives.`
+  String get c2a2_term2 {
+    return Intl.message(
+      'Physical literacy is about building the skills, knowledge, and behaviors that give us the confidence and motivation to lead active lives.',
+      name: 'c2a2_term2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical literacy is the ability, confidence, and desire to be physically active for life.`
+  String get c2a2_term3 {
+    return Intl.message(
+      'Physical literacy is the ability, confidence, and desire to be physically active for life.',
+      name: 'c2a2_term3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical literacy is our relationship with movement and physical activity throughout life.`
+  String get c2a2_term4 {
+    return Intl.message(
+      'Physical literacy is our relationship with movement and physical activity throughout life.',
+      name: 'c2a2_term4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `IPLA, Ireland, Northern Ireland, Canada`
+  String get c2a2_option1 {
+    return Intl.message(
+      'IPLA, Ireland, Northern Ireland, Canada',
+      name: 'c2a2_option1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Australia`
+  String get c2a2_option2 {
+    return Intl.message(
+      'Australia',
+      name: 'c2a2_option2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `USA`
+  String get c2a2_option3 {
+    return Intl.message(
+      'USA',
+      name: 'c2a2_option3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `England`
+  String get c2a2_option4 {
+    return Intl.message(
+      'England',
+      name: 'c2a2_option4',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Arrange the cards in chronological order (top to bottom), matching the Jurbala’s spiral of physical literacy development. Ready?`
   String get c3a1_intro_message {
     return Intl.message(
@@ -978,6 +1058,146 @@ class S {
     return Intl.message(
       'Congratulations, you have finished the challenge. Click \'Finish\' to earn a badge!',
       name: 'c3a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enriched movement environment`
+  String get c3a1_term1 {
+    return Intl.message(
+      'Enriched movement environment',
+      name: 'c3a1_term1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Extensive developmental participation`
+  String get c3a1_term2 {
+    return Intl.message(
+      'Extensive developmental participation',
+      name: 'c3a1_term2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Increased movement repertoire`
+  String get c3a1_term3 {
+    return Intl.message(
+      'Increased movement repertoire',
+      name: 'c3a1_term3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Improved proficiency across repertoire`
+  String get c3a1_term4 {
+    return Intl.message(
+      'Improved proficiency across repertoire',
+      name: 'c3a1_term4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Improved adaptability to new movements`
+  String get c3a1_term5 {
+    return Intl.message(
+      'Improved adaptability to new movements',
+      name: 'c3a1_term5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Increased self-efficacy`
+  String get c3a1_term6 {
+    return Intl.message(
+      'Increased self-efficacy',
+      name: 'c3a1_term6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Increased disposition to try new activities`
+  String get c3a1_term7 {
+    return Intl.message(
+      'Increased disposition to try new activities',
+      name: 'c3a1_term7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Increased success in new activities`
+  String get c3a1_term8 {
+    return Intl.message(
+      'Increased success in new activities',
+      name: 'c3a1_term8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Retention in new activities`
+  String get c3a1_term9 {
+    return Intl.message(
+      'Retention in new activities',
+      name: 'c3a1_term9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Increased participation`
+  String get c3a1_term10 {
+    return Intl.message(
+      'Increased participation',
+      name: 'c3a1_term10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Improved health`
+  String get c3a1_term11 {
+    return Intl.message(
+      'Improved health',
+      name: 'c3a1_term11',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Improved quality of life`
+  String get c3a1_term12 {
+    return Intl.message(
+      'Improved quality of life',
+      name: 'c3a1_term12',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?`
+  String get c4a1_intro_message {
+    return Intl.message(
+      'Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?',
+      name: 'c4a1_intro_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It’s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child's Physical Literacy.`
+  String get c4a1_instruction_message {
+    return Intl.message(
+      'It’s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy.',
+      name: 'c4a1_instruction_message',
       desc: '',
       args: [],
     );

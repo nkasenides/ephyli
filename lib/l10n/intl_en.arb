@@ -94,6 +94,14 @@
   "c2a2_intro_message": "In recent years, different countries have adopted different definitions of physical literacy. In the following activity you must link the definition of physical literacy to the country in which it is adopted.",
   "c2a2_finish_message": "Congratulations! You have finished this challenge!",
   "c2a2_instruction": "Click on the selection you think is correct.",
+  "c2a2_term1": "Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.",
+  "c2a2_term2": "Physical literacy is about building the skills, knowledge, and behaviors that give us the confidence and motivation to lead active lives.",
+  "c2a2_term3": "Physical literacy is the ability, confidence, and desire to be physically active for life.",
+  "c2a2_term4": "Physical literacy is our relationship with movement and physical activity throughout life.",
+  "c2a2_option1": "IPLA, Ireland, Northern Ireland, Canada",
+  "c2a2_option2": "Australia",
+  "c2a2_option3": "USA",
+  "c2a2_option4": "England",
 
   "c3a1_intro_message": "Arrange the cards in chronological order (top to bottom), matching the Jurbala’s spiral of physical literacy development. Ready?",
   "c3a1_activity_message": "Drag the cards to sort them in the correct order based on Jurbala’s spiral of physical literacy. You can scroll through the slots on the top or the cards at the bottom to see all options.",
@@ -107,6 +115,21 @@
       }
     }
   },
-  "c3a1_finish_message": "Congratulations, you have finished the challenge. Click 'Finish' to earn a badge!"
+  "c3a1_finish_message": "Congratulations, you have finished the challenge. Click 'Finish' to earn a badge!",
+  "c3a1_term1":  "Enriched movement environment",
+  "c3a1_term2":  "Extensive developmental participation",
+  "c3a1_term3":  "Increased movement repertoire",
+  "c3a1_term4":  "Improved proficiency across repertoire",
+  "c3a1_term5":  "Improved adaptability to new movements",
+  "c3a1_term6":  "Increased self-efficacy",
+  "c3a1_term7":  "Increased disposition to try new activities",
+  "c3a1_term8":  "Increased success in new activities",
+  "c3a1_term9":  "Retention in new activities",
+  "c3a1_term10": "Increased participation",
+  "c3a1_term11": "Improved health",
+  "c3a1_term12": "Improved quality of life",
+
+  "c4a1_intro_message": "Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?",
+  "c4a1_instruction_message": "It’s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child's Physical Literacy."
 
 }
