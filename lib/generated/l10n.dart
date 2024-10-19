@@ -1382,6 +1382,316 @@ class S {
       args: [],
     );
   }
+
+  /// `Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category.`
+  String get c4a3_intro_message {
+    return Intl.message(
+      'Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category.',
+      name: 'c4a3_intro_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Move the factors in the middle (red circle) influencing engagement in physical activity to the right variables (blue circles).`
+  String get c4a3_instruction_message {
+    return Intl.message(
+      'Move the factors in the middle (red circle) influencing engagement in physical activity to the right variables (blue circles).',
+      name: 'c4a3_instruction_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here is a quick reminder of how the model looks. You can click on the image to zoom in.`
+  String get c4a3_info_message {
+    return Intl.message(
+      'Here is a quick reminder of how the model looks. You can click on the image to zoom in.',
+      name: 'c4a3_info_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Individual`
+  String get individual {
+    return Intl.message(
+      'Individual',
+      name: 'individual',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Social environment`
+  String get social_environment {
+    return Intl.message(
+      'Social environment',
+      name: 'social_environment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Organizations and institutions`
+  String get organizations_and_institutions {
+    return Intl.message(
+      'Organizations and institutions',
+      name: 'organizations_and_institutions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical environment`
+  String get physical_environment {
+    return Intl.message(
+      'Physical environment',
+      name: 'physical_environment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Regional or national policy`
+  String get regional_or_national_policy {
+    return Intl.message(
+      'Regional or national policy',
+      name: 'regional_or_national_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Culture`
+  String get culture {
+    return Intl.message(
+      'Culture',
+      name: 'culture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Motivation`
+  String get motivation {
+    return Intl.message(
+      'Motivation',
+      name: 'motivation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Beliefs`
+  String get beliefs {
+    return Intl.message(
+      'Beliefs',
+      name: 'beliefs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sex`
+  String get sex {
+    return Intl.message(
+      'Sex',
+      name: 'sex',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Self-efficacy`
+  String get self_efficacy {
+    return Intl.message(
+      'Self-efficacy',
+      name: 'self_efficacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Family`
+  String get family {
+    return Intl.message(
+      'Family',
+      name: 'family',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Friends`
+  String get friends {
+    return Intl.message(
+      'Friends',
+      name: 'friends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cultural norms`
+  String get cultural_norms {
+    return Intl.message(
+      'Cultural norms',
+      name: 'cultural_norms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Colleagues`
+  String get colleagues {
+    return Intl.message(
+      'Colleagues',
+      name: 'colleagues',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Schools`
+  String get schools {
+    return Intl.message(
+      'Schools',
+      name: 'schools',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Community Clubs`
+  String get community_clubs {
+    return Intl.message(
+      'Community Clubs',
+      name: 'community_clubs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Organisations`
+  String get organizations {
+    return Intl.message(
+      'Organisations',
+      name: 'organizations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Workplace`
+  String get workplace {
+    return Intl.message(
+      'Workplace',
+      name: 'workplace',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Built environment`
+  String get built_environment {
+    return Intl.message(
+      'Built environment',
+      name: 'built_environment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active travel opportunities `
+  String get active_opportunities {
+    return Intl.message(
+      'Active travel opportunities ',
+      name: 'active_opportunities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Parks and recreation facilities`
+  String get parks_recreation {
+    return Intl.message(
+      'Parks and recreation facilities',
+      name: 'parks_recreation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Natural spaces `
+  String get natural_spaces {
+    return Intl.message(
+      'Natural spaces ',
+      name: 'natural_spaces',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transport systems`
+  String get transport_systems {
+    return Intl.message(
+      'Transport systems',
+      name: 'transport_systems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Health sector`
+  String get health_sector {
+    return Intl.message(
+      'Health sector',
+      name: 'health_sector',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Education and school sector`
+  String get education_school {
+    return Intl.message(
+      'Education and school sector',
+      name: 'education_school',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Organised sport sector`
+  String get organized_sport {
+    return Intl.message(
+      'Organised sport sector',
+      name: 'organized_sport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `National`
+  String get national {
+    return Intl.message(
+      'National',
+      name: 'national',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local`
+  String get local {
+    return Intl.message(
+      'Local',
+      name: 'local',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

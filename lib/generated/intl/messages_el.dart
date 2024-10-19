@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "active_opportunities": MessageLookupByLibrary.simpleMessage(
+            "Ενεργές ταξιδιωτικές ευκαιρίες "),
         "activities": MessageLookupByLibrary.simpleMessage("Δραστηριότητες"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "Αυτή η δραστηριότητα είναι κλειδωμένη. Ολοκληρώστε τις προηγούμενες δραστηριότητες για να την ξεκλειδώσετε."),
@@ -33,10 +35,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Είστε σίγουροι;"),
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Διαθέσιμες κάρτες"),
+        "beliefs": MessageLookupByLibrary.simpleMessage("Πίστη"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε επίσης να με καλέσετε εάν χρειάζεστε βοήθεια με μια δραστηριότητα. Μπορώ να σας παράσχω επιπλέον βοήθεια ή συμβουλές."),
+        "built_environment":
+            MessageLookupByLibrary.simpleMessage("Δομημένο περιβάλλον"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "Έχετε κάνει 5 λάθη και το παιχνίδι θα ξεκινήσει απο την αρχή."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
@@ -164,6 +169,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Παίζοντας με μια μπάλα"),
         "c4a2_term6": MessageLookupByLibrary.simpleMessage(
             "Αναπαραγωγή αναζήτησης και απόκρυψης"),
+        "c4a3_info_message": MessageLookupByLibrary.simpleMessage(
+            "Ακολουθεί μια γρήγορη υπενθύμιση για το πώς φαίνεται το μοντέλο. Μπορείτε να κάνετε κλικ στην εικόνα για μεγέθυνση."),
+        "c4a3_instruction_message": MessageLookupByLibrary.simpleMessage(
+            "Μετακινήστε τους παράγοντες στη μέση (κόκκινος κύκλος) που επηρεάζουν την ενασχόληση με τη σωματική δραστηριότητα στις σωστές μεταβλητές (μπλε κύκλοι)."),
+        "c4a3_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Το τρίτο μας σενάριο βασίζεται στο οικολογικό μοντέλο των καθοριστικών παραγόντων της σωματικής δραστηριότητας που προτείνουν οι Bauman et al. (2012). Στην επόμενη δραστηριότητα, πρέπει να αντιστοιχίσετε κάθε παράγοντα με τη σωστή κατηγορία."),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),
@@ -184,7 +195,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Πατήστε την εικόνα για μεγέθυνση (περισσότερες λεπτομέρειες)."),
         "clickToViewArticle": MessageLookupByLibrary.simpleMessage(
             "Κάντε κλικ εδώ για να διαβάσετε το άρθρο"),
+        "colleagues": MessageLookupByLibrary.simpleMessage("Συνάδελφοι"),
+        "community_clubs":
+            MessageLookupByLibrary.simpleMessage("Κοινοτικές λέσχες"),
         "completed": MessageLookupByLibrary.simpleMessage("Ολοκληρώθηκε"),
+        "cultural_norms":
+            MessageLookupByLibrary.simpleMessage("Πολιτιστικοί κανόνες"),
+        "culture": MessageLookupByLibrary.simpleMessage("Πολιτισμός"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
         "dragging": MessageLookupByLibrary.simpleMessage("Σε μετακίνηση..."),
@@ -192,18 +209,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi φίλος"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Ο ePhyLi φίλος σας"),
+        "education_school": MessageLookupByLibrary.simpleMessage(
+            "Εκπαίδευση και σχολικός τομέας"),
         "error":
             MessageLookupByLibrary.simpleMessage("Έχει παρουσιαστεί σφάλμα."),
         "exploreChallenges": MessageLookupByLibrary.simpleMessage(
             "Εντάξει, ας εξερευνήσουμε τις προκλήσεις!"),
+        "family": MessageLookupByLibrary.simpleMessage("Οικογένεια"),
         "finish": MessageLookupByLibrary.simpleMessage("Τέλος"),
+        "friends": MessageLookupByLibrary.simpleMessage("Φίλοι"),
         "gameOver": MessageLookupByLibrary.simpleMessage("Τέλος παιχνιδιού"),
         "glossary": MessageLookupByLibrary.simpleMessage("Γλωσσάρι"),
         "glossary_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε να βρείτε ορολογία που σχετίζεται με τον Φυσικό Γραμματισμό στο Γλωσσάρι."),
+        "health_sector": MessageLookupByLibrary.simpleMessage("Τομέας υγείας"),
+        "individual": MessageLookupByLibrary.simpleMessage("Ατομικό"),
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Μη έγκυρο όνομα"),
         "lets_start": MessageLookupByLibrary.simpleMessage("Πάμε!"),
+        "local": MessageLookupByLibrary.simpleMessage("Τοπικός"),
+        "motivation": MessageLookupByLibrary.simpleMessage("Κίνητρο"),
+        "national": MessageLookupByLibrary.simpleMessage("Εθνικός"),
+        "natural_spaces":
+            MessageLookupByLibrary.simpleMessage("Φυσικοί χώροι "),
         "newBadgeText": MessageLookupByLibrary.simpleMessage(
             "Συγχαρητήρια! Πήρατε ενα νέο σήμα!"),
         "newBadgeTitle":
@@ -216,6 +244,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Η επόμενη πρόκληση ξεκλειδώθηκε."),
         "no": MessageLookupByLibrary.simpleMessage("Όχι"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "organizations": MessageLookupByLibrary.simpleMessage("Οργανισμοί"),
+        "organizations_and_institutions":
+            MessageLookupByLibrary.simpleMessage("Οργανισμοί και ιδρύματα"),
+        "organized_sport": MessageLookupByLibrary.simpleMessage(
+            "Οργανωμένος αθλητικός τομέας"),
+        "parks_recreation": MessageLookupByLibrary.simpleMessage(
+            "Πάρκα και εγκαταστάσεις αναψυχής"),
+        "physical_environment":
+            MessageLookupByLibrary.simpleMessage("Φυσικό περιβάλλον"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Παρακαλώ δώστε μια τιμή"),
         "proceed": MessageLookupByLibrary.simpleMessage("Συνέχεια"),
@@ -223,14 +260,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε επίσης να διαχειριστείτε το προφίλ και τις προτιμήσεις σας εδώ."),
         "ready_letsgo": MessageLookupByLibrary.simpleMessage("Ναι, πάμε!"),
+        "regional_or_national_policy": MessageLookupByLibrary.simpleMessage(
+            "Περιφερειακή ή εθνική πολιτική"),
         "resetGame": MessageLookupByLibrary.simpleMessage("Επανεκκίνηση"),
         "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
             "Αυτό θα επαναφέρει την τρέχουσα πρόοδό σας."),
+        "schools": MessageLookupByLibrary.simpleMessage("Σχολεία"),
         "screen_flip_notice": MessageLookupByLibrary.simpleMessage(
             "Η οθόνη σας θα αλλάξει σε οριζόντια λειτουργία για αυτή τη δραστηριότητα."),
+        "self_efficacy":
+            MessageLookupByLibrary.simpleMessage("Αυτοαποτελεσματικότητα"),
+        "sex": MessageLookupByLibrary.simpleMessage("Φύλο"),
+        "social_environment":
+            MessageLookupByLibrary.simpleMessage("Κοινωνικό περιβάλλον"),
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),
+        "transport_systems":
+            MessageLookupByLibrary.simpleMessage("Συστήματα μεταφορών"),
         "try_again": MessageLookupByLibrary.simpleMessage("Δοκιμάστε ξανά"),
         "tutorial_text": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στο ePhyLi, το ταξίδι σας στον Φυσικό Γραμματισμό πρόκειται να ξεκινήσει!\n\nΞεκινήστε μια μοναδική αποστολή για να μεταμορφώσετε τη ζωή σας μέσω της γνώσης, της δραστηριότητας και της κοινότητας. Περιηγηθείτε στις προκλήσεις και ξεκλειδώστε τα μυστικά ενός υγιεινού τρόπου ζωής. Το καθήκον σας δεν είναι απλώς να παίξετε αλλά να εξελιχθείτε, μαθαίνοντας για τη σωματική υγεία και ευεξία. Λύστε εργασίες και προκλήσεις, κάντε σημαντικές επιλογές και σχεδιάστε την πρόοδό σας σε έναν ελκυστικό κόσμο όπου κάθε βήμα μετράει για τον απώτερο στόχο σας: να κατακτήσετε τον Φυσικό Γραμματισμό.\n\nΕίστε έτοιμοι να ξεκινήσετε την περιπέτειά σας;"),
@@ -240,6 +287,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "well_done": MessageLookupByLibrary.simpleMessage("Μπράβο!"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;"),
+        "workplace": MessageLookupByLibrary.simpleMessage("Χώρος εργασίας"),
         "yes": MessageLookupByLibrary.simpleMessage("Ναί")
       };
 }

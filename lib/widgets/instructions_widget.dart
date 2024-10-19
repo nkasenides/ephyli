@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../theme/themes.dart';
@@ -14,9 +15,10 @@ class InstructionsWidget extends StatefulWidget {
   String instructionsText;
   String buttonText;
   Function() onButtonPressed;
+  Widget? middleWidget;
 
   InstructionsWidget(
-      this.prefs, this.instructionsText, this.buttonText, this.onButtonPressed, {super.key});
+      this.prefs, this.instructionsText, this.buttonText, this.onButtonPressed, {super.key, this.middleWidget});
 
   @override
   State<InstructionsWidget> createState() => _InstructionsWidgetState();
@@ -68,6 +70,13 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
               )
             ],
           ),
+
+          messageShown ? widget.middleWidget != null ? const Gap(10) : Container() : Container(),
+
+          messageShown ? widget.middleWidget ?? Container() : Container(),
+
+          messageShown ? widget.middleWidget != null ? const Gap(10) : Container() : Container(),
+
           messageShown
               ? Row(
             mainAxisAlignment: MainAxisAlignment.end,

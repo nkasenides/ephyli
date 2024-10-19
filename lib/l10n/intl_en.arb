@@ -149,6 +149,45 @@
   "c4a2_term3": "Telling stories while sitting on the schoolyard",
   "c4a2_term4": "Telling a story that requires children to imitate movements of animals",
   "c4a2_term5": "Playing with a ball",
-  "c4a2_term6": "Playing seek and hide"
+  "c4a2_term6": "Playing seek and hide",
+
+  "c4a3_intro_message": "Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category.",
+  "c4a3_instruction_message": "Move the factors in the middle (red circle) influencing engagement in physical activity to the right variables (blue circles).",
+  "c4a3_info_message": "Here is a quick reminder of how the model looks. You can click on the image to zoom in.",
+
+  "individual": "Individual",
+  "social_environment": "Social environment",
+  "organizations_and_institutions": "Organizations and institutions",
+  "physical_environment": "Physical environment",
+  "regional_or_national_policy": "Regional or national policy",
+  "culture": "Culture",
+
+  "motivation": "Motivation",
+  "beliefs": "Beliefs",
+  "sex": "Sex",
+  "self_efficacy": "Self-efficacy",
+
+  "family": "Family",
+  "friends": "Friends",
+  "cultural_norms": "Cultural norms",
+  "colleagues": "Colleagues",
+
+  "schools": "Schools",
+  "community_clubs": "Community Clubs",
+  "organizations": "Organisations",
+  "workplace": "Workplace",
+
+  "built_environment": "Built environment",
+  "active_opportunities": "Active travel opportunities ",
+  "parks_recreation": "Parks and recreation facilities",
+  "natural_spaces": "Natural spaces ",
+
+  "transport_systems": "Transport systems",
+  "health_sector": "Health sector",
+  "education_school": "Education and school sector",
+  "organized_sport": "Organised sport sector",
+
+  "national": "National",
+  "local": "Local"
 
 }

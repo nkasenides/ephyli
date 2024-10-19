@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "active_opportunities": MessageLookupByLibrary.simpleMessage(
+            "Active travel opportunities "),
         "activities": MessageLookupByLibrary.simpleMessage("activities"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "This activity is locked. Complete the previous activities to unlock."),
@@ -33,10 +35,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Available cards"),
+        "beliefs": MessageLookupByLibrary.simpleMessage("Beliefs"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "This is your ePhyLi buddy. They can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
         "buddy_description": MessageLookupByLibrary.simpleMessage(
             "You can also call me if you need help with an activity. I can provide extra help or hints."),
+        "built_environment":
+            MessageLookupByLibrary.simpleMessage("Built environment"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "You have made 5 mistakes, and the game will restart."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
@@ -162,6 +167,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Playing with a ball"),
         "c4a2_term6":
             MessageLookupByLibrary.simpleMessage("Playing seek and hide"),
+        "c4a3_info_message": MessageLookupByLibrary.simpleMessage(
+            "Here is a quick reminder of how the model looks. You can click on the image to zoom in."),
+        "c4a3_instruction_message": MessageLookupByLibrary.simpleMessage(
+            "Move the factors in the middle (red circle) influencing engagement in physical activity to the right variables (blue circles)."),
+        "c4a3_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category."),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),
@@ -183,7 +194,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Press the image to zoom in for more detail."),
         "clickToViewArticle": MessageLookupByLibrary.simpleMessage(
             "Click here to read the article"),
+        "colleagues": MessageLookupByLibrary.simpleMessage("Colleagues"),
+        "community_clubs":
+            MessageLookupByLibrary.simpleMessage("Community Clubs"),
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
+        "cultural_norms":
+            MessageLookupByLibrary.simpleMessage("Cultural norms"),
+        "culture": MessageLookupByLibrary.simpleMessage("Culture"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Customize your avatar"),
         "dragging": MessageLookupByLibrary.simpleMessage("Dragging..."),
@@ -191,22 +208,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi Buddy"),
         "ePhyLiBuddyIntroHeadline":
             MessageLookupByLibrary.simpleMessage("Your ePhyLi buddy"),
+        "education_school":
+            MessageLookupByLibrary.simpleMessage("Education and school sector"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "error": MessageLookupByLibrary.simpleMessage("An error has occurred."),
         "exploreChallenges": MessageLookupByLibrary.simpleMessage(
             "Ok, let\'s explore the challenges!"),
+        "family": MessageLookupByLibrary.simpleMessage("Family"),
         "finish": MessageLookupByLibrary.simpleMessage("Finish"),
         "french": MessageLookupByLibrary.simpleMessage("French"),
+        "friends": MessageLookupByLibrary.simpleMessage("Friends"),
         "gameOver": MessageLookupByLibrary.simpleMessage("Game over"),
         "glossary": MessageLookupByLibrary.simpleMessage("Glossary"),
         "glossary_description": MessageLookupByLibrary.simpleMessage(
             "You can find terminology related to Physical Literacy in the Glossary."),
         "greek": MessageLookupByLibrary.simpleMessage("Greek"),
+        "health_sector": MessageLookupByLibrary.simpleMessage("Health sector"),
+        "individual": MessageLookupByLibrary.simpleMessage("Individual"),
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Invalid name"),
         "italian": MessageLookupByLibrary.simpleMessage("Italian"),
         "lets_start": MessageLookupByLibrary.simpleMessage("Let\'s start!"),
+        "local": MessageLookupByLibrary.simpleMessage("Local"),
         "luxenbourgese": MessageLookupByLibrary.simpleMessage("Luxenbourgese"),
+        "motivation": MessageLookupByLibrary.simpleMessage("Motivation"),
+        "national": MessageLookupByLibrary.simpleMessage("National"),
+        "natural_spaces":
+            MessageLookupByLibrary.simpleMessage("Natural spaces "),
         "newBadgeText": MessageLookupByLibrary.simpleMessage(
             "Congratulations! You have received a new badge. Well done!"),
         "newBadgeTitle":
@@ -219,6 +247,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "The next challenge has been unlocked."),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "organizations": MessageLookupByLibrary.simpleMessage("Organisations"),
+        "organizations_and_institutions": MessageLookupByLibrary.simpleMessage(
+            "Organizations and institutions"),
+        "organized_sport":
+            MessageLookupByLibrary.simpleMessage("Organised sport sector"),
+        "parks_recreation": MessageLookupByLibrary.simpleMessage(
+            "Parks and recreation facilities"),
+        "physical_environment":
+            MessageLookupByLibrary.simpleMessage("Physical environment"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Please provide a value"),
         "polish": MessageLookupByLibrary.simpleMessage("Polish"),
@@ -227,13 +264,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile_description": MessageLookupByLibrary.simpleMessage(
             "You can also manage your profile and preferences here."),
         "ready_letsgo": MessageLookupByLibrary.simpleMessage("Yes, let\'s go!"),
+        "regional_or_national_policy":
+            MessageLookupByLibrary.simpleMessage("Regional or national policy"),
         "resetGame": MessageLookupByLibrary.simpleMessage("Reset game"),
         "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
             "This will reset your current progress."),
+        "schools": MessageLookupByLibrary.simpleMessage("Schools"),
         "screen_flip_notice": MessageLookupByLibrary.simpleMessage(
             "Your screen will change to landscape mode for this activity."),
+        "self_efficacy": MessageLookupByLibrary.simpleMessage("Self-efficacy"),
+        "sex": MessageLookupByLibrary.simpleMessage("Sex"),
+        "social_environment":
+            MessageLookupByLibrary.simpleMessage("Social environment"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
+        "transport_systems":
+            MessageLookupByLibrary.simpleMessage("Transport systems"),
         "try_again": MessageLookupByLibrary.simpleMessage("Try again"),
         "tutorialTextChallenges": MessageLookupByLibrary.simpleMessage(
             "Well done! Now I am going to explain how you can start playing. The game consists of several challenges that you must complete in order.\n\nI have already unlocked the first challenge for you. Once you complete a challenge, the next will be unlocked. Each challenge will reward you with points, which can help you level up your avatar. You can also gather badges through the challenges, or various other activities, by interacting with the various features of the app."),
@@ -248,6 +294,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "well_done": MessageLookupByLibrary.simpleMessage("Well done!"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("What is your name?"),
+        "workplace": MessageLookupByLibrary.simpleMessage("Workplace"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

@@ -10,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../model/activity.dart';
 import '../screen/activity/activity_c4a1.dart';
 import '../screen/activity/activity_c4a2.dart';
+import '../screen/activity/activity_c4a3.dart';
 import '../utils/pref_utils.dart';
 
 class ActivityManager {
@@ -64,6 +65,11 @@ class ActivityManager {
           break;
         case "c4a2":
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC4A2(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c4a3":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC4A3(),)).then((value) {
             setState(() {});
           },);
           break;
