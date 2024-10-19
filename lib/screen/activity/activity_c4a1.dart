@@ -34,6 +34,17 @@ enum C4A1Stage {
   finish
 }
 
+enum Correctness {
+  correct(Colors.green),
+  wrong(Colors.red),
+  conditionallyCorrect(Colors.orange)
+  ;
+
+  final Color color;
+
+  const Correctness(this.color);
+}
+
 class _ActivityC4A1State extends State<ActivityC4A1> {
 
 
@@ -44,8 +55,20 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
   late Future<void> future;
 
   /**activity data**/
+  List<String> prompts = [];
+  List<String> options = [];
+  List<List<Correctness>> correctness = [];
 
+  final Color noOptionColor = Colors.grey.shade600;
 
+  List<Color> buttonColors = [
+    Colors.grey.shade600,
+    Colors.grey.shade600,
+    Colors.grey.shade600,
+    Colors.grey.shade600,
+  ];
+
+  int promptIndex = 0;
 
   Future<void> loadData() async {
     prefs = await SharedPreferences.getInstance();
@@ -79,6 +102,38 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
   }
 
   Widget activityGameView() {
+
+    if (prompts.isEmpty) {
+      prompts = [
+        AppLocalizations.of(context)!.c4a1_term1,
+        AppLocalizations.of(context)!.c4a1_term2,
+        AppLocalizations.of(context)!.c4a1_term3,
+        AppLocalizations.of(context)!.c4a1_term4,
+        AppLocalizations.of(context)!.c4a1_term5,
+        AppLocalizations.of(context)!.c4a1_term6,
+      ];
+    }
+
+    if (options.isEmpty) {
+      options = [
+        AppLocalizations.of(context)!.c4a1_category_funny,
+        AppLocalizations.of(context)!.c4a1_category_social,
+        AppLocalizations.of(context)!.c4a1_category_active,
+        AppLocalizations.of(context)!.c4a1_category_movements,
+      ];
+    }
+
+    if (correctness.isEmpty) {
+      correctness = [
+        [Correctness.correct, Correctness.wrong, Correctness.conditionallyCorrect, Correctness.wrong],
+        [Correctness.correct, Correctness.correct, Correctness.conditionallyCorrect, Correctness.wrong],
+        [Correctness.correct, Correctness.correct, Correctness.correct, Correctness.correct],
+        [Correctness.correct, Correctness.conditionallyCorrect, Correctness.correct, Correctness.correct],
+        [Correctness.correct, Correctness.correct, Correctness.wrong, Correctness.wrong],
+        [Correctness.conditionallyCorrect, Correctness.correct, Correctness.correct, Correctness.wrong]
+      ];
+    }
+
     return Padding(
       padding: Themes.standardPadding,
       child: Column(
@@ -86,54 +141,108 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
 
           Text(AppLocalizations.of(context)!.c4a1_instruction_message),
 
+          const Gap(20),
 
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // Display the prompt
+                Text(
+                  prompts[promptIndex],
+                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                ),
+
+                const Gap(20),
+
+                // Display the options as buttons with color feedback
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: List.generate(options.length, (optionIndex) {
+                    return ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: buttonColors[optionIndex]
+                      ),
+                      onPressed: () => handleOptionSelect(promptIndex, optionIndex),
+                      child: Text(
+                        options[optionIndex],
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                    );
+                  }),
+                ),
+                const SizedBox(height: 20),
+              ],
+            ),
+          ),
+
+          ElevatedButton(
+            child: Text(AppLocalizations.of(context)!.check_solution),
+            onPressed: () {
+              int correctsNotFound = 0;
+              for (int i = 0; i < correctness[promptIndex].length; i++) {
+                if (correctness[promptIndex][i] == Correctness.correct && buttonColors[i] != Correctness.correct.color) {
+                  correctsNotFound++;
+                }
+              }
+              debugPrint("correctsNotFound: $correctsNotFound");
+
+              if (correctsNotFound > 0) {
+                UIUtils.showFeedbackBar(context, false);
+                resetRow();
+              }
+              else {
+                if (promptIndex < prompts.length - 1) { //Show next prompt
+                  UIUtils.showFeedbackBar(context, true);
+                  setState(() {
+                    promptIndex++;
+                    buttonColors = List.filled(4, noOptionColor);
+                  });
+                }
+                else { //No more prompts, move to finish
+                  setState(() {
+                    stage = C4A1Stage.finish;
+                  });
+                }
+              }
+            },
+          )
 
         ],
       ),
     );
   }
 
+  // Handle option selection and update the color based on correctness
+  void handleOptionSelect(int promptIndex, int optionIndex) {
+    setState(() {
+      buttonColors[optionIndex] = correctness[promptIndex][optionIndex].color;
+      if (correctness[promptIndex][optionIndex] == Correctness.wrong) {
+        UIUtils.showFeedbackBar(context, false);
+        Future.delayed(const Duration(milliseconds: 500), () {
+          resetRow();
+        },);
+      }
+    });
+  }
+
+  void resetRow() {
+    setState(() {
+      for (int i = 0; i < buttonColors.length; i++) {
+        buttonColors[i] = noOptionColor;
+      }
+    });
+  }
+
   Widget activityFinishView() {
     return InstructionsWidget(
       prefs,
-      AppLocalizations.of(context)!.c3a1_finish_message,
+      AppLocalizations.of(context)!.c4a1_finish_message,
       AppLocalizations.of(context)!.finish,
       () {
-        ActivityManager.completeActivity(activityID).then((value) async {
-
-          //Find all badges related to this activity and award them:
-          for (var badgeID in Challenge.challenge3.badgeIDs) {
-            var badge = GameBadge.findBadge(badgeID);
-            badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
-              if (!value) {
-                badge.earn(context);
-              }
-            },);
-          }
-
-          //Unlock next challenges:
-          List<Future> unlockFutures = [];
-          for (var challengeID in Challenge.challenge3.unlocksChallengesIDs) {
-            Challenge challenge = Challenge.findChallenge(challengeID)!;
-            challenge.isUnlocked().then((value) {
-              if (!value) {
-                unlockFutures.add(challenge.unlock());
-              }
-            },);
-          }
-
-          //Show toast and move back:
-          Future.wait(unlockFutures).then((value) {
-            if (unlockFutures.isNotEmpty) {
-              Fluttertoast.showToast(
-                  msg: AppLocalizations.of(context)!
-                      .challenges_unlocked.replaceAll(
-                      "%1", unlockFutures.length.toString()));
-            }
+        ActivityManager.completeActivity(activityID).then((value) {
             Navigator.pop(context, "_");
-            Navigator.pop(context, "_");
-          },);
-
         },);
       }
     );

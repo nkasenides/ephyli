@@ -290,7 +290,7 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
                     margin: EdgeInsets.symmetric(horizontal: 5),
                     child: Center(
                       child: Text(
-                        'Dragging...',
+                        AppLocalizations.of(context)!.dragging,
                         style: TextStyle(color: Colors.grey, fontSize: 14),
                       ),
                     ),
@@ -326,7 +326,7 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
         AppLocalizations.of(context)!.finish,
         () {
           //Move back to activities
-          Navigator.pop(context);
+          Navigator.pop(context, "_");
         }
     );
   }

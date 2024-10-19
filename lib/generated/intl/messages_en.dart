@@ -126,10 +126,28 @@ class MessageLookup extends MessageLookupByLibrary {
             "Increased success in new activities"),
         "c3a1_term9":
             MessageLookupByLibrary.simpleMessage("Retention in new activities"),
+        "c4a1_category_active": MessageLookupByLibrary.simpleMessage("Active"),
+        "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Funny"),
+        "c4a1_category_movements": MessageLookupByLibrary.simpleMessage(
+            "Includes different movements"),
+        "c4a1_category_social": MessageLookupByLibrary.simpleMessage("Social"),
+        "c4a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have completed the activity. Let\'s move on!"),
         "c4a1_instruction_message": MessageLookupByLibrary.simpleMessage(
-            "It’s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy."),
+            "It\'s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy. Be careful! If you click on the wrong activity your selection will be reset. When you are finished, click \'Check solution\' to check your solution."),
         "c4a1_intro_message": MessageLookupByLibrary.simpleMessage(
             "Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?"),
+        "c4a1_term1": MessageLookupByLibrary.simpleMessage(
+            "Playing video games using tablet, smartphone or PC, or watching TV alone."),
+        "c4a1_term2": MessageLookupByLibrary.simpleMessage(
+            "Playing cards with friends at home"),
+        "c4a1_term3": MessageLookupByLibrary.simpleMessage(
+            "Gardening with family members"),
+        "c4a1_term4": MessageLookupByLibrary.simpleMessage("Playing with dog"),
+        "c4a1_term5": MessageLookupByLibrary.simpleMessage(
+            "Telling stories sitting on the sofa"),
+        "c4a1_term6": MessageLookupByLibrary.simpleMessage(
+            "Walking in the neighbourhood with family members"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),

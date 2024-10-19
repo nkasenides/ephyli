@@ -1193,11 +1193,121 @@ class S {
     );
   }
 
-  /// `It’s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child's Physical Literacy.`
+  /// `It's a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child's Physical Literacy. Be careful! If you click on the wrong activity your selection will be reset. When you are finished, click 'Check solution' to check your solution.`
   String get c4a1_instruction_message {
     return Intl.message(
-      'It’s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy.',
+      'It\'s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy. Be careful! If you click on the wrong activity your selection will be reset. When you are finished, click \'Check solution\' to check your solution.',
       name: 'c4a1_instruction_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have completed the activity. Let's move on!`
+  String get c4a1_finish_message {
+    return Intl.message(
+      'Well done! You have completed the activity. Let\'s move on!',
+      name: 'c4a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Funny`
+  String get c4a1_category_funny {
+    return Intl.message(
+      'Funny',
+      name: 'c4a1_category_funny',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Social`
+  String get c4a1_category_social {
+    return Intl.message(
+      'Social',
+      name: 'c4a1_category_social',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Active`
+  String get c4a1_category_active {
+    return Intl.message(
+      'Active',
+      name: 'c4a1_category_active',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Includes different movements`
+  String get c4a1_category_movements {
+    return Intl.message(
+      'Includes different movements',
+      name: 'c4a1_category_movements',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Playing video games using tablet, smartphone or PC, or watching TV alone.`
+  String get c4a1_term1 {
+    return Intl.message(
+      'Playing video games using tablet, smartphone or PC, or watching TV alone.',
+      name: 'c4a1_term1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Playing cards with friends at home`
+  String get c4a1_term2 {
+    return Intl.message(
+      'Playing cards with friends at home',
+      name: 'c4a1_term2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gardening with family members`
+  String get c4a1_term3 {
+    return Intl.message(
+      'Gardening with family members',
+      name: 'c4a1_term3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Playing with dog`
+  String get c4a1_term4 {
+    return Intl.message(
+      'Playing with dog',
+      name: 'c4a1_term4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Telling stories sitting on the sofa`
+  String get c4a1_term5 {
+    return Intl.message(
+      'Telling stories sitting on the sofa',
+      name: 'c4a1_term5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Walking in the neighbourhood with family members`
+  String get c4a1_term6 {
+    return Intl.message(
+      'Walking in the neighbourhood with family members',
+      name: 'c4a1_term6',
       desc: '',
       args: [],
     );

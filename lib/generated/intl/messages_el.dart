@@ -81,6 +81,19 @@ class MessageLookup extends MessageLookupByLibrary {
             "Κάντε κλικ στην επιλογή που πιστεύετε ότι είναι σωστή."),
         "c2a2_intro_message": MessageLookupByLibrary.simpleMessage(
             "Τα τελευταία χρόνια, διαφορετικές χώρες έχουν υιοθετήσει διαφορετικούς ορισμούς του σωματικού αλφαβητισμού. Στην παρακάτω δραστηριότητα πρέπει να συνδέσετε τον ορισμό του σωματικού αλφαβητισμού με τη χώρα στην οποία έχει υιοθετηθεί."),
+        "c2a2_option1": MessageLookupByLibrary.simpleMessage(
+            "IPLA, Ιρλανδία, Βόρεια Ιρλανδία, Καναδάς"),
+        "c2a2_option2": MessageLookupByLibrary.simpleMessage("Αυστραλία"),
+        "c2a2_option3": MessageLookupByLibrary.simpleMessage("ΗΠΑ"),
+        "c2a2_option4": MessageLookupByLibrary.simpleMessage("Αγγλία"),
+        "c2a2_term1": MessageLookupByLibrary.simpleMessage(
+            "Ο σωματικός αλφαβητισμός μπορεί να περιγραφεί ως το κίνητρο, η αυτοπεποίθηση, η σωματική ικανότητα, η γνώση και η κατανόηση για την εκτίμηση και την ανάληψη ευθύνης για τη συμμετοχή σε σωματικές δραστηριότητες για όλη τη ζωή."),
+        "c2a2_term2": MessageLookupByLibrary.simpleMessage(
+            "Ο σωματικός αλφαβητισμός έχει να κάνει με την οικοδόμηση δεξιοτήτων, γνώσεων και συμπεριφορών που μας δίνουν την αυτοπεποίθηση και το κίνητρο να ζήσουμε ενεργή ζωή."),
+        "c2a2_term3": MessageLookupByLibrary.simpleMessage(
+            "Ο σωματικός αλφαβητισμός είναι η ικανότητα, η αυτοπεποίθηση και η επιθυμία να είσαι σωματικά δραστήριος για όλη τη ζωή."),
+        "c2a2_term4": MessageLookupByLibrary.simpleMessage(
+            "Ο σωματικός αλφαβητισμός είναι η σχέση μας με την κίνηση και τη σωματική δραστηριότητα σε όλη τη ζωή."),
         "c3a1_activity_message": MessageLookupByLibrary.simpleMessage(
             "Σύρετε τις κάρτες για να τις ταξινομήσετε με τη σωστή σειρά με βάση τη σπείρα φυσικής παιδείας του Jurbala. Μπορείτε να μετακινηθείτε στις υποδοχές στο επάνω μέρος ή στις κάρτες στο κάτω μέρος για να δείτε όλες τις επιλογές."),
         "c3a1_fail": m0,
@@ -113,10 +126,30 @@ class MessageLookup extends MessageLookupByLibrary {
             "Αυξημένη επιτυχία σε νέες δραστηριότητες"),
         "c3a1_term9": MessageLookupByLibrary.simpleMessage(
             "Διατήρηση σε νέες δραστηριότητες"),
+        "c4a1_category_active": MessageLookupByLibrary.simpleMessage("Ενεργό"),
+        "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Aστείο"),
+        "c4a1_category_movements": MessageLookupByLibrary.simpleMessage(
+            "Περιλαμβάνει διαφορετικές κινήσεις"),
+        "c4a1_category_social":
+            MessageLookupByLibrary.simpleMessage("Κοινωνικό"),
+        "c4a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Μπράβο! Ολοκληρώσατε τη δραστηριότητα. Ας προχωρήσουμε!"),
         "c4a1_instruction_message": MessageLookupByLibrary.simpleMessage(
-            "Είναι μια ηλιόλουστη Κυριακή. Αποφασίστε ποια δραστηριότητα αναψυχής θα ήταν η καλύτερη για ένα παιδί. Προσδιορίσετε ποιες δραστηριότητες θα μπορούσαν να προταθούν για την αύξηση του σωματικού γραμματισμού του παιδιού,  πατώντας στις ιδιότητες που εμφανίζονται στην οθόνη σε κάθε δραστηριότητα."),
+            "Είναι μια ηλιόλουστη Κυριακή. Αποφασίστε ποια δραστηριότητα αναψυχής θα ήταν καλύτερη για ένα παιδί. Κάντε κλικ στις ιδιότητες που εμφανίζονται στην οθόνη για κάθε δραστηριότητα, προσπαθώντας να προσδιορίσετε ποιες θα μπορούσαν να προταθούν για την αύξηση του σωματικού γραμματισμού του παιδιού. Να είστε προσεκτικοί! Εάν κάνετε κλικ σε λάθος ιδιότητα, η επιλογή σας θα διαγραφή. Όταν τελειώσετε, κάντε κλικ στο «Έλεγχος λύσης» για να ελέγξετε τη λύση σας."),
         "c4a1_intro_message": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στην Πρόκληση 4. Θα βυθιστείτε σε διαφορετικά σενάρια της ζωής. Σκεφτείτε τους παράγοντες ή τις στρατηγικές που επηρεάζουν το κίνητρο για σωματική δραστηριότητα/κίνηση. Είστε έτοιμοι;"),
+        "c4a1_term1": MessageLookupByLibrary.simpleMessage(
+            "Παίζοντας βιντεοπαιχνίδια χρησιμοποιώντας tablet, smartphone ή υπολογιστή ή παρακολουθώντας τηλεόραση μόνος."),
+        "c4a1_term2": MessageLookupByLibrary.simpleMessage(
+            "Παίζοντας χαρτιά με φίλους στο σπίτι"),
+        "c4a1_term3": MessageLookupByLibrary.simpleMessage(
+            "Κηπουρική με μέλη της οικογένειας"),
+        "c4a1_term4":
+            MessageLookupByLibrary.simpleMessage("Παίζω με τον σκύλο"),
+        "c4a1_term5": MessageLookupByLibrary.simpleMessage(
+            "Αφήγηση ιστοριών καθισμένος στον καναπέ"),
+        "c4a1_term6": MessageLookupByLibrary.simpleMessage(
+            "Περπατώντας στη γειτονιά με μέλη της οικογένειας"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),
