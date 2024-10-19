@@ -1413,6 +1413,16 @@ class S {
     );
   }
 
+  /// `That was hard. Well done! You have completed the fourth challenge. Press 'Finish' to get your badge!`
+  String get c4a3_finish_message {
+    return Intl.message(
+      'That was hard. Well done! You have completed the fourth challenge. Press \'Finish\' to get your badge!',
+      name: 'c4a3_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Individual`
   String get individual {
     return Intl.message(

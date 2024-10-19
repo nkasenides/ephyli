@@ -169,6 +169,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Παίζοντας με μια μπάλα"),
         "c4a2_term6": MessageLookupByLibrary.simpleMessage(
             "Αναπαραγωγή αναζήτησης και απόκρυψης"),
+        "c4a3_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Αυτό ηταν δύσκολο. Μπράβο! Ολοκληρώσατε την τέταρτη πρόκληση. Πατήστε \'Τέλος\' για να λάβετε το σήμα σας!"),
         "c4a3_info_message": MessageLookupByLibrary.simpleMessage(
             "Ακολουθεί μια γρήγορη υπενθύμιση για το πώς φαίνεται το μοντέλο. Μπορείτε να κάνετε κλικ στην εικόνα για μεγέθυνση."),
         "c4a3_instruction_message": MessageLookupByLibrary.simpleMessage(

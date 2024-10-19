@@ -18,10 +18,6 @@ import 'package:widget_zoom/widget_zoom.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import '../../utils/constants.dart';
-import '../../utils/pref_utils.dart';
-import '../../widgets/buddy_avatar_widget.dart';
-import '../../widgets/chat_bubble.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ActivityC4A3 extends StatefulWidget {
@@ -47,68 +43,18 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
 
   /**activity data**/
   // List of factors
-  final List<String> factors = [
-    "Motivation",
-    "Beliefs",
-    "Sex",
-    "Self-efficacy",
-    "Family",
-    "Friends",
-    "Cultural norms",
-    "Colleagues",
-    "Schools",
-    "Community Clubs",
-    "Organisations",
-    "Workplace",
-    "Built environment",
-    "Active travel opportunities",
-    "Parks and recreation facilities",
-    "Natural spaces",
-    "Transport systems",
-    "Health sector",
-    "Education and school sector",
-    "Organised sport sector",
-    "National",
-    "Local"
-  ];
+  List<String> factors = [];
+
+  List<String> shuffledFactors = [];
 
   // Variables to map the factors to
-  final List<String> variables = [
-    "Individual",
-    "Global",
-    "Interpersonal",
-    "Regional and\nnational policy",
-    "Environment"
-  ];
+  List<String> variables = [];
 
   // Current index of the factor being displayed
   int currentFactorIndex = 0;
 
   // Correct mapping for each factor
-  final Map<String, String> correctMappings = {
-    "Motivation": "Individual",
-    "Beliefs": "Individual",
-    "Sex": "Individual",
-    "Self-efficacy": "Individual",
-    "Family": "Interpersonal",
-    "Friends": "Interpersonal",
-    "Cultural norms": "Interpersonal",
-    "Colleagues": "Interpersonal",
-    "Schools": "Interpersonal",
-    "Community Clubs": "Interpersonal",
-    "Organisations": "Interpersonal",
-    "Workplace": "Environment",
-    "Built environment": "Environment",
-    "Active travel opportunities": "Environment",
-    "Parks and recreation facilities": "Environment",
-    "Natural spaces": "Environment",
-    "Transport systems": "Environment",
-    "Health sector": "Regional and national policy",
-    "Education and school sector": "Regional and national policy",
-    "Organised sport sector": "Regional and national policy",
-    "National": "Global",
-    "Local": "Global"
-  };
+  Map<String, String> correctMappings = {};
 
 
   Future<void> loadData() async {
@@ -184,7 +130,95 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
   Widget activityGameView() {
     UIUtils.landscapeOrientation();
 
-    String currentFactor = factors[currentFactorIndex];
+    if (shuffledFactors.isEmpty) {
+
+      factors = !kDebugMode ? [
+        AppLocalizations.of(context)!.motivation,
+        AppLocalizations.of(context)!.beliefs,
+        AppLocalizations.of(context)!.sex,
+        AppLocalizations.of(context)!.self_efficacy,
+        AppLocalizations.of(context)!.family,
+        AppLocalizations.of(context)!.friends,
+        AppLocalizations.of(context)!.cultural_norms,
+        AppLocalizations.of(context)!.colleagues,
+        AppLocalizations.of(context)!.schools,
+        AppLocalizations.of(context)!.community_clubs,
+        AppLocalizations.of(context)!.organizations,
+        AppLocalizations.of(context)!.workplace,
+        AppLocalizations.of(context)!.built_environment,
+        AppLocalizations.of(context)!.active_opportunities,
+        AppLocalizations.of(context)!.parks_recreation,
+        AppLocalizations.of(context)!.natural_spaces,
+        AppLocalizations.of(context)!.transport_systems,
+        AppLocalizations.of(context)!.health_sector,
+        AppLocalizations.of(context)!.education_school,
+        AppLocalizations.of(context)!.organized_sport,
+        AppLocalizations.of(context)!.national,
+        AppLocalizations.of(context)!.local,
+      ] : [
+        "A1",
+        "B1",
+        "C2"
+      ];
+
+      variables = !kDebugMode ? [
+        AppLocalizations.of(context)!.individual,
+        AppLocalizations.of(context)!.social_environment,
+        AppLocalizations.of(context)!.organizations_and_institutions,
+        AppLocalizations.of(context)!.physical_environment,
+        AppLocalizations.of(context)!.regional_or_national_policy,
+        AppLocalizations.of(context)!.culture,
+      ] : [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+      ];
+
+      correctMappings = !kDebugMode ? {
+
+        AppLocalizations.of(context)!.motivation: AppLocalizations.of(context)!.individual,
+        AppLocalizations.of(context)!.beliefs: AppLocalizations.of(context)!.individual,
+        AppLocalizations.of(context)!.sex: AppLocalizations.of(context)!.individual,
+        AppLocalizations.of(context)!.self_efficacy: AppLocalizations.of(context)!.individual,
+
+        AppLocalizations.of(context)!.family: AppLocalizations.of(context)!.social_environment,
+        AppLocalizations.of(context)!.friends: AppLocalizations.of(context)!.social_environment,
+        AppLocalizations.of(context)!.cultural_norms: AppLocalizations.of(context)!.social_environment,
+        AppLocalizations.of(context)!.colleagues: AppLocalizations.of(context)!.social_environment
+        ,
+        AppLocalizations.of(context)!.schools: AppLocalizations.of(context)!.organizations_and_institutions,
+        AppLocalizations.of(context)!.community_clubs: AppLocalizations.of(context)!.organizations_and_institutions,
+        AppLocalizations.of(context)!.organizations: AppLocalizations.of(context)!.organizations_and_institutions,
+        AppLocalizations.of(context)!.workplace: AppLocalizations.of(context)!.organizations_and_institutions,
+
+        AppLocalizations.of(context)!.built_environment: AppLocalizations.of(context)!.physical_environment,
+        AppLocalizations.of(context)!.active_opportunities: AppLocalizations.of(context)!.physical_environment,
+        AppLocalizations.of(context)!.parks_recreation: AppLocalizations.of(context)!.physical_environment,
+        AppLocalizations.of(context)!.natural_spaces: AppLocalizations.of(context)!.physical_environment,
+
+        AppLocalizations.of(context)!.transport_systems: AppLocalizations.of(context)!.regional_or_national_policy,
+        AppLocalizations.of(context)!.health_sector: AppLocalizations.of(context)!.regional_or_national_policy,
+        AppLocalizations.of(context)!.education_school: AppLocalizations.of(context)!.regional_or_national_policy,
+        AppLocalizations.of(context)!.organized_sport: AppLocalizations.of(context)!.regional_or_national_policy,
+
+        AppLocalizations.of(context)!.national: AppLocalizations.of(context)!.culture,
+        AppLocalizations.of(context)!.local: AppLocalizations.of(context)!.culture,
+      } : {
+        "A1": "1",
+        "B1": "1",
+        "C2": "2",
+      };
+
+      shuffledFactors = List.from(factors);
+      shuffledFactors.shuffle();
+    }
+
+    debugPrint(shuffledFactors.toString());
+
+    String currentFactor = shuffledFactors[currentFactorIndex];
 
     return OrientationBuilder(builder: (context, orientation) {
       if (orientation == Orientation.landscape) {
@@ -196,28 +230,32 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
             children: [
               // Star shape layout for variables
               Positioned(
-                top: screenHeight * 0.05,
-                child: buildVariableTarget(context, variables[0]), // Top
-              ),
-              Positioned(
-                bottom: screenHeight * 0.05,
-                left: screenWidth * 0.25,
-                child: buildVariableTarget(context, variables[3]), // Bottom
-              ),
-              Positioned(
+                top: screenHeight * 0.2,
                 left: screenWidth * 0.1,
-                top: screenHeight * 0.35,
-                child: buildVariableTarget(context, variables[1]), // Left
+                child: buildVariableTarget(context, variables[0]), // Top left
               ),
               Positioned(
-                top: screenHeight * 0.35,
+                top: screenHeight * 0.1,
+                child: buildVariableTarget(context, variables[1]), // Top
+              ),
+              Positioned(
                 right: screenWidth * 0.1,
-                child: buildVariableTarget(context, variables[2]), // Right
+                top: screenHeight * 0.2,
+                child: buildVariableTarget(context, variables[2]), // Top right
               ),
               Positioned(
-                bottom: screenHeight * 0.05,
-                right: screenWidth * 0.25,
-                child: buildVariableTarget(context, variables[4]), // Top-right
+                bottom: screenHeight * 0.2,
+                left: screenWidth * 0.1,
+                child: buildVariableTarget(context, variables[3]), // Bottom left
+              ),
+              Positioned(
+                bottom: screenHeight * 0.1,
+                child: buildVariableTarget(context, variables[5]), // Bottom
+              ),
+              Positioned(
+                bottom: screenHeight * 0.2,
+                right: screenHeight * 0.1,
+                child: buildVariableTarget(context, variables[4]), // Bottom right
               ),
 
               // Draggable factor in the center
@@ -228,34 +266,46 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
                   feedback: Material(
                     color: Colors.transparent,
                     child: Container(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Themes.primaryColor,
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black,
+                        ),
                       ),
                       child: Text(
                         currentFactor,
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        style: const TextStyle(fontSize: 18, color: Colors.white),
                       ),
                     ),
                   ),
                   childWhenDragging: Container(
-                    padding: EdgeInsets.all(20),
-                    color: Colors.grey,
-                    child: Text(
-                      currentFactor,
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
-                  child: Container(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: Colors.grey,
+                      border: Border.all(
+                        color: Colors.black,
+                      ),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Text(
                       currentFactor,
-                      style: TextStyle(fontSize: 18, color: Colors.white),
+                      style: const TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ),
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Themes.primaryColor,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: Colors.black,
+                      )
+                    ),
+                    child: Text(
+                      currentFactor,
+                      style: const TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),
                 ),
@@ -273,22 +323,34 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
 
   // Function to check if the factor is correctly dropped onto the variable
   void handleDrop(String factor, String variable) {
+    debugPrint("-> ${correctMappings[factor]} - $variable");
     if (correctMappings[factor] == variable) {
       // Correct mapping, move to the next factor
+      UIUtils.showFeedbackBar(context, true);
       setState(() {
         currentFactorIndex++;
         if (currentFactorIndex >= factors.length) {
-          currentFactorIndex = 0; // Restart after all factors are mapped
+          showDialog(context: context, builder: (context) {
+            return AlertDialog(
+              title: Text(AppLocalizations.of(context)!.well_done),
+              actions: [
+                TextButton(
+                  child: Text(AppLocalizations.of(context)!.proceed),
+                  onPressed: () {
+                    Navigator.pop(context);
+                    setState(() {
+                      stage = C4A3Stage.finish;
+                    });
+                  },
+                ),
+              ],
+            );
+          }, barrierDismissible: false);
         }
       });
     } else {
       // Incorrect mapping, show feedback
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Incorrect! Try again.'),
-          duration: Duration(seconds: 1),
-        ),
-      );
+      UIUtils.showFeedbackBar(context, false);
     }
   }
 
@@ -300,13 +362,14 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
       },
       builder: (context, candidateData, rejectedData) {
         return Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: Colors.greenAccent,
+            color: Themes.primaryColorDark,
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: Colors.black, width: 2),
           ),
           child: AutoSizeText(
+            style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
             textAlign: TextAlign.center,
             variable,
           ),
@@ -319,11 +382,42 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
     UIUtils.portraitOrientation();
     return InstructionsWidget(
       prefs,
-      AppLocalizations.of(context)!.c4a1_finish_message, //todo
+      AppLocalizations.of(context)!.c4a3_finish_message,
       AppLocalizations.of(context)!.finish,
       () {
         ActivityManager.completeActivity(activityID).then((value) {
+          //Find all badges related to this activity and award them:
+          for (var badgeID in Challenge.challenge4.badgeIDs) {
+            var badge = GameBadge.findBadge(badgeID);
+            badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+              if (!value) {
+                badge.earn(context);
+              }
+            },);
+          }
+
+          //Unlock next challenges:
+          List<Future> unlockFutures = [];
+          for (var challengeID in Challenge.challenge4.unlocksChallengesIDs) {
+            Challenge challenge = Challenge.findChallenge(challengeID)!;
+            challenge.isUnlocked().then((value) {
+              if (!value) {
+                unlockFutures.add(challenge.unlock());
+              }
+            },);
+          }
+
+          //Show toast and move back:
+          Future.wait(unlockFutures).then((value) {
+            if (unlockFutures.isNotEmpty) {
+              Fluttertoast.showToast(
+                  msg: AppLocalizations.of(context)!
+                      .challenges_unlocked.replaceAll(
+                      "%1", unlockFutures.length.toString()));
+            }
             Navigator.pop(context, "_");
+            Navigator.pop(context, "_");
+          },);
         },);
       }
     );

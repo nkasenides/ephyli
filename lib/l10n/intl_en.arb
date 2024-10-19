@@ -154,6 +154,7 @@
   "c4a3_intro_message": "Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category.",
   "c4a3_instruction_message": "Move the factors in the middle (red circle) influencing engagement in physical activity to the right variables (blue circles).",
   "c4a3_info_message": "Here is a quick reminder of how the model looks. You can click on the image to zoom in.",
+  "c4a3_finish_message": "That was hard. Well done! You have completed the fourth challenge. Press 'Finish' to get your badge!",
 
   "individual": "Individual",
   "social_environment": "Social environment",

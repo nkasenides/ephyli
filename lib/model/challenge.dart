@@ -108,7 +108,7 @@ class Challenge {
         "challenge4Badge"
       ],
       unlocksChallengesIDs: [
-        //TODO - Unlock challenge 5
+        "challenge5"
       ]
   );
 

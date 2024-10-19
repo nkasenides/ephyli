@@ -167,6 +167,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Playing with a ball"),
         "c4a2_term6":
             MessageLookupByLibrary.simpleMessage("Playing seek and hide"),
+        "c4a3_finish_message": MessageLookupByLibrary.simpleMessage(
+            "That was hard. Well done! You have completed the fourth challenge. Press \'Finish\' to get your badge!"),
         "c4a3_info_message": MessageLookupByLibrary.simpleMessage(
             "Here is a quick reminder of how the model looks. You can click on the image to zoom in."),
         "c4a3_instruction_message": MessageLookupByLibrary.simpleMessage(
