@@ -710,6 +710,16 @@ class S {
     );
   }
 
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(
@@ -1718,6 +1728,36 @@ class S {
     return Intl.message(
       'Well done! You have completed the fifth challenge. Press \'Finish\' to get your badge!',
       name: 'c5a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose element`
+  String get c5a1_instruction_title {
+    return Intl.message(
+      'Choose element',
+      name: 'c5a1_instruction_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click the element you would like to place in this area:`
+  String get c5a1_instruction_place {
+    return Intl.message(
+      'Click the element you would like to place in this area:',
+      name: 'c5a1_instruction_place',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Selected element:`
+  String get currentElement {
+    return Intl.message(
+      'Selected element:',
+      name: 'currentElement',
       desc: '',
       args: [],
     );

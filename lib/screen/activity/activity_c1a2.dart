@@ -271,12 +271,11 @@ class _ActivityC1a2State extends State<ActivityC1a2> {
                                       .challenges_unlocked.replaceAll(
                                       "%1", unlockFutures.length.toString()));
                             }
-                            Navigator.pop(context, "_");
-                            Navigator.pop(context, "_");
                           },);
-                          
                         },);
                       });
+                      Navigator.pop(context, "_");
+                      Navigator.pop(context, "_");
                     },
                   ),
                 ],

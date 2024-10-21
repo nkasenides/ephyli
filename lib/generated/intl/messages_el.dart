@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Είστε σίγουροι;"),
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Διαθέσιμες κάρτες"),
+        "back": MessageLookupByLibrary.simpleMessage("Πίσω"),
         "beliefs": MessageLookupByLibrary.simpleMessage("Πίστη"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
@@ -177,6 +178,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Μετακινήστε τους παράγοντες στη μέση (κόκκινος κύκλος) που επηρεάζουν την ενασχόληση με τη σωματική δραστηριότητα στις σωστές μεταβλητές (μπλε κύκλοι)."),
         "c4a3_intro_message": MessageLookupByLibrary.simpleMessage(
             "Το τρίτο μας σενάριο βασίζεται στο οικολογικό μοντέλο των καθοριστικών παραγόντων της σωματικής δραστηριότητας που προτείνουν οι Bauman et al. (2012). Στην επόμενη δραστηριότητα, πρέπει να αντιστοιχίσετε κάθε παράγοντα με τη σωστή κατηγορία."),
+        "c5a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Μπράβο! Ολοκληρώσατε την πέμπτη πρόκληση. Πατήστε \'Τέλος\' για να λάβετε το σήμα σας!"),
+        "c5a1_instruction_place": MessageLookupByLibrary.simpleMessage(
+            "Κάντε κλικ στο στοιχείο που θέλετε να τοποθετήσετε σε αυτήν την περιοχή:"),
+        "c5a1_instruction_title":
+            MessageLookupByLibrary.simpleMessage("Επιλογή στοιχείου"),
         "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στην Πρόκληση 5. Καλείστε να συμπληρώσετε το διάγραμμα που ακολουθεί συμπληρώνοντας τα στοιχεία που λείπουν. Είστε έτοιμοι;"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
@@ -206,6 +213,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cultural_norms":
             MessageLookupByLibrary.simpleMessage("Πολιτιστικοί κανόνες"),
         "culture": MessageLookupByLibrary.simpleMessage("Πολιτισμός"),
+        "currentElement":
+            MessageLookupByLibrary.simpleMessage("Επιλεγμένο στοιχείο:"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
         "dragging": MessageLookupByLibrary.simpleMessage("Σε μετακίνηση..."),

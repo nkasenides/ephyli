@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Available cards"),
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
         "beliefs": MessageLookupByLibrary.simpleMessage("Beliefs"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "This is your ePhyLi buddy. They can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
@@ -177,6 +178,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category."),
         "c5a1_finish_message": MessageLookupByLibrary.simpleMessage(
             "Well done! You have completed the fifth challenge. Press \'Finish\' to get your badge!"),
+        "c5a1_instruction_place": MessageLookupByLibrary.simpleMessage(
+            "Click the element you would like to place in this area:"),
+        "c5a1_instruction_title":
+            MessageLookupByLibrary.simpleMessage("Choose element"),
         "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
             "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -207,6 +212,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cultural_norms":
             MessageLookupByLibrary.simpleMessage("Cultural norms"),
         "culture": MessageLookupByLibrary.simpleMessage("Culture"),
+        "currentElement":
+            MessageLookupByLibrary.simpleMessage("Selected element:"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Customize your avatar"),
         "dragging": MessageLookupByLibrary.simpleMessage("Dragging..."),

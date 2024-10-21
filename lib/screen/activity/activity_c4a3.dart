@@ -419,10 +419,10 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
                       .challenges_unlocked.replaceAll(
                       "%1", unlockFutures.length.toString()));
             }
-            Navigator.pop(context, "_");
-            Navigator.pop(context, "_");
           },);
         },);
+        Navigator.pop(context, "_");
+        Navigator.pop(context, "_");
       }
     );
   }

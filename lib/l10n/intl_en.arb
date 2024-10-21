@@ -67,6 +67,7 @@
   "well_done": "Well done!",
   "try_again": "Try again",
   "check_solution": "Check solution",
+  "back": "Back",
 
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
@@ -192,6 +193,9 @@
   "local": "Local",
 
   "c5a1_intro_message": "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?",
-  "c5a1_finish_message": "Well done! You have completed the fifth challenge. Press 'Finish' to get your badge!"
+  "c5a1_finish_message": "Well done! You have completed the fifth challenge. Press 'Finish' to get your badge!",
+  "c5a1_instruction_title": "Choose element",
+  "c5a1_instruction_place": "Click the element you would like to place in this area:",
+  "currentElement": "Selected element:"
 
 }

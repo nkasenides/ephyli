@@ -197,11 +197,10 @@ class _ActivityC3A1State extends State<ActivityC3A1> {
                       .challenges_unlocked.replaceAll(
                       "%1", unlockFutures.length.toString()));
             }
-            Navigator.pop(context, "_");
-            Navigator.pop(context, "_");
           },);
-
         },);
+        Navigator.pop(context, "_");
+        Navigator.pop(context, "_");
       }
     );
   }
