@@ -218,6 +218,10 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
 
     debugPrint(shuffledFactors.toString());
 
+    if (currentFactorIndex > shuffledFactors.length - 1) {
+      return Container();
+    }
+
     String currentFactor = shuffledFactors[currentFactorIndex];
 
     return OrientationBuilder(builder: (context, orientation) {

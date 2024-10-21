@@ -170,13 +170,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "c4a2_term6": MessageLookupByLibrary.simpleMessage(
             "Αναπαραγωγή αναζήτησης και απόκρυψης"),
         "c4a3_finish_message": MessageLookupByLibrary.simpleMessage(
-            "Αυτό ηταν δύσκολο. Μπράβο! Ολοκληρώσατε την τέταρτη πρόκληση. Πατήστε \'Τέλος\' για να λάβετε το σήμα σας!"),
+            "Μπράβο! Ολοκληρώσατε την τέταρτη πρόκληση. Για περισσότερες πληροφορίες διαβάστε το επιστημονικό άρθρο στην ενότητα ειδήσεων. Πατήστε \'Τέλος\' για να αποκτήσετε το σήμα σας!"),
         "c4a3_info_message": MessageLookupByLibrary.simpleMessage(
             "Ακολουθεί μια γρήγορη υπενθύμιση για το πώς φαίνεται το μοντέλο. Μπορείτε να κάνετε κλικ στην εικόνα για μεγέθυνση."),
         "c4a3_instruction_message": MessageLookupByLibrary.simpleMessage(
             "Μετακινήστε τους παράγοντες στη μέση (κόκκινος κύκλος) που επηρεάζουν την ενασχόληση με τη σωματική δραστηριότητα στις σωστές μεταβλητές (μπλε κύκλοι)."),
         "c4a3_intro_message": MessageLookupByLibrary.simpleMessage(
             "Το τρίτο μας σενάριο βασίζεται στο οικολογικό μοντέλο των καθοριστικών παραγόντων της σωματικής δραστηριότητας που προτείνουν οι Bauman et al. (2012). Στην επόμενη δραστηριότητα, πρέπει να αντιστοιχίσετε κάθε παράγοντα με τη σωστή κατηγορία."),
+        "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ήρθατε στην Πρόκληση 5. Καλείστε να συμπληρώσετε το διάγραμμα που ακολουθεί συμπληρώνοντας τα στοιχεία που λείπουν. Είστε έτοιμοι;"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),

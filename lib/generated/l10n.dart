@@ -1702,6 +1702,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?`
+  String get c5a1_intro_message {
+    return Intl.message(
+      'Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?',
+      name: 'c5a1_intro_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have completed the fifth challenge. Press 'Finish' to get your badge!`
+  String get c5a1_finish_message {
+    return Intl.message(
+      'Well done! You have completed the fifth challenge. Press \'Finish\' to get your badge!',
+      name: 'c5a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

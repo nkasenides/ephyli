@@ -175,6 +175,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Move the factors in the middle (red circle) influencing engagement in physical activity to the right variables (blue circles)."),
         "c4a3_intro_message": MessageLookupByLibrary.simpleMessage(
             "Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category."),
+        "c5a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have completed the fifth challenge. Press \'Finish\' to get your badge!"),
+        "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),

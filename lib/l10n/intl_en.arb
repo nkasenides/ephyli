@@ -189,6 +189,9 @@
   "organized_sport": "Organised sport sector",
 
   "national": "National",
-  "local": "Local"
+  "local": "Local",
+
+  "c5a1_intro_message": "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?",
+  "c5a1_finish_message": "Well done! You have completed the fifth challenge. Press 'Finish' to get your badge!"
 
 }

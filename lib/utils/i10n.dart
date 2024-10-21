@@ -113,6 +113,24 @@ class I10N {
       "pl": "#MISSING#",
     },
 
+    "c5_badge_name": {
+      "en": "Challenge 5 Badge",
+      "el": "Σήμα Πρόκλησης 5",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c5_badge_description": {
+      "en": "This badge is awarded to players who have completed the fifth challenge.",
+      "el": "Αυτό το σήμα απονέμεται σε παίκτες που έχουν ολοκληρώσει την πέμπτη πρόκληση.",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
     //----- Challenges
 
     "c1_name": {
@@ -181,6 +199,24 @@ class I10N {
     "c4_description": {
       "en": "Challenge 4 description",
       "el": "Πρόκληση 4 περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c5_name": {
+      "en": "Challenge 5",
+      "el": "Πρόκληση 5",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c5_description": {
+      "en": "Challenge 5 description",
+      "el": "Πρόκληση 5 περιγραφή",
       "fr": "#MISSING#",
       "it": "#MISSING#",
       "lb": "#MISSING#",
@@ -327,6 +363,24 @@ class I10N {
     "c4a3_description": {
       "en": "Activity 3 Description",
       "el": "Δραστηριότητα 3 Περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c5a1_name": {
+      "en": "Activity 1",
+      "el": "Δραστηριότητα 1",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c5a1_description": {
+      "en": "Activity 1 Description",
+      "el": "Δραστηριότητα 1 Περιγραφή",
       "fr": "#MISSING#",
       "it": "#MISSING#",
       "lb": "#MISSING#",
