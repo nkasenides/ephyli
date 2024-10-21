@@ -29,7 +29,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               children: [
 
                 //Ephyli logo
-                Image.asset(AppImages.logo, width: MediaQuery.of(context).size.width * 2/3,),
+                Image.asset(
+                  AppImages.logo,
+                  width: MediaQuery.of(context).size.width * 2/3,
+                  height: 200,
+                ),
 
                 const Gap(30),
 

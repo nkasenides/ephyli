@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:ephyli/screen/buddy_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
@@ -65,11 +67,14 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
               const Gap(40),
 
               //Customizer:
-              FluttermojiCustomizer(
-                autosave: false,
-                theme: FluttermojiThemeData(
-                    labelTextStyle: Theme.of(context).textTheme.titleSmall,
-                    secondaryBgColor: Colors.white
+              SizedBox(
+                width: min(500, MediaQuery.of(context).size.width),
+                child: FluttermojiCustomizer(
+                  autosave: false,
+                  theme: FluttermojiThemeData(
+                      labelTextStyle: Theme.of(context).textTheme.titleSmall,
+                      secondaryBgColor: Colors.white
+                  ),
                 ),
               ),
 
