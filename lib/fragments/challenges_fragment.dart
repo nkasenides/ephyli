@@ -197,7 +197,6 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
   @override
   Widget build(BuildContext context) {
-    UIUtils.portraitOrientation();
     return FutureBuilder(
       future: future,
       builder: (context, snapshot) {
@@ -219,13 +218,26 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                   //TODO ---
 
                   Expanded(
-                    child: GridView.count(
-                      // scrollDirection: Axis.horizontal,
-                      crossAxisCount: 2,
-                      children: Challenge.challenges.map((e) {
-                        return ChallengeWidget(e, refresher: _refresh);
-                      }).toList(),
-                    ),
+                    child: OrientationBuilder(builder: (context, orientation) {
+                      if (orientation == Orientation.landscape) {
+                        return GridView.count(
+                          scrollDirection: Axis.horizontal,
+                          crossAxisCount: 2,
+                          children: Challenge.challenges.map((e) {
+                            return ChallengeWidget(e, refresher: _refresh);
+                          }).toList(),
+                        );
+                      }
+                      else {
+                        return GridView.count(
+                          // scrollDirection: Axis.horizontal,
+                          crossAxisCount: 2,
+                          children: Challenge.challenges.map((e) {
+                            return ChallengeWidget(e, refresher: _refresh);
+                          }).toList(),
+                        );
+                      }
+                    },),
                   ),
                 ],
               ));

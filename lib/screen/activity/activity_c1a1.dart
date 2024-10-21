@@ -80,6 +80,7 @@ class _ActivityC1a1State extends State<ActivityC1a1>
     // Start the animation after 2 seconds
     Future.delayed(const Duration(seconds: 2)).then(
       (value) {
+        //TODO - Controller causes error when directly moving back from activity.
         _controller.forward().then(
           (value) {
             setState(() {
@@ -95,6 +96,7 @@ class _ActivityC1a1State extends State<ActivityC1a1>
 
   @override
   void dispose() {
+    _controller.stop();
     _controller.dispose();
     super.dispose();
   }
@@ -632,12 +634,16 @@ class _ActivityC1a1State extends State<ActivityC1a1>
             ],
           ),
           const Gap(20),
-          WidgetZoom(
+          SizedBox(
+            height: 300,
+            child: WidgetZoom(
               heroAnimationTag: "extract-img",
               zoomWidget: Image.asset(
                 "assets/img/a1c1-extract.png",
                 width: MediaQuery.of(context).size.width,
-              )),
+              ),
+            ),
+          ),
           const Gap(5),
           Text(AppLocalizations.of(context)!.clickOnImageToZoom),
           const Gap(20),
