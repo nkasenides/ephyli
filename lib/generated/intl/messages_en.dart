@@ -271,6 +271,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Physical environment"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Please provide a value"),
+        "pleaseTurnDevice":
+            MessageLookupByLibrary.simpleMessage("Please turn your device."),
         "polish": MessageLookupByLibrary.simpleMessage("Polish"),
         "proceed": MessageLookupByLibrary.simpleMessage("Proceed"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),

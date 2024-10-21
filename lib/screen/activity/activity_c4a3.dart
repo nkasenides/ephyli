@@ -319,7 +319,7 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
         );
       }
       else {
-        return Center(child: Text("Please turn your device."));
+        return Center(child: Text(AppLocalizations.of(context)!.pleaseTurnDevice));
       }
     },);
 

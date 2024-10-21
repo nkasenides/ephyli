@@ -720,6 +720,16 @@ class S {
     );
   }
 
+  /// `Please turn your device.`
+  String get pleaseTurnDevice {
+    return Intl.message(
+      'Please turn your device.',
+      name: 'pleaseTurnDevice',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(

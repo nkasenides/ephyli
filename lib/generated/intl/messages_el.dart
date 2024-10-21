@@ -268,6 +268,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Φυσικό περιβάλλον"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Παρακαλώ δώστε μια τιμή"),
+        "pleaseTurnDevice": MessageLookupByLibrary.simpleMessage(
+            "Παρακαλώ γυρίστε τη συσκευή σας."),
         "proceed": MessageLookupByLibrary.simpleMessage("Συνέχεια"),
         "profile": MessageLookupByLibrary.simpleMessage("Προφίλ"),
         "profile_description": MessageLookupByLibrary.simpleMessage(
