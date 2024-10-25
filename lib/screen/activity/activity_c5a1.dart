@@ -106,87 +106,96 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
       areaToElementPlacements = {};
     }
 
-    return Center(
-      child: ImageMap(
-        image: Image.asset('assets/img/diagram_noanswers.jpg'),
-        regions: [
+    return Stack(
+      children: [
+        IconButton(
+          icon: const Icon(Icons.arrow_back),
+          color: Colors.black,
+          onPressed: () => Navigator.pop(context),
+        ),
+        Center(
+          child: ImageMap(
+            image: Image.asset('assets/img/diagram_noanswers.jpg'),
+            regions: [
 
-          //Element 1:
-          ImageMapRegion.fromRect(
-            rect: const Rect.fromLTRB(360, 360, 225, 328),
-            color: getColorFromCurrentPlacement("Element 1"),
-            title: "Element 1"
+              //Element 1:
+              ImageMapRegion.fromRect(
+                rect: const Rect.fromLTRB(360, 360, 225, 328),
+                color: getColorFromCurrentPlacement("Element 1"),
+                title: "Element 1"
+              ),
+
+              //Element 2:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(569, 192, 454, 158),
+                  color: getColorFromCurrentPlacement("Element 2"),
+                  title: "Element 2"
+              ),
+
+              //Element 3:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(745, 171, 625, 138),
+                  color: getColorFromCurrentPlacement("Element 3"),
+                  title: "Element 3"
+              ),
+
+              //Element 4:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(622, 323, 749, 349),
+                  color: getColorFromCurrentPlacement("Element 4"),
+                  title: "Element 4"
+              ),
+
+              //Element 5:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(863,126,988,183),
+                  color: getColorFromCurrentPlacement("Element 5"),
+                  title: "Element 5"
+              ),
+
+              //Element 6:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(844,232,931,278),
+                  color: getColorFromCurrentPlacement("Element 6"),
+                  title: "Element 6"
+              ),
+
+              //Element 7:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(849,323,970,368),
+                  color: getColorFromCurrentPlacement("Element 7"),
+                  title: "Element 7"
+              ),
+
+              //Element 8:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(857,410,973,505),
+                  color: getColorFromCurrentPlacement("Element 8"),
+                  title: "Element 8"
+              ),
+
+              //Element 9:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(665,387,784,406),
+                  color: getColorFromCurrentPlacement("Element 9"),
+                  title: "Element 9"
+              ),
+
+              //Element 10:
+              ImageMapRegion.fromRect(
+                  rect: const Rect.fromLTRB(278,497,414,540),
+                  color: getColorFromCurrentPlacement("Element 10"),
+                  title: "Element 10"
+              ),
+
+
+            ],
+            onTap: (ImageMapRegion region) {
+              _showDialog(context, region.title!);
+            },
           ),
-
-          //Element 2:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(569, 192, 454, 158),
-              color: getColorFromCurrentPlacement("Element 2"),
-              title: "Element 2"
-          ),
-
-          //Element 3:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(745, 171, 625, 138),
-              color: getColorFromCurrentPlacement("Element 3"),
-              title: "Element 3"
-          ),
-
-          //Element 4:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(622, 323, 749, 349),
-              color: getColorFromCurrentPlacement("Element 4"),
-              title: "Element 4"
-          ),
-
-          //Element 5:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(863,126,988,183),
-              color: getColorFromCurrentPlacement("Element 5"),
-              title: "Element 5"
-          ),
-
-          //Element 6:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(844,232,931,278),
-              color: getColorFromCurrentPlacement("Element 6"),
-              title: "Element 6"
-          ),
-
-          //Element 7:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(849,323,970,368),
-              color: getColorFromCurrentPlacement("Element 7"),
-              title: "Element 7"
-          ),
-
-          //Element 8:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(857,410,973,505),
-              color: getColorFromCurrentPlacement("Element 8"),
-              title: "Element 8"
-          ),
-
-          //Element 9:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(665,387,784,406),
-              color: getColorFromCurrentPlacement("Element 9"),
-              title: "Element 9"
-          ),
-
-          //Element 10:
-          ImageMapRegion.fromRect(
-              rect: const Rect.fromLTRB(278,497,414,540),
-              color: getColorFromCurrentPlacement("Element 10"),
-              title: "Element 10"
-          ),
-
-
-        ],
-        onTap: (ImageMapRegion region) {
-          _showDialog(context, region.title!);
-        },
-      ),
+        ),
+      ],
     );
 
   }

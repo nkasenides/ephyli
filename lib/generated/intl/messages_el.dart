@@ -186,6 +186,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Επιλογή στοιχείου"),
         "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στην Πρόκληση 5. Καλείστε να συμπληρώσετε το διάγραμμα που ακολουθεί συμπληρώνοντας τα στοιχεία που λείπουν. Είστε έτοιμοι;"),
+        "c6a1_congrats": MessageLookupByLibrary.simpleMessage(
+            "Συγχαρητήρια! Όλες οι έννοιες έχουν αντιστοιχιστεί σωστά με τις σχετικές περιγραφές. Πατήστε \'Τέλος\' για να λάβετε το σήμα σας!"),
+        "c6a1_welcome": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ορίσατε στην έκτη πρόκληση. Αντιστοιχίστε τις έννοιες που παρουσιάζονται στον πίνακα με τις κατάλληλες περιγραφές. Προσοχή! Εάν κάνετε πέντε λάθη, η πρόκληση θα ξεκινήσει ξανά από την αρχή. Είστε έτοιμοι;"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),

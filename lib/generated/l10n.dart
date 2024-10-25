@@ -1772,6 +1772,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome to challenge 6. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
+  String get c6a1_welcome {
+    return Intl.message(
+      'Welcome to challenge 6. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?',
+      name: 'c6a1_welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! All concepts are correctly matched to the related descriptions. Click 'Finish' to earn a badge.`
+  String get c6a1_congrats {
+    return Intl.message(
+      'Well done! All concepts are correctly matched to the related descriptions. Click \'Finish\' to earn a badge.',
+      name: 'c6a1_congrats',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -184,6 +184,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Choose element"),
         "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
             "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?"),
+        "c6a1_congrats": MessageLookupByLibrary.simpleMessage(
+            "Well done! All concepts are correctly matched to the related descriptions. Click \'Finish\' to earn a badge."),
+        "c6a1_welcome": MessageLookupByLibrary.simpleMessage(
+            "Welcome to challenge 6. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),

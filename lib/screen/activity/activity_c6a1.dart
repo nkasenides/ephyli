@@ -11,10 +11,12 @@ import 'package:ephyli/widgets/text_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttermoji/fluttermojiCircleAvatar.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:widget_zoom/widget_zoom.dart';
 import '../../model/activity.dart';
+import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
 import '../../model/match_game/matching_pair.dart';
 import '../../model/match_game/matching_pairs.dart';
@@ -25,25 +27,26 @@ import '../../widgets/buddy_avatar_widget.dart';
 import '../../widgets/chat_bubble.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class ActivityC1a1 extends StatefulWidget {
-  const ActivityC1a1({super.key});
+import '../../widgets/instructions_widget.dart';
+
+class ActivityC6A1 extends StatefulWidget {
+  const ActivityC6A1({super.key});
 
   @override
-  State<ActivityC1a1> createState() => _ActivityC1a1State();
+  State<ActivityC6A1> createState() => _ActivityC6A1State();
 }
 
-enum C1A1Stage {
+enum C6A1Stage {
   intro,
   activity,
-  congrats,
-  reading,
+  finish
 }
 
-class _ActivityC1a1State extends State<ActivityC1a1>
+class _ActivityC6A1State extends State<ActivityC6A1>
     with SingleTickerProviderStateMixin {
-  final String activityID = "c1a1";
+  final String activityID = "c6a1";
 
-  C1A1Stage stage = C1A1Stage.intro;
+  C6A1Stage stage = C6A1Stage.intro;
 
   List<String> _termsNotShown = []; //List of IDs
   List<String> _termsCompleted = []; //List of IDs
@@ -216,7 +219,7 @@ class _ActivityC1a1State extends State<ActivityC1a1>
   }
 
   Future<void> loadData() async {
-    // final String filename = "assets/activity_data/activity1/c1a1_terms.json";
+    // final String filename = "assets/activity_data/activity1/c6a1_terms.json";
     const String filename = "assets/activity_data/activity1/test_terms.json";
     await Future.wait([
       Term.readTermsFromJSONFile(filename).then(
@@ -237,128 +240,62 @@ class _ActivityC1a1State extends State<ActivityC1a1>
 
   //Intro
   Widget instructionsView() {
-    //TODO - Replace with InstructionsWidget
-    return Padding(
-      padding: Themes.standardPadding,
-      child: Column(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              PersonalizedAvatar(
-                buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
-                backgroundRadius: 25,
-                avatarSize: 35,
-              ),
-              ChatBubble(
-                margin: const EdgeInsets.only(left: 50),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText(
-                      AppLocalizations.of(context)!.c1a1_welcome,
-                      textStyle: const TextStyle(
-                        color: Colors.white,
-                      ),
-                      speed: const Duration(milliseconds: 50),
-                    ),
-                  ],
-                  displayFullTextOnTap: true,
-                  isRepeatingAnimation: false,
-                  onFinished: () {
-                    setState(() {
-                      step1MessageShown = true;
-                    });
-                  },
-                  onTap: () {
-                    setState(() {
-                      step1MessageShown = true;
-                    });
-                  },
-                ),
-              )
-            ],
-          ),
-          step1MessageShown
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    ElevatedButton(
-                      child: Text(AppLocalizations.of(context)!.lets_start),
-                      onPressed: () {
-                        setState(() {
-                          stage = C1A1Stage.activity;
-                        });
-                      },
-                    ),
-                  ],
-                )
-              : Container(),
-        ],
-      ),
+    return InstructionsWidget(
+      prefs,
+      AppLocalizations.of(context)!.c6a1_welcome,
+      AppLocalizations.of(context)!.lets_start,
+      () {
+        setState(() {
+          stage = C6A1Stage.activity;
+        });
+      }
     );
   }
 
   //Step finished view
-  Widget stepFinishedView() {
-    return Padding(
-      padding: Themes.standardPadding,
-      child: Column(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              PersonalizedAvatar(
-                buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
-                backgroundRadius: 25,
-                avatarSize: 35,
-              ),
-              ChatBubble(
-                margin: const EdgeInsets.only(left: 50),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText(
-                      AppLocalizations.of(context)!
-                          .c1a1_congrats
-                          .replaceAll("%1", score.toString()),
-                      textStyle: const TextStyle(
-                        color: Colors.white,
-                      ),
-                      speed: const Duration(milliseconds: 0),
-                    ),
-                  ],
-                  displayFullTextOnTap: true,
-                  isRepeatingAnimation: false,
-                  onFinished: () {
-                    setState(() {
-                      step1MessageShown = true;
-                    });
-                  },
-                  onTap: () {
-                    setState(() {
-                      step1MessageShown = true;
-                    });
-                  },
-                ),
-              )
-            ],
-          ),
-          step1MessageShown
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    ElevatedButton(
-                      child: Text(AppLocalizations.of(context)!.next),
-                      onPressed: () {
-                        setState(() {
-                          stage = C1A1Stage.reading;
-                        });
-                      },
-                    ),
-                  ],
-                )
-              : Container(),
-        ],
-      ),
+  Widget finishView() {
+    return InstructionsWidget(
+        prefs,
+        AppLocalizations.of(context)!.c6a1_congrats,
+        AppLocalizations.of(context)!.finish,
+            () {
+          setState(() {
+            ActivityManager.completeActivity(activityID).then((value) {
+              //Find all badges related to this activity and award them:
+              for (var badgeID in Challenge.challenge6.badgeIDs) {
+                var badge = GameBadge.findBadge(badgeID);
+                badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                  if (!value) {
+                    badge.earn(context);
+                  }
+                },);
+              }
+
+              //Unlock next challenges:
+              List<Future> unlockFutures = [];
+              for (var challengeID in Challenge.challenge6.unlocksChallengesIDs) {
+                Challenge challenge = Challenge.findChallenge(challengeID)!;
+                challenge.isUnlocked().then((value) {
+                  if (!value) {
+                    unlockFutures.add(challenge.unlock());
+                  }
+                },);
+              }
+
+              //Show toast and move back:
+              Future.wait(unlockFutures).then((value) {
+                if (unlockFutures.isNotEmpty) {
+                  Fluttertoast.showToast(
+                      msg: AppLocalizations.of(context)!
+                          .challenges_unlocked.replaceAll(
+                          "%1", unlockFutures.length.toString()));
+                }
+              },);
+            },);
+            Navigator.pop(context, "_");
+            Navigator.pop(context, "_");
+          });
+        }
     );
   }
 
@@ -380,22 +317,6 @@ class _ActivityC1a1State extends State<ActivityC1a1>
           padding: Themes.standardPadding,
           child: Column(
             children: [
-              // const Gap(20),
-              // Container(
-              //   decoration: BoxDecoration(
-              //     color: Themes.secondaryColor,
-              //     borderRadius: const BorderRadius.all(Radius.circular(10)),
-              //     border: Border.all(
-              //       color: Colors.black,
-              //     ),
-              //   ),
-              //   child: Padding(
-              //     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              //     child: Text(
-              //       'Score: $score',
-              //     ),
-              //   ),
-              // ),
 
               Expanded(
                 child: Row(
@@ -494,7 +415,7 @@ class _ActivityC1a1State extends State<ActivityC1a1>
 
                                   if (_termsNotShown.isEmpty) {
                                     setState(() {
-                                      stage = C1A1Stage.congrats;
+                                      stage = C6A1Stage.finish;
                                     });
                                   } else {
                                     _findMatchingPairs();
@@ -592,85 +513,6 @@ class _ActivityC1a1State extends State<ActivityC1a1>
     );
   }
 
-  Widget getReadingView() {
-    return Padding(
-      padding: Themes.standardPadding,
-      child: Column(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              PersonalizedAvatar(
-                buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
-                backgroundRadius: 25,
-                avatarSize: 35,
-              ),
-              ChatBubble(
-                margin: const EdgeInsets.only(left: 50),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText(
-                      AppLocalizations.of(context)!.c1a1_reading_instruction,
-                      textStyle: const TextStyle(
-                        color: Colors.white,
-                      ),
-                      speed: const Duration(milliseconds: 0),
-                    ),
-                  ],
-                  displayFullTextOnTap: true,
-                  isRepeatingAnimation: false,
-                  onFinished: () {
-                    setState(() {
-                      step1MessageShown = true;
-                    });
-                  },
-                  onTap: () {
-                    setState(() {
-                      step1MessageShown = true;
-                    });
-                  },
-                ),
-              )
-            ],
-          ),
-          const Gap(20),
-          SizedBox(
-            height: 300,
-            child: WidgetZoom(
-              heroAnimationTag: "extract-img",
-              zoomWidget: Image.asset(
-                "assets/img/a1c1-extract.png",
-                width: MediaQuery.of(context).size.width,
-              ),
-            ),
-          ),
-          const Gap(5),
-          Text(AppLocalizations.of(context)!.clickOnImageToZoom),
-          const Gap(20),
-          step1MessageShown
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    ElevatedButton(
-                      child: Text(AppLocalizations.of(context)!.next),
-                      onPressed: () {
-                        setState(() {
-                          ActivityManager.completeActivity(activityID).then(
-                            (value) {
-                              Navigator.pop(context, "_");
-                            },
-                          );
-                        });
-                      },
-                    ),
-                  ],
-                )
-              : Container(),
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -718,7 +560,7 @@ class _ActivityC1a1State extends State<ActivityC1a1>
           style: const TextStyle(color: Colors.white),
         ),
         //TODO - Get name out of resource
-        actions: stage == C1A1Stage.activity
+        actions: stage == C6A1Stage.activity
             ? [
                 OutlinedButton(
                   onPressed: () {
@@ -796,14 +638,12 @@ class _ActivityC1a1State extends State<ActivityC1a1>
 
   Widget getChildView() {
     switch (stage) {
-      case C1A1Stage.intro:
+      case C6A1Stage.intro:
         return instructionsView();
-      case C1A1Stage.activity:
+      case C6A1Stage.activity:
         return puzzleView();
-      case C1A1Stage.congrats:
-        return stepFinishedView();
-      case C1A1Stage.reading:
-        return getReadingView();
+      case C6A1Stage.finish:
+        return finishView();
     }
   }
 

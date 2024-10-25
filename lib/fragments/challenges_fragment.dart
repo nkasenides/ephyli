@@ -248,6 +248,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
   }
 
   _refresh() {
+    future = getData();
     setState(() {});
   }
 
