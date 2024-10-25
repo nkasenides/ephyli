@@ -14,6 +14,8 @@ import '../widgets/badge_widget.dart';
 
 class UIUtils {
 
+  static bool snackbarIsShowing = false;
+
   static AlertDialog createBadgeDialog(GameBadge badge, BuildContext context) {
 
     final ConfettiController confettiController = ConfettiController(
@@ -139,14 +141,24 @@ class UIUtils {
   }
 
   static showFeedbackBar(BuildContext context, bool rightAnswer) {
-    ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          duration: const Duration(seconds: 1),
-          padding: Themes.standardPadding,
-          backgroundColor: rightAnswer ? Colors.green : Colors.red,
-          content: Icon(rightAnswer ? Icons.check : Icons.close, color: Colors.white,),
-        )
-    );
+    if (!snackbarIsShowing) {
+      snackbarIsShowing = true;
+      ScaffoldMessenger
+          .of(context)
+          .showSnackBar(
+          SnackBar(
+            duration: const Duration(seconds: 1),
+            padding: Themes.standardPadding,
+            backgroundColor: rightAnswer ? Colors.green : Colors.red,
+            content: Icon(
+              rightAnswer ? Icons.check : Icons.close, color: Colors.white,),
+          )
+      )
+          .closed
+          .then((value) {
+        snackbarIsShowing = false;
+      },);
+    }
   }
 
 }

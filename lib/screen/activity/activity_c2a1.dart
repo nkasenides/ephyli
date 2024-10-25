@@ -68,7 +68,6 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
 
   @override
   void dispose() {
-    UIUtils.portraitOrientation();
     super.dispose();
   }
 
@@ -235,7 +234,6 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
 
                               //Finish the game if no cards are left:
                               if (shuffledEvents.isEmpty) {
-                                UIUtils.portraitOrientation();
                                 UIUtils.showFeedbackBar(context, true);
                                 ActivityManager.completeActivity(activityID).then((value) {
                                   setState(() {

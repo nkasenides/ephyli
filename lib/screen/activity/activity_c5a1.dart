@@ -66,8 +66,6 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
 
   @override
   void dispose() {
-    UIUtils.disableFullscreen();
-    UIUtils.portraitOrientation();
     super.dispose();
   }
 
@@ -300,7 +298,6 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
   }
 
   Widget activityFinishView() {
-    UIUtils.portraitOrientation();
     return InstructionsWidget(
       prefs,
       AppLocalizations.of(context)!.c5a1_finish_message,
@@ -346,7 +343,6 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
 
   @override
   Widget build(BuildContext context) {
-    UIUtils.enableFullScreen();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: stage != C5A1Stage.activity ? AppBar(title: Text(I10N.getI10nString("c5a1_name")!)) : null,

@@ -110,6 +110,14 @@ class Activity {
         unlocksActivitiesIDs: []
     ),
 
+    "c7a1": Activity(
+        id: "c7a1",
+        challengeID: Challenge.challenge7.id,
+        nameRes: "c7a1_name",
+        descriptionRes: "c7a1_description",
+        unlocksActivitiesIDs: []
+    ),
+
   };
 
 

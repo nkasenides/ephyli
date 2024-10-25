@@ -71,8 +71,6 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
 
   @override
   void dispose() {
-    UIUtils.disableFullscreen();
-    UIUtils.portraitOrientation();
     super.dispose();
   }
 
@@ -383,7 +381,6 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
   }
 
   Widget activityFinishView() {
-    UIUtils.portraitOrientation();
     return InstructionsWidget(
       prefs,
       AppLocalizations.of(context)!.c4a3_finish_message,
@@ -429,7 +426,6 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
 
   @override
   Widget build(BuildContext context) {
-    UIUtils.enableFullScreen();
     return Scaffold(
       appBar: AppBar(title: Text(I10N.getI10nString("c4a3_name")!)),
       body: FutureBuilder(

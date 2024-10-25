@@ -77,7 +77,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
             ChallengeImage(widget.challenge),
 
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 5),
               child: Column(
                 children: [
                   Text(I10N.getI10nString(widget.challenge.nameRes)!, style: Theme.of(context).textTheme.titleMedium,),
@@ -87,6 +87,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                     style: TextStyle(color: Colors.grey.shade700),
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ),

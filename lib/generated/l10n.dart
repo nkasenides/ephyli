@@ -720,10 +720,10 @@ class S {
     );
   }
 
-  /// `Please turn your device.`
+  /// `Please rotate your device.`
   String get pleaseTurnDevice {
     return Intl.message(
-      'Please turn your device.',
+      'Please rotate your device.',
       name: 'pleaseTurnDevice',
       desc: '',
       args: [],
@@ -1788,6 +1788,186 @@ class S {
     return Intl.message(
       'Well done! All concepts are correctly matched to the related descriptions. Click \'Finish\' to earn a badge.',
       name: 'c6a1_congrats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to challenge 7. You will be shown scenarios representing the progression levels of a student's sports practice in relation to the four physical literacy dimensions (physical, affective, social, and cognitive). For each scenario, you need to identify the correct progression level by dragging the scenario to the correct level. Ready?`
+  String get c7a1_welcome {
+    return Intl.message(
+      'Welcome to challenge 7. You will be shown scenarios representing the progression levels of a student\'s sports practice in relation to the four physical literacy dimensions (physical, affective, social, and cognitive). For each scenario, you need to identify the correct progression level by dragging the scenario to the correct level. Ready?',
+      name: 'c7a1_welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Identify the correct level for this scenario:`
+  String get c7a1_instruction {
+    return Intl.message(
+      'Identify the correct level for this scenario:',
+      name: 'c7a1_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have completed the seventh challenge. Press 'Finish' to get your badge!`
+  String get c7a1_finish_message {
+    return Intl.message(
+      'Well done! You have completed the seventh challenge. Press \'Finish\' to get your badge!',
+      name: 'c7a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student has very limited motor skills and has difficulty approaching the basic movements of volleyball (physical dimension).`
+  String get limited_motor_skills {
+    return Intl.message(
+      'The student has very limited motor skills and has difficulty approaching the basic movements of volleyball (physical dimension).',
+      name: 'limited_motor_skills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student does not know the rules of the basketball game and does not know the health benefits related to sports practice (cognitive dimension).`
+  String get lack_of_rules_knowledge {
+    return Intl.message(
+      'The student does not know the rules of the basketball game and does not know the health benefits related to sports practice (cognitive dimension).',
+      name: 'lack_of_rules_knowledge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student does not want to participate in PE lessons at school because he/she is not confident or motivated enough (affective dimension).`
+  String get lack_of_motivation {
+    return Intl.message(
+      'The student does not want to participate in PE lessons at school because he/she is not confident or motivated enough (affective dimension).',
+      name: 'lack_of_motivation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student does not have relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension).`
+  String get lack_of_social_support {
+    return Intl.message(
+      'The student does not have relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension).',
+      name: 'lack_of_social_support',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student is developing basic motor skills in volleyball and has a greater awareness of his/her own physical abilities (physical dimension).`
+  String get developing_motor_skills {
+    return Intl.message(
+      'The student is developing basic motor skills in volleyball and has a greater awareness of his/her own physical abilities (physical dimension).',
+      name: 'developing_motor_skills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student can describe the rules of the basketball game and understand the health benefits related to sports practice (cognitive dimension).`
+  String get basic_rules_knowledge {
+    return Intl.message(
+      'The student can describe the rules of the basketball game and understand the health benefits related to sports practice (cognitive dimension).',
+      name: 'basic_rules_knowledge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student wants to participate in physical education classes at school and is aware of the possibility of improvement (affective dimension).`
+  String get wants_to_participate {
+    return Intl.message(
+      'The student wants to participate in physical education classes at school and is aware of the possibility of improvement (affective dimension).',
+      name: 'wants_to_participate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student is building positive relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension).`
+  String get positive_social_support {
+    return Intl.message(
+      'The student is building positive relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension).',
+      name: 'positive_social_support',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student knows how to adapt to the game situations of volleyball and is physically capable of dealing with them (physical dimension).`
+  String get adapts_to_game {
+    return Intl.message(
+      'The student knows how to adapt to the game situations of volleyball and is physically capable of dealing with them (physical dimension).',
+      name: 'adapts_to_game',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student can analyse and adapt strategies to the game situation of basketball and understand the health benefits related to sports practice (cognitive dimension).`
+  String get strategic_analysis {
+    return Intl.message(
+      'The student can analyse and adapt strategies to the game situation of basketball and understand the health benefits related to sports practice (cognitive dimension).',
+      name: 'strategic_analysis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student is enthusiastic about participating in physical education classes at school and is aware of his/her level of involvement (affective dimension).`
+  String get enthusiastic_participation {
+    return Intl.message(
+      'The student is enthusiastic about participating in physical education classes at school and is aware of his/her level of involvement (affective dimension).',
+      name: 'enthusiastic_participation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The student demonstrates independence and positive interpersonal skills that contribute to increased participation in extracurricular sporting activities (social dimension).`
+  String get independent_and_socially_skilled {
+    return Intl.message(
+      'The student demonstrates independence and positive interpersonal skills that contribute to increased participation in extracurricular sporting activities (social dimension).',
+      name: 'independent_and_socially_skilled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Preliminary level`
+  String get preliminary_level {
+    return Intl.message(
+      'Preliminary level',
+      name: 'preliminary_level',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Developer level`
+  String get developer_level {
+    return Intl.message(
+      'Developer level',
+      name: 'developer_level',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Advanced level`
+  String get advanced_level {
+    return Intl.message(
+      'Advanced level',
+      name: 'advanced_level',
       desc: '',
       args: [],
     );

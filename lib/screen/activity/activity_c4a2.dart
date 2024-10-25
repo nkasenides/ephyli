@@ -84,7 +84,6 @@ class _ActivityC4A2State extends State<ActivityC4A2> {
 
   @override
   void dispose() {
-    UIUtils.disableFullscreen();
     super.dispose();
   }
 
@@ -241,7 +240,6 @@ class _ActivityC4A2State extends State<ActivityC4A2> {
 
   @override
   Widget build(BuildContext context) {
-    UIUtils.enableFullScreen();
     return Scaffold(
       appBar: AppBar(title: Text(I10N.getI10nString("c4a2_name")!)),
       body: FutureBuilder(

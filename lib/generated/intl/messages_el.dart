@@ -30,12 +30,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "activities": MessageLookupByLibrary.simpleMessage("Δραστηριότητες"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "Αυτή η δραστηριότητα είναι κλειδωμένη. Ολοκληρώστε τις προηγούμενες δραστηριότητες για να την ξεκλειδώσετε."),
+        "adapts_to_game": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής ξέρει πώς να προσαρμόζεται στις αγωνιστικές καταστάσεις του βόλεϊ και είναι σωματικά ικανός να τις αντιμετωπίσει (σωματική διάσταση)."),
+        "advanced_level":
+            MessageLookupByLibrary.simpleMessage("Προχωρημένο επίπεδο"),
         "alreadyPlayedActivity": MessageLookupByLibrary.simpleMessage(
             "Έχετε ήδη λάβει μέρος σε αυτή την δραστηριότητα. Θα θέλατε να την επαναλάβετε;"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Είστε σίγουροι;"),
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Διαθέσιμες κάρτες"),
         "back": MessageLookupByLibrary.simpleMessage("Πίσω"),
+        "basic_rules_knowledge": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής μπορεί να περιγράψει τους κανόνες του αγώνα μπάσκετ και να κατανοήσει τα οφέλη για την υγεία που σχετίζονται με την αθλητική πρακτική (γνωστική διάσταση)."),
         "beliefs": MessageLookupByLibrary.simpleMessage("Πίστη"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "Αυτός είναι ο φίλος σας στο ePhyLi. Μπορεί να σας βοηθήσει με πολύτιμες πληροφορίες σχετικά με το παιχνίδι και να σας καθοδηγήσει να ολοκληρώσετε τις προκλήσεις μας. Επιλέξτε τον φίλο σας κάνοντας κλικ στα βέλη παρακάτω και, στη συνέχεια, κάντε κλικ στην επιλογή \'Συνέχεια\'"),
@@ -190,6 +196,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Συγχαρητήρια! Όλες οι έννοιες έχουν αντιστοιχιστεί σωστά με τις σχετικές περιγραφές. Πατήστε \'Τέλος\' για να λάβετε το σήμα σας!"),
         "c6a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Καλώς ορίσατε στην έκτη πρόκληση. Αντιστοιχίστε τις έννοιες που παρουσιάζονται στον πίνακα με τις κατάλληλες περιγραφές. Προσοχή! Εάν κάνετε πέντε λάθη, η πρόκληση θα ξεκινήσει ξανά από την αρχή. Είστε έτοιμοι;"),
+        "c7a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Μπράβο! Ολοκληρώσατε την έβδομη πρόκληση. Πατήστε \'Τέλος\' για να λάβετε το σήμα σας!"),
+        "c7a1_instruction": MessageLookupByLibrary.simpleMessage(
+            "Προσδιορίστε το σωστό επίπεδο για αυτό το σενάριο:"),
+        "c7a1_welcome": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ήρθατε στην πρόκληση 7. Θα σας δοθούν σενάρια που αντιπροσωπεύουν τα επίπεδα προόδου της αθλητικής πρακτικής ενός μαθητή σε σχέση με τις τέσσερις διαστάσεις σωματικού γραμματισμού (σωματική, συναισθηματική, κοινωνική και γνωστική). Για κάθε σενάριο, πρέπει να βρείτε το σωστό επίπεδο προόδου σύροντας το σενάριο στο σωστό επίπεδο. Έτοιμοι;"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),
@@ -221,6 +233,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Επιλεγμένο στοιχείο:"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
+        "developer_level":
+            MessageLookupByLibrary.simpleMessage("Επίπεδο προγραμματιστή"),
+        "developing_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής αναπτύσσει βασικές κινητικές δεξιότητες στο βόλεϊ και έχει μεγαλύτερη επίγνωση των δικών του φυσικών ικανοτήτων (σωματική διάσταση)."),
         "dragging": MessageLookupByLibrary.simpleMessage("Σε μετακίνηση..."),
         "drop_here": MessageLookupByLibrary.simpleMessage("Ρίξτε εδώ"),
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi φίλος"),
@@ -228,6 +244,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ο ePhyLi φίλος σας"),
         "education_school": MessageLookupByLibrary.simpleMessage(
             "Εκπαίδευση και σχολικός τομέας"),
+        "enthusiastic_participation": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής είναι ενθουσιασμένος με τη συμμετοχή στα μαθήματα φυσικής αγωγής στο σχολείο και έχει επίγνωση του επιπέδου εμπλοκής του/της (συναισθηματική διάσταση)."),
         "error":
             MessageLookupByLibrary.simpleMessage("Έχει παρουσιαστεί σφάλμα."),
         "exploreChallenges": MessageLookupByLibrary.simpleMessage(
@@ -240,10 +258,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "glossary_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε να βρείτε ορολογία που σχετίζεται με τον Φυσικό Γραμματισμό στο Γλωσσάρι."),
         "health_sector": MessageLookupByLibrary.simpleMessage("Τομέας υγείας"),
+        "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής επιδεικνύει ανεξαρτησία και θετικές διαπροσωπικές δεξιότητες που συμβάλλουν στην αυξημένη συμμετοχή σε εξωσχολικές αθλητικές δραστηριότητες (κοινωνική διάσταση)."),
         "individual": MessageLookupByLibrary.simpleMessage("Ατομικό"),
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Μη έγκυρο όνομα"),
+        "lack_of_motivation": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής δεν θέλει να συμμετάσχει στα μαθήματα ΑΜ στο σχολείο επειδή δεν έχει αυτοπεποίθηση ή δεν έχει αρκετά κίνητρα (συναισθηματική διάσταση)."),
+        "lack_of_rules_knowledge": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής δεν γνωρίζει τους κανόνες του αγώνα μπάσκετ και δεν γνωρίζει τα οφέλη για την υγεία που σχετίζονται με την αθλητική πρακτική (γνωστική διάσταση)."),
+        "lack_of_social_support": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής δεν έχει σχέσεις που τον διεγείρουν και τον υποστηρίζουν στη συμμετοχή σε εξωσχολικές αθλητικές δραστηριότητες (κοινωνική διάσταση)."),
         "lets_start": MessageLookupByLibrary.simpleMessage("Πάμε!"),
+        "limited_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής έχει πολύ περιορισμένες κινητικές δεξιότητες και δυσκολεύεται να προσεγγίσει τις βασικές κινήσεις του βόλεϊ (σωματική διάσταση)."),
         "local": MessageLookupByLibrary.simpleMessage("Τοπικός"),
         "motivation": MessageLookupByLibrary.simpleMessage("Κίνητρο"),
         "national": MessageLookupByLibrary.simpleMessage("Εθνικός"),
@@ -274,6 +302,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Παρακαλώ δώστε μια τιμή"),
         "pleaseTurnDevice": MessageLookupByLibrary.simpleMessage(
             "Παρακαλώ γυρίστε τη συσκευή σας."),
+        "positive_social_support": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής χτίζει θετικές σχέσεις που τον διεγείρουν και τον υποστηρίζουν στη συμμετοχή σε εξωσχολικές αθλητικές δραστηριότητες (κοινωνική διάσταση)."),
+        "preliminary_level":
+            MessageLookupByLibrary.simpleMessage("Προκαταρκτικό επίπεδο"),
         "proceed": MessageLookupByLibrary.simpleMessage("Συνέχεια"),
         "profile": MessageLookupByLibrary.simpleMessage("Προφίλ"),
         "profile_description": MessageLookupByLibrary.simpleMessage(
@@ -293,6 +325,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "social_environment":
             MessageLookupByLibrary.simpleMessage("Κοινωνικό περιβάλλον"),
         "start": MessageLookupByLibrary.simpleMessage("Ξεκινηστε"),
+        "strategic_analysis": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής μπορεί να αναλύσει και να προσαρμόσει στρατηγικές στην αγωνιστική κατάσταση του μπάσκετ και να κατανοήσει τα οφέλη για την υγεία που σχετίζονται με την αθλητική πρακτική (γνωστική διάσταση)."),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),
         "transport_systems":
@@ -303,6 +337,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "tutorial_text_buddy": MessageLookupByLibrary.simpleMessage(
             "Γεια, είμαι ο φίλος σας στο ePhyLi, ένας εικονικός σύντροφος που έχει σχεδιαστεί για να σας καθοδηγεί και να σας βοηθά σε όλη τη διάρκεια του παιχνιδιού. Επιτρέψτε μου να σας παρουσιάσω το παιχνίδι με ένα σύντομο σεμινάριο."),
         "viewBadges": MessageLookupByLibrary.simpleMessage("Προβολή σημάτων"),
+        "wants_to_participate": MessageLookupByLibrary.simpleMessage(
+            "Ο μαθητής θέλει να συμμετάσχει σε μαθήματα φυσικής αγωγής στο σχολείο και έχει επίγνωση της δυνατότητας βελτίωσης (συναισθηματική διάσταση)."),
         "well_done": MessageLookupByLibrary.simpleMessage("Μπράβο!"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;"),

@@ -222,7 +222,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                       if (orientation == Orientation.landscape) {
                         return GridView.count(
                           scrollDirection: Axis.horizontal,
-                          crossAxisCount: 2,
+                          crossAxisCount: 1,
                           children: Challenge.challenges.map((e) {
                             return ChallengeWidget(e, refresher: _refresh);
                           }).toList(),

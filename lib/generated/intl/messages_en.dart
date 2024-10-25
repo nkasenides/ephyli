@@ -30,12 +30,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "activities": MessageLookupByLibrary.simpleMessage("activities"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "This activity is locked. Complete the previous activities to unlock."),
+        "adapts_to_game": MessageLookupByLibrary.simpleMessage(
+            "The student knows how to adapt to the game situations of volleyball and is physically capable of dealing with them (physical dimension)."),
+        "advanced_level":
+            MessageLookupByLibrary.simpleMessage("Advanced level"),
         "alreadyPlayedActivity": MessageLookupByLibrary.simpleMessage(
             "You have already participated in this activity. Would you like to replay it?"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Available cards"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
+        "basic_rules_knowledge": MessageLookupByLibrary.simpleMessage(
+            "The student can describe the rules of the basketball game and understand the health benefits related to sports practice (cognitive dimension)."),
         "beliefs": MessageLookupByLibrary.simpleMessage("Beliefs"),
         "buddyIntro": MessageLookupByLibrary.simpleMessage(
             "This is your ePhyLi buddy. They can help you with valuable information about the game, and guide you to complete our challenges. Select your buddy by clicking on the arrows below and then click \'Proceed\'."),
@@ -188,6 +194,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Well done! All concepts are correctly matched to the related descriptions. Click \'Finish\' to earn a badge."),
         "c6a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 6. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?"),
+        "c7a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have completed the seventh challenge. Press \'Finish\' to get your badge!"),
+        "c7a1_instruction": MessageLookupByLibrary.simpleMessage(
+            "Identify the correct level for this scenario:"),
+        "c7a1_welcome": MessageLookupByLibrary.simpleMessage(
+            "Welcome to challenge 7. You will be shown scenarios representing the progression levels of a student\'s sports practice in relation to the four physical literacy dimensions (physical, affective, social, and cognitive). For each scenario, you need to identify the correct progression level by dragging the scenario to the correct level. Ready?"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),
@@ -220,6 +232,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Selected element:"),
         "customizeAvatar":
             MessageLookupByLibrary.simpleMessage("Customize your avatar"),
+        "developer_level":
+            MessageLookupByLibrary.simpleMessage("Developer level"),
+        "developing_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "The student is developing basic motor skills in volleyball and has a greater awareness of his/her own physical abilities (physical dimension)."),
         "dragging": MessageLookupByLibrary.simpleMessage("Dragging..."),
         "drop_here": MessageLookupByLibrary.simpleMessage("Drop here"),
         "ePhyLiBuddy": MessageLookupByLibrary.simpleMessage("ePhyLi Buddy"),
@@ -228,6 +244,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "education_school":
             MessageLookupByLibrary.simpleMessage("Education and school sector"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "enthusiastic_participation": MessageLookupByLibrary.simpleMessage(
+            "The student is enthusiastic about participating in physical education classes at school and is aware of his/her level of involvement (affective dimension)."),
         "error": MessageLookupByLibrary.simpleMessage("An error has occurred."),
         "exploreChallenges": MessageLookupByLibrary.simpleMessage(
             "Ok, let\'s explore the challenges!"),
@@ -241,11 +259,21 @@ class MessageLookup extends MessageLookupByLibrary {
             "You can find terminology related to Physical Literacy in the Glossary."),
         "greek": MessageLookupByLibrary.simpleMessage("Greek"),
         "health_sector": MessageLookupByLibrary.simpleMessage("Health sector"),
+        "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(
+            "The student demonstrates independence and positive interpersonal skills that contribute to increased participation in extracurricular sporting activities (social dimension)."),
         "individual": MessageLookupByLibrary.simpleMessage("Individual"),
         "invalidPersonName":
             MessageLookupByLibrary.simpleMessage("Invalid name"),
         "italian": MessageLookupByLibrary.simpleMessage("Italian"),
+        "lack_of_motivation": MessageLookupByLibrary.simpleMessage(
+            "The student does not want to participate in PE lessons at school because he/she is not confident or motivated enough (affective dimension)."),
+        "lack_of_rules_knowledge": MessageLookupByLibrary.simpleMessage(
+            "The student does not know the rules of the basketball game and does not know the health benefits related to sports practice (cognitive dimension)."),
+        "lack_of_social_support": MessageLookupByLibrary.simpleMessage(
+            "The student does not have relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension)."),
         "lets_start": MessageLookupByLibrary.simpleMessage("Let\'s start!"),
+        "limited_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "The student has very limited motor skills and has difficulty approaching the basic movements of volleyball (physical dimension)."),
         "local": MessageLookupByLibrary.simpleMessage("Local"),
         "luxenbourgese": MessageLookupByLibrary.simpleMessage("Luxenbourgese"),
         "motivation": MessageLookupByLibrary.simpleMessage("Motivation"),
@@ -276,8 +304,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Please provide a value"),
         "pleaseTurnDevice":
-            MessageLookupByLibrary.simpleMessage("Please turn your device."),
+            MessageLookupByLibrary.simpleMessage("Please rotate your device."),
         "polish": MessageLookupByLibrary.simpleMessage("Polish"),
+        "positive_social_support": MessageLookupByLibrary.simpleMessage(
+            "The student is building positive relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension)."),
+        "preliminary_level":
+            MessageLookupByLibrary.simpleMessage("Preliminary level"),
         "proceed": MessageLookupByLibrary.simpleMessage("Proceed"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "profile_description": MessageLookupByLibrary.simpleMessage(
@@ -296,6 +328,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "social_environment":
             MessageLookupByLibrary.simpleMessage("Social environment"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
+        "strategic_analysis": MessageLookupByLibrary.simpleMessage(
+            "The student can analyse and adapt strategies to the game situation of basketball and understand the health benefits related to sports practice (cognitive dimension)."),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
         "transport_systems":
             MessageLookupByLibrary.simpleMessage("Transport systems"),
@@ -309,6 +343,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unableToStartActivity": MessageLookupByLibrary.simpleMessage(
             "Error - This activity cannot be started."),
         "viewBadges": MessageLookupByLibrary.simpleMessage("View badges"),
+        "wants_to_participate": MessageLookupByLibrary.simpleMessage(
+            "The student wants to participate in physical education classes at school and is aware of the possibility of improvement (affective dimension)."),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),
         "well_done": MessageLookupByLibrary.simpleMessage("Well done!"),
         "whatIsYourName":

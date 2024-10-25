@@ -68,8 +68,7 @@
   "try_again": "Try again",
   "check_solution": "Check solution",
   "back": "Back",
-  "pleaseTurnDevice": "Please turn your device.",
-
+  "pleaseTurnDevice": "Please rotate your device.",
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
   "c1a1_congrats": "Well done! All concepts are correctly matched to the related descriptions.",
@@ -200,5 +199,27 @@
   "currentElement": "Selected element:",
 
   "c6a1_welcome": "Welcome to challenge 6. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
-  "c6a1_congrats": "Well done! All concepts are correctly matched to the related descriptions. Click 'Finish' to earn a badge."
+  "c6a1_congrats": "Well done! All concepts are correctly matched to the related descriptions. Click 'Finish' to earn a badge.",
+
+  "c7a1_welcome": "Welcome to challenge 7. You will be shown scenarios representing the progression levels of a student's sports practice in relation to the four physical literacy dimensions (physical, affective, social, and cognitive). For each scenario, you need to identify the correct progression level by dragging the scenario to the correct level. Ready?",
+  "c7a1_instruction": "Identify the correct level for this scenario:",
+  "c7a1_finish_message": "Well done! You have completed the seventh challenge. Press 'Finish' to get your badge!",
+
+  "limited_motor_skills": "The student has very limited motor skills and has difficulty approaching the basic movements of volleyball (physical dimension).",
+  "lack_of_rules_knowledge": "The student does not know the rules of the basketball game and does not know the health benefits related to sports practice (cognitive dimension).",
+  "lack_of_motivation": "The student does not want to participate in PE lessons at school because he/she is not confident or motivated enough (affective dimension).",
+  "lack_of_social_support": "The student does not have relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension).",
+  "developing_motor_skills": "The student is developing basic motor skills in volleyball and has a greater awareness of his/her own physical abilities (physical dimension).",
+  "basic_rules_knowledge": "The student can describe the rules of the basketball game and understand the health benefits related to sports practice (cognitive dimension).",
+  "wants_to_participate": "The student wants to participate in physical education classes at school and is aware of the possibility of improvement (affective dimension).",
+  "positive_social_support": "The student is building positive relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension).",
+  "adapts_to_game": "The student knows how to adapt to the game situations of volleyball and is physically capable of dealing with them (physical dimension).",
+  "strategic_analysis": "The student can analyse and adapt strategies to the game situation of basketball and understand the health benefits related to sports practice (cognitive dimension).",
+  "enthusiastic_participation": "The student is enthusiastic about participating in physical education classes at school and is aware of his/her level of involvement (affective dimension).",
+  "independent_and_socially_skilled": "The student demonstrates independence and positive interpersonal skills that contribute to increased participation in extracurricular sporting activities (social dimension).",
+
+  "preliminary_level": "Preliminary level",
+  "developer_level": "Developer level",
+  "advanced_level": "Advanced level"
+
 }
