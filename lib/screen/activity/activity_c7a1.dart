@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:ffi';
 import 'dart:math';
 
 import 'package:animated_text_kit/animated_text_kit.dart';
