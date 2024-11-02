@@ -31,7 +31,7 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
 
   @override
   void initState() {
-    TTS.speak(widget.instructionsText);
+    // TTS.speak(widget.instructionsText);
     super.initState();
   }
 

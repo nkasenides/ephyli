@@ -9,6 +9,7 @@ import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/utils/pref_utils.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
+import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -33,9 +34,10 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
   late Future<SharedPreferences> future;
   bool messageShown = false;
   bool tutorialCompleted = false;
+  late SharedPreferences prefs;
 
   Future<SharedPreferences> getData() async {
-    var prefs = await SharedPreferences.getInstance();
+    prefs = await SharedPreferences.getInstance();
 
     List<String> unlockedChallenges = prefs.getStringList(PrefUtils.unlocked_challenges) ?? [];
 
@@ -60,63 +62,17 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
   createTutorialView(AsyncSnapshot<SharedPreferences> snapshot) {
     debugPrint("Tutorial view");
-    return Column(
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            PersonalizedAvatar(
-              buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
-              backgroundRadius: 25,
-              avatarSize: 35,
-            ),
-            ChatBubble(
-              margin: const EdgeInsets.only(left: 50),
-              child: AnimatedTextKit(
-                animatedTexts: [
-                  TypewriterAnimatedText(
-                    AppLocalizations.of(context)!.challengesTextTutorial,
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                    ),
-                    speed: const Duration(milliseconds: 50),
-                  ),
-                ],
-                displayFullTextOnTap: true,
-                isRepeatingAnimation: false,
-                onFinished: () {
-                  setState(() {
-                    messageShown = true;
-                  });
-                },
-                onTap: () {
-                  setState(() {
-                    messageShown = true;
-                  });
-                },
-              ),
-            )
-          ],
-        ),
-        messageShown
-            ? Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  ElevatedButton(
-                    child: Text(AppLocalizations.of(context)!.ok),
-                    onPressed: () {
 
-                      snapshot.data!.setBool(PrefUtils.tutorial_completed, true).then((value) {
-                        setState(() { });
-                        GameBadge.tutorialBadge.earn(context);
-                      },);
-
-                    },
-                  ),
-                ],
-              )
-            : Container(),
-      ],
+    return InstructionsWidget(
+        prefs,
+        AppLocalizations.of(context)!.challengesTextTutorial,
+        AppLocalizations.of(context)!.ok,
+        () {
+          snapshot.data!.setBool(PrefUtils.tutorial_completed, true).then((value) {
+            setState(() { });
+            GameBadge.tutorialBadge.earn(context);
+          },);
+        }
     );
   }
 
@@ -134,64 +90,18 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
       },);
     }
 
-    return Container(
-      child: Column(children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            PersonalizedAvatar(
-              buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
-              backgroundRadius: 25,
-              avatarSize: 35,
-            ),
-            ChatBubble(
-              margin: const EdgeInsets.only(left: 50),
-              child: AnimatedTextKit(
-                animatedTexts: [
-                  TypewriterAnimatedText(
-
-                    challengesCompleted > 0 ?
-                    AppLocalizations.of(context)!.challengesTextNormal
-                        .replaceAll("%1", "$challengesCompleted")
-                        .replaceAll("%2", "$totalChallenges") :
-                    AppLocalizations.of(context)!.challengesTextNormalInitial
-                        .replaceAll("%1", snapshot.data!.getString(PrefUtils.username)!),
-
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                    ),
-                    speed: const Duration(milliseconds: 5),
-                  ),
-                ],
-                displayFullTextOnTap: true,
-                isRepeatingAnimation: false,
-                onFinished: () {
-                  setState(() {
-                    //TODO
-                  });
-                },
-                onTap: () {
-                  setState(() {
-                    //TODO
-                  });
-                },
-              ),
-            )
-          ],
-        ),
-        messageShown ? Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  ElevatedButton(
-                    child: Text(AppLocalizations.of(context)!.ready_letsgo),
-                    onPressed: () {
-                      setState(() { });
-                    },
-                  ),
-                ],
-              )
-            : Container(),
-      ]),
+    return InstructionsWidget(
+        prefs,
+        challengesCompleted > 0 ?
+        AppLocalizations.of(context)!.challengesTextNormal
+            .replaceAll("%1", "$challengesCompleted")
+            .replaceAll("%2", "$totalChallenges") :
+        AppLocalizations.of(context)!.challengesTextNormalInitial
+            .replaceAll("%1", snapshot.data!.getString(PrefUtils.username)!),
+        AppLocalizations.of(context)!.ready_letsgo,
+        () {
+          setState(() { });
+        }
     );
   }
 
