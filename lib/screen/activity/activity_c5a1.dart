@@ -344,7 +344,9 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: stage != C5A1Stage.activity ? AppBar(title: Text(I10N.getI10nString("c5a1_name")!)) : null,
+      appBar: stage != C5A1Stage.activity ? AppBar(title: Text(I10N.getI10nString("c5a1_name")!, style: TextStyle(color: Colors.white),),
+        backgroundColor: Themes.primaryColorDark,
+        iconTheme: const IconThemeData(color: Colors.white),) : null,
       body: FutureBuilder(
         future: future,
         builder: (context, snapshot) {

@@ -40,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Available cards"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
+        "badges_view_title":
+            MessageLookupByLibrary.simpleMessage("Your badges"),
         "basic_rules_knowledge": MessageLookupByLibrary.simpleMessage(
             "The student can describe the rules of the basketball game and understand the health benefits related to sports practice (cognitive dimension)."),
         "beliefs": MessageLookupByLibrary.simpleMessage("Beliefs"),
@@ -320,6 +322,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetGame": MessageLookupByLibrary.simpleMessage("Reset game"),
         "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
             "This will reset your current progress."),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "schools": MessageLookupByLibrary.simpleMessage("Schools"),
         "screen_flip_notice": MessageLookupByLibrary.simpleMessage(
             "Your screen will change to landscape mode for this activity."),
@@ -350,6 +353,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("What is your name?"),
         "workplace": MessageLookupByLibrary.simpleMessage("Workplace"),
-        "yes": MessageLookupByLibrary.simpleMessage("Yes")
+        "yes": MessageLookupByLibrary.simpleMessage("Yes"),
+        "you_have_earned_badge": MessageLookupByLibrary.simpleMessage(
+            "You have earned this badge. Well done!")
       };
 }

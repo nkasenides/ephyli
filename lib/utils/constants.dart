@@ -1,8 +1,3 @@
-import 'dart:ui';
-
-import 'package:ephyli/theme/themes.dart';
-import 'package:flutter/material.dart';
-
 const String defaultAvatarData = '{"topType":0,"accessoriesType":0,"hairColor":0,"facialHairType":0,"facialHairColor":0,"clotheType":0,"eyeType":0,"eyebrowType":0,"mouthType":8,"skinColor":0,"clotheColor":0,"style":0,"graphicType":0}';
 
 const String buddy1AvatarData = '{"topType":6,"accessoriesType":0,"hairColor":5,"facialHairType":0,"facialHairColor":5,"clotheType":4,"eyeType":0,"eyebrowType":0,"mouthType":8,"skinColor":1,"clotheColor":6,"style":0,"graphicType":0}';

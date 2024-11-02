@@ -730,6 +730,36 @@ class S {
     );
   }
 
+  /// `Your badges`
+  String get badges_view_title {
+    return Intl.message(
+      'Your badges',
+      name: 'badges_view_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have earned this badge. Well done!`
+  String get you_have_earned_badge {
+    return Intl.message(
+      'You have earned this badge. Well done!',
+      name: 'you_have_earned_badge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(

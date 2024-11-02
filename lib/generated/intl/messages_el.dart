@@ -40,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Διαθέσιμες κάρτες"),
         "back": MessageLookupByLibrary.simpleMessage("Πίσω"),
+        "badges_view_title":
+            MessageLookupByLibrary.simpleMessage("Τα σήματα σας"),
         "basic_rules_knowledge": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής μπορεί να περιγράψει τους κανόνες του αγώνα μπάσκετ και να κατανοήσει τα οφέλη για την υγεία που σχετίζονται με την αθλητική πρακτική (γνωστική διάσταση)."),
         "beliefs": MessageLookupByLibrary.simpleMessage("Πίστη"),
@@ -316,6 +318,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetGame": MessageLookupByLibrary.simpleMessage("Επανεκκίνηση"),
         "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
             "Αυτό θα επαναφέρει την τρέχουσα πρόοδό σας."),
+        "save": MessageLookupByLibrary.simpleMessage("Αποθήκευση"),
         "schools": MessageLookupByLibrary.simpleMessage("Σχολεία"),
         "screen_flip_notice": MessageLookupByLibrary.simpleMessage(
             "Η οθόνη σας θα αλλάξει σε οριζόντια λειτουργία για αυτή τη δραστηριότητα."),
@@ -343,6 +346,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;"),
         "workplace": MessageLookupByLibrary.simpleMessage("Χώρος εργασίας"),
-        "yes": MessageLookupByLibrary.simpleMessage("Ναί")
+        "yes": MessageLookupByLibrary.simpleMessage("Ναί"),
+        "you_have_earned_badge": MessageLookupByLibrary.simpleMessage(
+            "Έχετε πάρει αυτό το σήμα. Μπράβο!")
       };
 }

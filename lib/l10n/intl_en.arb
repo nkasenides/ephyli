@@ -69,6 +69,9 @@
   "check_solution": "Check solution",
   "back": "Back",
   "pleaseTurnDevice": "Please rotate your device.",
+  "badges_view_title": "Your badges",
+  "you_have_earned_badge": "You have earned this badge. Well done!",
+  "save": "Save",
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
   "c1a1_congrats": "Well done! All concepts are correctly matched to the related descriptions.",

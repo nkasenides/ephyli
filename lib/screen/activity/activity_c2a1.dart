@@ -281,7 +281,11 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(I10N.getI10nString("c2a1_name")!)),
+      appBar: AppBar(
+        title: Text(I10N.getI10nString("c2a1_name")!, style: const TextStyle(color: Colors.white)),
+        backgroundColor: Themes.primaryColorDark,
+        iconTheme: const IconThemeData(color: Colors.white),
+      ),
       body: FutureBuilder(
         future: future,
         builder: (context, snapshot) {

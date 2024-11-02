@@ -9,6 +9,7 @@ import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/utils/pref_utils.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
+import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -115,42 +116,44 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
           tutorialCompleted = snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false;
           debugPrint("tutorialCompleted: $tutorialCompleted");
 
-          return Padding(
-              padding: Themes.standardPadding,
-              child: Column(
-                children: [
+          return EphyliGradient(
+            child: Padding(
+                padding: Themes.standardPadding,
+                child: Column(
+                  children: [
 
-                  !tutorialCompleted ? createTutorialView(snapshot)
-                      : createNormalView(snapshot),
+                    !tutorialCompleted ? createTutorialView(snapshot)
+                        : createNormalView(snapshot),
 
-                  const Gap(20),
+                    const Gap(20),
 
-                  //TODO ---
+                    //TODO ---
 
-                  Expanded(
-                    child: OrientationBuilder(builder: (context, orientation) {
-                      if (orientation == Orientation.landscape) {
-                        return GridView.count(
-                          scrollDirection: Axis.horizontal,
-                          crossAxisCount: 1,
-                          children: Challenge.challenges.map((e) {
-                            return ChallengeWidget(e, refresher: _refresh);
-                          }).toList(),
-                        );
-                      }
-                      else {
-                        return GridView.count(
-                          // scrollDirection: Axis.horizontal,
-                          crossAxisCount: 2,
-                          children: Challenge.challenges.map((e) {
-                            return ChallengeWidget(e, refresher: _refresh);
-                          }).toList(),
-                        );
-                      }
-                    },),
-                  ),
-                ],
-              ));
+                    Expanded(
+                      child: OrientationBuilder(builder: (context, orientation) {
+                        if (orientation == Orientation.landscape) {
+                          return GridView.count(
+                            scrollDirection: Axis.horizontal,
+                            crossAxisCount: 1,
+                            children: Challenge.challenges.map((e) {
+                              return ChallengeWidget(e, refresher: _refresh);
+                            }).toList(),
+                          );
+                        }
+                        else {
+                          return GridView.count(
+                            // scrollDirection: Axis.horizontal,
+                            crossAxisCount: 2,
+                            children: Challenge.challenges.map((e) {
+                              return ChallengeWidget(e, refresher: _refresh);
+                            }).toList(),
+                          );
+                        }
+                      },),
+                    ),
+                  ],
+                )),
+          );
         }
         return const Center(child: CircularProgressIndicator());
       },

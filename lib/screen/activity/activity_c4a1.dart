@@ -249,7 +249,9 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(I10N.getI10nString("c4a1_name")!)),
+      appBar: AppBar(title: Text(I10N.getI10nString("c4a1_name")!, style: TextStyle(color: Colors.white),),
+        backgroundColor: Themes.primaryColorDark,
+        iconTheme: const IconThemeData(color: Colors.white),),
       body: FutureBuilder(
         future: future,
         builder: (context, snapshot) {
