@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../theme/themes.dart';
 import '../utils/constants.dart';
 import '../utils/pref_utils.dart';
+import '../utils/tts_utils.dart';
 import 'buddy_avatar_widget.dart';
 import 'chat_bubble.dart';
 
@@ -14,7 +15,7 @@ class InstructionsWidget extends StatefulWidget {
   SharedPreferences prefs;
   String instructionsText;
   String buttonText;
-  Function() onButtonPressed;
+  Function()? onButtonPressed;
   Widget? middleWidget;
 
   InstructionsWidget(
@@ -27,6 +28,12 @@ class InstructionsWidget extends StatefulWidget {
 class _InstructionsWidgetState extends State<InstructionsWidget> {
 
   bool messageShown = false;
+
+  @override
+  void initState() {
+    TTS.speak(widget.instructionsText);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,28 +51,34 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
               ),
               ChatBubble(
                 margin: const EdgeInsets.only(left: 50),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText(
-                      widget.instructionsText,
-                      textStyle: const TextStyle(
-                        color: Colors.white,
-                      ),
-                      speed: const Duration(milliseconds: 50),
+                child: Column(
+                  children: [
+
+                    AnimatedTextKit(
+                      animatedTexts: [
+                        TypewriterAnimatedText(
+                          widget.instructionsText,
+                          textStyle: const TextStyle(
+                            color: Colors.white,
+                          ),
+                          speed: const Duration(milliseconds: 50),
+                        ),
+                      ],
+                      displayFullTextOnTap: true,
+                      isRepeatingAnimation: false,
+                      onFinished: () {
+                        setState(() {
+                          messageShown = true;
+                        });
+                      },
+                      onTap: () {
+                        setState(() {
+                          messageShown = true;
+                        });
+                      },
                     ),
+
                   ],
-                  displayFullTextOnTap: true,
-                  isRepeatingAnimation: false,
-                  onFinished: () {
-                    setState(() {
-                      messageShown = true;
-                    });
-                  },
-                  onTap: () {
-                    setState(() {
-                      messageShown = true;
-                    });
-                  },
                 ),
               )
             ],
@@ -81,10 +94,10 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
               ? Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              ElevatedButton(
+              widget.onButtonPressed != null ? ElevatedButton(
                 onPressed: widget.onButtonPressed,
                 child: Text(widget.buttonText),
-              ),
+              ) : Container(),
             ],
           )
               : Container(),
@@ -92,4 +105,11 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    TTS.stop();
+    super.dispose();
+  }
+
 }

@@ -7,6 +7,7 @@ import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/feature_explorer.dart';
 import 'package:ephyli/utils/language.dart';
 import 'package:ephyli/utils/pref_utils.dart';
+import 'package:ephyli/utils/tts_utils.dart';
 import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -46,6 +47,7 @@ class _EPhyLiAppState extends State<EPhyLiApp> {
 
   @override
   Widget build(BuildContext context) {
+    TTS.init();
     return FeatureDiscovery(
       child: MaterialApp(
         title: "ePhyLi",

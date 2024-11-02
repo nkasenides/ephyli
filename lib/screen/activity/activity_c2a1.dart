@@ -72,69 +72,18 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
   }
 
   Widget activity1IntroView() {
-    //TODO - Replace with InstructionWidget
-    return Container(
-      padding: Themes.standardPadding,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          PersonalizedAvatar(
-            buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
-            backgroundRadius: 25,
-            avatarSize: 35,
-          ),
-          ChatBubble(
-            margin: const EdgeInsets.only(left: 50),
-            child: AnimatedTextKit(
-              animatedTexts: [
-                TypewriterAnimatedText(
-                  AppLocalizations.of(context)!.c2a1_intro_message,
-                  textStyle: const TextStyle(
-                    color: Colors.white,
-                  ),
-                  speed: const Duration(milliseconds: 50),
-                ),
-              ],
-              displayFullTextOnTap: true,
-              isRepeatingAnimation: false,
-              onFinished: () {
-                setState(() {
-                  introMessageShown = true;
-                });
-              },
-              onTap: () {
-                setState(() {
-                  introMessageShown = true;
-                });
-              },
-            ),
-          ),
-
-          const Gap(20),
-
-          introMessageShown ? Text(
-            AppLocalizations.of(context)!.screen_flip_notice,
-            style: Themes.instructionsTextStyle,
-          ) : Container(),
-
-          const Gap(20),
-
-          introMessageShown ? Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              ElevatedButton(
-                child: Text(AppLocalizations.of(context)!.lets_start),
-                onPressed: () {
-                  setState(() {
-                    stage = C2A1Stage.activity1;
-                  });
-                },
-              ),
-            ],
-          ) : Container(),
-
-
-        ],
+    return InstructionsWidget(
+        prefs,
+        AppLocalizations.of(context)!.c2a1_intro_message,
+        AppLocalizations.of(context)!.lets_start,
+        () {
+          setState(() {
+            stage = C2A1Stage.activity1;
+          });
+        },
+      middleWidget: Text(
+        AppLocalizations.of(context)!.screen_flip_notice,
+        style: Themes.instructionsTextStyle,
       ),
     );
   }

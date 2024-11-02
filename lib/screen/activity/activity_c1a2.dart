@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:ephyli/utils/ui_utils.dart';
+import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:fluttermoji/fluttermojiCircleAvatar.dart';
@@ -72,42 +73,11 @@ class _ActivityC1a2State extends State<ActivityC1a2> {
         child: Column(
           children: [
 
-            //Buddy + instructions:
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                PersonalizedAvatar(
-                  buddyAvatars[prefs.getInt(PrefUtils.buddy_selection)!],
-                  backgroundRadius: 25,
-                  avatarSize: 35,
-                ),
-
-                ChatBubble(
-                  margin: const EdgeInsets.only(left: 50),
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      TypewriterAnimatedText(
-                        AppLocalizations.of(context)!.c1a2_bubbles_instructions,
-                        textStyle: const TextStyle(color: Colors.white,),
-                        speed: const Duration(milliseconds: 0),
-                      ),
-                    ],
-                    displayFullTextOnTap: true,
-                    isRepeatingAnimation: false,
-                    onFinished: () {
-                      setState(() {
-                        messageShown = true;
-                      });
-                    },
-                    onTap: () {
-                      setState(() {
-                        messageShown = true;
-                      });
-                    },
-                  ),
-                )
-
-              ],
+            InstructionsWidget(
+              prefs,
+              AppLocalizations.of(context)!.c1a2_bubbles_instructions,
+              "",
+              null
             ),
 
             const Divider(),
