@@ -27,9 +27,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
   late SharedPreferences prefs;
   late Future<void> future;
   List<GameBadge> earnedBadges = [];
+  late String avatarData;
 
   Future<void> loadData() async {
     prefs = await SharedPreferences.getInstance();
+
+    avatarData = prefs.getString(PrefUtils.user_avatar) ?? "";
 
     //Check and add earned badges:
     for (GameBadge badge in GameBadge.gameBadges) {
@@ -81,8 +84,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SizedBox(
-                              child: FluttermojiCircleAvatar(
-                                backgroundColor: Colors.grey.shade100,
+                              child: PersonalizedAvatar(
+                                  avatarData
                               ),
                             ),
                           ],
@@ -131,7 +134,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     SizedBox(
                                       width: MediaQuery.of(context).orientation == Orientation.landscape ? 500 : null,
                                       child: FluttermojiCustomizer(
-                                        autosave: false,
+                                        autosave: true,
                                         theme: FluttermojiThemeData(
                                             labelTextStyle: Theme.of(context).textTheme.titleSmall,
                                             secondaryBgColor: Colors.white
@@ -144,25 +147,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
-                                        OutlinedButton(
-                                          child: Text(AppLocalizations.of(context)!.cancel),
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                        ),
 
                                         ElevatedButton(
-                                          child: Text(AppLocalizations.of(context)!.save),
+                                          child: Text(AppLocalizations.of(context)!.ok),
                                           onPressed: () {
 
                                             //Encode avatar data:
-                                            String avatarData;
                                             FluttermojiFunctions().encodeMySVGtoString().then((value) {
                                               avatarData = value;
+                                              debugPrint(avatarData);
                                               prefs.setString(PrefUtils.user_avatar, avatarData).then((value) {
-                                                setState(() {
-                                                  Navigator.pop(context);
-                                                });
+                                                Navigator.pop(context);
+                                                setState(() { });
                                               },);
                                             },);
 
