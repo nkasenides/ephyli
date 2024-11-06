@@ -72,6 +72,7 @@
   "badges_view_title": "Your badges",
   "you_have_earned_badge": "You have earned this badge. Well done!",
   "save": "Save",
+  "glossary_instructions": "This is a glossary - a list of terms related to physical literacy and their descriptions. Scroll through the list below to find the term you need and click it to view its description.",
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
   "c1a1_congrats": "Well done! All concepts are correctly matched to the related descriptions.",
@@ -223,6 +224,60 @@
 
   "preliminary_level": "Preliminary level",
   "developer_level": "Developer level",
-  "advanced_level": "Advanced level"
+  "advanced_level": "Advanced level",
+
+  "glossary_Attributes": "Attributes",
+  "glossary_AffectiveDomain": "Affective Domain",
+  "glossary_CognitiveDomain": "Cognitive Domain",
+  "glossary_Confidence": "Confidence",
+  "glossary_Domains": "Domains",
+  "glossary_Dualism": "Dualism",
+  "glossary_Embodied": "Embodied",
+  "glossary_Existentialism": "Existentialism",
+  "glossary_HealthLiteracy": "Health Literacy",
+  "glossary_HumanDimension": "Human Dimension",
+  "glossary_KnowledgeAndUnderstanding": "Knowledge and Understanding",
+  "glossary_Literacy": "Literacy",
+  "glossary_Monism": "Monism",
+  "glossary_Motivation": "Motivation",
+  "glossary_MovementCapacities": "Movement Capacities",
+  "glossary_MovementPatterns": "Movement Patterns",
+  "glossary_MovementVocabulary": "Movement Vocabulary",
+  "glossary_Phenomenology": "Phenomenology",
+  "glossary_PhysicalActivity": "Physical Activity",
+  "glossary_PhysicalCompetence": "Physical Competence",
+  "glossary_PhysicalDomain": "Physical Domain",
+  "glossary_PhysicalEducation": "Physical Education",
+  "glossary_PhysicalLiteracy": "Physical Literacy",
+  "glossary_Sport": "Sport",
+
+  "glossary_Attributes_desc": "Are the constituent elements of physical literacy that are identified in the full definition of the concept. When developing physical literacy, individuals will discover that they have the potential to develop all the attributes identified in the full definition.",
+  "glossary_AffectiveDomain_desc": "The affective domain refers to aspects of motivation, confidence, self-esteem, self-confidence and a positive sense of self, developed and nurtured in a range of environments.",
+  "glossary_CognitiveDomain_desc": "The cognitive domain refers to the knowledge and understanding of fitness and health including exercise, nutrition, sleep, and lifestyle, as well as the development of intelligent action, an understanding of movement, and application of creativity and imagination in a range of environments.",
+  "glossary_Confidence_desc": "Can be described as the perception of one's own abilities.",
+  "glossary_Domains_desc": "Physical literacy domains refer to the interrelated affective, physical, and cognitive domains that underpin the concept of physical literacy. The behavioral, social, and environmental domains are also referred to in some literature.",
+  "glossary_Dualism_desc": "The view that human beings are comprised of two very different and separable 'parts,' being the 'body' and the 'mind'.",
+  "glossary_Embodied_desc": "In the context of physical literacy, the term embodiment is used specifically to describe the potential individuals have to interact with the environment via our embodied dimension. This covers both embodiment as-lived as well as embodiment as an instrument or object.",
+  "glossary_Existentialism_desc": "Is a philosophy that is based on the principle that existence precedes essence. In other words, individuals make themselves as they interact with the world.",
+  "glossary_HealthLiteracy_desc": "The degree to which individuals and groups can obtain, process, understand, evaluate, and act upon information needed to make public health decisions that benefit the community.",
+  "glossary_HumanDimension_desc": "An aspect of human being through which individuals can interact with the world and express themselves. Embodiment is one such dimension – hence, embodied dimension.",
+  "glossary_KnowledgeAndUnderstanding_desc": "Comprised of two main constituents, the first related to grasping essential principles of movement and performance. The second involves developing knowledge and understanding of fitness and health, including understanding the value of physical activity, exercise, appropriate diet, and the need for relaxation and sleep.",
+  "glossary_Literacy_desc": "Literacy is our embodied interaction with an environment. It includes the use of critical and creative thinking skills and processes, conveying information through various forms of communication, and applying knowledge and skills to make connections within and between various contexts.",
+  "glossary_Monism_desc": "The view that humans are an entity, a whole, and not divisible into separate 'parts,' such as the 'body' and the 'mind'. This is also referred to as a holistic view or holism, indicating that humans are an indivisible 'whole'.",
+  "glossary_Motivation_desc": "Can be defined as the direction and intensity of one’s effort.",
+  "glossary_MovementCapacities_desc": "The constituent abilities of articulate movement.",
+  "glossary_MovementPatterns_desc": "General movement patterns comprise the total stock of movements of which the human is capable. The general movement patterns mastered by an individual may be referred to as their movement vocabulary. Specific movement patterns arise when refined movement patterns are applied within specific activity contexts and movement forms.",
+  "glossary_MovementVocabulary_desc": "Refer to movement patterns.",
+  "glossary_Phenomenology_desc": "Is a philosophy based on the principle that we as human beings give meaning to the world as we perceive it. Objects in the world have no meaning prior to an individual’s perception of that feature.",
+  "glossary_PhysicalActivity_desc": "Any bodily movement produced by skeletal muscles that requires energy expenditure.",
+  "glossary_PhysicalCompetence_desc": "Can be described as the sufficiency in movement vocabulary, movement capacities, and developed movement patterns, plus the deployment of these in a range of movement forms.",
+  "glossary_PhysicalDomain_desc": "The physical domain encourages the nurturing of physical competence in a range of environments in order to develop a rich and wide-ranging movement vocabulary.",
+  "glossary_PhysicalEducation_desc": "Physical education is the school subject in which children do physical exercises or take part in physical games and sports.",
+  "glossary_PhysicalLiteracy_desc": "Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.",
+  "glossary_Sport_desc": "Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences."
+
+
+
+
 
 }

@@ -760,6 +760,16 @@ class S {
     );
   }
 
+  /// `This is a glossary - a list of terms related to physical literacy and their descriptions. Scroll through the list below to find the term you need and click it to view its description.`
+  String get glossary_instructions {
+    return Intl.message(
+      'This is a glossary - a list of terms related to physical literacy and their descriptions. Scroll through the list below to find the term you need and click it to view its description.',
+      name: 'glossary_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(
@@ -1998,6 +2008,486 @@ class S {
     return Intl.message(
       'Advanced level',
       name: 'advanced_level',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attributes`
+  String get glossary_Attributes {
+    return Intl.message(
+      'Attributes',
+      name: 'glossary_Attributes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Affective Domain`
+  String get glossary_AffectiveDomain {
+    return Intl.message(
+      'Affective Domain',
+      name: 'glossary_AffectiveDomain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cognitive Domain`
+  String get glossary_CognitiveDomain {
+    return Intl.message(
+      'Cognitive Domain',
+      name: 'glossary_CognitiveDomain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confidence`
+  String get glossary_Confidence {
+    return Intl.message(
+      'Confidence',
+      name: 'glossary_Confidence',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Domains`
+  String get glossary_Domains {
+    return Intl.message(
+      'Domains',
+      name: 'glossary_Domains',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dualism`
+  String get glossary_Dualism {
+    return Intl.message(
+      'Dualism',
+      name: 'glossary_Dualism',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Embodied`
+  String get glossary_Embodied {
+    return Intl.message(
+      'Embodied',
+      name: 'glossary_Embodied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Existentialism`
+  String get glossary_Existentialism {
+    return Intl.message(
+      'Existentialism',
+      name: 'glossary_Existentialism',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Health Literacy`
+  String get glossary_HealthLiteracy {
+    return Intl.message(
+      'Health Literacy',
+      name: 'glossary_HealthLiteracy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Human Dimension`
+  String get glossary_HumanDimension {
+    return Intl.message(
+      'Human Dimension',
+      name: 'glossary_HumanDimension',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Knowledge and Understanding`
+  String get glossary_KnowledgeAndUnderstanding {
+    return Intl.message(
+      'Knowledge and Understanding',
+      name: 'glossary_KnowledgeAndUnderstanding',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Literacy`
+  String get glossary_Literacy {
+    return Intl.message(
+      'Literacy',
+      name: 'glossary_Literacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monism`
+  String get glossary_Monism {
+    return Intl.message(
+      'Monism',
+      name: 'glossary_Monism',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Motivation`
+  String get glossary_Motivation {
+    return Intl.message(
+      'Motivation',
+      name: 'glossary_Motivation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Movement Capacities`
+  String get glossary_MovementCapacities {
+    return Intl.message(
+      'Movement Capacities',
+      name: 'glossary_MovementCapacities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Movement Patterns`
+  String get glossary_MovementPatterns {
+    return Intl.message(
+      'Movement Patterns',
+      name: 'glossary_MovementPatterns',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Movement Vocabulary`
+  String get glossary_MovementVocabulary {
+    return Intl.message(
+      'Movement Vocabulary',
+      name: 'glossary_MovementVocabulary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phenomenology`
+  String get glossary_Phenomenology {
+    return Intl.message(
+      'Phenomenology',
+      name: 'glossary_Phenomenology',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical Activity`
+  String get glossary_PhysicalActivity {
+    return Intl.message(
+      'Physical Activity',
+      name: 'glossary_PhysicalActivity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical Competence`
+  String get glossary_PhysicalCompetence {
+    return Intl.message(
+      'Physical Competence',
+      name: 'glossary_PhysicalCompetence',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical Domain`
+  String get glossary_PhysicalDomain {
+    return Intl.message(
+      'Physical Domain',
+      name: 'glossary_PhysicalDomain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical Education`
+  String get glossary_PhysicalEducation {
+    return Intl.message(
+      'Physical Education',
+      name: 'glossary_PhysicalEducation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical Literacy`
+  String get glossary_PhysicalLiteracy {
+    return Intl.message(
+      'Physical Literacy',
+      name: 'glossary_PhysicalLiteracy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sport`
+  String get glossary_Sport {
+    return Intl.message(
+      'Sport',
+      name: 'glossary_Sport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are the constituent elements of physical literacy that are identified in the full definition of the concept. When developing physical literacy, individuals will discover that they have the potential to develop all the attributes identified in the full definition.`
+  String get glossary_Attributes_desc {
+    return Intl.message(
+      'Are the constituent elements of physical literacy that are identified in the full definition of the concept. When developing physical literacy, individuals will discover that they have the potential to develop all the attributes identified in the full definition.',
+      name: 'glossary_Attributes_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The affective domain refers to aspects of motivation, confidence, self-esteem, self-confidence and a positive sense of self, developed and nurtured in a range of environments.`
+  String get glossary_AffectiveDomain_desc {
+    return Intl.message(
+      'The affective domain refers to aspects of motivation, confidence, self-esteem, self-confidence and a positive sense of self, developed and nurtured in a range of environments.',
+      name: 'glossary_AffectiveDomain_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The cognitive domain refers to the knowledge and understanding of fitness and health including exercise, nutrition, sleep, and lifestyle, as well as the development of intelligent action, an understanding of movement, and application of creativity and imagination in a range of environments.`
+  String get glossary_CognitiveDomain_desc {
+    return Intl.message(
+      'The cognitive domain refers to the knowledge and understanding of fitness and health including exercise, nutrition, sleep, and lifestyle, as well as the development of intelligent action, an understanding of movement, and application of creativity and imagination in a range of environments.',
+      name: 'glossary_CognitiveDomain_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Can be described as the perception of one's own abilities.`
+  String get glossary_Confidence_desc {
+    return Intl.message(
+      'Can be described as the perception of one\'s own abilities.',
+      name: 'glossary_Confidence_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical literacy domains refer to the interrelated affective, physical, and cognitive domains that underpin the concept of physical literacy. The behavioral, social, and environmental domains are also referred to in some literature.`
+  String get glossary_Domains_desc {
+    return Intl.message(
+      'Physical literacy domains refer to the interrelated affective, physical, and cognitive domains that underpin the concept of physical literacy. The behavioral, social, and environmental domains are also referred to in some literature.',
+      name: 'glossary_Domains_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The view that human beings are comprised of two very different and separable 'parts,' being the 'body' and the 'mind'.`
+  String get glossary_Dualism_desc {
+    return Intl.message(
+      'The view that human beings are comprised of two very different and separable \'parts,\' being the \'body\' and the \'mind\'.',
+      name: 'glossary_Dualism_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In the context of physical literacy, the term embodiment is used specifically to describe the potential individuals have to interact with the environment via our embodied dimension. This covers both embodiment as-lived as well as embodiment as an instrument or object.`
+  String get glossary_Embodied_desc {
+    return Intl.message(
+      'In the context of physical literacy, the term embodiment is used specifically to describe the potential individuals have to interact with the environment via our embodied dimension. This covers both embodiment as-lived as well as embodiment as an instrument or object.',
+      name: 'glossary_Embodied_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is a philosophy that is based on the principle that existence precedes essence. In other words, individuals make themselves as they interact with the world.`
+  String get glossary_Existentialism_desc {
+    return Intl.message(
+      'Is a philosophy that is based on the principle that existence precedes essence. In other words, individuals make themselves as they interact with the world.',
+      name: 'glossary_Existentialism_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The degree to which individuals and groups can obtain, process, understand, evaluate, and act upon information needed to make public health decisions that benefit the community.`
+  String get glossary_HealthLiteracy_desc {
+    return Intl.message(
+      'The degree to which individuals and groups can obtain, process, understand, evaluate, and act upon information needed to make public health decisions that benefit the community.',
+      name: 'glossary_HealthLiteracy_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An aspect of human being through which individuals can interact with the world and express themselves. Embodiment is one such dimension – hence, embodied dimension.`
+  String get glossary_HumanDimension_desc {
+    return Intl.message(
+      'An aspect of human being through which individuals can interact with the world and express themselves. Embodiment is one such dimension – hence, embodied dimension.',
+      name: 'glossary_HumanDimension_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comprised of two main constituents, the first related to grasping essential principles of movement and performance. The second involves developing knowledge and understanding of fitness and health, including understanding the value of physical activity, exercise, appropriate diet, and the need for relaxation and sleep.`
+  String get glossary_KnowledgeAndUnderstanding_desc {
+    return Intl.message(
+      'Comprised of two main constituents, the first related to grasping essential principles of movement and performance. The second involves developing knowledge and understanding of fitness and health, including understanding the value of physical activity, exercise, appropriate diet, and the need for relaxation and sleep.',
+      name: 'glossary_KnowledgeAndUnderstanding_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Literacy is our embodied interaction with an environment. It includes the use of critical and creative thinking skills and processes, conveying information through various forms of communication, and applying knowledge and skills to make connections within and between various contexts.`
+  String get glossary_Literacy_desc {
+    return Intl.message(
+      'Literacy is our embodied interaction with an environment. It includes the use of critical and creative thinking skills and processes, conveying information through various forms of communication, and applying knowledge and skills to make connections within and between various contexts.',
+      name: 'glossary_Literacy_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The view that humans are an entity, a whole, and not divisible into separate 'parts,' such as the 'body' and the 'mind'. This is also referred to as a holistic view or holism, indicating that humans are an indivisible 'whole'.`
+  String get glossary_Monism_desc {
+    return Intl.message(
+      'The view that humans are an entity, a whole, and not divisible into separate \'parts,\' such as the \'body\' and the \'mind\'. This is also referred to as a holistic view or holism, indicating that humans are an indivisible \'whole\'.',
+      name: 'glossary_Monism_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Can be defined as the direction and intensity of one’s effort.`
+  String get glossary_Motivation_desc {
+    return Intl.message(
+      'Can be defined as the direction and intensity of one’s effort.',
+      name: 'glossary_Motivation_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The constituent abilities of articulate movement.`
+  String get glossary_MovementCapacities_desc {
+    return Intl.message(
+      'The constituent abilities of articulate movement.',
+      name: 'glossary_MovementCapacities_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `General movement patterns comprise the total stock of movements of which the human is capable. The general movement patterns mastered by an individual may be referred to as their movement vocabulary. Specific movement patterns arise when refined movement patterns are applied within specific activity contexts and movement forms.`
+  String get glossary_MovementPatterns_desc {
+    return Intl.message(
+      'General movement patterns comprise the total stock of movements of which the human is capable. The general movement patterns mastered by an individual may be referred to as their movement vocabulary. Specific movement patterns arise when refined movement patterns are applied within specific activity contexts and movement forms.',
+      name: 'glossary_MovementPatterns_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Refer to movement patterns.`
+  String get glossary_MovementVocabulary_desc {
+    return Intl.message(
+      'Refer to movement patterns.',
+      name: 'glossary_MovementVocabulary_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is a philosophy based on the principle that we as human beings give meaning to the world as we perceive it. Objects in the world have no meaning prior to an individual’s perception of that feature.`
+  String get glossary_Phenomenology_desc {
+    return Intl.message(
+      'Is a philosophy based on the principle that we as human beings give meaning to the world as we perceive it. Objects in the world have no meaning prior to an individual’s perception of that feature.',
+      name: 'glossary_Phenomenology_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Any bodily movement produced by skeletal muscles that requires energy expenditure.`
+  String get glossary_PhysicalActivity_desc {
+    return Intl.message(
+      'Any bodily movement produced by skeletal muscles that requires energy expenditure.',
+      name: 'glossary_PhysicalActivity_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Can be described as the sufficiency in movement vocabulary, movement capacities, and developed movement patterns, plus the deployment of these in a range of movement forms.`
+  String get glossary_PhysicalCompetence_desc {
+    return Intl.message(
+      'Can be described as the sufficiency in movement vocabulary, movement capacities, and developed movement patterns, plus the deployment of these in a range of movement forms.',
+      name: 'glossary_PhysicalCompetence_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The physical domain encourages the nurturing of physical competence in a range of environments in order to develop a rich and wide-ranging movement vocabulary.`
+  String get glossary_PhysicalDomain_desc {
+    return Intl.message(
+      'The physical domain encourages the nurturing of physical competence in a range of environments in order to develop a rich and wide-ranging movement vocabulary.',
+      name: 'glossary_PhysicalDomain_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical education is the school subject in which children do physical exercises or take part in physical games and sports.`
+  String get glossary_PhysicalEducation_desc {
+    return Intl.message(
+      'Physical education is the school subject in which children do physical exercises or take part in physical games and sports.',
+      name: 'glossary_PhysicalEducation_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.`
+  String get glossary_PhysicalLiteracy_desc {
+    return Intl.message(
+      'Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.',
+      name: 'glossary_PhysicalLiteracy_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences.`
+  String get glossary_Sport_desc {
+    return Intl.message(
+      'Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences.',
+      name: 'glossary_Sport_desc',
       desc: '',
       args: [],
     );

@@ -26,6 +26,7 @@ class GameBadge {
     //Introductory badges:
     tutorialBadge,
     buddyBadge,
+    glossaryBadge,
 
     //Challenge badges:
     challenge1Badge,
@@ -64,6 +65,14 @@ class GameBadge {
     id: "buddyBadge",
     nameRes: "buddy_badge_name",
     descriptionRes: "buddy_badge_description",
+    imageCompletedRes: AppImages.logo,
+    imageIncompleteRes: AppImages.logoBlackAndWhite,
+  );
+
+  static final GameBadge glossaryBadge = GameBadge(
+    id: "glossaryBadge",
+    nameRes: "glossary_badge_name",
+    descriptionRes: "glossary_badge_description",
     imageCompletedRes: AppImages.logo,
     imageIncompleteRes: AppImages.logoBlackAndWhite,
   );

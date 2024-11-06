@@ -41,6 +41,24 @@ class I10N {
       "pl": "#MISSING#",
     },
 
+    "glossary_badge_name": {
+      "en": "Glossary Badge",
+      "el": "Σήμα Γλωσσάριου",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "glossary_badge_description": {
+      "en": "This badge is awarded to players who have explored the ePhyLi app glossary.",
+      "el": "Αυτό το σήμα απονέμεται σε παίκτες που έχουν εξερευνήσει το γλωσσάρι της εφαρμογής ePhyLi.",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
     "c1_badge_name": {
       "en": "Challenge 1 Badge",
       "el": "Σήμα Πρόκλησης 1",

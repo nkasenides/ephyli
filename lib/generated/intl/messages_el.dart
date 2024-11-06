@@ -259,6 +259,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "glossary": MessageLookupByLibrary.simpleMessage("Γλωσσάρι"),
         "glossary_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε να βρείτε ορολογία που σχετίζεται με τον Φυσικό Γραμματισμό στο Γλωσσάρι."),
+        "glossary_instructions": MessageLookupByLibrary.simpleMessage(
+            "Αυτό είναι ένα γλωσσάρι - μια λίστα όρων που σχετίζονται με τη φυσική παιδεία, και οι περιγραφές τους. Μετακινηθείτε στην παρακάτω λίστα για να βρείτε τον όρο που χρειάζεστε και κάντε κλικ για να δείτε την περιγραφή του."),
         "health_sector": MessageLookupByLibrary.simpleMessage("Τομέας υγείας"),
         "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής επιδεικνύει ανεξαρτησία και θετικές διαπροσωπικές δεξιότητες που συμβάλλουν στην αυξημένη συμμετοχή σε εξωσχολικές αθλητικές δραστηριότητες (κοινωνική διάσταση)."),

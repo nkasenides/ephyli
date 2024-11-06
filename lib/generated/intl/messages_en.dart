@@ -257,8 +257,102 @@ class MessageLookup extends MessageLookupByLibrary {
         "friends": MessageLookupByLibrary.simpleMessage("Friends"),
         "gameOver": MessageLookupByLibrary.simpleMessage("Game over"),
         "glossary": MessageLookupByLibrary.simpleMessage("Glossary"),
+        "glossary_AffectiveDomain":
+            MessageLookupByLibrary.simpleMessage("Affective Domain"),
+        "glossary_AffectiveDomain_desc": MessageLookupByLibrary.simpleMessage(
+            "The affective domain refers to aspects of motivation, confidence, self-esteem, self-confidence and a positive sense of self, developed and nurtured in a range of environments."),
+        "glossary_Attributes":
+            MessageLookupByLibrary.simpleMessage("Attributes"),
+        "glossary_Attributes_desc": MessageLookupByLibrary.simpleMessage(
+            "Are the constituent elements of physical literacy that are identified in the full definition of the concept. When developing physical literacy, individuals will discover that they have the potential to develop all the attributes identified in the full definition."),
+        "glossary_CognitiveDomain":
+            MessageLookupByLibrary.simpleMessage("Cognitive Domain"),
+        "glossary_CognitiveDomain_desc": MessageLookupByLibrary.simpleMessage(
+            "The cognitive domain refers to the knowledge and understanding of fitness and health including exercise, nutrition, sleep, and lifestyle, as well as the development of intelligent action, an understanding of movement, and application of creativity and imagination in a range of environments."),
+        "glossary_Confidence":
+            MessageLookupByLibrary.simpleMessage("Confidence"),
+        "glossary_Confidence_desc": MessageLookupByLibrary.simpleMessage(
+            "Can be described as the perception of one\'s own abilities."),
+        "glossary_Domains": MessageLookupByLibrary.simpleMessage("Domains"),
+        "glossary_Domains_desc": MessageLookupByLibrary.simpleMessage(
+            "Physical literacy domains refer to the interrelated affective, physical, and cognitive domains that underpin the concept of physical literacy. The behavioral, social, and environmental domains are also referred to in some literature."),
+        "glossary_Dualism": MessageLookupByLibrary.simpleMessage("Dualism"),
+        "glossary_Dualism_desc": MessageLookupByLibrary.simpleMessage(
+            "The view that human beings are comprised of two very different and separable \'parts,\' being the \'body\' and the \'mind\'."),
+        "glossary_Embodied": MessageLookupByLibrary.simpleMessage("Embodied"),
+        "glossary_Embodied_desc": MessageLookupByLibrary.simpleMessage(
+            "In the context of physical literacy, the term embodiment is used specifically to describe the potential individuals have to interact with the environment via our embodied dimension. This covers both embodiment as-lived as well as embodiment as an instrument or object."),
+        "glossary_Existentialism":
+            MessageLookupByLibrary.simpleMessage("Existentialism"),
+        "glossary_Existentialism_desc": MessageLookupByLibrary.simpleMessage(
+            "Is a philosophy that is based on the principle that existence precedes essence. In other words, individuals make themselves as they interact with the world."),
+        "glossary_HealthLiteracy":
+            MessageLookupByLibrary.simpleMessage("Health Literacy"),
+        "glossary_HealthLiteracy_desc": MessageLookupByLibrary.simpleMessage(
+            "The degree to which individuals and groups can obtain, process, understand, evaluate, and act upon information needed to make public health decisions that benefit the community."),
+        "glossary_HumanDimension":
+            MessageLookupByLibrary.simpleMessage("Human Dimension"),
+        "glossary_HumanDimension_desc": MessageLookupByLibrary.simpleMessage(
+            "An aspect of human being through which individuals can interact with the world and express themselves. Embodiment is one such dimension – hence, embodied dimension."),
+        "glossary_KnowledgeAndUnderstanding":
+            MessageLookupByLibrary.simpleMessage("Knowledge and Understanding"),
+        "glossary_KnowledgeAndUnderstanding_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "Comprised of two main constituents, the first related to grasping essential principles of movement and performance. The second involves developing knowledge and understanding of fitness and health, including understanding the value of physical activity, exercise, appropriate diet, and the need for relaxation and sleep."),
+        "glossary_Literacy": MessageLookupByLibrary.simpleMessage("Literacy"),
+        "glossary_Literacy_desc": MessageLookupByLibrary.simpleMessage(
+            "Literacy is our embodied interaction with an environment. It includes the use of critical and creative thinking skills and processes, conveying information through various forms of communication, and applying knowledge and skills to make connections within and between various contexts."),
+        "glossary_Monism": MessageLookupByLibrary.simpleMessage("Monism"),
+        "glossary_Monism_desc": MessageLookupByLibrary.simpleMessage(
+            "The view that humans are an entity, a whole, and not divisible into separate \'parts,\' such as the \'body\' and the \'mind\'. This is also referred to as a holistic view or holism, indicating that humans are an indivisible \'whole\'."),
+        "glossary_Motivation":
+            MessageLookupByLibrary.simpleMessage("Motivation"),
+        "glossary_Motivation_desc": MessageLookupByLibrary.simpleMessage(
+            "Can be defined as the direction and intensity of one’s effort."),
+        "glossary_MovementCapacities":
+            MessageLookupByLibrary.simpleMessage("Movement Capacities"),
+        "glossary_MovementCapacities_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "The constituent abilities of articulate movement."),
+        "glossary_MovementPatterns":
+            MessageLookupByLibrary.simpleMessage("Movement Patterns"),
+        "glossary_MovementPatterns_desc": MessageLookupByLibrary.simpleMessage(
+            "General movement patterns comprise the total stock of movements of which the human is capable. The general movement patterns mastered by an individual may be referred to as their movement vocabulary. Specific movement patterns arise when refined movement patterns are applied within specific activity contexts and movement forms."),
+        "glossary_MovementVocabulary":
+            MessageLookupByLibrary.simpleMessage("Movement Vocabulary"),
+        "glossary_MovementVocabulary_desc":
+            MessageLookupByLibrary.simpleMessage("Refer to movement patterns."),
+        "glossary_Phenomenology":
+            MessageLookupByLibrary.simpleMessage("Phenomenology"),
+        "glossary_Phenomenology_desc": MessageLookupByLibrary.simpleMessage(
+            "Is a philosophy based on the principle that we as human beings give meaning to the world as we perceive it. Objects in the world have no meaning prior to an individual’s perception of that feature."),
+        "glossary_PhysicalActivity":
+            MessageLookupByLibrary.simpleMessage("Physical Activity"),
+        "glossary_PhysicalActivity_desc": MessageLookupByLibrary.simpleMessage(
+            "Any bodily movement produced by skeletal muscles that requires energy expenditure."),
+        "glossary_PhysicalCompetence":
+            MessageLookupByLibrary.simpleMessage("Physical Competence"),
+        "glossary_PhysicalCompetence_desc": MessageLookupByLibrary.simpleMessage(
+            "Can be described as the sufficiency in movement vocabulary, movement capacities, and developed movement patterns, plus the deployment of these in a range of movement forms."),
+        "glossary_PhysicalDomain":
+            MessageLookupByLibrary.simpleMessage("Physical Domain"),
+        "glossary_PhysicalDomain_desc": MessageLookupByLibrary.simpleMessage(
+            "The physical domain encourages the nurturing of physical competence in a range of environments in order to develop a rich and wide-ranging movement vocabulary."),
+        "glossary_PhysicalEducation":
+            MessageLookupByLibrary.simpleMessage("Physical Education"),
+        "glossary_PhysicalEducation_desc": MessageLookupByLibrary.simpleMessage(
+            "Physical education is the school subject in which children do physical exercises or take part in physical games and sports."),
+        "glossary_PhysicalLiteracy":
+            MessageLookupByLibrary.simpleMessage("Physical Literacy"),
+        "glossary_PhysicalLiteracy_desc": MessageLookupByLibrary.simpleMessage(
+            "Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life."),
+        "glossary_Sport": MessageLookupByLibrary.simpleMessage("Sport"),
+        "glossary_Sport_desc": MessageLookupByLibrary.simpleMessage(
+            "Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences."),
         "glossary_description": MessageLookupByLibrary.simpleMessage(
             "You can find terminology related to Physical Literacy in the Glossary."),
+        "glossary_instructions": MessageLookupByLibrary.simpleMessage(
+            "This is a glossary - a list of terms related to physical literacy and their descriptions. Scroll through the list below to find the term you need and click it to view its description."),
         "greek": MessageLookupByLibrary.simpleMessage("Greek"),
         "health_sector": MessageLookupByLibrary.simpleMessage("Health sector"),
         "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(
