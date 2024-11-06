@@ -99,10 +99,8 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
             .replaceAll("%2", "$totalChallenges") :
         AppLocalizations.of(context)!.challengesTextNormalInitial
             .replaceAll("%1", snapshot.data!.getString(PrefUtils.username)!),
-        AppLocalizations.of(context)!.ready_letsgo,
-        () {
-          setState(() { });
-        }
+        "",
+        null
     );
   }
 
