@@ -439,6 +439,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Hi, I am your ePhyLi buddy, a virtual companion designed to guide and assist you throughout the game. Let me introduce you to the game with a brief tutorial."),
         "unableToStartActivity": MessageLookupByLibrary.simpleMessage(
             "Error - This activity cannot be started."),
+        "under_construction":
+            MessageLookupByLibrary.simpleMessage("Under construction"),
         "viewBadges": MessageLookupByLibrary.simpleMessage("View badges"),
         "wants_to_participate": MessageLookupByLibrary.simpleMessage(
             "The student wants to participate in physical education classes at school and is aware of the possibility of improvement (affective dimension)."),
