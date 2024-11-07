@@ -275,10 +275,34 @@
   "glossary_PhysicalDomain_desc": "The physical domain encourages the nurturing of physical competence in a range of environments in order to develop a rich and wide-ranging movement vocabulary.",
   "glossary_PhysicalEducation_desc": "Physical education is the school subject in which children do physical exercises or take part in physical games and sports.",
   "glossary_PhysicalLiteracy_desc": "Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.",
-  "glossary_Sport_desc": "Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences."
+  "glossary_Sport_desc": "Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences.",
 
+  "c9a1_instructions": "Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).",
+  "c9a1_finish_message": "Well done! For further information, read the scientific article in the news section.",
 
+  "c9a1_object_play": "Object Play",
+  "c9a1_exercise_play": "Exercise Play",
+  "c9a1_expressive_movement": "Expressive Movement",
+  "c9a1_outdoor_play": "Outdoor Play",
 
+  "c9a1_throwing": "Throwing",
+  "c9a1_catching": "Catching",
+  "c9a1_striking": "Striking",
 
+  "c9a1_rough_and_tumble": "Rough and Tumble",
+  "c9a1_climbing": "Climbing",
+  "c9a1_running": "Running",
+  "c9a1_chasing_games": "Chasing games",
+  "c9a1_bikes_and_scooters": "Bikes and scooters",
+  "c9a1_pushing_and_pulling": "Pushing and pulling",
+
+  "c9a1_dance": "Dance",
+  "c9a1_gymnastics": "Gymnastics",
+  "c9a1_action_rhymes": "Action rhymes",
+  "c9a1_songs_and_stories": "Songs and stories",
+
+  "c9a1_natural_surroundings": "Natural surroundings",
+  "c9a1_rocks_and_tress": "Rocks and Trees",
+  "c9a1_challenges": "Challenges"
 
 }

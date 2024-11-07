@@ -2502,6 +2502,226 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).`
+  String get c9a1_instructions {
+    return Intl.message(
+      'Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).',
+      name: 'c9a1_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! For further information, read the scientific article in the news section.`
+  String get c9a1_finish_message {
+    return Intl.message(
+      'Well done! For further information, read the scientific article in the news section.',
+      name: 'c9a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Object Play`
+  String get c9a1_object_play {
+    return Intl.message(
+      'Object Play',
+      name: 'c9a1_object_play',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exercise Play`
+  String get c9a1_exercise_play {
+    return Intl.message(
+      'Exercise Play',
+      name: 'c9a1_exercise_play',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expressive Movement`
+  String get c9a1_expressive_movement {
+    return Intl.message(
+      'Expressive Movement',
+      name: 'c9a1_expressive_movement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Outdoor Play`
+  String get c9a1_outdoor_play {
+    return Intl.message(
+      'Outdoor Play',
+      name: 'c9a1_outdoor_play',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Throwing`
+  String get c9a1_throwing {
+    return Intl.message(
+      'Throwing',
+      name: 'c9a1_throwing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Catching`
+  String get c9a1_catching {
+    return Intl.message(
+      'Catching',
+      name: 'c9a1_catching',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Striking`
+  String get c9a1_striking {
+    return Intl.message(
+      'Striking',
+      name: 'c9a1_striking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rough and Tumble`
+  String get c9a1_rough_and_tumble {
+    return Intl.message(
+      'Rough and Tumble',
+      name: 'c9a1_rough_and_tumble',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Climbing`
+  String get c9a1_climbing {
+    return Intl.message(
+      'Climbing',
+      name: 'c9a1_climbing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Running`
+  String get c9a1_running {
+    return Intl.message(
+      'Running',
+      name: 'c9a1_running',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chasing games`
+  String get c9a1_chasing_games {
+    return Intl.message(
+      'Chasing games',
+      name: 'c9a1_chasing_games',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bikes and scooters`
+  String get c9a1_bikes_and_scooters {
+    return Intl.message(
+      'Bikes and scooters',
+      name: 'c9a1_bikes_and_scooters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pushing and pulling`
+  String get c9a1_pushing_and_pulling {
+    return Intl.message(
+      'Pushing and pulling',
+      name: 'c9a1_pushing_and_pulling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dance`
+  String get c9a1_dance {
+    return Intl.message(
+      'Dance',
+      name: 'c9a1_dance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gymnastics`
+  String get c9a1_gymnastics {
+    return Intl.message(
+      'Gymnastics',
+      name: 'c9a1_gymnastics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Action rhymes`
+  String get c9a1_action_rhymes {
+    return Intl.message(
+      'Action rhymes',
+      name: 'c9a1_action_rhymes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Songs and stories`
+  String get c9a1_songs_and_stories {
+    return Intl.message(
+      'Songs and stories',
+      name: 'c9a1_songs_and_stories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Natural surroundings`
+  String get c9a1_natural_surroundings {
+    return Intl.message(
+      'Natural surroundings',
+      name: 'c9a1_natural_surroundings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rocks and Trees`
+  String get c9a1_rocks_and_tress {
+    return Intl.message(
+      'Rocks and Trees',
+      name: 'c9a1_rocks_and_tress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Challenges`
+  String get c9a1_challenges {
+    return Intl.message(
+      'Challenges',
+      name: 'c9a1_challenges',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -202,6 +202,41 @@ class MessageLookup extends MessageLookupByLibrary {
             "Identify the correct level for this scenario:"),
         "c7a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 7. You will be shown scenarios representing the progression levels of a student\'s sports practice in relation to the four physical literacy dimensions (physical, affective, social, and cognitive). For each scenario, you need to identify the correct progression level by dragging the scenario to the correct level. Ready?"),
+        "c9a1_action_rhymes":
+            MessageLookupByLibrary.simpleMessage("Action rhymes"),
+        "c9a1_bikes_and_scooters":
+            MessageLookupByLibrary.simpleMessage("Bikes and scooters"),
+        "c9a1_catching": MessageLookupByLibrary.simpleMessage("Catching"),
+        "c9a1_challenges": MessageLookupByLibrary.simpleMessage("Challenges"),
+        "c9a1_chasing_games":
+            MessageLookupByLibrary.simpleMessage("Chasing games"),
+        "c9a1_climbing": MessageLookupByLibrary.simpleMessage("Climbing"),
+        "c9a1_dance": MessageLookupByLibrary.simpleMessage("Dance"),
+        "c9a1_exercise_play":
+            MessageLookupByLibrary.simpleMessage("Exercise Play"),
+        "c9a1_expressive_movement":
+            MessageLookupByLibrary.simpleMessage("Expressive Movement"),
+        "c9a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Well done! For further information, read the scientific article in the news section."),
+        "c9a1_gymnastics": MessageLookupByLibrary.simpleMessage("Gymnastics"),
+        "c9a1_instructions": MessageLookupByLibrary.simpleMessage(
+            "Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles)."),
+        "c9a1_natural_surroundings":
+            MessageLookupByLibrary.simpleMessage("Natural surroundings"),
+        "c9a1_object_play": MessageLookupByLibrary.simpleMessage("Object Play"),
+        "c9a1_outdoor_play":
+            MessageLookupByLibrary.simpleMessage("Outdoor Play"),
+        "c9a1_pushing_and_pulling":
+            MessageLookupByLibrary.simpleMessage("Pushing and pulling"),
+        "c9a1_rocks_and_tress":
+            MessageLookupByLibrary.simpleMessage("Rocks and Trees"),
+        "c9a1_rough_and_tumble":
+            MessageLookupByLibrary.simpleMessage("Rough and Tumble"),
+        "c9a1_running": MessageLookupByLibrary.simpleMessage("Running"),
+        "c9a1_songs_and_stories":
+            MessageLookupByLibrary.simpleMessage("Songs and stories"),
+        "c9a1_striking": MessageLookupByLibrary.simpleMessage("Striking"),
+        "c9a1_throwing": MessageLookupByLibrary.simpleMessage("Throwing"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),

@@ -14,6 +14,7 @@ import '../screen/activity/activity_c4a1.dart';
 import '../screen/activity/activity_c4a2.dart';
 import '../screen/activity/activity_c4a3.dart';
 import '../screen/activity/activity_c7a1.dart';
+import '../screen/activity/activity_c9a1.dart';
 import '../utils/pref_utils.dart';
 
 class ActivityManager {
@@ -88,6 +89,11 @@ class ActivityManager {
           break;
         case "c7a1":
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC7A1(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c9a1":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC9A1(),)).then((value) {
             setState(() {});
           },);
           break;
