@@ -204,6 +204,42 @@ class MessageLookup extends MessageLookupByLibrary {
             "Προσδιορίστε το σωστό επίπεδο για αυτό το σενάριο:"),
         "c7a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στην πρόκληση 7. Θα σας δοθούν σενάρια που αντιπροσωπεύουν τα επίπεδα προόδου της αθλητικής πρακτικής ενός μαθητή σε σχέση με τις τέσσερις διαστάσεις σωματικού γραμματισμού (σωματική, συναισθηματική, κοινωνική και γνωστική). Για κάθε σενάριο, πρέπει να βρείτε το σωστό επίπεδο προόδου σύροντας το σενάριο στο σωστό επίπεδο. Έτοιμοι;"),
+        "c9a1_action_rhymes":
+            MessageLookupByLibrary.simpleMessage("Action rhymes"),
+        "c9a1_bikes_and_scooters":
+            MessageLookupByLibrary.simpleMessage("Ποδήλατα και σκούτερ"),
+        "c9a1_catching": MessageLookupByLibrary.simpleMessage("Πιάσιμο"),
+        "c9a1_challenges": MessageLookupByLibrary.simpleMessage("Προκλήσεις"),
+        "c9a1_chasing_games":
+            MessageLookupByLibrary.simpleMessage("Κυνηγώντας παιχνίδια"),
+        "c9a1_climbing": MessageLookupByLibrary.simpleMessage("Αναρρίχηση"),
+        "c9a1_dance": MessageLookupByLibrary.simpleMessage("Χορός"),
+        "c9a1_exercise_play":
+            MessageLookupByLibrary.simpleMessage("Παιχνίδι άσκησης"),
+        "c9a1_expressive_movement":
+            MessageLookupByLibrary.simpleMessage("Εκφραστική κίνηση"),
+        "c9a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Μπράβο! Για περισσότερες πληροφορίες, διαβάστε το επιστημονικό άρθρο στην ενότητα ειδήσεων."),
+        "c9a1_gymnastics": MessageLookupByLibrary.simpleMessage("Γυμναστική"),
+        "c9a1_instructions": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ήρθατε στην Πρόκληση 9! Αυτή η πρόκληση βασίζεται σε περιβάλλοντα που επιτρέπουν την εφαρμογή (Almond και Lambden, 2016). Σύρετε τους παράγοντες που επηρεάζουν την ενασχόληση με τη σωματική δραστηριότητα (στο κέντρο της οθόνης) στις σωστές μεταβλητές (μπλε κύκλοι) ."),
+        "c9a1_natural_surroundings":
+            MessageLookupByLibrary.simpleMessage("Φυσικό περιβάλλον"),
+        "c9a1_object_play":
+            MessageLookupByLibrary.simpleMessage("Παιχνίδι αντικειμένου"),
+        "c9a1_outdoor_play":
+            MessageLookupByLibrary.simpleMessage("Παιχνίδι σε εξωτερικό χώρο"),
+        "c9a1_pushing_and_pulling":
+            MessageLookupByLibrary.simpleMessage("Σπρώξιμο και τράβηγμα"),
+        "c9a1_rocks_and_tress":
+            MessageLookupByLibrary.simpleMessage("Βράχοι και δέντρα"),
+        "c9a1_rough_and_tumble":
+            MessageLookupByLibrary.simpleMessage("Rough and Tumble"),
+        "c9a1_running": MessageLookupByLibrary.simpleMessage("Εκτέλεση"),
+        "c9a1_songs_and_stories":
+            MessageLookupByLibrary.simpleMessage("Τραγούδια και ιστορίες"),
+        "c9a1_striking": MessageLookupByLibrary.simpleMessage("Χρύπημα"),
+        "c9a1_throwing": MessageLookupByLibrary.simpleMessage("Πέταγμα"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),
@@ -257,6 +293,99 @@ class MessageLookup extends MessageLookupByLibrary {
         "friends": MessageLookupByLibrary.simpleMessage("Φίλοι"),
         "gameOver": MessageLookupByLibrary.simpleMessage("Τέλος παιχνιδιού"),
         "glossary": MessageLookupByLibrary.simpleMessage("Γλωσσάρι"),
+        "glossary_AffectiveDomain":
+            MessageLookupByLibrary.simpleMessage("Συναισθηματικός τομέας"),
+        "glossary_AffectiveDomain_desc": MessageLookupByLibrary.simpleMessage(
+            "Ο συναισθηματικός τομέας αναφέρεται σε πτυχές κινήτρων, αυτοπεποίθησης, αυτοεκτίμησης, αυτοπεποίθησης και θετικής αίσθησης του εαυτού, που αναπτύχθηκε και καλλιεργείται σε μια σειρά περιβαλλόντων."),
+        "glossary_Attributes":
+            MessageLookupByLibrary.simpleMessage("Χαρακτηριστικά"),
+        "glossary_Attributes_desc": MessageLookupByLibrary.simpleMessage(
+            "Είναι τα συστατικά στοιχεία του φυσικού αλφαβητισμού που προσδιορίζονται στον πλήρη ορισμό της έννοιας. Κατά την ανάπτυξη του φυσικού γραμματισμού, τα άτομα θα ανακαλύψουν ότι έχουν τη δυνατότητα να αναπτύξουν όλα τα χαρακτηριστικά που προσδιορίζονται στον πλήρη ορισμό."),
+        "glossary_CognitiveDomain":
+            MessageLookupByLibrary.simpleMessage("Γνωστικός Τομέας"),
+        "glossary_CognitiveDomain_desc": MessageLookupByLibrary.simpleMessage(
+            "Ο γνωστικός τομέας αναφέρεται στη γνώση και κατανόηση της φυσικής κατάστασης και της υγείας, συμπεριλαμβανομένης της άσκησης, της διατροφής, του ύπνου και του τρόπου ζωής, καθώς και στην ανάπτυξη έξυπνης δράσης, στην κατανόηση της κίνησης και στην εφαρμογή της δημιουργικότητας και της φαντασίας σε γκάμα περιβαλλόντων."),
+        "glossary_Confidence":
+            MessageLookupByLibrary.simpleMessage("Εμπιστοσύνη"),
+        "glossary_Confidence_desc": MessageLookupByLibrary.simpleMessage(
+            "Μπορεί να περιγραφεί ως η αντίληψη των δικών του ικανοτήτων."),
+        "glossary_Domains": MessageLookupByLibrary.simpleMessage("Τομείς"),
+        "glossary_Domains_desc": MessageLookupByLibrary.simpleMessage(
+            "Οι τομείς σωματικής παιδείας αναφέρονται στους αλληλένδετους συναισθηματικούς, φυσικούς και γνωστικούς τομείς που στηρίζουν την έννοια του σωματικού γραμματισμού. Οι τομείς συμπεριφοράς, κοινωνικοί και περιβαλλοντικοί αναφέρονται επίσης σε κάποια βιβλιογραφία."),
+        "glossary_Dualism": MessageLookupByLibrary.simpleMessage("Δυϊσμός"),
+        "glossary_Dualism_desc": MessageLookupByLibrary.simpleMessage(
+            "Η άποψη ότι τα ανθρώπινα όντα αποτελούνται από δύο πολύ διαφορετικά και χωριστά \'μέρη\', που είναι το \'σώμα\' και το μυαλό."),
+        "glossary_Embodied": MessageLookupByLibrary.simpleMessage("Ενσάρκωση"),
+        "glossary_Embodied_desc": MessageLookupByLibrary.simpleMessage(
+            "Στο πλαίσιο του φυσικού γραμματισμού, ο όρος ενσωμάτωση χρησιμοποιείται ειδικά για να περιγράψει τα πιθανά άτομα που πρέπει να αλληλεπιδράσουν με το περιβάλλον μέσω της ενσωματωμένης διάστασής μας. Αυτό καλύπτει τόσο την ενσωμάτωση ως βιωμένη όσο και την ενσωμάτωση ως όργανο ή αντικείμενο ."),
+        "glossary_Existentialism":
+            MessageLookupByLibrary.simpleMessage("Υπαρξισμός"),
+        "glossary_Existentialism_desc": MessageLookupByLibrary.simpleMessage(
+            "Είναι μια φιλοσοφία που βασίζεται στην αρχή ότι η ύπαρξη προηγείται της ουσίας. Με άλλα λόγια, τα άτομα δημιουργούν τον εαυτό τους καθώς αλληλεπιδρούν με τον κόσμο."),
+        "glossary_HealthLiteracy":
+            MessageLookupByLibrary.simpleMessage("Γραμματισμός Υγείας"),
+        "glossary_HealthLiteracy_desc": MessageLookupByLibrary.simpleMessage(
+            "Ο βαθμός στον οποίο άτομα και ομάδες μπορούν να αποκτήσουν, να επεξεργαστούν, να κατανοήσουν, να αξιολογήσουν και να ενεργήσουν βάσει των πληροφοριών που απαιτούνται για τη λήψη αποφάσεων για τη δημόσια υγεία που ωφελούν την κοινότητα."),
+        "glossary_HumanDimension":
+            MessageLookupByLibrary.simpleMessage("Ανθρώπινη Διάσταση"),
+        "glossary_HumanDimension_desc": MessageLookupByLibrary.simpleMessage(
+            "Μια πτυχή της ανθρώπινης ύπαρξης μέσω της οποίας τα άτομα μπορούν να αλληλεπιδράσουν με τον κόσμο και να εκφραστούν. Η ενσάρκωση είναι μια τέτοια διάσταση – επομένως, η ενσωματωμένη διάσταση."),
+        "glossary_KnowledgeAndUnderstanding":
+            MessageLookupByLibrary.simpleMessage("Γνώση και Κατανόηση"),
+        "glossary_KnowledgeAndUnderstanding_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "Αποτελείται από δύο κύρια στοιχεία, το πρώτο σχετίζεται με την κατανόηση βασικών αρχών κίνησης και απόδοσης. Το δεύτερο περιλαμβάνει την ανάπτυξη γνώσης και κατανόησης της φυσικής κατάστασης και της υγείας, συμπεριλαμβανομένης της κατανόησης της αξίας της σωματικής δραστηριότητας, της άσκησης, της κατάλληλης διατροφής και των ανάγκη για χαλάρωση και ύπνο."),
+        "glossary_Literacy":
+            MessageLookupByLibrary.simpleMessage("Γραμματισμός"),
+        "glossary_Literacy_desc": MessageLookupByLibrary.simpleMessage(
+            "Ο γραμματισμός είναι η ενσωματωμένη μας αλληλεπίδραση με ένα περιβάλλον. Περιλαμβάνει τη χρήση δεξιοτήτων και διαδικασιών κριτικής και δημιουργικής σκέψης, τη μετάδοση πληροφοριών μέσω διαφόρων μορφών επικοινωνίας και την εφαρμογή γνώσεων και δεξιοτήτων για τη δημιουργία συνδέσεων εντός και μεταξύ διαφόρων πλαισίων."),
+        "glossary_Monism": MessageLookupByLibrary.simpleMessage("Μονισμός"),
+        "glossary_Monism_desc": MessageLookupByLibrary.simpleMessage(
+            "Η άποψη ότι οι άνθρωποι είναι μια οντότητα, ένα σύνολο και δεν διαιρούνται σε ξεχωριστά μέρη, όπως το σώμα και το μυαλό. Αυτό αναφέρεται επίσης ως ολιστική άποψη ή ολισμός, υποδεικνύοντας ότι οι άνθρωποι είναι ένα αδιαίρετο σύνολο."),
+        "glossary_Motivation": MessageLookupByLibrary.simpleMessage("Κίνητρο"),
+        "glossary_Motivation_desc": MessageLookupByLibrary.simpleMessage(
+            "Μπορεί να οριστεί ως η κατεύθυνση και η ένταση της προσπάθειας κάποιου."),
+        "glossary_MovementCapacities":
+            MessageLookupByLibrary.simpleMessage("Κινητικές Ικανότητες"),
+        "glossary_MovementCapacities_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "Οι συστατικές ικανότητες της άρθρωσης κίνησης."),
+        "glossary_MovementPatterns":
+            MessageLookupByLibrary.simpleMessage("Μοτίβα κίνησης"),
+        "glossary_MovementPatterns_desc": MessageLookupByLibrary.simpleMessage(
+            "Τα γενικά μοτίβα κίνησης περιλαμβάνουν το συνολικό απόθεμα κινήσεων για τις οποίες είναι ικανός ο άνθρωπος. Τα γενικά μοτίβα κίνησης που κατακτά ένα άτομο μπορεί να αναφέρονται ως το λεξιλόγιό τους κίνησης. Τα συγκεκριμένα μοτίβα κίνησης προκύπτουν όταν εφαρμόζονται εκλεπτυσμένα μοτίβα κίνησης εντός συγκεκριμένων πλαίσια δραστηριότητας και μορφές κίνησης."),
+        "glossary_MovementVocabulary":
+            MessageLookupByLibrary.simpleMessage("Λεξιλόγιο κίνησης"),
+        "glossary_MovementVocabulary_desc":
+            MessageLookupByLibrary.simpleMessage(
+                "Ανατρέξτε στα μοτίβα κίνησης."),
+        "glossary_Phenomenology":
+            MessageLookupByLibrary.simpleMessage("Φαινομενολογία"),
+        "glossary_Phenomenology_desc": MessageLookupByLibrary.simpleMessage(
+            "Είναι μια φιλοσοφία που βασίζεται στην αρχή ότι εμείς ως ανθρώπινα όντα δίνουμε νόημα στον κόσμο όπως τον αντιλαμβανόμαστε. Τα αντικείμενα στον κόσμο δεν έχουν νόημα πριν από την αντίληψη ενός ατόμου για αυτό το χαρακτηριστικό."),
+        "glossary_PhysicalActivity":
+            MessageLookupByLibrary.simpleMessage("Φυσική δραστηριότητα"),
+        "glossary_PhysicalActivity_desc": MessageLookupByLibrary.simpleMessage(
+            "Οποιαδήποτε σωματική κίνηση που παράγεται από τους σκελετικούς μύες που απαιτεί ενεργειακή δαπάνη."),
+        "glossary_PhysicalCompetence":
+            MessageLookupByLibrary.simpleMessage("Σωματική ικανότητα"),
+        "glossary_PhysicalCompetence_desc": MessageLookupByLibrary.simpleMessage(
+            "Μπορεί να περιγραφεί ως η επάρκεια σε λεξιλόγιο κίνησης, ικανότητες κίνησης και ανεπτυγμένα μοτίβα κίνησης, καθώς και η ανάπτυξη αυτών σε μια σειρά από μορφές κίνησης."),
+        "glossary_PhysicalDomain":
+            MessageLookupByLibrary.simpleMessage("Φυσικός τομέας"),
+        "glossary_PhysicalDomain_desc": MessageLookupByLibrary.simpleMessage(
+            "Ο φυσικός τομέας ενθαρρύνει την καλλιέργεια της φυσικής ικανότητας σε μια σειρά περιβαλλόντων, προκειμένου να αναπτυχθεί ένα πλούσιο και ευρείας εμβέλειας λεξιλόγιο κίνησης."),
+        "glossary_PhysicalEducation":
+            MessageLookupByLibrary.simpleMessage("Φυσική Αγωγή"),
+        "glossary_PhysicalEducation_desc": MessageLookupByLibrary.simpleMessage(
+            "Η φυσική αγωγή είναι το σχολικό μάθημα στο οποίο τα παιδιά κάνουν σωματικές ασκήσεις ή συμμετέχουν σε σωματικά παιχνίδια και αθλήματα."),
+        "glossary_PhysicalLiteracy":
+            MessageLookupByLibrary.simpleMessage("Φυσικός Γραμματισμός"),
+        "glossary_PhysicalLiteracy_desc": MessageLookupByLibrary.simpleMessage(
+            "Ο σωματικός αλφαβητισμός μπορεί να περιγραφεί ως το κίνητρο, η αυτοπεποίθηση, η σωματική ικανότητα, η γνώση και η κατανόηση για την εκτίμηση και την ανάληψη ευθύνης για τη συμμετοχή σε σωματικές δραστηριότητες για όλη τη ζωή."),
+        "glossary_Sport": MessageLookupByLibrary.simpleMessage("Αθλητισμός"),
+        "glossary_Sport_desc": MessageLookupByLibrary.simpleMessage(
+            "Ο αθλητισμός χρησιμοποιείται συχνότερα για να αναφέρεται σε ανταγωνιστικά παιχνίδια ή σωματικές δραστηριότητες. Συνήθως, σε αυτό το πλαίσιο, τα αθλήματα διέπονται από ένα συμφωνημένο σύνολο κανόνων και απαιτούν από τους συμμετέχοντες να μάθουν και να επιδείξουν σωματικό αθλητισμό και δεξιότητες. Τα αθλήματα χρησιμοποιούνται εντός του προγράμματος σπουδών Φυσικής Αγωγής για την παροχή μαθησιακών εμπειριών."),
         "glossary_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε να βρείτε ορολογία που σχετίζεται με τον Φυσικό Γραμματισμό στο Γλωσσάρι."),
         "glossary_instructions": MessageLookupByLibrary.simpleMessage(
