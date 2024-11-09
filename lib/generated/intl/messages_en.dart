@@ -274,6 +274,53 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Songs and stories"),
         "c9a1_striking": MessageLookupByLibrary.simpleMessage("Striking"),
         "c9a1_throwing": MessageLookupByLibrary.simpleMessage("Throwing"),
+        "c9a2_activities_balanced": MessageLookupByLibrary.simpleMessage(
+            "Activities balanced to students’ motor skills."),
+        "c9a2_correct": MessageLookupByLibrary.simpleMessage("Correct"),
+        "c9a2_ego_oriented":
+            MessageLookupByLibrary.simpleMessage("Ego-oriented activities."),
+        "c9a2_enjoyment_oriented": MessageLookupByLibrary.simpleMessage(
+            "Enjoyment-oriented activities."),
+        "c9a2_evaluate_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "Exercises to evaluate students’ motor skills by administering specific tests."),
+        "c9a2_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have completed the ninth challenge. Press \'Finish\' to get your badge!"),
+        "c9a2_fitness_health_wellbeing": MessageLookupByLibrary.simpleMessage(
+            "Activities focused on fitness, health, and well-being."),
+        "c9a2_gender_separated_activities":
+            MessageLookupByLibrary.simpleMessage(
+                "Separate activities for males and females."),
+        "c9a2_inclusive_games": MessageLookupByLibrary.simpleMessage(
+            "Games or game rules that require the participation of all students."),
+        "c9a2_intro_message": MessageLookupByLibrary.simpleMessage(
+            "You are challenged to design a comprehensive physical education curriculum for a virtual school, incorporating both curricular and extra-curricular activities that promote physical literacy. The challenge is to balance various elements such as inclusivity, engagement, and educational outcomes. Μove each curriculum feature (shown at the bottom) to the correct or wrong box. Correct features must be moved to the \'Correct\' box, and wrong features must be moved to the \'Wrong\' box. Ready?"),
+        "c9a2_long_queues": MessageLookupByLibrary.simpleMessage(
+            "Games with long queues of children."),
+        "c9a2_music_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "Games/activities to learn and develop students’ motor skills using music."),
+        "c9a2_one_size_fits_all":
+            MessageLookupByLibrary.simpleMessage("One-size-fits-all approach."),
+        "c9a2_outdoor_play": MessageLookupByLibrary.simpleMessage(
+            "Outdoor walking with breaks for playing games."),
+        "c9a2_pe_curriculum_guidelines": MessageLookupByLibrary.simpleMessage(
+            "Coherence with country PE curriculum guidelines."),
+        "c9a2_promote_self_knowledge": MessageLookupByLibrary.simpleMessage(
+            "Activities to promote self-knowledge."),
+        "c9a2_prompt": MessageLookupByLibrary.simpleMessage(
+            "Drag each element to the right box."),
+        "c9a2_respect_game_rules": MessageLookupByLibrary.simpleMessage(
+            "Activities to promote respect for the game rules and fair play."),
+        "c9a2_sports_oriented_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "Activities to improve students’ motor skills oriented to sports practice."),
+        "c9a2_summary_objectives": MessageLookupByLibrary.simpleMessage(
+            "Summary definition of objectives."),
+        "c9a2_team_spirit_socialization": MessageLookupByLibrary.simpleMessage(
+            "Group activities to enhance team spirit and socialization."),
+        "c9a2_varied_teaching_strategies": MessageLookupByLibrary.simpleMessage(
+            "Use a wide range of teaching strategies."),
+        "c9a2_win_at_all_costs": MessageLookupByLibrary.simpleMessage(
+            "Activities geared towards the \'Win-at-all-costs\' mentality."),
+        "c9a2_wrong": MessageLookupByLibrary.simpleMessage("Wrong"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "challengeLocked":
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),

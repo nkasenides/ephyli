@@ -341,40 +341,46 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
       AppLocalizations.of(context)!.c9a1_finish_message,
       AppLocalizations.of(context)!.finish,
       () {
+
         ActivityManager.completeActivity(activityID).then((value) {
-          //Find all badges related to this activity and award them:
-          for (var badgeID in Challenge.challenge9.badgeIDs) {
-            var badge = GameBadge.findBadge(badgeID);
-            badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
-              if (!value) {
-                badge.earn(context);
-              }
-            },);
-          }
-
-          //Unlock next challenges:
-          List<Future> unlockFutures = [];
-          for (var challengeID in Challenge.challenge9.unlocksChallengesIDs) {
-            Challenge challenge = Challenge.findChallenge(challengeID)!;
-            challenge.isUnlocked().then((value) {
-              if (!value) {
-                unlockFutures.add(challenge.unlock());
-              }
-            },);
-          }
-
-          //Show toast and move back:
-          Future.wait(unlockFutures).then((value) {
-            if (unlockFutures.isNotEmpty) {
-              Fluttertoast.showToast(
-                  msg: AppLocalizations.of(context)!
-                      .challenges_unlocked.replaceAll(
-                      "%1", unlockFutures.length.toString()));
-            }
-          },);
+          Navigator.pop(context, "_");
         },);
-        Navigator.pop(context, "_");
-        Navigator.pop(context, "_");
+
+        //TODO MOVE TO C9A2 end
+        // ActivityManager.completeActivity(activityID).then((value) {
+        //   //Find all badges related to this activity and award them:
+        //   for (var badgeID in Challenge.challenge9.badgeIDs) {
+        //     var badge = GameBadge.findBadge(badgeID);
+        //     badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+        //       if (!value) {
+        //         badge.earn(context);
+        //       }
+        //     },);
+        //   }
+        //
+        //   //Unlock next challenges:
+        //   List<Future> unlockFutures = [];
+        //   for (var challengeID in Challenge.challenge9.unlocksChallengesIDs) {
+        //     Challenge challenge = Challenge.findChallenge(challengeID)!;
+        //     challenge.isUnlocked().then((value) {
+        //       if (!value) {
+        //         unlockFutures.add(challenge.unlock());
+        //       }
+        //     },);
+        //   }
+        //
+        //   //Show toast and move back:
+        //   Future.wait(unlockFutures).then((value) {
+        //     if (unlockFutures.isNotEmpty) {
+        //       Fluttertoast.showToast(
+        //           msg: AppLocalizations.of(context)!
+        //               .challenges_unlocked.replaceAll(
+        //               "%1", unlockFutures.length.toString()));
+        //     }
+        //   },);
+        // },);
+        // Navigator.pop(context, "_");
+        // Navigator.pop(context, "_");
       }
     );
   }

@@ -621,6 +621,24 @@ class I10N {
       "pl": "#MISSING#",
     },
 
+    "c9a2_name": {
+      "en": "Activity 2",
+      "el": "Δραστηριότητα 2",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c9a2_description": {
+      "en": "Activity 2 Description",
+      "el": "Δραστηριότητα 2 Περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
   };
 
   static String? getI10nString(String id) {

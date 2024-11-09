@@ -7,6 +7,7 @@ import 'package:ephyli/screen/activity/activity_c3a1.dart';
 import 'package:ephyli/screen/activity/activity_c5a1.dart';
 import 'package:ephyli/screen/activity/activity_c6a1.dart';
 import 'package:ephyli/screen/activity/activity_c8a1.dart';
+import 'package:ephyli/screen/activity/activity_c9a2.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -100,6 +101,11 @@ class ActivityManager {
           break;
         case "c9a1":
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC9A1(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c9a2":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC9A2(),)).then((value) {
             setState(() {});
           },);
           break;

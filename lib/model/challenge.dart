@@ -192,7 +192,8 @@ class Challenge {
       imageCompletedRes: AppImages.logo,
       imageIncompleteRes: AppImages.logoBlackAndWhite,
       activityIDs: [
-        "c9a1"
+        "c9a1",
+        "c9a2",
       ],
       badgeIDs: [
         "challenge9Badge"

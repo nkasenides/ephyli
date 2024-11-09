@@ -277,6 +277,51 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Τραγούδια και ιστορίες"),
         "c9a1_striking": MessageLookupByLibrary.simpleMessage("Χρύπημα"),
         "c9a1_throwing": MessageLookupByLibrary.simpleMessage("Πέταγμα"),
+        "c9a2_activities_balanced": MessageLookupByLibrary.simpleMessage(
+            "Δραστηριότητες ισορροπημένες με τις κινητικές δεξιότητες των μαθητών."),
+        "c9a2_correct": MessageLookupByLibrary.simpleMessage("Σωστό"),
+        "c9a2_ego_oriented": MessageLookupByLibrary.simpleMessage(
+            "Εγω-προσανατολισμένες δραστηριότητες."),
+        "c9a2_enjoyment_oriented": MessageLookupByLibrary.simpleMessage(
+            "Δραστηριότητες προσανατολισμένες στην απόλαυση."),
+        "c9a2_evaluate_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "Ασκήσεις για την αξιολόγηση των κινητικών δεξιοτήτων των μαθητών με τη χορήγηση συγκεκριμένων τεστ."),
+        "c9a2_fitness_health_wellbeing": MessageLookupByLibrary.simpleMessage(
+            "Δραστηριότητες που επικεντρώνονται στη φυσική κατάσταση, την υγεία και την ευεξία."),
+        "c9a2_gender_separated_activities":
+            MessageLookupByLibrary.simpleMessage(
+                "Ξεχωριστές δραστηριότητες για άνδρες και γυναίκες."),
+        "c9a2_inclusive_games": MessageLookupByLibrary.simpleMessage(
+            "Παιχνίδια ή κανόνες παιχνιδιού που απαιτούν τη συμμετοχή όλων των μαθητών."),
+        "c9a2_intro_message": MessageLookupByLibrary.simpleMessage(
+            "Καλείτε να σχεδιάσετε ένα ολοκληρωμένο πρόγραμμα σπουδών φυσικής αγωγής για ένα εικονικό σχολείο, το οποίο να ενσωματώνει τόσο σχολικές όσο και εξωσχολικές δραστηριότητες που προάγουν τον σωματικό αλφαβητισμό. Η πρόκληση είναι να εξισορροπήσετε διάφορα στοιχεία, όπως η συμπερίληψη, η δέσμευση και τα εκπαιδευτικά αποτελέσματα. Μετακινήστε κάθε χαρακτηριστικό του προγράμματος σπουδών (εμφανίζεται στο κάτω μέρος) στο σωστό ή λάθος πλαίσιο. Έτοιμοι;"),
+        "c9a2_long_queues": MessageLookupByLibrary.simpleMessage(
+            "Παιχνίδια με μεγάλες ουρές παιδιών."),
+        "c9a2_music_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "Παιχνίδια/δραστηριότητες για να μάθουν και να αναπτύξουν τις κινητικές δεξιότητες των μαθητών χρησιμοποιώντας μουσική."),
+        "c9a2_one_size_fits_all":
+            MessageLookupByLibrary.simpleMessage("Προσέγγιση για όλους."),
+        "c9a2_outdoor_play": MessageLookupByLibrary.simpleMessage(
+            "Περπάτημα σε εξωτερικό χώρο με διαλείμματα για παιχνίδια."),
+        "c9a2_pe_curriculum_guidelines": MessageLookupByLibrary.simpleMessage(
+            "Συνοχή με τις οδηγίες του προγράμματος σπουδών PE χώρας."),
+        "c9a2_promote_self_knowledge": MessageLookupByLibrary.simpleMessage(
+            "Δραστηριότητες για την προώθηση της αυτογνωσίας."),
+        "c9a2_prompt": MessageLookupByLibrary.simpleMessage(
+            "Σύρετε κάθε στοιχείο στο σωστό πλαίσιο."),
+        "c9a2_respect_game_rules": MessageLookupByLibrary.simpleMessage(
+            "Δραστηριότητες για την προώθηση του σεβασμού των κανόνων παιχνιδιού και του ευγενούς παιχνιδιού."),
+        "c9a2_sports_oriented_motor_skills": MessageLookupByLibrary.simpleMessage(
+            "Δραστηριότητες για τη βελτίωση των κινητικών δεξιοτήτων των μαθητών που προσανατολίζονται στην αθλητική πρακτική."),
+        "c9a2_summary_objectives": MessageLookupByLibrary.simpleMessage(
+            "Συνοπτικός ορισμός των στόχων."),
+        "c9a2_team_spirit_socialization": MessageLookupByLibrary.simpleMessage(
+            "Ομαδικές δραστηριότητες για την ενίσχυση του ομαδικού πνεύματος και της κοινωνικοποίησης."),
+        "c9a2_varied_teaching_strategies": MessageLookupByLibrary.simpleMessage(
+            "Χρησιμοποιήστε ένα ευρύ φάσμα στρατηγικών διδασκαλίας."),
+        "c9a2_win_at_all_costs": MessageLookupByLibrary.simpleMessage(
+            "Δραστηριότητες προσανατολισμένες στη νοοτροπία \'Win-at-all-costs\'."),
+        "c9a2_wrong": MessageLookupByLibrary.simpleMessage("Λάθος"),
         "cancel": MessageLookupByLibrary.simpleMessage("Ακύρωση"),
         "challengeLocked": MessageLookupByLibrary.simpleMessage(
             "Αυτή η πρόκληση είναι κλειδωμένη"),

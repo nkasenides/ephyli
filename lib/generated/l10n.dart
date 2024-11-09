@@ -2443,6 +2443,246 @@ class S {
     );
   }
 
+  /// `You are challenged to design a comprehensive physical education curriculum for a virtual school, incorporating both curricular and extra-curricular activities that promote physical literacy. The challenge is to balance various elements such as inclusivity, engagement, and educational outcomes. Μove each curriculum feature (shown at the bottom) to the correct or wrong box. Correct features must be moved to the 'Correct' box, and wrong features must be moved to the 'Wrong' box. Ready?`
+  String get c9a2_intro_message {
+    return Intl.message(
+      'You are challenged to design a comprehensive physical education curriculum for a virtual school, incorporating both curricular and extra-curricular activities that promote physical literacy. The challenge is to balance various elements such as inclusivity, engagement, and educational outcomes. Μove each curriculum feature (shown at the bottom) to the correct or wrong box. Correct features must be moved to the \'Correct\' box, and wrong features must be moved to the \'Wrong\' box. Ready?',
+      name: 'c9a2_intro_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drag each element to the right box.`
+  String get c9a2_prompt {
+    return Intl.message(
+      'Drag each element to the right box.',
+      name: 'c9a2_prompt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have completed the ninth challenge. Press 'Finish' to get your badge!`
+  String get c9a2_finish_message {
+    return Intl.message(
+      'Well done! You have completed the ninth challenge. Press \'Finish\' to get your badge!',
+      name: 'c9a2_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Correct`
+  String get c9a2_correct {
+    return Intl.message(
+      'Correct',
+      name: 'c9a2_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong`
+  String get c9a2_wrong {
+    return Intl.message(
+      'Wrong',
+      name: 'c9a2_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activities balanced to students’ motor skills.`
+  String get c9a2_activities_balanced {
+    return Intl.message(
+      'Activities balanced to students’ motor skills.',
+      name: 'c9a2_activities_balanced',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coherence with country PE curriculum guidelines.`
+  String get c9a2_pe_curriculum_guidelines {
+    return Intl.message(
+      'Coherence with country PE curriculum guidelines.',
+      name: 'c9a2_pe_curriculum_guidelines',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Games/activities to learn and develop students’ motor skills using music.`
+  String get c9a2_music_motor_skills {
+    return Intl.message(
+      'Games/activities to learn and develop students’ motor skills using music.',
+      name: 'c9a2_music_motor_skills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activities focused on fitness, health, and well-being.`
+  String get c9a2_fitness_health_wellbeing {
+    return Intl.message(
+      'Activities focused on fitness, health, and well-being.',
+      name: 'c9a2_fitness_health_wellbeing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exercises to evaluate students’ motor skills by administering specific tests.`
+  String get c9a2_evaluate_motor_skills {
+    return Intl.message(
+      'Exercises to evaluate students’ motor skills by administering specific tests.',
+      name: 'c9a2_evaluate_motor_skills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Outdoor walking with breaks for playing games.`
+  String get c9a2_outdoor_play {
+    return Intl.message(
+      'Outdoor walking with breaks for playing games.',
+      name: 'c9a2_outdoor_play',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activities to improve students’ motor skills oriented to sports practice.`
+  String get c9a2_sports_oriented_motor_skills {
+    return Intl.message(
+      'Activities to improve students’ motor skills oriented to sports practice.',
+      name: 'c9a2_sports_oriented_motor_skills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activities to promote self-knowledge.`
+  String get c9a2_promote_self_knowledge {
+    return Intl.message(
+      'Activities to promote self-knowledge.',
+      name: 'c9a2_promote_self_knowledge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Group activities to enhance team spirit and socialization.`
+  String get c9a2_team_spirit_socialization {
+    return Intl.message(
+      'Group activities to enhance team spirit and socialization.',
+      name: 'c9a2_team_spirit_socialization',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activities to promote respect for the game rules and fair play.`
+  String get c9a2_respect_game_rules {
+    return Intl.message(
+      'Activities to promote respect for the game rules and fair play.',
+      name: 'c9a2_respect_game_rules',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Games or game rules that require the participation of all students.`
+  String get c9a2_inclusive_games {
+    return Intl.message(
+      'Games or game rules that require the participation of all students.',
+      name: 'c9a2_inclusive_games',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoyment-oriented activities.`
+  String get c9a2_enjoyment_oriented {
+    return Intl.message(
+      'Enjoyment-oriented activities.',
+      name: 'c9a2_enjoyment_oriented',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use a wide range of teaching strategies.`
+  String get c9a2_varied_teaching_strategies {
+    return Intl.message(
+      'Use a wide range of teaching strategies.',
+      name: 'c9a2_varied_teaching_strategies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ego-oriented activities.`
+  String get c9a2_ego_oriented {
+    return Intl.message(
+      'Ego-oriented activities.',
+      name: 'c9a2_ego_oriented',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One-size-fits-all approach.`
+  String get c9a2_one_size_fits_all {
+    return Intl.message(
+      'One-size-fits-all approach.',
+      name: 'c9a2_one_size_fits_all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Summary definition of objectives.`
+  String get c9a2_summary_objectives {
+    return Intl.message(
+      'Summary definition of objectives.',
+      name: 'c9a2_summary_objectives',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activities geared towards the 'Win-at-all-costs' mentality.`
+  String get c9a2_win_at_all_costs {
+    return Intl.message(
+      'Activities geared towards the \'Win-at-all-costs\' mentality.',
+      name: 'c9a2_win_at_all_costs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Games with long queues of children.`
+  String get c9a2_long_queues {
+    return Intl.message(
+      'Games with long queues of children.',
+      name: 'c9a2_long_queues',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Separate activities for males and females.`
+  String get c9a2_gender_separated_activities {
+    return Intl.message(
+      'Separate activities for males and females.',
+      name: 'c9a2_gender_separated_activities',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(
