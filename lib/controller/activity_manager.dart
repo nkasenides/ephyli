@@ -12,6 +12,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../model/activity.dart';
+import '../screen/activity/activity_c10a1.dart';
+import '../screen/activity/activity_c10a2.dart';
 import '../screen/activity/activity_c4a1.dart';
 import '../screen/activity/activity_c4a2.dart';
 import '../screen/activity/activity_c4a3.dart';
@@ -106,6 +108,16 @@ class ActivityManager {
           break;
         case "c9a2":
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC9A2(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c10a1":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC10A1(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c10a2":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC10A2(),)).then((value) {
             setState(() {});
           },);
           break;

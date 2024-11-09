@@ -40,6 +40,7 @@ class Challenge {
     challenge7,
     challenge8,
     challenge9,
+    challenge10,
   ];
 
   // * --------------- CHALLENGES
@@ -199,9 +200,26 @@ class Challenge {
         "challenge9Badge"
       ],
       unlocksChallengesIDs: [
-        "challenge9"
+        "challenge10"
       ],
-    unlocked: true, //TODO Important: Delete this to lock challenge 9.
+  );
+
+  static final Challenge challenge10 = Challenge(
+    id: "challenge10",
+    nameRes: "c10_name",
+    descriptionRes: "c10_description",
+    imageCompletedRes: AppImages.logo,
+    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    activityIDs: [
+      "c10a1",
+      "c10a2",
+    ],
+    badgeIDs: [
+      "challenge10Badge"
+    ],
+    unlocksChallengesIDs: [
+      "challenge11"
+    ],
   );
 
   /*---------------------------------------------------------------------------*/

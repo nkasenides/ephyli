@@ -221,6 +221,24 @@ class I10N {
       "pl": "#MISSING#",
     },
 
+    "c10_badge_name": {
+      "en": "Challenge 10 Badge",
+      "el": "Σήμα Πρόκλησης 10",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c10_badge_description": {
+      "en": "This badge is awarded to players who have completed the tenth challenge.",
+      "el": "Αυτό το σήμα απονέμεται σε παίκτες που έχουν ολοκληρώσει την δέκατη πρόκληση.",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
     //----- Challenges
 
     "c1_name": {
@@ -379,6 +397,24 @@ class I10N {
     "c9_description": {
       "en": "Challenge 9 description",
       "el": "Πρόκληση 9 περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c10_name": {
+      "en": "Challenge 10",
+      "el": "Πρόκληση 10",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c10_description": {
+      "en": "Challenge 10 description",
+      "el": "Πρόκληση 10 περιγραφή",
       "fr": "#MISSING#",
       "it": "#MISSING#",
       "lb": "#MISSING#",
@@ -631,6 +667,42 @@ class I10N {
     },
 
     "c9a2_description": {
+      "en": "Activity 2 Description",
+      "el": "Δραστηριότητα 2 Περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c10a1_name": {
+      "en": "Activity 1",
+      "el": "Δραστηριότητα 1",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c10a1_description": {
+      "en": "Activity 1 Description",
+      "el": "Δραστηριότητα 1 Περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c10a2_name": {
+      "en": "Activity 2",
+      "el": "Δραστηριότητα 2",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c10a2_description": {
       "en": "Activity 2 Description",
       "el": "Δραστηριότητα 2 Περιγραφή",
       "fr": "#MISSING#",
