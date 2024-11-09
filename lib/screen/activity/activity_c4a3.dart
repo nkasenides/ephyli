@@ -19,6 +19,8 @@ import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../widgets/rotate_device_widget.dart';
+
 class ActivityC4A3 extends StatefulWidget {
   @override
   _ActivityC4A3State createState() => _ActivityC4A3State();
@@ -316,7 +318,7 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
         );
       }
       else {
-        return Center(child: Text(AppLocalizations.of(context)!.pleaseTurnDevice));
+        return Center(child: RotateDeviceWidget(Orientation.landscape));
       }
     },);
 

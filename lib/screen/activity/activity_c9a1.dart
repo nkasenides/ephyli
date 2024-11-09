@@ -7,6 +7,7 @@ import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
+import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -271,7 +272,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
         );
       }
       else {
-        return Center(child: Text(AppLocalizations.of(context)!.pleaseTurnDevice));
+        return Center(child: RotateDeviceWidget(Orientation.landscape));
       }
     },);
 
