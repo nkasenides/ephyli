@@ -129,18 +129,23 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
                     Expanded(
                       child: OrientationBuilder(builder: (context, orientation) {
+
+                        //LANDSCAPE
+
                         if (orientation == Orientation.landscape) {
                           return GridView.count(
                             scrollDirection: Axis.horizontal,
                             crossAxisCount: 1,
                             children: Challenge.challenges.map((e) {
-                              return ChallengeWidget(e, refresher: _refresh);
+                              return ChallengeWidget(e, refresher: _refresh, dense: true,);
                             }).toList(),
                           );
                         }
+
+                        //PORTRAIT
+
                         else {
                           return GridView.count(
-                            // scrollDirection: Axis.horizontal,
                             crossAxisCount: 2,
                             children: Challenge.challenges.map((e) {
                               return ChallengeWidget(e, refresher: _refresh);

@@ -26,35 +26,37 @@ class UIUtils {
 
     return AlertDialog(
       title: Text(I10N.getI10nString(badge.nameRes)!, textAlign: TextAlign.center,),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
+      content: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
 
-          ConfettiWidget(
-            confettiController: confettiController,
-            blastDirectionality: BlastDirectionality.explosive,
-            colors: const [ Themes.primaryColor, Themes.primaryColorDark, Themes.secondaryColor ],
-            blastDirection: pi,
-            numberOfParticles: 5,
-            createParticlePath: _drawStarAnimation,
-          ),
+            ConfettiWidget(
+              confettiController: confettiController,
+              blastDirectionality: BlastDirectionality.explosive,
+              colors: const [ Themes.primaryColor, Themes.primaryColorDark, Themes.secondaryColor ],
+              blastDirection: pi,
+              numberOfParticles: 5,
+              createParticlePath: _drawStarAnimation,
+            ),
 
-          const Divider(),
+            const Divider(),
 
-          const Gap(20),
+            const Gap(20),
 
-          Text(AppLocalizations.of(context)!.newBadgeText, textAlign: TextAlign.center,),
+            Text(AppLocalizations.of(context)!.newBadgeText, textAlign: TextAlign.center,),
 
-          const Gap(20),
+            const Gap(20),
 
-          BadgeWidget(badge),
+            BadgeWidget(badge),
 
-          const Gap(20),
+            const Gap(20),
 
-          Text(I10N.getI10nString(badge.descriptionRes)!, textAlign: TextAlign.center,),
+            Text(I10N.getI10nString(badge.descriptionRes)!, textAlign: TextAlign.center,),
 
 
-        ],
+          ],
+        ),
       ),
       actions: [
 

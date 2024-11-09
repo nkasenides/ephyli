@@ -20,8 +20,9 @@ class ChallengeWidget extends StatefulWidget {
 
   final Challenge challenge;
   final Function refresher;
+  final bool dense;
 
-  const ChallengeWidget(this.challenge, {super.key, required this.refresher});
+  const ChallengeWidget(this.challenge, {super.key, required this.refresher, this.dense = false});
 
   @override
   State<ChallengeWidget> createState() => _ChallengeWidgetState();
@@ -82,13 +83,13 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
                 children: [
                   Text(I10N.getI10nString(widget.challenge.nameRes)!, style: Theme.of(context).textTheme.titleMedium,),
 
-                  Text(
+                  !widget.dense ? Text(
                     I10N.getI10nString(widget.challenge.descriptionRes)!,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                     style: TextStyle(color: Colors.grey.shade700),
                     textAlign: TextAlign.center,
-                  ),
+                  ) : Container(),
                 ],
               ),
             ),
