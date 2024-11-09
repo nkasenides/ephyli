@@ -30,12 +30,39 @@ class MessageLookup extends MessageLookupByLibrary {
         "activities": MessageLookupByLibrary.simpleMessage("activities"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "This activity is locked. Complete the previous activities to unlock."),
+        "activity_balance":
+            MessageLookupByLibrary.simpleMessage("Balance activity"),
+        "activity_balance_option_1": MessageLookupByLibrary.simpleMessage(
+            "Children form a large circle in the centre of the playing area. Someone assumes an unstable position like a statue. All students in the circle perform the same balance, holding it for 3 seconds. When the time is up, the next child does the same."),
+        "activity_balance_option_2": MessageLookupByLibrary.simpleMessage(
+            "Wheelbarrow race. Students in pairs. One teammate plays the role of the driver, and the other plays the role of the wheelbarrow. The driver holds on to the other player\'s ankles, while the latter walks with his hands."),
+        "activity_balance_option_3": MessageLookupByLibrary.simpleMessage(
+            "Children walk around a large area. They can change direction and speed but must avoid contact with others. When the teacher calls a number, children form groups only according to that number, making a circle. They must jump five times on one foot. Child/children without a group perform a static balance."),
+        "activity_striking":
+            MessageLookupByLibrary.simpleMessage("Striking with the hand"),
+        "activity_striking_option_1": MessageLookupByLibrary.simpleMessage(
+            "Children in groups of three/four, according to the number of students in the classroom. One balloon per group. Each group must move the balloon to the end of the playing area without holding onto it or letting it touch the ground. Each child must pass the balloon to a teammate before touching it again."),
+        "activity_striking_option_2": MessageLookupByLibrary.simpleMessage(
+            "Children are divided into pairs. Each group has a sponge ball and a towel. The pair hold the towel between them. The children must coordinate their movement to lift the towel, throw the ball into the air and catch it again on its return."),
+        "activity_striking_option_3": MessageLookupByLibrary.simpleMessage(
+            "Children are divided into groups of four. Each group forms a circle and puts one hoop in the centre. Each child must pass a bouncy ball to the teammate by first bouncing it in the circle."),
+        "activity_throwing":
+            MessageLookupByLibrary.simpleMessage("Throwing activity"),
+        "activity_throwing_option_1": MessageLookupByLibrary.simpleMessage(
+            "Children form a large circle in the centre of the playing area. One of them has a sound ball. All children must close their eyes, except for the child with the ball who must roll it to another one, using both hands. When all have rolled the ball, they must use another part of the body, such as the hip, knee, and elbow."),
+        "activity_throwing_option_2": MessageLookupByLibrary.simpleMessage(
+            "Children in groups of two/three, according to the number of students in the classroom, in front of a wall. One child must throw the ball against the wall and catch it again as many times as possible in twenty seconds. Other teammates count the seconds and the correct executions of the task."),
+        "activity_throwing_option_3": MessageLookupByLibrary.simpleMessage(
+            "Children are divided into two teams. The playing area is divided into two areas. Each team built three castles with cones and placed them at the end of the playing fields. Each team has five soft balls. The children must throw the balls trying to bring down the castles of the other team."),
         "adapts_to_game": MessageLookupByLibrary.simpleMessage(
             "The student knows how to adapt to the game situations of volleyball and is physically capable of dealing with them (physical dimension)."),
         "advanced_level":
             MessageLookupByLibrary.simpleMessage("Advanced level"),
         "alreadyPlayedActivity": MessageLookupByLibrary.simpleMessage(
             "You have already participated in this activity. Would you like to replay it?"),
+        "appropriate_motor_skills_background":
+            MessageLookupByLibrary.simpleMessage(
+                "Appropriate motor skills background"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Available cards"),
@@ -202,6 +229,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "Identify the correct level for this scenario:"),
         "c7a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 7. You will be shown scenarios representing the progression levels of a student\'s sports practice in relation to the four physical literacy dimensions (physical, affective, social, and cognitive). For each scenario, you need to identify the correct progression level by dragging the scenario to the correct level. Ready?"),
+        "c8a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have completed the eighth challenge. Press \'Finish\' to get your badge!"),
+        "c8a1_instructions": MessageLookupByLibrary.simpleMessage(
+            "Welcome to Challenge 8! Assume the role of a physical education teacher of children 6-year-olds and choose from three different games for each physical activity session to teach a fundamental movement. Each game is classified according to three parameters, represented by three bottles: (I) appropriate motor skills background, (II) inclusion/teamwork, and (III) enjoyment. The score for each parameter ranges from 1 to 3 points and represents the level of water that will be poured into the bottle. To pass the challenge you must fill the three bottles by choosing the most appropriate game. Ready?"),
+        "c8a1_please_select_option":
+            MessageLookupByLibrary.simpleMessage("Please select an option."),
+        "c8a1_prompt": MessageLookupByLibrary.simpleMessage(
+            "Select the most appropriate option to achieve a balance between the three parameters."),
+        "c8a1_wrong": MessageLookupByLibrary.simpleMessage(
+            "That is not the right balance. Please try a different option."),
         "c9a1_action_rhymes":
             MessageLookupByLibrary.simpleMessage("Action rhymes"),
         "c9a1_bikes_and_scooters":
@@ -281,6 +318,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "education_school":
             MessageLookupByLibrary.simpleMessage("Education and school sector"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "enjoyment": MessageLookupByLibrary.simpleMessage("Enjoyment"),
         "enthusiastic_participation": MessageLookupByLibrary.simpleMessage(
             "The student is enthusiastic about participating in physical education classes at school and is aware of his/her level of involvement (affective dimension)."),
         "error": MessageLookupByLibrary.simpleMessage("An error has occurred."),
@@ -390,6 +428,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "This is a glossary - a list of terms related to physical literacy and their descriptions. Scroll through the list below to find the term you need and click it to view its description."),
         "greek": MessageLookupByLibrary.simpleMessage("Greek"),
         "health_sector": MessageLookupByLibrary.simpleMessage("Health sector"),
+        "inclusion_teamwork":
+            MessageLookupByLibrary.simpleMessage("Inclusion/Teamwork"),
         "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(
             "The student demonstrates independence and positive interpersonal skills that contribute to increased participation in extracurricular sporting activities (social dimension)."),
         "individual": MessageLookupByLibrary.simpleMessage("Individual"),

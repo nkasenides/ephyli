@@ -86,7 +86,6 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
   }
 
   Widget activityGameView() {
-    UIUtils.landscapeOrientation();
 
     if (shuffledFactors.isEmpty) {
 

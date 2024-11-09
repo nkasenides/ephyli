@@ -140,18 +140,26 @@ class UIUtils {
     }
   }
 
-  static showFeedbackBar(BuildContext context, bool rightAnswer) {
+  static showFeedbackBar(BuildContext context, bool rightAnswer, {String text = ""}) {
     if (!snackbarIsShowing) {
       snackbarIsShowing = true;
       ScaffoldMessenger
           .of(context)
           .showSnackBar(
           SnackBar(
-            duration: const Duration(seconds: 1),
+            duration: Duration(seconds: (text == "") ? 1 : 3),
             padding: Themes.standardPadding,
             backgroundColor: rightAnswer ? Colors.green : Colors.red,
-            content: Icon(
-              rightAnswer ? Icons.check : Icons.close, color: Colors.white,),
+            content: text == "" ? Icon(
+              rightAnswer ? Icons.check : Icons.close, color: Colors.white,
+            ) : Wrap(
+              direction: Axis.horizontal,
+              alignment: WrapAlignment.center,
+              children: [
+                Icon(rightAnswer ? Icons.check : Icons.close, color: Colors.white,),
+                Text(text, textAlign: TextAlign.center,),
+              ],
+            ),
           )
       )
           .closed

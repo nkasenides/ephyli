@@ -30,12 +30,39 @@ class MessageLookup extends MessageLookupByLibrary {
         "activities": MessageLookupByLibrary.simpleMessage("Δραστηριότητες"),
         "activityLockedMessage": MessageLookupByLibrary.simpleMessage(
             "Αυτή η δραστηριότητα είναι κλειδωμένη. Ολοκληρώστε τις προηγούμενες δραστηριότητες για να την ξεκλειδώσετε."),
+        "activity_balance":
+            MessageLookupByLibrary.simpleMessage("Δραστηριότητα ισορροπίας"),
+        "activity_balance_option_1": MessageLookupByLibrary.simpleMessage(
+            "Τα παιδιά σχηματίζουν έναν μεγάλο κύκλο στο κέντρο του χώρου παιχνιδιού. Κάποιος παίρνει μια ασταθή θέση όπως ένα άγαλμα. Όλοι οι μαθητές στον κύκλο εκτελούν την ίδια ισορροπία, κρατώντας την για 3 δευτερόλεπτα. Όταν τελειώσει η ώρα, το Το επόμενο παιδί κάνει το ίδιο."),
+        "activity_balance_option_2": MessageLookupByLibrary.simpleMessage(
+            "Κούρσα με καρότσι. Μαθητές σε ζευγάρια. Ο ένας συμπαίκτης παίζει τον ρόλο του οδηγού και ο άλλος τον ρόλο του καροτσιού. Ο οδηγός κρατιέται από τους αστραγάλους του άλλου παίκτη, ενώ ο δεύτερος περπατά με τα χέρια του."),
+        "activity_balance_option_3": MessageLookupByLibrary.simpleMessage(
+            "Τα παιδιά περπατούν σε μια μεγάλη περιοχή. Μπορούν να αλλάξουν κατεύθυνση και ταχύτητα, αλλά πρέπει να αποφεύγουν την επαφή με άλλους. Όταν ο δάσκαλος καλεί έναν αριθμό, τα παιδιά σχηματίζουν ομάδες μόνο σύμφωνα με αυτόν τον αριθμό, κάνοντας έναν κύκλο. Πρέπει να πηδήξουν πέντε φορές στο ένα πόδι Παιδιά/παιδιά χωρίς ομάδα εκτελούν μια στατική ισορροπία."),
+        "activity_striking":
+            MessageLookupByLibrary.simpleMessage("Χτύπημα με το χέρι"),
+        "activity_striking_option_1": MessageLookupByLibrary.simpleMessage(
+            "Τα παιδιά σε ομάδες των τριών/τεσσάρων, ανάλογα με τον αριθμό των μαθητών στην τάξη. Ένα μπαλόνι ανά ομάδα. Κάθε ομάδα πρέπει να μετακινήσει το μπαλόνι στο τέλος του χώρου παιχνιδιού χωρίς να το κρατά ή να το αφήνει να αγγίζει το έδαφος Κάθε παιδί πρέπει να δώσει το μπαλόνι σε έναν συμπαίκτη του πριν το αγγίξει ξανά."),
+        "activity_striking_option_2": MessageLookupByLibrary.simpleMessage(
+            "Τα παιδιά χωρίζονται σε ζευγάρια. Κάθε ομάδα έχει μια μπάλα σφουγγαριού και μια πετσέτα. Το ζευγάρι κρατά την πετσέτα ανάμεσά τους. Τα παιδιά πρέπει να συντονίσουν την κίνησή τους για να σηκώσουν την πετσέτα, να πετάξουν την μπάλα στον αέρα και να την πιάσουν ξανά στην επιστροφή του."),
+        "activity_striking_option_3": MessageLookupByLibrary.simpleMessage(
+            "Τα παιδιά χωρίζονται σε ομάδες των τεσσάρων. Κάθε ομάδα σχηματίζει έναν κύκλο και βάζει ένα τσέρκι στο κέντρο. Κάθε παιδί πρέπει να δώσει μια μπάλα που πηδάει στον συμπαίκτη αναπηδώντας την πρώτα στον κύκλο."),
+        "activity_throwing":
+            MessageLookupByLibrary.simpleMessage("Δραστηριότητα ρίψεων"),
+        "activity_throwing_option_1": MessageLookupByLibrary.simpleMessage(
+            "Τα παιδιά σχηματίζουν έναν μεγάλο κύκλο στο κέντρο του χώρου παιχνιδιού. Ένα από αυτά έχει μια ηχητική μπάλα. Όλα τα παιδιά πρέπει να κλείσουν τα μάτια τους, εκτός από το παιδί με την μπάλα που πρέπει να την κυλήσει σε ένα άλλο, χρησιμοποιώντας και τα δύο Τα χέρια όταν όλοι έχουν κυλήσει την μπάλα, πρέπει να χρησιμοποιήσουν ένα άλλο μέρος του σώματος, όπως το ισχίο, το γόνατο και τον αγκώνα."),
+        "activity_throwing_option_2": MessageLookupByLibrary.simpleMessage(
+            "Τα παιδιά σε ομάδες των δύο/τριών, ανάλογα με τον αριθμό των μαθητών στην τάξη, μπροστά από έναν τοίχο. Ένα παιδί πρέπει να πετάξει την μπάλα στον τοίχο και να την πιάσει ξανά όσο το δυνατόν περισσότερες φορές σε είκοσι δευτερόλεπτα Οι άλλοι συμπαίκτες μετρούν τα δευτερόλεπτα και τις σωστές εκτελέσεις της εργασίας."),
+        "activity_throwing_option_3": MessageLookupByLibrary.simpleMessage(
+            "Τα παιδιά χωρίζονται σε δύο ομάδες. Ο χώρος παιχνιδιού χωρίζεται σε δύο περιοχές. Κάθε ομάδα έχτισε τρία κάστρα με κώνους και τους τοποθέτησε στο τέλος των γηπέδων. Κάθε ομάδα έχει πέντε μαλακές μπάλες. Τα παιδιά πρέπει να πετάξουν οι μπάλες προσπαθούν να γκρεμίσουν τα κάστρα της άλλης ομάδας."),
         "adapts_to_game": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής ξέρει πώς να προσαρμόζεται στις αγωνιστικές καταστάσεις του βόλεϊ και είναι σωματικά ικανός να τις αντιμετωπίσει (σωματική διάσταση)."),
         "advanced_level":
             MessageLookupByLibrary.simpleMessage("Προχωρημένο επίπεδο"),
         "alreadyPlayedActivity": MessageLookupByLibrary.simpleMessage(
             "Έχετε ήδη λάβει μέρος σε αυτή την δραστηριότητα. Θα θέλατε να την επαναλάβετε;"),
+        "appropriate_motor_skills_background":
+            MessageLookupByLibrary.simpleMessage(
+                "Κατάλληλο υπόβαθρο κινητικών δεξιοτήτων"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Είστε σίγουροι;"),
         "available_cards":
             MessageLookupByLibrary.simpleMessage("Διαθέσιμες κάρτες"),
@@ -204,6 +231,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "Προσδιορίστε το σωστό επίπεδο για αυτό το σενάριο:"),
         "c7a1_welcome": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στην πρόκληση 7. Θα σας δοθούν σενάρια που αντιπροσωπεύουν τα επίπεδα προόδου της αθλητικής πρακτικής ενός μαθητή σε σχέση με τις τέσσερις διαστάσεις σωματικού γραμματισμού (σωματική, συναισθηματική, κοινωνική και γνωστική). Για κάθε σενάριο, πρέπει να βρείτε το σωστό επίπεδο προόδου σύροντας το σενάριο στο σωστό επίπεδο. Έτοιμοι;"),
+        "c8a1_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Μπράβο! Ολοκληρώσατε την όγδοη πρόκληση. Πατήστε \'Τέλος\' για να λάβετε το σήμα σας!"),
+        "c8a1_instructions": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ήρθατε στην Πρόκληση 8! Αναλάβετε το ρόλο ενός δασκάλου φυσικής αγωγής παιδιών 6 ετών και επιλέξτε από τρία διαφορετικά παιχνίδια για κάθε συνεδρία σωματικής δραστηριότητας για να διδάξετε μια βασική κίνηση. Κάθε παιχνίδι ταξινομείται σύμφωνα με τρεις παραμέτρους, που αντιπροσωπεύονται από τρία μπουκάλια: (I) κατάλληλο υπόβαθρο κινητικών δεξιοτήτων, (II) συμπερίληψη/ομαδική εργασία και (III). Η βαθμολογία για κάθε παράμετρο κυμαίνεται από 1 έως 3 πόντους και αντιπροσωπεύει το επίπεδο του νερού που θα χυθεί στο μπουκάλι. Για να περάσετε την πρόκληση πρέπει να γεμίσετε τα τρία μπουκάλια επιλέγοντας το πιο κατάλληλο παιχνίδι."),
+        "c8a1_please_select_option": MessageLookupByLibrary.simpleMessage(
+            "Παρακαλώ επιλέξτε μια επιλογή."),
+        "c8a1_prompt": MessageLookupByLibrary.simpleMessage(
+            "Επιλέξτε την πιο κατάλληλη επιλογή για να επιτύχετε μια ισορροπία μεταξύ των τριών παραμέτρων."),
+        "c8a1_wrong": MessageLookupByLibrary.simpleMessage(
+            "Δεν είναι η σωστή ισορροπία. Δοκιμάστε μια διαφορετική επιλογή."),
         "c9a1_action_rhymes":
             MessageLookupByLibrary.simpleMessage("Action rhymes"),
         "c9a1_bikes_and_scooters":
@@ -282,6 +319,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ο ePhyLi φίλος σας"),
         "education_school": MessageLookupByLibrary.simpleMessage(
             "Εκπαίδευση και σχολικός τομέας"),
+        "enjoyment": MessageLookupByLibrary.simpleMessage("Απόλαυση"),
         "enthusiastic_participation": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής είναι ενθουσιασμένος με τη συμμετοχή στα μαθήματα φυσικής αγωγής στο σχολείο και έχει επίγνωση του επιπέδου εμπλοκής του/της (συναισθηματική διάσταση)."),
         "error":
@@ -391,6 +429,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "glossary_instructions": MessageLookupByLibrary.simpleMessage(
             "Αυτό είναι ένα γλωσσάρι - μια λίστα όρων που σχετίζονται με τη φυσική παιδεία, και οι περιγραφές τους. Μετακινηθείτε στην παρακάτω λίστα για να βρείτε τον όρο που χρειάζεστε και κάντε κλικ για να δείτε την περιγραφή του."),
         "health_sector": MessageLookupByLibrary.simpleMessage("Τομέας υγείας"),
+        "inclusion_teamwork":
+            MessageLookupByLibrary.simpleMessage("Ενσωμάτωση/ομαδική εργασία"),
         "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής επιδεικνύει ανεξαρτησία και θετικές διαπροσωπικές δεξιότητες που συμβάλλουν στην αυξημένη συμμετοχή σε εξωσχολικές αθλητικές δραστηριότητες (κοινωνική διάσταση)."),
         "individual": MessageLookupByLibrary.simpleMessage("Ατομικό"),

@@ -2023,6 +2023,426 @@ class S {
     );
   }
 
+  /// `Welcome to Challenge 8! Assume the role of a physical education teacher of children 6-year-olds and choose from three different games for each physical activity session to teach a fundamental movement. Each game is classified according to three parameters, represented by three bottles: (I) appropriate motor skills background, (II) inclusion/teamwork, and (III) enjoyment. The score for each parameter ranges from 1 to 3 points and represents the level of water that will be poured into the bottle. To pass the challenge you must fill the three bottles by choosing the most appropriate game. Ready?`
+  String get c8a1_instructions {
+    return Intl.message(
+      'Welcome to Challenge 8! Assume the role of a physical education teacher of children 6-year-olds and choose from three different games for each physical activity session to teach a fundamental movement. Each game is classified according to three parameters, represented by three bottles: (I) appropriate motor skills background, (II) inclusion/teamwork, and (III) enjoyment. The score for each parameter ranges from 1 to 3 points and represents the level of water that will be poured into the bottle. To pass the challenge you must fill the three bottles by choosing the most appropriate game. Ready?',
+      name: 'c8a1_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select the most appropriate option to achieve a balance between the three parameters.`
+  String get c8a1_prompt {
+    return Intl.message(
+      'Select the most appropriate option to achieve a balance between the three parameters.',
+      name: 'c8a1_prompt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `That is not the right balance. Please try a different option.`
+  String get c8a1_wrong {
+    return Intl.message(
+      'That is not the right balance. Please try a different option.',
+      name: 'c8a1_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select an option.`
+  String get c8a1_please_select_option {
+    return Intl.message(
+      'Please select an option.',
+      name: 'c8a1_please_select_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have completed the eighth challenge. Press 'Finish' to get your badge!`
+  String get c8a1_finish_message {
+    return Intl.message(
+      'Well done! You have completed the eighth challenge. Press \'Finish\' to get your badge!',
+      name: 'c8a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Appropriate motor skills background`
+  String get appropriate_motor_skills_background {
+    return Intl.message(
+      'Appropriate motor skills background',
+      name: 'appropriate_motor_skills_background',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inclusion/Teamwork`
+  String get inclusion_teamwork {
+    return Intl.message(
+      'Inclusion/Teamwork',
+      name: 'inclusion_teamwork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoyment`
+  String get enjoyment {
+    return Intl.message(
+      'Enjoyment',
+      name: 'enjoyment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Balance activity`
+  String get activity_balance {
+    return Intl.message(
+      'Balance activity',
+      name: 'activity_balance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children form a large circle in the centre of the playing area. Someone assumes an unstable position like a statue. All students in the circle perform the same balance, holding it for 3 seconds. When the time is up, the next child does the same.`
+  String get activity_balance_option_1 {
+    return Intl.message(
+      'Children form a large circle in the centre of the playing area. Someone assumes an unstable position like a statue. All students in the circle perform the same balance, holding it for 3 seconds. When the time is up, the next child does the same.',
+      name: 'activity_balance_option_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wheelbarrow race. Students in pairs. One teammate plays the role of the driver, and the other plays the role of the wheelbarrow. The driver holds on to the other player's ankles, while the latter walks with his hands.`
+  String get activity_balance_option_2 {
+    return Intl.message(
+      'Wheelbarrow race. Students in pairs. One teammate plays the role of the driver, and the other plays the role of the wheelbarrow. The driver holds on to the other player\'s ankles, while the latter walks with his hands.',
+      name: 'activity_balance_option_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children walk around a large area. They can change direction and speed but must avoid contact with others. When the teacher calls a number, children form groups only according to that number, making a circle. They must jump five times on one foot. Child/children without a group perform a static balance.`
+  String get activity_balance_option_3 {
+    return Intl.message(
+      'Children walk around a large area. They can change direction and speed but must avoid contact with others. When the teacher calls a number, children form groups only according to that number, making a circle. They must jump five times on one foot. Child/children without a group perform a static balance.',
+      name: 'activity_balance_option_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Throwing activity`
+  String get activity_throwing {
+    return Intl.message(
+      'Throwing activity',
+      name: 'activity_throwing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children form a large circle in the centre of the playing area. One of them has a sound ball. All children must close their eyes, except for the child with the ball who must roll it to another one, using both hands. When all have rolled the ball, they must use another part of the body, such as the hip, knee, and elbow.`
+  String get activity_throwing_option_1 {
+    return Intl.message(
+      'Children form a large circle in the centre of the playing area. One of them has a sound ball. All children must close their eyes, except for the child with the ball who must roll it to another one, using both hands. When all have rolled the ball, they must use another part of the body, such as the hip, knee, and elbow.',
+      name: 'activity_throwing_option_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children in groups of two/three, according to the number of students in the classroom, in front of a wall. One child must throw the ball against the wall and catch it again as many times as possible in twenty seconds. Other teammates count the seconds and the correct executions of the task.`
+  String get activity_throwing_option_2 {
+    return Intl.message(
+      'Children in groups of two/three, according to the number of students in the classroom, in front of a wall. One child must throw the ball against the wall and catch it again as many times as possible in twenty seconds. Other teammates count the seconds and the correct executions of the task.',
+      name: 'activity_throwing_option_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are divided into two teams. The playing area is divided into two areas. Each team built three castles with cones and placed them at the end of the playing fields. Each team has five soft balls. The children must throw the balls trying to bring down the castles of the other team.`
+  String get activity_throwing_option_3 {
+    return Intl.message(
+      'Children are divided into two teams. The playing area is divided into two areas. Each team built three castles with cones and placed them at the end of the playing fields. Each team has five soft balls. The children must throw the balls trying to bring down the castles of the other team.',
+      name: 'activity_throwing_option_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Striking with the hand`
+  String get activity_striking {
+    return Intl.message(
+      'Striking with the hand',
+      name: 'activity_striking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children in groups of three/four, according to the number of students in the classroom. One balloon per group. Each group must move the balloon to the end of the playing area without holding onto it or letting it touch the ground. Each child must pass the balloon to a teammate before touching it again.`
+  String get activity_striking_option_1 {
+    return Intl.message(
+      'Children in groups of three/four, according to the number of students in the classroom. One balloon per group. Each group must move the balloon to the end of the playing area without holding onto it or letting it touch the ground. Each child must pass the balloon to a teammate before touching it again.',
+      name: 'activity_striking_option_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are divided into pairs. Each group has a sponge ball and a towel. The pair hold the towel between them. The children must coordinate their movement to lift the towel, throw the ball into the air and catch it again on its return.`
+  String get activity_striking_option_2 {
+    return Intl.message(
+      'Children are divided into pairs. Each group has a sponge ball and a towel. The pair hold the towel between them. The children must coordinate their movement to lift the towel, throw the ball into the air and catch it again on its return.',
+      name: 'activity_striking_option_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are divided into groups of four. Each group forms a circle and puts one hoop in the centre. Each child must pass a bouncy ball to the teammate by first bouncing it in the circle.`
+  String get activity_striking_option_3 {
+    return Intl.message(
+      'Children are divided into groups of four. Each group forms a circle and puts one hoop in the centre. Each child must pass a bouncy ball to the teammate by first bouncing it in the circle.',
+      name: 'activity_striking_option_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).`
+  String get c9a1_instructions {
+    return Intl.message(
+      'Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).',
+      name: 'c9a1_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! For further information, read the scientific article in the news section.`
+  String get c9a1_finish_message {
+    return Intl.message(
+      'Well done! For further information, read the scientific article in the news section.',
+      name: 'c9a1_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Object Play`
+  String get c9a1_object_play {
+    return Intl.message(
+      'Object Play',
+      name: 'c9a1_object_play',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exercise Play`
+  String get c9a1_exercise_play {
+    return Intl.message(
+      'Exercise Play',
+      name: 'c9a1_exercise_play',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expressive Movement`
+  String get c9a1_expressive_movement {
+    return Intl.message(
+      'Expressive Movement',
+      name: 'c9a1_expressive_movement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Outdoor Play`
+  String get c9a1_outdoor_play {
+    return Intl.message(
+      'Outdoor Play',
+      name: 'c9a1_outdoor_play',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Throwing`
+  String get c9a1_throwing {
+    return Intl.message(
+      'Throwing',
+      name: 'c9a1_throwing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Catching`
+  String get c9a1_catching {
+    return Intl.message(
+      'Catching',
+      name: 'c9a1_catching',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Striking`
+  String get c9a1_striking {
+    return Intl.message(
+      'Striking',
+      name: 'c9a1_striking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rough and Tumble`
+  String get c9a1_rough_and_tumble {
+    return Intl.message(
+      'Rough and Tumble',
+      name: 'c9a1_rough_and_tumble',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Climbing`
+  String get c9a1_climbing {
+    return Intl.message(
+      'Climbing',
+      name: 'c9a1_climbing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Running`
+  String get c9a1_running {
+    return Intl.message(
+      'Running',
+      name: 'c9a1_running',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chasing games`
+  String get c9a1_chasing_games {
+    return Intl.message(
+      'Chasing games',
+      name: 'c9a1_chasing_games',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bikes and scooters`
+  String get c9a1_bikes_and_scooters {
+    return Intl.message(
+      'Bikes and scooters',
+      name: 'c9a1_bikes_and_scooters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pushing and pulling`
+  String get c9a1_pushing_and_pulling {
+    return Intl.message(
+      'Pushing and pulling',
+      name: 'c9a1_pushing_and_pulling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dance`
+  String get c9a1_dance {
+    return Intl.message(
+      'Dance',
+      name: 'c9a1_dance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gymnastics`
+  String get c9a1_gymnastics {
+    return Intl.message(
+      'Gymnastics',
+      name: 'c9a1_gymnastics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Action rhymes`
+  String get c9a1_action_rhymes {
+    return Intl.message(
+      'Action rhymes',
+      name: 'c9a1_action_rhymes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Songs and stories`
+  String get c9a1_songs_and_stories {
+    return Intl.message(
+      'Songs and stories',
+      name: 'c9a1_songs_and_stories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Natural surroundings`
+  String get c9a1_natural_surroundings {
+    return Intl.message(
+      'Natural surroundings',
+      name: 'c9a1_natural_surroundings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rocks and Trees`
+  String get c9a1_rocks_and_tress {
+    return Intl.message(
+      'Rocks and Trees',
+      name: 'c9a1_rocks_and_tress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Challenges`
+  String get c9a1_challenges {
+    return Intl.message(
+      'Challenges',
+      name: 'c9a1_challenges',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(
@@ -2498,226 +2918,6 @@ class S {
     return Intl.message(
       'Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences.',
       name: 'glossary_Sport_desc',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).`
-  String get c9a1_instructions {
-    return Intl.message(
-      'Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).',
-      name: 'c9a1_instructions',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Well done! For further information, read the scientific article in the news section.`
-  String get c9a1_finish_message {
-    return Intl.message(
-      'Well done! For further information, read the scientific article in the news section.',
-      name: 'c9a1_finish_message',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Object Play`
-  String get c9a1_object_play {
-    return Intl.message(
-      'Object Play',
-      name: 'c9a1_object_play',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Exercise Play`
-  String get c9a1_exercise_play {
-    return Intl.message(
-      'Exercise Play',
-      name: 'c9a1_exercise_play',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Expressive Movement`
-  String get c9a1_expressive_movement {
-    return Intl.message(
-      'Expressive Movement',
-      name: 'c9a1_expressive_movement',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Outdoor Play`
-  String get c9a1_outdoor_play {
-    return Intl.message(
-      'Outdoor Play',
-      name: 'c9a1_outdoor_play',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Throwing`
-  String get c9a1_throwing {
-    return Intl.message(
-      'Throwing',
-      name: 'c9a1_throwing',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Catching`
-  String get c9a1_catching {
-    return Intl.message(
-      'Catching',
-      name: 'c9a1_catching',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Striking`
-  String get c9a1_striking {
-    return Intl.message(
-      'Striking',
-      name: 'c9a1_striking',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Rough and Tumble`
-  String get c9a1_rough_and_tumble {
-    return Intl.message(
-      'Rough and Tumble',
-      name: 'c9a1_rough_and_tumble',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Climbing`
-  String get c9a1_climbing {
-    return Intl.message(
-      'Climbing',
-      name: 'c9a1_climbing',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Running`
-  String get c9a1_running {
-    return Intl.message(
-      'Running',
-      name: 'c9a1_running',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Chasing games`
-  String get c9a1_chasing_games {
-    return Intl.message(
-      'Chasing games',
-      name: 'c9a1_chasing_games',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Bikes and scooters`
-  String get c9a1_bikes_and_scooters {
-    return Intl.message(
-      'Bikes and scooters',
-      name: 'c9a1_bikes_and_scooters',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Pushing and pulling`
-  String get c9a1_pushing_and_pulling {
-    return Intl.message(
-      'Pushing and pulling',
-      name: 'c9a1_pushing_and_pulling',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Dance`
-  String get c9a1_dance {
-    return Intl.message(
-      'Dance',
-      name: 'c9a1_dance',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Gymnastics`
-  String get c9a1_gymnastics {
-    return Intl.message(
-      'Gymnastics',
-      name: 'c9a1_gymnastics',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Action rhymes`
-  String get c9a1_action_rhymes {
-    return Intl.message(
-      'Action rhymes',
-      name: 'c9a1_action_rhymes',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Songs and stories`
-  String get c9a1_songs_and_stories {
-    return Intl.message(
-      'Songs and stories',
-      name: 'c9a1_songs_and_stories',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Natural surroundings`
-  String get c9a1_natural_surroundings {
-    return Intl.message(
-      'Natural surroundings',
-      name: 'c9a1_natural_surroundings',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Rocks and Trees`
-  String get c9a1_rocks_and_tress {
-    return Intl.message(
-      'Rocks and Trees',
-      name: 'c9a1_rocks_and_tress',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Challenges`
-  String get c9a1_challenges {
-    return Intl.message(
-      'Challenges',
-      name: 'c9a1_challenges',
       desc: '',
       args: [],
     );

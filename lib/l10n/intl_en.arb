@@ -227,6 +227,59 @@
   "developer_level": "Developer level",
   "advanced_level": "Advanced level",
 
+  "c8a1_instructions": "Welcome to Challenge 8! Assume the role of a physical education teacher of children 6-year-olds and choose from three different games for each physical activity session to teach a fundamental movement. Each game is classified according to three parameters, represented by three bottles: (I) appropriate motor skills background, (II) inclusion/teamwork, and (III) enjoyment. The score for each parameter ranges from 1 to 3 points and represents the level of water that will be poured into the bottle. To pass the challenge you must fill the three bottles by choosing the most appropriate game. Ready?",
+  "c8a1_prompt": "Select the most appropriate option to achieve a balance between the three parameters.",
+  "c8a1_wrong": "That is not the right balance. Please try a different option.",
+  "c8a1_please_select_option": "Please select an option.",
+  "c8a1_finish_message": "Well done! You have completed the eighth challenge. Press 'Finish' to get your badge!",
+
+  "appropriate_motor_skills_background": "Appropriate motor skills background",
+  "inclusion_teamwork": "Inclusion/Teamwork",
+  "enjoyment": "Enjoyment",
+
+  "activity_balance": "Balance activity",
+  "activity_balance_option_1": "Children form a large circle in the centre of the playing area. Someone assumes an unstable position like a statue. All students in the circle perform the same balance, holding it for 3 seconds. When the time is up, the next child does the same.",
+  "activity_balance_option_2": "Wheelbarrow race. Students in pairs. One teammate plays the role of the driver, and the other plays the role of the wheelbarrow. The driver holds on to the other player's ankles, while the latter walks with his hands.",
+  "activity_balance_option_3": "Children walk around a large area. They can change direction and speed but must avoid contact with others. When the teacher calls a number, children form groups only according to that number, making a circle. They must jump five times on one foot. Child/children without a group perform a static balance.",
+
+  "activity_throwing": "Throwing activity",
+  "activity_throwing_option_1": "Children form a large circle in the centre of the playing area. One of them has a sound ball. All children must close their eyes, except for the child with the ball who must roll it to another one, using both hands. When all have rolled the ball, they must use another part of the body, such as the hip, knee, and elbow.",
+  "activity_throwing_option_2": "Children in groups of two/three, according to the number of students in the classroom, in front of a wall. One child must throw the ball against the wall and catch it again as many times as possible in twenty seconds. Other teammates count the seconds and the correct executions of the task.",
+  "activity_throwing_option_3": "Children are divided into two teams. The playing area is divided into two areas. Each team built three castles with cones and placed them at the end of the playing fields. Each team has five soft balls. The children must throw the balls trying to bring down the castles of the other team.",
+
+  "activity_striking": "Striking with the hand",
+  "activity_striking_option_1": "Children in groups of three/four, according to the number of students in the classroom. One balloon per group. Each group must move the balloon to the end of the playing area without holding onto it or letting it touch the ground. Each child must pass the balloon to a teammate before touching it again.",
+  "activity_striking_option_2": "Children are divided into pairs. Each group has a sponge ball and a towel. The pair hold the towel between them. The children must coordinate their movement to lift the towel, throw the ball into the air and catch it again on its return.",
+  "activity_striking_option_3": "Children are divided into groups of four. Each group forms a circle and puts one hoop in the centre. Each child must pass a bouncy ball to the teammate by first bouncing it in the circle.",
+
+  "c9a1_instructions": "Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).",
+  "c9a1_finish_message": "Well done! For further information, read the scientific article in the news section.",
+
+  "c9a1_object_play": "Object Play",
+  "c9a1_exercise_play": "Exercise Play",
+  "c9a1_expressive_movement": "Expressive Movement",
+  "c9a1_outdoor_play": "Outdoor Play",
+
+  "c9a1_throwing": "Throwing",
+  "c9a1_catching": "Catching",
+  "c9a1_striking": "Striking",
+
+  "c9a1_rough_and_tumble": "Rough and Tumble",
+  "c9a1_climbing": "Climbing",
+  "c9a1_running": "Running",
+  "c9a1_chasing_games": "Chasing games",
+  "c9a1_bikes_and_scooters": "Bikes and scooters",
+  "c9a1_pushing_and_pulling": "Pushing and pulling",
+
+  "c9a1_dance": "Dance",
+  "c9a1_gymnastics": "Gymnastics",
+  "c9a1_action_rhymes": "Action rhymes",
+  "c9a1_songs_and_stories": "Songs and stories",
+
+  "c9a1_natural_surroundings": "Natural surroundings",
+  "c9a1_rocks_and_tress": "Rocks and Trees",
+  "c9a1_challenges": "Challenges",
+
   "glossary_Attributes": "Attributes",
   "glossary_AffectiveDomain": "Affective Domain",
   "glossary_CognitiveDomain": "Cognitive Domain",
@@ -275,34 +328,6 @@
   "glossary_PhysicalDomain_desc": "The physical domain encourages the nurturing of physical competence in a range of environments in order to develop a rich and wide-ranging movement vocabulary.",
   "glossary_PhysicalEducation_desc": "Physical education is the school subject in which children do physical exercises or take part in physical games and sports.",
   "glossary_PhysicalLiteracy_desc": "Physical literacy can be described as the motivation, confidence, physical competence, knowledge, and understanding to value and take responsibility for engagement in physical activities for life.",
-  "glossary_Sport_desc": "Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences.",
-
-  "c9a1_instructions": "Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).",
-  "c9a1_finish_message": "Well done! For further information, read the scientific article in the news section.",
-
-  "c9a1_object_play": "Object Play",
-  "c9a1_exercise_play": "Exercise Play",
-  "c9a1_expressive_movement": "Expressive Movement",
-  "c9a1_outdoor_play": "Outdoor Play",
-
-  "c9a1_throwing": "Throwing",
-  "c9a1_catching": "Catching",
-  "c9a1_striking": "Striking",
-
-  "c9a1_rough_and_tumble": "Rough and Tumble",
-  "c9a1_climbing": "Climbing",
-  "c9a1_running": "Running",
-  "c9a1_chasing_games": "Chasing games",
-  "c9a1_bikes_and_scooters": "Bikes and scooters",
-  "c9a1_pushing_and_pulling": "Pushing and pulling",
-
-  "c9a1_dance": "Dance",
-  "c9a1_gymnastics": "Gymnastics",
-  "c9a1_action_rhymes": "Action rhymes",
-  "c9a1_songs_and_stories": "Songs and stories",
-
-  "c9a1_natural_surroundings": "Natural surroundings",
-  "c9a1_rocks_and_tress": "Rocks and Trees",
-  "c9a1_challenges": "Challenges"
+  "glossary_Sport_desc": "Sport is most often used to refer to competitive games or physical activities. Typically, in this context, sports are governed by an agreed set of rules and require participants to learn and exhibit physical athleticism and skill. Sports are used within the Physical Education curriculum to provide learning experiences."
 
 }

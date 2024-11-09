@@ -124,69 +124,62 @@ class _ActivityC7A1State extends State<ActivityC7A1> {
       ];
     }
 
-    return OrientationBuilder(builder: (context, orientation) {
-      if (orientation == Orientation.portrait) {
-        return Center(child: Text(AppLocalizations.of(context)!.pleaseTurnDevice),);
-      }
-      else {
-        return Padding(
-          padding: Themes.standardPadding,
-          child: Column(
-            children: [
-              // Display the instruction and statement
-              Text(
-                AppLocalizations.of(context)!.c7a1_instruction,
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
-                  statements[currentStatementIndex]["text"]!,
-                  style: const TextStyle(fontSize: 16, color: Colors.black),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              const SizedBox(height: 40),
-
-              // Display levels as clickable buttons
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: levels.map((level) {
-                  return Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 10),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          handleLevelSelection(level);
-                        },
-                        style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                          backgroundColor: Themes.primaryColor,
-                        ),
-                        child: Text(
-                          level,
-                          style: const TextStyle(fontSize: 16),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  );
-                }).toList(),
-              ),
-
-              // // Display the mistakes counter
-              // const SizedBox(height: 20),
-              // Text(
-              //   "Mistakes: $mistakes / 5",
-              //   style: const TextStyle(fontSize: 16, color: Colors.red),
-              // ),
-            ],
+    return Padding(
+      padding: Themes.standardPadding,
+      child: Column(
+        children: [
+          // Display the instruction and statement
+          Text(
+            AppLocalizations.of(context)!.c7a1_instruction,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
           ),
-        );
-      }
-    },);
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              statements[currentStatementIndex]["text"]!,
+              style: const TextStyle(fontSize: 16, color: Colors.black),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          const SizedBox(height: 40),
+
+          // Display levels as clickable buttons
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: levels.map((level) {
+              return Expanded(
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      handleLevelSelection(level);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                      backgroundColor: Themes.primaryColor,
+                    ),
+                    child: Text(
+                      level,
+                      style: const TextStyle(fontSize: 16),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              );
+            }).toList(),
+          ),
+
+          // // Display the mistakes counter
+          // const SizedBox(height: 20),
+          // Text(
+          //   "Mistakes: $mistakes / 5",
+          //   style: const TextStyle(fontSize: 16, color: Colors.red),
+          // ),
+        ],
+      ),
+    );
 
   }
 

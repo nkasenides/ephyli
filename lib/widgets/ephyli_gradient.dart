@@ -10,11 +10,11 @@ class EphyliGradient extends StatelessWidget {
   Widget child;
 
   EphyliGradient({super.key, required this.child, this.gradientColors1 = const [
-    Themes.primaryColorDarkLight,
+    Color.fromARGB(255, 220, 220, 255),
     Colors.white,
   ], this.gradientColors2 = const [
-    Themes.primaryColorDarkLight,
-    Colors.white
+    Colors.white,
+    Color.fromARGB(255, 240, 235, 235),
   ]});
 
   @override

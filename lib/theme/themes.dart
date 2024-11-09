@@ -21,12 +21,16 @@ class Themes {
   static final ThemeData mainTheme = ThemeData(
     primaryColor: primaryColor,
     primaryColorDark: primaryColorDark,
+    textTheme: const TextTheme(
+      bodySmall: TextStyle(fontSize: 14),
+      bodyMedium: TextStyle(fontSize: 16),
+      bodyLarge: TextStyle(fontSize: 18),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: primaryColorDark,
         foregroundColor: Colors.white,
         elevation: 3,
-        textStyle: const TextStyle(fontSize: 14),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         )
@@ -35,7 +39,6 @@ class Themes {
     outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
             foregroundColor: primaryColorDark,
-            textStyle: const TextStyle(fontSize: 14),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             )
