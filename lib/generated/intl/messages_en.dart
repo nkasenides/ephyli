@@ -78,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "You can also call me if you need help with an activity. I can provide extra help or hints."),
         "built_environment":
             MessageLookupByLibrary.simpleMessage("Built environment"),
+        "c10a1_instructions": MessageLookupByLibrary.simpleMessage(
+            "Welcome to challenge 7. Mosston’s spectrum of teaching styles is a framework that categorizes teaching styles based on the degree of decision-making authority given to the teacher and the learner. The spectrum consists of 11 teaching styles, ranging from more teacher-centred to more student-centred approaches. Read the clues and identify the related teaching style to solve the crossword puzzle. Ready?"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "You have made 5 mistakes, and the game will restart."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
