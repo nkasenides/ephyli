@@ -2683,10 +2683,10 @@ class S {
     );
   }
 
-  /// `Welcome to challenge 7. Mosston’s spectrum of teaching styles is a framework that categorizes teaching styles based on the degree of decision-making authority given to the teacher and the learner. The spectrum consists of 11 teaching styles, ranging from more teacher-centred to more student-centred approaches. Read the clues and identify the related teaching style to solve the crossword puzzle. Ready?`
+  /// `Welcome to challenge 10. Mosston's spectrum of teaching styles is a framework that categorizes teaching styles based on the degree of decision-making authority given to the teacher and the learner. The spectrum consists of 11 teaching styles, ranging from more teacher-centred to more student-centred approaches. Read the clues and identify the related teaching style to solve the puzzle. Ready?`
   String get c10a1_instructions {
     return Intl.message(
-      'Welcome to challenge 7. Mosston’s spectrum of teaching styles is a framework that categorizes teaching styles based on the degree of decision-making authority given to the teacher and the learner. The spectrum consists of 11 teaching styles, ranging from more teacher-centred to more student-centred approaches. Read the clues and identify the related teaching style to solve the crossword puzzle. Ready?',
+      'Welcome to challenge 10. Mosston\'s spectrum of teaching styles is a framework that categorizes teaching styles based on the degree of decision-making authority given to the teacher and the learner. The spectrum consists of 11 teaching styles, ranging from more teacher-centred to more student-centred approaches. Read the clues and identify the related teaching style to solve the puzzle. Ready?',
       name: 'c10a1_instructions',
       desc: '',
       args: [],

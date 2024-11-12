@@ -11,8 +11,10 @@ import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:widget_zoom/widget_zoom.dart';
 
@@ -89,6 +91,10 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
   int currentLetterIndex = 0; // Track the current blank letter in the selected word
   TextEditingController _controller = TextEditingController();
   FocusNode _focusNode = FocusNode();
+  final ItemScrollController itemScrollController = ItemScrollController();
+  final ScrollOffsetController scrollOffsetController = ScrollOffsetController();
+  final ItemPositionsListener itemPositionsListener = ItemPositionsListener.create();
+  final ScrollOffsetListener scrollOffsetListener = ScrollOffsetListener.create();
 
 
   // Check if all terms are completed
@@ -128,13 +134,14 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
 
   @override
   void dispose() {
+    hideKeyboard();
     super.dispose();
   }
 
   Widget activityIntroView() {
     return InstructionsWidget(
         prefs,
-        AppLocalizations.of(context)!.c9a1_instructions, //todo
+        AppLocalizations.of(context)!.c10a1_instructions,
         AppLocalizations.of(context)!.ready_letsgo,
         () {
           setState(() {
@@ -171,8 +178,18 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
       selectedTermIndex = -1;
     } else {
       currentLetterIndex = nextIndex;
-      _controller.clear();
     }
+    _controller.clear();
+  }
+
+  void openKeyboard() {
+    _focusNode.requestFocus();
+    SystemChannels.textInput.invokeMethod("TextInput.show");
+  }
+
+  void hideKeyboard() {
+    _focusNode.requestFocus();
+    SystemChannels.textInput.invokeMethod("TextInput.hide");
   }
 
   // Function to initiate typing on a blank letter
@@ -180,8 +197,15 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
     setState(() {
       selectedTermIndex = termIndex;
       currentLetterIndex = letterIndex;
-      _focusNode.requestFocus();
     });
+    itemScrollController.scrollTo(
+        index: selectedTermIndex,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOutCubic
+    ).then((value) {
+      _focusNode.requestFocus();
+      openKeyboard();
+    },);
   }
 
   Widget buildLetterBox(int termIndex, int letterIndex) {
@@ -189,13 +213,22 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
     String letter = terms[termIndex]["term"][letterIndex];
     Color color = terms[termIndex]["colors"][letterIndex];
 
+    if (letterIndex == currentLetterIndex && termIndex == selectedTermIndex) {
+      color = Colors.yellow;
+    }
+    else {
+      if (isRevealed) {
+        color = Colors.blue[100]!;
+      }
+    }
+
     return GestureDetector(
       onTap: isRevealed ? null : () => startTyping(termIndex, letterIndex),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 2),
         padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: isRevealed ? Colors.blue[100] : color,
+          color: color,
           borderRadius: BorderRadius.circular(5),
           border: Border.all(color: Colors.blue),
         ),
@@ -208,54 +241,62 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
   }
 
   Widget activityGameView() {
+
+    Future.delayed(const Duration(milliseconds: 500), () {
+      openKeyboard();
+    },);
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Cody Cross-Style Game"),
-        centerTitle: true,
-      ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: Themes.standardPadding,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            if (isGameComplete)
-              Center(
-                child: Text(
-                  "Congratulations! You've completed the game!",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.green),
-                  textAlign: TextAlign.center,
-                ),
+
+            // Display the hint for the selected word
+            if (selectedTermIndex != -1)
+              Text(
+                "Hint: ${terms[selectedTermIndex]['hint']}",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
+                textAlign: TextAlign.center,
               )
             else
-              Column(
-                children: [
-                  // Display all terms together at the top
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 10,
-                    alignment: WrapAlignment.center,
-                    children: terms.asMap().entries.map((entry) {
-                      int termIndex = entry.key;
-                      Map<String, dynamic> term = entry.value;
-                      return Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: List.generate(term["term"].length, (letterIndex) {
-                          return buildLetterBox(termIndex, letterIndex);
-                        }),
-                      );
-                    }).toList(),
-                  ),
-                  SizedBox(height: 20),
+              Text(
+                "Click on the letter boxes to fill in the word using the hint provided.",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
+                textAlign: TextAlign.center,
+              )
+            ,
 
-                  // Display the hint for the selected word
-                  if (selectedTermIndex != -1)
-                    Text(
-                      "Hint: ${terms[selectedTermIndex]['hint']}",
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
-                      textAlign: TextAlign.center,
+            const SizedBox(height: 20),
+
+            // Display all terms together at the top
+            Expanded(
+              child: ScrollablePositionedList.separated(
+                itemScrollController: itemScrollController,
+                scrollOffsetController: scrollOffsetController,
+                itemPositionsListener: itemPositionsListener,
+                scrollOffsetListener: scrollOffsetListener,
+                itemCount: terms.length,
+                separatorBuilder: (context, index) {
+                  return const Gap(10);
+                },
+                itemBuilder: (context, termIndex) {
+                  final Map<String, dynamic> termEntry = terms[termIndex];
+                  return FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(termEntry["term"].length, (letterIndex) {
+                        return buildLetterBox(termIndex, letterIndex);
+                      }),
                     ),
-                ],
+                  );
+                },
               ),
+            ),
+
           ],
         ),
       ),
@@ -263,6 +304,7 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
           ? Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextField(
+          autofocus: true,
           controller: _controller,
           focusNode: _focusNode,
           maxLength: 1,
@@ -295,17 +337,20 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(title: Text(I10N.getI10nString("c10a1_name")!, style: const TextStyle(color: Colors.white),),
         backgroundColor: Themes.primaryColorDark,
         iconTheme: const IconThemeData(color: Colors.white),),
-      body: FutureBuilder(
-        future: future,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.done) {
-            return chooseView();
-          }
-          return const Center(child: CircularProgressIndicator());
-        },
+      body: SafeArea(
+        child: FutureBuilder(
+          future: future,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              return chooseView();
+            }
+            return const Center(child: CircularProgressIndicator());
+          },
+        ),
       ),
     );
   }
