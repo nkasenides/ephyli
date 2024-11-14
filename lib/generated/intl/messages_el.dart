@@ -78,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Μπορείτε επίσης να με καλέσετε εάν χρειάζεστε βοήθεια με μια δραστηριότητα. Μπορώ να σας παράσχω επιπλέον βοήθεια ή συμβουλές."),
         "built_environment":
             MessageLookupByLibrary.simpleMessage("Δομημένο περιβάλλον"),
+        "c10a1_finish": MessageLookupByLibrary.simpleMessage(
+            "Συγχαρητήρια! Μπορείτε να προχορήσετε στην επόμενη πρόκληση."),
         "c10a1_instructions": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στην πρόκληση 10. Το φάσμα των μορφών διδασκαλίας της Mosston είναι ένα πλαίσιο που κατηγοριοποιεί τα στυλ διδασκαλίας με βάση τον βαθμό εξουσίας λήψης αποφάσεων που δίνεται στον δάσκαλο και τον εκπαιδευόμενο. Το φάσμα αποτελείται από 11 στυλ διδασκαλίας, που κυμαίνονται από περισσότερα Δασκαλοκεντρικές έως πιο μαθητοκεντρικές προσεγγίσεις Διαβάστε τις ενδείξεις και προσδιορίστε το σχετικό στυλ διδασκαλίας για να λύσετε το παζλ. Έτοιμοι;"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
@@ -367,6 +369,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "education_school": MessageLookupByLibrary.simpleMessage(
             "Εκπαίδευση και σχολικός τομέας"),
         "enjoyment": MessageLookupByLibrary.simpleMessage("Απόλαυση"),
+        "enter_letter":
+            MessageLookupByLibrary.simpleMessage("Εισαγάγετε ένα γράμμα"),
         "enthusiastic_participation": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής είναι ενθουσιασμένος με τη συμμετοχή στα μαθήματα φυσικής αγωγής στο σχολείο και έχει επίγνωση του επιπέδου εμπλοκής του/της (συναισθηματική διάσταση)."),
         "error":
@@ -550,6 +554,39 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ο μαθητής μπορεί να αναλύσει και να προσαρμόσει στρατηγικές στην αγωνιστική κατάσταση του μπάσκετ και να κατανοήσει τα οφέλη για την υγεία που σχετίζονται με την αθλητική πρακτική (γνωστική διάσταση)."),
         "tagline":
             MessageLookupByLibrary.simpleMessage("Καλωσορίσατε στο ePhyLi!"),
+        "term1": MessageLookupByLibrary.simpleMessage("ΕΝΤΟΛΗ"),
+        "term10": MessageLookupByLibrary.simpleMessage("ΞΕΚΙΝΗΜΑ"),
+        "term10_hint": MessageLookupByLibrary.simpleMessage(
+            "Διευθυνόμενοι από μαθητές, από το σχεδιασμό έως την εκτέλεση, με τον δάσκαλο ως σύμβουλο."),
+        "term11": MessageLookupByLibrary.simpleMessage("ΑΥΤΟΔΙΔΑΣΚΑΛΙΑ"),
+        "term11_hint": MessageLookupByLibrary.simpleMessage(
+            "Οι μαθητές σχεδιάζουν, εκτελούν και αξιολογούν τη μάθησή τους."),
+        "term1_hint": MessageLookupByLibrary.simpleMessage(
+            "Ο έλεγχος των μαθησιακών δραστηριοτήτων των μαθητών από την οδηγία του δασκάλου."),
+        "term2": MessageLookupByLibrary.simpleMessage("ΠΡΑΚΤΙΚΗ"),
+        "term2_hint": MessageLookupByLibrary.simpleMessage(
+            "Ανάθεση ορισμένων αποφάσεων από τον δάσκαλο στον μαθητή."),
+        "term3": MessageLookupByLibrary.simpleMessage("ΑΜΟΙΒΑΙΟ"),
+        "term3_hint": MessageLookupByLibrary.simpleMessage(
+            "Ομάδες με ρόλους που έχουν ανατεθεί: εξάσκηση, παρατήρηση, αξιολόγηση, διόρθωση και βοήθεια."),
+        "term4": MessageLookupByLibrary.simpleMessage("ΑΥΤΟΕΛΕΓΧΟΣ"),
+        "term4_hint": MessageLookupByLibrary.simpleMessage(
+            "Αυτοαξιολόγηση της εκτέλεσης της άσκησης και των αποτελεσμάτων."),
+        "term5": MessageLookupByLibrary.simpleMessage("ΕΝΤΑΞΗ"),
+        "term5_hint": MessageLookupByLibrary.simpleMessage(
+            "Συνεργασία σε ομάδες για την επίτευξη κοινών στόχων."),
+        "term6": MessageLookupByLibrary.simpleMessage("ΚΑΘΟΔΗΓΗΣΗ"),
+        "term6_hint": MessageLookupByLibrary.simpleMessage(
+            "Ο δάσκαλος οδηγεί τους μαθητές να ανακαλύψουν ανεξάρτητα λύσεις μέσω ερωτήσεων."),
+        "term7": MessageLookupByLibrary.simpleMessage("ΣΥΓΚΛΙΝΩΝ"),
+        "term7_hint": MessageLookupByLibrary.simpleMessage(
+            "Οι μαθητές αναλύουν και αναπτύσσουν στρατηγικές για την επίλυση προβλημάτων που παρουσιάζονται από τον δάσκαλο."),
+        "term8": MessageLookupByLibrary.simpleMessage("ΑΠΟΚΛΙΝΩΝ"),
+        "term8_hint": MessageLookupByLibrary.simpleMessage(
+            "Ενθαρρύνει τη δημιουργικότητα με ασκήσεις που δημιουργούν μόνοι τους."),
+        "term9": MessageLookupByLibrary.simpleMessage("ΣΧΕΔΙΑΣΜΕΝΟ"),
+        "term9_hint": MessageLookupByLibrary.simpleMessage(
+            "Ένα εξατομικευμένο πρόγραμμα βασισμένο σε ατομικές ικανότητες, με σύμβουλο τον δάσκαλο."),
         "transport_systems":
             MessageLookupByLibrary.simpleMessage("Συστήματα μεταφορών"),
         "try_again": MessageLookupByLibrary.simpleMessage("Δοκιμάστε ξανά"),

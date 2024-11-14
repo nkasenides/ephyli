@@ -307,8 +307,31 @@
   "c9a2_gender_separated_activities": "Separate activities for males and females.",
 
   "c10a1_instructions": "Welcome to challenge 10. Mosston's spectrum of teaching styles is a framework that categorizes teaching styles based on the degree of decision-making authority given to the teacher and the learner. The spectrum consists of 11 teaching styles, ranging from more teacher-centred to more student-centred approaches. Read the clues and identify the related teaching style to solve the puzzle. Ready?",
+  "c10a1_finish": "Well done! You can now access the next challenge.",
+  "enter_letter": "Enter a letter",
+  "term1": "COMMAND",
+  "term2": "PRACTICE",
+  "term3": "RECIPROCAL",
+  "term4": "SELFCHECK",
+  "term5": "INCLUSION",
+  "term6": "GUIDED",
+  "term7": "CONVERGENT",
+  "term8": "DIVERGENT",
+  "term9": "DESIGNED",
+  "term10": "INITIATED",
+  "term11": "SELFTEACHING",
 
-
+  "term1_hint": "The teacher's directive control of students' learning activities.",
+  "term2_hint": "Delegation of some decisions from the teacher to the student.",
+  "term3_hint": "Groups with assigned roles: practice, observe, evaluate, correct, and help.",
+  "term4_hint": "Self-assessment of exercise execution and results.",
+  "term5_hint": "Working together in groups to achieve common goals.",
+  "term6_hint": "The teacher leads students to independently discover solutions through questions.",
+  "term7_hint": "Students analyze and develop strategies to solve teacher-presented problems.",
+  "term8_hint": "Encourages creativity with self-created exercises.",
+  "term9_hint": "A personalized program based on individual abilities, with teacher as consultant.",
+  "term10_hint": "Student-led, from design to execution, with teacher as consultant.",
+  "term11_hint": "Students plan, execute, and evaluate their learning.",
 
 
 

@@ -1,26 +1,18 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ephyli/controller/activity_manager.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
-import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
-import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:widget_zoom/widget_zoom.dart';
 
 import '../../model/activity.dart';
-import '../../model/challenge.dart';
-import '../../model/game_badge.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ActivityC10A1 extends StatefulWidget {
@@ -40,22 +32,22 @@ class LetterInputDialog extends StatelessWidget {
     TextEditingController _controller = TextEditingController();
 
     return AlertDialog(
-      title: Text("Enter a letter"),
+      title: Text(AppLocalizations.of(context)!.enter_letter),
       content: TextField(
         controller: _controller,
         maxLength: 1,
         autofocus: true,
         textCapitalization: TextCapitalization.characters,
-        decoration: InputDecoration(hintText: "Enter a letter"),
+        decoration: InputDecoration(hintText: AppLocalizations.of(context)!.enter_letter),
       ),
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(_controller.text),
-          child: Text("OK"),
+          child: Text(AppLocalizations.of(context)!.ok),
         ),
         TextButton(
           onPressed: () => Navigator.of(context).pop(),
-          child: Text("Cancel"),
+          child: Text(AppLocalizations.of(context)!.cancel),
         ),
       ],
     );
@@ -73,24 +65,14 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
 
   /**activity data**/
   // List of terms and hints with hidden letters
-  final List<Map<String, dynamic>> terms = [
-    {"term": "COMMAND", "hint": "The teacher's directive control of students' learning activities.", "revealed": [true, false, false, false, false, true, true]},
-    {"term": "PRACTICE", "hint": "Delegation of some decisions from the teacher to the student.", "revealed": [true, false, false, false, true, false, true, true]},
-    {"term": "RECIPROCAL", "hint": "Groups with assigned roles: practice, observe, evaluate, correct, and help.", "revealed": [true, false, false, false, true, false, false, false, true, true]},
-    {"term": "SELFCHECK", "hint": "Self-assessment of exercise execution and results.", "revealed": [true, false, false, false, false, true, false, true, true]},
-    {"term": "INCLUSION", "hint": "Working together in groups to achieve common goals.", "revealed": [true, false, false, false, false, true, true, true]},
-    {"term": "GUIDED", "hint": "The teacher leads students to independently discover solutions through questions.", "revealed": [true, false, false, true, true, true]},
-    {"term": "CONVERGENT", "hint": "Students analyze and develop strategies to solve teacher-presented problems.", "revealed": [true, false, true, false, true, false, true, false, true, true]},
-    {"term": "DIVERGENT", "hint": "Encourages creativity with self-created exercises.", "revealed": [true, false, true, false, true, false, true, true]},
-    {"term": "DESIGNED", "hint": "A personalized program based on individual abilities, with teacher as consultant.", "revealed": [true, false, true, false, true, true, true, true]},
-    {"term": "INITIATED", "hint": "Student-led, from design to execution, with teacher as consultant.", "revealed": [true, false, true, false, true, true, true, true]},
-    {"term": "SELFTEACHING", "hint": "Students plan, execute, and evaluate their learning.", "revealed": [true, false, false, false, true, false, true, true, true, true, true]}
-  ];
+  List<Map<String, dynamic>> terms = [];
+
+  List<int> completedTermIndices = [];
 
   int selectedTermIndex = -1; // Track which word's hint to show
   int currentLetterIndex = 0; // Track the current blank letter in the selected word
-  TextEditingController _controller = TextEditingController();
-  FocusNode _focusNode = FocusNode();
+  final TextEditingController _controller = TextEditingController();
+  final FocusNode _focusNode = FocusNode();
   final ItemScrollController itemScrollController = ItemScrollController();
   final ScrollOffsetController scrollOffsetController = ScrollOffsetController();
   final ItemPositionsListener itemPositionsListener = ItemPositionsListener.create();
@@ -117,18 +99,6 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
   void initState() {
     //Initialize prefs & activity data:
     future = loadData();
-
-    for (var term in terms) {
-      int length = term["term"].length;
-      int lettersToReveal = Random().nextInt(3) + 2;
-      term["revealed"] = List.generate(length, (index) => false);
-      term["colors"] = List.generate(length, (index) => Colors.grey[300]);
-      List<int> indices = List.generate(length, (index) => index)..shuffle();
-      for (int i = 0; i < lettersToReveal; i++) {
-        term["revealed"][indices[i]] = true;
-      }
-    }
-
     super.initState();
   }
 
@@ -176,6 +146,15 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
       // All letters in the word are revealed, stop editing
       _focusNode.unfocus();
       selectedTermIndex = -1;
+      completedTermIndices.add(selectedTermIndex);
+
+      //If all terms are completed move to the next stage.
+      if (completedTermIndices.length == terms.length) {
+        setState(() {
+          stage = C10A1Stage.finish;
+        });
+      }
+
     } else {
       currentLetterIndex = nextIndex;
     }
@@ -242,6 +221,38 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
 
   Widget activityGameView() {
 
+    if (terms.isEmpty) {
+      // List of terms and hints with hidden letters
+      terms = kDebugMode ? [
+        {"term": "JOHN", "hint": "John", "revealed": [true, false, false, true]},
+        {"term": "SMITH", "hint": "Smith", "revealed": [true, false, false, true, false]},
+      ] : [
+        {"term": AppLocalizations.of(context)!.term1, "hint": AppLocalizations.of(context)!.term1_hint, "revealed": [true, false, false, false, false, true, true]},
+        {"term": AppLocalizations.of(context)!.term2, "hint": AppLocalizations.of(context)!.term2_hint, "revealed": [true, false, false, false, true, false, true, true]},
+        {"term": AppLocalizations.of(context)!.term3, "hint": AppLocalizations.of(context)!.term3_hint, "revealed": [true, false, false, false, true, false, false, false, true, true]},
+        {"term": AppLocalizations.of(context)!.term4, "hint": AppLocalizations.of(context)!.term4_hint, "revealed": [true, false, false, false, false, true, false, true, true]},
+        {"term": AppLocalizations.of(context)!.term5, "hint": AppLocalizations.of(context)!.term5_hint, "revealed": [true, false, false, false, false, true, true, true]},
+        {"term": AppLocalizations.of(context)!.term6, "hint": AppLocalizations.of(context)!.term6_hint, "revealed": [true, false, false, true, true, true]},
+        {"term": AppLocalizations.of(context)!.term7, "hint": AppLocalizations.of(context)!.term7_hint, "revealed": [true, false, true, false, true, false, true, false, true, true]},
+        {"term": AppLocalizations.of(context)!.term8, "hint": AppLocalizations.of(context)!.term8_hint, "revealed": [true, false, true, false, true, false, true, true]},
+        {"term": AppLocalizations.of(context)!.term9, "hint": AppLocalizations.of(context)!.term9_hint, "revealed": [true, false, true, false, true, true, true, true]},
+        {"term": AppLocalizations.of(context)!.term10, "hint": AppLocalizations.of(context)!.term10_hint, "revealed": [true, false, true, false, true, true, true, true]},
+        {"term": AppLocalizations.of(context)!.term11, "hint": AppLocalizations.of(context)!.term11_hint, "revealed": [true, false, false, false, true, false, true, true, true, true, true]}
+      ];
+
+      for (var term in terms) {
+        int length = term["term"].length;
+        int lettersToReveal = Random().nextInt(3) + 2;
+        term["revealed"] = List.generate(length, (index) => false);
+        term["colors"] = List.generate(length, (index) => Colors.grey[300]);
+        List<int> indices = List.generate(length, (index) => index)..shuffle();
+        for (int i = 0; i < lettersToReveal; i++) {
+          term["revealed"][indices[i]] = true;
+        }
+      }
+
+    }
+
     Future.delayed(const Duration(milliseconds: 500), () {
       openKeyboard();
     },);
@@ -253,20 +264,12 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
 
-            // Display the hint for the selected word
-            if (selectedTermIndex != -1)
-              Text(
-                "Hint: ${terms[selectedTermIndex]['hint']}",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
-                textAlign: TextAlign.center,
-              )
-            else
-              Text(
-                "Click on the letter boxes to fill in the word using the hint provided.",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
-                textAlign: TextAlign.center,
-              )
-            ,
+            //Display hint or instruction to start.
+            Text(
+              selectedTermIndex != -1 ? "Hint: ${terms[selectedTermIndex]['hint']}" : "Click on the letter boxes to fill in the word using the hint provided.",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
+              textAlign: TextAlign.center,
+            ),
 
             const SizedBox(height: 20),
 
@@ -324,7 +327,7 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
   Widget activityFinishView() {
     return InstructionsWidget(
       prefs,
-      AppLocalizations.of(context)!.c9a1_finish_message, //todo
+      AppLocalizations.of(context)!.c10a1_finish,
       AppLocalizations.of(context)!.finish,
       () {
         ActivityManager.completeActivity(activityID).then((value) {

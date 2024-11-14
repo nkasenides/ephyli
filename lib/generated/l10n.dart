@@ -2693,6 +2693,246 @@ class S {
     );
   }
 
+  /// `Well done! You can now access the next challenge.`
+  String get c10a1_finish {
+    return Intl.message(
+      'Well done! You can now access the next challenge.',
+      name: 'c10a1_finish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a letter`
+  String get enter_letter {
+    return Intl.message(
+      'Enter a letter',
+      name: 'enter_letter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `COMMAND`
+  String get term1 {
+    return Intl.message(
+      'COMMAND',
+      name: 'term1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `PRACTICE`
+  String get term2 {
+    return Intl.message(
+      'PRACTICE',
+      name: 'term2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `RECIPROCAL`
+  String get term3 {
+    return Intl.message(
+      'RECIPROCAL',
+      name: 'term3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SELFCHECK`
+  String get term4 {
+    return Intl.message(
+      'SELFCHECK',
+      name: 'term4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `INCLUSION`
+  String get term5 {
+    return Intl.message(
+      'INCLUSION',
+      name: 'term5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `GUIDED`
+  String get term6 {
+    return Intl.message(
+      'GUIDED',
+      name: 'term6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CONVERGENT`
+  String get term7 {
+    return Intl.message(
+      'CONVERGENT',
+      name: 'term7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `DIVERGENT`
+  String get term8 {
+    return Intl.message(
+      'DIVERGENT',
+      name: 'term8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `DESIGNED`
+  String get term9 {
+    return Intl.message(
+      'DESIGNED',
+      name: 'term9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `INITIATED`
+  String get term10 {
+    return Intl.message(
+      'INITIATED',
+      name: 'term10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SELFTEACHING`
+  String get term11 {
+    return Intl.message(
+      'SELFTEACHING',
+      name: 'term11',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher's directive control of students' learning activities.`
+  String get term1_hint {
+    return Intl.message(
+      'The teacher\'s directive control of students\' learning activities.',
+      name: 'term1_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delegation of some decisions from the teacher to the student.`
+  String get term2_hint {
+    return Intl.message(
+      'Delegation of some decisions from the teacher to the student.',
+      name: 'term2_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Groups with assigned roles: practice, observe, evaluate, correct, and help.`
+  String get term3_hint {
+    return Intl.message(
+      'Groups with assigned roles: practice, observe, evaluate, correct, and help.',
+      name: 'term3_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Self-assessment of exercise execution and results.`
+  String get term4_hint {
+    return Intl.message(
+      'Self-assessment of exercise execution and results.',
+      name: 'term4_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Working together in groups to achieve common goals.`
+  String get term5_hint {
+    return Intl.message(
+      'Working together in groups to achieve common goals.',
+      name: 'term5_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher leads students to independently discover solutions through questions.`
+  String get term6_hint {
+    return Intl.message(
+      'The teacher leads students to independently discover solutions through questions.',
+      name: 'term6_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Students analyze and develop strategies to solve teacher-presented problems.`
+  String get term7_hint {
+    return Intl.message(
+      'Students analyze and develop strategies to solve teacher-presented problems.',
+      name: 'term7_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Encourages creativity with self-created exercises.`
+  String get term8_hint {
+    return Intl.message(
+      'Encourages creativity with self-created exercises.',
+      name: 'term8_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A personalized program based on individual abilities, with teacher as consultant.`
+  String get term9_hint {
+    return Intl.message(
+      'A personalized program based on individual abilities, with teacher as consultant.',
+      name: 'term9_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Student-led, from design to execution, with teacher as consultant.`
+  String get term10_hint {
+    return Intl.message(
+      'Student-led, from design to execution, with teacher as consultant.',
+      name: 'term10_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Students plan, execute, and evaluate their learning.`
+  String get term11_hint {
+    return Intl.message(
+      'Students plan, execute, and evaluate their learning.',
+      name: 'term11_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(

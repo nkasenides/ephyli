@@ -78,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "You can also call me if you need help with an activity. I can provide extra help or hints."),
         "built_environment":
             MessageLookupByLibrary.simpleMessage("Built environment"),
+        "c10a1_finish": MessageLookupByLibrary.simpleMessage(
+            "Well done! You can now access the next challenge."),
         "c10a1_instructions": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 10. Mosston\'s spectrum of teaching styles is a framework that categorizes teaching styles based on the degree of decision-making authority given to the teacher and the learner. The spectrum consists of 11 teaching styles, ranging from more teacher-centred to more student-centred approaches. Read the clues and identify the related teaching style to solve the puzzle. Ready?"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
@@ -368,6 +370,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Education and school sector"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enjoyment": MessageLookupByLibrary.simpleMessage("Enjoyment"),
+        "enter_letter": MessageLookupByLibrary.simpleMessage("Enter a letter"),
         "enthusiastic_participation": MessageLookupByLibrary.simpleMessage(
             "The student is enthusiastic about participating in physical education classes at school and is aware of his/her level of involvement (affective dimension)."),
         "error": MessageLookupByLibrary.simpleMessage("An error has occurred."),
@@ -552,6 +555,39 @@ class MessageLookup extends MessageLookupByLibrary {
         "strategic_analysis": MessageLookupByLibrary.simpleMessage(
             "The student can analyse and adapt strategies to the game situation of basketball and understand the health benefits related to sports practice (cognitive dimension)."),
         "tagline": MessageLookupByLibrary.simpleMessage("Welcome to ePhyLi!"),
+        "term1": MessageLookupByLibrary.simpleMessage("COMMAND"),
+        "term10": MessageLookupByLibrary.simpleMessage("INITIATED"),
+        "term10_hint": MessageLookupByLibrary.simpleMessage(
+            "Student-led, from design to execution, with teacher as consultant."),
+        "term11": MessageLookupByLibrary.simpleMessage("SELFTEACHING"),
+        "term11_hint": MessageLookupByLibrary.simpleMessage(
+            "Students plan, execute, and evaluate their learning."),
+        "term1_hint": MessageLookupByLibrary.simpleMessage(
+            "The teacher\'s directive control of students\' learning activities."),
+        "term2": MessageLookupByLibrary.simpleMessage("PRACTICE"),
+        "term2_hint": MessageLookupByLibrary.simpleMessage(
+            "Delegation of some decisions from the teacher to the student."),
+        "term3": MessageLookupByLibrary.simpleMessage("RECIPROCAL"),
+        "term3_hint": MessageLookupByLibrary.simpleMessage(
+            "Groups with assigned roles: practice, observe, evaluate, correct, and help."),
+        "term4": MessageLookupByLibrary.simpleMessage("SELFCHECK"),
+        "term4_hint": MessageLookupByLibrary.simpleMessage(
+            "Self-assessment of exercise execution and results."),
+        "term5": MessageLookupByLibrary.simpleMessage("INCLUSION"),
+        "term5_hint": MessageLookupByLibrary.simpleMessage(
+            "Working together in groups to achieve common goals."),
+        "term6": MessageLookupByLibrary.simpleMessage("GUIDED"),
+        "term6_hint": MessageLookupByLibrary.simpleMessage(
+            "The teacher leads students to independently discover solutions through questions."),
+        "term7": MessageLookupByLibrary.simpleMessage("CONVERGENT"),
+        "term7_hint": MessageLookupByLibrary.simpleMessage(
+            "Students analyze and develop strategies to solve teacher-presented problems."),
+        "term8": MessageLookupByLibrary.simpleMessage("DIVERGENT"),
+        "term8_hint": MessageLookupByLibrary.simpleMessage(
+            "Encourages creativity with self-created exercises."),
+        "term9": MessageLookupByLibrary.simpleMessage("DESIGNED"),
+        "term9_hint": MessageLookupByLibrary.simpleMessage(
+            "A personalized program based on individual abilities, with teacher as consultant."),
         "transport_systems":
             MessageLookupByLibrary.simpleMessage("Transport systems"),
         "try_again": MessageLookupByLibrary.simpleMessage("Try again"),
