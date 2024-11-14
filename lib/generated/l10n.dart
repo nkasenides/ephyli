@@ -2953,6 +2953,156 @@ class S {
     );
   }
 
+  /// `Command`
+  String get command {
+    return Intl.message(
+      'Command',
+      name: 'command',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guided Discovery`
+  String get guided_discovery {
+    return Intl.message(
+      'Guided Discovery',
+      name: 'guided_discovery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Self-Teaching`
+  String get self_teaching {
+    return Intl.message(
+      'Self-Teaching',
+      name: 'self_teaching',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve basic motor skills. Students must overcome an obstacle course using their basic motor skills (rolling, jumping, running, crawling). The teacher demonstrates how to overcome each obstacle. The students start the course at the teacher's command, imitating the teacher's movement.`
+  String get command_lesson_1 {
+    return Intl.message(
+      'The lesson aims to improve basic motor skills. Students must overcome an obstacle course using their basic motor skills (rolling, jumping, running, crawling). The teacher demonstrates how to overcome each obstacle. The students start the course at the teacher\'s command, imitating the teacher\'s movement.',
+      name: 'command_lesson_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve balance skills. The teacher demonstrates three yoga poses at a time (Balancing Table, Dancer, and Half Moon). Students must maintain a position for 15 seconds. The students change position at the teacher's command.`
+  String get command_lesson_2 {
+    return Intl.message(
+      'The lesson aims to improve balance skills. The teacher demonstrates three yoga poses at a time (Balancing Table, Dancer, and Half Moon). Students must maintain a position for 15 seconds. The students change position at the teacher\'s command.',
+      name: 'command_lesson_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve knowledge of one's own body. The teacher tells a story about bears who walk around in the forest and perform certain actions (eating, washing, rolling around). Students must impersonate the bears. Often the bears get itchy and have to scratch themselves. The teacher chooses when the bears are itchy and where they have to scratch.`
+  String get command_lesson_3 {
+    return Intl.message(
+      'The lesson aims to improve knowledge of one\'s own body. The teacher tells a story about bears who walk around in the forest and perform certain actions (eating, washing, rolling around). Students must impersonate the bears. Often the bears get itchy and have to scratch themselves. The teacher chooses when the bears are itchy and where they have to scratch.',
+      name: 'command_lesson_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve volleyball serving. The teacher demonstrates the volleyball services (basic underhand service, basic overhand serve, and jump serve). The teacher plans two exercises for each service (individual and in-pair exercises), explaining that students have to start with the basic underhand service, then the basic overhand serve, and at the end jump serve.`
+  String get command_lesson_4 {
+    return Intl.message(
+      'The lesson aims to improve volleyball serving. The teacher demonstrates the volleyball services (basic underhand service, basic overhand serve, and jump serve). The teacher plans two exercises for each service (individual and in-pair exercises), explaining that students have to start with the basic underhand service, then the basic overhand serve, and at the end jump serve.',
+      name: 'command_lesson_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve basic motor skills. Students have to overcome an obstacle course using their basic motor skills (rolling, jumping, running, crawling). The teacher engages students in talk to help them reflect on which basic motor skills they can use to overcome the obstacles. The teacher also supports students' performance by asking questions to stimulate them to think about different strategies they can use to overcome the same obstacle.`
+  String get discovery_lesson_1 {
+    return Intl.message(
+      'The lesson aims to improve basic motor skills. Students have to overcome an obstacle course using their basic motor skills (rolling, jumping, running, crawling). The teacher engages students in talk to help them reflect on which basic motor skills they can use to overcome the obstacles. The teacher also supports students\' performance by asking questions to stimulate them to think about different strategies they can use to overcome the same obstacle.',
+      name: 'discovery_lesson_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve balance skills. The teacher engages students in talk to help them reflect on the effects of yoga practice on balance. The teacher also supports students' pose development by asking questions to stimulate them to think about the level of difficulty needed to maintain a pose. Correct thinking and strategies are rewarded and reinforced.`
+  String get discovery_lesson_2 {
+    return Intl.message(
+      'The lesson aims to improve balance skills. The teacher engages students in talk to help them reflect on the effects of yoga practice on balance. The teacher also supports students\' pose development by asking questions to stimulate them to think about the level of difficulty needed to maintain a pose. Correct thinking and strategies are rewarded and reinforced.',
+      name: 'discovery_lesson_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve knowledge of one's own body. Students develop a story about bears who walk around in the forest and perform certain actions (eating, washing, rolling around). Students must impersonate the bears. The teacher asks several questions to invite students to develop their personalised bears day (from waking up to going to bed). The teacher also encourages students to think about which activities could be introduced in the story to improve knowledge of one's own body. Correct thinking and strategies are rewarded and reinforced.`
+  String get discovery_lesson_3 {
+    return Intl.message(
+      'The lesson aims to improve knowledge of one\'s own body. Students develop a story about bears who walk around in the forest and perform certain actions (eating, washing, rolling around). Students must impersonate the bears. The teacher asks several questions to invite students to develop their personalised bears day (from waking up to going to bed). The teacher also encourages students to think about which activities could be introduced in the story to improve knowledge of one\'s own body. Correct thinking and strategies are rewarded and reinforced.',
+      name: 'discovery_lesson_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve volleyball serving. The teacher engages students in talk to help them focus on how to use the sensations related to the service execution to perform better. The teacher also encourages the students to perceive which service is most comfortable for them, and the sensations felt performing it. Based on this, they have to adapt the other services to make them more comfortable. Correct thinking and strategies are rewarded and reinforced.`
+  String get discovery_lesson_4 {
+    return Intl.message(
+      'The lesson aims to improve volleyball serving. The teacher engages students in talk to help them focus on how to use the sensations related to the service execution to perform better. The teacher also encourages the students to perceive which service is most comfortable for them, and the sensations felt performing it. Based on this, they have to adapt the other services to make them more comfortable. Correct thinking and strategies are rewarded and reinforced.',
+      name: 'discovery_lesson_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve basic motor skills. The teacher provides information on basic motor skills (rolling, jumping, running, crawling). Students have to develop games to improve their basic motor skills.`
+  String get self_teaching_lesson_1 {
+    return Intl.message(
+      'The lesson aims to improve basic motor skills. The teacher provides information on basic motor skills (rolling, jumping, running, crawling). Students have to develop games to improve their basic motor skills.',
+      name: 'self_teaching_lesson_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve balance skills. The teacher provides information on the effects of yoga practice on balance. Students should look for some yoga exercises to do in class with everyone.`
+  String get self_teaching_lesson_2 {
+    return Intl.message(
+      'The lesson aims to improve balance skills. The teacher provides information on the effects of yoga practice on balance. Students should look for some yoga exercises to do in class with everyone.',
+      name: 'self_teaching_lesson_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve knowledge of one's own body. Students have to develop a story about bears who live in the forest and perform daily actions (eating, washing, rolling around). Students must impersonate the bears. Students have to find funny strategies to get them to perform movements that focus on the use of a specific body part. The teacher provides guidance when needed.`
+  String get self_teaching_lesson_3 {
+    return Intl.message(
+      'The lesson aims to improve knowledge of one\'s own body. Students have to develop a story about bears who live in the forest and perform daily actions (eating, washing, rolling around). Students must impersonate the bears. Students have to find funny strategies to get them to perform movements that focus on the use of a specific body part. The teacher provides guidance when needed.',
+      name: 'self_teaching_lesson_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The lesson aims to improve volleyball serving. The teacher provides information on the volleyball services (basic underhand service, basic overhand serve, and jump serve). Students are free to work individually or in groups. They have to develop some exercises to train the volleyball services.`
+  String get self_teaching_lesson_4 {
+    return Intl.message(
+      'The lesson aims to improve volleyball serving. The teacher provides information on the volleyball services (basic underhand service, basic overhand serve, and jump serve). Students are free to work individually or in groups. They have to develop some exercises to train the volleyball services.',
+      name: 'self_teaching_lesson_4',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(

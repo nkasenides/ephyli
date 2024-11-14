@@ -81,72 +81,76 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
   Widget activityGameView() {
 
     if (teachingStyles.isEmpty) {
-      teachingStyles = ["Command", "Guided Discovery", "Self-Teaching"];
+      teachingStyles = [
+        AppLocalizations.of(context)!.command,
+        AppLocalizations.of(context)!.guided_discovery,
+        AppLocalizations.of(context)!.self_teaching
+      ];
     }
 
     if (lessons.isEmpty) {
       lessons = kDebugMode ? [
         {
           "text": "Command1",
-          "style": "Command"
+          "style": AppLocalizations.of(context)!.command
         },
         {
           "text": "Selfteaching1",
-          "style": "Self-Teaching"
+          "style": AppLocalizations.of(context)!.self_teaching
         },
       ] : [
         // Command Style Lessons
         {
-          "text": "The lesson aims to improve basic motor skills. Students must overcome an obstacle course using their basic motor skills (rolling, jumping, running, crawling). The teacher demonstrates how to overcome each obstacle. The students start the course at the teacher's command, imitating the teacher's movement.",
-          "style": "Command"
+          "text": AppLocalizations.of(context)!.command_lesson_1,
+          "style": AppLocalizations.of(context)!.command
         },
         {
-          "text": "The lesson aims to improve balance skills. The teacher demonstrates three yoga poses at a time (Balancing Table, Dancer, and Half Moon). Students must maintain a position for 15 seconds. The students change position at the teacher's command.",
-          "style": "Command"
+          "text": AppLocalizations.of(context)!.command_lesson_2,
+          "style": AppLocalizations.of(context)!.command
         },
         {
-          "text": "The lesson aims to improve knowledge of one's own body. The teacher tells a story about bears who walk around in the forest and perform certain actions (eating, washing, rolling around). Students must impersonate the bears. The teacher chooses when the bears are itchy and where they have to scratch.",
-          "style": "Command"
+          "text": AppLocalizations.of(context)!.command_lesson_3,
+          "style": AppLocalizations.of(context)!.command
         },
         {
-          "text": "The lesson aims to improve volleyball serving. The teacher demonstrates the volleyball services (basic underhand service, basic overhand serve, and jump serve). The teacher plans two exercises for each service, explaining that students have to start with the basic underhand service, then the basic overhand serve, and at the end jump serve.",
-          "style": "Command"
+          "text": AppLocalizations.of(context)!.command_lesson_4,
+          "style": AppLocalizations.of(context)!.command
         },
 
         // Guided Discovery Style Lessons
         {
-          "text": "The lesson aims to improve basic motor skills. Students have to overcome an obstacle course using their basic motor skills. The teacher engages students in talk to help them reflect on which basic motor skills they can use to overcome the obstacles, asking questions to stimulate different strategies.",
-          "style": "Guided Discovery"
+          "text": AppLocalizations.of(context)!.discovery_lesson_1,
+          "style": AppLocalizations.of(context)!.guided_discovery
         },
         {
-          "text": "The lesson aims to improve balance skills. The teacher engages students in talk to help them reflect on the effects of yoga practice on balance, supporting pose development by asking questions. Correct thinking and strategies are rewarded.",
-          "style": "Guided Discovery"
+          "text": AppLocalizations.of(context)!.discovery_lesson_2,
+          "style": AppLocalizations.of(context)!.guided_discovery
         },
         {
-          "text": "The lesson aims to improve knowledge of one's own body. Students develop a story about bears in the forest performing certain actions. The teacher asks questions to guide students in creating a personalized story, inviting activities to improve body knowledge.",
-          "style": "Guided Discovery"
+          "text": AppLocalizations.of(context)!.discovery_lesson_3,
+          "style": AppLocalizations.of(context)!.guided_discovery
         },
         {
-          "text": "The lesson aims to improve volleyball serving. The teacher engages students in talk to help them focus on sensations during service execution. Students identify the most comfortable service and adapt others to make them more comfortable. Correct thinking and strategies are rewarded.",
-          "style": "Guided Discovery"
+          "text": AppLocalizations.of(context)!.discovery_lesson_4,
+          "style": AppLocalizations.of(context)!.guided_discovery
         },
 
         // Self-Teaching Style Lessons
         {
-          "text": "The lesson aims to improve basic motor skills. The teacher provides information on basic motor skills, and students develop games to improve these skills.",
-          "style": "Self-Teaching"
+          "text": AppLocalizations.of(context)!.self_teaching_lesson_1,
+          "style": AppLocalizations.of(context)!.self_teaching
         },
         {
-          "text": "The lesson aims to improve balance skills. The teacher provides information on the effects of yoga practice on balance, and students choose some yoga exercises to practice together in class.",
-          "style": "Self-Teaching"
+          "text": AppLocalizations.of(context)!.self_teaching_lesson_2,
+          "style": AppLocalizations.of(context)!.self_teaching
         },
         {
-          "text": "The lesson aims to improve knowledge of one's own body. Students develop a story about bears in the forest performing actions, creating strategies to focus movements on specific body parts. The teacher provides guidance when needed.",
-          "style": "Self-Teaching"
+          "text": AppLocalizations.of(context)!.self_teaching_lesson_3,
+          "style": AppLocalizations.of(context)!.self_teaching
         },
         {
-          "text": "The lesson aims to improve volleyball serving. The teacher provides information on volleyball services, and students work individually or in groups to create exercises to train each service.",
-          "style": "Self-Teaching"
+          "text": AppLocalizations.of(context)!.self_teaching_lesson_4,
+          "style": AppLocalizations.of(context)!.self_teaching
         },
       ];
       lessons.shuffle();
