@@ -1,14 +1,5 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:chat_bubbles/bubbles/bubble_normal.dart';
-import 'package:chat_bubbles/bubbles/bubble_normal_image.dart';
-import 'package:chat_bubbles/bubbles/bubble_special_one.dart';
-import 'package:ephyli/model/game_badge_type.dart';
-import 'package:ephyli/theme/app_images.dart';
 import 'package:ephyli/theme/themes.dart';
-import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/utils/pref_utils.dart';
-import 'package:ephyli/utils/ui_utils.dart';
-import 'package:ephyli/widgets/buddy_avatar_widget.dart';
 import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:flutter/cupertino.dart';
@@ -21,8 +12,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../model/challenge.dart';
 import '../model/game_badge.dart';
 import '../widgets/challenge_widget.dart';
-import '../widgets/chat_bubble.dart';
-import 'fragments.dart';
 
 class ChallengesFragment extends StatefulWidget {
   const ChallengesFragment({super.key});
@@ -114,49 +103,47 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
           tutorialCompleted = snapshot.data!.getBool(PrefUtils.tutorial_completed) ?? false;
           debugPrint("tutorialCompleted: $tutorialCompleted");
 
-          return EphyliGradient(
-            child: Padding(
-                padding: Themes.standardPadding,
-                child: Column(
-                  children: [
+          return Padding(
+              padding: Themes.standardPadding,
+              child: Column(
+                children: [
 
-                    !tutorialCompleted ? createTutorialView(snapshot)
-                        : createNormalView(snapshot),
+                  !tutorialCompleted ? createTutorialView(snapshot)
+                      : createNormalView(snapshot),
 
-                    const Gap(20),
+                  const Gap(20),
 
-                    //TODO ---
+                  //TODO ---
 
-                    Expanded(
-                      child: OrientationBuilder(builder: (context, orientation) {
+                  Expanded(
+                    child: OrientationBuilder(builder: (context, orientation) {
 
-                        //LANDSCAPE
+                      //LANDSCAPE
 
-                        if (orientation == Orientation.landscape) {
-                          return GridView.count(
-                            scrollDirection: Axis.horizontal,
-                            crossAxisCount: 1,
-                            children: Challenge.challenges.map((e) {
-                              return ChallengeWidget(e, refresher: _refresh, dense: true,);
-                            }).toList(),
-                          );
-                        }
+                      if (orientation == Orientation.landscape) {
+                        return GridView.count(
+                          scrollDirection: Axis.horizontal,
+                          crossAxisCount: 1,
+                          children: Challenge.challenges.map((e) {
+                            return ChallengeWidget(e, refresher: _refresh, dense: true,);
+                          }).toList(),
+                        );
+                      }
 
-                        //PORTRAIT
+                      //PORTRAIT
 
-                        else {
-                          return GridView.count(
-                            crossAxisCount: 2,
-                            children: Challenge.challenges.map((e) {
-                              return ChallengeWidget(e, refresher: _refresh);
-                            }).toList(),
-                          );
-                        }
-                      },),
-                    ),
-                  ],
-                )),
-          );
+                      else {
+                        return GridView.count(
+                          crossAxisCount: 2,
+                          children: Challenge.challenges.map((e) {
+                            return ChallengeWidget(e, refresher: _refresh);
+                          }).toList(),
+                        );
+                      }
+                    },),
+                  ),
+                ],
+              ));
         }
         return const Center(child: CircularProgressIndicator());
       },

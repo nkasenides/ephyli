@@ -333,6 +333,9 @@
   "term10_hint": "Student-led, from design to execution, with teacher as consultant.",
   "term11_hint": "Students plan, execute, and evaluate their learning.",
 
+  "c10a2_instructions": "You will assume the role of a PE teacher and have to match the lesson provided with the correct teaching style used to develop it. Ready?",
+  "c10a2_finish_message": "Well done! You have completed the tenth challenge. Press 'Finish' to get your badge!",
+
 
 
 

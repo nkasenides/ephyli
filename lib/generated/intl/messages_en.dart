@@ -82,6 +82,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Well done! You can now access the next challenge."),
         "c10a1_instructions": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 10. Mosston\'s spectrum of teaching styles is a framework that categorizes teaching styles based on the degree of decision-making authority given to the teacher and the learner. The spectrum consists of 11 teaching styles, ranging from more teacher-centred to more student-centred approaches. Read the clues and identify the related teaching style to solve the puzzle. Ready?"),
+        "c10a2_finish_message": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have completed the tenth challenge. Press \'Finish\' to get your badge!"),
+        "c10a2_instructions": MessageLookupByLibrary.simpleMessage(
+            "You will assume the role of a PE teacher and have to match the lesson provided with the correct teaching style used to develop it. Ready?"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "You have made 5 mistakes, and the game will restart."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(

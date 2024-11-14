@@ -2933,6 +2933,26 @@ class S {
     );
   }
 
+  /// `You will assume the role of a PE teacher and have to match the lesson provided with the correct teaching style used to develop it. Ready?`
+  String get c10a2_instructions {
+    return Intl.message(
+      'You will assume the role of a PE teacher and have to match the lesson provided with the correct teaching style used to develop it. Ready?',
+      name: 'c10a2_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have completed the tenth challenge. Press 'Finish' to get your badge!`
+  String get c10a2_finish_message {
+    return Intl.message(
+      'Well done! You have completed the tenth challenge. Press \'Finish\' to get your badge!',
+      name: 'c10a2_finish_message',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(

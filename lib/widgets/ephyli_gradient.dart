@@ -31,5 +31,4 @@ class EphyliGradient extends StatelessWidget {
     );
 
   }
-
 }

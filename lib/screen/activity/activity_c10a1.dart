@@ -5,6 +5,7 @@ import 'package:ephyli/controller/activity_manager.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
+import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -253,74 +254,83 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
 
     }
 
-    Future.delayed(const Duration(milliseconds: 500), () {
-      openKeyboard();
-    },);
+    return OrientationBuilder(
+      builder: (context, orientation) {
+        if (orientation == Orientation.landscape) {
+          return Center(child: RotateDeviceWidget(Orientation.portrait));
+        }
 
-    return Scaffold(
-      body: Padding(
-        padding: Themes.standardPadding,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+        //Only open keyboard in portrait mode:
+        Future.delayed(const Duration(milliseconds: 500), () {
+          openKeyboard();
+        },);
 
-            //Display hint or instruction to start.
-            Text(
-              selectedTermIndex != -1 ? "Hint: ${terms[selectedTermIndex]['hint']}" : "Click on the letter boxes to fill in the word using the hint provided.",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
-              textAlign: TextAlign.center,
+        return Scaffold(
+          body: Padding(
+            padding: Themes.standardPadding,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+
+                //Display hint or instruction to start.
+                Text(
+                  selectedTermIndex != -1 ? "Hint: ${terms[selectedTermIndex]['hint']}" : "Click on the letter boxes to fill in the word using the hint provided.",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
+                  textAlign: TextAlign.center,
+                ),
+
+                const SizedBox(height: 20),
+
+                // Display all terms together at the top
+                Expanded(
+                  child: ScrollablePositionedList.separated(
+                    itemScrollController: itemScrollController,
+                    scrollOffsetController: scrollOffsetController,
+                    itemPositionsListener: itemPositionsListener,
+                    scrollOffsetListener: scrollOffsetListener,
+                    itemCount: terms.length,
+                    separatorBuilder: (context, index) {
+                      return const Gap(10);
+                    },
+                    itemBuilder: (context, termIndex) {
+                      final Map<String, dynamic> termEntry = terms[termIndex];
+                      return FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: List.generate(termEntry["term"].length, (letterIndex) {
+                            return buildLetterBox(termIndex, letterIndex);
+                          }),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+
+              ],
             ),
-
-            const SizedBox(height: 20),
-
-            // Display all terms together at the top
-            Expanded(
-              child: ScrollablePositionedList.separated(
-                itemScrollController: itemScrollController,
-                scrollOffsetController: scrollOffsetController,
-                itemPositionsListener: itemPositionsListener,
-                scrollOffsetListener: scrollOffsetListener,
-                itemCount: terms.length,
-                separatorBuilder: (context, index) {
-                  return const Gap(10);
-                },
-                itemBuilder: (context, termIndex) {
-                  final Map<String, dynamic> termEntry = terms[termIndex];
-                  return FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(termEntry["term"].length, (letterIndex) {
-                        return buildLetterBox(termIndex, letterIndex);
-                      }),
-                    ),
-                  );
-                },
-              ),
+          ),
+          bottomNavigationBar: selectedTermIndex != -1
+              ? Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              autofocus: true,
+              controller: _controller,
+              focusNode: _focusNode,
+              maxLength: 1,
+              textCapitalization: TextCapitalization.characters,
+              decoration: InputDecoration(hintText: "Type a letter"),
+              onChanged: (input) {
+                if (input.isNotEmpty) {
+                  guessLetter(input[0]);
+                }
+              },
             ),
-
-          ],
-        ),
-      ),
-      bottomNavigationBar: selectedTermIndex != -1
-          ? Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: TextField(
-          autofocus: true,
-          controller: _controller,
-          focusNode: _focusNode,
-          maxLength: 1,
-          textCapitalization: TextCapitalization.characters,
-          decoration: InputDecoration(hintText: "Type a letter"),
-          onChanged: (input) {
-            if (input.isNotEmpty) {
-              guessLetter(input[0]);
-            }
-          },
-        ),
-      )
-          : null,
+          )
+              : null,
+        );
+      },
     );
   }
 
