@@ -780,6 +780,36 @@ class S {
     );
   }
 
+  /// `Enter your name`
+  String get enter_name {
+    return Intl.message(
+      'Enter your name',
+      name: 'enter_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customize your avatar`
+  String get pick_avatar {
+    return Intl.message(
+      'Customize your avatar',
+      name: 'pick_avatar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your ePhyLi buddy`
+  String get pick_buddy {
+    return Intl.message(
+      'Select your ePhyLi buddy',
+      name: 'pick_buddy',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(

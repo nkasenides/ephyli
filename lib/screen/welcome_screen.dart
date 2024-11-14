@@ -1,5 +1,6 @@
 import 'package:animate_gradient/animate_gradient.dart';
 import 'package:ephyli/utils/constants.dart';
+import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:ephyli/widgets/language_selection_widget.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +19,18 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+
+  @override
+  void dispose() {
+    UIUtils.disableFullscreen();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    UIUtils.enableFullScreen();
+
     return Scaffold(
       body: EphyliGradient(
         child: Center(

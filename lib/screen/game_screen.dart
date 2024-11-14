@@ -4,6 +4,7 @@ import 'package:ephyli/screen/news_screen.dart';
 import 'package:ephyli/screen/profile_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
+import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/buddy_avatar_widget.dart';
 import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,7 @@ class _GameScreenState extends State<GameScreen> {
 
   @override
   void initState() {
+    UIUtils.disableFullscreen();
     super.initState();
     dataFuture = _getData();
   }

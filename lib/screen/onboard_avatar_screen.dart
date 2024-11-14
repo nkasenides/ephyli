@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:ephyli/screen/buddy_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/constants.dart';
+import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,16 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
   String avatarData = defaultAvatarData;
 
   @override
+  void dispose() {
+    UIUtils.disableFullscreen();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+
+    UIUtils.enableFullScreen();
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: EphyliGradient(
@@ -64,7 +74,11 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
                 ),
               ),
 
-              const Gap(40),
+              const Gap(20),
+
+              Text(AppLocalizations.of(context)!.pick_avatar),
+
+              const Gap(20),
 
               //Customizer:
               SizedBox(

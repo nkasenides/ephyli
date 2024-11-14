@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:ephyli/screen/onboard_avatar_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/text_utils.dart';
+import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -29,7 +32,16 @@ class _OnboardNameScreenState extends State<OnboardNameScreen> {
   String avatarData = defaultAvatarData;
 
   @override
+  void dispose() {
+    UIUtils.disableFullscreen();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+
+    UIUtils.enableFullScreen();
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: EphyliGradient(
@@ -77,28 +89,31 @@ class _OnboardNameScreenState extends State<OnboardNameScreen> {
                     )
                 ),
 
-                const Gap(40),
+                const Gap(20),
 
                 //Name
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: AppLocalizations.of(context)!.whatIsYourName,
+                SizedBox(
+                  width: min(500, MediaQuery.of(context).size.width),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: AppLocalizations.of(context)!.whatIsYourName,
+                    ),
+                    controller: nameController,
+                    autofocus: true,
+                    textCapitalization: TextCapitalization.words,
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return AppLocalizations.of(context)!.pleaseProvideAValue;
+                      }
+
+                      if (!value.isValidPersonName) {
+                        return AppLocalizations.of(context)!.invalidPersonName;
+                      }
+
+                      return null;
+
+                    },
                   ),
-                  controller: nameController,
-                  autofocus: true,
-                  textCapitalization: TextCapitalization.words,
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return AppLocalizations.of(context)!.pleaseProvideAValue;
-                    }
-
-                    if (!value.isValidPersonName) {
-                      return AppLocalizations.of(context)!.invalidPersonName;
-                    }
-
-                    return null;
-
-                  },
                 ),
 
                 const Gap(40),

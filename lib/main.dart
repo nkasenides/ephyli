@@ -18,6 +18,6 @@ main() async {
     Language.changeLocale(locale);
   }
 
-  UIUtils.enableFullScreen();
+  // UIUtils.enableFullScreen();
   runApp(const EPhyLiApp());
 }

@@ -392,6 +392,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enjoyment": MessageLookupByLibrary.simpleMessage("Enjoyment"),
         "enter_letter": MessageLookupByLibrary.simpleMessage("Enter a letter"),
+        "enter_name": MessageLookupByLibrary.simpleMessage("Enter your name"),
         "enthusiastic_participation": MessageLookupByLibrary.simpleMessage(
             "The student is enthusiastic about participating in physical education classes at school and is aware of his/her level of involvement (affective dimension)."),
         "error": MessageLookupByLibrary.simpleMessage("An error has occurred."),
@@ -547,6 +548,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Parks and recreation facilities"),
         "physical_environment":
             MessageLookupByLibrary.simpleMessage("Physical environment"),
+        "pick_avatar":
+            MessageLookupByLibrary.simpleMessage("Customize your avatar"),
+        "pick_buddy":
+            MessageLookupByLibrary.simpleMessage("Select your ePhyLi buddy"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Please provide a value"),
         "pleaseTurnDevice":

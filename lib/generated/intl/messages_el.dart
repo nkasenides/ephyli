@@ -392,6 +392,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enjoyment": MessageLookupByLibrary.simpleMessage("Απόλαυση"),
         "enter_letter":
             MessageLookupByLibrary.simpleMessage("Εισαγάγετε ένα γράμμα"),
+        "enter_name":
+            MessageLookupByLibrary.simpleMessage("Εισαγάγετε το όνομά σας"),
         "enthusiastic_participation": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής είναι ενθουσιασμένος με τη συμμετοχή στα μαθήματα φυσικής αγωγής στο σχολείο και έχει επίγνωση του επιπέδου εμπλοκής του/της (συναισθηματική διάσταση)."),
         "error":
@@ -545,6 +547,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Πάρκα και εγκαταστάσεις αναψυχής"),
         "physical_environment":
             MessageLookupByLibrary.simpleMessage("Φυσικό περιβάλλον"),
+        "pick_avatar":
+            MessageLookupByLibrary.simpleMessage("Προσαρμόστε το avatar σας"),
+        "pick_buddy":
+            MessageLookupByLibrary.simpleMessage("Επιλέξτε τον φίλο σας"),
         "pleaseProvideAValue":
             MessageLookupByLibrary.simpleMessage("Παρακαλώ δώστε μια τιμή"),
         "pleaseTurnDevice": MessageLookupByLibrary.simpleMessage(

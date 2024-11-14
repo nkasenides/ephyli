@@ -16,6 +16,7 @@ import '../utils/pref_utils.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../utils/ui_utils.dart';
 import '../widgets/page_indicator.dart';
 
 class BuddyScreen extends StatefulWidget {
@@ -35,17 +36,20 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
   @override
   void initState() {
     _tabController = TabController(length: buddyAvatars.length, vsync: this);
+    super.initState();
   }
 
   @override
   void dispose() {
     super.dispose();
+    UIUtils.disableFullscreen();
     _pageController.dispose();
     _tabController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    UIUtils.enableFullScreen();
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: EphyliGradient(
