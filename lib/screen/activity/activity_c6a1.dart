@@ -8,6 +8,7 @@ import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/text_bubble.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttermoji/fluttermojiCircleAvatar.dart';
@@ -219,8 +220,7 @@ class _ActivityC6A1State extends State<ActivityC6A1>
   }
 
   Future<void> loadData() async {
-    // final String filename = "assets/activity_data/activity1/c6a1_terms.json";
-    const String filename = "assets/activity_data/activity1/test_terms.json";
+    const String filename = kDebugMode ? "assets/activity_data/activity1/test_terms.json" : "assets/activity_data/activity1/c6a1_terms.json";
     await Future.wait([
       Term.readTermsFromJSONFile(filename).then(
         (value) {
