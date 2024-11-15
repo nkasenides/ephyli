@@ -125,7 +125,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
               const Gap(10),
               Opacity(opacity: 0.5,child: Icon(Icons.lock, color: Colors.lime.shade900, size: 75),),
               const Spacer(),
-              !widget.dense ? Text(AppLocalizations.of(context)!.challengeLocked, style: TextStyle(color: Colors.grey),) : Container(),
+              !widget.dense ? Text(AppLocalizations.of(context)!.challengeLocked, textAlign: TextAlign.center, style: TextStyle(color: Colors.grey),) : Container(),
             ],
           ),
         ),
