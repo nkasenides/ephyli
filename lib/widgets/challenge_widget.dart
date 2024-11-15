@@ -96,7 +96,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
 
             const Spacer(),
 
-            widget.challenge.completed
+            !widget.dense ? widget.challenge.completed
                 ? Container(
                   padding: const EdgeInsets.all(5),
                   color: Colors.green,
@@ -110,7 +110,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
                   ),
                 )
                 : Text("${widget.challenge.activityIDs.length} ${AppLocalizations.of(context)!.activities}",
-            style: const TextStyle(color: Colors.grey),),
+            style: const TextStyle(color: Colors.grey),) : Container(),
 
           ],
         ),
@@ -122,10 +122,10 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
           padding: Themes.standardPadding,
           child: Column(
             children: [
-              const Gap(30),
+              const Gap(10),
               Opacity(opacity: 0.5,child: Icon(Icons.lock, color: Colors.lime.shade900, size: 75),),
               const Spacer(),
-              Text(AppLocalizations.of(context)!.challengeLocked, style: TextStyle(color: Colors.grey),),
+              !widget.dense ? Text(AppLocalizations.of(context)!.challengeLocked, style: TextStyle(color: Colors.grey),) : Container(),
             ],
           ),
         ),

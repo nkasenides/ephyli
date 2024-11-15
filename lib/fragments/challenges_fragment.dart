@@ -116,32 +116,49 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                   //TODO ---
 
                   Expanded(
-                    child: OrientationBuilder(builder: (context, orientation) {
+                    child: MediaQuery.of(context).orientation == Orientation.landscape ?
+                    GridView.count(
+                      scrollDirection: Axis.horizontal,
+                      crossAxisCount: 1,
+                      children: Challenge.challenges.map((e) {
+                        return ChallengeWidget(e, refresher: _refresh, dense: true,);
+                      }).toList(),
+                    ) : GridView.count(
+                      crossAxisCount: 2,
+                      children: Challenge.challenges.map((e) {
+                        return ChallengeWidget(e, refresher: _refresh);
+                      }).toList(),
+                    ),
 
-                      //LANDSCAPE
-
-                      if (orientation == Orientation.landscape) {
-                        return GridView.count(
-                          scrollDirection: Axis.horizontal,
-                          crossAxisCount: 1,
-                          children: Challenge.challenges.map((e) {
-                            return ChallengeWidget(e, refresher: _refresh, dense: true,);
-                          }).toList(),
-                        );
-                      }
-
-                      //PORTRAIT
-
-                      else {
-                        return GridView.count(
-                          crossAxisCount: 2,
-                          children: Challenge.challenges.map((e) {
-                            return ChallengeWidget(e, refresher: _refresh);
-                          }).toList(),
-                        );
-                      }
-                    },),
                   ),
+
+                  // Expanded(
+                  //   child: OrientationBuilder(builder: (context, orientation) {
+                  //
+                  //     //LANDSCAPE
+                  //
+                  //     if (orientation == Orientation.landscape) {
+                  //       return GridView.count(
+                  //         scrollDirection: Axis.horizontal,
+                  //         crossAxisCount: 1,
+                  //         children: Challenge.challenges.map((e) {
+                  //           return ChallengeWidget(e, refresher: _refresh, dense: true,);
+                  //         }).toList(),
+                  //       );
+                  //     }
+                  //
+                  //     //PORTRAIT
+                  //
+                  //     else {
+                  //       return GridView.count(
+                  //         crossAxisCount: 2,
+                  //         children: Challenge.challenges.map((e) {
+                  //           return ChallengeWidget(e, refresher: _refresh);
+                  //         }).toList(),
+                  //       );
+                  //     }
+                  //   },),
+                  // ),
                 ],
               ));
         }
