@@ -75,11 +75,11 @@ class _ActivityC7A1State extends State<ActivityC7A1> {
         prefs,
         AppLocalizations.of(context)!.c7a1_welcome,
         AppLocalizations.of(context)!.ready_letsgo,
-        middleWidget: Text(
-          AppLocalizations.of(context)!.screen_flip_notice,
-          style: const TextStyle(fontStyle: FontStyle.italic),
-          textAlign: TextAlign.center,
-        ),
+        // middleWidget: Text(
+        //   AppLocalizations.of(context)!.screen_flip_notice,
+        //   style: const TextStyle(fontStyle: FontStyle.italic),
+        //   textAlign: TextAlign.center,
+        // ),
         () {
           setState(() {
             stage = C7A1Stage.activity;
