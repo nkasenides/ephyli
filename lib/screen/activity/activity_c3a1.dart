@@ -22,6 +22,8 @@ import '../../widgets/buddy_avatar_widget.dart';
 import '../../widgets/chat_bubble.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../widgets/rotate_device_widget.dart';
+
 class ActivityC3A1 extends StatefulWidget {
   @override
   _ActivityC3A1State createState() => _ActivityC3A1State();
@@ -104,58 +106,65 @@ class _ActivityC3A1State extends State<ActivityC3A1> {
       _shuffleCards();
     }
 
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: [
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
 
-          Text(AppLocalizations.of(context)!.c3a1_activity_message),
-          const SizedBox(height: 20),
+              Text(AppLocalizations.of(context)!.c3a1_activity_message),
+              const SizedBox(height: 20),
 
-          // Draggable and reorderable card list
-          Expanded(
-            child: ReorderableListView.builder(
-              itemCount: shuffledCards.length,
-              onReorder: (oldIndex, newIndex) {
-                if (newIndex > oldIndex) {
-                  newIndex -= 1;
-                }
-                _swapCards(oldIndex, newIndex);
-              },
-              itemBuilder: (context, index) {
-                return Card(
-                  key: ValueKey(shuffledCards[index]),
-                  color: Themes.primaryColor,  // No background during drag
-                  child: ListTile(
-                    title: Text(
-                      shuffledCards[index],
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white
+              // Draggable and reorderable card list
+              Expanded(
+                child: ReorderableListView.builder(
+                  itemCount: shuffledCards.length,
+                  onReorder: (oldIndex, newIndex) {
+                    if (newIndex > oldIndex) {
+                      newIndex -= 1;
+                    }
+                    _swapCards(oldIndex, newIndex);
+                  },
+                  itemBuilder: (context, index) {
+                    return Card(
+                      key: ValueKey(shuffledCards[index]),
+                      color: Themes.primaryColor,  // No background during drag
+                      child: ListTile(
+                        title: Text(
+                          shuffledCards[index],
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
+                    );
+                  },
+                ),
+              ),
 
-          ElevatedButton(
-            child: Text(AppLocalizations.of(context)!.check_solution),
-            onPressed: () {
-              if (_isOrderCorrect()) {
-                _showSuccessMessage();
-              }
-              else {
-                _showFailMessage();
-              }
-            },
-          ),
+              ElevatedButton(
+                child: Text(AppLocalizations.of(context)!.check_solution),
+                onPressed: () {
+                  if (_isOrderCorrect()) {
+                    _showSuccessMessage();
+                  }
+                  else {
+                    _showFailMessage();
+                  }
+                },
+              ),
 
-        ],
-      ),
-    );
+            ],
+          ),
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   Widget activityFinishView() {
