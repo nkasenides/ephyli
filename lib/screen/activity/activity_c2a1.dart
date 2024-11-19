@@ -5,6 +5,7 @@ import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
+import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -89,7 +90,6 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
   }
 
   Widget activity1View() {
-    UIUtils.landscapeOrientation();
 
     //Initialize the events:
     if (events.isEmpty) {
@@ -112,158 +112,164 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
 
     }
 
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.landscape) {
+        return Column(
+          children: [
 
-    return Column(
-      children: [
-
-        // Timeline Section (Dates/Years)
-        Expanded(
-          flex: 1,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: List.generate(events.length, (index) {
-              return Column(
-                children: [
-                  Expanded(
-                    child: Container(
-                      width: MediaQuery.of(context).size.width / events.length - 10,
-                      height: 60,
-                      margin: const EdgeInsets.symmetric(vertical: 10),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: matched[index]! ? Colors.green : Colors.blue,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: matched[index]!
-                            ? Text(
-                          "${events[index]["date"]}, ${events[index]["event"]}",
-                          style: const TextStyle(color: Colors.green, fontSize: 14),
-                          textAlign: TextAlign.center,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 3,
-                        )
-                            : DragTarget<String>(
-                          builder: (context, candidateData, rejectedData) {
-                            return Center(
-                              child: Text(
-                                overflow: TextOverflow.ellipsis,
-                                draggedData[index] == '' ? events[index]["date"]! : "✔️",
-                                style: const TextStyle(color: Colors.black, fontSize: 14),
-                                textAlign: TextAlign.center,
-                              ),
-                            );
-                          },
-                          onWillAccept: (data) {
-                            // Accept the drag if the data matches the correct event
-                            return data == events[index]["event"];
-                          },
-                          onAccept: (data) {
-                            if (data != events[index]["event"]) {
-                              UIUtils.showFeedbackBar(context, false);
-                            }
-
-                            setState(() {
-                              matched[index] = true;
-                              draggedData[index] = data;
-
-                              int itemIndex = -1;
-                              for (int i = 0; i < shuffledEvents.length; i++) {
-                                var pair = shuffledEvents[i];
-                                if (pair["event"] == data) {
-                                  itemIndex = i;
-                                  break;
+            // Timeline Section (Dates/Years)
+            Expanded(
+              flex: 1,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: List.generate(events.length, (index) {
+                  return Column(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width / events.length - 10,
+                          height: 60,
+                          margin: const EdgeInsets.symmetric(vertical: 10),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: matched[index]! ? Colors.green : Colors.blue,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: matched[index]!
+                                ? Text(
+                              "${events[index]["date"]}, ${events[index]["event"]}",
+                              style: const TextStyle(color: Colors.green, fontSize: 14),
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 3,
+                            )
+                                : DragTarget<String>(
+                              builder: (context, candidateData, rejectedData) {
+                                return Center(
+                                  child: Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    draggedData[index] == '' ? events[index]["date"]! : "✔️",
+                                    style: const TextStyle(color: Colors.black, fontSize: 14),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                );
+                              },
+                              onWillAccept: (data) {
+                                // Accept the drag if the data matches the correct event
+                                return data == events[index]["event"];
+                              },
+                              onAccept: (data) {
+                                if (data != events[index]["event"]) {
+                                  UIUtils.showFeedbackBar(context, false);
                                 }
-                              }
-                              if (itemIndex != -1) {
-                                shuffledEvents.removeAt(itemIndex);
-                              }
 
-                              //Finish the game if no cards are left:
-                              if (shuffledEvents.isEmpty) {
-                                UIUtils.showFeedbackBar(context, true);
-                                ActivityManager.completeActivity(activityID).then((value) {
-                                  setState(() {
-                                    stage = C2A1Stage.activity1_finish;
-                                  });
-                                },);
-                              }
+                                setState(() {
+                                  matched[index] = true;
+                                  draggedData[index] = data;
 
-                            });
-                          },
+                                  int itemIndex = -1;
+                                  for (int i = 0; i < shuffledEvents.length; i++) {
+                                    var pair = shuffledEvents[i];
+                                    if (pair["event"] == data) {
+                                      itemIndex = i;
+                                      break;
+                                    }
+                                  }
+                                  if (itemIndex != -1) {
+                                    shuffledEvents.removeAt(itemIndex);
+                                  }
+
+                                  //Finish the game if no cards are left:
+                                  if (shuffledEvents.isEmpty) {
+                                    UIUtils.showFeedbackBar(context, true);
+                                    ActivityManager.completeActivity(activityID).then((value) {
+                                      setState(() {
+                                        stage = C2A1Stage.activity1_finish;
+                                      });
+                                    },);
+                                  }
+
+                                });
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                }),
+              ),
+            ),
+            SizedBox(height: 5),
+
+            // Draggable Cards Section (Event Cards)
+            Expanded(
+              flex: 3,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: List.generate(shuffledEvents.length, (index) {
+                  return Container(
+                    width: MediaQuery.of(context).size.width / events.length - 10,
+                    height: MediaQuery.of(context).size.height / 2,
+                    margin: const EdgeInsets.symmetric(horizontal: 2),
+                    child: Draggable<String>(
+                      data: shuffledEvents[index]["event"]!,
+                      feedback: Card(
+                        color: Colors.orangeAccent,
+                        child: Container(
+                          width: 120,
+                          height: 60,
+                          padding: EdgeInsets.all(10),
+                          child: Center(
+                            child: Text(
+                              shuffledEvents[index]["event"]!,
+                              style: TextStyle(color: Colors.white, fontSize: 14),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ),
+                      childWhenDragging: Container(
+                        width: 120,
+                        height: 60,
+                        margin: EdgeInsets.symmetric(horizontal: 5),
+                        child: Center(
+                          child: Text(
+                            AppLocalizations.of(context)!.dragging,
+                            style: TextStyle(color: Colors.grey, fontSize: 14),
+                          ),
+                        ),
+                      ),
+                      child: Card(
+                        color: Colors.blueAccent,
+                        child: Container(
+                          width: MediaQuery.of(context).size.width / events.length - 10,
+                          height: MediaQuery.of(context).size.height / 2,
+                          padding: EdgeInsets.all(10),
+                          child: Center(
+                            child: AutoSizeText(
+                              shuffledEvents[index]["event"]!,
+                              style: TextStyle(color: Colors.white),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              );
-            }),
-          ),
-        ),
-        SizedBox(height: 5),
-
-        // Draggable Cards Section (Event Cards)
-        Expanded(
-          flex: 3,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: List.generate(shuffledEvents.length, (index) {
-              return Container(
-                width: MediaQuery.of(context).size.width / events.length - 10,
-                height: MediaQuery.of(context).size.height / 2,
-                margin: const EdgeInsets.symmetric(horizontal: 2),
-                child: Draggable<String>(
-                  data: shuffledEvents[index]["event"]!,
-                  feedback: Card(
-                    color: Colors.orangeAccent,
-                    child: Container(
-                      width: 120,
-                      height: 60,
-                      padding: EdgeInsets.all(10),
-                      child: Center(
-                        child: Text(
-                          shuffledEvents[index]["event"]!,
-                          style: TextStyle(color: Colors.white, fontSize: 14),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
-                  childWhenDragging: Container(
-                    width: 120,
-                    height: 60,
-                    margin: EdgeInsets.symmetric(horizontal: 5),
-                    child: Center(
-                      child: Text(
-                        AppLocalizations.of(context)!.dragging,
-                        style: TextStyle(color: Colors.grey, fontSize: 14),
-                      ),
-                    ),
-                  ),
-                  child: Card(
-                    color: Colors.blueAccent,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width / events.length - 10,
-                      height: MediaQuery.of(context).size.height / 2,
-                      padding: EdgeInsets.all(10),
-                      child: Center(
-                        child: AutoSizeText(
-                          shuffledEvents[index]["event"]!,
-                          style: TextStyle(color: Colors.white),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              );
-            }),
-          ),
-        ),
-      ],
-    );
+                  );
+                }),
+              ),
+            ),
+          ],
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.landscape));
+      }
+    },);
   }
 
   Widget activity1FinishView() {

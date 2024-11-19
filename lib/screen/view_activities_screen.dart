@@ -3,6 +3,7 @@ import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/text_utils.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/ephyli_gradient.dart';
+import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -48,9 +49,6 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
 
   @override
   Widget build(BuildContext context) {
-
-    UIUtils.portraitOrientation();
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Themes.primaryColorDark,
@@ -176,7 +174,7 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
         }
         return const Center(child: CircularProgressIndicator());
       },
-      ),
+    ),
     );
   }
 

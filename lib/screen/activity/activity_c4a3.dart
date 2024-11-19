@@ -127,7 +127,6 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
   }
 
   Widget activityGameView() {
-    UIUtils.landscapeOrientation();
 
     if (shuffledFactors.isEmpty) {
 

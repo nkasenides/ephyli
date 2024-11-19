@@ -29,7 +29,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
 
     UIUtils.enableFullScreen();
-    UIUtils.portraitOrientation();
 
     return Scaffold(
       body: EphyliGradient(

@@ -8,6 +8,7 @@ import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
+import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:ephyli/widgets/text_bubble.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -278,262 +279,278 @@ class _ActivityC1a1State extends State<ActivityC1a1>
       curve: Curves.easeInOut,
     ));
 
-    return Stack(
-      children: [
-        //Background view (game):
-        Padding(
-          padding: Themes.standardPadding,
-          child: Column(
-            children: [
-              // const Gap(20),
-              // Container(
-              //   decoration: BoxDecoration(
-              //     color: Themes.secondaryColor,
-              //     borderRadius: const BorderRadius.all(Radius.circular(10)),
-              //     border: Border.all(
-              //       color: Colors.black,
-              //     ),
-              //   ),
-              //   child: Padding(
-              //     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              //     child: Text(
-              //       'Score: $score',
-              //     ),
-              //   ),
-              // ),
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.landscape) {
+        return Stack(
+          children: [
+            //Background view (game):
+            Padding(
+              padding: Themes.standardPadding,
+              child: Column(
+                children: [
+                  // const Gap(20),
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     color: Themes.secondaryColor,
+                  //     borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  //     border: Border.all(
+                  //       color: Colors.black,
+                  //     ),
+                  //   ),
+                  //   child: Padding(
+                  //     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  //     child: Text(
+                  //       'Score: $score',
+                  //     ),
+                  //   ),
+                  // ),
 
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Draggable words (Keys)
-                    Expanded(
-                      flex: 3,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: _termTexts.map((word) {
-                          return Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              color: Themes.primaryColor,
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Themes.secondaryColor),
-                            ),
-                            margin: const EdgeInsets.symmetric(vertical: 8),
-                            child: Draggable<String>(
-                              data: word,
-                              feedback: Material(
-                                color: Colors.transparent,
-                                child: Container(
-                                  padding: const EdgeInsets.all(5),
-                                  decoration: BoxDecoration(
-                                    color: Themes.primaryColor,
-                                    borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(color: Themes.secondaryColor),
-                                  ),
-                                  child: Text(
-                                    word,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              childWhenDragging: Opacity(
-                                opacity: 0.5,
-                                child: Text(word),
-                              ),
-                              child: Text(
-                                word,
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(fontSize: 18, color: Colors.white),
-                              ),
-                            ),
-                          );
-                        }).toList(),
-                      ),
-                    ),
-
-                    const Gap(20),
-
-                    // Drag Targets (Values)
-                    Expanded(
-                      flex: 7,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: _termDescriptions.map((definition) {
-                          return DragTarget<String>(
-                            onAccept: (receivedWord) {
-                              if (isMatch(receivedWord, definition)) {
-                                setState(() {
-                                  score += 100;
-                                  UIUtils.showFeedbackBar(context, true);
-
-                                  //Move the term to completed from shown:
-                                  _termsCompleted.add(getIDByTerm(receivedWord)!);
-                                  _termsShown.remove(getIDByTerm(receivedWord));
-
-                                  //Move the other terms from shown back to not shown:
-                                  _termsShown
-                                      .remove(matchingPairs.wrongPair1!.id);
-                                  _termsShown
-                                      .remove(matchingPairs.wrongPair2!.id);
-
-                                  if (!_termsCompleted
-                                      .contains(matchingPairs.wrongPair1!.id)) {
-                                    _termsNotShown
-                                        .add(matchingPairs.wrongPair1!.id);
-                                  }
-
-                                  if (!_termsCompleted
-                                      .contains(matchingPairs.wrongPair2!.id)) {
-                                    _termsNotShown
-                                        .add(matchingPairs.wrongPair2!.id);
-                                  }
-
-                                  debugPrint("Not shown: $_termsNotShown");
-                                  debugPrint("Shown: $_termsShown");
-                                  debugPrint("Completed: $_termsCompleted");
-
-                                  if (_termsNotShown.isEmpty) {
-                                    setState(() {
-                                      stage = C1A1Stage.congrats;
-                                    });
-                                  } else {
-                                    _findMatchingPairs();
-                                  }
-                                });
-                              } else {
-                                setState(() {
-                                  score -= 100;
-                                  UIUtils.showFeedbackBar(context, false);
-
-                                  mistakeCounter++;
-                                  if (mistakeCounter >= 5) {
-                                    showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return AlertDialog(
-                                            title: Text(
-                                                AppLocalizations.of(context)!
-                                                    .gameOver),
-                                            content: Text(
-                                                AppLocalizations.of(context)!
-                                                    .c1a1_5mistakesReset),
-                                            actions: [
-                                              TextButton(
-                                                onPressed: () {
-                                                  resetGame();
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text(
-                                                    AppLocalizations.of(context)!
-                                                        .ok),
-                                              )
-                                            ],
-                                          );
-                                        },
-                                        barrierDismissible: false);
-                                  }
-                                });
-                              }
-                            },
-                            builder: (context, candidateData, rejectedData) {
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Draggable words (Keys)
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: _termTexts.map((word) {
                               return Container(
                                 padding: const EdgeInsets.all(5),
                                 decoration: BoxDecoration(
+                                  color: Themes.primaryColor,
                                   borderRadius: BorderRadius.circular(8),
-                                  border:
-                                      Border.all(color: Themes.primaryColor),
+                                  border: Border.all(color: Themes.secondaryColor),
                                 ),
-                                margin: EdgeInsets.symmetric(vertical: 8),
-                                child: SizedBox(
-                                  width: 500,
-                                  child: Text(
-                                    definition,
-                                    textAlign: TextAlign.center,
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      fontStyle: FontStyle.italic,
-                                      color: Colors.blueGrey,
+                                margin: const EdgeInsets.symmetric(vertical: 8),
+                                child: Draggable<String>(
+                                  data: word,
+                                  feedback: Material(
+                                    color: Colors.transparent,
+                                    child: Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        color: Themes.primaryColor,
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(color: Themes.secondaryColor),
+                                      ),
+                                      child: Text(
+                                        word,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                        ),
+                                      ),
                                     ),
+                                  ),
+                                  childWhenDragging: Opacity(
+                                    opacity: 0.5,
+                                    child: Text(word),
+                                  ),
+                                  child: Text(
+                                    word,
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(fontSize: 18, color: Colors.white),
                                   ),
                                 ),
                               );
-                            },
-                          );
-                        }).toList(),
-                      ),
+                            }).toList(),
+                          ),
+                        ),
+
+                        const Gap(20),
+
+                        // Drag Targets (Values)
+                        Expanded(
+                          flex: 7,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: _termDescriptions.map((definition) {
+                              return DragTarget<String>(
+                                onAccept: (receivedWord) {
+                                  if (isMatch(receivedWord, definition)) {
+                                    setState(() {
+                                      score += 100;
+                                      UIUtils.showFeedbackBar(context, true);
+
+                                      //Move the term to completed from shown:
+                                      _termsCompleted.add(getIDByTerm(receivedWord)!);
+                                      _termsShown.remove(getIDByTerm(receivedWord));
+
+                                      //Move the other terms from shown back to not shown:
+                                      _termsShown
+                                          .remove(matchingPairs.wrongPair1!.id);
+                                      _termsShown
+                                          .remove(matchingPairs.wrongPair2!.id);
+
+                                      if (!_termsCompleted
+                                          .contains(matchingPairs.wrongPair1!.id)) {
+                                        _termsNotShown
+                                            .add(matchingPairs.wrongPair1!.id);
+                                      }
+
+                                      if (!_termsCompleted
+                                          .contains(matchingPairs.wrongPair2!.id)) {
+                                        _termsNotShown
+                                            .add(matchingPairs.wrongPair2!.id);
+                                      }
+
+                                      debugPrint("Not shown: $_termsNotShown");
+                                      debugPrint("Shown: $_termsShown");
+                                      debugPrint("Completed: $_termsCompleted");
+
+                                      if (_termsNotShown.isEmpty) {
+                                        setState(() {
+                                          stage = C1A1Stage.congrats;
+                                        });
+                                      } else {
+                                        _findMatchingPairs();
+                                      }
+                                    });
+                                  } else {
+                                    setState(() {
+                                      score -= 100;
+                                      UIUtils.showFeedbackBar(context, false);
+
+                                      mistakeCounter++;
+                                      if (mistakeCounter >= 5) {
+                                        showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return AlertDialog(
+                                                title: Text(
+                                                    AppLocalizations.of(context)!
+                                                        .gameOver),
+                                                content: Text(
+                                                    AppLocalizations.of(context)!
+                                                        .c1a1_5mistakesReset),
+                                                actions: [
+                                                  TextButton(
+                                                    onPressed: () {
+                                                      resetGame();
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Text(
+                                                        AppLocalizations.of(context)!
+                                                            .ok),
+                                                  )
+                                                ],
+                                              );
+                                            },
+                                            barrierDismissible: false);
+                                      }
+                                    });
+                                  }
+                                },
+                                builder: (context, candidateData, rejectedData) {
+                                  return Container(
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      border:
+                                      Border.all(color: Themes.primaryColor),
+                                    ),
+                                    margin: EdgeInsets.symmetric(vertical: 8),
+                                    child: SizedBox(
+                                      width: 500,
+                                      child: Text(
+                                        definition,
+                                        textAlign: TextAlign.center,
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          fontStyle: FontStyle.italic,
+                                          color: Colors.blueGrey,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              );
+                            }).toList(),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+
+                ],
               ),
+            ),
 
-            ],
-          ),
-        ),
-
-        //Hand animations:
-        Visibility(
-          visible: handVisible,
-          child: AnimatedBuilder(
-            animation: _animation,
-            builder: (context, child) {
-              return Positioned(
-                left: _animation.value.dx,
-                top: _animation.value.dy,
-                child: Icon(
-                  Icons.back_hand,
-                  size: 50,
-                  color: Colors.red.shade900,
-                ),
-              );
-            },
-          ),
-        ),
-      ],
-    );
+            //Hand animations:
+            Visibility(
+              visible: handVisible,
+              child: AnimatedBuilder(
+                animation: _animation,
+                builder: (context, child) {
+                  return Positioned(
+                    left: _animation.value.dx,
+                    top: _animation.value.dy,
+                    child: Icon(
+                      Icons.back_hand,
+                      size: 50,
+                      color: Colors.red.shade900,
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.landscape),);
+      }
+    },);
   }
 
   Widget getReadingView() {
-    return InstructionsWidget(
-        prefs,
-        AppLocalizations.of(context)!.c1a1_reading_instruction,
-        AppLocalizations.of(context)!.next,
-        () {
-          setState(() {
-            ActivityManager.completeActivity(activityID).then(
-                  (value) {
-                Navigator.pop(context, "_");
-              },
-            );
-          });
-        },
-      middleWidget: Column(
-        children: [
-          const Gap(20),
-          SizedBox(
-            height: 300,
-            child: WidgetZoom(
-              heroAnimationTag: "extract-img",
-              zoomWidget: Image.asset(
-                "assets/img/a1c1-extract.png",
-                width: MediaQuery.of(context).size.width,
+
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return InstructionsWidget(
+          prefs,
+          AppLocalizations.of(context)!.c1a1_reading_instruction,
+          AppLocalizations.of(context)!.next,
+              () {
+            setState(() {
+              ActivityManager.completeActivity(activityID).then(
+                    (value) {
+                  Navigator.pop(context, "_");
+                },
+              );
+            });
+          },
+          middleWidget: Column(
+            children: [
+              const Gap(20),
+              SizedBox(
+                height: 300,
+                child: WidgetZoom(
+                  heroAnimationTag: "extract-img",
+                  zoomWidget: Image.asset(
+                    "assets/img/a1c1-extract.png",
+                    width: MediaQuery.of(context).size.width,
+                  ),
+                ),
               ),
-            ),
+              const Gap(5),
+              Text(AppLocalizations.of(context)!.clickOnImageToZoom),
+              const Gap(20),
+            ],
           ),
-          const Gap(5),
-          Text(AppLocalizations.of(context)!.clickOnImageToZoom),
-          const Gap(20),
-        ],
-      ),
-    );
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -578,7 +595,6 @@ class _ActivityC1a1State extends State<ActivityC1a1>
           I10N.getI10nString(Activity.activities[activityID]!.nameRes)!,
           style: const TextStyle(color: Colors.white),
         ),
-        //TODO - Get name out of resource
         actions: stage == C1A1Stage.activity
             ? [
                 OutlinedButton(
@@ -629,18 +645,17 @@ class _ActivityC1a1State extends State<ActivityC1a1>
             : [],
       ),
       body: FutureBuilder(
-          future: future,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
-              // debugPrint(terms.toString());
-
-              return Padding(
-                  padding: const EdgeInsets.all(2), child: getChildView());
-            }
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          }),
+        future: future,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            // debugPrint(terms.toString());
+            return Padding(
+                padding: const EdgeInsets.all(2), child: getChildView());
+          }
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        }),
     );
   }
 
