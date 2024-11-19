@@ -543,6 +543,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "nextChallengeUnlocked": MessageLookupByLibrary.simpleMessage(
             "Η επόμενη πρόκληση ξεκλειδώθηκε."),
         "no": MessageLookupByLibrary.simpleMessage("Όχι"),
+        "no_badges_yet": MessageLookupByLibrary.simpleMessage(
+            "Δεν έχετε κερδίσει σήματα ακόμη. Ολοκληρώστε μερικές προκλήσεις για να κερδίσετε σήματα."),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "organizations": MessageLookupByLibrary.simpleMessage("Οργανισμοί"),
         "organizations_and_institutions":

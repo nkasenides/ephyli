@@ -81,7 +81,7 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
               SizedBox(
                 width: MediaQuery.of(context).orientation == Orientation.landscape ? 500 : null,
                 child: FluttermojiCustomizer(
-                  autosave: false,
+                  autosave: true,
                   theme: FluttermojiThemeData(
                       labelTextStyle: Theme.of(context).textTheme.titleSmall,
                       secondaryBgColor: Colors.white

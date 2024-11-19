@@ -820,6 +820,16 @@ class S {
     );
   }
 
+  /// `You have not earned any badges yet. Complete some challenges to earn badges.`
+  String get no_badges_yet {
+    return Intl.message(
+      'You have not earned any badges yet. Complete some challenges to earn badges.',
+      name: 'no_badges_yet',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(

@@ -544,6 +544,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "nextChallengeUnlocked": MessageLookupByLibrary.simpleMessage(
             "The next challenge has been unlocked."),
         "no": MessageLookupByLibrary.simpleMessage("No"),
+        "no_badges_yet": MessageLookupByLibrary.simpleMessage(
+            "You have not earned any badges yet. Complete some challenges to earn badges."),
         "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "organizations": MessageLookupByLibrary.simpleMessage("Organisations"),
         "organizations_and_institutions": MessageLookupByLibrary.simpleMessage(

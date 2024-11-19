@@ -33,7 +33,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> loadData() async {
     prefs = await SharedPreferences.getInstance();
 
-    avatarData = prefs.getString(PrefUtils.user_avatar) ?? "";
+    avatarData = prefs.getString(PrefUtils.user_avatar)!;
 
     //Check and add earned badges:
     for (GameBadge badge in GameBadge.gameBadges) {
@@ -193,7 +193,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                       const Gap(20),
 
-                      Expanded(
+                      earnedBadges.isNotEmpty ? Expanded(
                         child: GridView.builder(
                           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2
@@ -256,6 +256,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           },
                           itemCount: earnedBadges.length,
                         ),
+                      ) : Text(
+                        AppLocalizations.of(context)!.no_badges_yet,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(color: Colors.grey),
                       ),
 
                     ],

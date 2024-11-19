@@ -78,6 +78,7 @@
   "pick_avatar": "Customize your avatar",
   "pick_buddy": "Select your ePhyLi buddy",
   "help": "Help",
+  "no_badges_yet": "You have not earned any badges yet. Complete some challenges to earn badges.",
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
   "c1a1_congrats": "Well done! All concepts are correctly matched to the related descriptions.",
