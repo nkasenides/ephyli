@@ -1,0 +1,130 @@
+{
+  "pairs": [
+
+    {
+      "id": "prestructural",
+      "term": {
+        "en": "Prestructural",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "The acquisition of unconnected information has no organisation and makes no sense.",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "The base of the structure",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "unistructural",
+      "term": {
+        "en": "Unistructural",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "Simple and obvious connections are made but their significance is not grasped.",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "One skill is learnt and applied.",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "multistructural",
+      "term": {
+        "en": "Multistructural",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "Several connections are made but the meta connections between them are missed, as is their significance for the whole.",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "Lots of skills are performed",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "relational",
+      "term": {
+        "en": "Relational",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "The student is now able to appreciate the significance of the parts about the whole.",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "Students work cooperatively together ",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "extended_abstract",
+      "term": {
+        "en": "Extended abstract",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "The student can make connections not just within the subject but also beyond and can transfer principles to different situations.",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "Students can work much longer on an activity",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    }
+
+  ]
+}

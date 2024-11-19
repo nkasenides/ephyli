@@ -1,0 +1,154 @@
+{
+  "pairs": [
+
+    {
+      "id": "a",
+      "term": {
+        "en": "A",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "A-R",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "A-W",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "b",
+      "term": {
+        "en": "B",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "B_R",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "B_W",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "c",
+      "term": {
+        "en": "C",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "C_R",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "C_W",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "d",
+      "term": {
+        "en": "D",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "D_R",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "D_W",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "e",
+      "term": {
+        "en": "E",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "E_R",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "E_W",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    },
+
+    {
+      "id": "f",
+      "term": {
+        "en": "F",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "correctDescription": {
+        "en": "F_R",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      },
+      "wrongDescription": {
+        "en": "F_W",
+        "el": "",
+        "fr": "",
+        "it": "",
+        "pl": ""
+      }
+    }
+  ]
+}
