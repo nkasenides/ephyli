@@ -574,7 +574,6 @@ class _ActivityC6A1State extends State<ActivityC6A1>
           I10N.getI10nString(Activity.activities[activityID]!.nameRes)!,
           style: const TextStyle(color: Colors.white),
         ),
-        //TODO - Get name out of resource
         actions: stage == C6A1Stage.activity
             ? [
                 OutlinedButton(

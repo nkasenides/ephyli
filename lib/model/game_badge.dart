@@ -54,8 +54,6 @@ class GameBadge {
   /// ---- BADGES ----*
   /*-----------------------------------------------------------*/
 
-  //TODO - Customize the images of each of the badges.
-
   static final GameBadge tutorialBadge = GameBadge(
     id: "tutorialBadge",
     nameRes: "tutorial_badge_name",

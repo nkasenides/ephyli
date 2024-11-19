@@ -49,7 +49,7 @@ class UIUtils {
 
             const Gap(20),
 
-            BadgeWidget(badge),
+            BadgeWidget(badge, size: 200,),
 
             const Gap(20),
 

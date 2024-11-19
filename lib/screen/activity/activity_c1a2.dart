@@ -268,7 +268,7 @@ class _ActivityC1a2State extends State<ActivityC1a2> {
         ),
         backgroundColor: Themes.primaryColorDark,
         iconTheme: const IconThemeData(color: Colors.white),
-        title: Text(I10N.getI10nString(Activity.activities[activityID]!.nameRes)!, style: const TextStyle(color: Colors.white),), //TODO - Get name out of resource
+        title: Text(I10N.getI10nString(Activity.activities[activityID]!.nameRes)!, style: const TextStyle(color: Colors.white),),
       ),
       body: FutureBuilder(
           future: future,

@@ -64,6 +64,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
             widget.challenge.completeActivity(activityID);
           }
           onActivityCompleted(context);
+          widget.refresher();
         } : () {
           debugPrint("Long press reset test");
           for (String activityID in widget.challenge.activityIDs) {

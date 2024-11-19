@@ -99,7 +99,7 @@ class _GameScreenState extends State<GameScreen> {
                     isEnabled: navBarFeaturesEnabled,
                   ),
                   onPressed: navBarFeaturesEnabled ? () {
-                    Fluttertoast.showToast(msg: "TODO - Context specific action."); //TODO Change later
+                    //TODO - Use or remove completely
                   } : null,
                   tooltip: AppLocalizations.of(context)!.ePhyLiBuddy,
                 ),

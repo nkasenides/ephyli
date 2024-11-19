@@ -1,6 +1,7 @@
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/widgets/glossary_term_widget.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
+import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -76,38 +77,41 @@ class _GlossaryScreenState extends State<GlossaryScreen> {
         future: future,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
-            return Column(
-              children: [
 
-                // ElevatedButton(
-                //   child: Text("Reset"),
-                //   onPressed: () {
-                //     prefs.setBool("badge_${GameBadge.glossaryBadge.id}", false).then((value) {
-                //       setState(() {});
-                //     });
-                //   },
-                // ),
+            return OrientationBuilder(builder: (context, orientation) {
+              if (orientation == Orientation.portrait) {
+                return Column(
+                  children: [
 
-                InstructionsWidget(
-                  prefs,
-                  AppLocalizations.of(context)!.glossary_instructions,
-                  "",
-                  null
-                ),
-
-                Expanded(
-                  child: Padding(
-                    padding: Themes.standardPadding,
-                    child: ListView.builder(
-                      itemBuilder: (context, index) {
-                        return GlossaryTermWidget(GlossaryScreen.glossary.keys.elementAt(index), glossaryBadgeEarned);
-                      },
-                      itemCount: GlossaryScreen.glossary.keys.length,
+                    Expanded(
+                      flex: 1,
+                      child: InstructionsWidget(
+                          prefs,
+                          AppLocalizations.of(context)!.glossary_instructions,
+                          "",
+                          null
+                      ),
                     ),
-                  ),
-                ),
-              ],
-            );
+
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: Themes.standardPadding,
+                        child: ListView.builder(
+                          itemBuilder: (context, index) {
+                            return GlossaryTermWidget(GlossaryScreen.glossary.keys.elementAt(index), glossaryBadgeEarned);
+                          },
+                          itemCount: GlossaryScreen.glossary.keys.length,
+                        ),
+                      ),
+                    ),
+                  ],
+                );
+              }
+              else {
+                return Center(child: RotateDeviceWidget(Orientation.portrait),);
+              }
+            },);
           }
           return const Center(child: CircularProgressIndicator(),);
         },

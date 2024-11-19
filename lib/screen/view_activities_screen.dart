@@ -124,7 +124,7 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
                   color: isCompleted ? Themes.secondaryColorLight : null,
                   child: ListTile(
                     title: Text(I10N.getI10nString(activity.nameRes)! + (activity.completed ? " (${AppLocalizations.of(context)!.completed})" : "")),
-                    subtitle: Text(I10N.getI10nString(activity.descriptionRes)!, style: const TextStyle(overflow: TextOverflow.ellipsis),), //TODO - Translate to actual i10n name.
+                    subtitle: Text(I10N.getI10nString(activity.descriptionRes)!, style: const TextStyle(overflow: TextOverflow.ellipsis),),
                     onTap: () {
                       if (activity.completed) {
                         //Confirm if user wants to replay the challenge:
