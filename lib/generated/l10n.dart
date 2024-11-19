@@ -810,6 +810,16 @@ class S {
     );
   }
 
+  /// `Help`
+  String get help {
+    return Intl.message(
+      'Help',
+      name: 'help',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(
@@ -1838,6 +1848,16 @@ class S {
     return Intl.message(
       'Click the element you would like to place in this area:',
       name: 'c5a1_instruction_place',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click on the yellow boxes to fill in the empty parts of the diagram.`
+  String get c5a1_help {
+    return Intl.message(
+      'Click on the yellow boxes to fill in the empty parts of the diagram.',
+      name: 'c5a1_help',
       desc: '',
       args: [],
     );

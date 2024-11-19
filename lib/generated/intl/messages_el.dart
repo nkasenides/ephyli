@@ -223,6 +223,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Το τρίτο μας σενάριο βασίζεται στο οικολογικό μοντέλο των καθοριστικών παραγόντων της σωματικής δραστηριότητας που προτείνουν οι Bauman et al. (2012). Στην επόμενη δραστηριότητα, πρέπει να αντιστοιχίσετε κάθε παράγοντα με τη σωστή κατηγορία."),
         "c5a1_finish_message": MessageLookupByLibrary.simpleMessage(
             "Μπράβο! Ολοκληρώσατε την πέμπτη πρόκληση. Πατήστε \'Τέλος\' για να λάβετε το σήμα σας!"),
+        "c5a1_help": MessageLookupByLibrary.simpleMessage(
+            "Κάντε κλικ στα κίτρινα πλαίσια για να συμπληρώσετε τα κενά μέρη του διαγράμματος."),
         "c5a1_instruction_place": MessageLookupByLibrary.simpleMessage(
             "Κάντε κλικ στο στοιχείο που θέλετε να τοποθετήσετε σε αυτήν την περιοχή:"),
         "c5a1_instruction_title":
@@ -505,6 +507,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "guided_discovery":
             MessageLookupByLibrary.simpleMessage("Καθοδηγούμενη ανακάλυψη"),
         "health_sector": MessageLookupByLibrary.simpleMessage("Τομέας υγείας"),
+        "help": MessageLookupByLibrary.simpleMessage("Βοήθεια"),
         "inclusion_teamwork":
             MessageLookupByLibrary.simpleMessage("Ενσωμάτωση/ομαδική εργασία"),
         "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(

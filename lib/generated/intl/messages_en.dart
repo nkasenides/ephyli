@@ -221,6 +221,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category."),
         "c5a1_finish_message": MessageLookupByLibrary.simpleMessage(
             "Well done! You have completed the fifth challenge. Press \'Finish\' to get your badge!"),
+        "c5a1_help": MessageLookupByLibrary.simpleMessage(
+            "Click on the yellow boxes to fill in the empty parts of the diagram."),
         "c5a1_instruction_place": MessageLookupByLibrary.simpleMessage(
             "Click the element you would like to place in this area:"),
         "c5a1_instruction_title":
@@ -504,6 +506,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "guided_discovery":
             MessageLookupByLibrary.simpleMessage("Guided Discovery"),
         "health_sector": MessageLookupByLibrary.simpleMessage("Health sector"),
+        "help": MessageLookupByLibrary.simpleMessage("Help"),
         "inclusion_teamwork":
             MessageLookupByLibrary.simpleMessage("Inclusion/Teamwork"),
         "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(

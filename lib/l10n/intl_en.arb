@@ -77,6 +77,7 @@
   "enter_name": "Enter your name",
   "pick_avatar": "Customize your avatar",
   "pick_buddy": "Select your ePhyLi buddy",
+  "help": "Help",
 
   "c1a1_welcome": "Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
   "c1a1_congrats": "Well done! All concepts are correctly matched to the related descriptions.",
@@ -204,6 +205,7 @@
   "c5a1_finish_message": "Well done! You have completed the fifth challenge. Press 'Finish' to get your badge!",
   "c5a1_instruction_title": "Choose element",
   "c5a1_instruction_place": "Click the element you would like to place in this area:",
+  "c5a1_help": "Click on the yellow boxes to fill in the empty parts of the diagram.",
   "currentElement": "Selected element:",
 
   "c6a1_welcome": "Welcome to challenge 6. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?",
