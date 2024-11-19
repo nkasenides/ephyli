@@ -66,110 +66,108 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
       future: future,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return EphyliGradient(
-            child: Container(
-              padding: Themes.standardPadding,
-              child: ListView.builder(
-                itemCount: _getActivitiesForChallenge().length,
-                itemBuilder: (context, index) {
+          return Container(
+            padding: Themes.standardPadding,
+            child: ListView.builder(
+              itemCount: _getActivitiesForChallenge().length,
+              itemBuilder: (context, index) {
 
-                  bool isCompleted = false;
-                  bool isUnlocked = false;
+                bool isCompleted = false;
+                bool isUnlocked = false;
 
-                  final Activity activity = _getActivitiesForChallenge()[index];
+                final Activity activity = _getActivitiesForChallenge()[index];
 
-                  //Determine if completed:
-                  List<String> completedActivityIDs = snapshot.data!.getStringList(PrefUtils.activity_completion) ?? [];
+                //Determine if completed:
+                List<String> completedActivityIDs = snapshot.data!.getStringList(PrefUtils.activity_completion) ?? [];
 
-                  if (completedActivityIDs.contains(activity.id)) {
-                    activity.completed = true;
-                    isCompleted = true;
-                  }
+                if (completedActivityIDs.contains(activity.id)) {
+                  activity.completed = true;
+                  isCompleted = true;
+                }
 
-                  //Determine if unlocked (if previous indices are all completed):
+                //Determine if unlocked (if previous indices are all completed):
 
-                  debugPrint("Checking if activity ${activity.id} is unlocked...");
+                debugPrint("Checking if activity ${activity.id} is unlocked...");
 
-                  final activityIndex = widget.challenge.activityIDs.indexOf(activity.id);
-                  debugPrint("activityIndex: $activityIndex");
-                  bool previousActivitiesUnlocked = true;
-                  if (activityIndex == 0) {
-                    previousActivitiesUnlocked = true;
-                  }
-                  else {
-                    for (int i = 0; i < activityIndex; i++) {
-                      if (!completedActivityIDs.contains(
-                          widget.challenge.activityIDs[i])) {
-                        previousActivitiesUnlocked = false;
-                        break;
-                      }
-                    }
-                  }
-
-                  if (previousActivitiesUnlocked) {
-                    isUnlocked = true;
-                    activity.unlocked = true;
-                  }
-                  debugPrint("${activity.id} unlocked: $isUnlocked.");
-
-                  //Check if all activities are completed:
-                  bool allCompleted = true;
-                  for (Activity a in _getActivitiesForChallenge()) {
-                    if (!completedActivityIDs.contains(a.id)) {
-                      allCompleted = false;
+                final activityIndex = widget.challenge.activityIDs.indexOf(activity.id);
+                debugPrint("activityIndex: $activityIndex");
+                bool previousActivitiesUnlocked = true;
+                if (activityIndex == 0) {
+                  previousActivitiesUnlocked = true;
+                }
+                else {
+                  for (int i = 0; i < activityIndex; i++) {
+                    if (!completedActivityIDs.contains(
+                        widget.challenge.activityIDs[i])) {
+                      previousActivitiesUnlocked = false;
                       break;
                     }
                   }
+                }
 
-                  return Card(
-                    color: isCompleted ? Themes.secondaryColorLight : null,
-                    child: ListTile(
-                      title: Text(I10N.getI10nString(activity.nameRes)! + (activity.completed ? " (${AppLocalizations.of(context)!.completed})" : "")),
-                      subtitle: Text(I10N.getI10nString(activity.descriptionRes)!, style: const TextStyle(overflow: TextOverflow.ellipsis),), //TODO - Translate to actual i10n name.
-                      onTap: () {
-                        if (activity.completed) {
-                          //Confirm if user wants to replay the challenge:
-                          showDialog(context: context, builder: (context) {
-                            return AlertDialog(
-                              title: Text(AppLocalizations.of(context)!.areYouSure),
-                              content: Text(AppLocalizations.of(context)!.alreadyPlayedActivity),
-                              actions: [
+                if (previousActivitiesUnlocked) {
+                  isUnlocked = true;
+                  activity.unlocked = true;
+                }
+                debugPrint("${activity.id} unlocked: $isUnlocked.");
 
-                                TextButton(
-                                  child: Text(AppLocalizations.of(context)!.yes),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                    _startActivity(context, widget.challenge.id, activity.id);
-                                  },
-                                ),
+                //Check if all activities are completed:
+                bool allCompleted = true;
+                for (Activity a in _getActivitiesForChallenge()) {
+                  if (!completedActivityIDs.contains(a.id)) {
+                    allCompleted = false;
+                    break;
+                  }
+                }
 
-                                TextButton(
-                                  child: Text(AppLocalizations.of(context)!.no),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                ),
+                return Card(
+                  color: isCompleted ? Themes.secondaryColorLight : null,
+                  child: ListTile(
+                    title: Text(I10N.getI10nString(activity.nameRes)! + (activity.completed ? " (${AppLocalizations.of(context)!.completed})" : "")),
+                    subtitle: Text(I10N.getI10nString(activity.descriptionRes)!, style: const TextStyle(overflow: TextOverflow.ellipsis),), //TODO - Translate to actual i10n name.
+                    onTap: () {
+                      if (activity.completed) {
+                        //Confirm if user wants to replay the challenge:
+                        showDialog(context: context, builder: (context) {
+                          return AlertDialog(
+                            title: Text(AppLocalizations.of(context)!.areYouSure),
+                            content: Text(AppLocalizations.of(context)!.alreadyPlayedActivity),
+                            actions: [
 
-                              ],
-                            );
-                          },);
+                              TextButton(
+                                child: Text(AppLocalizations.of(context)!.yes),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                  _startActivity(context, widget.challenge.id, activity.id);
+                                },
+                              ),
+
+                              TextButton(
+                                child: Text(AppLocalizations.of(context)!.no),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                              ),
+
+                            ],
+                          );
+                        },);
+                      }
+                      else {
+                        if (activity.unlocked) {
+                          _startActivity(context, widget.challenge.id, activity.id);
                         }
                         else {
-                          if (activity.unlocked) {
-                            _startActivity(context, widget.challenge.id, activity.id);
-                          }
-                          else {
-                            Fluttertoast.showToast(msg: AppLocalizations.of(context)!.activityLockedMessage);
-                          }
+                          Fluttertoast.showToast(msg: AppLocalizations.of(context)!.activityLockedMessage);
                         }
-                      },
-                      trailing: isCompleted ? const Icon(Icons.check, color: Themes.secondaryColorDark,) : const SizedBox(),
+                      }
+                    },
+                    trailing: isCompleted ? const Icon(Icons.check, color: Themes.secondaryColorDark,) : const SizedBox(),
 
-                    ),
-                  );
+                  ),
+                );
 
-                },),
-            ),
+              },),
           );
         }
         return const Center(child: CircularProgressIndicator());

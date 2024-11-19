@@ -21,6 +21,7 @@ import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../widgets/rotate_device_widget.dart';
 import '../../widgets/water_bottle_widget.dart';
 
 class ActivityC8A1 extends StatefulWidget {
@@ -195,160 +196,174 @@ class _ActivityC8A1State extends State<ActivityC8A1> {
 
     initActivityData(context);
 
-    return Padding(
-      padding: Themes.standardPadding,
-      child: Column(
-        children: [
-
-          //Bottles:
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              // Water Bottle 1
-              WaterBottleWidget(level: motorSkillsLevel),
-
-              // Water Bottle 2
-              WaterBottleWidget(level: teamworkLevel),
-
-              // Water Bottle 3
-              WaterBottleWidget(level: enjoymentLevel),
-            ],
-          ),
-
-          const Gap(20),
-
-          //Labels:
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return Padding(
+          padding: Themes.standardPadding,
+          child: Column(
             children: [
 
-              Expanded(
-                  child: Text(
-                    AppLocalizations.of(context)!.appropriate_motor_skills_background,
-                    textAlign: TextAlign.center,
-                  ),
+              //Bottles:
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  // Water Bottle 1
+                  WaterBottleWidget(level: motorSkillsLevel),
+
+                  // Water Bottle 2
+                  WaterBottleWidget(level: teamworkLevel),
+
+                  // Water Bottle 3
+                  WaterBottleWidget(level: enjoymentLevel),
+                ],
               ),
 
-              Expanded(
-                child: Text(
-                  AppLocalizations.of(context)!.inclusion_teamwork,
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              const Gap(20),
 
-              Expanded(
-                child: Text(
-                  AppLocalizations.of(context)!.enjoyment,
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              //Labels:
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
 
-            ],
-          ),
-
-          const Gap(5),
-
-          const Divider(),
-
-          const Gap(5),
-
-          Text(
-            AppLocalizations.of(context)!.c8a1_prompt,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
-          ),
-
-          const Gap(10),
-
-          Expanded(
-            child: ListView.builder(
-              itemCount: shownOptions.length,
-              itemBuilder: (context, index) {
-                return Container(
-                  margin: const EdgeInsets.symmetric(vertical: 5),
-                  child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                      foregroundColor: Themes.primaryColorDark,
-                      backgroundColor: selectedOptionIndex == index ? Colors.yellow.shade500 : null,
-                    ),
+                  Expanded(
                     child: Text(
-                      shownOptions[index],
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      AppLocalizations.of(context)!.appropriate_motor_skills_background,
+                      textAlign: TextAlign.center,
                     ),
-                    onPressed: () {
-                      setState(() {
-                        selectedOptionIndex = index;
-                        //Animate the bottles:
-                        final String optionSelected = shownOptions[selectedOptionIndex];
-                        motorSkillsLevel = optionPoints[optionSelected]![0];
-                        teamworkLevel = optionPoints[optionSelected]![1];
-                        enjoymentLevel = optionPoints[optionSelected]![2];
-                      });
-                    },
                   ),
-                );
-              },
-            ),
+
+                  Expanded(
+                    child: Text(
+                      AppLocalizations.of(context)!.inclusion_teamwork,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+
+                  Expanded(
+                    child: Text(
+                      AppLocalizations.of(context)!.enjoyment,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+
+                ],
+              ),
+
+              const Gap(5),
+
+              const Divider(),
+
+              const Gap(5),
+
+              Text(
+                AppLocalizations.of(context)!.c8a1_prompt,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+
+              const Gap(10),
+
+              Expanded(
+                child: ListView.builder(
+                  itemCount: shownOptions.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: const EdgeInsets.symmetric(vertical: 5),
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                          foregroundColor: Themes.primaryColorDark,
+                          backgroundColor: selectedOptionIndex == index ? Colors.yellow.shade500 : null,
+                        ),
+                        child: Text(
+                          shownOptions[index],
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            selectedOptionIndex = index;
+                            //Animate the bottles:
+                            final String optionSelected = shownOptions[selectedOptionIndex];
+                            motorSkillsLevel = optionPoints[optionSelected]![0];
+                            teamworkLevel = optionPoints[optionSelected]![1];
+                            enjoymentLevel = optionPoints[optionSelected]![2];
+                          });
+                        },
+                      ),
+                    );
+                  },
+                ),
+              ),
+
+              ElevatedButton.icon(
+                onPressed: () {
+                  checkOption();
+                },
+                iconAlignment: IconAlignment.end,
+                icon: const Icon(Icons.navigate_next_outlined),
+                label: Text(AppLocalizations.of(context)!.next),
+              )
+
+            ],
           ),
 
-          ElevatedButton.icon(
-            onPressed: () {
-              checkOption();
-            },
-            iconAlignment: IconAlignment.end,
-            icon: const Icon(Icons.navigate_next_outlined),
-            label: Text(AppLocalizations.of(context)!.next),
-          )
-
-        ],
-      ),
-
-    );
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   Widget activityFinishView() {
-    return InstructionsWidget(
-      prefs,
-      AppLocalizations.of(context)!.c8a1_finish_message,
-      AppLocalizations.of(context)!.finish,
-      () {
-        ActivityManager.completeActivity(activityID).then((value) {
-          //Find all badges related to this activity and award them:
-          for (var badgeID in Challenge.challenge8.badgeIDs) {
-            var badge = GameBadge.findBadge(badgeID);
-            badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
-              if (!value) {
-                badge.earn(context);
-              }
-            },);
-          }
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return InstructionsWidget(
+            prefs,
+            AppLocalizations.of(context)!.c8a1_finish_message,
+            AppLocalizations.of(context)!.finish,
+                () {
+              ActivityManager.completeActivity(activityID).then((value) {
+                //Find all badges related to this activity and award them:
+                for (var badgeID in Challenge.challenge8.badgeIDs) {
+                  var badge = GameBadge.findBadge(badgeID);
+                  badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                    if (!value) {
+                      badge.earn(context);
+                    }
+                  },);
+                }
 
-          //Unlock next challenges:
-          List<Future> unlockFutures = [];
-          for (var challengeID in Challenge.challenge8.unlocksChallengesIDs) {
-            Challenge challenge = Challenge.findChallenge(challengeID)!;
-            challenge.isUnlocked().then((value) {
-              if (!value) {
-                unlockFutures.add(challenge.unlock());
-              }
-            },);
-          }
+                //Unlock next challenges:
+                List<Future> unlockFutures = [];
+                for (var challengeID in Challenge.challenge8.unlocksChallengesIDs) {
+                  Challenge challenge = Challenge.findChallenge(challengeID)!;
+                  challenge.isUnlocked().then((value) {
+                    if (!value) {
+                      unlockFutures.add(challenge.unlock());
+                    }
+                  },);
+                }
 
-          //Show toast and move back:
-          Future.wait(unlockFutures).then((value) {
-            if (unlockFutures.isNotEmpty) {
-              Fluttertoast.showToast(
-                  msg: AppLocalizations.of(context)!
-                      .challenges_unlocked.replaceAll(
-                      "%1", unlockFutures.length.toString()));
+                //Show toast and move back:
+                Future.wait(unlockFutures).then((value) {
+                  if (unlockFutures.isNotEmpty) {
+                    Fluttertoast.showToast(
+                        msg: AppLocalizations.of(context)!
+                            .challenges_unlocked.replaceAll(
+                            "%1", unlockFutures.length.toString()));
+                  }
+                },);
+              },);
+              Navigator.pop(context, "_");
+              Navigator.pop(context, "_");
             }
-          },);
-        },);
-        Navigator.pop(context, "_");
-        Navigator.pop(context, "_");
+        );
       }
-    );
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   @override
