@@ -22,6 +22,8 @@ import '../../widgets/buddy_avatar_widget.dart';
 import '../../widgets/chat_bubble.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../widgets/rotate_device_widget.dart';
+
 class ActivityC2A2 extends StatefulWidget {
   @override
   _ActivityC2A2State createState() => _ActivityC2A2State();
@@ -131,88 +133,96 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
 
     String currentDefinition = definitions[currentDefinitionIndex]["definition"]!;
 
-    return Padding(
-      padding: Themes.standardPadding,
-      child: Center(
-        child: Column(
-          children: [
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return Padding(
+          padding: Themes.standardPadding,
+          child: Center(
+            child: Column(
+              children: [
 
-            Text(
-              "\"$currentDefinition\"",
-              style:  const TextStyle(fontSize: 18, fontStyle: FontStyle.italic),
-              textAlign: TextAlign.justify,
-            ),
-
-            const SizedBox(height: 50),
-
-            showPrompt ? Text(
-              AppLocalizations.of(context)!.c2a2_instruction,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ) : Container(),
-
-            const SizedBox(height: 50),
-
-            // Show the list of country options with flags in a grid
-            showPrompt ? Expanded(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, // Number of flags in one row
-                  childAspectRatio: 1.5,
-                  mainAxisSpacing: 20,
-                  crossAxisSpacing: 20,
+                Text(
+                  "\"$currentDefinition\"",
+                  style:  const TextStyle(fontSize: 18, fontStyle: FontStyle.italic),
+                  textAlign: TextAlign.justify,
                 ),
-                itemCount: countries.length,
-                itemBuilder: (context, index) {
-                  String countryName = countries[index]["name"]!;
-                  String flagPath = countries[index]["flag"]!;
-                  return ElevatedButton(
-                    onPressed: () => handleCountrySelection(countryName),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey.shade100,
-                      foregroundColor: Colors.black
+
+                const SizedBox(height: 50),
+
+                showPrompt ? Text(
+                  AppLocalizations.of(context)!.c2a2_instruction,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontWeight: FontWeight.bold,),
+                ) : Container(),
+
+                const SizedBox(height: 50),
+
+                // Show the list of country options with flags in a grid
+                showPrompt ? Expanded(
+                  child: GridView.builder(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2, // Number of flags in one row
+                      childAspectRatio: 1.5,
+                      mainAxisSpacing: 20,
+                      crossAxisSpacing: 20,
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                    itemCount: countries.length,
+                    itemBuilder: (context, index) {
+                      String countryName = countries[index]["name"]!;
+                      String flagPath = countries[index]["flag"]!;
+                      return ElevatedButton(
+                        onPressed: () => handleCountrySelection(countryName),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.shade100,
+                            foregroundColor: Colors.black
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(5),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
 
-                          const SizedBox(height: 10),
+                              const SizedBox(height: 10),
 
-                          // Country Flag
-                          SizedBox(
-                            height: 50,
-                            child: Image.asset(
-                              flagPath,
-                              fit: BoxFit.cover,
-                            ),
+                              // Country Flag
+                              SizedBox(
+                                height: 50,
+                                child: Image.asset(
+                                  flagPath,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+
+
+                              const SizedBox(height: 15),
+
+                              // Country Name
+                              Expanded(
+                                child: AutoSizeText(
+                                  countryName,
+                                  style: const TextStyle(fontSize: 16),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+
+                            ],
                           ),
+                        ),
+                      );
+                    },
+                  ),
+                ) : Container(),
 
 
-                          const SizedBox(height: 15),
-
-                          // Country Name
-                          Expanded(
-                            child: AutoSizeText(
-                              countryName,
-                              style: const TextStyle(fontSize: 16),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ) : Container(),
-
-
-          ],
-        ),
-      ),
-    );
+              ],
+            ),
+          ),
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
 
   }
 

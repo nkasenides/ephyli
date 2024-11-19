@@ -127,7 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "c2a2_finish_message": MessageLookupByLibrary.simpleMessage(
             "Congratulations! You have finished this challenge!"),
         "c2a2_instruction": MessageLookupByLibrary.simpleMessage(
-            "Click on the selection you think is correct."),
+            "Who adopted the above definition? Click on the selection you think is correct."),
         "c2a2_intro_message": MessageLookupByLibrary.simpleMessage(
             "In recent years, different countries have adopted different definitions of physical literacy. In the following activity you must link the definition of physical literacy to the country in which it is adopted."),
         "c2a2_option1": MessageLookupByLibrary.simpleMessage(

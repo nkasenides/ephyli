@@ -1020,10 +1020,10 @@ class S {
     );
   }
 
-  /// `Click on the selection you think is correct.`
+  /// `Who adopted the above definition? Click on the selection you think is correct.`
   String get c2a2_instruction {
     return Intl.message(
-      'Click on the selection you think is correct.',
+      'Who adopted the above definition? Click on the selection you think is correct.',
       name: 'c2a2_instruction',
       desc: '',
       args: [],

@@ -127,7 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "c2a2_finish_message": MessageLookupByLibrary.simpleMessage(
             "Συγχαρητήρια! Η πρόκληση ολοκληρώθηκε!"),
         "c2a2_instruction": MessageLookupByLibrary.simpleMessage(
-            "Κάντε κλικ στην επιλογή που πιστεύετε ότι είναι σωστή."),
+            "Ποιός υιοθέτησε τον πιο πάνω ορισμό; Κάντε κλικ στην επιλογή που πιστεύετε ότι είναι σωστή."),
         "c2a2_intro_message": MessageLookupByLibrary.simpleMessage(
             "Τα τελευταία χρόνια, διαφορετικές χώρες έχουν υιοθετήσει διαφορετικούς ορισμούς του σωματικού αλφαβητισμού. Στην παρακάτω δραστηριότητα πρέπει να συνδέσετε τον ορισμό του σωματικού αλφαβητισμού με τη χώρα στην οποία έχει υιοθετηθεί."),
         "c2a2_option1": MessageLookupByLibrary.simpleMessage(

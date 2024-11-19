@@ -220,8 +220,8 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
                       feedback: Card(
                         color: Colors.orangeAccent,
                         child: Container(
-                          width: 120,
-                          height: 60,
+                          width: MediaQuery.of(context).size.width / events.length - 10,
+                          height: MediaQuery.of(context).size.height / 2,
                           padding: EdgeInsets.all(10),
                           child: Center(
                             child: Text(
@@ -233,8 +233,8 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
                         ),
                       ),
                       childWhenDragging: Container(
-                        width: 120,
-                        height: 60,
+                        width: MediaQuery.of(context).size.width / events.length - 10,
+                        height: MediaQuery.of(context).size.height / 2,
                         margin: EdgeInsets.symmetric(horizontal: 5),
                         child: Center(
                           child: Text(
@@ -273,15 +273,23 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
   }
 
   Widget activity1FinishView() {
-    return InstructionsWidget(
-        prefs,
-        AppLocalizations.of(context)!.c2a1_finish_message,
-        AppLocalizations.of(context)!.finish,
-        () {
-          //Move back to activities
-          Navigator.pop(context, "_");
-        }
-    );
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return InstructionsWidget(
+            prefs,
+            AppLocalizations.of(context)!.c2a1_finish_message,
+            AppLocalizations.of(context)!.finish,
+                () {
+              //Move back to activities
+              Navigator.pop(context, "_");
+            }
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
+
   }
 
   @override
