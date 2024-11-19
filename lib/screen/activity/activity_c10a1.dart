@@ -150,10 +150,20 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
       completedTermIndices.add(selectedTermIndex);
 
       //If all terms are completed move to the next stage.
-      if (completedTermIndices.length == terms.length) {
+      if (isGameComplete) {
         setState(() {
           stage = C10A1Stage.finish;
         });
+      }
+      else {
+        itemScrollController.scrollTo(
+            index: 0,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.easeInOutCubic
+        ).then((value) {
+          _focusNode.requestFocus();
+          openKeyboard();
+        },);
       }
 
     } else {
@@ -243,7 +253,7 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
 
       for (var term in terms) {
         int length = term["term"].length;
-        int lettersToReveal = Random().nextInt(3) + 2;
+        int lettersToReveal = max(2, Random().nextInt(length ~/ 2));
         term["revealed"] = List.generate(length, (index) => false);
         term["colors"] = List.generate(length, (index) => Colors.grey[300]);
         List<int> indices = List.generate(length, (index) => index)..shuffle();
@@ -274,7 +284,7 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
 
                 //Display hint or instruction to start.
                 Text(
-                  selectedTermIndex != -1 ? "Hint: ${terms[selectedTermIndex]['hint']}" : "Click on the letter boxes to fill in the word using the hint provided.",
+                  selectedTermIndex != -1 ? "${AppLocalizations.of(context)!.hint}: ${terms[selectedTermIndex]['hint']}" : AppLocalizations.of(context)!.hint_instruction,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey[700]),
                   textAlign: TextAlign.center,
                 ),
@@ -320,7 +330,7 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
               focusNode: _focusNode,
               maxLength: 1,
               textCapitalization: TextCapitalization.characters,
-              decoration: InputDecoration(hintText: "Type a letter"),
+              decoration: InputDecoration(hintText: AppLocalizations.of(context)!.enter_letter),
               onChanged: (input) {
                 if (input.isNotEmpty) {
                   guessLetter(input[0]);

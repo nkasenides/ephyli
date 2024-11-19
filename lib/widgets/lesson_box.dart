@@ -11,7 +11,8 @@ class LessonBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 500,
+      width: MediaQuery.of(context).size.width - 100,
+      height: 120,
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: isDragging ? Colors.blue.withOpacity(0.7) : Colors.blueAccent,

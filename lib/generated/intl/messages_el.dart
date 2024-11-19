@@ -508,6 +508,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Καθοδηγούμενη ανακάλυψη"),
         "health_sector": MessageLookupByLibrary.simpleMessage("Τομέας υγείας"),
         "help": MessageLookupByLibrary.simpleMessage("Βοήθεια"),
+        "hint": MessageLookupByLibrary.simpleMessage("Βοήθεια"),
+        "hint_instruction": MessageLookupByLibrary.simpleMessage(
+            "Κάντε κλικ στα γράμματα για να συμπληρώσετε τη λέξη χρησιμοποιώντας την υπόδειξη που παρέχεται."),
         "inclusion_teamwork":
             MessageLookupByLibrary.simpleMessage("Ενσωμάτωση/ομαδική εργασία"),
         "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(

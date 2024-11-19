@@ -507,6 +507,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Guided Discovery"),
         "health_sector": MessageLookupByLibrary.simpleMessage("Health sector"),
         "help": MessageLookupByLibrary.simpleMessage("Help"),
+        "hint": MessageLookupByLibrary.simpleMessage("Hint"),
+        "hint_instruction": MessageLookupByLibrary.simpleMessage(
+            "Click on the letter boxes to fill in the word using the hint provided."),
         "inclusion_teamwork":
             MessageLookupByLibrary.simpleMessage("Inclusion/Teamwork"),
         "independent_and_socially_skilled": MessageLookupByLibrary.simpleMessage(

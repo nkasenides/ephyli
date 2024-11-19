@@ -2763,6 +2763,26 @@ class S {
     );
   }
 
+  /// `Hint`
+  String get hint {
+    return Intl.message(
+      'Hint',
+      name: 'hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click on the letter boxes to fill in the word using the hint provided.`
+  String get hint_instruction {
+    return Intl.message(
+      'Click on the letter boxes to fill in the word using the hint provided.',
+      name: 'hint_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `COMMAND`
   String get term1 {
     return Intl.message(

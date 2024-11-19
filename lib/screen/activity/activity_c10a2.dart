@@ -244,47 +244,54 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
   }
 
   Widget activityFinishView() {
-    return InstructionsWidget(
-      prefs,
-      AppLocalizations.of(context)!.c10a2_finish_message,
-      AppLocalizations.of(context)!.finish,
-      () {
-        ActivityManager.completeActivity(activityID).then((value) {
-          //Find all badges related to this activity and award them:
-          for (var badgeID in Challenge.challenge10.badgeIDs) {
-            var badge = GameBadge.findBadge(badgeID);
-            badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
-              if (!value) {
-                badge.earn(context);
-              }
-            },);
-          }
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return InstructionsWidget(
+            prefs,
+            AppLocalizations.of(context)!.c10a2_finish_message,
+            AppLocalizations.of(context)!.finish,
+                () {
+              ActivityManager.completeActivity(activityID).then((value) {
+                //Find all badges related to this activity and award them:
+                for (var badgeID in Challenge.challenge10.badgeIDs) {
+                  var badge = GameBadge.findBadge(badgeID);
+                  badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                    if (!value) {
+                      badge.earn(context);
+                    }
+                  },);
+                }
 
-          //Unlock next challenges:
-          List<Future> unlockFutures = [];
-          for (var challengeID in Challenge.challenge10.unlocksChallengesIDs) {
-            Challenge challenge = Challenge.findChallenge(challengeID)!;
-            challenge.isUnlocked().then((value) {
-              if (!value) {
-                unlockFutures.add(challenge.unlock());
-              }
-            },);
-          }
+                //Unlock next challenges:
+                List<Future> unlockFutures = [];
+                for (var challengeID in Challenge.challenge10.unlocksChallengesIDs) {
+                  Challenge challenge = Challenge.findChallenge(challengeID)!;
+                  challenge.isUnlocked().then((value) {
+                    if (!value) {
+                      unlockFutures.add(challenge.unlock());
+                    }
+                  },);
+                }
 
-          //Show toast and move back:
-          Future.wait(unlockFutures).then((value) {
-            if (unlockFutures.isNotEmpty) {
-              Fluttertoast.showToast(
-                  msg: AppLocalizations.of(context)!
-                      .challenges_unlocked.replaceAll(
-                      "%1", unlockFutures.length.toString()));
+                //Show toast and move back:
+                Future.wait(unlockFutures).then((value) {
+                  if (unlockFutures.isNotEmpty) {
+                    Fluttertoast.showToast(
+                        msg: AppLocalizations.of(context)!
+                            .challenges_unlocked.replaceAll(
+                            "%1", unlockFutures.length.toString()));
+                  }
+                },);
+              },);
+              Navigator.pop(context, "_");
+              Navigator.pop(context, "_");
             }
-          },);
-        },);
-        Navigator.pop(context, "_");
-        Navigator.pop(context, "_");
+        );
       }
-    );
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   @override
