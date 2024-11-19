@@ -47,71 +47,73 @@ class _TutorialStep2State extends State<TutorialStep2> {
       future: future,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return Padding(
-            padding: Themes.standardPadding,
-            child: Column(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+          return SingleChildScrollView(
+            child: Padding(
+              padding: Themes.standardPadding,
+              child: Column(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
 
-                    PersonalizedAvatar(
-                      buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
-                      backgroundRadius: 25,
-                      avatarSize: 35,
-                    ),
+                      PersonalizedAvatar(
+                        buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
+                        backgroundRadius: 25,
+                        avatarSize: 35,
+                      ),
 
-                    ChatBubble(
-                      margin: const EdgeInsets.only(left: 50),
-                      child: AnimatedTextKit(
-                        animatedTexts: [
-                          TypewriterAnimatedText(
-                            AppLocalizations.of(context)!.tutorial_text_buddy,
-                            textStyle: const TextStyle(color: Colors.white,),
-                            speed: const Duration(milliseconds: 50),
-                          ),
-                        ],
-                        displayFullTextOnTap: true,
-                        isRepeatingAnimation: false,
-                        onFinished: () {
-                          setState(() {
-                            messageShown = true;
-                          });
-                        },
-                        onTap: () {
-                          setState(() {
-                            messageShown = true;
-                          });
+                      ChatBubble(
+                        margin: const EdgeInsets.only(left: 50),
+                        child: AnimatedTextKit(
+                          animatedTexts: [
+                            TypewriterAnimatedText(
+                              AppLocalizations.of(context)!.tutorial_text_buddy,
+                              textStyle: const TextStyle(color: Colors.white,),
+                              speed: const Duration(milliseconds: 50),
+                            ),
+                          ],
+                          displayFullTextOnTap: true,
+                          isRepeatingAnimation: false,
+                          onFinished: () {
+                            setState(() {
+                              messageShown = true;
+                            });
+                          },
+                          onTap: () {
+                            setState(() {
+                              messageShown = true;
+                            });
+                          },
+                        ),
+                      )
+
+                    ],
+                  ),
+
+                  messageShown ? Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      ElevatedButton(
+                        child: Text(AppLocalizations.of(context)!.next),
+                        onPressed: () {
+
+                          FeatureDiscovery.discoverFeatures(
+                            context,
+                            const <String>{
+                              FeatureExplorer.buddyFeatureID,
+                              FeatureExplorer.newsFeatureID,
+                              FeatureExplorer.glossaryFeatureID,
+                              FeatureExplorer.profileFeatureID,
+                            },
+                          );
+
                         },
                       ),
-                    )
+                    ],
+                  ) : Container(),
 
-                  ],
-                ),
-
-                messageShown ? Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    ElevatedButton(
-                      child: Text(AppLocalizations.of(context)!.next),
-                      onPressed: () {
-
-                        FeatureDiscovery.discoverFeatures(
-                          context,
-                          const <String>{
-                            FeatureExplorer.buddyFeatureID,
-                            FeatureExplorer.newsFeatureID,
-                            FeatureExplorer.glossaryFeatureID,
-                            FeatureExplorer.profileFeatureID,
-                          },
-                        );
-
-                      },
-                    ),
-                  ],
-                ) : Container(),
-
-              ],
+                ],
+              ),
             ),
           );
         }

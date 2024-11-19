@@ -52,7 +52,7 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
     UIUtils.enableFullScreen();
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: EphyliGradient(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
               left: 15,
@@ -94,7 +94,7 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
 
 
                   SizedBox(
-                    height: 300,
+                    height: MediaQuery.of(context).size.height < 1000 ? 200 : 300,
                     child: PageView(
                       physics: const NeverScrollableScrollPhysics(),
                       controller: _pageController,

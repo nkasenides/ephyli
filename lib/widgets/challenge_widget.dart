@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:ephyli/screen/view_activities_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';

@@ -100,18 +100,20 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
     int itemsPerRow = 1;
     final width = MediaQuery.of(context).size.width;
-    if (width > 1600) {
+    debugPrint("width: $width");
+    if (width >= 1600) {
       itemsPerRow = 5;
     }
-    else if (width > 1200) {
+    else if (width >= 1200) {
       itemsPerRow = 4;
     }
-    else if (width > 800) {
+    else if (width >= 800) {
       itemsPerRow = 3;
     }
-    else if (width > 400) {
+    else if (width >= 320) {
       itemsPerRow = 2;
     }
+    debugPrint("itemsPerRow: $itemsPerRow");
 
     return OrientationBuilder(
       builder: (context, orientation) {
@@ -129,18 +131,23 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                     child: Column(
                       children: [
 
-                        !tutorialCompleted ? createTutorialView(snapshot)
+                        MediaQuery.of(context).size.height < 800 ? //small layouts
+                        Expanded(
+                          child: SingleChildScrollView(
+                            child: !tutorialCompleted ? createTutorialView(snapshot)
+                                : createNormalView(snapshot),
+                          )
+                        ) :
+                        !tutorialCompleted ? createTutorialView(snapshot) //normal layouts
                             : createNormalView(snapshot),
 
                         const Gap(20),
-
-                        //TODO ---
 
                         Expanded(
                           child: GridView.count(
                             crossAxisCount: itemsPerRow,
                             children: Challenge.challenges.map((e) {
-                              return ChallengeWidget(e, refresher: _refresh);
+                              return ChallengeWidget(e, refresher: _refresh, dense: width < 400,);
                             }).toList(),
                           ),
                         ),

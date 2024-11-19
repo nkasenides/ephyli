@@ -41,7 +41,7 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: EphyliGradient(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
               left: 15,

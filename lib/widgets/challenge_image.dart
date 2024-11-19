@@ -5,12 +5,13 @@ import 'package:flutter/material.dart';
 class ChallengeImage extends StatelessWidget {
 
   Challenge challenge;
+  double size;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 75,
-      height: 75,
+      width: size,
+      height: size,
       child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: challenge.completed ?
@@ -20,5 +21,5 @@ class ChallengeImage extends StatelessWidget {
     );
   }
 
-  ChallengeImage(this.challenge, {super.key});
+  ChallengeImage(this.challenge, {super.key, this.size = 75});
 }
