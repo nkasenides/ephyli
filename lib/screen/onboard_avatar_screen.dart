@@ -33,14 +33,11 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
 
   @override
   void dispose() {
-    UIUtils.disableFullscreen();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-
-    UIUtils.enableFullScreen();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,

@@ -33,14 +33,11 @@ class _OnboardNameScreenState extends State<OnboardNameScreen> {
 
   @override
   void dispose() {
-    UIUtils.disableFullscreen();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-
-    UIUtils.enableFullScreen();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -69,24 +66,35 @@ class _OnboardNameScreenState extends State<OnboardNameScreen> {
 
                 const Gap(10),
 
-                //Avatar
-                SizedBox(
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey.shade100,
-                      radius: 70,
-                      child: ClipRRect(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(
-                            90,
-                          ),
-                        ),
-                        child: SvgPicture.string(
-                          FluttermojiFunctions().decodeFluttermojifromString(avatarData),
-                          width: 300,
-                          height: 300,
-                        ),
-                      ),
-                    )
+                // //Avatar
+                // SizedBox(
+                //     child: CircleAvatar(
+                //       backgroundColor: Colors.grey.shade100,
+                //       radius: 70,
+                //       child: ClipRRect(
+                //         borderRadius: const BorderRadius.all(
+                //           Radius.circular(
+                //             90,
+                //           ),
+                //         ),
+                //         child: SvgPicture.string(
+                //           FluttermojiFunctions().decodeFluttermojifromString(avatarData),
+                //           width: 300,
+                //           height: 300,
+                //         ),
+                //       ),
+                //     )
+                // ),
+
+                CircleAvatar(
+                  backgroundColor: Colors.grey.shade200,
+                  radius: 70,
+                  child: const ClipRRect(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(90,),
+                    ),
+                    child: Icon(Icons.person, size: 90, color: Themes.primaryColorDark,),
+                  ),
                 ),
 
                 const Gap(20),

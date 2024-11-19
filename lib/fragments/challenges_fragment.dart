@@ -1,5 +1,6 @@
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/pref_utils.dart';
+import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:flutter/cupertino.dart';
@@ -95,6 +96,24 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
 
   @override
   Widget build(BuildContext context) {
+
+    UIUtils.portraitOrientation();
+
+    int itemsPerRow = 1;
+    final width = MediaQuery.of(context).size.width;
+    if (width > 1600) {
+      itemsPerRow = 5;
+    }
+    else if (width > 1200) {
+      itemsPerRow = 4;
+    }
+    else if (width > 800) {
+      itemsPerRow = 3;
+    }
+    else if (width > 400) {
+      itemsPerRow = 2;
+    }
+
     return FutureBuilder(
       future: future,
       builder: (context, snapshot) {
@@ -116,20 +135,12 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                   //TODO ---
 
                   Expanded(
-                    child: MediaQuery.of(context).orientation == Orientation.landscape ?
-                    GridView.count(
-                      scrollDirection: Axis.horizontal,
-                      crossAxisCount: 1,
-                      children: Challenge.challenges.map((e) {
-                        return ChallengeWidget(e, refresher: _refresh, dense: true,);
-                      }).toList(),
-                    ) : GridView.count(
-                      crossAxisCount: 2,
+                    child: GridView.count(
+                      crossAxisCount: itemsPerRow,
                       children: Challenge.challenges.map((e) {
                         return ChallengeWidget(e, refresher: _refresh);
                       }).toList(),
                     ),
-
                   ),
 
                   // Expanded(

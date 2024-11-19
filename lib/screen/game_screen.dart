@@ -37,7 +37,6 @@ class _GameScreenState extends State<GameScreen> {
 
   @override
   void initState() {
-    UIUtils.disableFullscreen();
     super.initState();
     dataFuture = _getData();
   }

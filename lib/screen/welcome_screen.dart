@@ -22,7 +22,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   @override
   void dispose() {
-    UIUtils.disableFullscreen();
     super.dispose();
   }
 
@@ -30,6 +29,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
 
     UIUtils.enableFullScreen();
+    UIUtils.portraitOrientation();
 
     return Scaffold(
       body: EphyliGradient(
