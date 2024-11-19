@@ -49,8 +49,8 @@ class Challenge {
     id: "challenge1",
     nameRes: "c1_name",
     descriptionRes: "c1_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c1,
+    imageIncompleteRes: AppImages.badge_c1_bw,
     activityIDs: [
       "c1a1",
       "c1a2"
@@ -68,8 +68,8 @@ class Challenge {
       id: "challenge2",
       nameRes: "c2_name",
       descriptionRes: "c2_description",
-      imageCompletedRes: AppImages.logo,
-      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      imageCompletedRes: AppImages.badge_c2,
+      imageIncompleteRes: AppImages.badge_c2_bw,
       activityIDs: [
         "c2a1",
         "c2a2"
@@ -86,8 +86,8 @@ class Challenge {
       id: "challenge3",
       nameRes: "c3_name",
       descriptionRes: "c3_description",
-      imageCompletedRes: AppImages.logo,
-      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      imageCompletedRes: AppImages.badge_c3,
+      imageIncompleteRes: AppImages.badge_c3_bw,
       activityIDs: [
         "c3a1",
       ],
@@ -103,8 +103,8 @@ class Challenge {
       id: "challenge4",
       nameRes: "c4_name",
       descriptionRes: "c4_description",
-      imageCompletedRes: AppImages.logo,
-      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      imageCompletedRes: AppImages.badge_c4,
+      imageIncompleteRes: AppImages.badge_c4_bw,
       activityIDs: [
         "c4a1",
         "c4a2",
@@ -122,8 +122,8 @@ class Challenge {
       id: "challenge5",
       nameRes: "c5_name",
       descriptionRes: "c5_description",
-      imageCompletedRes: AppImages.logo,
-      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      imageCompletedRes: AppImages.badge_c5,
+      imageIncompleteRes: AppImages.badge_c5_bw,
       activityIDs: [
         "c5a1"
       ],
@@ -139,8 +139,8 @@ class Challenge {
       id: "challenge6",
       nameRes: "c6_name",
       descriptionRes: "c6_description",
-      imageCompletedRes: AppImages.logo,
-      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      imageCompletedRes: AppImages.badge_c6,
+      imageIncompleteRes: AppImages.badge_c6_bw,
       activityIDs: [
         "c6a1"
       ],
@@ -156,8 +156,8 @@ class Challenge {
       id: "challenge7",
       nameRes: "c7_name",
       descriptionRes: "c7_description",
-      imageCompletedRes: AppImages.logo,
-      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      imageCompletedRes: AppImages.badge_c7,
+      imageIncompleteRes: AppImages.badge_c7_bw,
       activityIDs: [
         "c7a1"
       ],
@@ -173,8 +173,8 @@ class Challenge {
       id: "challenge8",
       nameRes: "c8_name",
       descriptionRes: "c8_description",
-      imageCompletedRes: AppImages.logo,
-      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      imageCompletedRes: AppImages.badge_c8,
+      imageIncompleteRes: AppImages.badge_c8_bw,
       activityIDs: [
         "c8a1"
       ],
@@ -190,8 +190,8 @@ class Challenge {
       id: "challenge9",
       nameRes: "c9_name",
       descriptionRes: "c9_description",
-      imageCompletedRes: AppImages.logo,
-      imageIncompleteRes: AppImages.logoBlackAndWhite,
+      imageCompletedRes: AppImages.badge_c9,
+      imageIncompleteRes: AppImages.badge_c9_bw,
       activityIDs: [
         "c9a1",
         "c9a2",
@@ -208,8 +208,8 @@ class Challenge {
     id: "challenge10",
     nameRes: "c10_name",
     descriptionRes: "c10_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c10,
+    imageIncompleteRes: AppImages.badge_c10_bw,
     activityIDs: [
       "c10a1",
       "c10a2",

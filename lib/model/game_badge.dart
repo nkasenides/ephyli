@@ -60,104 +60,104 @@ class GameBadge {
     id: "tutorialBadge",
     nameRes: "tutorial_badge_name",
     descriptionRes: "tutorial_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_tutorial,
+    imageIncompleteRes: AppImages.badge_tutorial_bw,
   );
 
   static final GameBadge buddyBadge = GameBadge(
     id: "buddyBadge",
     nameRes: "buddy_badge_name",
     descriptionRes: "buddy_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_buddy,
+    imageIncompleteRes: AppImages.badge_buddy_bw,
   );
 
   static final GameBadge glossaryBadge = GameBadge(
     id: "glossaryBadge",
     nameRes: "glossary_badge_name",
     descriptionRes: "glossary_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_glossary,
+    imageIncompleteRes: AppImages.badge_glossary_bw,
   );
 
   static final GameBadge challenge1Badge = GameBadge(
     id: "challenge1Badge",
     nameRes: "c1_badge_name",
     descriptionRes: "c1_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c1,
+    imageIncompleteRes: AppImages.badge_c1_bw,
   );
 
   static final GameBadge challenge2Badge = GameBadge(
     id: "challenge2Badge",
     nameRes: "c2_badge_name",
     descriptionRes: "c2_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c2,
+    imageIncompleteRes: AppImages.badge_c2_bw,
   );
 
   static final GameBadge challenge3Badge = GameBadge(
     id: "challenge3Badge",
     nameRes: "c3_badge_name",
     descriptionRes: "c3_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c3,
+    imageIncompleteRes: AppImages.badge_c3_bw,
   );
 
   static final GameBadge challenge4Badge = GameBadge(
     id: "challenge4Badge",
     nameRes: "c4_badge_name",
     descriptionRes: "c4_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c4,
+    imageIncompleteRes: AppImages.badge_c4_bw,
   );
 
   static final GameBadge challenge5Badge = GameBadge(
     id: "challenge5Badge",
     nameRes: "c5_badge_name",
     descriptionRes: "c5_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c5,
+    imageIncompleteRes: AppImages.badge_c5_bw,
   );
 
   static final GameBadge challenge6Badge = GameBadge(
     id: "challenge6Badge",
     nameRes: "c6_badge_name",
     descriptionRes: "c6_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c6,
+    imageIncompleteRes: AppImages.badge_c6_bw,
   );
 
   static final GameBadge challenge7Badge = GameBadge(
     id: "challenge7Badge",
     nameRes: "c7_badge_name",
     descriptionRes: "c7_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c7,
+    imageIncompleteRes: AppImages.badge_c7_bw,
   );
 
   static final GameBadge challenge8Badge = GameBadge(
     id: "challenge8Badge",
     nameRes: "c8_badge_name",
     descriptionRes: "c8_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c8,
+    imageIncompleteRes: AppImages.badge_c8_bw,
   );
 
   static final GameBadge challenge9Badge = GameBadge(
     id: "challenge9Badge",
     nameRes: "c9_badge_name",
     descriptionRes: "c9_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c9,
+    imageIncompleteRes: AppImages.badge_c9_bw,
   );
 
   static final GameBadge challenge10Badge = GameBadge(
     id: "challenge10Badge",
     nameRes: "c10_badge_name",
     descriptionRes: "c10_badge_description",
-    imageCompletedRes: AppImages.logo,
-    imageIncompleteRes: AppImages.logoBlackAndWhite,
+    imageCompletedRes: AppImages.badge_c10,
+    imageIncompleteRes: AppImages.badge_c10_bw,
   );
 
   /*-----------------------------------------------------------*/

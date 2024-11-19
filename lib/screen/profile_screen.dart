@@ -39,6 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     for (GameBadge badge in GameBadge.gameBadges) {
       bool earned = prefs.getBool("badge_${badge.id}") ?? false;
       if (earned) {
+        badge.isOwned = true;
         earnedBadges.add(badge);
       }
     }
@@ -208,10 +209,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      ClipRRect(
-                                          borderRadius: BorderRadius.circular(10),
-                                          child: Image.asset(badge.imageCompletedRes)
-                                      ),
+                                      BadgeWidget(badge, size: 100,),
                                       const Spacer(),
                                       Text(I10N.getI10nString(earnedBadges[index].nameRes)!, style: const TextStyle(fontSize: 16),),
                                     ],
@@ -225,10 +223,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
-                                          ClipRRect(
-                                              borderRadius: BorderRadius.circular(10),
-                                              child: Image.asset(badge.imageCompletedRes)
-                                          ),
+                                          BadgeWidget(badge, size: 200,),
+                                          const Gap(20),
                                           Text(I10N.getI10nString(earnedBadges[index].descriptionRes)!, textAlign: TextAlign.center,),
                                           const Gap(20),
                                           Text(
