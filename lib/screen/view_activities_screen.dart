@@ -48,6 +48,9 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    UIUtils.portraitOrientation();
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Themes.primaryColorDark,
