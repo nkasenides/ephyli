@@ -133,67 +133,74 @@ class _ActivityC9A2State extends State<ActivityC9A2> {
       statements.shuffle();
     }
 
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: [
-          // Instructions
-          Text(AppLocalizations.of(context)!.c9a2_prompt,
-            style: Theme.of(context).textTheme.bodyLarge,
-            textAlign: TextAlign.center,
-          ),
-
-          const SizedBox(height: 20),
-
-          Column(
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
             children: [
+              // Instructions
+              Text(AppLocalizations.of(context)!.c9a2_prompt,
+                style: Theme.of(context).textTheme.bodyLarge,
+                textAlign: TextAlign.center,
+              ),
 
-              // Target Boxes
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              const SizedBox(height: 20),
+
+              Column(
                 children: [
-                  buildTargetBox(context, AppLocalizations.of(context)!.c9a2_correct),
-                  buildTargetBox(context, AppLocalizations.of(context)!.c9a2_wrong),
+
+                  // Target Boxes
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      buildTargetBox(context, AppLocalizations.of(context)!.c9a2_correct),
+                      buildTargetBox(context, AppLocalizations.of(context)!.c9a2_wrong),
+                    ],
+                  ),
+
+                  const SizedBox(height: 40),
+
+                  // Display the current draggable statement
+                  Draggable<String>(
+                    data: statements[currentStatementIndex]["text"],
+                    feedback: Material(
+                      color: Colors.transparent,
+                      child: Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.blueAccent.withOpacity(0.7),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Text(
+                          statements[currentStatementIndex]["text"]!,
+                          style: const TextStyle(color: Colors.white, fontSize: 16),
+                        ),
+                      ),
+                    ),
+                    childWhenDragging: Container(),
+                    child: Card(
+                      elevation: 4,
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Text(
+                          statements[currentStatementIndex]["text"]!,
+                          style: const TextStyle(fontSize: 16),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
-              ),
-
-              const SizedBox(height: 40),
-
-              // Display the current draggable statement
-              Draggable<String>(
-                data: statements[currentStatementIndex]["text"],
-                feedback: Material(
-                  color: Colors.transparent,
-                  child: Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.blueAccent.withOpacity(0.7),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Text(
-                      statements[currentStatementIndex]["text"]!,
-                      style: const TextStyle(color: Colors.white, fontSize: 16),
-                    ),
-                  ),
-                ),
-                childWhenDragging: Container(),
-                child: Card(
-                  elevation: 4,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Text(
-                      statements[currentStatementIndex]["text"]!,
-                      style: const TextStyle(fontSize: 16),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
+              )
             ],
-          )
-        ],
-      ),
-    );
+          ),
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   // Build the target boxes for Correct and Wrong
