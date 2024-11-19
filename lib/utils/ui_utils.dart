@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:confetti/confetti.dart';
 import 'package:ephyli/model/game_badge.dart';
+import 'package:ephyli/screen/profile_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/i10n.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +65,7 @@ class UIUtils {
         TextButton(
           child: Text(AppLocalizations.of(context)!.viewBadges),
           onPressed: () {
-            //TODO
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen(),));
           },
         ),
 
