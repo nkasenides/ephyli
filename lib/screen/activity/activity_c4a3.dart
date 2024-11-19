@@ -89,41 +89,49 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
   }
 
   Widget infoView() {
-    return Padding(
-      padding: Themes.standardPadding,
-      child: Column(
-        children: [
 
-          InstructionsWidget(
-            prefs,
-            AppLocalizations.of(context)!.c4a3_info_message,
-            AppLocalizations.of(context)!.next,
-            () {
-              setState(() {
-                stage = C4A3Stage.activity;
-              });
-            },
-            middleWidget: Column(
-              children: [
-                WidgetZoom(
-                  heroAnimationTag: "model-img",
-                  zoomWidget: Image.asset(
-                    "assets/img/bauman_onion.png",
-                    width: MediaQuery.of(context).size.width,
-                  ),
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return Padding(
+          padding: Themes.standardPadding,
+          child: Column(
+            children: [
+
+              InstructionsWidget(
+                prefs,
+                AppLocalizations.of(context)!.c4a3_info_message,
+                AppLocalizations.of(context)!.next,
+                    () {
+                  setState(() {
+                    stage = C4A3Stage.activity;
+                  });
+                },
+                middleWidget: Column(
+                  children: [
+                    WidgetZoom(
+                      heroAnimationTag: "model-img",
+                      zoomWidget: Image.asset(
+                        "assets/img/bauman_onion.png",
+                        width: MediaQuery.of(context).size.width,
+                      ),
+                    ),
+
+                    const Gap(20),
+
+                    Text(AppLocalizations.of(context)!.screen_flip_notice)
+
+                  ],
                 ),
+              ),
 
-                const Gap(20),
-
-                Text(AppLocalizations.of(context)!.screen_flip_notice)
-
-              ],
-            ),
+            ],
           ),
-
-        ],
-      ),
-    );
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   Widget activityGameView() {
@@ -251,12 +259,12 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
                 child: buildVariableTarget(context, variables[3]), // Bottom left
               ),
               Positioned(
-                bottom: screenHeight * 0.1,
+                bottom: screenHeight * 0.05,
                 child: buildVariableTarget(context, variables[5]), // Bottom
               ),
               Positioned(
+                right: screenWidth * 0.1,
                 bottom: screenHeight * 0.2,
-                right: screenHeight * 0.1,
                 child: buildVariableTarget(context, variables[4]), // Bottom right
               ),
 
@@ -381,47 +389,55 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
   }
 
   Widget activityFinishView() {
-    return InstructionsWidget(
-      prefs,
-      AppLocalizations.of(context)!.c4a3_finish_message,
-      AppLocalizations.of(context)!.finish,
-      () {
-        ActivityManager.completeActivity(activityID).then((value) {
-          //Find all badges related to this activity and award them:
-          for (var badgeID in Challenge.challenge4.badgeIDs) {
-            var badge = GameBadge.findBadge(badgeID);
-            badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
-              if (!value) {
-                badge.earn(context);
-              }
-            },);
-          }
 
-          //Unlock next challenges:
-          List<Future> unlockFutures = [];
-          for (var challengeID in Challenge.challenge4.unlocksChallengesIDs) {
-            Challenge challenge = Challenge.findChallenge(challengeID)!;
-            challenge.isUnlocked().then((value) {
-              if (!value) {
-                unlockFutures.add(challenge.unlock());
-              }
-            },);
-          }
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return InstructionsWidget(
+            prefs,
+            AppLocalizations.of(context)!.c4a3_finish_message,
+            AppLocalizations.of(context)!.finish,
+                () {
+              ActivityManager.completeActivity(activityID).then((value) {
+                //Find all badges related to this activity and award them:
+                for (var badgeID in Challenge.challenge4.badgeIDs) {
+                  var badge = GameBadge.findBadge(badgeID);
+                  badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                    if (!value) {
+                      badge.earn(context);
+                    }
+                  },);
+                }
 
-          //Show toast and move back:
-          Future.wait(unlockFutures).then((value) {
-            if (unlockFutures.isNotEmpty) {
-              Fluttertoast.showToast(
-                  msg: AppLocalizations.of(context)!
-                      .challenges_unlocked.replaceAll(
-                      "%1", unlockFutures.length.toString()));
+                //Unlock next challenges:
+                List<Future> unlockFutures = [];
+                for (var challengeID in Challenge.challenge4.unlocksChallengesIDs) {
+                  Challenge challenge = Challenge.findChallenge(challengeID)!;
+                  challenge.isUnlocked().then((value) {
+                    if (!value) {
+                      unlockFutures.add(challenge.unlock());
+                    }
+                  },);
+                }
+
+                //Show toast and move back:
+                Future.wait(unlockFutures).then((value) {
+                  if (unlockFutures.isNotEmpty) {
+                    Fluttertoast.showToast(
+                        msg: AppLocalizations.of(context)!
+                            .challenges_unlocked.replaceAll(
+                            "%1", unlockFutures.length.toString()));
+                  }
+                },);
+              },);
+              Navigator.pop(context, "_");
+              Navigator.pop(context, "_");
             }
-          },);
-        },);
-        Navigator.pop(context, "_");
-        Navigator.pop(context, "_");
+        );
       }
-    );
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   @override

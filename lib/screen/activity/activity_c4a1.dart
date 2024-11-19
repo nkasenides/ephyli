@@ -22,6 +22,8 @@ import '../../widgets/buddy_avatar_widget.dart';
 import '../../widgets/chat_bubble.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../widgets/rotate_device_widget.dart';
+
 class ActivityC4A1 extends StatefulWidget {
   @override
   _ActivityC4A1State createState() => _ActivityC4A1State();
@@ -132,84 +134,91 @@ class _ActivityC4A1State extends State<ActivityC4A1> {
       ];
     }
 
-    return Padding(
-      padding: Themes.standardPadding,
-      child: Column(
-        children: [
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return Padding(
+          padding: Themes.standardPadding,
+          child: Column(
+            children: [
 
-          Text(AppLocalizations.of(context)!.c4a1_instruction_message),
+              Text(AppLocalizations.of(context)!.c4a1_instruction_message),
 
-          const Gap(20),
+              const Gap(20),
 
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // Display the prompt
-                Text(
-                  prompts[promptIndex],
-                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    // Display the prompt
+                    Text(
+                      prompts[promptIndex],
+                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+
+                    const Gap(20),
+
+                    // Display the options as buttons with color feedback
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: List.generate(options.length, (optionIndex) {
+                        return ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: buttonColors[optionIndex]
+                          ),
+                          onPressed: () => handleOptionSelect(promptIndex, optionIndex),
+                          child: Text(
+                            options[optionIndex],
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        );
+                      }),
+                    ),
+                    const SizedBox(height: 20),
+                  ],
                 ),
+              ),
 
-                const Gap(20),
+              ElevatedButton(
+                child: Text(AppLocalizations.of(context)!.check_solution),
+                onPressed: () {
+                  int correctsNotFound = 0;
+                  for (int i = 0; i < correctness[promptIndex].length; i++) {
+                    if (correctness[promptIndex][i] == Correctness.correct && buttonColors[i] != Correctness.correct.color) {
+                      correctsNotFound++;
+                    }
+                  }
+                  debugPrint("correctsNotFound: $correctsNotFound");
 
-                // Display the options as buttons with color feedback
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: List.generate(options.length, (optionIndex) {
-                    return ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: buttonColors[optionIndex]
-                      ),
-                      onPressed: () => handleOptionSelect(promptIndex, optionIndex),
-                      child: Text(
-                        options[optionIndex],
-                        style: const TextStyle(color: Colors.white),
-                      ),
-                    );
-                  }),
-                ),
-                const SizedBox(height: 20),
-              ],
-            ),
+                  if (correctsNotFound > 0) {
+                    UIUtils.showFeedbackBar(context, false);
+                    resetRow();
+                  }
+                  else {
+                    if (promptIndex < prompts.length - 1) { //Show next prompt
+                      UIUtils.showFeedbackBar(context, true);
+                      setState(() {
+                        promptIndex++;
+                        buttonColors = List.filled(4, noOptionColor);
+                      });
+                    }
+                    else { //No more prompts, move to finish
+                      setState(() {
+                        stage = C4A1Stage.finish;
+                      });
+                    }
+                  }
+                },
+              )
+
+            ],
           ),
-
-          ElevatedButton(
-            child: Text(AppLocalizations.of(context)!.check_solution),
-            onPressed: () {
-              int correctsNotFound = 0;
-              for (int i = 0; i < correctness[promptIndex].length; i++) {
-                if (correctness[promptIndex][i] == Correctness.correct && buttonColors[i] != Correctness.correct.color) {
-                  correctsNotFound++;
-                }
-              }
-              debugPrint("correctsNotFound: $correctsNotFound");
-
-              if (correctsNotFound > 0) {
-                UIUtils.showFeedbackBar(context, false);
-                resetRow();
-              }
-              else {
-                if (promptIndex < prompts.length - 1) { //Show next prompt
-                  UIUtils.showFeedbackBar(context, true);
-                  setState(() {
-                    promptIndex++;
-                    buttonColors = List.filled(4, noOptionColor);
-                  });
-                }
-                else { //No more prompts, move to finish
-                  setState(() {
-                    stage = C4A1Stage.finish;
-                  });
-                }
-              }
-            },
-          )
-
-        ],
-      ),
-    );
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   // Handle option selection and update the color based on correctness
