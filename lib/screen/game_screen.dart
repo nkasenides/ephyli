@@ -44,6 +44,8 @@ class _GameScreenState extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
 
+    UIUtils.disableFullscreen();
+
     Fragments.navigator.setDrawerContext = context;
 
     return FutureBuilder(
