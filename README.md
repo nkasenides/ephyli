@@ -17,5 +17,10 @@ The current version of the app is: 0.1.0 Alpha. This version is meant for intern
 Access the ePhyLi app on the web [here](https://nkasenides.github.io/ephyli/)
 
 Note that some icons do not work on the web version of the app. This issue is currently being worked on.
+Also note that the app needs to be used from a mobile device. If you are using a desktop browser, you must use the Developer mode
+by press F12 and then going into mobile device mode:
+
+![Developer mode in a desktop browser](screenshot-developermode.png "Going into developer mode on a desktop browser")
+
 
 
