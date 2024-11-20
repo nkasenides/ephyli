@@ -1,4 +1,5 @@
 import 'package:ephyli/fragments/tutorial_step_1.dart';
+import 'package:ephyli/screen/about_screen.dart';
 import 'package:ephyli/screen/glossary_screen.dart';
 import 'package:ephyli/screen/news_screen.dart';
 import 'package:ephyli/screen/profile_screen.dart';
@@ -182,6 +183,14 @@ class _GameScreenState extends State<GameScreen> {
                   tooltip: AppLocalizations.of(context)!.profile,
                 ),
               ),
+
+              navBarFeaturesEnabled ? IconButton(
+                icon: const Icon(Icons.info),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutScreen(),));
+                },
+                tooltip: AppLocalizations.of(context)!.about
+              ) : Container(),
 
             ],
 

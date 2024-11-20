@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about": MessageLookupByLibrary.simpleMessage("About"),
+        "about_the_app": MessageLookupByLibrary.simpleMessage("About the app"),
         "active_opportunities": MessageLookupByLibrary.simpleMessage(
             "Active travel opportunities "),
         "activities": MessageLookupByLibrary.simpleMessage("activities"),
@@ -573,6 +575,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "profile_description": MessageLookupByLibrary.simpleMessage(
             "You can also manage your profile and preferences here."),
+        "project_description": MessageLookupByLibrary.simpleMessage(
+            "ePhyLi is an Erasmus+ Sport funded project that aims to promote physical literacy and healthy lifestyles through digital materials for university students."),
         "ready_letsgo": MessageLookupByLibrary.simpleMessage("Yes, let\'s go!"),
         "regional_or_national_policy":
             MessageLookupByLibrary.simpleMessage("Regional or national policy"),
@@ -647,6 +651,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "under_construction":
             MessageLookupByLibrary.simpleMessage("Under construction"),
         "viewBadges": MessageLookupByLibrary.simpleMessage("View badges"),
+        "visit_website": MessageLookupByLibrary.simpleMessage(
+            "Visit the project\'s website"),
         "wants_to_participate": MessageLookupByLibrary.simpleMessage(
             "The student wants to participate in physical education classes at school and is aware of the possibility of improvement (affective dimension)."),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),

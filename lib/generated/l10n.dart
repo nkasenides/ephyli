@@ -830,6 +830,46 @@ class S {
     );
   }
 
+  /// `About`
+  String get about {
+    return Intl.message(
+      'About',
+      name: 'about',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ePhyLi is an Erasmus+ Sport funded project that aims to promote physical literacy and healthy lifestyles through digital materials for university students.`
+  String get project_description {
+    return Intl.message(
+      'ePhyLi is an Erasmus+ Sport funded project that aims to promote physical literacy and healthy lifestyles through digital materials for university students.',
+      name: 'project_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Visit the project's website`
+  String get visit_website {
+    return Intl.message(
+      'Visit the project\'s website',
+      name: 'visit_website',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About the app`
+  String get about_the_app {
+    return Intl.message(
+      'About the app',
+      name: 'about_the_app',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(

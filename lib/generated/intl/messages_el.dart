@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about": MessageLookupByLibrary.simpleMessage("Πληροφορίες"),
+        "about_the_app":
+            MessageLookupByLibrary.simpleMessage("Σχετικά με την εφαρμογή"),
         "active_opportunities": MessageLookupByLibrary.simpleMessage(
             "Ενεργές ταξιδιωτικές ευκαιρίες "),
         "activities": MessageLookupByLibrary.simpleMessage("Δραστηριότητες"),
@@ -571,6 +574,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Προφίλ"),
         "profile_description": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε επίσης να διαχειριστείτε το προφίλ και τις προτιμήσεις σας εδώ."),
+        "project_description": MessageLookupByLibrary.simpleMessage(
+            "Το ePhyLi είναι ένα έργο που χρηματοδοτείται από το Erasmus+ Sport που στοχεύει στην προώθηση του σωματικού γραμματισμού και του υγιεινού τρόπου ζωής μέσω ψηφιακού υλικού για φοιτητές πανεπιστημίου."),
         "ready_letsgo": MessageLookupByLibrary.simpleMessage("Ναι, πάμε!"),
         "regional_or_national_policy": MessageLookupByLibrary.simpleMessage(
             "Περιφερειακή ή εθνική πολιτική"),
@@ -643,6 +648,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "under_construction":
             MessageLookupByLibrary.simpleMessage("Υπό κατασκευή"),
         "viewBadges": MessageLookupByLibrary.simpleMessage("Προβολή σημάτων"),
+        "visit_website": MessageLookupByLibrary.simpleMessage(
+            "Επισκεφτείτε τον ιστότοπο του έργου"),
         "wants_to_participate": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής θέλει να συμμετάσχει σε μαθήματα φυσικής αγωγής στο σχολείο και έχει επίγνωση της δυνατότητας βελτίωσης (συναισθηματική διάσταση)."),
         "well_done": MessageLookupByLibrary.simpleMessage("Μπράβο!"),
