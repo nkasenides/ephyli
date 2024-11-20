@@ -8,6 +8,6 @@ The current version of the app is: 0.1.0 Alpha. This version is meant for intern
 
 # Download the app for Android
 
-(Download the app here)[]
+[](Download the app here)
 
 
