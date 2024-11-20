@@ -14,7 +14,7 @@ The current version of the app is: 0.1.0 Alpha. This version is meant for intern
 
 # Live web app
 
-Access the ePhyLi on the web [here](https://nkasenides.github.io/ephyli/)
+Access the ePhyLi app on the web [here](https://nkasenides.github.io/ephyli/)
 
 Note that some icons do not work on the web version of the app. This issue is currently being worked on.
 
