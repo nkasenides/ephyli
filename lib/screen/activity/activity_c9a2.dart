@@ -164,23 +164,22 @@ class _ActivityC9A2State extends State<ActivityC9A2> {
                   // Display the current draggable statement
                   Draggable<String>(
                     data: statements[currentStatementIndex]["text"],
-                    feedback: Material(
-                      color: Colors.transparent,
-                      child: Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.blueAccent.withOpacity(0.7),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
+                    feedback: Card(
+                      color: Colors.grey.shade300,
+                      elevation: 5,
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
                         child: Text(
                           statements[currentStatementIndex]["text"]!,
-                          style: const TextStyle(color: Colors.white, fontSize: 16),
+                          style: const TextStyle(fontSize: 16),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
                     childWhenDragging: Container(),
                     child: Card(
-                      elevation: 4,
+                      color: Colors.grey.shade300,
+                      elevation: 2,
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Text(

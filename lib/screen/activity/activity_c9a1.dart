@@ -90,7 +90,9 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
 
     if (shuffledFactors.isEmpty) {
 
-      factors = !kDebugMode ? [
+      factors =
+      !kDebugMode ?
+      [
         AppLocalizations.of(context)!.c9a1_throwing,
         AppLocalizations.of(context)!.c9a1_catching,
         AppLocalizations.of(context)!.c9a1_striking,
@@ -110,60 +112,59 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
         AppLocalizations.of(context)!.c9a1_natural_surroundings,
         AppLocalizations.of(context)!.c9a1_rocks_and_tress,
         AppLocalizations.of(context)!.c9a1_challenges,
-      ] : [
+      ]
+      : [
         "A1",
         "B1",
         "C2"
-      ];
+      ]
+      ;
 
-      variables = !kDebugMode ? [
+      variables =
+      !kDebugMode ?
+      [
         AppLocalizations.of(context)!.c9a1_object_play,
         AppLocalizations.of(context)!.c9a1_exercise_play,
         AppLocalizations.of(context)!.c9a1_expressive_movement,
         AppLocalizations.of(context)!.c9a1_outdoor_play,
-      ] : [
+      ]
+      : [
         "1",
         "2",
         "3",
-        "4",
-        "5",
-        "6",
-      ];
+        "4"
+      ]
+      ;
 
-      correctMappings = !kDebugMode ? {
+      correctMappings =
+      !kDebugMode ?
+      {
+        AppLocalizations.of(context)!.c9a1_throwing: AppLocalizations.of(context)!.c9a1_object_play,
+        AppLocalizations.of(context)!.c9a1_catching: AppLocalizations.of(context)!.c9a1_object_play,
+        AppLocalizations.of(context)!.c9a1_striking: AppLocalizations.of(context)!.c9a1_object_play,
 
-        AppLocalizations.of(context)!.motivation: AppLocalizations.of(context)!.individual,
-        AppLocalizations.of(context)!.beliefs: AppLocalizations.of(context)!.individual,
-        AppLocalizations.of(context)!.sex: AppLocalizations.of(context)!.individual,
-        AppLocalizations.of(context)!.self_efficacy: AppLocalizations.of(context)!.individual,
+        AppLocalizations.of(context)!.c9a1_rough_and_tumble: AppLocalizations.of(context)!.c9a1_exercise_play,
+        AppLocalizations.of(context)!.c9a1_climbing: AppLocalizations.of(context)!.c9a1_exercise_play,
+        AppLocalizations.of(context)!.c9a1_running: AppLocalizations.of(context)!.c9a1_exercise_play,
+        AppLocalizations.of(context)!.c9a1_chasing_games: AppLocalizations.of(context)!.c9a1_exercise_play,
+        AppLocalizations.of(context)!.c9a1_bikes_and_scooters: AppLocalizations.of(context)!.c9a1_exercise_play,
+        AppLocalizations.of(context)!.c9a1_pushing_and_pulling: AppLocalizations.of(context)!.c9a1_exercise_play,
 
-        AppLocalizations.of(context)!.family: AppLocalizations.of(context)!.social_environment,
-        AppLocalizations.of(context)!.friends: AppLocalizations.of(context)!.social_environment,
-        AppLocalizations.of(context)!.cultural_norms: AppLocalizations.of(context)!.social_environment,
-        AppLocalizations.of(context)!.colleagues: AppLocalizations.of(context)!.social_environment
-        ,
-        AppLocalizations.of(context)!.schools: AppLocalizations.of(context)!.organizations_and_institutions,
-        AppLocalizations.of(context)!.community_clubs: AppLocalizations.of(context)!.organizations_and_institutions,
-        AppLocalizations.of(context)!.organizations: AppLocalizations.of(context)!.organizations_and_institutions,
-        AppLocalizations.of(context)!.workplace: AppLocalizations.of(context)!.organizations_and_institutions,
+        AppLocalizations.of(context)!.c9a1_dance: AppLocalizations.of(context)!.c9a1_expressive_movement,
+        AppLocalizations.of(context)!.c9a1_gymnastics: AppLocalizations.of(context)!.c9a1_expressive_movement,
+        AppLocalizations.of(context)!.c9a1_action_rhymes: AppLocalizations.of(context)!.c9a1_expressive_movement,
+        AppLocalizations.of(context)!.c9a1_songs_and_stories: AppLocalizations.of(context)!.c9a1_expressive_movement,
 
-        AppLocalizations.of(context)!.built_environment: AppLocalizations.of(context)!.physical_environment,
-        AppLocalizations.of(context)!.active_opportunities: AppLocalizations.of(context)!.physical_environment,
-        AppLocalizations.of(context)!.parks_recreation: AppLocalizations.of(context)!.physical_environment,
-        AppLocalizations.of(context)!.natural_spaces: AppLocalizations.of(context)!.physical_environment,
-
-        AppLocalizations.of(context)!.transport_systems: AppLocalizations.of(context)!.regional_or_national_policy,
-        AppLocalizations.of(context)!.health_sector: AppLocalizations.of(context)!.regional_or_national_policy,
-        AppLocalizations.of(context)!.education_school: AppLocalizations.of(context)!.regional_or_national_policy,
-        AppLocalizations.of(context)!.organized_sport: AppLocalizations.of(context)!.regional_or_national_policy,
-
-        AppLocalizations.of(context)!.national: AppLocalizations.of(context)!.culture,
-        AppLocalizations.of(context)!.local: AppLocalizations.of(context)!.culture,
-      } : {
+        AppLocalizations.of(context)!.c9a1_natural_surroundings: AppLocalizations.of(context)!.c9a1_outdoor_play,
+        AppLocalizations.of(context)!.c9a1_rocks_and_tress: AppLocalizations.of(context)!.c9a1_outdoor_play,
+        AppLocalizations.of(context)!.c9a1_challenges: AppLocalizations.of(context)!.c9a1_outdoor_play,
+      }
+      : {
         "A1": "1",
         "B1": "1",
         "C2": "2",
-      };
+      }
+      ;
 
       shuffledFactors = List.from(factors);
       shuffledFactors.shuffle();
@@ -187,37 +188,27 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
             children: [
               // Star shape layout for variables
               Positioned(
-                top: screenHeight * 0.2,
+                top: screenHeight * 0.3,
                 left: screenWidth * 0.1,
-                child: buildVariableTarget(context, variables[0]), // Top left
+                child: buildVariableTarget(context, variables[0]), // left
               ),
               Positioned(
-                top: screenHeight * 0.1,
+                top: screenHeight * 0.05,
                 child: buildVariableTarget(context, variables[1]), // Top
               ),
               Positioned(
+                top: screenHeight * 0.3,
                 right: screenWidth * 0.1,
-                top: screenHeight * 0.2,
-                child: buildVariableTarget(context, variables[2]), // Top right
-              ),
-              Positioned(
-                bottom: screenHeight * 0.2,
-                left: screenWidth * 0.1,
-                child: buildVariableTarget(context, variables[3]), // Bottom left
+                child: buildVariableTarget(context, variables[2]), // right
               ),
               Positioned(
                 bottom: screenHeight * 0.05,
-                child: buildVariableTarget(context, variables[5]), // Bottom
-              ),
-              Positioned(
-                right: screenWidth * 0.1,
-                bottom: screenHeight * 0.2,
-                child: buildVariableTarget(context, variables[4]), // Bottom right
+                child: buildVariableTarget(context, variables[3]), // Bottom
               ),
 
               // Draggable factor in the center
               Positioned(
-                top: screenHeight * 0.35,
+                top: screenHeight * 0.3,
                 child: Draggable<String>(
                   data: currentFactor,
                   feedback: Material(
