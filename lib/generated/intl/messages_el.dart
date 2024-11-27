@@ -348,6 +348,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Αυτές είναι οι προκλήσεις που πρέπει να ολοκληρώσετε. Κάθε μία από αυτές τις προκλήσεις μπορεί να αποτελείται από πολλές δραστηριότητες και μόλις ολοκληρώσετε όλες τις δραστηριότητες σε μια πρόκληση, θα ξεκλειδώσω την επόμενη πρόκληση. Να θυμάστε πάντα οτι μπορείτε να χρησιμοποιείτε τη βοήθειά μου εάν κολλήστε σε μια δραστηριότητα και να χρησιμοποιήσετε τα άρθρα νέων και το γλωσσάρι για να βρείτε απαντήσεις.\n\nΤο σεμινάριο μας ολοκληρώθηκε. Eίστε έτοιμοι να ξεκινήσετε!"),
         "challenges_unlocked": MessageLookupByLibrary.simpleMessage(
             "%1 πρόκληση/εις ξεκλειδώθηκαν!"),
+        "change_language":
+            MessageLookupByLibrary.simpleMessage("Αλλαγή γλώσσας"),
         "check_solution": MessageLookupByLibrary.simpleMessage("Έλεγχος λύσης"),
         "clickOKToContinue": MessageLookupByLibrary.simpleMessage(
             "Κάντε κλικ στο OK για να συνεχίσετε"),

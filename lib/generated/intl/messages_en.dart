@@ -346,6 +346,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "These are the challenges you must complete. Each of these challenges may consist of multiple activities, and once you complete all activities in a challenge, I will unlock the next challenge for you. Always remember to use my help if you get stuck in an activity, and remember to use the resources in the news and glossary sections.\n\nOur tutorial is finished. I think you are ready to get started!"),
         "challenges_unlocked": MessageLookupByLibrary.simpleMessage(
             "%1 challenge(s) were unlocked!"),
+        "change_language":
+            MessageLookupByLibrary.simpleMessage("Change language"),
         "check_solution":
             MessageLookupByLibrary.simpleMessage("Check solution"),
         "clickOKToContinue":

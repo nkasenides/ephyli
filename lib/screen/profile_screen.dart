@@ -1,5 +1,6 @@
 import 'package:ephyli/model/game_badge.dart';
 import 'package:ephyli/utils/i10n.dart';
+import 'package:ephyli/widgets/language_selection_widget.dart';
 import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -178,6 +179,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   },);
                                 },
                                 child: Text(AppLocalizations.of(context)!.customizeAvatar),
+                              ),
+
+                              //Change language:
+                              OutlinedButton(
+                                child: Text(AppLocalizations.of(context)!.change_language),
+                                onPressed: () {
+                                  showDialog(context: context, builder: (context) {
+                                    return AlertDialog(
+                                      title: Text(AppLocalizations.of(context)!.change_language),
+                                      content: LanguageSelectionWidget(refreshParentCallback: () {
+                                        setState(() {});
+                                      },),
+                                      actions: [
+                                        OutlinedButton(
+                                          child: Text(AppLocalizations.of(context)!.ok),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                        )
+                                      ],
+                                    );
+                                  },);
+                                },
                               ),
 
                             ],
