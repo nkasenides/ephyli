@@ -211,7 +211,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     children: [
                                       BadgeWidget(badge, size: 100,),
                                       const Spacer(),
-                                      Text(I10N.getI10nString(earnedBadges[index].nameRes)!, style: const TextStyle(fontSize: 16),),
+                                      Text(I10N.getI10nString(earnedBadges[index].nameRes)!, style: const TextStyle(fontSize: 16), textAlign: TextAlign.center,),
                                     ],
                                   ),
                                 ),
