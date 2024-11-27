@@ -34,7 +34,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: EphyliGradient(
         child: Center(
           child: Padding(
-            padding: Themes.standardPadding,
+            padding: MediaQuery.sizeOf(context).height > 800 ? Themes.standardPadding : const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             child: Column(
               children: [
 
@@ -45,22 +45,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   height: 200,
                 ),
 
-                const Gap(30),
+                Gap(MediaQuery.sizeOf(context).height > 800 ? 30 : 10),
 
                 //Tagline
                 Text(
                   AppLocalizations.of(context)!.tagline,
                   style: Theme.of(context).textTheme.headlineMedium,
+                  textAlign: TextAlign.center
                 ),
 
-                const Gap(40),
+                Gap(MediaQuery.sizeOf(context).height > 800 ? 40 : 20),
 
                 //Text info:
                 Text(
                   AppLocalizations.of(context)!.welcomeText,
+                  textAlign: TextAlign.center,
                 ),
 
-                const Gap(30),
+                Gap(MediaQuery.sizeOf(context).height > 800 ? 30 : 10),
 
                 LanguageSelectionWidget(
                   refreshParentCallback: () {
@@ -68,7 +70,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   },
                 ),
 
-                const Gap(30),
+                Gap(MediaQuery.sizeOf(context).height > 800 ? 30 : 10),
 
                 //Start button
                 SizedBox(

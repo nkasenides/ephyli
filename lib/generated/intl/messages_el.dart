@@ -656,6 +656,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Επισκεφτείτε τον ιστότοπο του έργου"),
         "wants_to_participate": MessageLookupByLibrary.simpleMessage(
             "Ο μαθητής θέλει να συμμετάσχει σε μαθήματα φυσικής αγωγής στο σχολείο και έχει επίγνωση της δυνατότητας βελτίωσης (συναισθηματική διάσταση)."),
+        "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),
         "well_done": MessageLookupByLibrary.simpleMessage("Μπράβο!"),
         "whatIsYourName":
             MessageLookupByLibrary.simpleMessage("Ποιό είναι το όνομά σας;"),
