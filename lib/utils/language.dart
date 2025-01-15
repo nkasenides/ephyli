@@ -18,10 +18,11 @@ class Language {
 
   static const allLocales = [
     englishLocale,
-    greekLocale,
-    italyLocale,
-    franceLocale,
-    polandLocale,
+    //TODO - Enable once these language translations are available.
+    // greekLocale,
+    // italyLocale,
+    // franceLocale,
+    // polandLocale,
     // luxembourgLocale,
   ];
 
