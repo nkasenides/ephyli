@@ -121,7 +121,7 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
                 }
 
                 return Card(
-                  color: isCompleted ? Themes.secondaryColorLight : null,
+                  color: isCompleted ? Colors.green.shade100 : null,
                   child: ListTile(
                     title: Text(I10N.getI10nString(activity.nameRes)! + (activity.completed ? " (${AppLocalizations.of(context)!.completed})" : "")),
                     subtitle: Text(I10N.getI10nString(activity.descriptionRes)!, style: const TextStyle(overflow: TextOverflow.ellipsis),),
@@ -162,7 +162,7 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
                         }
                       }
                     },
-                    trailing: isCompleted ? const Icon(Icons.check, color: Themes.secondaryColorDark,) : const SizedBox(),
+                    trailing: _createTrailingWidget(!activity.unlocked, isCompleted),
 
                   ),
                 );
@@ -174,6 +174,16 @@ class _ViewActivitiesScreenState extends State<ViewActivitiesScreen> {
       },
     ),
     );
+  }
+
+  Widget _createTrailingWidget(bool isLocked, bool isCompleted) {
+    if (isLocked) {
+      return const Icon(Icons.lock_outlined, color: Colors.grey,);
+    }
+    if (isCompleted) {
+      return const Icon(Icons.check, color: Colors.green,);
+    }
+    return SizedBox();
   }
 
   _startActivity(BuildContext context, String challengeID, String activityID) {

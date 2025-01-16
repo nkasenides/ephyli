@@ -59,7 +59,7 @@ class _TutorialStep2State extends State<TutorialStep2> {
                     context,
                     const <String>{
                       FeatureExplorer.buddyFeatureID,
-                      FeatureExplorer.newsFeatureID,
+                      // FeatureExplorer.newsFeatureID,
                       FeatureExplorer.glossaryFeatureID,
                       FeatureExplorer.profileFeatureID,
                     },
