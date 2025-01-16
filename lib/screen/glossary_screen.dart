@@ -4,6 +4,7 @@ import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../model/game_badge.dart';
@@ -80,32 +81,31 @@ class _GlossaryScreenState extends State<GlossaryScreen> {
 
             return OrientationBuilder(builder: (context, orientation) {
               if (orientation == Orientation.portrait) {
-                return Column(
-                  children: [
+                return SingleChildScrollView(
+                  child: Column(
+                    children: [
 
-                    Expanded(
-                      flex: 1,
-                      child: InstructionsWidget(
+                      InstructionsWidget(
                           prefs,
                           AppLocalizations.of(context)!.glossary_instructions,
                           "",
                           null
                       ),
-                    ),
 
-                    Expanded(
-                      flex: 2,
-                      child: Padding(
-                        padding: Themes.standardPadding,
-                        child: ListView.builder(
-                          itemBuilder: (context, index) {
-                            return GlossaryTermWidget(GlossaryScreen.glossary.keys.elementAt(index), glossaryBadgeEarned);
-                          },
-                          itemCount: GlossaryScreen.glossary.keys.length,
-                        ),
-                      ),
-                    ),
-                  ],
+                      ...List.generate(GlossaryScreen.glossary.keys.length, (index) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: SizedBox(
+                            width: MediaQuery.sizeOf(context).width,
+                            child: GlossaryTermWidget(GlossaryScreen.glossary.keys.elementAt(index), glossaryBadgeEarned)
+                          ),
+                        );
+                      },),
+
+                      const Gap(10),
+
+                    ],
+                  ),
                 );
               }
               else {
