@@ -1,4 +1,5 @@
 import 'package:animate_gradient/animate_gradient.dart';
+import 'package:ephyli/screen/privacy_policy.dart';
 import 'package:ephyli/utils/constants.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/ephyli_gradient.dart';
@@ -87,6 +88,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
 
+                const Spacer(),
+
+                InkWell(
+                  child: Text(AppLocalizations.of(context)!.privacy_policy, style: const TextStyle(color: Colors.grey),),
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const PrivacyPolicyScreen(),));
+                  },
+                )
 
               ],
             ),

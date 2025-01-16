@@ -1,3 +1,4 @@
+import 'package:ephyli/screen/privacy_policy.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
@@ -58,6 +59,17 @@ class AboutScreen extends StatelessWidget {
                       label: Text(AppLocalizations.of(context)!.about_the_app),
                       onPressed: () {
                         UIUtils.visitLink("https://www.ephyliproject.eu/app");
+                      },
+                    ),
+
+                    const Gap(10),
+
+                    OutlinedButton.icon(
+                      iconAlignment: IconAlignment.end,
+                      icon: const Icon(Icons.open_in_new),
+                      label: Text(AppLocalizations.of(context)!.privacy_policy),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const PrivacyPolicyScreen(),));
                       },
                     ),
 

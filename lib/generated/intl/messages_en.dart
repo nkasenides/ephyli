@@ -573,6 +573,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "The student is building positive relationships that stimulate and support him/her in participating in extracurricular sports activities (social dimension)."),
         "preliminary_level":
             MessageLookupByLibrary.simpleMessage("Preliminary level"),
+        "privacy_policy":
+            MessageLookupByLibrary.simpleMessage("Privacy policy"),
         "proceed": MessageLookupByLibrary.simpleMessage("Proceed"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "profile_description": MessageLookupByLibrary.simpleMessage(
