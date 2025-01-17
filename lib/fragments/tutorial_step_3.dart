@@ -13,6 +13,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../widgets/chat_bubble.dart';
+import '../widgets/instructions_widget.dart';
 import 'fragments.dart';
 
 class TutorialStep3 extends StatefulWidget {
@@ -46,63 +47,15 @@ class _TutorialStep3State extends State<TutorialStep3> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return SingleChildScrollView(
-            child: Padding(
-              padding: Themes.standardPadding,
-              child: Column(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
 
-                      PersonalizedAvatar(
-                        buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
-                        backgroundRadius: 25,
-                        avatarSize: 35,
-                      ),
-
-                      ChatBubble(
-                        margin: const EdgeInsets.only(left: 50),
-                        child: AnimatedTextKit(
-                          animatedTexts: [
-                            TypewriterAnimatedText(
-                              AppLocalizations.of(context)!.tutorialTextChallenges,
-                              textStyle: const TextStyle(color: Colors.white,),
-                              speed: Duration(milliseconds: 50),
-                            ),
-                          ],
-                          displayFullTextOnTap: true,
-                          isRepeatingAnimation: false,
-                          onFinished: () {
-                            setState(() {
-                              messageShown = true;
-                            });
-                          },
-                          onTap: () {
-                            setState(() {
-                              messageShown = true;
-                            });
-                          },
-                        ),
-                      )
-
-                    ],
-                  ),
-
-                  messageShown ? Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      ElevatedButton(
-                        child: Text(AppLocalizations.of(context)!.exploreChallenges),
-                        onPressed: () {
-                          Fragments.navigator.putPosit(key: Fragments.CHALLENGES_KEY);
-                        },
-                      ),
-                    ],
-                  ) : Container(),
-
-                ],
-              ),
-            ),
+            child: InstructionsWidget(
+                snapshot.data!,
+                AppLocalizations.of(context)!.tutorialTextChallenges,
+                AppLocalizations.of(context)!.exploreChallenges,
+                () {
+                  Fragments.navigator.putPosit(key: Fragments.CHALLENGES_KEY);
+                }
+            )
           );
         }
         return const Center(child: CircularProgressIndicator());

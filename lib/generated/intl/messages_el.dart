@@ -572,6 +572,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ο μαθητής χτίζει θετικές σχέσεις που τον διεγείρουν και τον υποστηρίζουν στη συμμετοχή σε εξωσχολικές αθλητικές δραστηριότητες (κοινωνική διάσταση)."),
         "preliminary_level":
             MessageLookupByLibrary.simpleMessage("Προκαταρκτικό επίπεδο"),
+        "privacy_policy":
+            MessageLookupByLibrary.simpleMessage("Πολιτική απορρήτου"),
         "proceed": MessageLookupByLibrary.simpleMessage("Συνέχεια"),
         "profile": MessageLookupByLibrary.simpleMessage("Προφίλ"),
         "profile_description": MessageLookupByLibrary.simpleMessage(

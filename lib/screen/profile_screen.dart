@@ -3,6 +3,7 @@ import 'package:ephyli/utils/i10n.dart';
 import 'package:ephyli/widgets/language_selection_widget.dart';
 import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:fluttermoji/fluttermojiCircleAvatar.dart';
 import 'package:fluttermoji/fluttermojiCustomizer.dart';
@@ -73,7 +74,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           body: OrientationBuilder(
             builder: (context, orientation) {
               if (orientation == Orientation.portrait) {
-                return Padding(
+                return SingleChildScrollView(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -218,64 +219,64 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                       const Gap(20),
 
-                      earnedBadges.isNotEmpty ? Expanded(
-                        child: GridView.builder(
-                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2
-                          ),
-                          itemBuilder: (context, index) {
-                            GameBadge badge = earnedBadges[index];
-                            return Card(
-                              color: Colors.white,
-                              child: InkWell(
-                                child: Padding(
-                                  padding: Themes.standardPadding,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      BadgeWidget(badge, size: 100,),
-                                      const Spacer(),
-                                      Text(I10N.getI10nString(earnedBadges[index].nameRes)!, style: const TextStyle(fontSize: 16), textAlign: TextAlign.center,),
-                                    ],
-                                  ),
-                                ),
-                                onTap: () {
-                                  showDialog(context: context, builder: (context) {
-                                    return AlertDialog(
-                                      title: Text(I10N.getI10nString(earnedBadges[index].nameRes)!, textAlign: TextAlign.center,),
-                                      content: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          BadgeWidget(badge, size: 200,),
-                                          const Gap(20),
-                                          Text(I10N.getI10nString(earnedBadges[index].descriptionRes)!, textAlign: TextAlign.center,),
-                                          const Gap(20),
-                                          Text(
-                                            AppLocalizations.of(context)!.you_have_earned_badge,
-                                            style: const TextStyle(
-                                                color: Colors.green, fontWeight: FontWeight.bold
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                        ],
-                                      ),
-                                      actions: [
-                                        OutlinedButton(
-                                          child: Text(AppLocalizations.of(context)!.ok),
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                        )
-                                      ],
-                                    );
-                                  },);
-                                },
-                              ),
-                            );
-                          },
-                          itemCount: earnedBadges.length,
+                      earnedBadges.isNotEmpty ? GridView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2
                         ),
+                        itemBuilder: (context, index) {
+                          GameBadge badge = earnedBadges[index];
+                          return Card(
+                            color: Colors.white,
+                            child: InkWell(
+                              child: Padding(
+                                padding: Themes.standardPadding,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    BadgeWidget(badge, size: 100,),
+                                    const Spacer(),
+                                    Text(I10N.getI10nString(earnedBadges[index].nameRes)!, style: const TextStyle(fontSize: 16), textAlign: TextAlign.center,),
+                                  ],
+                                ),
+                              ),
+                              onTap: () {
+                                showDialog(context: context, builder: (context) {
+                                  return AlertDialog(
+                                    title: Text(I10N.getI10nString(earnedBadges[index].nameRes)!, textAlign: TextAlign.center,),
+                                    content: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        BadgeWidget(badge, size: 200,),
+                                        const Gap(20),
+                                        Text(I10N.getI10nString(earnedBadges[index].descriptionRes)!, textAlign: TextAlign.center,),
+                                        const Gap(20),
+                                        Text(
+                                          AppLocalizations.of(context)!.you_have_earned_badge,
+                                          style: const TextStyle(
+                                              color: Colors.green, fontWeight: FontWeight.bold
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ],
+                                    ),
+                                    actions: [
+                                      OutlinedButton(
+                                        child: Text(AppLocalizations.of(context)!.ok),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                      )
+                                    ],
+                                  );
+                                },);
+                              },
+                            ),
+                          );
+                        },
+                        itemCount: earnedBadges.length,
                       ) : Text(
                         AppLocalizations.of(context)!.no_badges_yet,
                         textAlign: TextAlign.center,

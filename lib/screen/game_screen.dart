@@ -110,28 +110,28 @@ class _GameScreenState extends State<GameScreen> {
             actions: [
 
               //NEWS:
-              DescribedFeatureOverlay(
-                featureId: FeatureExplorer.newsFeatureID,
-                tapTarget: const Icon(Icons.newspaper_rounded),
-                title: Text(AppLocalizations.of(context)!.news),
-                description: Text(AppLocalizations.of(context)!.news_description),
-                barrierDismissible: false,
-                backgroundDismissible: false,
-                backgroundColor: Themes.secondaryColor,
-                textColor: Colors.black,
-                onComplete: () async {
-                  debugPrint("Feature discovered - News");
-                  return true;
-                },
-
-                child: IconButton(
-                  icon: const Icon(Icons.newspaper_rounded),
-                  onPressed: navBarFeaturesEnabled ? () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const NewsScreen(),));
-                  } : null,
-                  tooltip: AppLocalizations.of(context)!.news,
-                ),
-              ),
+              // DescribedFeatureOverlay(
+              //   featureId: FeatureExplorer.newsFeatureID,
+              //   tapTarget: const Icon(Icons.newspaper_rounded),
+              //   title: Text(AppLocalizations.of(context)!.news),
+              //   description: Text(AppLocalizations.of(context)!.news_description),
+              //   barrierDismissible: false,
+              //   backgroundDismissible: false,
+              //   backgroundColor: Themes.secondaryColor,
+              //   textColor: Colors.black,
+              //   onComplete: () async {
+              //     debugPrint("Feature discovered - News");
+              //     return true;
+              //   },
+              //
+              //   child: IconButton(
+              //     icon: const Icon(Icons.newspaper_rounded),
+              //     onPressed: navBarFeaturesEnabled ? () {
+              //       Navigator.of(context).push(MaterialPageRoute(builder: (context) => const NewsScreen(),));
+              //     } : null,
+              //     tooltip: AppLocalizations.of(context)!.news,
+              //   ),
+              // ),
 
               //GLOSSARY
               DescribedFeatureOverlay(

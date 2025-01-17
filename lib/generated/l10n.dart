@@ -880,6 +880,16 @@ class S {
     );
   }
 
+  /// `Privacy policy`
+  String get privacy_policy {
+    return Intl.message(
+      'Privacy policy',
+      name: 'privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(

@@ -61,7 +61,7 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                           textStyle: const TextStyle(
                             color: Colors.white,
                           ),
-                          speed: const Duration(milliseconds: 50),
+                          speed: const Duration(milliseconds: 1),
                         ),
                       ],
                       displayFullTextOnTap: true,

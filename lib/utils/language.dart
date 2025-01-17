@@ -19,7 +19,7 @@ class Language {
   static const allLocales = [
     englishLocale,
     //TODO - Enable once these language translations are available.
-    // greekLocale,
+    greekLocale,
     // italyLocale,
     // franceLocale,
     // polandLocale,

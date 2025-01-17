@@ -15,6 +15,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../widgets/chat_bubble.dart';
+import '../widgets/instructions_widget.dart';
 import 'fragments.dart';
 
 class TutorialStep2 extends StatefulWidget {
@@ -48,73 +49,23 @@ class _TutorialStep2State extends State<TutorialStep2> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return SingleChildScrollView(
-            child: Padding(
-              padding: Themes.standardPadding,
-              child: Column(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
 
-                      PersonalizedAvatar(
-                        buddyAvatars[snapshot.data!.getInt(PrefUtils.buddy_selection)!],
-                        backgroundRadius: 25,
-                        avatarSize: 35,
-                      ),
-
-                      ChatBubble(
-                        margin: const EdgeInsets.only(left: 50),
-                        child: AnimatedTextKit(
-                          animatedTexts: [
-                            TypewriterAnimatedText(
-                              AppLocalizations.of(context)!.tutorial_text_buddy,
-                              textStyle: const TextStyle(color: Colors.white,),
-                              speed: const Duration(milliseconds: 50),
-                            ),
-                          ],
-                          displayFullTextOnTap: true,
-                          isRepeatingAnimation: false,
-                          onFinished: () {
-                            setState(() {
-                              messageShown = true;
-                            });
-                          },
-                          onTap: () {
-                            setState(() {
-                              messageShown = true;
-                            });
-                          },
-                        ),
-                      )
-
-                    ],
-                  ),
-
-                  messageShown ? Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      ElevatedButton(
-                        child: Text(AppLocalizations.of(context)!.next),
-                        onPressed: () {
-
-                          FeatureDiscovery.discoverFeatures(
-                            context,
-                            const <String>{
-                              FeatureExplorer.buddyFeatureID,
-                              FeatureExplorer.newsFeatureID,
-                              FeatureExplorer.glossaryFeatureID,
-                              FeatureExplorer.profileFeatureID,
-                            },
-                          );
-
-                        },
-                      ),
-                    ],
-                  ) : Container(),
-
-                ],
-              ),
-            ),
+            child: InstructionsWidget(
+                snapshot.data!,
+                AppLocalizations.of(context)!.tutorial_text_buddy,
+                AppLocalizations.of(context)!.next,
+                () {
+                  FeatureDiscovery.discoverFeatures(
+                    context,
+                    const <String>{
+                      FeatureExplorer.buddyFeatureID,
+                      // FeatureExplorer.newsFeatureID,
+                      FeatureExplorer.glossaryFeatureID,
+                      FeatureExplorer.profileFeatureID,
+                    },
+                  );
+                }
+            )
           );
         }
         return const Center(child: CircularProgressIndicator());
