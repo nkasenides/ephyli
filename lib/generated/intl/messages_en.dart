@@ -88,6 +88,191 @@ class MessageLookup extends MessageLookupByLibrary {
             "Well done! You have completed the tenth challenge. Press \'Finish\' to get your badge!"),
         "c10a2_instructions": MessageLookupByLibrary.simpleMessage(
             "You will assume the role of a PE teacher and have to match the lesson provided with the correct teaching style used to develop it. Ready?"),
+        "c11_floor0_environment":
+            MessageLookupByLibrary.simpleMessage("School gymnasium"),
+        "c11_floor0_model": MessageLookupByLibrary.simpleMessage(
+            "Teaching Games for Understanding model"),
+        "c11_floor0_statement": MessageLookupByLibrary.simpleMessage(
+            "The model emphasizes the importance of gameplay and understanding. It promotes a student-centred environment, encouraging learners to explore and understand the game rules, tactics, and strategies, which, in turn, leads to a deeper appreciation and enjoyment of the game."),
+        "c11_floor0_step1_correct":
+            MessageLookupByLibrary.simpleMessage("Proceed"),
+        "c11_floor0_step1_instruction": MessageLookupByLibrary.simpleMessage(
+            "Children are scattered around the gym. A hula hoop is placed next to each child with a cone in the centre. The players must knock over the cone of other players with a ball or defend when it is attacked. Once everyone has attacked or defended, the second step begins."),
+        "c11_floor0_step2_correct": MessageLookupByLibrary.simpleMessage(
+            "Once a cone is knocked over, the child moves it and the hula hoop to another part of the gym and continues to play. Step 2 lasts 10 minutes."),
+        "c11_floor0_step2_wrong": MessageLookupByLibrary.simpleMessage(
+            "The child that knocks over the cone of an opponent gets 1 point. The first to get 5 points wins the game."),
+        "c11_floor0_step3_correct": MessageLookupByLibrary.simpleMessage(
+            "The player that knocks over the cone of another child, forms a team with them."),
+        "c11_floor0_step3_wrong": MessageLookupByLibrary.simpleMessage(
+            "When a child’s cone is knocked over, the child is eliminated by the game. The last one left on the field wins."),
+        "c11_floor0_step4_correct": MessageLookupByLibrary.simpleMessage(
+            "With the help of questions, comments, and game modifications from the teacher, students begin to work through the principles of play and identify key tactics and strategies that can lead to success in the game."),
+        "c11_floor0_step4_wrong": MessageLookupByLibrary.simpleMessage(
+            "In order to improve knowledge of the key tactics and strategies to be used in the game, the teacher modifies the match rules by assigning specific tasks and providing strategies that can lead to winning the match."),
+        "c11_floor0_step5_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher engages students in tactical talk to help them reflect on their decision made in the game to succeed in it (tactics used) (e.g. How are you succeeding in the game?)."),
+        "c11_floor0_step5_wrong": MessageLookupByLibrary.simpleMessage(
+            "Children divided into two teams play a match trying to understand the principles of play and identify the key tactics and strategies that can lead to winning the match."),
+        "c11_floor0_step6_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher modifies the game to emphasize the skills that students have identified as essential for success."),
+        "c11_floor0_step6_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher divides the students into several groups based on class size and assigns specific tasks to improve the effectiveness of the technique to be used in the match."),
+        "c11_floor0_step7_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher observes the outcome of the students’ learning through the game by paying attention not only to the efficiency of the technique but also to the appropriateness of the response throughout the gameplay."),
+        "c11_floor0_step7_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher observes the outcome of the students’ learning through the game by paying attention to the efficiency of the technique and the results obtained during the match."),
+        "c11_floor1_environment":
+            MessageLookupByLibrary.simpleMessage("School gymnasium"),
+        "c11_floor1_instruction": MessageLookupByLibrary.simpleMessage(
+            "In this challenge, you will help children develop motor skills by designing and navigating an obstacle course. Select the correct strategy for each step to proceed to the next one. If you make two mistakes, the challenge will restart. Are you ready?"),
+        "c11_floor1_model":
+            MessageLookupByLibrary.simpleMessage("Cooperative Learning model"),
+        "c11_floor1_statement": MessageLookupByLibrary.simpleMessage(
+            "The model takes a distinctly social perspective on learning, where students work collaboratively towards common goals. This model emphasises the development of social skills, communication, and teamwork, as well as individual accountability. Activities are designed so that students depend on one another to succeed, promoting an inclusive and supportive learning environment."),
+        "c11_floor1_step1_correct":
+            MessageLookupByLibrary.simpleMessage("Proceed"),
+        "c11_floor1_step1_instruction": MessageLookupByLibrary.simpleMessage(
+            "The teacher, helped by the children, develops an obstacle course. The children have to overcome an obstacle course using their motor skills (rolling, jumping, catching, throwing, running, crawling)."),
+        "c11_floor1_step2_correct": MessageLookupByLibrary.simpleMessage(
+            "Children in pairs, one has to overcome the obstacles along the course and the other one guides with his voice the teammate."),
+        "c11_floor1_step2_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher and students decide together which motor skill to use to overcome each obstacle. One child at a time overcomes obstacles."),
+        "c11_floor1_step3_correct": MessageLookupByLibrary.simpleMessage(
+            "Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles while avoiding using a body part of their choice (hands, legs, eyes, ...)."),
+        "c11_floor1_step3_wrong": MessageLookupByLibrary.simpleMessage(
+            "Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles while avoiding using the eyes."),
+        "c11_floor1_step4_correct": MessageLookupByLibrary.simpleMessage(
+            "The children are divided into teams of four players. Before starting the course, the children decide together how to overcome each obstacle."),
+        "c11_floor1_step4_wrong": MessageLookupByLibrary.simpleMessage(
+            "The children are divided into teams of four players. They must complete a relay. Each child has to overcome two obstacles to pass the baton. The first group to complete the course wins."),
+        "c11_floor1_step5_correct": MessageLookupByLibrary.simpleMessage(
+            "Children are divided into teams of three players. Two children have to hold a frisbee with a tennis ball on it. They must overcome the obstacle course without dropping the ball, while the third child guides them along the course suggesting how they can overcome the obstacles."),
+        "c11_floor1_step5_wrong": MessageLookupByLibrary.simpleMessage(
+            "Children are divided into teams of three players. They hold a frisbee with a tennis ball on it and must overcome the obstacle course without dropping the ball. The teacher guides them along the course suggesting how they can overcome the obstacles."),
+        "c11_floor1_step6_correct": MessageLookupByLibrary.simpleMessage(
+            "During the task execution, the teacher assesses students’ contribution to the group work and/or their performance."),
+        "c11_floor1_step6_wrong": MessageLookupByLibrary.simpleMessage(
+            "During the task execution, the teacher records the time taken to complete the task by each group and evaluates the students according to their performance."),
+        "c11_floor1_step7_correct": MessageLookupByLibrary.simpleMessage(
+            "When all groups have performed the exercises, the teacher asks students to reflect on what they have learnt and how they can improve their ability to work as a group, sharing their experiences with others."),
+        "c11_floor1_step7_wrong": MessageLookupByLibrary.simpleMessage(
+            "When all groups have performed the exercises, the teacher shares with them the students’ assessment of how they overcame the obstacles and how they can improve their ability to work as a group and their motor skills."),
+        "c11_floor2_environment":
+            MessageLookupByLibrary.simpleMessage("School gymnasium"),
+        "c11_floor2_instruction": MessageLookupByLibrary.simpleMessage(
+            "In this challenge, you will help students plan and execute activities related to volleyball."),
+        "c11_floor2_model":
+            MessageLookupByLibrary.simpleMessage("Sport Education model"),
+        "c11_floor2_statement": MessageLookupByLibrary.simpleMessage(
+            "This model is designed to replicate authentic sporting experiences, where students participate in seasons, take on roles such as players, coaches, and referees, and experience the culture of the sport."),
+        "c11_floor2_step1_correct":
+            MessageLookupByLibrary.simpleMessage("Proceed"),
+        "c11_floor2_step1_instruction": MessageLookupByLibrary.simpleMessage(
+            "The teacher and students are in a school gymnasium and have to schedule activities related to the learning of volleyball. The teacher explains the sport\'s features and the main rules."),
+        "c11_floor2_step2_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher gives some information about the season concepts in sports competitions. The teacher also provides information on the sport-related activities usually performed during the pre-, main-, and post-season activities in volleyball."),
+        "c11_floor2_step2_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher gives some information about the season concepts in sports competitions. Then, students are divided into groups and have to look for information on the sport-related activities usually performed during the pre-, main-, and post-season activities in volleyball."),
+        "c11_floor2_step3_correct": MessageLookupByLibrary.simpleMessage(
+            "The students are divided into groups. The teacher provides materials and resources to each group to plan the teamwork. Each group works to develop strategies and exercises to learn the mechanics of the sport and improve volleyball-related motor skills (passing, setting, spiking, blocking, digging, and serving)."),
+        "c11_floor2_step3_wrong": MessageLookupByLibrary.simpleMessage(
+            "Students are divided into groups. The teacher provides several materials and resources, assigning exercises to each group to learn the mechanics of the sport and improve the basic volleyball-related skills (passing, setting, spiking, blocking, digging, and serving). Every week they change skills to improve them all."),
+        "c11_floor2_step4_correct": MessageLookupByLibrary.simpleMessage(
+            "Each group is free to plan the teamwork. They can decide who the coach, captain, trainer, referee or players are and plan the activities related to each role."),
+        "c11_floor2_step4_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher supports students in planning the teamwork. The teacher and students plan together the activities and the students’ roles in the team. Therefore, they choose who will be the coach, captain, trainer, referee or players, to avoid disputes."),
+        "c11_floor2_step5_correct": MessageLookupByLibrary.simpleMessage(
+            "The team portfolio is a crucial component of the learning model. In the portfolio, students can describe the features of each team, such as the team’s name, members, colours, mascot, motto, student roles, and activity schedules. They can also provide information about the strengths and weaknesses of the team."),
+        "c11_floor2_step5_wrong": MessageLookupByLibrary.simpleMessage(
+            "The team portfolio is a crucial component of the learning model. In the portfolio, the teacher can report useful information for student assessment (the team members, student roles, and activity schedules)."),
+        "c11_floor2_step6_correct": MessageLookupByLibrary.simpleMessage(
+            "The team portfolio can also be used to report information about the learning process, providing test results and reflections on individual and team improvement."),
+        "c11_floor2_step6_wrong": MessageLookupByLibrary.simpleMessage(
+            "Based on the portfolio contents of each team the teacher plans tests to evaluate the students’ knowledge and skills related to volleyball."),
+        "c11_floor2_step7_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher can work with colleagues from the same school to plan together the resources, materials, lessons, and unit structures that can be used in the school classes. At the end of the academic year, the teachers plan a tournament to promote the values of the sport (fair play, friendship, respect, teamwork, ...)."),
+        "c11_floor2_step7_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher can work with colleagues from the same school to plan together the resources, materials, lessons, and unit structures that can be used in the school classes. At the end of the academic year, the teachers plan a tournament. The class that will win can share the teamwork done with other students."),
+        "c11_floor3_environment":
+            MessageLookupByLibrary.simpleMessage("School gymnasium"),
+        "c11_floor3_instruction": MessageLookupByLibrary.simpleMessage(
+            "In this challenge, you will help children learn motor skills and social responsibility through an obstacle course and teamwork. Select the correct strategy for each step to proceed."),
+        "c11_floor3_model": MessageLookupByLibrary.simpleMessage(
+            "Teaching Personal and Social Responsibility model"),
+        "c11_floor3_statement": MessageLookupByLibrary.simpleMessage(
+            "It is a values-based approach that uses physical activity to teach life skills and promote personal and social responsibility. This model focuses on self-direction and positive social interaction, emphasizing respect, effort, self-improvement, and helping others."),
+        "c11_floor3_step1_correct":
+            MessageLookupByLibrary.simpleMessage("Proceed"),
+        "c11_floor3_step1_instruction": MessageLookupByLibrary.simpleMessage(
+            "Children are divided into groups of three. The teacher, helped by the children, develops an obstacle course for each group. They also build at the end of each course a Jenga tower. The children have to overcome the obstacles using their motor skills (rolling, jumping, catching, throwing, running, crawling) and remove a piece from the tower."),
+        "c11_floor3_step2_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher explains that students will practice helping others by providing feedback to their teammates, providing specific help, saying something nice, and offering suggestions."),
+        "c11_floor3_step2_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher explains that two students will tell the third child how to overcome obstacles to finish the course as quickly as possible. When the child returns, another will start the course supported by the other two."),
+        "c11_floor3_step3_correct": MessageLookupByLibrary.simpleMessage(
+            "While waiting for a turn, students have to help the teammate by providing feedback (be specific, say something nice, offer a suggestion)."),
+        "c11_floor3_step3_wrong": MessageLookupByLibrary.simpleMessage(
+            "While waiting for their turn, students have to incite their teammate to go fast, providing information on their opponents to see if they are going slow."),
+        "c11_floor3_step4_correct": MessageLookupByLibrary.simpleMessage(
+            "During the task execution, the teacher assesses students’ feedback, how they provide it, and their performance in overcoming the obstacles."),
+        "c11_floor3_step4_wrong": MessageLookupByLibrary.simpleMessage(
+            "During the task execution, the teacher assesses students by recording the time taken to complete the task and their performance in overcoming the obstacles."),
+        "c11_floor3_step5_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher gives the command to the students to stop and interacts with them, praising students who give good feedback to help others and providing general suggestions for improving the feedback."),
+        "c11_floor3_step5_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher interacts with students, one group at a time, to provide general suggestions for improving the feedback."),
+        "c11_floor3_step6_correct": MessageLookupByLibrary.simpleMessage(
+            "The game restarts. The teacher assesses students’ feedback and how they changed it according to the suggestions."),
+        "c11_floor3_step6_wrong": MessageLookupByLibrary.simpleMessage(
+            "During the task execution, the teacher assesses students’ performance in overcoming the obstacles."),
+        "c11_floor3_step7_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher engages in a talk with the students, explaining again the key points of social responsibility and asking them to share with their teammates how they felt when they gave or received feedback."),
+        "c11_floor3_step7_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher explains to the students the key points of social responsibility and provides a comparison between what they have done and how they could do it better."),
+        "c11_floor4_environment":
+            MessageLookupByLibrary.simpleMessage("School gymnasium"),
+        "c11_floor4_instruction": MessageLookupByLibrary.simpleMessage(
+            "In this challenge, you will guide students in understanding the relationship between physical activity and health through teamwork, goal-setting, and peer support. Select the correct strategy for each step to proceed."),
+        "c11_floor4_model":
+            MessageLookupByLibrary.simpleMessage("Health-based PE model"),
+        "c11_floor4_statement": MessageLookupByLibrary.simpleMessage(
+            "The pedagogical approach integrates physical activity with health education, aiming to empower students with the knowledge, skills, and attitudes necessary for healthy living. It stresses the importance of physical fitness, nutrition, mental wellness, and the value of a lifelong commitment to active lifestyles."),
+        "c11_floor4_step1_correct":
+            MessageLookupByLibrary.simpleMessage("Proceed"),
+        "c11_floor4_step1_instruction": MessageLookupByLibrary.simpleMessage(
+            "The teacher and students are sitting in a circle. The teacher introduces the aim of the next three lessons explaining the relationship between physical activity and health."),
+        "c11_floor4_step2_correct": MessageLookupByLibrary.simpleMessage(
+            "After providing information on the national and international guidelines for maintaining a healthy lifestyle, the teacher performs a physical test to show how to evaluate the individual’s fitness level and how to compare them with national standards."),
+        "c11_floor4_step2_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher provides detailed information on the national and international guidelines to students, where they can find them, how to self-evaluate their fitness level, and how to compare them with national standards (theoretical lesson)."),
+        "c11_floor4_step3_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher encourages students’ teamwork to identify, set and achieve physical activity targets or challenges."),
+        "c11_floor4_step3_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher encourages each student to identify, set and achieve personalised physical activity targets or challenges based on test results."),
+        "c11_floor4_step4_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher provides exercise examples that can be performed by students to reach the physical activity levels promoted by the national/international guidelines. The teacher also encourages students to work in groups supporting their peers in physical activity participation."),
+        "c11_floor4_step4_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher provides exercise examples that can be performed by students to reach the physical activity levels promoted by the national/international guidelines. The teacher encourages individual work to maximise the exercise benefits."),
+        "c11_floor4_step5_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher encourages students to become critical movers, providing feedback and suggestions to peers."),
+        "c11_floor4_step5_wrong": MessageLookupByLibrary.simpleMessage(
+            "The teacher avoids students being critical of each other, in order to avoid disputes."),
+        "c11_floor4_step6_correct": MessageLookupByLibrary.simpleMessage(
+            "The teacher must provide challenges to students to promote physical activity among their peers, but also among family members (within and beyond school)."),
+        "c11_floor4_step6_wrong": MessageLookupByLibrary.simpleMessage(
+            "The model does not require to consider activities beyond school."),
+        "c11_floor4_step7_correct": MessageLookupByLibrary.simpleMessage(
+            "The teaching model emphasises teacher support in the identification of barriers to physical activity participation, as well as strategies to overcome them."),
+        "c11_floor4_step7_wrong": MessageLookupByLibrary.simpleMessage(
+            "The model does not require that the teacher support students in the identification of barriers to physical activity participation, as well as strategies to overcome them."),
+        "c11_instruction":
+            MessageLookupByLibrary.simpleMessage("Select the correct answer"),
+        "c11_mistakes": MessageLookupByLibrary.simpleMessage("Mistakes"),
+        "c11_mistakes_reached": MessageLookupByLibrary.simpleMessage(
+            "You have made 2 mistakes in this model. The challenge will restart from this floor."),
+        "c11a1_instructions": MessageLookupByLibrary.simpleMessage(
+            "Welcome to challenge 11. You will assume the role of a PE teacher to develop a lesson based on a teaching pedagogical model provided. Choose the correct strategy to adopt the model and build the Physical Education Tower. Each model represents a tower floor. Be careful! If you make two mistakes, the tower floor will break, and you will have to start over. Ready?"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "You have made 5 mistakes, and the game will restart."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(

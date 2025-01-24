@@ -3243,6 +3243,936 @@ class S {
     );
   }
 
+  /// `Welcome to challenge 11. You will assume the role of a PE teacher to develop a lesson based on a teaching pedagogical model provided. Choose the correct strategy to adopt the model and build the Physical Education Tower. Each model represents a tower floor. Be careful! If you make two mistakes, the tower floor will break, and you will have to start over. Ready?`
+  String get c11a1_instructions {
+    return Intl.message(
+      'Welcome to challenge 11. You will assume the role of a PE teacher to develop a lesson based on a teaching pedagogical model provided. Choose the correct strategy to adopt the model and build the Physical Education Tower. Each model represents a tower floor. Be careful! If you make two mistakes, the tower floor will break, and you will have to start over. Ready?',
+      name: 'c11a1_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select the correct answer`
+  String get c11_instruction {
+    return Intl.message(
+      'Select the correct answer',
+      name: 'c11_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teaching Games for Understanding model`
+  String get c11_floor0_model {
+    return Intl.message(
+      'Teaching Games for Understanding model',
+      name: 'c11_floor0_model',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `School gymnasium`
+  String get c11_floor0_environment {
+    return Intl.message(
+      'School gymnasium',
+      name: 'c11_floor0_environment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The model emphasizes the importance of gameplay and understanding. It promotes a student-centred environment, encouraging learners to explore and understand the game rules, tactics, and strategies, which, in turn, leads to a deeper appreciation and enjoyment of the game.`
+  String get c11_floor0_statement {
+    return Intl.message(
+      'The model emphasizes the importance of gameplay and understanding. It promotes a student-centred environment, encouraging learners to explore and understand the game rules, tactics, and strategies, which, in turn, leads to a deeper appreciation and enjoyment of the game.',
+      name: 'c11_floor0_statement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are scattered around the gym. A hula hoop is placed next to each child with a cone in the centre. The players must knock over the cone of other players with a ball or defend when it is attacked. Once everyone has attacked or defended, the second step begins.`
+  String get c11_floor0_step1_instruction {
+    return Intl.message(
+      'Children are scattered around the gym. A hula hoop is placed next to each child with a cone in the centre. The players must knock over the cone of other players with a ball or defend when it is attacked. Once everyone has attacked or defended, the second step begins.',
+      name: 'c11_floor0_step1_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proceed`
+  String get c11_floor0_step1_correct {
+    return Intl.message(
+      'Proceed',
+      name: 'c11_floor0_step1_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Once a cone is knocked over, the child moves it and the hula hoop to another part of the gym and continues to play. Step 2 lasts 10 minutes.`
+  String get c11_floor0_step2_correct {
+    return Intl.message(
+      'Once a cone is knocked over, the child moves it and the hula hoop to another part of the gym and continues to play. Step 2 lasts 10 minutes.',
+      name: 'c11_floor0_step2_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The child that knocks over the cone of an opponent gets 1 point. The first to get 5 points wins the game.`
+  String get c11_floor0_step2_wrong {
+    return Intl.message(
+      'The child that knocks over the cone of an opponent gets 1 point. The first to get 5 points wins the game.',
+      name: 'c11_floor0_step2_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The player that knocks over the cone of another child, forms a team with them.`
+  String get c11_floor0_step3_correct {
+    return Intl.message(
+      'The player that knocks over the cone of another child, forms a team with them.',
+      name: 'c11_floor0_step3_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When a child’s cone is knocked over, the child is eliminated by the game. The last one left on the field wins.`
+  String get c11_floor0_step3_wrong {
+    return Intl.message(
+      'When a child’s cone is knocked over, the child is eliminated by the game. The last one left on the field wins.',
+      name: 'c11_floor0_step3_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `With the help of questions, comments, and game modifications from the teacher, students begin to work through the principles of play and identify key tactics and strategies that can lead to success in the game.`
+  String get c11_floor0_step4_correct {
+    return Intl.message(
+      'With the help of questions, comments, and game modifications from the teacher, students begin to work through the principles of play and identify key tactics and strategies that can lead to success in the game.',
+      name: 'c11_floor0_step4_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In order to improve knowledge of the key tactics and strategies to be used in the game, the teacher modifies the match rules by assigning specific tasks and providing strategies that can lead to winning the match.`
+  String get c11_floor0_step4_wrong {
+    return Intl.message(
+      'In order to improve knowledge of the key tactics and strategies to be used in the game, the teacher modifies the match rules by assigning specific tasks and providing strategies that can lead to winning the match.',
+      name: 'c11_floor0_step4_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher engages students in tactical talk to help them reflect on their decision made in the game to succeed in it (tactics used) (e.g. How are you succeeding in the game?).`
+  String get c11_floor0_step5_correct {
+    return Intl.message(
+      'The teacher engages students in tactical talk to help them reflect on their decision made in the game to succeed in it (tactics used) (e.g. How are you succeeding in the game?).',
+      name: 'c11_floor0_step5_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children divided into two teams play a match trying to understand the principles of play and identify the key tactics and strategies that can lead to winning the match.`
+  String get c11_floor0_step5_wrong {
+    return Intl.message(
+      'Children divided into two teams play a match trying to understand the principles of play and identify the key tactics and strategies that can lead to winning the match.',
+      name: 'c11_floor0_step5_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher modifies the game to emphasize the skills that students have identified as essential for success.`
+  String get c11_floor0_step6_correct {
+    return Intl.message(
+      'The teacher modifies the game to emphasize the skills that students have identified as essential for success.',
+      name: 'c11_floor0_step6_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher divides the students into several groups based on class size and assigns specific tasks to improve the effectiveness of the technique to be used in the match.`
+  String get c11_floor0_step6_wrong {
+    return Intl.message(
+      'The teacher divides the students into several groups based on class size and assigns specific tasks to improve the effectiveness of the technique to be used in the match.',
+      name: 'c11_floor0_step6_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher observes the outcome of the students’ learning through the game by paying attention not only to the efficiency of the technique but also to the appropriateness of the response throughout the gameplay.`
+  String get c11_floor0_step7_correct {
+    return Intl.message(
+      'The teacher observes the outcome of the students’ learning through the game by paying attention not only to the efficiency of the technique but also to the appropriateness of the response throughout the gameplay.',
+      name: 'c11_floor0_step7_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher observes the outcome of the students’ learning through the game by paying attention to the efficiency of the technique and the results obtained during the match.`
+  String get c11_floor0_step7_wrong {
+    return Intl.message(
+      'The teacher observes the outcome of the students’ learning through the game by paying attention to the efficiency of the technique and the results obtained during the match.',
+      name: 'c11_floor0_step7_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cooperative Learning model`
+  String get c11_floor1_model {
+    return Intl.message(
+      'Cooperative Learning model',
+      name: 'c11_floor1_model',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `School gymnasium`
+  String get c11_floor1_environment {
+    return Intl.message(
+      'School gymnasium',
+      name: 'c11_floor1_environment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The model takes a distinctly social perspective on learning, where students work collaboratively towards common goals. This model emphasises the development of social skills, communication, and teamwork, as well as individual accountability. Activities are designed so that students depend on one another to succeed, promoting an inclusive and supportive learning environment.`
+  String get c11_floor1_statement {
+    return Intl.message(
+      'The model takes a distinctly social perspective on learning, where students work collaboratively towards common goals. This model emphasises the development of social skills, communication, and teamwork, as well as individual accountability. Activities are designed so that students depend on one another to succeed, promoting an inclusive and supportive learning environment.',
+      name: 'c11_floor1_statement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In this challenge, you will help children develop motor skills by designing and navigating an obstacle course. Select the correct strategy for each step to proceed to the next one. If you make two mistakes, the challenge will restart. Are you ready?`
+  String get c11_floor1_instruction {
+    return Intl.message(
+      'In this challenge, you will help children develop motor skills by designing and navigating an obstacle course. Select the correct strategy for each step to proceed to the next one. If you make two mistakes, the challenge will restart. Are you ready?',
+      name: 'c11_floor1_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher, helped by the children, develops an obstacle course. The children have to overcome an obstacle course using their motor skills (rolling, jumping, catching, throwing, running, crawling).`
+  String get c11_floor1_step1_instruction {
+    return Intl.message(
+      'The teacher, helped by the children, develops an obstacle course. The children have to overcome an obstacle course using their motor skills (rolling, jumping, catching, throwing, running, crawling).',
+      name: 'c11_floor1_step1_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proceed`
+  String get c11_floor1_step1_correct {
+    return Intl.message(
+      'Proceed',
+      name: 'c11_floor1_step1_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children in pairs, one has to overcome the obstacles along the course and the other one guides with his voice the teammate.`
+  String get c11_floor1_step2_correct {
+    return Intl.message(
+      'Children in pairs, one has to overcome the obstacles along the course and the other one guides with his voice the teammate.',
+      name: 'c11_floor1_step2_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher and students decide together which motor skill to use to overcome each obstacle. One child at a time overcomes obstacles.`
+  String get c11_floor1_step2_wrong {
+    return Intl.message(
+      'The teacher and students decide together which motor skill to use to overcome each obstacle. One child at a time overcomes obstacles.',
+      name: 'c11_floor1_step2_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles while avoiding using a body part of their choice (hands, legs, eyes, ...).`
+  String get c11_floor1_step3_correct {
+    return Intl.message(
+      'Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles while avoiding using a body part of their choice (hands, legs, eyes, ...).',
+      name: 'c11_floor1_step3_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles while avoiding using the eyes.`
+  String get c11_floor1_step3_wrong {
+    return Intl.message(
+      'Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles while avoiding using the eyes.',
+      name: 'c11_floor1_step3_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The children are divided into teams of four players. Before starting the course, the children decide together how to overcome each obstacle.`
+  String get c11_floor1_step4_correct {
+    return Intl.message(
+      'The children are divided into teams of four players. Before starting the course, the children decide together how to overcome each obstacle.',
+      name: 'c11_floor1_step4_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The children are divided into teams of four players. They must complete a relay. Each child has to overcome two obstacles to pass the baton. The first group to complete the course wins.`
+  String get c11_floor1_step4_wrong {
+    return Intl.message(
+      'The children are divided into teams of four players. They must complete a relay. Each child has to overcome two obstacles to pass the baton. The first group to complete the course wins.',
+      name: 'c11_floor1_step4_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are divided into teams of three players. Two children have to hold a frisbee with a tennis ball on it. They must overcome the obstacle course without dropping the ball, while the third child guides them along the course suggesting how they can overcome the obstacles.`
+  String get c11_floor1_step5_correct {
+    return Intl.message(
+      'Children are divided into teams of three players. Two children have to hold a frisbee with a tennis ball on it. They must overcome the obstacle course without dropping the ball, while the third child guides them along the course suggesting how they can overcome the obstacles.',
+      name: 'c11_floor1_step5_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are divided into teams of three players. They hold a frisbee with a tennis ball on it and must overcome the obstacle course without dropping the ball. The teacher guides them along the course suggesting how they can overcome the obstacles.`
+  String get c11_floor1_step5_wrong {
+    return Intl.message(
+      'Children are divided into teams of three players. They hold a frisbee with a tennis ball on it and must overcome the obstacle course without dropping the ball. The teacher guides them along the course suggesting how they can overcome the obstacles.',
+      name: 'c11_floor1_step5_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `During the task execution, the teacher assesses students’ contribution to the group work and/or their performance.`
+  String get c11_floor1_step6_correct {
+    return Intl.message(
+      'During the task execution, the teacher assesses students’ contribution to the group work and/or their performance.',
+      name: 'c11_floor1_step6_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `During the task execution, the teacher records the time taken to complete the task by each group and evaluates the students according to their performance.`
+  String get c11_floor1_step6_wrong {
+    return Intl.message(
+      'During the task execution, the teacher records the time taken to complete the task by each group and evaluates the students according to their performance.',
+      name: 'c11_floor1_step6_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When all groups have performed the exercises, the teacher asks students to reflect on what they have learnt and how they can improve their ability to work as a group, sharing their experiences with others.`
+  String get c11_floor1_step7_correct {
+    return Intl.message(
+      'When all groups have performed the exercises, the teacher asks students to reflect on what they have learnt and how they can improve their ability to work as a group, sharing their experiences with others.',
+      name: 'c11_floor1_step7_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When all groups have performed the exercises, the teacher shares with them the students’ assessment of how they overcame the obstacles and how they can improve their ability to work as a group and their motor skills.`
+  String get c11_floor1_step7_wrong {
+    return Intl.message(
+      'When all groups have performed the exercises, the teacher shares with them the students’ assessment of how they overcame the obstacles and how they can improve their ability to work as a group and their motor skills.',
+      name: 'c11_floor1_step7_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sport Education model`
+  String get c11_floor2_model {
+    return Intl.message(
+      'Sport Education model',
+      name: 'c11_floor2_model',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `School gymnasium`
+  String get c11_floor2_environment {
+    return Intl.message(
+      'School gymnasium',
+      name: 'c11_floor2_environment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This model is designed to replicate authentic sporting experiences, where students participate in seasons, take on roles such as players, coaches, and referees, and experience the culture of the sport.`
+  String get c11_floor2_statement {
+    return Intl.message(
+      'This model is designed to replicate authentic sporting experiences, where students participate in seasons, take on roles such as players, coaches, and referees, and experience the culture of the sport.',
+      name: 'c11_floor2_statement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In this challenge, you will help students plan and execute activities related to volleyball.`
+  String get c11_floor2_instruction {
+    return Intl.message(
+      'In this challenge, you will help students plan and execute activities related to volleyball.',
+      name: 'c11_floor2_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher and students are in a school gymnasium and have to schedule activities related to the learning of volleyball. The teacher explains the sport's features and the main rules.`
+  String get c11_floor2_step1_instruction {
+    return Intl.message(
+      'The teacher and students are in a school gymnasium and have to schedule activities related to the learning of volleyball. The teacher explains the sport\'s features and the main rules.',
+      name: 'c11_floor2_step1_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proceed`
+  String get c11_floor2_step1_correct {
+    return Intl.message(
+      'Proceed',
+      name: 'c11_floor2_step1_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher gives some information about the season concepts in sports competitions. The teacher also provides information on the sport-related activities usually performed during the pre-, main-, and post-season activities in volleyball.`
+  String get c11_floor2_step2_correct {
+    return Intl.message(
+      'The teacher gives some information about the season concepts in sports competitions. The teacher also provides information on the sport-related activities usually performed during the pre-, main-, and post-season activities in volleyball.',
+      name: 'c11_floor2_step2_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher gives some information about the season concepts in sports competitions. Then, students are divided into groups and have to look for information on the sport-related activities usually performed during the pre-, main-, and post-season activities in volleyball.`
+  String get c11_floor2_step2_wrong {
+    return Intl.message(
+      'The teacher gives some information about the season concepts in sports competitions. Then, students are divided into groups and have to look for information on the sport-related activities usually performed during the pre-, main-, and post-season activities in volleyball.',
+      name: 'c11_floor2_step2_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The students are divided into groups. The teacher provides materials and resources to each group to plan the teamwork. Each group works to develop strategies and exercises to learn the mechanics of the sport and improve volleyball-related motor skills (passing, setting, spiking, blocking, digging, and serving).`
+  String get c11_floor2_step3_correct {
+    return Intl.message(
+      'The students are divided into groups. The teacher provides materials and resources to each group to plan the teamwork. Each group works to develop strategies and exercises to learn the mechanics of the sport and improve volleyball-related motor skills (passing, setting, spiking, blocking, digging, and serving).',
+      name: 'c11_floor2_step3_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Students are divided into groups. The teacher provides several materials and resources, assigning exercises to each group to learn the mechanics of the sport and improve the basic volleyball-related skills (passing, setting, spiking, blocking, digging, and serving). Every week they change skills to improve them all.`
+  String get c11_floor2_step3_wrong {
+    return Intl.message(
+      'Students are divided into groups. The teacher provides several materials and resources, assigning exercises to each group to learn the mechanics of the sport and improve the basic volleyball-related skills (passing, setting, spiking, blocking, digging, and serving). Every week they change skills to improve them all.',
+      name: 'c11_floor2_step3_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Each group is free to plan the teamwork. They can decide who the coach, captain, trainer, referee or players are and plan the activities related to each role.`
+  String get c11_floor2_step4_correct {
+    return Intl.message(
+      'Each group is free to plan the teamwork. They can decide who the coach, captain, trainer, referee or players are and plan the activities related to each role.',
+      name: 'c11_floor2_step4_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher supports students in planning the teamwork. The teacher and students plan together the activities and the students’ roles in the team. Therefore, they choose who will be the coach, captain, trainer, referee or players, to avoid disputes.`
+  String get c11_floor2_step4_wrong {
+    return Intl.message(
+      'The teacher supports students in planning the teamwork. The teacher and students plan together the activities and the students’ roles in the team. Therefore, they choose who will be the coach, captain, trainer, referee or players, to avoid disputes.',
+      name: 'c11_floor2_step4_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The team portfolio is a crucial component of the learning model. In the portfolio, students can describe the features of each team, such as the team’s name, members, colours, mascot, motto, student roles, and activity schedules. They can also provide information about the strengths and weaknesses of the team.`
+  String get c11_floor2_step5_correct {
+    return Intl.message(
+      'The team portfolio is a crucial component of the learning model. In the portfolio, students can describe the features of each team, such as the team’s name, members, colours, mascot, motto, student roles, and activity schedules. They can also provide information about the strengths and weaknesses of the team.',
+      name: 'c11_floor2_step5_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The team portfolio is a crucial component of the learning model. In the portfolio, the teacher can report useful information for student assessment (the team members, student roles, and activity schedules).`
+  String get c11_floor2_step5_wrong {
+    return Intl.message(
+      'The team portfolio is a crucial component of the learning model. In the portfolio, the teacher can report useful information for student assessment (the team members, student roles, and activity schedules).',
+      name: 'c11_floor2_step5_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The team portfolio can also be used to report information about the learning process, providing test results and reflections on individual and team improvement.`
+  String get c11_floor2_step6_correct {
+    return Intl.message(
+      'The team portfolio can also be used to report information about the learning process, providing test results and reflections on individual and team improvement.',
+      name: 'c11_floor2_step6_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Based on the portfolio contents of each team the teacher plans tests to evaluate the students’ knowledge and skills related to volleyball.`
+  String get c11_floor2_step6_wrong {
+    return Intl.message(
+      'Based on the portfolio contents of each team the teacher plans tests to evaluate the students’ knowledge and skills related to volleyball.',
+      name: 'c11_floor2_step6_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher can work with colleagues from the same school to plan together the resources, materials, lessons, and unit structures that can be used in the school classes. At the end of the academic year, the teachers plan a tournament to promote the values of the sport (fair play, friendship, respect, teamwork, ...).`
+  String get c11_floor2_step7_correct {
+    return Intl.message(
+      'The teacher can work with colleagues from the same school to plan together the resources, materials, lessons, and unit structures that can be used in the school classes. At the end of the academic year, the teachers plan a tournament to promote the values of the sport (fair play, friendship, respect, teamwork, ...).',
+      name: 'c11_floor2_step7_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher can work with colleagues from the same school to plan together the resources, materials, lessons, and unit structures that can be used in the school classes. At the end of the academic year, the teachers plan a tournament. The class that will win can share the teamwork done with other students.`
+  String get c11_floor2_step7_wrong {
+    return Intl.message(
+      'The teacher can work with colleagues from the same school to plan together the resources, materials, lessons, and unit structures that can be used in the school classes. At the end of the academic year, the teachers plan a tournament. The class that will win can share the teamwork done with other students.',
+      name: 'c11_floor2_step7_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teaching Personal and Social Responsibility model`
+  String get c11_floor3_model {
+    return Intl.message(
+      'Teaching Personal and Social Responsibility model',
+      name: 'c11_floor3_model',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `School gymnasium`
+  String get c11_floor3_environment {
+    return Intl.message(
+      'School gymnasium',
+      name: 'c11_floor3_environment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It is a values-based approach that uses physical activity to teach life skills and promote personal and social responsibility. This model focuses on self-direction and positive social interaction, emphasizing respect, effort, self-improvement, and helping others.`
+  String get c11_floor3_statement {
+    return Intl.message(
+      'It is a values-based approach that uses physical activity to teach life skills and promote personal and social responsibility. This model focuses on self-direction and positive social interaction, emphasizing respect, effort, self-improvement, and helping others.',
+      name: 'c11_floor3_statement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In this challenge, you will help children learn motor skills and social responsibility through an obstacle course and teamwork. Select the correct strategy for each step to proceed.`
+  String get c11_floor3_instruction {
+    return Intl.message(
+      'In this challenge, you will help children learn motor skills and social responsibility through an obstacle course and teamwork. Select the correct strategy for each step to proceed.',
+      name: 'c11_floor3_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are divided into groups of three. The teacher, helped by the children, develops an obstacle course for each group. They also build at the end of each course a Jenga tower. The children have to overcome the obstacles using their motor skills (rolling, jumping, catching, throwing, running, crawling) and remove a piece from the tower.`
+  String get c11_floor3_step1_instruction {
+    return Intl.message(
+      'Children are divided into groups of three. The teacher, helped by the children, develops an obstacle course for each group. They also build at the end of each course a Jenga tower. The children have to overcome the obstacles using their motor skills (rolling, jumping, catching, throwing, running, crawling) and remove a piece from the tower.',
+      name: 'c11_floor3_step1_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proceed`
+  String get c11_floor3_step1_correct {
+    return Intl.message(
+      'Proceed',
+      name: 'c11_floor3_step1_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher explains that students will practice helping others by providing feedback to their teammates, providing specific help, saying something nice, and offering suggestions.`
+  String get c11_floor3_step2_correct {
+    return Intl.message(
+      'The teacher explains that students will practice helping others by providing feedback to their teammates, providing specific help, saying something nice, and offering suggestions.',
+      name: 'c11_floor3_step2_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher explains that two students will tell the third child how to overcome obstacles to finish the course as quickly as possible. When the child returns, another will start the course supported by the other two.`
+  String get c11_floor3_step2_wrong {
+    return Intl.message(
+      'The teacher explains that two students will tell the third child how to overcome obstacles to finish the course as quickly as possible. When the child returns, another will start the course supported by the other two.',
+      name: 'c11_floor3_step2_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `While waiting for a turn, students have to help the teammate by providing feedback (be specific, say something nice, offer a suggestion).`
+  String get c11_floor3_step3_correct {
+    return Intl.message(
+      'While waiting for a turn, students have to help the teammate by providing feedback (be specific, say something nice, offer a suggestion).',
+      name: 'c11_floor3_step3_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `While waiting for their turn, students have to incite their teammate to go fast, providing information on their opponents to see if they are going slow.`
+  String get c11_floor3_step3_wrong {
+    return Intl.message(
+      'While waiting for their turn, students have to incite their teammate to go fast, providing information on their opponents to see if they are going slow.',
+      name: 'c11_floor3_step3_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `During the task execution, the teacher assesses students’ feedback, how they provide it, and their performance in overcoming the obstacles.`
+  String get c11_floor3_step4_correct {
+    return Intl.message(
+      'During the task execution, the teacher assesses students’ feedback, how they provide it, and their performance in overcoming the obstacles.',
+      name: 'c11_floor3_step4_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `During the task execution, the teacher assesses students by recording the time taken to complete the task and their performance in overcoming the obstacles.`
+  String get c11_floor3_step4_wrong {
+    return Intl.message(
+      'During the task execution, the teacher assesses students by recording the time taken to complete the task and their performance in overcoming the obstacles.',
+      name: 'c11_floor3_step4_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher gives the command to the students to stop and interacts with them, praising students who give good feedback to help others and providing general suggestions for improving the feedback.`
+  String get c11_floor3_step5_correct {
+    return Intl.message(
+      'The teacher gives the command to the students to stop and interacts with them, praising students who give good feedback to help others and providing general suggestions for improving the feedback.',
+      name: 'c11_floor3_step5_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher interacts with students, one group at a time, to provide general suggestions for improving the feedback.`
+  String get c11_floor3_step5_wrong {
+    return Intl.message(
+      'The teacher interacts with students, one group at a time, to provide general suggestions for improving the feedback.',
+      name: 'c11_floor3_step5_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The game restarts. The teacher assesses students’ feedback and how they changed it according to the suggestions.`
+  String get c11_floor3_step6_correct {
+    return Intl.message(
+      'The game restarts. The teacher assesses students’ feedback and how they changed it according to the suggestions.',
+      name: 'c11_floor3_step6_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `During the task execution, the teacher assesses students’ performance in overcoming the obstacles.`
+  String get c11_floor3_step6_wrong {
+    return Intl.message(
+      'During the task execution, the teacher assesses students’ performance in overcoming the obstacles.',
+      name: 'c11_floor3_step6_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher engages in a talk with the students, explaining again the key points of social responsibility and asking them to share with their teammates how they felt when they gave or received feedback.`
+  String get c11_floor3_step7_correct {
+    return Intl.message(
+      'The teacher engages in a talk with the students, explaining again the key points of social responsibility and asking them to share with their teammates how they felt when they gave or received feedback.',
+      name: 'c11_floor3_step7_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher explains to the students the key points of social responsibility and provides a comparison between what they have done and how they could do it better.`
+  String get c11_floor3_step7_wrong {
+    return Intl.message(
+      'The teacher explains to the students the key points of social responsibility and provides a comparison between what they have done and how they could do it better.',
+      name: 'c11_floor3_step7_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Health-based PE model`
+  String get c11_floor4_model {
+    return Intl.message(
+      'Health-based PE model',
+      name: 'c11_floor4_model',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `School gymnasium`
+  String get c11_floor4_environment {
+    return Intl.message(
+      'School gymnasium',
+      name: 'c11_floor4_environment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The pedagogical approach integrates physical activity with health education, aiming to empower students with the knowledge, skills, and attitudes necessary for healthy living. It stresses the importance of physical fitness, nutrition, mental wellness, and the value of a lifelong commitment to active lifestyles.`
+  String get c11_floor4_statement {
+    return Intl.message(
+      'The pedagogical approach integrates physical activity with health education, aiming to empower students with the knowledge, skills, and attitudes necessary for healthy living. It stresses the importance of physical fitness, nutrition, mental wellness, and the value of a lifelong commitment to active lifestyles.',
+      name: 'c11_floor4_statement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In this challenge, you will guide students in understanding the relationship between physical activity and health through teamwork, goal-setting, and peer support. Select the correct strategy for each step to proceed.`
+  String get c11_floor4_instruction {
+    return Intl.message(
+      'In this challenge, you will guide students in understanding the relationship between physical activity and health through teamwork, goal-setting, and peer support. Select the correct strategy for each step to proceed.',
+      name: 'c11_floor4_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher and students are sitting in a circle. The teacher introduces the aim of the next three lessons explaining the relationship between physical activity and health.`
+  String get c11_floor4_step1_instruction {
+    return Intl.message(
+      'The teacher and students are sitting in a circle. The teacher introduces the aim of the next three lessons explaining the relationship between physical activity and health.',
+      name: 'c11_floor4_step1_instruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proceed`
+  String get c11_floor4_step1_correct {
+    return Intl.message(
+      'Proceed',
+      name: 'c11_floor4_step1_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `After providing information on the national and international guidelines for maintaining a healthy lifestyle, the teacher performs a physical test to show how to evaluate the individual’s fitness level and how to compare them with national standards.`
+  String get c11_floor4_step2_correct {
+    return Intl.message(
+      'After providing information on the national and international guidelines for maintaining a healthy lifestyle, the teacher performs a physical test to show how to evaluate the individual’s fitness level and how to compare them with national standards.',
+      name: 'c11_floor4_step2_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher provides detailed information on the national and international guidelines to students, where they can find them, how to self-evaluate their fitness level, and how to compare them with national standards (theoretical lesson).`
+  String get c11_floor4_step2_wrong {
+    return Intl.message(
+      'The teacher provides detailed information on the national and international guidelines to students, where they can find them, how to self-evaluate their fitness level, and how to compare them with national standards (theoretical lesson).',
+      name: 'c11_floor4_step2_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher encourages students’ teamwork to identify, set and achieve physical activity targets or challenges.`
+  String get c11_floor4_step3_correct {
+    return Intl.message(
+      'The teacher encourages students’ teamwork to identify, set and achieve physical activity targets or challenges.',
+      name: 'c11_floor4_step3_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher encourages each student to identify, set and achieve personalised physical activity targets or challenges based on test results.`
+  String get c11_floor4_step3_wrong {
+    return Intl.message(
+      'The teacher encourages each student to identify, set and achieve personalised physical activity targets or challenges based on test results.',
+      name: 'c11_floor4_step3_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher provides exercise examples that can be performed by students to reach the physical activity levels promoted by the national/international guidelines. The teacher also encourages students to work in groups supporting their peers in physical activity participation.`
+  String get c11_floor4_step4_correct {
+    return Intl.message(
+      'The teacher provides exercise examples that can be performed by students to reach the physical activity levels promoted by the national/international guidelines. The teacher also encourages students to work in groups supporting their peers in physical activity participation.',
+      name: 'c11_floor4_step4_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher provides exercise examples that can be performed by students to reach the physical activity levels promoted by the national/international guidelines. The teacher encourages individual work to maximise the exercise benefits.`
+  String get c11_floor4_step4_wrong {
+    return Intl.message(
+      'The teacher provides exercise examples that can be performed by students to reach the physical activity levels promoted by the national/international guidelines. The teacher encourages individual work to maximise the exercise benefits.',
+      name: 'c11_floor4_step4_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher encourages students to become critical movers, providing feedback and suggestions to peers.`
+  String get c11_floor4_step5_correct {
+    return Intl.message(
+      'The teacher encourages students to become critical movers, providing feedback and suggestions to peers.',
+      name: 'c11_floor4_step5_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher avoids students being critical of each other, in order to avoid disputes.`
+  String get c11_floor4_step5_wrong {
+    return Intl.message(
+      'The teacher avoids students being critical of each other, in order to avoid disputes.',
+      name: 'c11_floor4_step5_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher must provide challenges to students to promote physical activity among their peers, but also among family members (within and beyond school).`
+  String get c11_floor4_step6_correct {
+    return Intl.message(
+      'The teacher must provide challenges to students to promote physical activity among their peers, but also among family members (within and beyond school).',
+      name: 'c11_floor4_step6_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The model does not require to consider activities beyond school.`
+  String get c11_floor4_step6_wrong {
+    return Intl.message(
+      'The model does not require to consider activities beyond school.',
+      name: 'c11_floor4_step6_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teaching model emphasises teacher support in the identification of barriers to physical activity participation, as well as strategies to overcome them.`
+  String get c11_floor4_step7_correct {
+    return Intl.message(
+      'The teaching model emphasises teacher support in the identification of barriers to physical activity participation, as well as strategies to overcome them.',
+      name: 'c11_floor4_step7_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The model does not require that the teacher support students in the identification of barriers to physical activity participation, as well as strategies to overcome them.`
+  String get c11_floor4_step7_wrong {
+    return Intl.message(
+      'The model does not require that the teacher support students in the identification of barriers to physical activity participation, as well as strategies to overcome them.',
+      name: 'c11_floor4_step7_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mistakes`
+  String get c11_mistakes {
+    return Intl.message(
+      'Mistakes',
+      name: 'c11_mistakes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have made 2 mistakes in this model. The challenge will restart from this floor.`
+  String get c11_mistakes_reached {
+    return Intl.message(
+      'You have made 2 mistakes in this model. The challenge will restart from this floor.',
+      name: 'c11_mistakes_reached',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(

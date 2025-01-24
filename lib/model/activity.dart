@@ -146,7 +146,7 @@ class Activity {
 
     "c10a1": Activity(
         id: "c10a1",
-        challengeID: Challenge.challenge9.id,
+        challengeID: Challenge.challenge10.id,
         nameRes: "c10a1_name",
         descriptionRes: "c10a1_description",
         unlocksActivitiesIDs: [
@@ -156,9 +156,17 @@ class Activity {
 
     "c10a2": Activity(
         id: "c10a2",
-        challengeID: Challenge.challenge9.id,
+        challengeID: Challenge.challenge10.id,
         nameRes: "c10a2_name",
         descriptionRes: "c10a2_description",
+        unlocksActivitiesIDs: []
+    ),
+
+    "c11a1": Activity(
+        id: "c11a1",
+        challengeID: Challenge.challenge11.id,
+        nameRes: "c11a1_name",
+        descriptionRes: "c11a1_description",
         unlocksActivitiesIDs: []
     ),
 

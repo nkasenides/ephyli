@@ -239,6 +239,24 @@ class I10N {
       "pl": "#MISSING#",
     },
 
+    "c11_badge_name": {
+      "en": "Challenge 11 Badge",
+      "el": "Σήμα Πρόκλησης 11",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c11_badge_description": {
+      "en": "This badge is awarded to players who have completed the eleventh challenge.",
+      "el": "Αυτό το σήμα απονέμεται σε παίκτες που έχουν ολοκληρώσει την εντέκατη πρόκληση.",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
     //----- Challenges
 
     "c1_name": {
@@ -415,6 +433,24 @@ class I10N {
     "c10_description": {
       "en": "Challenge 10 description",
       "el": "Πρόκληση 10 περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c11_name": {
+      "en": "Challenge 11",
+      "el": "Πρόκληση 11",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c11_description": {
+      "en": "Challenge 11 description",
+      "el": "Πρόκληση 11 περιγραφή",
       "fr": "#MISSING#",
       "it": "#MISSING#",
       "lb": "#MISSING#",
@@ -705,6 +741,24 @@ class I10N {
     "c10a2_description": {
       "en": "Activity 2 Description",
       "el": "Δραστηριότητα 2 Περιγραφή",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c11a1_name": {
+      "en": "Activity 1",
+      "el": "Δραστηριότητα 1",
+      "fr": "#MISSING#",
+      "it": "#MISSING#",
+      "lb": "#MISSING#",
+      "pl": "#MISSING#",
+    },
+
+    "c11a1_description": {
+      "en": "Activity 1 Description",
+      "el": "Δραστηριότητα 1 Περιγραφή",
       "fr": "#MISSING#",
       "it": "#MISSING#",
       "lb": "#MISSING#",
