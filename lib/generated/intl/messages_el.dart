@@ -276,6 +276,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Έχετε κάνει 2 λάθη σε αυτό το μοντέλο. Η πρόκληση θα ξεκινήσει ξανά από αυτόν τον όροφο."),
         "c11a1_instructions": MessageLookupByLibrary.simpleMessage(
             "Καλώς ήρθατε στην πρόκληση 11. Θα αναλάβετε τον ρόλο ενός δασκάλου φυσικής αγωγής για να αναπτύξετε ένα μάθημα βασισμένο σε ένα παιδαγωγικό μοντέλο διδασκαλίας που παρέχεται. Επιλέξτε τη σωστή στρατηγική για να υιοθετήσετε το μοντέλο και να φτιάξετε τον Πύργο Φυσικής Αγωγής. Κάθε μοντέλο αντιπροσωπεύει ένα δάπεδο πύργου. Προσοχή! Εάν κάνετε δύο λάθη, το πάτωμα του πύργου θα σπάσει και θα πρέπει να ξεκινήσετε από την αρχή. Έτοιμοι;"),
+        "c12_completed": MessageLookupByLibrary.simpleMessage(
+            "Συγχαρητήρια! Ολοκληρώσατε το παιχνίδι!"),
+        "c12_mistakes": MessageLookupByLibrary.simpleMessage(
+            "Έχετε κάνει 3 λάθη. Επανεκκίνηση του παιχνιδιού!"),
+        "c12a1_finish": MessageLookupByLibrary.simpleMessage(
+            "Μπράβο! Έχετε προγραμματίσει το μάθημά σας με βάση τις ανάγκες της τάξης. Για να ολοκληρώσετε την πρόκληση, πρέπει να αναπτύξετε ένα άλλο μάθημα για διαφορετική τάξη."),
+        "c12a1_instructions": MessageLookupByLibrary.simpleMessage(
+            "Καλώς ήρθατε στην πρόκληση 12. Θα αναλάβετε τον ρόλο ενός καθηγητή PE και θα αναπτύξετε δύο μαθήματα για τους μαθητές σας. Θα σας δώσω μερικές πληροφορίες σχετικά με τα χαρακτηριστικά της τάξης σας, το σκοπό του μαθήματος και τα μαθησιακά αποτελέσματα που θα σας βοηθήσει να αναπτύξετε το μάθημα, μια λανθασμένη απάντηση προκαλεί αλλαγή στην έκφραση του avatar (από χαρούμενος σε θυμωμένος). μετά την οποία η πρόκληση θα ξεκινήσει ξανά Έτοιμος;"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "Έχετε κάνει 5 λάθη και το παιχνίδι θα ξεκινήσει απο την αρχή."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
@@ -773,6 +781,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetGame": MessageLookupByLibrary.simpleMessage("Επανεκκίνηση"),
         "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
             "Αυτό θα επαναφέρει την τρέχουσα πρόοδό σας."),
+        "restart": MessageLookupByLibrary.simpleMessage("Επανεκκίνηση"),
         "save": MessageLookupByLibrary.simpleMessage("Αποθήκευση"),
         "schools": MessageLookupByLibrary.simpleMessage("Σχολεία"),
         "screen_flip_notice": MessageLookupByLibrary.simpleMessage(

@@ -275,6 +275,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "You have made 2 mistakes in this model. The challenge will restart from this floor."),
         "c11a1_instructions": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 11. You will assume the role of a PE teacher to develop a lesson based on a teaching pedagogical model provided. Choose the correct strategy to adopt the model and build the Physical Education Tower. Each model represents a tower floor. Be careful! If you make two mistakes, the tower floor will break, and you will have to start over. Ready?"),
+        "c12_completed": MessageLookupByLibrary.simpleMessage(
+            "Congratulations! You\'ve completed the game!"),
+        "c12_mistakes": MessageLookupByLibrary.simpleMessage(
+            "You\'ve made 3 mistakes. Game restarting!"),
+        "c12a1_finish": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have scheduled your lesson based on the class needs. To complete the challenge, you have to develop another lesson for a different class."),
+        "c12a1_instructions": MessageLookupByLibrary.simpleMessage(
+            "Welcome to challenge 12. You will assume the role of a PE teacher and develop two lessons for your students. I will provide you with some information about the characteristics of your class, the purpose of the lesson and the learning outcomes that will help you in developing the lesson. Be careful, a wrong answer causes a change in the avatar\'s expression (from happy to angry). You can make three mistakes per lesson, after which the challenge will begin again. Ready?"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "You have made 5 mistakes, and the game will restart."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
@@ -774,6 +782,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetGame": MessageLookupByLibrary.simpleMessage("Reset game"),
         "resetLoseProgressMessage": MessageLookupByLibrary.simpleMessage(
             "This will reset your current progress."),
+        "restart": MessageLookupByLibrary.simpleMessage("Restart"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "schools": MessageLookupByLibrary.simpleMessage("Schools"),
         "screen_flip_notice": MessageLookupByLibrary.simpleMessage(

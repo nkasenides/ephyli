@@ -472,6 +472,15 @@
   "c11_mistakes_reached": "You have made 2 mistakes in this model. The challenge will restart from this floor.",
   "c11_finish": "Well done! You have successfully completed the tower. You can now access the next challenge.",
 
+  "c12a1_instructions": "Welcome to challenge 12. You will assume the role of a PE teacher and develop two lessons for your students. I will provide you with some information about the characteristics of your class, the purpose of the lesson and the learning outcomes that will help you in developing the lesson. Be careful, a wrong answer causes a change in the avatar's expression (from happy to angry). You can make three mistakes per lesson, after which the challenge will begin again. Ready?",
+  "c12a1_finish": "Well done! You have scheduled your lesson based on the class needs. To complete the challenge, you have to develop another lesson for a different class.",
+  "c12_completed": "Congratulations! You've completed the game!",
+  "c12_mistakes": "You've made 3 mistakes. Game restarting!",
+  "restart": "Restart",
+
+
+
+
   "glossary_Attributes": "Attributes",
   "glossary_AffectiveDomain": "Affective Domain",
   "glossary_CognitiveDomain": "Cognitive Domain",

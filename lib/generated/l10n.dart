@@ -4183,6 +4183,56 @@ class S {
     );
   }
 
+  /// `Welcome to challenge 12. You will assume the role of a PE teacher and develop two lessons for your students. I will provide you with some information about the characteristics of your class, the purpose of the lesson and the learning outcomes that will help you in developing the lesson. Be careful, a wrong answer causes a change in the avatar's expression (from happy to angry). You can make three mistakes per lesson, after which the challenge will begin again. Ready?`
+  String get c12a1_instructions {
+    return Intl.message(
+      'Welcome to challenge 12. You will assume the role of a PE teacher and develop two lessons for your students. I will provide you with some information about the characteristics of your class, the purpose of the lesson and the learning outcomes that will help you in developing the lesson. Be careful, a wrong answer causes a change in the avatar\'s expression (from happy to angry). You can make three mistakes per lesson, after which the challenge will begin again. Ready?',
+      name: 'c12a1_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have scheduled your lesson based on the class needs. To complete the challenge, you have to develop another lesson for a different class.`
+  String get c12a1_finish {
+    return Intl.message(
+      'Well done! You have scheduled your lesson based on the class needs. To complete the challenge, you have to develop another lesson for a different class.',
+      name: 'c12a1_finish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Congratulations! You've completed the game!`
+  String get c12_completed {
+    return Intl.message(
+      'Congratulations! You\'ve completed the game!',
+      name: 'c12_completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You've made 3 mistakes. Game restarting!`
+  String get c12_mistakes {
+    return Intl.message(
+      'You\'ve made 3 mistakes. Game restarting!',
+      name: 'c12_mistakes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Restart`
+  String get restart {
+    return Intl.message(
+      'Restart',
+      name: 'restart',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(

@@ -15,6 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../model/activity.dart';
 import '../screen/activity/activity_c10a1.dart';
 import '../screen/activity/activity_c10a2.dart';
+import '../screen/activity/activity_c12a1.dart';
 import '../screen/activity/activity_c4a1.dart';
 import '../screen/activity/activity_c4a2.dart';
 import '../screen/activity/activity_c4a3.dart';
@@ -123,6 +124,11 @@ class ActivityManager {
           },);
         case "c11a1":
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC11A1(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c12a1":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC12A1(),)).then((value) {
             setState(() {});
           },);
           break;

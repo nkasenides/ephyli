@@ -42,6 +42,7 @@ class Challenge {
     challenge9,
     challenge10,
     challenge11,
+    challenge12,
   ];
 
   // * --------------- CHALLENGES
@@ -237,6 +238,23 @@ class Challenge {
     ],
     unlocksChallengesIDs: [
       "challenge12"
+    ],
+  );
+
+  static final Challenge challenge12 = Challenge(
+    id: "challenge12",
+    nameRes: "c12_name",
+    descriptionRes: "c12_description",
+    imageCompletedRes: AppImages.badge_c12,
+    imageIncompleteRes: AppImages.badge_c12_bw,
+    activityIDs: [
+      "c12a1",
+    ],
+    badgeIDs: [
+      "challenge12Badge"
+    ],
+    unlocksChallengesIDs: [
+      "challenge13"
     ],
   );
 
