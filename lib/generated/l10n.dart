@@ -4233,6 +4233,466 @@ class S {
     );
   }
 
+  /// `This is a class of 25 children 6-year-olds, one of them with Asperger's Syndrome. Within the class there is a normal range of abilities where approximately 1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view. All the children are motivated when doing PE. The lesson aims to teach catching and throwing skills.`
+  String get c12a2_instructions {
+    return Intl.message(
+      'This is a class of 25 children 6-year-olds, one of them with Asperger\'s Syndrome. Within the class there is a normal range of abilities where approximately 1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view. All the children are motivated when doing PE. The lesson aims to teach catching and throwing skills.',
+      name: 'c12a2_instructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have scheduled your lessons based on the class needs. You have completed the challenge!`
+  String get c12a2_finish {
+    return Intl.message(
+      'Well done! You have scheduled your lessons based on the class needs. You have completed the challenge!',
+      name: 'c12a2_finish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chest pass exercise`
+  String get c12a1_1_title {
+    return Intl.message(
+      'Chest pass exercise',
+      name: 'c12a1_1_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick the correct equipment set.`
+  String get c12a1_1_question {
+    return Intl.message(
+      'Pick the correct equipment set.',
+      name: 'c12a1_1_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Standard balls used in basketball sport.`
+  String get c12a1_1_answer1 {
+    return Intl.message(
+      'Standard balls used in basketball sport.',
+      name: 'c12a1_1_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Balls of different weights for male and female students.`
+  String get c12a1_1_answer2 {
+    return Intl.message(
+      'Balls of different weights for male and female students.',
+      name: 'c12a1_1_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Balls of different weights for students in wheelchairs.`
+  String get c12a1_1_answer3 {
+    return Intl.message(
+      'Balls of different weights for students in wheelchairs.',
+      name: 'c12a1_1_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chest pass exercise (individual work)`
+  String get c12a1_2_title {
+    return Intl.message(
+      'Chest pass exercise (individual work)',
+      name: 'c12a1_2_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting and rules:\nA 1-meter square on a wall, 1 meter off the floor.\nA foot-foul line 2 meters from the wall.\nStudents must throw the ball inside the square and catch the rebound. The ball must be thrown from behind the line and the rebound must be caught behind the line. The ball cannot bounce before hitting the wall. Perform the exercise 5 times.\n\nAdaptation for students in wheelchairs:`
+  String get c12a1_2_question {
+    return Intl.message(
+      'Setting and rules:\nA 1-meter square on a wall, 1 meter off the floor.\nA foot-foul line 2 meters from the wall.\nStudents must throw the ball inside the square and catch the rebound. The ball must be thrown from behind the line and the rebound must be caught behind the line. The ball cannot bounce before hitting the wall. Perform the exercise 5 times.\n\nAdaptation for students in wheelchairs:',
+      name: 'c12a1_2_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not needed.`
+  String get c12a1_2_answer1 {
+    return Intl.message(
+      'Not needed.',
+      name: 'c12a1_2_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The foot-foul line is 1 meter from the wall.`
+  String get c12a1_2_answer2 {
+    return Intl.message(
+      'The foot-foul line is 1 meter from the wall.',
+      name: 'c12a1_2_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The square is drawn 0.5 meters off the floor.`
+  String get c12a1_2_answer3 {
+    return Intl.message(
+      'The square is drawn 0.5 meters off the floor.',
+      name: 'c12a1_2_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chest pass exercise (teamwork)`
+  String get c12a1_3_title {
+    return Intl.message(
+      'Chest pass exercise (teamwork)',
+      name: 'c12a1_3_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting and rules (provided):\nStudents in pairs, 2 meters apart.\nStudents must throw the ball to their teammates. The ball cannot bounce. Perform the exercise 10 times.\nTeam building:`
+  String get c12a1_3_question {
+    return Intl.message(
+      'Setting and rules (provided):\nStudents in pairs, 2 meters apart.\nStudents must throw the ball to their teammates. The ball cannot bounce. Perform the exercise 10 times.\nTeam building:',
+      name: 'c12a1_3_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Students in pairs. Each student in a wheelchair works with any classmate.`
+  String get c12a1_3_answer1 {
+    return Intl.message(
+      'Students in pairs. Each student in a wheelchair works with any classmate.',
+      name: 'c12a1_3_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Students in pairs. Students in wheelchairs are in the same group.`
+  String get c12a1_3_answer2 {
+    return Intl.message(
+      'Students in pairs. Students in wheelchairs are in the same group.',
+      name: 'c12a1_3_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Spot shot exercise`
+  String get c12a1_4_title {
+    return Intl.message(
+      'Spot shot exercise',
+      name: 'c12a1_4_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting and rules (provided):\nStudents work on a basketball field.\nStudents are divided into two groups.\nThree shooting areas (1.6 meters from the basketball hoop).\nEach team is divided into 3 subgroups, one for each shooting area. Students must perform a shot and move to another area. Each student must perform 4 shoots in each area to complete the task.\nAdaptation for students in wheelchairs:`
+  String get c12a1_4_question {
+    return Intl.message(
+      'Setting and rules (provided):\nStudents work on a basketball field.\nStudents are divided into two groups.\nThree shooting areas (1.6 meters from the basketball hoop).\nEach team is divided into 3 subgroups, one for each shooting area. Students must perform a shot and move to another area. Each student must perform 4 shoots in each area to complete the task.\nAdaptation for students in wheelchairs:',
+      name: 'c12a1_4_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not needed.`
+  String get c12a1_4_answer1 {
+    return Intl.message(
+      'Not needed.',
+      name: 'c12a1_4_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The shooting areas are 1 meter from the basketball hoop.`
+  String get c12a1_4_answer2 {
+    return Intl.message(
+      'The shooting areas are 1 meter from the basketball hoop.',
+      name: 'c12a1_4_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The students in wheelchairs can perform more shots than their teammates.`
+  String get c12a1_4_answer3 {
+    return Intl.message(
+      'The students in wheelchairs can perform more shots than their teammates.',
+      name: 'c12a1_4_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Equipment`
+  String get c12a1_5_title {
+    return Intl.message(
+      'Equipment',
+      name: 'c12a1_5_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get c12a1_5_question {
+    return Intl.message(
+      '',
+      name: 'c12a1_5_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Basketball hoops of different heights, balls of the same weight.`
+  String get c12a1_5_answer1 {
+    return Intl.message(
+      'Basketball hoops of different heights, balls of the same weight.',
+      name: 'c12a1_5_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Basketball hoops of the same height, and balls of different weights for male.`
+  String get c12a1_5_answer2 {
+    return Intl.message(
+      'Basketball hoops of the same height, and balls of different weights for male.',
+      name: 'c12a1_5_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Basketball hoops of different heights, and balls of different weights for students in wheelchairs.`
+  String get c12a1_5_answer3 {
+    return Intl.message(
+      'Basketball hoops of different heights, and balls of different weights for students in wheelchairs.',
+      name: 'c12a1_5_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ten-meter dribble exercise:`
+  String get c12a1_6_title {
+    return Intl.message(
+      'Ten-meter dribble exercise:',
+      name: 'c12a1_6_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting and rules (provided):\nLine 10-meter long.\nSix cones on the line, 1.5 meters apart.\nStudents are divided into groups.\nThe students must dribble on the line as quickly as possible using only one hand and without hitting the cone with the ball.\nStudents must perform the exercise three times in non-consecutive turns.`
+  String get c12a1_6_question {
+    return Intl.message(
+      'Setting and rules (provided):\nLine 10-meter long.\nSix cones on the line, 1.5 meters apart.\nStudents are divided into groups.\nThe students must dribble on the line as quickly as possible using only one hand and without hitting the cone with the ball.\nStudents must perform the exercise three times in non-consecutive turns.',
+      name: 'c12a1_6_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The dribbling execution needs to be adapted: bounce one time, trap the ball in lap, push wheels.`
+  String get c12a1_6_answer1 {
+    return Intl.message(
+      'The dribbling execution needs to be adapted: bounce one time, trap the ball in lap, push wheels.',
+      name: 'c12a1_6_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not needed.`
+  String get c12a1_6_answer2 {
+    return Intl.message(
+      'Not needed.',
+      name: 'c12a1_6_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Three cones on the line for students in wheelchairs.`
+  String get c12a1_6_answer3 {
+    return Intl.message(
+      'Three cones on the line for students in wheelchairs.',
+      name: 'c12a1_6_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Catching and throwing activity`
+  String get c12a2_1_title {
+    return Intl.message(
+      'Catching and throwing activity',
+      name: 'c12a2_1_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rules (provided): \nChildren in pairs. One child has to throw the ball to his teammate without dropping it.\nAdaptation for student with Asperger's Syndrome:`
+  String get c12a2_1_question {
+    return Intl.message(
+      'Rules (provided): \nChildren in pairs. One child has to throw the ball to his teammate without dropping it.\nAdaptation for student with Asperger\'s Syndrome:',
+      name: 'c12a2_1_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher shows a card with the actions needed to perform the task to the student with Asperger's Syndrome.`
+  String get c12a2_1_answer1 {
+    return Intl.message(
+      'The teacher shows a card with the actions needed to perform the task to the student with Asperger\'s Syndrome.',
+      name: 'c12a2_1_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher explains carefully how to perform the task through several demonstrations to the student with Asperger's Syndrome.`
+  String get c12a2_1_answer2 {
+    return Intl.message(
+      'The teacher explains carefully how to perform the task through several demonstrations to the student with Asperger\'s Syndrome.',
+      name: 'c12a2_1_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not needed.`
+  String get c12a2_1_answer3 {
+    return Intl.message(
+      'Not needed.',
+      name: 'c12a2_1_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Catching and throwing activity`
+  String get c12a2_2_title {
+    return Intl.message(
+      'Catching and throwing activity',
+      name: 'c12a2_2_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rules (provided):\nChildren in pairs. One child has to throw the ball to his teammate without dropping it while walking near a line.\nAdaptation for student with Asperger's Syndrome:`
+  String get c12a2_2_question {
+    return Intl.message(
+      'Rules (provided):\nChildren in pairs. One child has to throw the ball to his teammate without dropping it while walking near a line.\nAdaptation for student with Asperger\'s Syndrome:',
+      name: 'c12a2_2_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher divides the task into two parts. In the first part, a student has to throw the ball to his teammate with Asperger's Syndrome, the latter takes 5 steps and throws it back to his teammate (and so on). In the second part, a child has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping).`
+  String get c12a2_2_answer1 {
+    return Intl.message(
+      'The teacher divides the task into two parts. In the first part, a student has to throw the ball to his teammate with Asperger\'s Syndrome, the latter takes 5 steps and throws it back to his teammate (and so on). In the second part, a child has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping).',
+      name: 'c12a2_2_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher divides the task into two parts. In the first part, the teacher has to throw the ball to his teammate with Asperger's Syndrome, the latter takes 5 steps and throws it back to his teammate (and so on). In the second part, the teacher has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping).`
+  String get c12a2_2_answer2 {
+    return Intl.message(
+      'The teacher divides the task into two parts. In the first part, the teacher has to throw the ball to his teammate with Asperger\'s Syndrome, the latter takes 5 steps and throws it back to his teammate (and so on). In the second part, the teacher has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping).',
+      name: 'c12a2_2_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher plays with the student with Asperger's Syndrome. The teacher has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping).`
+  String get c12a2_2_answer3 {
+    return Intl.message(
+      'The teacher plays with the student with Asperger\'s Syndrome. The teacher has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping).',
+      name: 'c12a2_2_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Catching and throwing activity`
+  String get c12a2_3_title {
+    return Intl.message(
+      'Catching and throwing activity',
+      name: 'c12a2_3_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting and rules (provided):\nThe gymnasium is divided into four parts. One game area in each part. Children in eight teams. Each playing area is divided into two fields. Each team built two castles with cones and placed them at the end of the playing fields. Each team has one soft ball. The children must throw the balls trying to bring down the castles of the other team. Before throwing the ball, they must perform at least three passes. All students must play with a lower level of voice. Whoever shouts receives a penalty. Adaptation for student with Asperger's Syndrome:`
+  String get c12a2_3_question {
+    return Intl.message(
+      'Setting and rules (provided):\nThe gymnasium is divided into four parts. One game area in each part. Children in eight teams. Each playing area is divided into two fields. Each team built two castles with cones and placed them at the end of the playing fields. Each team has one soft ball. The children must throw the balls trying to bring down the castles of the other team. Before throwing the ball, they must perform at least three passes. All students must play with a lower level of voice. Whoever shouts receives a penalty. Adaptation for student with Asperger\'s Syndrome:',
+      name: 'c12a2_3_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Before throwing the ball, the students must pass the ball to the teammate with Asperger's Syndrome.`
+  String get c12a2_3_answer1 {
+    return Intl.message(
+      'Before throwing the ball, the students must pass the ball to the teammate with Asperger\'s Syndrome.',
+      name: 'c12a2_3_answer1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `While the students play, the teacher plays the same game with the student with Asperger's Syndrome in a reserved play area.`
+  String get c12a2_3_answer2 {
+    return Intl.message(
+      'While the students play, the teacher plays the same game with the student with Asperger\'s Syndrome in a reserved play area.',
+      name: 'c12a2_3_answer2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The teacher plays in the team of the student with Asperger's Syndrome. Before throwing the ball, the student and the teacher must pass the ball to the teammate with Asperger's Syndrome.`
+  String get c12a2_3_answer3 {
+    return Intl.message(
+      'The teacher plays in the team of the student with Asperger\'s Syndrome. Before throwing the ball, the student and the teacher must pass the ball to the teammate with Asperger\'s Syndrome.',
+      name: 'c12a2_3_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(

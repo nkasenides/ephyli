@@ -22,12 +22,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../widgets/lesson_box.dart';
 import '../../widgets/tower_widget.dart';
 
-class ActivityC12A1 extends StatefulWidget {
+class ActivityC12A2 extends StatefulWidget {
   @override
-  _ActivityC12A1State createState() => _ActivityC12A1State();
+  _ActivityC12A2State createState() => _ActivityC12A2State();
 }
 
-enum C12A1Stage {
+enum C12A2Stage {
   introduction,
   activity,
   finish
@@ -40,11 +40,11 @@ enum SmileyState {
   ;
 }
 
-class _ActivityC12A1State extends State<ActivityC12A1> {
+class _ActivityC12A2State extends State<ActivityC12A2> {
 
 
-  C12A1Stage stage = C12A1Stage.introduction;
-  final String activityID = "c12a1";
+  C12A2Stage stage = C12A2Stage.introduction;
+  final String activityID = "c12a2";
   late Activity activity;
   late SharedPreferences prefs;
   late Future<void> future;
@@ -67,7 +67,7 @@ class _ActivityC12A1State extends State<ActivityC12A1> {
           currentQuestionIndex++;
           _shuffleAnswers(); // Shuffle answers for the next question
         } else {
-          stage = C12A1Stage.finish;
+          stage = C12A2Stage.finish;
         }
       } else {
         // Wrong answer: Increment mistakes and update smiley state
@@ -85,56 +85,29 @@ class _ActivityC12A1State extends State<ActivityC12A1> {
   initializeQuestions() {
     questions = [
       {
-        "title": AppLocalizations.of(context)!.c12a1_1_title,
-        "question": AppLocalizations.of(context)!.c12a1_1_question,
+        "title": AppLocalizations.of(context)!.c12a2_1_title,
+        "question": AppLocalizations.of(context)!.c12a2_1_question,
         "answers": [
-          {"text": AppLocalizations.of(context)!.c12a1_1_answer1, "type": SmileyState.smiling}, // Correct answer
-          {"text": AppLocalizations.of(context)!.c12a1_1_answer2, "type": SmileyState.neutral},
-          {"text": AppLocalizations.of(context)!.c12a1_1_answer3, "type": SmileyState.angry}
+          {"text": AppLocalizations.of(context)!.c12a2_1_answer1, "type": SmileyState.smiling}, // Correct answer
+          {"text": AppLocalizations.of(context)!.c12a2_1_answer2, "type": SmileyState.neutral},
+          {"text": AppLocalizations.of(context)!.c12a2_1_answer3, "type": SmileyState.angry}
         ]
       },
       {
-        "title": AppLocalizations.of(context)!.c12a1_2_title,
-        "question": AppLocalizations.of(context)!.c12a1_2_question,
+        "title": AppLocalizations.of(context)!.c12a2_2_title,
+        "question": AppLocalizations.of(context)!.c12a2_2_question,
         "answers": [
-          {"text": AppLocalizations.of(context)!.c12a1_2_answer1, "type": SmileyState.smiling}, // Correct answer
-          {"text": AppLocalizations.of(context)!.c12a1_2_answer2, "type": SmileyState.neutral},
-          {"text": AppLocalizations.of(context)!.c12a1_2_answer3, "type": SmileyState.angry}
+          {"text": AppLocalizations.of(context)!.c12a2_2_answer1, "type": SmileyState.smiling}, // Correct answer
+          {"text": AppLocalizations.of(context)!.c12a2_2_answer2, "type": SmileyState.neutral},
+          {"text": AppLocalizations.of(context)!.c12a2_2_answer3, "type": SmileyState.angry}
         ]
       },
       {
-        "title": AppLocalizations.of(context)!.c12a1_3_title,
-        "question": AppLocalizations.of(context)!.c12a1_3_question,
+        "title": AppLocalizations.of(context)!.c12a2_3_title,
+        "question": AppLocalizations.of(context)!.c12a2_3_question,
         "answers": [
-          {"text": AppLocalizations.of(context)!.c12a1_3_answer1, "type": SmileyState.smiling}, // Correct answer
-          {"text": AppLocalizations.of(context)!.c12a1_3_answer2, "type": SmileyState.neutral},
-        ]
-      },
-      {
-        "title": AppLocalizations.of(context)!.c12a1_4_title,
-        "question": AppLocalizations.of(context)!.c12a1_4_question,
-        "answers": [
-          {"text": AppLocalizations.of(context)!.c12a1_4_answer1, "type": SmileyState.smiling}, // Correct answer
-          {"text": AppLocalizations.of(context)!.c12a1_4_answer2, "type": SmileyState.neutral},
-          {"text": AppLocalizations.of(context)!.c12a1_4_answer3, "type": SmileyState.angry}
-        ]
-      },
-      {
-        "title": AppLocalizations.of(context)!.c12a1_5_title,
-        "question": AppLocalizations.of(context)!.c12a1_5_question,
-        "answers": [
-          {"text": AppLocalizations.of(context)!.c12a1_5_answer1, "type": SmileyState.smiling}, // Correct answer
-          {"text": AppLocalizations.of(context)!.c12a1_5_answer2, "type": SmileyState.neutral},
-          {"text": AppLocalizations.of(context)!.c12a1_5_answer3, "type": SmileyState.angry}
-        ]
-      },
-      {
-        "title": AppLocalizations.of(context)!.c12a1_6_title,
-        "question": AppLocalizations.of(context)!.c12a1_6_question,
-        "answers": [
-          {"text": AppLocalizations.of(context)!.c12a1_6_answer1, "type": SmileyState.smiling}, // Correct answer
-          {"text": AppLocalizations.of(context)!.c12a1_6_answer2, "type": SmileyState.neutral},
-          {"text": AppLocalizations.of(context)!.c12a1_6_answer3, "type": SmileyState.angry}
+          {"text": AppLocalizations.of(context)!.c12a2_3_answer1, "type": SmileyState.smiling}, // Correct answer
+          {"text": AppLocalizations.of(context)!.c12a2_3_answer2, "type": SmileyState.neutral},
         ]
       },
     ];
@@ -217,11 +190,11 @@ class _ActivityC12A1State extends State<ActivityC12A1> {
   Widget activityIntroView() {
     return InstructionsWidget(
         prefs,
-        AppLocalizations.of(context)!.c12a1_instructions,
+        AppLocalizations.of(context)!.c12a2_instructions,
         AppLocalizations.of(context)!.ready_letsgo,
         () {
           setState(() {
-            stage = C12A1Stage.activity;
+            stage = C12A2Stage.activity;
           });
         }
     );
@@ -293,12 +266,43 @@ class _ActivityC12A1State extends State<ActivityC12A1> {
       if (orientation == Orientation.portrait) {
         return InstructionsWidget(
             prefs,
-            AppLocalizations.of(context)!.c12a1_finish,
+            AppLocalizations.of(context)!.c12a2_finish,
             AppLocalizations.of(context)!.finish,
                 () {
               ActivityManager.completeActivity(activityID).then((value) {
-                Navigator.pop(context, "_");
+                //Find all badges related to this activity and award them:
+                for (var badgeID in Challenge.challenge12.badgeIDs) {
+                  var badge = GameBadge.findBadge(badgeID);
+                  badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                    if (!value) {
+                      badge.earn(context);
+                    }
+                  },);
+                }
+
+                //Unlock next challenges:
+                List<Future> unlockFutures = [];
+                for (var challengeID in Challenge.challenge12.unlocksChallengesIDs) {
+                  Challenge challenge = Challenge.findChallenge(challengeID)!;
+                  challenge.isUnlocked().then((value) {
+                    if (!value) {
+                      unlockFutures.add(challenge.unlock());
+                    }
+                  },);
+                }
+
+                //Show toast and move back:
+                Future.wait(unlockFutures).then((value) {
+                  if (unlockFutures.isNotEmpty) {
+                    Fluttertoast.showToast(
+                        msg: AppLocalizations.of(context)!
+                            .challenges_unlocked.replaceAll(
+                            "%1", unlockFutures.length.toString()));
+                  }
+                },);
               },);
+              Navigator.pop(context, "_");
+              Navigator.pop(context, "_");
             }
         );
       }
@@ -311,7 +315,7 @@ class _ActivityC12A1State extends State<ActivityC12A1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(I10N.getI10nString("c12a1_name")!, style: const TextStyle(color: Colors.white),),
+      appBar: AppBar(title: Text(I10N.getI10nString("c12a2_name")!, style: const TextStyle(color: Colors.white),),
         backgroundColor: Themes.primaryColorDark,
         iconTheme: const IconThemeData(color: Colors.white),),
       body: FutureBuilder(
@@ -328,11 +332,11 @@ class _ActivityC12A1State extends State<ActivityC12A1> {
 
   Widget chooseView() {
     switch (stage) {
-      case C12A1Stage.activity:
+      case C12A2Stage.activity:
         return activityGameView();
-      case C12A1Stage.finish:
+      case C12A2Stage.finish:
         return activityFinishView();
-      case C12A1Stage.introduction:
+      case C12A2Stage.introduction:
         return activityIntroView();
     }
   }

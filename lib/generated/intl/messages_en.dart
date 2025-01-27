@@ -279,10 +279,96 @@ class MessageLookup extends MessageLookupByLibrary {
             "Congratulations! You\'ve completed the game!"),
         "c12_mistakes": MessageLookupByLibrary.simpleMessage(
             "You\'ve made 3 mistakes. Game restarting!"),
+        "c12a1_1_answer1": MessageLookupByLibrary.simpleMessage(
+            "Standard balls used in basketball sport."),
+        "c12a1_1_answer2": MessageLookupByLibrary.simpleMessage(
+            "Balls of different weights for male and female students."),
+        "c12a1_1_answer3": MessageLookupByLibrary.simpleMessage(
+            "Balls of different weights for students in wheelchairs."),
+        "c12a1_1_question": MessageLookupByLibrary.simpleMessage(
+            "Pick the correct equipment set."),
+        "c12a1_1_title":
+            MessageLookupByLibrary.simpleMessage("Chest pass exercise"),
+        "c12a1_2_answer1": MessageLookupByLibrary.simpleMessage("Not needed."),
+        "c12a1_2_answer2": MessageLookupByLibrary.simpleMessage(
+            "The foot-foul line is 1 meter from the wall."),
+        "c12a1_2_answer3": MessageLookupByLibrary.simpleMessage(
+            "The square is drawn 0.5 meters off the floor."),
+        "c12a1_2_question": MessageLookupByLibrary.simpleMessage(
+            "Setting and rules:\nA 1-meter square on a wall, 1 meter off the floor.\nA foot-foul line 2 meters from the wall.\nStudents must throw the ball inside the square and catch the rebound. The ball must be thrown from behind the line and the rebound must be caught behind the line. The ball cannot bounce before hitting the wall. Perform the exercise 5 times.\n\nAdaptation for students in wheelchairs:"),
+        "c12a1_2_title": MessageLookupByLibrary.simpleMessage(
+            "Chest pass exercise (individual work)"),
+        "c12a1_3_answer1": MessageLookupByLibrary.simpleMessage(
+            "Students in pairs. Each student in a wheelchair works with any classmate."),
+        "c12a1_3_answer2": MessageLookupByLibrary.simpleMessage(
+            "Students in pairs. Students in wheelchairs are in the same group."),
+        "c12a1_3_question": MessageLookupByLibrary.simpleMessage(
+            "Setting and rules (provided):\nStudents in pairs, 2 meters apart.\nStudents must throw the ball to their teammates. The ball cannot bounce. Perform the exercise 10 times.\nTeam building:"),
+        "c12a1_3_title": MessageLookupByLibrary.simpleMessage(
+            "Chest pass exercise (teamwork)"),
+        "c12a1_4_answer1": MessageLookupByLibrary.simpleMessage("Not needed."),
+        "c12a1_4_answer2": MessageLookupByLibrary.simpleMessage(
+            "The shooting areas are 1 meter from the basketball hoop."),
+        "c12a1_4_answer3": MessageLookupByLibrary.simpleMessage(
+            "The students in wheelchairs can perform more shots than their teammates."),
+        "c12a1_4_question": MessageLookupByLibrary.simpleMessage(
+            "Setting and rules (provided):\nStudents work on a basketball field.\nStudents are divided into two groups.\nThree shooting areas (1.6 meters from the basketball hoop).\nEach team is divided into 3 subgroups, one for each shooting area. Students must perform a shot and move to another area. Each student must perform 4 shoots in each area to complete the task.\nAdaptation for students in wheelchairs:"),
+        "c12a1_4_title":
+            MessageLookupByLibrary.simpleMessage("Spot shot exercise"),
+        "c12a1_5_answer1": MessageLookupByLibrary.simpleMessage(
+            "Basketball hoops of different heights, balls of the same weight."),
+        "c12a1_5_answer2": MessageLookupByLibrary.simpleMessage(
+            "Basketball hoops of the same height, and balls of different weights for male."),
+        "c12a1_5_answer3": MessageLookupByLibrary.simpleMessage(
+            "Basketball hoops of different heights, and balls of different weights for students in wheelchairs."),
+        "c12a1_5_question": MessageLookupByLibrary.simpleMessage(""),
+        "c12a1_5_title": MessageLookupByLibrary.simpleMessage("Equipment"),
+        "c12a1_6_answer1": MessageLookupByLibrary.simpleMessage(
+            "The dribbling execution needs to be adapted: bounce one time, trap the ball in lap, push wheels."),
+        "c12a1_6_answer2": MessageLookupByLibrary.simpleMessage("Not needed."),
+        "c12a1_6_answer3": MessageLookupByLibrary.simpleMessage(
+            "Three cones on the line for students in wheelchairs."),
+        "c12a1_6_question": MessageLookupByLibrary.simpleMessage(
+            "Setting and rules (provided):\nLine 10-meter long.\nSix cones on the line, 1.5 meters apart.\nStudents are divided into groups.\nThe students must dribble on the line as quickly as possible using only one hand and without hitting the cone with the ball.\nStudents must perform the exercise three times in non-consecutive turns."),
+        "c12a1_6_title":
+            MessageLookupByLibrary.simpleMessage("Ten-meter dribble exercise:"),
         "c12a1_finish": MessageLookupByLibrary.simpleMessage(
             "Well done! You have scheduled your lesson based on the class needs. To complete the challenge, you have to develop another lesson for a different class."),
         "c12a1_instructions": MessageLookupByLibrary.simpleMessage(
             "Welcome to challenge 12. You will assume the role of a PE teacher and develop two lessons for your students. I will provide you with some information about the characteristics of your class, the purpose of the lesson and the learning outcomes that will help you in developing the lesson. Be careful, a wrong answer causes a change in the avatar\'s expression (from happy to angry). You can make three mistakes per lesson, after which the challenge will begin again. Ready?"),
+        "c12a2_1_answer1": MessageLookupByLibrary.simpleMessage(
+            "The teacher shows a card with the actions needed to perform the task to the student with Asperger\'s Syndrome."),
+        "c12a2_1_answer2": MessageLookupByLibrary.simpleMessage(
+            "The teacher explains carefully how to perform the task through several demonstrations to the student with Asperger\'s Syndrome."),
+        "c12a2_1_answer3": MessageLookupByLibrary.simpleMessage("Not needed."),
+        "c12a2_1_question": MessageLookupByLibrary.simpleMessage(
+            "Rules (provided): \nChildren in pairs. One child has to throw the ball to his teammate without dropping it.\nAdaptation for student with Asperger\'s Syndrome:"),
+        "c12a2_1_title": MessageLookupByLibrary.simpleMessage(
+            "Catching and throwing activity"),
+        "c12a2_2_answer1": MessageLookupByLibrary.simpleMessage(
+            "The teacher divides the task into two parts. In the first part, a student has to throw the ball to his teammate with Asperger\'s Syndrome, the latter takes 5 steps and throws it back to his teammate (and so on). In the second part, a child has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping)."),
+        "c12a2_2_answer2": MessageLookupByLibrary.simpleMessage(
+            "The teacher divides the task into two parts. In the first part, the teacher has to throw the ball to his teammate with Asperger\'s Syndrome, the latter takes 5 steps and throws it back to his teammate (and so on). In the second part, the teacher has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping)."),
+        "c12a2_2_answer3": MessageLookupByLibrary.simpleMessage(
+            "The teacher plays with the student with Asperger\'s Syndrome. The teacher has to throw the ball to his teammate without dropping it while walking, the latter catches it and throws it back to his teammate (without stopping)."),
+        "c12a2_2_question": MessageLookupByLibrary.simpleMessage(
+            "Rules (provided):\nChildren in pairs. One child has to throw the ball to his teammate without dropping it while walking near a line.\nAdaptation for student with Asperger\'s Syndrome:"),
+        "c12a2_2_title": MessageLookupByLibrary.simpleMessage(
+            "Catching and throwing activity"),
+        "c12a2_3_answer1": MessageLookupByLibrary.simpleMessage(
+            "Before throwing the ball, the students must pass the ball to the teammate with Asperger\'s Syndrome."),
+        "c12a2_3_answer2": MessageLookupByLibrary.simpleMessage(
+            "While the students play, the teacher plays the same game with the student with Asperger\'s Syndrome in a reserved play area."),
+        "c12a2_3_answer3": MessageLookupByLibrary.simpleMessage(
+            "The teacher plays in the team of the student with Asperger\'s Syndrome. Before throwing the ball, the student and the teacher must pass the ball to the teammate with Asperger\'s Syndrome."),
+        "c12a2_3_question": MessageLookupByLibrary.simpleMessage(
+            "Setting and rules (provided):\nThe gymnasium is divided into four parts. One game area in each part. Children in eight teams. Each playing area is divided into two fields. Each team built two castles with cones and placed them at the end of the playing fields. Each team has one soft ball. The children must throw the balls trying to bring down the castles of the other team. Before throwing the ball, they must perform at least three passes. All students must play with a lower level of voice. Whoever shouts receives a penalty. Adaptation for student with Asperger\'s Syndrome:"),
+        "c12a2_3_title": MessageLookupByLibrary.simpleMessage(
+            "Catching and throwing activity"),
+        "c12a2_finish": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have scheduled your lessons based on the class needs. You have completed the challenge!"),
+        "c12a2_instructions": MessageLookupByLibrary.simpleMessage(
+            "This is a class of 25 children 6-year-olds, one of them with Asperger\'s Syndrome. Within the class there is a normal range of abilities where approximately 1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view. All the children are motivated when doing PE. The lesson aims to teach catching and throwing skills."),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "You have made 5 mistakes, and the game will restart."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(

@@ -249,6 +249,7 @@ class Challenge {
     imageIncompleteRes: AppImages.badge_c12_bw,
     activityIDs: [
       "c12a1",
+      "c12a2",
     ],
     badgeIDs: [
       "challenge12Badge"
