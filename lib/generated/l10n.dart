@@ -4173,6 +4173,16 @@ class S {
     );
   }
 
+  /// `Well done! You have successfully completed the tower. You can now access the next challenge.`
+  String get c11_finish {
+    return Intl.message(
+      'Well done! You have successfully completed the tower. You can now access the next challenge.',
+      name: 'c11_finish',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(

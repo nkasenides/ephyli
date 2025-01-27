@@ -70,10 +70,10 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
   List<String> environments = [];
   List<String> statements = [];
 
-  fillBrick(int floor, int brick) {
+  fillBrick(int floor, int brick, bool completed) {
     floor = 4 - floor;
     setState(() {
-      stages[floor][brick] = true;
+      stages[floor][brick] = completed;
     });
   }
 
@@ -142,7 +142,7 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
                 onPressed: () {
                   Navigator.pop(context);
                   setState(() {
-                    resetGame();
+                    resetFloor();
                   });
                 },
               )
@@ -154,13 +154,17 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
     }
     else {
       UIUtils.showFeedbackBar(context, true);
-      fillBrick(currentFloor, currentBrick);
+      fillBrick(currentFloor, currentBrick, true);
     }
 
     currentBrick++;
-    if (currentBrick >= stages[currentFloor].length) { //move to next floor
-      currentBrick = 0;
-      currentFloor++;
+
+    if (shouldMoveToNextFloor(currentFloor, currentBrick)) {
+      if (isCorrect || (!isCorrect && currentBrick >= allFloors[currentFloor].length - 1 && mistakes < 2)) {
+        currentBrick = 0;
+        currentFloor++;
+        mistakes = 0;
+      }
       if (currentFloor >= stages.length) { //if last floor, end the game.
         setState(() {
           stage = C11A1Stage.finish;
@@ -169,23 +173,29 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
     }
   }
 
-  void resetGame() {
-    setState(() {
-      currentBrick = 0;
-      currentFloor = 0;
-      mistakes = 0;
-      reset();
-    });
-  }
-
   void resetFloor() {
     setState(() {
       currentBrick = 0;
       mistakes = 0;
       for (int i = 0; i < stages[currentFloor].length; i++) {
-        stages[currentFloor][i] = false;
+        fillBrick(currentFloor, i, false);
       }
     });
+  }
+
+  bool shouldMoveToNextFloor(int currentFloor, int currentBrick) {
+    if (currentBrick >= stages[currentFloor].length) {
+      int solved = 0;
+      for (int floor = 0; floor < stages.length; floor++) {
+        for (int brick = 0; brick < stages[floor].length; brick++) {
+          if (stages[floor][brick]) {
+            solved++;
+          }
+        }
+      }
+      return solved >= 5;
+    }
+    return false;
   }
 
   void initializeInstructions() {
@@ -434,7 +444,8 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
 
             const SizedBox(height: 20),
             Text(
-              floor0_steps[currentBrick]["instruction"]!,
+              currentBrick < allFloors[currentFloor].length ?
+              allFloors[currentFloor][currentBrick]["instruction"]! : "",
             ),
 
             const SizedBox(height: 20),
@@ -458,6 +469,10 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
     Random random = Random();
     bool a = random.nextBool();
 
+    if (currentFloor >= allFloors.length || currentBrick >= allFloors[currentFloor].length) {
+      return [Container()];
+    }
+
     String? correctAnswer = allFloors[currentFloor][currentBrick]["correct"];
     String? wrongAnswer = allFloors[currentFloor][currentBrick]["wrong"];
 
@@ -465,7 +480,8 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
       return [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.all(10)
+            padding: const EdgeInsets.all(10),
+            backgroundColor: kDebugMode ? Colors.green : null,
           ),
           onPressed: () => handleAnswer(true),
           child: Text(correctAnswer!),
@@ -475,7 +491,8 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
 
         wrongAnswer != null ? ElevatedButton( //Only show wrong if present
           style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.all(10)
+            padding: const EdgeInsets.all(10),
+            backgroundColor: kDebugMode ? Colors.red : null,
           ),
           onPressed: () => handleAnswer(false),
           child: Text(wrongAnswer!),
@@ -485,7 +502,8 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
     return [
       wrongAnswer != null ? ElevatedButton( //Only show wrong if present
         style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.all(10)
+          padding: const EdgeInsets.all(10),
+          backgroundColor: kDebugMode ? Colors.red : null,
         ),
         onPressed: () => handleAnswer(false),
         child: Text(wrongAnswer),
@@ -495,7 +513,8 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
 
       ElevatedButton(
         style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.all(10)
+          padding: const EdgeInsets.all(10),
+          backgroundColor: kDebugMode ? Colors.green : null,
         ),
         onPressed: () => handleAnswer(true),
         child: Text(correctAnswer!),
@@ -504,55 +523,54 @@ class _ActivityC11A1State extends State<ActivityC11A1> {
   }
 
   Widget activityFinishView() {
-    return Text("TODO");
-    // return OrientationBuilder(builder: (context, orientation) {
-    //   if (orientation == Orientation.portrait) {
-    //     return InstructionsWidget(
-    //         prefs,
-    //         AppLocalizations.of(context)!.c10a2_finish_message,
-    //         AppLocalizations.of(context)!.finish,
-    //             () {
-    //           ActivityManager.completeActivity(activityID).then((value) {
-    //             //Find all badges related to this activity and award them:
-    //             for (var badgeID in Challenge.challenge10.badgeIDs) {
-    //               var badge = GameBadge.findBadge(badgeID);
-    //               badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
-    //                 if (!value) {
-    //                   badge.earn(context);
-    //                 }
-    //               },);
-    //             }
-    //
-    //             //Unlock next challenges:
-    //             List<Future> unlockFutures = [];
-    //             for (var challengeID in Challenge.challenge10.unlocksChallengesIDs) {
-    //               Challenge challenge = Challenge.findChallenge(challengeID)!;
-    //               challenge.isUnlocked().then((value) {
-    //                 if (!value) {
-    //                   unlockFutures.add(challenge.unlock());
-    //                 }
-    //               },);
-    //             }
-    //
-    //             //Show toast and move back:
-    //             Future.wait(unlockFutures).then((value) {
-    //               if (unlockFutures.isNotEmpty) {
-    //                 Fluttertoast.showToast(
-    //                     msg: AppLocalizations.of(context)!
-    //                         .challenges_unlocked.replaceAll(
-    //                         "%1", unlockFutures.length.toString()));
-    //               }
-    //             },);
-    //           },);
-    //           Navigator.pop(context, "_");
-    //           Navigator.pop(context, "_");
-    //         }
-    //     );
-    //   }
-    //   else {
-    //     return Center(child: RotateDeviceWidget(Orientation.portrait),);
-    //   }
-    // },);
+    return OrientationBuilder(builder: (context, orientation) {
+      if (orientation == Orientation.portrait) {
+        return InstructionsWidget(
+            prefs,
+            AppLocalizations.of(context)!.c11_finish,
+            AppLocalizations.of(context)!.finish,
+                () {
+              ActivityManager.completeActivity(activityID).then((value) {
+                //Find all badges related to this activity and award them:
+                for (var badgeID in Challenge.challenge11.badgeIDs) {
+                  var badge = GameBadge.findBadge(badgeID);
+                  badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                    if (!value) {
+                      badge.earn(context);
+                    }
+                  },);
+                }
+
+                //Unlock next challenges:
+                List<Future> unlockFutures = [];
+                for (var challengeID in Challenge.challenge11.unlocksChallengesIDs) {
+                  Challenge challenge = Challenge.findChallenge(challengeID)!;
+                  challenge.isUnlocked().then((value) {
+                    if (!value) {
+                      unlockFutures.add(challenge.unlock());
+                    }
+                  },);
+                }
+
+                //Show toast and move back:
+                Future.wait(unlockFutures).then((value) {
+                  if (unlockFutures.isNotEmpty) {
+                    Fluttertoast.showToast(
+                        msg: AppLocalizations.of(context)!
+                            .challenges_unlocked.replaceAll(
+                            "%1", unlockFutures.length.toString()));
+                  }
+                },);
+              },);
+              Navigator.pop(context, "_");
+              Navigator.pop(context, "_");
+            }
+        );
+      }
+      else {
+        return Center(child: RotateDeviceWidget(Orientation.portrait),);
+      }
+    },);
   }
 
   @override

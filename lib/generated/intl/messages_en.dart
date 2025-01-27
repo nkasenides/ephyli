@@ -88,6 +88,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Well done! You have completed the tenth challenge. Press \'Finish\' to get your badge!"),
         "c10a2_instructions": MessageLookupByLibrary.simpleMessage(
             "You will assume the role of a PE teacher and have to match the lesson provided with the correct teaching style used to develop it. Ready?"),
+        "c11_finish": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have successfully completed the tower. You can now access the next challenge."),
         "c11_floor0_environment":
             MessageLookupByLibrary.simpleMessage("School gymnasium"),
         "c11_floor0_model": MessageLookupByLibrary.simpleMessage(

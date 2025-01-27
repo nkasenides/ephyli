@@ -470,6 +470,7 @@
 
   "c11_mistakes": "Mistakes",
   "c11_mistakes_reached": "You have made 2 mistakes in this model. The challenge will restart from this floor.",
+  "c11_finish": "Well done! You have successfully completed the tower. You can now access the next challenge.",
 
   "glossary_Attributes": "Attributes",
   "glossary_AffectiveDomain": "Affective Domain",

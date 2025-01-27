@@ -8,7 +8,7 @@ class TowerWidget extends StatefulWidget {
   @override
   State<TowerWidget> createState() => _TowerWidgetState();
 
-  TowerWidget(this.stages);
+  TowerWidget(this.stages, {super.key});
 
 }
 
@@ -39,19 +39,19 @@ class _TowerWidgetState extends State<TowerWidget> {
           decoration: BoxDecoration(
             color: Themes.primaryColorDark,
             border: Border.all(color: Colors.black),
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(12),
               topRight: Radius.circular(12),
             ),
           ),
-          child: Center(
+          child: const Center(
             child: Icon(
               Icons.star,
               color: Colors.yellow,
               size: 30,
             ),
           ),
-        ) : SizedBox(
+        ) : const SizedBox(
           width: 140,
           height: 50,
         ),
