@@ -1,5 +1,6 @@
 import 'package:ephyli/model/challenge.dart';
 import 'package:ephyli/screen/activity/activity_c11a1.dart';
+import 'package:ephyli/screen/activity/activity_c13a1.dart';
 import 'package:ephyli/screen/activity/activity_c1a1.dart';
 import 'package:ephyli/screen/activity/activity_c1a2.dart';
 import 'package:ephyli/screen/activity/activity_c2a1.dart';
@@ -135,6 +136,11 @@ class ActivityManager {
           break;
         case "c12a2":
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC12A2(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c13a1":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC13A1(),)).then((value) {
             setState(() {});
           },);
           break;
