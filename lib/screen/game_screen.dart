@@ -187,7 +187,9 @@ class _GameScreenState extends State<GameScreen> {
               navBarFeaturesEnabled ? IconButton(
                 icon: const Icon(Icons.info),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutScreen(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutScreen(),)).then((value) {
+                    setState(() {}); //refresh to make sure challenge admin mode is updated.
+                  },);
                 },
                 tooltip: AppLocalizations.of(context)!.about
               ) : Container(),

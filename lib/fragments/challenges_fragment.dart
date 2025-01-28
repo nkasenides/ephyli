@@ -61,8 +61,9 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
         AppLocalizations.of(context)!.ok,
         () {
           snapshot.data!.setBool(PrefUtils.tutorial_completed, true).then((value) {
-            setState(() { });
-            GameBadge.tutorialBadge.earn(context);
+            setState(() {
+              GameBadge.tutorialBadge.earn(context);
+            });
           },);
         }
     );
@@ -147,38 +148,11 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
                           child: GridView.count(
                             crossAxisCount: itemsPerRow,
                             children: Challenge.challenges.map((e) {
-                              return ChallengeWidget(e, refresher: _refresh, dense: width < 400,);
+                              return ChallengeWidget(e, prefs.getBool(PrefUtils.admin_mode) ?? false, refresher: _refresh, dense: width < 400,);
                             }).toList(),
                           ),
                         ),
 
-                        // Expanded(
-                        //   child: OrientationBuilder(builder: (context, orientation) {
-                        //
-                        //     //LANDSCAPE
-                        //
-                        //     if (orientation == Orientation.landscape) {
-                        //       return GridView.count(
-                        //         scrollDirection: Axis.horizontal,
-                        //         crossAxisCount: 1,
-                        //         children: Challenge.challenges.map((e) {
-                        //           return ChallengeWidget(e, refresher: _refresh, dense: true,);
-                        //         }).toList(),
-                        //       );
-                        //     }
-                        //
-                        //     //PORTRAIT
-                        //
-                        //     else {
-                        //       return GridView.count(
-                        //         crossAxisCount: 2,
-                        //         children: Challenge.challenges.map((e) {
-                        //           return ChallengeWidget(e, refresher: _refresh);
-                        //         }).toList(),
-                        //       );
-                        //     }
-                        //   },),
-                        // ),
                       ],
                     ));
               }

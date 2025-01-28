@@ -23,8 +23,9 @@ class ChallengeWidget extends StatefulWidget {
   final Challenge challenge;
   final Function refresher;
   final bool dense;
+  final bool adminMode;
 
-  const ChallengeWidget(this.challenge, {super.key, required this.refresher, this.dense = false});
+  const ChallengeWidget(this.challenge, this.adminMode, {super.key, required this.refresher, this.dense = false});
 
   @override
   State<ChallengeWidget> createState() => _ChallengeWidgetState();
@@ -60,7 +61,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
         },
 
         //TODO - DEBUGGING ONLY REMOVE LATER
-        onLongPress: !widget.challenge.completed ? () {
+        onLongPress: widget.adminMode ? !widget.challenge.completed ? () {
           debugPrint("Long press complete test");
           for (String activityID in widget.challenge.activityIDs) {
             widget.challenge.completeActivity(activityID);
@@ -73,7 +74,7 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
             widget.challenge.resetActivity(activityID);
           }
           onChallengeReset();
-        },
+        } : null,
 
         child: Column(
           children: [
