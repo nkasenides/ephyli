@@ -18,6 +18,7 @@ import '../screen/activity/activity_c10a1.dart';
 import '../screen/activity/activity_c10a2.dart';
 import '../screen/activity/activity_c12a1.dart';
 import '../screen/activity/activity_c12a2.dart';
+import '../screen/activity/activity_c13a2.dart';
 import '../screen/activity/activity_c4a1.dart';
 import '../screen/activity/activity_c4a2.dart';
 import '../screen/activity/activity_c4a3.dart';
@@ -141,6 +142,11 @@ class ActivityManager {
           break;
         case "c13a1":
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC13A1(),)).then((value) {
+            setState(() {});
+          },);
+          break;
+        case "c13a2":
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ActivityC13A2(),)).then((value) {
             setState(() {});
           },);
           break;

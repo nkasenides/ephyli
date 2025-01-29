@@ -83,14 +83,24 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
       },);
     }
 
+    String message;
+    if (challengesCompleted >= Challenge.challenges.length) {
+      message = AppLocalizations.of(context)!.challengesTextFinishedAll;
+    }
+    else if (challengesCompleted > 0) {
+      message = AppLocalizations.of(context)!.challengesTextNormal
+          .replaceAll("%1", "$challengesCompleted")
+          .replaceAll("%2", "$totalChallenges");
+    }
+    else {
+      message = AppLocalizations.of(context)!.challengesTextNormalInitial
+          .replaceAll("%1", snapshot.data!.getString(PrefUtils.username)!);
+    }
+
     return InstructionsWidget(
+        key: const Key("MainInstruction_AllChallenges"),
         prefs,
-        challengesCompleted > 0 ?
-        AppLocalizations.of(context)!.challengesTextNormal
-            .replaceAll("%1", "$challengesCompleted")
-            .replaceAll("%2", "$totalChallenges") :
-        AppLocalizations.of(context)!.challengesTextNormalInitial
-            .replaceAll("%1", snapshot.data!.getString(PrefUtils.username)!),
+        message,
         "",
         null
     );

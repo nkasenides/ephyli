@@ -369,6 +369,228 @@ class MessageLookup extends MessageLookupByLibrary {
             "Well done! You have scheduled your lessons based on the class needs. You have completed the challenge!"),
         "c12a2_instructions": MessageLookupByLibrary.simpleMessage(
             "This is a class of 25 children 6-year-olds, one of them with Asperger\'s Syndrome. Within the class there is a normal range of abilities where approximately 1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view. All the children are motivated when doing PE. The lesson aims to teach catching and throwing skills."),
+        "c13_10_correct_1": MessageLookupByLibrary.simpleMessage(
+            "How did it feel working with others today?"),
+        "c13_10_correct_2": MessageLookupByLibrary.simpleMessage(
+            "How confident do you feel about participating in more of this activity?"),
+        "c13_10_question": MessageLookupByLibrary.simpleMessage(
+            "Affective/Feel: Choose 2 questions related to emotional experiences during the lesson."),
+        "c13_10_title": MessageLookupByLibrary.simpleMessage("Affective/Feel"),
+        "c13_10_wrong_1": MessageLookupByLibrary.simpleMessage(
+            "What did you like most about today’s lesson? What was the best moment?"),
+        "c13_10_wrong_10": MessageLookupByLibrary.simpleMessage(
+            "When did you feel out of your comfort zone today?"),
+        "c13_10_wrong_11": MessageLookupByLibrary.simpleMessage(
+            "Did you feel safe in today’s lesson?"),
+        "c13_10_wrong_2": MessageLookupByLibrary.simpleMessage(
+            "Were there any elements of the lesson that you did not enjoy?"),
+        "c13_10_wrong_3": MessageLookupByLibrary.simpleMessage(
+            "What do you wish we had done differently or more of or less of?"),
+        "c13_10_wrong_4": MessageLookupByLibrary.simpleMessage(
+            "What element of your PE lesson are you most proud of?"),
+        "c13_10_wrong_5": MessageLookupByLibrary.simpleMessage(
+            "If you could repeat this lesson, how could you have made it more enjoyable?"),
+        "c13_10_wrong_6": MessageLookupByLibrary.simpleMessage(
+            "Following on from today\'s lesson, what would you like to learn next?"),
+        "c13_10_wrong_7": MessageLookupByLibrary.simpleMessage(
+            "Do you feel valued in your team/group?"),
+        "c13_10_wrong_8": MessageLookupByLibrary.simpleMessage(
+            "How would you score this lesson out of 10 for fun? What could be done to improve that score?"),
+        "c13_10_wrong_9": MessageLookupByLibrary.simpleMessage(
+            "When did you demonstrate the most confidence in today’s lesson?"),
+        "c13_11_correct_1": MessageLookupByLibrary.simpleMessage(
+            "What do you need to work on most to improve further?"),
+        "c13_11_correct_2": MessageLookupByLibrary.simpleMessage(
+            "What different roles could you fulfil in the lesson and what skills are needed for each?"),
+        "c13_11_question": MessageLookupByLibrary.simpleMessage(
+            "Cognitive/Think: Choose 2 questions related to cognitive thinking and reflection."),
+        "c13_11_title": MessageLookupByLibrary.simpleMessage("Cognitive/Think"),
+        "c13_11_wrong_1": MessageLookupByLibrary.simpleMessage(
+            "What was the most valuable thing you learnt today? How will you use that learning in the future?"),
+        "c13_11_wrong_10": MessageLookupByLibrary.simpleMessage(
+            "If you were to teach today’s lesson, how might you do it?"),
+        "c13_11_wrong_2": MessageLookupByLibrary.simpleMessage(
+            "How could you do it differently next time?"),
+        "c13_11_wrong_3": MessageLookupByLibrary.simpleMessage(
+            "What is the most important thing for you to remember from today? How will you remember it?"),
+        "c13_11_wrong_4": MessageLookupByLibrary.simpleMessage(
+            "Is there anything you can do before our next lesson to develop further or practice what we have done today?"),
+        "c13_11_wrong_5": MessageLookupByLibrary.simpleMessage(
+            "Is there an aspect of this activity you would like to know more about?"),
+        "c13_11_wrong_6": MessageLookupByLibrary.simpleMessage(
+            "What rules or constraints could you add to make the lesson harder for you?"),
+        "c13_11_wrong_7": MessageLookupByLibrary.simpleMessage(
+            "What could you do to make the lesson easier for you?"),
+        "c13_11_wrong_8": MessageLookupByLibrary.simpleMessage(
+            "What will you do to be physically active between now and your next lesson?"),
+        "c13_11_wrong_9": MessageLookupByLibrary.simpleMessage(
+            "What would you like to find out more about?"),
+        "c13_12_correct_1": MessageLookupByLibrary.simpleMessage(
+            "How well did you work with others?"),
+        "c13_12_correct_2": MessageLookupByLibrary.simpleMessage(
+            "Who showed the most creativity today? What impact did it have?"),
+        "c13_12_question": MessageLookupByLibrary.simpleMessage(
+            "Social/Connect: Choose 2 questions related to social interactions during the lesson."),
+        "c13_12_title": MessageLookupByLibrary.simpleMessage("Social/Connect"),
+        "c13_12_wrong_1": MessageLookupByLibrary.simpleMessage(
+            "Who was the MVP (most valuable participant)? Why?"),
+        "c13_12_wrong_10": MessageLookupByLibrary.simpleMessage(
+            "Where can you access more opportunities to play or do what we learnt today?"),
+        "c13_12_wrong_11": MessageLookupByLibrary.simpleMessage(
+            "Who is your role model in this class? Why?"),
+        "c13_12_wrong_2": MessageLookupByLibrary.simpleMessage(
+            "Who demonstrated the best leadership characteristics in today’s lesson? How did they do this?"),
+        "c13_12_wrong_3": MessageLookupByLibrary.simpleMessage(
+            "Did you display kindness and respect for others during the lesson? If so, how?"),
+        "c13_12_wrong_4": MessageLookupByLibrary.simpleMessage(
+            "How did relationships with other students impact your progress in this lesson?"),
+        "c13_12_wrong_5": MessageLookupByLibrary.simpleMessage(
+            "How would you teach this lesson to a friend?"),
+        "c13_12_wrong_6": MessageLookupByLibrary.simpleMessage(
+            "Describe a moment in the lesson where you helped another student make progress."),
+        "c13_12_wrong_7": MessageLookupByLibrary.simpleMessage(
+            "How did you contribute towards a shared goal today?"),
+        "c13_12_wrong_8": MessageLookupByLibrary.simpleMessage(
+            "How well did you communicate with others today?"),
+        "c13_12_wrong_9": MessageLookupByLibrary.simpleMessage(
+            "Who did you work well with today? Why?"),
+        "c13_1_correct_1": MessageLookupByLibrary.simpleMessage("Resilience"),
+        "c13_1_correct_2": MessageLookupByLibrary.simpleMessage("Independence"),
+        "c13_1_correct_3":
+            MessageLookupByLibrary.simpleMessage("Communication"),
+        "c13_1_question": MessageLookupByLibrary.simpleMessage(
+            "Based on the information provided, choose 2 skills/qualities you are also focusing on developing:"),
+        "c13_1_title": MessageLookupByLibrary.simpleMessage("Introduction"),
+        "c13_1_wrong_1":
+            MessageLookupByLibrary.simpleMessage("Problem-Solving"),
+        "c13_1_wrong_2":
+            MessageLookupByLibrary.simpleMessage("Emotional Intelligence"),
+        "c13_1_wrong_3": MessageLookupByLibrary.simpleMessage("Leadership"),
+        "c13_1_wrong_4": MessageLookupByLibrary.simpleMessage("Evaluation"),
+        "c13_1_wrong_5":
+            MessageLookupByLibrary.simpleMessage("Sportspersonship"),
+        "c13_1_wrong_6":
+            MessageLookupByLibrary.simpleMessage("Self-confidence"),
+        "c13_2_correct_1": MessageLookupByLibrary.simpleMessage("Reciprocal"),
+        "c13_2_correct_2": MessageLookupByLibrary.simpleMessage("Self-Check"),
+        "c13_2_correct_3":
+            MessageLookupByLibrary.simpleMessage("Divergent Discovery"),
+        "c13_2_correct_4":
+            MessageLookupByLibrary.simpleMessage("Learner Designed"),
+        "c13_2_question": MessageLookupByLibrary.simpleMessage(
+            "Teaching Styles or Models: Based on Mosston’s Styles, choose 3 Styles that you could use to achieve the purpose of the lesson."),
+        "c13_2_title":
+            MessageLookupByLibrary.simpleMessage("Teaching styles or models"),
+        "c13_2_wrong_1": MessageLookupByLibrary.simpleMessage("Command"),
+        "c13_2_wrong_2": MessageLookupByLibrary.simpleMessage("Practice"),
+        "c13_2_wrong_3": MessageLookupByLibrary.simpleMessage("Inclusion"),
+        "c13_2_wrong_4":
+            MessageLookupByLibrary.simpleMessage("Guided Discovery"),
+        "c13_2_wrong_5":
+            MessageLookupByLibrary.simpleMessage("Convergent Discovery"),
+        "c13_2_wrong_6":
+            MessageLookupByLibrary.simpleMessage("Learner Initiated"),
+        "c13_2_wrong_7": MessageLookupByLibrary.simpleMessage("Self-Teach"),
+        "c13_3_correct_1":
+            MessageLookupByLibrary.simpleMessage("Cooperative Education"),
+        "c13_3_question": MessageLookupByLibrary.simpleMessage(
+            "Teaching models: based on the aim of the lesson, choose 1 teaching model to enhance students’ physical literacy."),
+        "c13_3_title": MessageLookupByLibrary.simpleMessage("Teaching models"),
+        "c13_3_wrong_1":
+            MessageLookupByLibrary.simpleMessage("Sport Education"),
+        "c13_3_wrong_2": MessageLookupByLibrary.simpleMessage(
+            "Teaching Personal Social Responsibility"),
+        "c13_3_wrong_3":
+            MessageLookupByLibrary.simpleMessage("Health Based PE"),
+        "c13_4_correct_1": MessageLookupByLibrary.simpleMessage(
+            "Children can choose the balances they want to do and how they link them into a sequence."),
+        "c13_4_question": MessageLookupByLibrary.simpleMessage(
+            "Dare: based on the aim of the lesson and the teaching model adopted, choose 1 dare that can help the students improve their skills."),
+        "c13_4_title": MessageLookupByLibrary.simpleMessage("Dare"),
+        "c13_4_wrong_1": MessageLookupByLibrary.simpleMessage(
+            "Children are all challenged to do the same balances and sequences."),
+        "c13_4_wrong_2": MessageLookupByLibrary.simpleMessage(
+            "Children are challenged to do the same balances but choose how to link them into a sequence."),
+        "c13_5_correct_1": MessageLookupByLibrary.simpleMessage(
+            "Children are supported by themselves and worksheets that have pictures and text to describe the balances and how they might be linked together."),
+        "c13_5_question": MessageLookupByLibrary.simpleMessage(
+            "Support: based on the aim of the lesson and the teaching model adopted, choose 1 support that can help the students to enhance their skills."),
+        "c13_5_title": MessageLookupByLibrary.simpleMessage("Support"),
+        "c13_5_wrong_1": MessageLookupByLibrary.simpleMessage(
+            "The Teacher moves around the class to provide support and advice where appropriate."),
+        "c13_5_wrong_2": MessageLookupByLibrary.simpleMessage(
+            "Some students are nominated as support and they work with a group, providing advice."),
+        "c13_6_correct_1": MessageLookupByLibrary.simpleMessage("Activities"),
+        "c13_6_correct_2": MessageLookupByLibrary.simpleMessage("Equipment"),
+        "c13_6_question": MessageLookupByLibrary.simpleMessage(
+            "Aspects: What would you be most likely to modify? Choose 2 elements that you can modify."),
+        "c13_6_title": MessageLookupByLibrary.simpleMessage("Aspects"),
+        "c13_6_wrong_1": MessageLookupByLibrary.simpleMessage("Spaces"),
+        "c13_6_wrong_2": MessageLookupByLibrary.simpleMessage("People"),
+        "c13_6_wrong_3": MessageLookupByLibrary.simpleMessage("Conditions"),
+        "c13_6_wrong_4": MessageLookupByLibrary.simpleMessage("Time"),
+        "c13_7_correct_1":
+            MessageLookupByLibrary.simpleMessage("Maximum participation"),
+        "c13_7_correct_2": MessageLookupByLibrary.simpleMessage("Involvement"),
+        "c13_7_correct_3": MessageLookupByLibrary.simpleMessage("Success"),
+        "c13_7_question": MessageLookupByLibrary.simpleMessage(
+            "Priority: What would be your priority? Choose two priorities."),
+        "c13_7_title": MessageLookupByLibrary.simpleMessage("Priority"),
+        "c13_7_wrong_1": MessageLookupByLibrary.simpleMessage("Safety"),
+        "c13_7_wrong_2": MessageLookupByLibrary.simpleMessage("Learning"),
+        "c13_7_wrong_3": MessageLookupByLibrary.simpleMessage("Enjoyment"),
+        "c13_8_correct_1": MessageLookupByLibrary.simpleMessage(
+            "At the end of the lesson, the children are split into two. Half of the class performs their sequence and a pair from the observers provides feedback on what they did well and what they could improve, then the other half performs their sequence and has feedback provided by a pair from the observers."),
+        "c13_8_question": MessageLookupByLibrary.simpleMessage(
+            "Assessment strategy: choose the correct assessment strategy to evaluate your students\' activity."),
+        "c13_8_title":
+            MessageLookupByLibrary.simpleMessage("Assessment strategy"),
+        "c13_8_wrong_1": MessageLookupByLibrary.simpleMessage(
+            "At the end of the lesson each pair has to perform their partner sequence in front of everyone and the teacher gives them a mark out of 10."),
+        "c13_8_wrong_2": MessageLookupByLibrary.simpleMessage(
+            "Students fill in a written sheet of paper explaining what they did well and what they could improve on in their partner sequence."),
+        "c13_9_correct_1": MessageLookupByLibrary.simpleMessage(
+            "What improvements have you made to your performance? How do you know?"),
+        "c13_9_correct_2": MessageLookupByLibrary.simpleMessage(
+            "What can you show now that you couldn’t before the lesson?"),
+        "c13_9_question": MessageLookupByLibrary.simpleMessage(
+            "Physical/Move: Choose 2 questions related to physical movement improvement."),
+        "c13_9_title": MessageLookupByLibrary.simpleMessage("Physical/Move"),
+        "c13_9_wrong_1": MessageLookupByLibrary.simpleMessage(
+            "What new skills did you learn today? Can you show me what the correct technique looks like?"),
+        "c13_9_wrong_2": MessageLookupByLibrary.simpleMessage(
+            "What new tactics did you learn today? Can you tell me why they are important?"),
+        "c13_9_wrong_3": MessageLookupByLibrary.simpleMessage(
+            "Did you develop any aspects of your fitness today? How will that help you and how could you train that further outside of PE lessons?"),
+        "c13_9_wrong_4": MessageLookupByLibrary.simpleMessage(
+            "What component of fitness did you apply most effectively in today’s lesson and when? What impact did that have?"),
+        "c13_9_wrong_5": MessageLookupByLibrary.simpleMessage(
+            "Using no words, demonstrate the teaching points from today to a partner."),
+        "c13_9_wrong_6": MessageLookupByLibrary.simpleMessage(
+            "How would you rate yourself out of 10 for skilful movement today? What could improve your score?"),
+        "c13_9_wrong_7": MessageLookupByLibrary.simpleMessage(
+            "If you were the coach, how would you teach the skill?"),
+        "c13_9_wrong_8": MessageLookupByLibrary.simpleMessage(
+            "How can the movements/skills practiced in this lesson help you in other sports/activities?"),
+        "c13a1_finish": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have completed this activity. One more to go to finish the last challenge!"),
+        "c13a1_game_over": MessageLookupByLibrary.simpleMessage(
+            "❌ You\'ve lost all lives and the challenge will restart."),
+        "c13a1_intro1": MessageLookupByLibrary.simpleMessage(
+            "Welcome to challenge 13. You will assume the role of a PE teacher and develop a lesson for your students. I will provide you with some information about the characteristics of your class, the purpose of the lesson and the learning outcomes that will help you in developing the lesson. Be careful, a wrong answer causes the loss of a heart in the avatar\'s life bar. You have 20 hearts available. If you lose all the hearts, you will restart the challenge. Ready?"),
+        "c13a1_intro2": MessageLookupByLibrary.simpleMessage(
+            "This is a class of 30 children. They have some experience in gymnastics and dance from PE lessons in the early grades. They also have experience in traditional games, athletics, swimming, and winter sports. Within the class there is a normal range of abilities where approximately 1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view. Most of the children are motivated when doing PE although a few children lack confidence. The school has a small gymnasium with some moveable apparatus (benches, boxes) that the children can use to balance on as well as floor mats to work on. Music can be used if required to add stimulus to the sequences. Work cards with examples of partner balances are available. These have descriptions and images of partner balances along with suggestions of how to get into and out of the balances. The children will have already selected a partner and will have been working on developing travelling with a partner (mirroring and matching movements, moving in different directions) and jumping combinations (using different types of jumps and different shapes). They have started to put a sequence together which they will build on over the following weeks. The lesson aims to encourage students to explore a range of partner balances, modify them if possible and then link them together as part of their partner sequence. The learning outcomes for the lesson cover four areas:\n1.\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\n2.\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\n3.\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\n4.\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence."),
+        "c13a1_intro3": MessageLookupByLibrary.simpleMessage(
+            "Now you have all the information to start developing lessons for your students. If you want to consult the characteristics, the purpose, and the learning outcomes of the lesson, you can consult me with a tap, and I will provide you with all this information.\nA hand icon    appears to indicate that the user must tap the Buddy. By tapping the Buddy, the following list of features will appear:\n●\tClass of 30 children with experience in traditional games, athletics, swimming and winter sports.\n●\t1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view.\n●\tThe school has a small gymnasium with some moveable apparatus (benches, boxes) that the children can use to balance on as well as floor mats to work on. Music can be used if required. Work cards with examples of partner balances are available. These have descriptions and images of partner balances along with suggestions of how to get into and out of the balances.\n●\tThe children will have already selected a partner and will have been working with a partner on mirroring and matching movements, moving in different directions, and jumping combinations.\n●\tThe children have started to put a sequence together which they will build on over the following weeks. \n●\tThe lesson aims to encourage students to explore a range of partner balances, modify them if possible and then link them together as part of their partner sequence.\n●\tThe learning outcomes for the lesson cover four areas:\no\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\no\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\no\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\no\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence."),
+        "c13a1_mistakes": MessageLookupByLibrary.simpleMessage(
+            "You have selected %1 incorrect answers."),
+        "c13a1_stage": MessageLookupByLibrary.simpleMessage("Stage %1"),
+        "c13a1_well_done": MessageLookupByLibrary.simpleMessage(
+            "🎉 Well done! You\'ve selected the correct answers! 🎉"),
+        "c13a2_finish": MessageLookupByLibrary.simpleMessage(
+            "Well done! You have completed challenge 13 so you have collected your badge! Congratulations!!! You have completed all challenges!"),
+        "c13a2_intro": MessageLookupByLibrary.simpleMessage(
+            "You have to pass the last activity to pass the final challenge.  As I said previously, the learning outcomes for the lesson cover four areas:\n1.\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\n2.\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\n3.\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\n4.\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.\nChoose 2 questions for each category.\n"),
         "c1a1_5mistakesReset": MessageLookupByLibrary.simpleMessage(
             "You have made 5 mistakes, and the game will restart."),
         "c1a1_congrats": MessageLookupByLibrary.simpleMessage(
@@ -619,6 +841,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("This challenge is locked"),
         "challengeLockedMessage": MessageLookupByLibrary.simpleMessage(
             "This challenge is locked. Complete the previous challenges to unlock."),
+        "challengesTextFinishedAll": MessageLookupByLibrary.simpleMessage(
+            "Congratulations! You have completed all the challenges. Would you like to replay any of them?"),
         "challengesTextNormal": MessageLookupByLibrary.simpleMessage(
             "You have completed %1 out of %2 challenges so far. Would you like to try the next challenge?"),
         "challengesTextNormalInitial": MessageLookupByLibrary.simpleMessage(

@@ -440,6 +440,16 @@ class S {
     );
   }
 
+  /// `Congratulations! You have completed all the challenges. Would you like to replay any of them?`
+  String get challengesTextFinishedAll {
+    return Intl.message(
+      'Congratulations! You have completed all the challenges. Would you like to replay any of them?',
+      name: 'challengesTextFinishedAll',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `The next challenge has been unlocked.`
   String get nextChallengeUnlocked {
     return Intl.message(
@@ -4688,6 +4698,1276 @@ class S {
     return Intl.message(
       'The teacher plays in the team of the student with Asperger\'s Syndrome. Before throwing the ball, the student and the teacher must pass the ball to the teammate with Asperger\'s Syndrome.',
       name: 'c12a2_3_answer3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to challenge 13. You will assume the role of a PE teacher and develop a lesson for your students. I will provide you with some information about the characteristics of your class, the purpose of the lesson and the learning outcomes that will help you in developing the lesson. Be careful, a wrong answer causes the loss of a heart in the avatar's life bar. You have 20 hearts available. If you lose all the hearts, you will restart the challenge. Ready?`
+  String get c13a1_intro1 {
+    return Intl.message(
+      'Welcome to challenge 13. You will assume the role of a PE teacher and develop a lesson for your students. I will provide you with some information about the characteristics of your class, the purpose of the lesson and the learning outcomes that will help you in developing the lesson. Be careful, a wrong answer causes the loss of a heart in the avatar\'s life bar. You have 20 hearts available. If you lose all the hearts, you will restart the challenge. Ready?',
+      name: 'c13a1_intro1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This is a class of 30 children. They have some experience in gymnastics and dance from PE lessons in the early grades. They also have experience in traditional games, athletics, swimming, and winter sports. Within the class there is a normal range of abilities where approximately 1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view. Most of the children are motivated when doing PE although a few children lack confidence. The school has a small gymnasium with some moveable apparatus (benches, boxes) that the children can use to balance on as well as floor mats to work on. Music can be used if required to add stimulus to the sequences. Work cards with examples of partner balances are available. These have descriptions and images of partner balances along with suggestions of how to get into and out of the balances. The children will have already selected a partner and will have been working on developing travelling with a partner (mirroring and matching movements, moving in different directions) and jumping combinations (using different types of jumps and different shapes). They have started to put a sequence together which they will build on over the following weeks. The lesson aims to encourage students to explore a range of partner balances, modify them if possible and then link them together as part of their partner sequence. The learning outcomes for the lesson cover four areas:\n1.\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\n2.\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\n3.\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\n4.\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.`
+  String get c13a1_intro2 {
+    return Intl.message(
+      'This is a class of 30 children. They have some experience in gymnastics and dance from PE lessons in the early grades. They also have experience in traditional games, athletics, swimming, and winter sports. Within the class there is a normal range of abilities where approximately 1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view. Most of the children are motivated when doing PE although a few children lack confidence. The school has a small gymnasium with some moveable apparatus (benches, boxes) that the children can use to balance on as well as floor mats to work on. Music can be used if required to add stimulus to the sequences. Work cards with examples of partner balances are available. These have descriptions and images of partner balances along with suggestions of how to get into and out of the balances. The children will have already selected a partner and will have been working on developing travelling with a partner (mirroring and matching movements, moving in different directions) and jumping combinations (using different types of jumps and different shapes). They have started to put a sequence together which they will build on over the following weeks. The lesson aims to encourage students to explore a range of partner balances, modify them if possible and then link them together as part of their partner sequence. The learning outcomes for the lesson cover four areas:\n1.\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\n2.\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\n3.\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\n4.\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.',
+      name: 'c13a1_intro2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Now you have all the information to start developing lessons for your students. If you want to consult the characteristics, the purpose, and the learning outcomes of the lesson, you can consult me with a tap, and I will provide you with all this information.\nA hand icon    appears to indicate that the user must tap the Buddy. By tapping the Buddy, the following list of features will appear:\n●\tClass of 30 children with experience in traditional games, athletics, swimming and winter sports.\n●\t1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view.\n●\tThe school has a small gymnasium with some moveable apparatus (benches, boxes) that the children can use to balance on as well as floor mats to work on. Music can be used if required. Work cards with examples of partner balances are available. These have descriptions and images of partner balances along with suggestions of how to get into and out of the balances.\n●\tThe children will have already selected a partner and will have been working with a partner on mirroring and matching movements, moving in different directions, and jumping combinations.\n●\tThe children have started to put a sequence together which they will build on over the following weeks. \n●\tThe lesson aims to encourage students to explore a range of partner balances, modify them if possible and then link them together as part of their partner sequence.\n●\tThe learning outcomes for the lesson cover four areas:\no\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\no\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\no\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\no\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.`
+  String get c13a1_intro3 {
+    return Intl.message(
+      'Now you have all the information to start developing lessons for your students. If you want to consult the characteristics, the purpose, and the learning outcomes of the lesson, you can consult me with a tap, and I will provide you with all this information.\nA hand icon    appears to indicate that the user must tap the Buddy. By tapping the Buddy, the following list of features will appear:\n●\tClass of 30 children with experience in traditional games, athletics, swimming and winter sports.\n●\t1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view.\n●\tThe school has a small gymnasium with some moveable apparatus (benches, boxes) that the children can use to balance on as well as floor mats to work on. Music can be used if required. Work cards with examples of partner balances are available. These have descriptions and images of partner balances along with suggestions of how to get into and out of the balances.\n●\tThe children will have already selected a partner and will have been working with a partner on mirroring and matching movements, moving in different directions, and jumping combinations.\n●\tThe children have started to put a sequence together which they will build on over the following weeks. \n●\tThe lesson aims to encourage students to explore a range of partner balances, modify them if possible and then link them together as part of their partner sequence.\n●\tThe learning outcomes for the lesson cover four areas:\no\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\no\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\no\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\no\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.',
+      name: 'c13a1_intro3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `🎉 Well done! You've selected the correct answers! 🎉`
+  String get c13a1_well_done {
+    return Intl.message(
+      '🎉 Well done! You\'ve selected the correct answers! 🎉',
+      name: 'c13a1_well_done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have selected %1 incorrect answers.`
+  String get c13a1_mistakes {
+    return Intl.message(
+      'You have selected %1 incorrect answers.',
+      name: 'c13a1_mistakes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `❌ You've lost all lives and the challenge will restart.`
+  String get c13a1_game_over {
+    return Intl.message(
+      '❌ You\'ve lost all lives and the challenge will restart.',
+      name: 'c13a1_game_over',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stage %1`
+  String get c13a1_stage {
+    return Intl.message(
+      'Stage %1',
+      name: 'c13a1_stage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have completed this activity. One more to go to finish the last challenge!`
+  String get c13a1_finish {
+    return Intl.message(
+      'Well done! You have completed this activity. One more to go to finish the last challenge!',
+      name: 'c13a1_finish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Introduction`
+  String get c13_1_title {
+    return Intl.message(
+      'Introduction',
+      name: 'c13_1_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Based on the information provided, choose 2 skills/qualities you are also focusing on developing:`
+  String get c13_1_question {
+    return Intl.message(
+      'Based on the information provided, choose 2 skills/qualities you are also focusing on developing:',
+      name: 'c13_1_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resilience`
+  String get c13_1_correct_1 {
+    return Intl.message(
+      'Resilience',
+      name: 'c13_1_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Independence`
+  String get c13_1_correct_2 {
+    return Intl.message(
+      'Independence',
+      name: 'c13_1_correct_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Communication`
+  String get c13_1_correct_3 {
+    return Intl.message(
+      'Communication',
+      name: 'c13_1_correct_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Problem-Solving`
+  String get c13_1_wrong_1 {
+    return Intl.message(
+      'Problem-Solving',
+      name: 'c13_1_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Emotional Intelligence`
+  String get c13_1_wrong_2 {
+    return Intl.message(
+      'Emotional Intelligence',
+      name: 'c13_1_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Leadership`
+  String get c13_1_wrong_3 {
+    return Intl.message(
+      'Leadership',
+      name: 'c13_1_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Evaluation`
+  String get c13_1_wrong_4 {
+    return Intl.message(
+      'Evaluation',
+      name: 'c13_1_wrong_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sportspersonship`
+  String get c13_1_wrong_5 {
+    return Intl.message(
+      'Sportspersonship',
+      name: 'c13_1_wrong_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Self-confidence`
+  String get c13_1_wrong_6 {
+    return Intl.message(
+      'Self-confidence',
+      name: 'c13_1_wrong_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teaching styles or models`
+  String get c13_2_title {
+    return Intl.message(
+      'Teaching styles or models',
+      name: 'c13_2_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teaching Styles or Models: Based on Mosston’s Styles, choose 3 Styles that you could use to achieve the purpose of the lesson.`
+  String get c13_2_question {
+    return Intl.message(
+      'Teaching Styles or Models: Based on Mosston’s Styles, choose 3 Styles that you could use to achieve the purpose of the lesson.',
+      name: 'c13_2_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reciprocal`
+  String get c13_2_correct_1 {
+    return Intl.message(
+      'Reciprocal',
+      name: 'c13_2_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Self-Check`
+  String get c13_2_correct_2 {
+    return Intl.message(
+      'Self-Check',
+      name: 'c13_2_correct_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Divergent Discovery`
+  String get c13_2_correct_3 {
+    return Intl.message(
+      'Divergent Discovery',
+      name: 'c13_2_correct_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learner Designed`
+  String get c13_2_correct_4 {
+    return Intl.message(
+      'Learner Designed',
+      name: 'c13_2_correct_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Command`
+  String get c13_2_wrong_1 {
+    return Intl.message(
+      'Command',
+      name: 'c13_2_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Practice`
+  String get c13_2_wrong_2 {
+    return Intl.message(
+      'Practice',
+      name: 'c13_2_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inclusion`
+  String get c13_2_wrong_3 {
+    return Intl.message(
+      'Inclusion',
+      name: 'c13_2_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guided Discovery`
+  String get c13_2_wrong_4 {
+    return Intl.message(
+      'Guided Discovery',
+      name: 'c13_2_wrong_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Convergent Discovery`
+  String get c13_2_wrong_5 {
+    return Intl.message(
+      'Convergent Discovery',
+      name: 'c13_2_wrong_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learner Initiated`
+  String get c13_2_wrong_6 {
+    return Intl.message(
+      'Learner Initiated',
+      name: 'c13_2_wrong_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Self-Teach`
+  String get c13_2_wrong_7 {
+    return Intl.message(
+      'Self-Teach',
+      name: 'c13_2_wrong_7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teaching models`
+  String get c13_3_title {
+    return Intl.message(
+      'Teaching models',
+      name: 'c13_3_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teaching models: based on the aim of the lesson, choose 1 teaching model to enhance students’ physical literacy.`
+  String get c13_3_question {
+    return Intl.message(
+      'Teaching models: based on the aim of the lesson, choose 1 teaching model to enhance students’ physical literacy.',
+      name: 'c13_3_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cooperative Education`
+  String get c13_3_correct_1 {
+    return Intl.message(
+      'Cooperative Education',
+      name: 'c13_3_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sport Education`
+  String get c13_3_wrong_1 {
+    return Intl.message(
+      'Sport Education',
+      name: 'c13_3_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Teaching Personal Social Responsibility`
+  String get c13_3_wrong_2 {
+    return Intl.message(
+      'Teaching Personal Social Responsibility',
+      name: 'c13_3_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Health Based PE`
+  String get c13_3_wrong_3 {
+    return Intl.message(
+      'Health Based PE',
+      name: 'c13_3_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dare`
+  String get c13_4_title {
+    return Intl.message(
+      'Dare',
+      name: 'c13_4_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dare: based on the aim of the lesson and the teaching model adopted, choose 1 dare that can help the students improve their skills.`
+  String get c13_4_question {
+    return Intl.message(
+      'Dare: based on the aim of the lesson and the teaching model adopted, choose 1 dare that can help the students improve their skills.',
+      name: 'c13_4_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children can choose the balances they want to do and how they link them into a sequence.`
+  String get c13_4_correct_1 {
+    return Intl.message(
+      'Children can choose the balances they want to do and how they link them into a sequence.',
+      name: 'c13_4_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are all challenged to do the same balances and sequences.`
+  String get c13_4_wrong_1 {
+    return Intl.message(
+      'Children are all challenged to do the same balances and sequences.',
+      name: 'c13_4_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are challenged to do the same balances but choose how to link them into a sequence.`
+  String get c13_4_wrong_2 {
+    return Intl.message(
+      'Children are challenged to do the same balances but choose how to link them into a sequence.',
+      name: 'c13_4_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Support`
+  String get c13_5_title {
+    return Intl.message(
+      'Support',
+      name: 'c13_5_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Support: based on the aim of the lesson and the teaching model adopted, choose 1 support that can help the students to enhance their skills.`
+  String get c13_5_question {
+    return Intl.message(
+      'Support: based on the aim of the lesson and the teaching model adopted, choose 1 support that can help the students to enhance their skills.',
+      name: 'c13_5_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Children are supported by themselves and worksheets that have pictures and text to describe the balances and how they might be linked together.`
+  String get c13_5_correct_1 {
+    return Intl.message(
+      'Children are supported by themselves and worksheets that have pictures and text to describe the balances and how they might be linked together.',
+      name: 'c13_5_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The Teacher moves around the class to provide support and advice where appropriate.`
+  String get c13_5_wrong_1 {
+    return Intl.message(
+      'The Teacher moves around the class to provide support and advice where appropriate.',
+      name: 'c13_5_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Some students are nominated as support and they work with a group, providing advice.`
+  String get c13_5_wrong_2 {
+    return Intl.message(
+      'Some students are nominated as support and they work with a group, providing advice.',
+      name: 'c13_5_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Aspects`
+  String get c13_6_title {
+    return Intl.message(
+      'Aspects',
+      name: 'c13_6_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Aspects: What would you be most likely to modify? Choose 2 elements that you can modify.`
+  String get c13_6_question {
+    return Intl.message(
+      'Aspects: What would you be most likely to modify? Choose 2 elements that you can modify.',
+      name: 'c13_6_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activities`
+  String get c13_6_correct_1 {
+    return Intl.message(
+      'Activities',
+      name: 'c13_6_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Equipment`
+  String get c13_6_correct_2 {
+    return Intl.message(
+      'Equipment',
+      name: 'c13_6_correct_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Spaces`
+  String get c13_6_wrong_1 {
+    return Intl.message(
+      'Spaces',
+      name: 'c13_6_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `People`
+  String get c13_6_wrong_2 {
+    return Intl.message(
+      'People',
+      name: 'c13_6_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conditions`
+  String get c13_6_wrong_3 {
+    return Intl.message(
+      'Conditions',
+      name: 'c13_6_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time`
+  String get c13_6_wrong_4 {
+    return Intl.message(
+      'Time',
+      name: 'c13_6_wrong_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Priority`
+  String get c13_7_title {
+    return Intl.message(
+      'Priority',
+      name: 'c13_7_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Priority: What would be your priority? Choose two priorities.`
+  String get c13_7_question {
+    return Intl.message(
+      'Priority: What would be your priority? Choose two priorities.',
+      name: 'c13_7_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maximum participation`
+  String get c13_7_correct_1 {
+    return Intl.message(
+      'Maximum participation',
+      name: 'c13_7_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Involvement`
+  String get c13_7_correct_2 {
+    return Intl.message(
+      'Involvement',
+      name: 'c13_7_correct_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get c13_7_correct_3 {
+    return Intl.message(
+      'Success',
+      name: 'c13_7_correct_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Safety`
+  String get c13_7_wrong_1 {
+    return Intl.message(
+      'Safety',
+      name: 'c13_7_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learning`
+  String get c13_7_wrong_2 {
+    return Intl.message(
+      'Learning',
+      name: 'c13_7_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enjoyment`
+  String get c13_7_wrong_3 {
+    return Intl.message(
+      'Enjoyment',
+      name: 'c13_7_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Assessment strategy`
+  String get c13_8_title {
+    return Intl.message(
+      'Assessment strategy',
+      name: 'c13_8_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Assessment strategy: choose the correct assessment strategy to evaluate your students' activity.`
+  String get c13_8_question {
+    return Intl.message(
+      'Assessment strategy: choose the correct assessment strategy to evaluate your students\' activity.',
+      name: 'c13_8_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At the end of the lesson, the children are split into two. Half of the class performs their sequence and a pair from the observers provides feedback on what they did well and what they could improve, then the other half performs their sequence and has feedback provided by a pair from the observers.`
+  String get c13_8_correct_1 {
+    return Intl.message(
+      'At the end of the lesson, the children are split into two. Half of the class performs their sequence and a pair from the observers provides feedback on what they did well and what they could improve, then the other half performs their sequence and has feedback provided by a pair from the observers.',
+      name: 'c13_8_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At the end of the lesson each pair has to perform their partner sequence in front of everyone and the teacher gives them a mark out of 10.`
+  String get c13_8_wrong_1 {
+    return Intl.message(
+      'At the end of the lesson each pair has to perform their partner sequence in front of everyone and the teacher gives them a mark out of 10.',
+      name: 'c13_8_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Students fill in a written sheet of paper explaining what they did well and what they could improve on in their partner sequence.`
+  String get c13_8_wrong_2 {
+    return Intl.message(
+      'Students fill in a written sheet of paper explaining what they did well and what they could improve on in their partner sequence.',
+      name: 'c13_8_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have to pass the last activity to pass the final challenge.  As I said previously, the learning outcomes for the lesson cover four areas:\n1.\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\n2.\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\n3.\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\n4.\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.\nChoose 2 questions for each category.\n`
+  String get c13a2_intro {
+    return Intl.message(
+      'You have to pass the last activity to pass the final challenge.  As I said previously, the learning outcomes for the lesson cover four areas:\n1.\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\n2.\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\n3.\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\n4.\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.\nChoose 2 questions for each category.\n',
+      name: 'c13a2_intro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Well done! You have completed challenge 13 so you have collected your badge! Congratulations!!! You have completed all challenges!`
+  String get c13a2_finish {
+    return Intl.message(
+      'Well done! You have completed challenge 13 so you have collected your badge! Congratulations!!! You have completed all challenges!',
+      name: 'c13a2_finish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical/Move`
+  String get c13_9_title {
+    return Intl.message(
+      'Physical/Move',
+      name: 'c13_9_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical/Move: Choose 2 questions related to physical movement improvement.`
+  String get c13_9_question {
+    return Intl.message(
+      'Physical/Move: Choose 2 questions related to physical movement improvement.',
+      name: 'c13_9_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What improvements have you made to your performance? How do you know?`
+  String get c13_9_correct_1 {
+    return Intl.message(
+      'What improvements have you made to your performance? How do you know?',
+      name: 'c13_9_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What can you show now that you couldn’t before the lesson?`
+  String get c13_9_correct_2 {
+    return Intl.message(
+      'What can you show now that you couldn’t before the lesson?',
+      name: 'c13_9_correct_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What new skills did you learn today? Can you show me what the correct technique looks like?`
+  String get c13_9_wrong_1 {
+    return Intl.message(
+      'What new skills did you learn today? Can you show me what the correct technique looks like?',
+      name: 'c13_9_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What new tactics did you learn today? Can you tell me why they are important?`
+  String get c13_9_wrong_2 {
+    return Intl.message(
+      'What new tactics did you learn today? Can you tell me why they are important?',
+      name: 'c13_9_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Did you develop any aspects of your fitness today? How will that help you and how could you train that further outside of PE lessons?`
+  String get c13_9_wrong_3 {
+    return Intl.message(
+      'Did you develop any aspects of your fitness today? How will that help you and how could you train that further outside of PE lessons?',
+      name: 'c13_9_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What component of fitness did you apply most effectively in today’s lesson and when? What impact did that have?`
+  String get c13_9_wrong_4 {
+    return Intl.message(
+      'What component of fitness did you apply most effectively in today’s lesson and when? What impact did that have?',
+      name: 'c13_9_wrong_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using no words, demonstrate the teaching points from today to a partner.`
+  String get c13_9_wrong_5 {
+    return Intl.message(
+      'Using no words, demonstrate the teaching points from today to a partner.',
+      name: 'c13_9_wrong_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How would you rate yourself out of 10 for skilful movement today? What could improve your score?`
+  String get c13_9_wrong_6 {
+    return Intl.message(
+      'How would you rate yourself out of 10 for skilful movement today? What could improve your score?',
+      name: 'c13_9_wrong_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you were the coach, how would you teach the skill?`
+  String get c13_9_wrong_7 {
+    return Intl.message(
+      'If you were the coach, how would you teach the skill?',
+      name: 'c13_9_wrong_7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How can the movements/skills practiced in this lesson help you in other sports/activities?`
+  String get c13_9_wrong_8 {
+    return Intl.message(
+      'How can the movements/skills practiced in this lesson help you in other sports/activities?',
+      name: 'c13_9_wrong_8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Affective/Feel`
+  String get c13_10_title {
+    return Intl.message(
+      'Affective/Feel',
+      name: 'c13_10_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Affective/Feel: Choose 2 questions related to emotional experiences during the lesson.`
+  String get c13_10_question {
+    return Intl.message(
+      'Affective/Feel: Choose 2 questions related to emotional experiences during the lesson.',
+      name: 'c13_10_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How did it feel working with others today?`
+  String get c13_10_correct_1 {
+    return Intl.message(
+      'How did it feel working with others today?',
+      name: 'c13_10_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How confident do you feel about participating in more of this activity?`
+  String get c13_10_correct_2 {
+    return Intl.message(
+      'How confident do you feel about participating in more of this activity?',
+      name: 'c13_10_correct_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What did you like most about today’s lesson? What was the best moment?`
+  String get c13_10_wrong_1 {
+    return Intl.message(
+      'What did you like most about today’s lesson? What was the best moment?',
+      name: 'c13_10_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Were there any elements of the lesson that you did not enjoy?`
+  String get c13_10_wrong_2 {
+    return Intl.message(
+      'Were there any elements of the lesson that you did not enjoy?',
+      name: 'c13_10_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What do you wish we had done differently or more of or less of?`
+  String get c13_10_wrong_3 {
+    return Intl.message(
+      'What do you wish we had done differently or more of or less of?',
+      name: 'c13_10_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What element of your PE lesson are you most proud of?`
+  String get c13_10_wrong_4 {
+    return Intl.message(
+      'What element of your PE lesson are you most proud of?',
+      name: 'c13_10_wrong_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you could repeat this lesson, how could you have made it more enjoyable?`
+  String get c13_10_wrong_5 {
+    return Intl.message(
+      'If you could repeat this lesson, how could you have made it more enjoyable?',
+      name: 'c13_10_wrong_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Following on from today's lesson, what would you like to learn next?`
+  String get c13_10_wrong_6 {
+    return Intl.message(
+      'Following on from today\'s lesson, what would you like to learn next?',
+      name: 'c13_10_wrong_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you feel valued in your team/group?`
+  String get c13_10_wrong_7 {
+    return Intl.message(
+      'Do you feel valued in your team/group?',
+      name: 'c13_10_wrong_7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How would you score this lesson out of 10 for fun? What could be done to improve that score?`
+  String get c13_10_wrong_8 {
+    return Intl.message(
+      'How would you score this lesson out of 10 for fun? What could be done to improve that score?',
+      name: 'c13_10_wrong_8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When did you demonstrate the most confidence in today’s lesson?`
+  String get c13_10_wrong_9 {
+    return Intl.message(
+      'When did you demonstrate the most confidence in today’s lesson?',
+      name: 'c13_10_wrong_9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When did you feel out of your comfort zone today?`
+  String get c13_10_wrong_10 {
+    return Intl.message(
+      'When did you feel out of your comfort zone today?',
+      name: 'c13_10_wrong_10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Did you feel safe in today’s lesson?`
+  String get c13_10_wrong_11 {
+    return Intl.message(
+      'Did you feel safe in today’s lesson?',
+      name: 'c13_10_wrong_11',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cognitive/Think`
+  String get c13_11_title {
+    return Intl.message(
+      'Cognitive/Think',
+      name: 'c13_11_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cognitive/Think: Choose 2 questions related to cognitive thinking and reflection.`
+  String get c13_11_question {
+    return Intl.message(
+      'Cognitive/Think: Choose 2 questions related to cognitive thinking and reflection.',
+      name: 'c13_11_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What do you need to work on most to improve further?`
+  String get c13_11_correct_1 {
+    return Intl.message(
+      'What do you need to work on most to improve further?',
+      name: 'c13_11_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What different roles could you fulfil in the lesson and what skills are needed for each?`
+  String get c13_11_correct_2 {
+    return Intl.message(
+      'What different roles could you fulfil in the lesson and what skills are needed for each?',
+      name: 'c13_11_correct_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What was the most valuable thing you learnt today? How will you use that learning in the future?`
+  String get c13_11_wrong_1 {
+    return Intl.message(
+      'What was the most valuable thing you learnt today? How will you use that learning in the future?',
+      name: 'c13_11_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How could you do it differently next time?`
+  String get c13_11_wrong_2 {
+    return Intl.message(
+      'How could you do it differently next time?',
+      name: 'c13_11_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the most important thing for you to remember from today? How will you remember it?`
+  String get c13_11_wrong_3 {
+    return Intl.message(
+      'What is the most important thing for you to remember from today? How will you remember it?',
+      name: 'c13_11_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is there anything you can do before our next lesson to develop further or practice what we have done today?`
+  String get c13_11_wrong_4 {
+    return Intl.message(
+      'Is there anything you can do before our next lesson to develop further or practice what we have done today?',
+      name: 'c13_11_wrong_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is there an aspect of this activity you would like to know more about?`
+  String get c13_11_wrong_5 {
+    return Intl.message(
+      'Is there an aspect of this activity you would like to know more about?',
+      name: 'c13_11_wrong_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What rules or constraints could you add to make the lesson harder for you?`
+  String get c13_11_wrong_6 {
+    return Intl.message(
+      'What rules or constraints could you add to make the lesson harder for you?',
+      name: 'c13_11_wrong_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What could you do to make the lesson easier for you?`
+  String get c13_11_wrong_7 {
+    return Intl.message(
+      'What could you do to make the lesson easier for you?',
+      name: 'c13_11_wrong_7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What will you do to be physically active between now and your next lesson?`
+  String get c13_11_wrong_8 {
+    return Intl.message(
+      'What will you do to be physically active between now and your next lesson?',
+      name: 'c13_11_wrong_8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What would you like to find out more about?`
+  String get c13_11_wrong_9 {
+    return Intl.message(
+      'What would you like to find out more about?',
+      name: 'c13_11_wrong_9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you were to teach today’s lesson, how might you do it?`
+  String get c13_11_wrong_10 {
+    return Intl.message(
+      'If you were to teach today’s lesson, how might you do it?',
+      name: 'c13_11_wrong_10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Social/Connect`
+  String get c13_12_title {
+    return Intl.message(
+      'Social/Connect',
+      name: 'c13_12_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Social/Connect: Choose 2 questions related to social interactions during the lesson.`
+  String get c13_12_question {
+    return Intl.message(
+      'Social/Connect: Choose 2 questions related to social interactions during the lesson.',
+      name: 'c13_12_question',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How well did you work with others?`
+  String get c13_12_correct_1 {
+    return Intl.message(
+      'How well did you work with others?',
+      name: 'c13_12_correct_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Who showed the most creativity today? What impact did it have?`
+  String get c13_12_correct_2 {
+    return Intl.message(
+      'Who showed the most creativity today? What impact did it have?',
+      name: 'c13_12_correct_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Who was the MVP (most valuable participant)? Why?`
+  String get c13_12_wrong_1 {
+    return Intl.message(
+      'Who was the MVP (most valuable participant)? Why?',
+      name: 'c13_12_wrong_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Who demonstrated the best leadership characteristics in today’s lesson? How did they do this?`
+  String get c13_12_wrong_2 {
+    return Intl.message(
+      'Who demonstrated the best leadership characteristics in today’s lesson? How did they do this?',
+      name: 'c13_12_wrong_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Did you display kindness and respect for others during the lesson? If so, how?`
+  String get c13_12_wrong_3 {
+    return Intl.message(
+      'Did you display kindness and respect for others during the lesson? If so, how?',
+      name: 'c13_12_wrong_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How did relationships with other students impact your progress in this lesson?`
+  String get c13_12_wrong_4 {
+    return Intl.message(
+      'How did relationships with other students impact your progress in this lesson?',
+      name: 'c13_12_wrong_4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How would you teach this lesson to a friend?`
+  String get c13_12_wrong_5 {
+    return Intl.message(
+      'How would you teach this lesson to a friend?',
+      name: 'c13_12_wrong_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Describe a moment in the lesson where you helped another student make progress.`
+  String get c13_12_wrong_6 {
+    return Intl.message(
+      'Describe a moment in the lesson where you helped another student make progress.',
+      name: 'c13_12_wrong_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How did you contribute towards a shared goal today?`
+  String get c13_12_wrong_7 {
+    return Intl.message(
+      'How did you contribute towards a shared goal today?',
+      name: 'c13_12_wrong_7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How well did you communicate with others today?`
+  String get c13_12_wrong_8 {
+    return Intl.message(
+      'How well did you communicate with others today?',
+      name: 'c13_12_wrong_8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Who did you work well with today? Why?`
+  String get c13_12_wrong_9 {
+    return Intl.message(
+      'Who did you work well with today? Why?',
+      name: 'c13_12_wrong_9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Where can you access more opportunities to play or do what we learnt today?`
+  String get c13_12_wrong_10 {
+    return Intl.message(
+      'Where can you access more opportunities to play or do what we learnt today?',
+      name: 'c13_12_wrong_10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Who is your role model in this class? Why?`
+  String get c13_12_wrong_11 {
+    return Intl.message(
+      'Who is your role model in this class? Why?',
+      name: 'c13_12_wrong_11',
       desc: '',
       args: [],
     );

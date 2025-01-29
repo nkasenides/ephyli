@@ -19,31 +19,29 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../utils/pref_utils.dart';
 
-class ActivityC13A1 extends StatefulWidget {
+class ActivityC13A2 extends StatefulWidget {
   @override
-  _ActivityC13A1State createState() => _ActivityC13A1State();
+  _ActivityC13A2State createState() => _ActivityC13A2State();
 }
 
-enum C13A1Stage {
-  introduction1,
-  introduction2,
-  introduction3,
+enum C13A2Stage {
+  introduction,
   activity,
   finish
 }
 
-class _ActivityC13A1State extends State<ActivityC13A1> {
+class _ActivityC13A2State extends State<ActivityC13A2> {
 
 
-  C13A1Stage stage = C13A1Stage.introduction1;
-  final String activityID = "c13a1";
+  C13A2Stage stage = C13A2Stage.introduction;
+  final String activityID = "c13a2";
   late Activity activity;
   late SharedPreferences prefs;
   late Future<void> future;
 
   /**activity data**/
   int currentStage = 0;
-  int lives = 20;
+  late int lives;
   Set<String> selectedAnswers = {}; // Track selected answers
 
   // List of stages with questions, correct and wrong answers
@@ -52,112 +50,83 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
   initializeStages() {
     stages = [
       {
-        "title": AppLocalizations.of(context)!.c13_1_title,
-        "question": AppLocalizations.of(context)!.c13_1_question,
+        "title": AppLocalizations.of(context)!.c13_9_title,
+        "question": AppLocalizations.of(context)!.c13_9_question,
         "correct": [
-          AppLocalizations.of(context)!.c13_1_correct_1,
-          AppLocalizations.of(context)!.c13_1_correct_2,
-          AppLocalizations.of(context)!.c13_1_correct_3,
+          AppLocalizations.of(context)!.c13_9_correct_1,
+          AppLocalizations.of(context)!.c13_9_correct_2,
         ],
         "wrong": [
-          AppLocalizations.of(context)!.c13_1_wrong_1,
-          AppLocalizations.of(context)!.c13_1_wrong_2,
-          AppLocalizations.of(context)!.c13_1_wrong_3,
-          AppLocalizations.of(context)!.c13_1_wrong_4,
-          AppLocalizations.of(context)!.c13_1_wrong_5,
-          AppLocalizations.of(context)!.c13_1_wrong_6,
+          AppLocalizations.of(context)!.c13_9_wrong_1,
+          AppLocalizations.of(context)!.c13_9_wrong_2,
+          AppLocalizations.of(context)!.c13_9_wrong_3,
+          AppLocalizations.of(context)!.c13_9_wrong_4,
+          AppLocalizations.of(context)!.c13_9_wrong_5,
+          AppLocalizations.of(context)!.c13_9_wrong_6,
+          AppLocalizations.of(context)!.c13_9_wrong_7,
+          AppLocalizations.of(context)!.c13_9_wrong_8,
         ]
       },
       {
-        "title": AppLocalizations.of(context)!.c13_2_title,
-        "question": AppLocalizations.of(context)!.c13_2_question,
+        "title": AppLocalizations.of(context)!.c13_10_title,
+        "question": AppLocalizations.of(context)!.c13_10_question,
         "correct": [
-          AppLocalizations.of(context)!.c13_2_correct_1,
-          AppLocalizations.of(context)!.c13_2_correct_2,
-          AppLocalizations.of(context)!.c13_2_correct_3,
-          AppLocalizations.of(context)!.c13_2_correct_4,
+          AppLocalizations.of(context)!.c13_10_correct_1,
+          AppLocalizations.of(context)!.c13_10_correct_2,
         ],
         "wrong": [
-          AppLocalizations.of(context)!.c13_2_wrong_1,
-          AppLocalizations.of(context)!.c13_2_wrong_2,
-          AppLocalizations.of(context)!.c13_2_wrong_3,
-          AppLocalizations.of(context)!.c13_2_wrong_4,
-          AppLocalizations.of(context)!.c13_2_wrong_5,
-          AppLocalizations.of(context)!.c13_2_wrong_6,
-          AppLocalizations.of(context)!.c13_2_wrong_7,
+          AppLocalizations.of(context)!.c13_10_wrong_1,
+          AppLocalizations.of(context)!.c13_10_wrong_2,
+          AppLocalizations.of(context)!.c13_10_wrong_3,
+          AppLocalizations.of(context)!.c13_10_wrong_4,
+          AppLocalizations.of(context)!.c13_10_wrong_5,
+          AppLocalizations.of(context)!.c13_10_wrong_6,
+          AppLocalizations.of(context)!.c13_10_wrong_7,
+          AppLocalizations.of(context)!.c13_10_wrong_8,
+          AppLocalizations.of(context)!.c13_10_wrong_9,
+          AppLocalizations.of(context)!.c13_10_wrong_10,
+          AppLocalizations.of(context)!.c13_10_wrong_11,
         ]
       },
       {
-        "title": AppLocalizations.of(context)!.c13_3_title,
-        "question": AppLocalizations.of(context)!.c13_3_question,
+        "title": AppLocalizations.of(context)!.c13_11_title,
+        "question": AppLocalizations.of(context)!.c13_11_question,
         "correct": [
-          AppLocalizations.of(context)!.c13_3_correct_1,
+          AppLocalizations.of(context)!.c13_11_correct_1,
+          AppLocalizations.of(context)!.c13_11_correct_2,
         ],
         "wrong": [
-          AppLocalizations.of(context)!.c13_3_wrong_1,
-          AppLocalizations.of(context)!.c13_3_wrong_2,
-          AppLocalizations.of(context)!.c13_3_wrong_3,
+          AppLocalizations.of(context)!.c13_11_wrong_1,
+          AppLocalizations.of(context)!.c13_11_wrong_2,
+          AppLocalizations.of(context)!.c13_11_wrong_3,
+          AppLocalizations.of(context)!.c13_11_wrong_4,
+          AppLocalizations.of(context)!.c13_11_wrong_5,
+          AppLocalizations.of(context)!.c13_11_wrong_6,
+          AppLocalizations.of(context)!.c13_11_wrong_7,
+          AppLocalizations.of(context)!.c13_11_wrong_8,
+          AppLocalizations.of(context)!.c13_11_wrong_9,
+          AppLocalizations.of(context)!.c13_11_wrong_10,
         ]
       },
       {
-        "title": AppLocalizations.of(context)!.c13_4_title,
-        "question": AppLocalizations.of(context)!.c13_4_question,
+        "title": AppLocalizations.of(context)!.c13_12_title,
+        "question": AppLocalizations.of(context)!.c13_12_question,
         "correct": [
-          AppLocalizations.of(context)!.c13_4_correct_1,
+          AppLocalizations.of(context)!.c13_12_correct_1,
+          AppLocalizations.of(context)!.c13_12_correct_2,
         ],
         "wrong": [
-          AppLocalizations.of(context)!.c13_4_wrong_1,
-          AppLocalizations.of(context)!.c13_4_wrong_2,
-        ]
-      },
-      {
-        "title": AppLocalizations.of(context)!.c13_5_title,
-        "question": AppLocalizations.of(context)!.c13_5_question,
-        "correct": [
-          AppLocalizations.of(context)!.c13_5_correct_1,
-        ],
-        "wrong": [
-          AppLocalizations.of(context)!.c13_5_wrong_1,
-          AppLocalizations.of(context)!.c13_5_wrong_2,
-        ]
-      },
-      {
-        "title": AppLocalizations.of(context)!.c13_6_title,
-        "question": AppLocalizations.of(context)!.c13_6_question,
-        "correct": [
-          AppLocalizations.of(context)!.c13_6_correct_1,
-          AppLocalizations.of(context)!.c13_6_correct_2,
-        ],
-        "wrong": [
-          AppLocalizations.of(context)!.c13_6_wrong_1,
-          AppLocalizations.of(context)!.c13_6_wrong_2,
-          AppLocalizations.of(context)!.c13_6_wrong_3,
-          AppLocalizations.of(context)!.c13_6_wrong_4,
-        ]
-      },
-      {
-        "title": AppLocalizations.of(context)!.c13_7_title,
-        "question": AppLocalizations.of(context)!.c13_7_question,
-        "correct": [
-          AppLocalizations.of(context)!.c13_7_correct_1,
-          AppLocalizations.of(context)!.c13_7_correct_2,
-          AppLocalizations.of(context)!.c13_7_correct_3,
-        ],
-        "wrong": [
-          AppLocalizations.of(context)!.c13_7_wrong_1,
-          AppLocalizations.of(context)!.c13_7_wrong_2,
-          AppLocalizations.of(context)!.c13_7_wrong_3,
-        ]
-      },
-      {
-        "title": AppLocalizations.of(context)!.c13_8_title,
-        "question": AppLocalizations.of(context)!.c13_8_question,
-        "correct": [
-          AppLocalizations.of(context)!.c13_8_correct_1,
-        ],
-        "wrong": [
-          AppLocalizations.of(context)!.c13_8_wrong_1,
-          AppLocalizations.of(context)!.c13_8_wrong_2,
+          AppLocalizations.of(context)!.c13_12_wrong_1,
+          AppLocalizations.of(context)!.c13_12_wrong_2,
+          AppLocalizations.of(context)!.c13_12_wrong_3,
+          AppLocalizations.of(context)!.c13_12_wrong_4,
+          AppLocalizations.of(context)!.c13_12_wrong_5,
+          AppLocalizations.of(context)!.c13_12_wrong_6,
+          AppLocalizations.of(context)!.c13_12_wrong_7,
+          AppLocalizations.of(context)!.c13_12_wrong_8,
+          AppLocalizations.of(context)!.c13_12_wrong_9,
+          AppLocalizations.of(context)!.c13_12_wrong_10,
+          AppLocalizations.of(context)!.c13_12_wrong_11,
         ]
       },
     ];
@@ -200,7 +169,7 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
           selectedAnswers.clear(); // Clear selection for the next stage
         } else {
           setState(() {
-            stage = C13A1Stage.finish;
+            stage = C13A2Stage.finish;
           });
         }
       }
@@ -238,6 +207,7 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
 
   Future<void> loadData() async {
     prefs = await SharedPreferences.getInstance();
+    lives = prefs.getInt(PrefUtils.remaining_lives_c13) ?? 20;
     activity = Activity.activities[activityID]!;
   }
 
@@ -253,43 +223,14 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
     super.dispose();
   }
 
-  Widget activityIntroView1() {
+  Widget activityIntroView() {
     return InstructionsWidget(
-        key: const Key("c13a1_intro1"),
         prefs,
-        AppLocalizations.of(context)!.c13a1_intro1,
+        AppLocalizations.of(context)!.c13a2_intro,
         AppLocalizations.of(context)!.ready_letsgo,
         () {
           setState(() {
-            stage = C13A1Stage.introduction2;
-          });
-        }
-    );
-  }
-
-  Widget activityIntroView2() {
-    return InstructionsWidget(
-        key: const Key("c13a1_intro2"),
-        prefs,
-        AppLocalizations.of(context)!.c13a1_intro2,
-        AppLocalizations.of(context)!.proceed,
-            () {
-          setState(() {
-            stage = C13A1Stage.introduction3;
-          });
-        }
-    );
-  }
-
-  Widget activityIntroView3() {
-    return InstructionsWidget(
-        key: const Key("c13a1_intro3"),
-        prefs,
-        AppLocalizations.of(context)!.c13a1_intro3,
-        AppLocalizations.of(context)!.proceed,
-            () {
-          setState(() {
-            stage = C13A1Stage.activity;
+            stage = C13A2Stage.activity;
           });
         }
     );
@@ -385,15 +326,43 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
       if (orientation == Orientation.portrait) {
         return InstructionsWidget(
             prefs,
-            AppLocalizations.of(context)!.c13a1_finish,
+            AppLocalizations.of(context)!.c13a2_finish,
             AppLocalizations.of(context)!.finish,
                 () {
-                  //Save the remaining lives:
-                  prefs.setInt(PrefUtils.remaining_lives_c13, lives);
-
                   ActivityManager.completeActivity(activityID).then((value) {
-                    Navigator.pop(context, "_");
+                    //Find all badges related to this activity and award them:
+                    for (var badgeID in Challenge.challenge13.badgeIDs) {
+                      var badge = GameBadge.findBadge(badgeID);
+                      badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                        if (!value) {
+                          badge.earn(context);
+                        }
+                      },);
+                    }
+
+                    //Unlock next challenges:
+                    List<Future> unlockFutures = [];
+                    for (var challengeID in Challenge.challenge13.unlocksChallengesIDs) {
+                      Challenge challenge = Challenge.findChallenge(challengeID)!;
+                      challenge.isUnlocked().then((value) {
+                        if (!value) {
+                          unlockFutures.add(challenge.unlock());
+                        }
+                      },);
+                    }
+
+                    //Show toast and move back:
+                    Future.wait(unlockFutures).then((value) {
+                      if (unlockFutures.isNotEmpty) {
+                        Fluttertoast.showToast(
+                            msg: AppLocalizations.of(context)!
+                                .challenges_unlocked.replaceAll(
+                                "%1", unlockFutures.length.toString()));
+                      }
+                    },);
                   },);
+                  Navigator.pop(context, "_");
+                  Navigator.pop(context, "_");
             }
         );
       }
@@ -406,7 +375,7 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(I10N.getI10nString("c13a1_name")!, style: const TextStyle(color: Colors.white),),
+      appBar: AppBar(title: Text(I10N.getI10nString("c13a2_name")!, style: const TextStyle(color: Colors.white),),
         backgroundColor: Themes.primaryColorDark,
         iconTheme: const IconThemeData(color: Colors.white),),
       body: FutureBuilder(
@@ -423,16 +392,12 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
 
   Widget chooseView() {
     switch (stage) {
-      case C13A1Stage.activity:
+      case C13A2Stage.activity:
         return activityGameView();
-      case C13A1Stage.finish:
+      case C13A2Stage.finish:
         return activityFinishView();
-      case C13A1Stage.introduction1:
-        return activityIntroView1();
-      case C13A1Stage.introduction2:
-        return activityIntroView2();
-      case C13A1Stage.introduction3:
-        return activityIntroView3();
+      case C13A2Stage.introduction:
+        return activityIntroView();
     }
   }
 

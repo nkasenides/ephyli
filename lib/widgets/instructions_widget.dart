@@ -12,6 +12,7 @@ import 'chat_bubble.dart';
 
 class InstructionsWidget extends StatefulWidget {
 
+  Key? key;
   SharedPreferences prefs;
   String instructionsText;
   String buttonText;
@@ -19,7 +20,7 @@ class InstructionsWidget extends StatefulWidget {
   Widget? middleWidget;
 
   InstructionsWidget(
-      this.prefs, this.instructionsText, this.buttonText, this.onButtonPressed, {super.key, this.middleWidget});
+      this.prefs, this.instructionsText, this.buttonText, this.onButtonPressed, {this.key, this.middleWidget});
 
   @override
   State<InstructionsWidget> createState() => _InstructionsWidgetState();
@@ -39,69 +40,71 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: Themes.standardPadding,
-      child: Column(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              PersonalizedAvatar(
-                buddyAvatars[widget.prefs.getInt(PrefUtils.buddy_selection)!],
-                backgroundRadius: 25,
-                avatarSize: 35,
-              ),
-              ChatBubble(
-                margin: const EdgeInsets.only(left: 50),
-                child: Column(
-                  children: [
-
-                    AnimatedTextKit(
-                      animatedTexts: [
-                        TypewriterAnimatedText(
-                          widget.instructionsText,
-                          textStyle: const TextStyle(
-                            color: Colors.white,
-                          ),
-                          speed: const Duration(milliseconds: 1),
-                        ),
-                      ],
-                      displayFullTextOnTap: true,
-                      isRepeatingAnimation: false,
-                      onFinished: () {
-                        setState(() {
-                          messageShown = true;
-                        });
-                      },
-                      onTap: () {
-                        setState(() {
-                          messageShown = true;
-                        });
-                      },
-                    ),
-
-                  ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                PersonalizedAvatar(
+                  buddyAvatars[widget.prefs.getInt(PrefUtils.buddy_selection)!],
+                  backgroundRadius: 25,
+                  avatarSize: 35,
                 ),
-              )
-            ],
-          ),
+                ChatBubble(
+                  margin: const EdgeInsets.only(left: 50),
+                  child: Column(
+                    children: [
 
-          messageShown ? widget.middleWidget != null ? const Gap(10) : Container() : Container(),
+                      AnimatedTextKit(
+                        animatedTexts: [
+                          TypewriterAnimatedText(
+                            widget.instructionsText,
+                            textStyle: const TextStyle(
+                              color: Colors.white,
+                            ),
+                            speed: const Duration(milliseconds: 1),
+                          ),
+                        ],
+                        displayFullTextOnTap: true,
+                        isRepeatingAnimation: false,
+                        onFinished: () {
+                          setState(() {
+                            messageShown = true;
+                          });
+                        },
+                        onTap: () {
+                          setState(() {
+                            messageShown = true;
+                          });
+                        },
+                      ),
 
-          messageShown ? widget.middleWidget ?? Container() : Container(),
+                    ],
+                  ),
+                )
+              ],
+            ),
 
-          messageShown ? widget.middleWidget != null ? const Gap(10) : Container() : Container(),
+            messageShown ? widget.middleWidget != null ? const Gap(10) : Container() : Container(),
 
-          messageShown
-              ? Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              widget.onButtonPressed != null ? ElevatedButton(
-                onPressed: widget.onButtonPressed,
-                child: Text(widget.buttonText),
-              ) : Container(),
-            ],
-          )
-              : Container(),
-        ],
+            messageShown ? widget.middleWidget ?? Container() : Container(),
+
+            messageShown ? widget.middleWidget != null ? const Gap(10) : Container() : Container(),
+
+            messageShown
+                ? Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                widget.onButtonPressed != null ? ElevatedButton(
+                  onPressed: widget.onButtonPressed,
+                  child: Text(widget.buttonText),
+                ) : Container(),
+              ],
+            )
+                : Container(),
+          ],
+        ),
       ),
     );
   }

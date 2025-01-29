@@ -11,6 +11,7 @@ class PrefUtils {
   static const String activity_completion = "activity_completion_key"; //List
   static const String unlocked_challenges = "unlocked_challenges_key"; //List
   static const String admin_mode = "admin_mode_key"; //List
+  static const String remaining_lives_c13 = "c13_remaining_lives_key"; //int
   // static const String unlocked_activities = "unlocked_activities_key"; //List
 
 }
