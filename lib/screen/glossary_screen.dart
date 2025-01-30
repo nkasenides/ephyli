@@ -102,7 +102,30 @@ class _GlossaryScreenState extends State<GlossaryScreen> {
                         );
                       },),
 
+                      const Gap(30),
+
+                      const Divider(),
+
+                      Text(
+                        "References",
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
+
+                      // const Divider(),
+
                       const Gap(10),
+
+                      Text("""
+Freedman, D.A., Bess, K.D., Tucker, H.A., Boyd, D.L., Tuchman, A.M., and Wallston, K.A.(2009) Public health literacy defined. PubMed DOI: 10.1016/j.amepre.2009.02.001
+
+IPLA (2017) https://www.physical-literacy.org.uk/ accessed 10.8.24
+
+Whitehead, M. (2010) Physical Literacy Throughout the Lifecourse, Routledge https://doi.org/10.4324/9780203881903
+
+WHO (2021) https://www.who.int/europe/news-room/fact-sheets/item/physical-activity - accessed 28.1.25
+                      """),
+
+
 
                     ],
                   ),
