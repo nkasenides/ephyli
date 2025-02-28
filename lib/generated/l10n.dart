@@ -18,17 +18,20 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(
+      _current != null,
+      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
+    );
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
+    final name =
+        (locale.countryCode?.isEmpty ?? false)
+            ? locale.languageCode
+            : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -41,8 +44,10 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
@@ -72,42 +77,22 @@ class S {
 
   /// `English`
   String get english {
-    return Intl.message(
-      'English',
-      name: 'english',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('English', name: 'english', desc: '', args: []);
   }
 
   /// `Greek`
   String get greek {
-    return Intl.message(
-      'Greek',
-      name: 'greek',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Greek', name: 'greek', desc: '', args: []);
   }
 
   /// `Italian`
   String get italian {
-    return Intl.message(
-      'Italian',
-      name: 'italian',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Italian', name: 'italian', desc: '', args: []);
   }
 
   /// `French`
   String get french {
-    return Intl.message(
-      'French',
-      name: 'french',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('French', name: 'french', desc: '', args: []);
   }
 
   /// `Luxenbourgese`
@@ -122,32 +107,17 @@ class S {
 
   /// `Polish`
   String get polish {
-    return Intl.message(
-      'Polish',
-      name: 'polish',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Polish', name: 'polish', desc: '', args: []);
   }
 
   /// `Start`
   String get start {
-    return Intl.message(
-      'Start',
-      name: 'start',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Start', name: 'start', desc: '', args: []);
   }
 
   /// `Proceed`
   String get proceed {
-    return Intl.message(
-      'Proceed',
-      name: 'proceed',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Proceed', name: 'proceed', desc: '', args: []);
   }
 
   /// `What is your name?`
@@ -232,12 +202,7 @@ class S {
 
   /// `News`
   String get news {
-    return Intl.message(
-      'News',
-      name: 'news',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('News', name: 'news', desc: '', args: []);
   }
 
   /// `Here you can read news articles, posts, and more, related to Physical Literacy.`
@@ -252,12 +217,7 @@ class S {
 
   /// `Glossary`
   String get glossary {
-    return Intl.message(
-      'Glossary',
-      name: 'glossary',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Glossary', name: 'glossary', desc: '', args: []);
   }
 
   /// `You can find terminology related to Physical Literacy in the Glossary.`
@@ -272,12 +232,7 @@ class S {
 
   /// `Profile`
   String get profile {
-    return Intl.message(
-      'Profile',
-      name: 'profile',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Profile', name: 'profile', desc: '', args: []);
   }
 
   /// `You can also manage your profile and preferences here.`
@@ -322,12 +277,7 @@ class S {
 
   /// `Next`
   String get next {
-    return Intl.message(
-      'Next',
-      name: 'next',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Next', name: 'next', desc: '', args: []);
   }
 
   /// `Well done! Now I am going to explain how you can start playing. The game consists of several challenges that you must complete in order.\n\nI have already unlocked the first challenge for you. Once you complete a challenge, the next will be unlocked. Each challenge will reward you with points, which can help you level up your avatar. You can also gather badges through the challenges, or various other activities, by interacting with the various features of the app.`
@@ -372,12 +322,7 @@ class S {
 
   /// `OK`
   String get ok {
-    return Intl.message(
-      'OK',
-      name: 'ok',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('OK', name: 'ok', desc: '', args: []);
   }
 
   /// `Badge collected`
@@ -402,32 +347,17 @@ class S {
 
   /// `View badges`
   String get viewBadges {
-    return Intl.message(
-      'View badges',
-      name: 'viewBadges',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('View badges', name: 'viewBadges', desc: '', args: []);
   }
 
   /// `Completed`
   String get completed {
-    return Intl.message(
-      'Completed',
-      name: 'completed',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Completed', name: 'completed', desc: '', args: []);
   }
 
   /// `activities`
   String get activities {
-    return Intl.message(
-      'activities',
-      name: 'activities',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('activities', name: 'activities', desc: '', args: []);
   }
 
   /// `Hey %1! It's time to get started! Would you like to try the next challenge?`
@@ -512,12 +442,7 @@ class S {
 
   /// `Reset game`
   String get resetGame {
-    return Intl.message(
-      'Reset game',
-      name: 'resetGame',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Reset game', name: 'resetGame', desc: '', args: []);
   }
 
   /// `Are you sure?`
@@ -542,32 +467,17 @@ class S {
 
   /// `Cancel`
   String get cancel {
-    return Intl.message(
-      'Cancel',
-      name: 'cancel',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
   }
 
   /// `Finish`
   String get finish {
-    return Intl.message(
-      'Finish',
-      name: 'finish',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Finish', name: 'finish', desc: '', args: []);
   }
 
   /// `Game over`
   String get gameOver {
-    return Intl.message(
-      'Game over',
-      name: 'gameOver',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Game over', name: 'gameOver', desc: '', args: []);
   }
 
   /// `You have already participated in this activity. Would you like to replay it?`
@@ -582,22 +492,12 @@ class S {
 
   /// `Yes`
   String get yes {
-    return Intl.message(
-      'Yes',
-      name: 'yes',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Yes', name: 'yes', desc: '', args: []);
   }
 
   /// `No`
   String get no {
-    return Intl.message(
-      'No',
-      name: 'no',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('No', name: 'no', desc: '', args: []);
   }
 
   /// `Error - This activity cannot be started.`
@@ -662,12 +562,7 @@ class S {
 
   /// `Drop here`
   String get drop_here {
-    return Intl.message(
-      'Drop here',
-      name: 'drop_here',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Drop here', name: 'drop_here', desc: '', args: []);
   }
 
   /// `Available cards`
@@ -682,32 +577,17 @@ class S {
 
   /// `Dragging...`
   String get dragging {
-    return Intl.message(
-      'Dragging...',
-      name: 'dragging',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Dragging...', name: 'dragging', desc: '', args: []);
   }
 
   /// `Well done!`
   String get well_done {
-    return Intl.message(
-      'Well done!',
-      name: 'well_done',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Well done!', name: 'well_done', desc: '', args: []);
   }
 
   /// `Try again`
   String get try_again {
-    return Intl.message(
-      'Try again',
-      name: 'try_again',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Try again', name: 'try_again', desc: '', args: []);
   }
 
   /// `Check solution`
@@ -722,12 +602,7 @@ class S {
 
   /// `Back`
   String get back {
-    return Intl.message(
-      'Back',
-      name: 'back',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Back', name: 'back', desc: '', args: []);
   }
 
   /// `Please rotate your device.`
@@ -762,12 +637,7 @@ class S {
 
   /// `Save`
   String get save {
-    return Intl.message(
-      'Save',
-      name: 'save',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Save', name: 'save', desc: '', args: []);
   }
 
   /// `This is a glossary - a list of terms related to physical literacy and their descriptions. Scroll through the list below to find the term you need and click it to view its description.`
@@ -822,12 +692,7 @@ class S {
 
   /// `Help`
   String get help {
-    return Intl.message(
-      'Help',
-      name: 'help',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Help', name: 'help', desc: '', args: []);
   }
 
   /// `You have not earned any badges yet. Complete some challenges to earn badges.`
@@ -842,12 +707,7 @@ class S {
 
   /// `About`
   String get about {
-    return Intl.message(
-      'About',
-      name: 'about',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('About', name: 'about', desc: '', args: []);
   }
 
   /// `ePhyLi is an Erasmus+ Sport funded project that aims to promote physical literacy and healthy lifestyles through digital materials for university students.`
@@ -1172,32 +1032,17 @@ class S {
 
   /// `Australia`
   String get c2a2_option2 {
-    return Intl.message(
-      'Australia',
-      name: 'c2a2_option2',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Australia', name: 'c2a2_option2', desc: '', args: []);
   }
 
   /// `USA`
   String get c2a2_option3 {
-    return Intl.message(
-      'USA',
-      name: 'c2a2_option3',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('USA', name: 'c2a2_option3', desc: '', args: []);
   }
 
   /// `England`
   String get c2a2_option4 {
-    return Intl.message(
-      'England',
-      name: 'c2a2_option4',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('England', name: 'c2a2_option4', desc: '', args: []);
   }
 
   /// `Arrange the cards in chronological order (top to bottom), matching the Jurbala’s spiral of physical literacy development. Ready?`
@@ -1383,10 +1228,10 @@ class S {
     );
   }
 
-  /// `It's a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child's Physical Literacy. Be careful! If you click on the wrong activity your selection will be reset. When you are finished, click 'Check solution' to check your solution.`
+  /// `It's a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child's Physical Literacy. Be careful! If you click on the wrong quality your selection will be reset. When you are finished, click 'Check solution' to check your solution.`
   String get c4a1_instruction_message {
     return Intl.message(
-      'It\'s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy. Be careful! If you click on the wrong activity your selection will be reset. When you are finished, click \'Check solution\' to check your solution.',
+      'It\'s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy. Be careful! If you click on the wrong quality your selection will be reset. When you are finished, click \'Check solution\' to check your solution.',
       name: 'c4a1_instruction_message',
       desc: '',
       args: [],
@@ -1573,20 +1418,20 @@ class S {
     );
   }
 
-  /// `Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category.`
+  /// `Our third scenario is based on the ecological model of the determinants of physical activity. In the next activity, you need to match each factor with its correct category.`
   String get c4a3_intro_message {
     return Intl.message(
-      'Our third scenario is based on the ecological model of the determinants of physical activity proposed by Bauman et al. (2012). In the next activity, you need to match each factor with its correct category.',
+      'Our third scenario is based on the ecological model of the determinants of physical activity. In the next activity, you need to match each factor with its correct category.',
       name: 'c4a3_intro_message',
       desc: '',
       args: [],
     );
   }
 
-  /// `Move the factors in the middle (red circle) influencing engagement in physical activity to the right variables (blue circles).`
+  /// `Move the factors in the middle circle influencing engagement in physical activity to the right variables (outter circles).`
   String get c4a3_instruction_message {
     return Intl.message(
-      'Move the factors in the middle (red circle) influencing engagement in physical activity to the right variables (blue circles).',
+      'Move the factors in the middle circle influencing engagement in physical activity to the right variables (outter circles).',
       name: 'c4a3_instruction_message',
       desc: '',
       args: [],
@@ -1603,10 +1448,10 @@ class S {
     );
   }
 
-  /// `Well done! You have completed the fourth challenge. For more information read the scientific article in the news section. Press 'Finish' to get your badge!`
+  /// `Well done! You have completed the fourth challenge. Press 'Finish' to get your badge!`
   String get c4a3_finish_message {
     return Intl.message(
-      'Well done! You have completed the fourth challenge. For more information read the scientific article in the news section. Press \'Finish\' to get your badge!',
+      'Well done! You have completed the fourth challenge. Press \'Finish\' to get your badge!',
       name: 'c4a3_finish_message',
       desc: '',
       args: [],
@@ -1615,12 +1460,7 @@ class S {
 
   /// `Individual`
   String get individual {
-    return Intl.message(
-      'Individual',
-      name: 'individual',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Individual', name: 'individual', desc: '', args: []);
   }
 
   /// `Social environment`
@@ -1665,42 +1505,22 @@ class S {
 
   /// `Culture`
   String get culture {
-    return Intl.message(
-      'Culture',
-      name: 'culture',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Culture', name: 'culture', desc: '', args: []);
   }
 
   /// `Motivation`
   String get motivation {
-    return Intl.message(
-      'Motivation',
-      name: 'motivation',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Motivation', name: 'motivation', desc: '', args: []);
   }
 
   /// `Beliefs`
   String get beliefs {
-    return Intl.message(
-      'Beliefs',
-      name: 'beliefs',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Beliefs', name: 'beliefs', desc: '', args: []);
   }
 
   /// `Sex`
   String get sex {
-    return Intl.message(
-      'Sex',
-      name: 'sex',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sex', name: 'sex', desc: '', args: []);
   }
 
   /// `Self-efficacy`
@@ -1715,22 +1535,12 @@ class S {
 
   /// `Family`
   String get family {
-    return Intl.message(
-      'Family',
-      name: 'family',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Family', name: 'family', desc: '', args: []);
   }
 
   /// `Friends`
   String get friends {
-    return Intl.message(
-      'Friends',
-      name: 'friends',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Friends', name: 'friends', desc: '', args: []);
   }
 
   /// `Cultural norms`
@@ -1745,22 +1555,12 @@ class S {
 
   /// `Colleagues`
   String get colleagues {
-    return Intl.message(
-      'Colleagues',
-      name: 'colleagues',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Colleagues', name: 'colleagues', desc: '', args: []);
   }
 
   /// `Schools`
   String get schools {
-    return Intl.message(
-      'Schools',
-      name: 'schools',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Schools', name: 'schools', desc: '', args: []);
   }
 
   /// `Community Clubs`
@@ -1785,12 +1585,7 @@ class S {
 
   /// `Workplace`
   String get workplace {
-    return Intl.message(
-      'Workplace',
-      name: 'workplace',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Workplace', name: 'workplace', desc: '', args: []);
   }
 
   /// `Built environment`
@@ -1875,22 +1670,12 @@ class S {
 
   /// `National`
   String get national {
-    return Intl.message(
-      'National',
-      name: 'national',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('National', name: 'national', desc: '', args: []);
   }
 
   /// `Local`
   String get local {
-    return Intl.message(
-      'Local',
-      name: 'local',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Local', name: 'local', desc: '', args: []);
   }
 
   /// `Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?`
@@ -2225,12 +2010,7 @@ class S {
 
   /// `Enjoyment`
   String get enjoyment {
-    return Intl.message(
-      'Enjoyment',
-      name: 'enjoyment',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Enjoyment', name: 'enjoyment', desc: '', args: []);
   }
 
   /// `Balance activity`
@@ -2243,10 +2023,10 @@ class S {
     );
   }
 
-  /// `Children form a large circle in the centre of the playing area. Someone assumes an unstable position like a statue. All students in the circle perform the same balance, holding it for 3 seconds. When the time is up, the next child does the same.`
+  /// `The children form a large circle in the middle of the playground. One of them suggests a balancing exercise. The other children in the circle imitate him and hold the position for 3 seconds. When the time is up, it is another child's turn.`
   String get activity_balance_option_1 {
     return Intl.message(
-      'Children form a large circle in the centre of the playing area. Someone assumes an unstable position like a statue. All students in the circle perform the same balance, holding it for 3 seconds. When the time is up, the next child does the same.',
+      'The children form a large circle in the middle of the playground. One of them suggests a balancing exercise. The other children in the circle imitate him and hold the position for 3 seconds. When the time is up, it is another child\'s turn.',
       name: 'activity_balance_option_1',
       desc: '',
       args: [],
@@ -2353,10 +2133,10 @@ class S {
     );
   }
 
-  /// `Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).`
+  /// `Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variable in the outter circles.`
   String get c9a1_instructions {
     return Intl.message(
-      'Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variables (blue circles).',
+      'Welcome to Challenge 9! This challenge is based on the enabling environments (Almond and Lambden, 2016). Drag the factors influencing engagement in physical activity (in the center of the screen) to the right variable in the outter circles.',
       name: 'c9a1_instructions',
       desc: '',
       args: [],
@@ -2415,32 +2195,17 @@ class S {
 
   /// `Throwing`
   String get c9a1_throwing {
-    return Intl.message(
-      'Throwing',
-      name: 'c9a1_throwing',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Throwing', name: 'c9a1_throwing', desc: '', args: []);
   }
 
   /// `Catching`
   String get c9a1_catching {
-    return Intl.message(
-      'Catching',
-      name: 'c9a1_catching',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Catching', name: 'c9a1_catching', desc: '', args: []);
   }
 
   /// `Striking`
   String get c9a1_striking {
-    return Intl.message(
-      'Striking',
-      name: 'c9a1_striking',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Striking', name: 'c9a1_striking', desc: '', args: []);
   }
 
   /// `Rough and Tumble`
@@ -2455,22 +2220,12 @@ class S {
 
   /// `Climbing`
   String get c9a1_climbing {
-    return Intl.message(
-      'Climbing',
-      name: 'c9a1_climbing',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Climbing', name: 'c9a1_climbing', desc: '', args: []);
   }
 
   /// `Running`
   String get c9a1_running {
-    return Intl.message(
-      'Running',
-      name: 'c9a1_running',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Running', name: 'c9a1_running', desc: '', args: []);
   }
 
   /// `Chasing games`
@@ -2505,12 +2260,7 @@ class S {
 
   /// `Dance`
   String get c9a1_dance {
-    return Intl.message(
-      'Dance',
-      name: 'c9a1_dance',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Dance', name: 'c9a1_dance', desc: '', args: []);
   }
 
   /// `Gymnastics`
@@ -2573,20 +2323,20 @@ class S {
     );
   }
 
-  /// `You are challenged to design a comprehensive physical education curriculum for a virtual school, incorporating both curricular and extra-curricular activities that promote physical literacy. The challenge is to balance various elements such as inclusivity, engagement, and educational outcomes. Μove each curriculum feature (shown at the bottom) to the correct or wrong box. Correct features must be moved to the 'Correct' box, and wrong features must be moved to the 'Wrong' box. Ready?`
+  /// `You are challenged to design a comprehensive physical education curriculum, incorporating both curricular and extra-curricular activities that promote physical literacy. The challenge is to balance various elements such as inclusivity, engagement, and educational outcomes. Μove each curriculum feature (shown at the bottom) to the correct or wrong box. Correct features must be moved to the 'Correct' box, and wrong features must be moved to the 'Wrong' box. Ready?`
   String get c9a2_intro_message {
     return Intl.message(
-      'You are challenged to design a comprehensive physical education curriculum for a virtual school, incorporating both curricular and extra-curricular activities that promote physical literacy. The challenge is to balance various elements such as inclusivity, engagement, and educational outcomes. Μove each curriculum feature (shown at the bottom) to the correct or wrong box. Correct features must be moved to the \'Correct\' box, and wrong features must be moved to the \'Wrong\' box. Ready?',
+      'You are challenged to design a comprehensive physical education curriculum, incorporating both curricular and extra-curricular activities that promote physical literacy. The challenge is to balance various elements such as inclusivity, engagement, and educational outcomes. Μove each curriculum feature (shown at the bottom) to the correct or wrong box. Correct features must be moved to the \'Correct\' box, and wrong features must be moved to the \'Wrong\' box. Ready?',
       name: 'c9a2_intro_message',
       desc: '',
       args: [],
     );
   }
 
-  /// `Drag each element to the right box.`
+  /// `Drag each feature to the right box.`
   String get c9a2_prompt {
     return Intl.message(
-      'Drag each element to the right box.',
+      'Drag each feature to the right box.',
       name: 'c9a2_prompt',
       desc: '',
       args: [],
@@ -2605,22 +2355,12 @@ class S {
 
   /// `Correct`
   String get c9a2_correct {
-    return Intl.message(
-      'Correct',
-      name: 'c9a2_correct',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Correct', name: 'c9a2_correct', desc: '', args: []);
   }
 
   /// `Wrong`
   String get c9a2_wrong {
-    return Intl.message(
-      'Wrong',
-      name: 'c9a2_wrong',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Wrong', name: 'c9a2_wrong', desc: '', args: []);
   }
 
   /// `Activities balanced to students’ motor skills.`
@@ -2845,18 +2585,13 @@ class S {
 
   /// `Hint`
   String get hint {
-    return Intl.message(
-      'Hint',
-      name: 'hint',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Hint', name: 'hint', desc: '', args: []);
   }
 
-  /// `Click on the letter boxes to fill in the word using the hint provided.`
+  /// `Click on the box to add the missing letter and complete the word`
   String get hint_instruction {
     return Intl.message(
-      'Click on the letter boxes to fill in the word using the hint provided.',
+      'Click on the box to add the missing letter and complete the word',
       name: 'hint_instruction',
       desc: '',
       args: [],
@@ -2865,112 +2600,57 @@ class S {
 
   /// `COMMAND`
   String get term1 {
-    return Intl.message(
-      'COMMAND',
-      name: 'term1',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('COMMAND', name: 'term1', desc: '', args: []);
   }
 
   /// `PRACTICE`
   String get term2 {
-    return Intl.message(
-      'PRACTICE',
-      name: 'term2',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('PRACTICE', name: 'term2', desc: '', args: []);
   }
 
   /// `RECIPROCAL`
   String get term3 {
-    return Intl.message(
-      'RECIPROCAL',
-      name: 'term3',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('RECIPROCAL', name: 'term3', desc: '', args: []);
   }
 
   /// `SELFCHECK`
   String get term4 {
-    return Intl.message(
-      'SELFCHECK',
-      name: 'term4',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('SELFCHECK', name: 'term4', desc: '', args: []);
   }
 
   /// `INCLUSION`
   String get term5 {
-    return Intl.message(
-      'INCLUSION',
-      name: 'term5',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('INCLUSION', name: 'term5', desc: '', args: []);
   }
 
   /// `GUIDED`
   String get term6 {
-    return Intl.message(
-      'GUIDED',
-      name: 'term6',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('GUIDED', name: 'term6', desc: '', args: []);
   }
 
   /// `CONVERGENT`
   String get term7 {
-    return Intl.message(
-      'CONVERGENT',
-      name: 'term7',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('CONVERGENT', name: 'term7', desc: '', args: []);
   }
 
   /// `DIVERGENT`
   String get term8 {
-    return Intl.message(
-      'DIVERGENT',
-      name: 'term8',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('DIVERGENT', name: 'term8', desc: '', args: []);
   }
 
   /// `DESIGNED`
   String get term9 {
-    return Intl.message(
-      'DESIGNED',
-      name: 'term9',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('DESIGNED', name: 'term9', desc: '', args: []);
   }
 
   /// `INITIATED`
   String get term10 {
-    return Intl.message(
-      'INITIATED',
-      name: 'term10',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('INITIATED', name: 'term10', desc: '', args: []);
   }
 
   /// `SELFTEACHING`
   String get term11 {
-    return Intl.message(
-      'SELFTEACHING',
-      name: 'term11',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('SELFTEACHING', name: 'term11', desc: '', args: []);
   }
 
   /// `The teacher's directive control of students' learning activities.`
@@ -2993,10 +2673,10 @@ class S {
     );
   }
 
-  /// `Groups with assigned roles: practice, observe, evaluate, correct, and help.`
+  /// `Groups of students with assigned roles: practice, observe, evaluate, correct, and help.`
   String get term3_hint {
     return Intl.message(
-      'Groups with assigned roles: practice, observe, evaluate, correct, and help.',
+      'Groups of students with assigned roles: practice, observe, evaluate, correct, and help.',
       name: 'term3_hint',
       desc: '',
       args: [],
@@ -3105,12 +2785,7 @@ class S {
 
   /// `Command`
   String get command {
-    return Intl.message(
-      'Command',
-      name: 'command',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Command', name: 'command', desc: '', args: []);
   }
 
   /// `Guided Discovery`
@@ -3153,10 +2828,10 @@ class S {
     );
   }
 
-  /// `The lesson aims to improve knowledge of one's own body. The teacher tells a story about bears who walk around in the forest and perform certain actions (eating, washing, rolling around). Students must impersonate the bears. Often the bears get itchy and have to scratch themselves. The teacher chooses when the bears are itchy and where they have to scratch.`
+  /// `The class aims to improve knowledge of one's own body. The teacher narrates a story about bears in the forest who perform different actions (eating, washing and rolling). The pupils are encouraged to impersonate the bears and perform these actions according to the teacher's instructions.`
   String get command_lesson_3 {
     return Intl.message(
-      'The lesson aims to improve knowledge of one\'s own body. The teacher tells a story about bears who walk around in the forest and perform certain actions (eating, washing, rolling around). Students must impersonate the bears. Often the bears get itchy and have to scratch themselves. The teacher chooses when the bears are itchy and where they have to scratch.',
+      'The class aims to improve knowledge of one\'s own body. The teacher narrates a story about bears in the forest who perform different actions (eating, washing and rolling). The pupils are encouraged to impersonate the bears and perform these actions according to the teacher\'s instructions.',
       name: 'command_lesson_3',
       desc: '',
       args: [],
@@ -3533,10 +3208,10 @@ class S {
     );
   }
 
-  /// `Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles while avoiding using the eyes.`
+  /// `Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles with their eyes closed.`
   String get c11_floor1_step3_wrong {
     return Intl.message(
-      'Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles while avoiding using the eyes.',
+      'Children in pairs. A child has to overcome the obstacles along the course and the other guides them. The teacher asks the teams to overcome the obstacles with their eyes closed.',
       name: 'c11_floor1_step3_wrong',
       desc: '',
       args: [],
@@ -4165,12 +3840,7 @@ class S {
 
   /// `Mistakes`
   String get c11_mistakes {
-    return Intl.message(
-      'Mistakes',
-      name: 'c11_mistakes',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Mistakes', name: 'c11_mistakes', desc: '', args: []);
   }
 
   /// `You have made 2 mistakes in this model. The challenge will restart from this floor.`
@@ -4235,12 +3905,7 @@ class S {
 
   /// `Restart`
   String get restart {
-    return Intl.message(
-      'Restart',
-      name: 'restart',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Restart', name: 'restart', desc: '', args: []);
   }
 
   /// `This is a class of 25 children 6-year-olds, one of them with Asperger's Syndrome. Within the class there is a normal range of abilities where approximately 1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view. All the children are motivated when doing PE. The lesson aims to teach catching and throwing skills.`
@@ -4373,10 +4038,10 @@ class S {
     );
   }
 
-  /// `Setting and rules (provided):\nStudents in pairs, 2 meters apart.\nStudents must throw the ball to their teammates. The ball cannot bounce. Perform the exercise 10 times.\nTeam building:`
+  /// `Setting and rules:\nStudents in pairs, 2 meters apart.\nStudents must throw the ball to their teammates. The ball cannot bounce. Perform the exercise 10 times.\nTeam building:`
   String get c12a1_3_question {
     return Intl.message(
-      'Setting and rules (provided):\nStudents in pairs, 2 meters apart.\nStudents must throw the ball to their teammates. The ball cannot bounce. Perform the exercise 10 times.\nTeam building:',
+      'Setting and rules:\nStudents in pairs, 2 meters apart.\nStudents must throw the ball to their teammates. The ball cannot bounce. Perform the exercise 10 times.\nTeam building:',
       name: 'c12a1_3_question',
       desc: '',
       args: [],
@@ -4413,10 +4078,10 @@ class S {
     );
   }
 
-  /// `Setting and rules (provided):\nStudents work on a basketball field.\nStudents are divided into two groups.\nThree shooting areas (1.6 meters from the basketball hoop).\nEach team is divided into 3 subgroups, one for each shooting area. Students must perform a shot and move to another area. Each student must perform 4 shoots in each area to complete the task.\nAdaptation for students in wheelchairs:`
+  /// `Setting and rules:\nStudents work on a basketball field.\nStudents are divided into two groups.\nThree shooting areas (1.6 meters from the basketball hoop).\nEach team is divided into 3 subgroups, one for each shooting area. Students must perform a shot and move to another area. Each student must perform 4 shoots in each area to complete the task.\nAdaptation for students in wheelchairs:`
   String get c12a1_4_question {
     return Intl.message(
-      'Setting and rules (provided):\nStudents work on a basketball field.\nStudents are divided into two groups.\nThree shooting areas (1.6 meters from the basketball hoop).\nEach team is divided into 3 subgroups, one for each shooting area. Students must perform a shot and move to another area. Each student must perform 4 shoots in each area to complete the task.\nAdaptation for students in wheelchairs:',
+      'Setting and rules:\nStudents work on a basketball field.\nStudents are divided into two groups.\nThree shooting areas (1.6 meters from the basketball hoop).\nEach team is divided into 3 subgroups, one for each shooting area. Students must perform a shot and move to another area. Each student must perform 4 shoots in each area to complete the task.\nAdaptation for students in wheelchairs:',
       name: 'c12a1_4_question',
       desc: '',
       args: [],
@@ -4455,22 +4120,12 @@ class S {
 
   /// `Equipment`
   String get c12a1_5_title {
-    return Intl.message(
-      'Equipment',
-      name: 'c12a1_5_title',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Equipment', name: 'c12a1_5_title', desc: '', args: []);
   }
 
   /// ``
   String get c12a1_5_question {
-    return Intl.message(
-      '',
-      name: 'c12a1_5_question',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('', name: 'c12a1_5_question', desc: '', args: []);
   }
 
   /// `Basketball hoops of different heights, balls of the same weight.`
@@ -4513,10 +4168,10 @@ class S {
     );
   }
 
-  /// `Setting and rules (provided):\nLine 10-meter long.\nSix cones on the line, 1.5 meters apart.\nStudents are divided into groups.\nThe students must dribble on the line as quickly as possible using only one hand and without hitting the cone with the ball.\nStudents must perform the exercise three times in non-consecutive turns.`
+  /// `Setting and rules:\nLine 10-meter long.\nSix cones on the line, 1.5 meters apart.\nStudents are divided into groups.\nThe students must dribble on the line as quickly as possible using only one hand and without hitting the cone with the ball.\nStudents must perform the exercise three times in non-consecutive turns.`
   String get c12a1_6_question {
     return Intl.message(
-      'Setting and rules (provided):\nLine 10-meter long.\nSix cones on the line, 1.5 meters apart.\nStudents are divided into groups.\nThe students must dribble on the line as quickly as possible using only one hand and without hitting the cone with the ball.\nStudents must perform the exercise three times in non-consecutive turns.',
+      'Setting and rules:\nLine 10-meter long.\nSix cones on the line, 1.5 meters apart.\nStudents are divided into groups.\nThe students must dribble on the line as quickly as possible using only one hand and without hitting the cone with the ball.\nStudents must perform the exercise three times in non-consecutive turns.',
       name: 'c12a1_6_question',
       desc: '',
       args: [],
@@ -4563,10 +4218,10 @@ class S {
     );
   }
 
-  /// `Rules (provided): \nChildren in pairs. One child has to throw the ball to his teammate without dropping it.\nAdaptation for student with Asperger's Syndrome:`
+  /// `Rules: \nChildren in pairs. One child has to throw the ball to his teammate without dropping it.\nAdaptation for student with Asperger's Syndrome:`
   String get c12a2_1_question {
     return Intl.message(
-      'Rules (provided): \nChildren in pairs. One child has to throw the ball to his teammate without dropping it.\nAdaptation for student with Asperger\'s Syndrome:',
+      'Rules: \nChildren in pairs. One child has to throw the ball to his teammate without dropping it.\nAdaptation for student with Asperger\'s Syndrome:',
       name: 'c12a2_1_question',
       desc: '',
       args: [],
@@ -4613,10 +4268,10 @@ class S {
     );
   }
 
-  /// `Rules (provided):\nChildren in pairs. One child has to throw the ball to his teammate without dropping it while walking near a line.\nAdaptation for student with Asperger's Syndrome:`
+  /// `Rules:\nChildren in pairs. One child has to throw the ball to his teammate without dropping it while walking near a line.\nAdaptation for student with Asperger's Syndrome:`
   String get c12a2_2_question {
     return Intl.message(
-      'Rules (provided):\nChildren in pairs. One child has to throw the ball to his teammate without dropping it while walking near a line.\nAdaptation for student with Asperger\'s Syndrome:',
+      'Rules:\nChildren in pairs. One child has to throw the ball to his teammate without dropping it while walking near a line.\nAdaptation for student with Asperger\'s Syndrome:',
       name: 'c12a2_2_question',
       desc: '',
       args: [],
@@ -4663,10 +4318,10 @@ class S {
     );
   }
 
-  /// `Setting and rules (provided):\nThe gymnasium is divided into four parts. One game area in each part. Children in eight teams. Each playing area is divided into two fields. Each team built two castles with cones and placed them at the end of the playing fields. Each team has one soft ball. The children must throw the balls trying to bring down the castles of the other team. Before throwing the ball, they must perform at least three passes. All students must play with a lower level of voice. Whoever shouts receives a penalty. Adaptation for student with Asperger's Syndrome:`
+  /// `Setting and rules:\nThe gymnasium is divided into four parts. One game area in each part. Children in eight teams. Each playing area is divided into two fields. Each team built two castles with cones and placed them at the end of the playing fields. Each team has one soft ball. The children must throw the balls trying to bring down the castles of the other team. Before throwing the ball, they must perform at least three passes. All students must play with a lower level of voice. Whoever shouts receives a penalty. Adaptation for student with Asperger's Syndrome:`
   String get c12a2_3_question {
     return Intl.message(
-      'Setting and rules (provided):\nThe gymnasium is divided into four parts. One game area in each part. Children in eight teams. Each playing area is divided into two fields. Each team built two castles with cones and placed them at the end of the playing fields. Each team has one soft ball. The children must throw the balls trying to bring down the castles of the other team. Before throwing the ball, they must perform at least three passes. All students must play with a lower level of voice. Whoever shouts receives a penalty. Adaptation for student with Asperger\'s Syndrome:',
+      'Setting and rules:\nThe gymnasium is divided into four parts. One game area in each part. Children in eight teams. Each playing area is divided into two fields. Each team built two castles with cones and placed them at the end of the playing fields. Each team has one soft ball. The children must throw the balls trying to bring down the castles of the other team. Before throwing the ball, they must perform at least three passes. All students must play with a lower level of voice. Whoever shouts receives a penalty. Adaptation for student with Asperger\'s Syndrome:',
       name: 'c12a2_3_question',
       desc: '',
       args: [],
@@ -4723,10 +4378,10 @@ class S {
     );
   }
 
-  /// `Now you have all the information to start developing lessons for your students. If you want to consult the characteristics, the purpose, and the learning outcomes of the lesson, you can consult me with a tap, and I will provide you with all this information.\nA hand icon    appears to indicate that the user must tap the Buddy. By tapping the Buddy, the following list of features will appear:\n●\tClass of 30 children with experience in traditional games, athletics, swimming and winter sports.\n●\t1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view.\n●\tThe school has a small gymnasium with some moveable apparatus (benches, boxes) that the children can use to balance on as well as floor mats to work on. Music can be used if required. Work cards with examples of partner balances are available. These have descriptions and images of partner balances along with suggestions of how to get into and out of the balances.\n●\tThe children will have already selected a partner and will have been working with a partner on mirroring and matching movements, moving in different directions, and jumping combinations.\n●\tThe children have started to put a sequence together which they will build on over the following weeks. \n●\tThe lesson aims to encourage students to explore a range of partner balances, modify them if possible and then link them together as part of their partner sequence.\n●\tThe learning outcomes for the lesson cover four areas:\no\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\no\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\no\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\no\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.`
+  /// `Now you have all the information to start developing lessons for your students. If you want to consult the characteristics, the purpose, and the learning outcomes of the lesson, you can consult me with a tap, and I will provide you with all this information.`
   String get c13a1_intro3 {
     return Intl.message(
-      'Now you have all the information to start developing lessons for your students. If you want to consult the characteristics, the purpose, and the learning outcomes of the lesson, you can consult me with a tap, and I will provide you with all this information.\nA hand icon    appears to indicate that the user must tap the Buddy. By tapping the Buddy, the following list of features will appear:\n●\tClass of 30 children with experience in traditional games, athletics, swimming and winter sports.\n●\t1/3 of the class are quite competent at gymnastics, 1/3 are OK and 1/3 are less competent from a practical point of view.\n●\tThe school has a small gymnasium with some moveable apparatus (benches, boxes) that the children can use to balance on as well as floor mats to work on. Music can be used if required. Work cards with examples of partner balances are available. These have descriptions and images of partner balances along with suggestions of how to get into and out of the balances.\n●\tThe children will have already selected a partner and will have been working with a partner on mirroring and matching movements, moving in different directions, and jumping combinations.\n●\tThe children have started to put a sequence together which they will build on over the following weeks. \n●\tThe lesson aims to encourage students to explore a range of partner balances, modify them if possible and then link them together as part of their partner sequence.\n●\tThe learning outcomes for the lesson cover four areas:\no\tPhysical/Move – To perform a variety of challenging partner balances that can be linked to their partner sequence.\no\tAffective/Feel – To gain confidence in performing increasingly challenging partner balances and motivation to try more challenging partner balances.\no\tCognitive/Think – To consider examples of partner balances and create their own versions, which will link into their partner sequence.\no\tSocial/Connect - To work cooperatively in creating and refining challenging partner balances that are added to their partner sequence.',
+      'Now you have all the information to start developing lessons for your students. If you want to consult the characteristics, the purpose, and the learning outcomes of the lesson, you can consult me with a tap, and I will provide you with all this information.',
       name: 'c13a1_intro3',
       desc: '',
       args: [],
@@ -4765,12 +4420,7 @@ class S {
 
   /// `Stage %1`
   String get c13a1_stage {
-    return Intl.message(
-      'Stage %1',
-      name: 'c13a1_stage',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Stage %1', name: 'c13a1_stage', desc: '', args: []);
   }
 
   /// `Well done! You have completed this activity. One more to go to finish the last challenge!`
@@ -4955,32 +4605,17 @@ class S {
 
   /// `Command`
   String get c13_2_wrong_1 {
-    return Intl.message(
-      'Command',
-      name: 'c13_2_wrong_1',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Command', name: 'c13_2_wrong_1', desc: '', args: []);
   }
 
   /// `Practice`
   String get c13_2_wrong_2 {
-    return Intl.message(
-      'Practice',
-      name: 'c13_2_wrong_2',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Practice', name: 'c13_2_wrong_2', desc: '', args: []);
   }
 
   /// `Inclusion`
   String get c13_2_wrong_3 {
-    return Intl.message(
-      'Inclusion',
-      name: 'c13_2_wrong_3',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Inclusion', name: 'c13_2_wrong_3', desc: '', args: []);
   }
 
   /// `Guided Discovery`
@@ -5085,12 +4720,7 @@ class S {
 
   /// `Dare`
   String get c13_4_title {
-    return Intl.message(
-      'Dare',
-      name: 'c13_4_title',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Dare', name: 'c13_4_title', desc: '', args: []);
   }
 
   /// `Dare: based on the aim of the lesson and the teaching model adopted, choose 1 dare that can help the students improve their skills.`
@@ -5135,12 +4765,7 @@ class S {
 
   /// `Support`
   String get c13_5_title {
-    return Intl.message(
-      'Support',
-      name: 'c13_5_title',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Support', name: 'c13_5_title', desc: '', args: []);
   }
 
   /// `Support: based on the aim of the lesson and the teaching model adopted, choose 1 support that can help the students to enhance their skills.`
@@ -5185,12 +4810,7 @@ class S {
 
   /// `Aspects`
   String get c13_6_title {
-    return Intl.message(
-      'Aspects',
-      name: 'c13_6_title',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Aspects', name: 'c13_6_title', desc: '', args: []);
   }
 
   /// `Aspects: What would you be most likely to modify? Choose 2 elements that you can modify.`
@@ -5225,22 +4845,12 @@ class S {
 
   /// `Spaces`
   String get c13_6_wrong_1 {
-    return Intl.message(
-      'Spaces',
-      name: 'c13_6_wrong_1',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Spaces', name: 'c13_6_wrong_1', desc: '', args: []);
   }
 
   /// `People`
   String get c13_6_wrong_2 {
-    return Intl.message(
-      'People',
-      name: 'c13_6_wrong_2',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('People', name: 'c13_6_wrong_2', desc: '', args: []);
   }
 
   /// `Conditions`
@@ -5255,22 +4865,12 @@ class S {
 
   /// `Time`
   String get c13_6_wrong_4 {
-    return Intl.message(
-      'Time',
-      name: 'c13_6_wrong_4',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Time', name: 'c13_6_wrong_4', desc: '', args: []);
   }
 
   /// `Priority`
   String get c13_7_title {
-    return Intl.message(
-      'Priority',
-      name: 'c13_7_title',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Priority', name: 'c13_7_title', desc: '', args: []);
   }
 
   /// `Priority: What would be your priority? Choose two priorities.`
@@ -5305,42 +4905,22 @@ class S {
 
   /// `Success`
   String get c13_7_correct_3 {
-    return Intl.message(
-      'Success',
-      name: 'c13_7_correct_3',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Success', name: 'c13_7_correct_3', desc: '', args: []);
   }
 
   /// `Safety`
   String get c13_7_wrong_1 {
-    return Intl.message(
-      'Safety',
-      name: 'c13_7_wrong_1',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Safety', name: 'c13_7_wrong_1', desc: '', args: []);
   }
 
   /// `Learning`
   String get c13_7_wrong_2 {
-    return Intl.message(
-      'Learning',
-      name: 'c13_7_wrong_2',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Learning', name: 'c13_7_wrong_2', desc: '', args: []);
   }
 
   /// `Enjoyment`
   String get c13_7_wrong_3 {
-    return Intl.message(
-      'Enjoyment',
-      name: 'c13_7_wrong_3',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Enjoyment', name: 'c13_7_wrong_3', desc: '', args: []);
   }
 
   /// `Assessment strategy`
@@ -6095,12 +5675,7 @@ class S {
 
   /// `Monism`
   String get glossary_Monism {
-    return Intl.message(
-      'Monism',
-      name: 'glossary_Monism',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Monism', name: 'glossary_Monism', desc: '', args: []);
   }
 
   /// `Motivation`
@@ -6205,12 +5780,7 @@ class S {
 
   /// `Sport`
   String get glossary_Sport {
-    return Intl.message(
-      'Sport',
-      name: 'glossary_Sport',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sport', name: 'glossary_Sport', desc: '', args: []);
   }
 
   /// `Are the constituent elements of physical literacy that are identified in the full definition of the concept. When developing physical literacy, individuals will discover that they have the potential to develop all the attributes identified in the full definition.`
