@@ -21,7 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'it';
 
   static String m0(count) =>
-      "${Intl.plural(count, zero: 'There are no mistakes.', one: 'There is 1 mistake in the card order.', other: 'There are ${count} mistakes in the card order.')}";
+      "${Intl.plural(count, zero: 'Non ci sono errori.', one: 'C\'è 1 errore nell\'ordine delle carte.', other: 'Ci sono ${count} errori nell\'ordine delle carte.')}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{

@@ -65,10 +65,10 @@ class S {
     );
   }
 
-  /// `Welcome text`
+  /// `Your journey into Physical Literacy is going to start!`
   String get welcomeText {
     return Intl.message(
-      'Welcome text',
+      'Your journey into Physical Literacy is going to start!',
       name: 'welcomeText',
       desc: '',
       args: [],
@@ -6033,8 +6033,6 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
       Locale.fromSubtags(languageCode: 'el'),
       Locale.fromSubtags(languageCode: 'fr'),
       Locale.fromSubtags(languageCode: 'it'),
-      Locale.fromSubtags(languageCode: 'lb'),
-      Locale.fromSubtags(languageCode: 'pl'),
     ];
   }
 

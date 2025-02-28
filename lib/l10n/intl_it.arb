@@ -117,8 +117,15 @@
   "c3a1_intro_message": "Disponi le caselle in ordine cronologico (dall'alto verso il basso), in base alla spirale di Jurbala sullo sviluppo della physical literacy. Iniziamo!",
   "c3a1_activity_message": "Trascina le caselle per ordinarle correttamente in base alla spirale della physical literacy di Jurbala. È possibile scorrere la schermata verso l'alto o verso il basso per visualizzare tutte le opzioni. Tieni cliccata la casella per selezionarla, quindi trascinala.",
   "c3a1_success": "Ben fatto! Hai ordinato correttamente le caselle!",
-  "c3a1_fail": "{count, plural, =0{There are no mistakes.} =1{There is 1 mistake in the card order.} other{There are {count} mistakes in the card order.}}",
-  "@c3a1_fail": "{'placeholders': {'count': {'type': 'num', 'format': 'compact'}}}",
+  "c3a1_fail": "{count, plural, =0{Non ci sono errori.} =1{C'è 1 errore nell'ordine delle carte.} other{Ci sono {count} errori nell'ordine delle carte.}}",
+  "@c3a1_fail": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
   "c3a1_finish_message": "Congratulazioni, hai terminato la sfida. Clicca su \"Fine\" per ottenere un badge!",
   "c3a1_term1": "Ambiente ricco di movimento",
   "c3a1_term2": "Partecipazione ampia allo sviluppo",

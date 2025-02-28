@@ -13,15 +13,15 @@ class Language {
   static const Locale greekLocale = Locale("el", "GR");
   static const Locale franceLocale = Locale("fr", "FR");
   static const Locale italyLocale = Locale("it", "IT");
-  static const Locale luxembourgLocale = Locale("lb", "LB");
-  static const Locale polandLocale = Locale("pl", "PL");
+  // static const Locale luxembourgLocale = Locale("lb", "LB");
+  // static const Locale polandLocale = Locale("pl", "PL");
 
   static const allLocales = [
     englishLocale,
     //TODO - Enable once these language translations are available.
     greekLocale,
-    // italyLocale,
-    // franceLocale,
+    italyLocale,
+    franceLocale,
     // polandLocale,
     // luxembourgLocale,
   ];
@@ -57,12 +57,12 @@ class Language {
     else if (locale == franceLocale) {
       return AppImages.france;
     }
-    else if (locale == polandLocale) {
-      return AppImages.poland;
-    }
-    else if (locale == luxembourgLocale) {
-      return AppImages.luxembourg;
-    }
+    // else if (locale == polandLocale) {
+    //   return AppImages.poland;
+    // }
+    // else if (locale == luxembourgLocale) {
+    //   return AppImages.luxembourg;
+    // }
     else {
       return AppImages.logo;
     }
@@ -81,12 +81,12 @@ class Language {
     else if (locale == franceLocale) {
       return AppLocalizations.of(context)!.french;
     }
-    else if (locale == luxembourgLocale) {
-      return AppLocalizations.of(context)!.luxenbourgese;
-    }
-    else if (locale == polandLocale) {
-      return AppLocalizations.of(context)!.polish;
-    }
+    // else if (locale == luxembourgLocale) {
+    //   return AppLocalizations.of(context)!.luxenbourgese;
+    // }
+    // else if (locale == polandLocale) {
+    //   return AppLocalizations.of(context)!.polish;
+    // }
     else {
       return "No such language";
     }
@@ -97,8 +97,8 @@ class Language {
     if (locale.startsWith("el")) return greekLocale;
     if (locale.startsWith("fr")) return franceLocale;
     if (locale.startsWith("it")) return italyLocale;
-    if (locale.startsWith("lb")) return luxembourgLocale;
-    if (locale.startsWith("pl")) return polandLocale;
+    // if (locale.startsWith("lb")) return luxembourgLocale;
+    // if (locale.startsWith("pl")) return polandLocale;
     throw Exception("Invalid language: $locale");
   }
 

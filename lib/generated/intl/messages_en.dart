@@ -1585,7 +1585,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "wants_to_participate": MessageLookupByLibrary.simpleMessage(
       "The student wants to participate in physical education classes at school and is aware of the possibility of improvement (affective dimension).",
     ),
-    "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome text"),
+    "welcomeText": MessageLookupByLibrary.simpleMessage(
+      "Your journey into Physical Literacy is going to start!",
+    ),
     "well_done": MessageLookupByLibrary.simpleMessage("Well done!"),
     "whatIsYourName": MessageLookupByLibrary.simpleMessage(
       "What is your name?",

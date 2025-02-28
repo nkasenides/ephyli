@@ -925,12 +925,12 @@ class I10N {
     else if (locale == Language.franceLocale) {
       return _translations[id]!["fr"];
     }
-    else if (locale == Language.luxembourgLocale) {
-      return _translations[id]!["lb"];
-    }
-    else if (locale == Language.polandLocale) {
-      return _translations[id]!["pl"];
-    }
+    // else if (locale == Language.luxembourgLocale) {
+    //   return _translations[id]!["lb"];
+    // }
+    // else if (locale == Language.polandLocale) {
+    //   return _translations[id]!["pl"];
+    // }
     else {
       return "No such language";
     }

@@ -55,8 +55,8 @@ class Term {
         return jsonObject["fr"];
       case Language.italyLocale:
         return jsonObject["it"];
-      case Language.polandLocale:
-        return jsonObject["pl"];
+      // case Language.polandLocale:
+      //   return jsonObject["pl"];
       default:
         throw Exception("Invalid language selected: ${Language.getCurrentLocale().countryCode!}");
     }
