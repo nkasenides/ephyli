@@ -243,20 +243,51 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
                           ),
                         ),
                       ),
-                      child: Card(
-                        color: Colors.blueAccent,
-                        child: Container(
-                          width: MediaQuery.of(context).size.width / events.length - 10,
-                          height: MediaQuery.of(context).size.height / 2,
-                          padding: EdgeInsets.all(10),
-                          child: Center(
-                            child: AutoSizeText(
-                              shuffledEvents[index]["event"]!,
-                              style: TextStyle(color: Colors.white),
-                              textAlign: TextAlign.center,
+                      child: Stack(
+                        children: [
+                          Card(
+                            color: Colors.blueAccent,
+                            child: Container(
+                              width: MediaQuery.of(context).size.width / events.length - 10,
+                              height: MediaQuery.of(context).size.height / 2,
+                              padding: const EdgeInsets.all(10),
+                              child: Center(
+                                child: AutoSizeText(
+                                  shuffledEvents[index]["event"]!,
+                                  style: const TextStyle(color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.fade,
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                          Positioned(
+                            top: -8,
+                            right: -9,
+                            child: IconButton(
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                      // title: Text(AppLocalizations.of(context)!.event_info),
+                                      content: Text(shuffledEvents[index]["event"]!),
+                                      actions: [
+                                        TextButton(
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                            child: Text(AppLocalizations.of(context)!.ok)
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              },
+                              icon: const Icon(Icons.open_in_new, color: Colors.white, size: 15,),
+                            ),
+                          ),
+                        ]
                       ),
                     ),
                   );
