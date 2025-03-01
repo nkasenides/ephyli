@@ -57,6 +57,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
 
+    double screenWidth = MediaQuery.sizeOf(context).width;
+    double screenHeight = MediaQuery.sizeOf(context).height;
+
+    print("Screen width: $screenWidth");
+
     return FutureBuilder(
       future: future,
       builder: (context, snapshot) {
@@ -236,8 +241,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     BadgeWidget(badge, size: 100,),
-                                    const Spacer(),
-                                    Text(I10N.getI10nString(earnedBadges[index].nameRes)!, style: const TextStyle(fontSize: 16), textAlign: TextAlign.center,),
+                                    screenWidth > 400 ? const Spacer() : Container(),
+                                    screenWidth > 400 ? Text(I10N.getI10nString(earnedBadges[index].nameRes)!, style: const TextStyle(fontSize: 16), textAlign: TextAlign.center,) : Container(),
                                   ],
                                 ),
                               ),
@@ -245,22 +250,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 showDialog(context: context, builder: (context) {
                                   return AlertDialog(
                                     title: Text(I10N.getI10nString(earnedBadges[index].nameRes)!, textAlign: TextAlign.center,),
-                                    content: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        BadgeWidget(badge, size: 200,),
-                                        const Gap(20),
-                                        Text(I10N.getI10nString(earnedBadges[index].descriptionRes)!, textAlign: TextAlign.center,),
-                                        const Gap(20),
-                                        Text(
-                                          AppLocalizations.of(context)!.you_have_earned_badge,
-                                          style: const TextStyle(
-                                              color: Colors.green, fontWeight: FontWeight.bold
+                                    content: SingleChildScrollView(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          BadgeWidget(badge, size: 200,),
+                                          const Gap(20),
+                                          Text(I10N.getI10nString(earnedBadges[index].descriptionRes)!, textAlign: TextAlign.center,),
+                                          const Gap(20),
+                                          Text(
+                                            AppLocalizations.of(context)!.you_have_earned_badge,
+                                            style: const TextStyle(
+                                                color: Colors.green, fontWeight: FontWeight.bold
+                                            ),
+                                            textAlign: TextAlign.center,
                                           ),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                     actions: [
                                       OutlinedButton(
