@@ -21,12 +21,3 @@ flutter_launcher_icons:
     image_path: "assets/img/ephyli_icon.png"
     background_color: "#3F2AA1"
     theme_color: "#D30D88"
-
-  windows:
-    generate: true
-    image_path: "assets/img/ephyli_icon.png"
-    icon_size: 256 # min:48, max:256, default: 48
-
-  macos:
-    generate: true
-    image_path: "assets/img/ephyli_icon.png"
