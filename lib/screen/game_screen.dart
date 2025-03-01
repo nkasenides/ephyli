@@ -54,8 +54,10 @@ class _GameScreenState extends State<GameScreen> {
       builder: (context, snapshot) {
 
         if (snapshot.connectionState != ConnectionState.done) {
-          return const Center(
-            child: CircularProgressIndicator(),
+          return const Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(),
+            ),
           );
         }
 
@@ -178,7 +180,11 @@ class _GameScreenState extends State<GameScreen> {
                 child: IconButton(
                   icon: const Icon(Icons.person_rounded),
                   onPressed: navBarFeaturesEnabled ? () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ProfileScreen(),));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ProfileScreen(),)).then((value) {
+                      setState(() {
+                        dataFuture = _getData();
+                      }); //refresh to make sure challenge admin mode & language are updated
+                    },);
                   } : null,
                   tooltip: AppLocalizations.of(context)!.profile,
                 ),

@@ -56,6 +56,7 @@ class _ChallengesFragmentState extends State<ChallengesFragment> {
     debugPrint("Tutorial view");
 
     return InstructionsWidget(
+        key: const Key("MainInstruction_Tutorial-2"),
         prefs,
         AppLocalizations.of(context)!.challengesTextTutorial,
         AppLocalizations.of(context)!.ok,
