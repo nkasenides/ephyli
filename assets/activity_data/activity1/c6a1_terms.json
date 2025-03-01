@@ -1,130 +1,109 @@
 {
   "pairs": [
-
     {
       "id": "prestructural",
       "term": {
         "en": "Prestructural",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Προδομικό",
+        "fr": "Préstructurel",
+        "it": "Prestrutturale"
       },
       "correctDescription": {
         "en": "The acquisition of unconnected information has no organisation and makes no sense.",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Η απόκτηση ασύνδετων πληροφοριών δεν έχει οργάνωση και δεν βγάζει νόημα.",
+        "fr": "L'acquisition d'informations non connectées ne comporte aucune organisation et n'a pas de sens.",
+        "it": "L'acquisizione di informazioni non collegate non ha organizzazione e non ha alcun senso."
       },
       "wrongDescription": {
         "en": "The base of the structure",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Η βάση της δομής",
+        "fr": "La base de la structure",
+        "it": "La base della struttura"
       }
     },
-
     {
       "id": "unistructural",
       "term": {
         "en": "Unistructural",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Μονοδομικό",
+        "fr": "Unistructurel",
+        "it": "Unistrutturale"
       },
       "correctDescription": {
         "en": "Simple and obvious connections are made but their significance is not grasped.",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Δημιουργούνται απλές και εμφανείς συνδέσεις, αλλά δεν γίνεται κατανοητή η σημασία τους.",
+        "fr": "Des liens simples et évidents sont établis, mais leur importance n'est pas comprise.",
+        "it": "Vengono stabiliti collegamenti semplici e ovvi, ma non se ne coglie l'importanza."
       },
       "wrongDescription": {
         "en": "One skill is learnt and applied.",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Μία δεξιότητα μαθαίνεται και εφαρμόζεται.",
+        "fr": "Une compétence est apprise et appliquée.",
+        "it": "Si apprende e si applica una sola competenza."
       }
     },
-
     {
       "id": "multistructural",
       "term": {
         "en": "Multistructural",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Πολυδομικό",
+        "fr": "Multistructurel",
+        "it": "Multistrutturale"
       },
       "correctDescription": {
         "en": "Several connections are made but the meta connections between them are missed, as is their significance for the whole.",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Δημιουργούνται αρκετές συνδέσεις, αλλά οι μετα-συνδέσεις μεταξύ τους χάνονται, όπως και η σημασία τους για το σύνολο.",
+        "fr": "Plusieurs connexions sont établies, mais les méta-connexions entre elles sont manquées, tout comme leur importance pour l'ensemble.",
+        "it": "Vengono stabiliti diversi collegamenti, ma si perdono le meta-connessioni tra di essi, così come la loro importanza per l'insieme."
       },
       "wrongDescription": {
         "en": "Lots of skills are performed",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Πολλές δεξιότητες εφαρμόζονται",
+        "fr": "De nombreuses compétences sont mises en œuvre",
+        "it": "Vengono svolte molte abilità"
       }
     },
-
     {
       "id": "relational",
       "term": {
         "en": "Relational",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Σχεσιακό",
+        "fr": "Relationnel",
+        "it": "Relazionale"
       },
       "correctDescription": {
         "en": "The student is now able to appreciate the significance of the parts about the whole.",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Ο μαθητής μπορεί πλέον να αντιληφθεί τη σημασία των μερών σε σχέση με το σύνολο.",
+        "fr": "L'élève est désormais capable de comprendre l'importance des parties en ce qui concerne l'ensemble.",
+        "it": "Lo studente è ora in grado di comprendere il significato delle parti riguardo all'insieme."
       },
       "wrongDescription": {
         "en": "Students work cooperatively together ",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Οι μαθητές εργάζονται συνεργατικά μεταξύ τους",
+        "fr": "Les élèves travaillent ensemble de manière coopérative",
+        "it": "Gli studenti lavorano insieme in modo cooperativo"
       }
     },
-
     {
       "id": "extended_abstract",
       "term": {
         "en": "Extended abstract",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Διευρυμένο αφηρημένο",
+        "fr": "Abstrait étendu",
+        "it": "Astratto esteso"
       },
       "correctDescription": {
         "en": "The student can make connections not just within the subject but also beyond and can transfer principles to different situations.",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Ο μαθητής μπορεί να κάνει συνδέσεις όχι μόνο εντός του θέματος, αλλά και πέραν αυτού, και να μεταφέρει αρχές σε διαφορετικές καταστάσεις.",
+        "fr": "L'élève peut établir des connexions non seulement au sein de la matière, mais aussi au-delà, et peut transférer des principes à différentes situations.",
+        "it": "Lo studente può creare collegamenti non solo all'interno della materia, ma anche oltre, e può trasferire i principi a situazioni diverse."
       },
       "wrongDescription": {
         "en": "Students can work much longer on an activity",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Οι μαθητές μπορούν να εργαστούν για πολύ περισσότερο χρόνο σε μια δραστηριότητα",
+        "fr": "Les élèves peuvent travailler beaucoup plus longtemps sur une activité",
+        "it": "Gli studenti possono lavorare molto più a lungo su un'attività"
       }
     }
-
   ]
 }

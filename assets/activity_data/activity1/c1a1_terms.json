@@ -1,153 +1,129 @@
 {
   "pairs": [
-
     {
       "id": "literacy",
       "term": {
         "en": "Literacy",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Εγγραμματοσύνη",
+        "fr": "Littératie",
+        "it": "Alfabetizzazione"
       },
       "correctDescription": {
         "en": "ability to interact effectively and consciously with various environments, going well beyond the traditional confines of reading and writing",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "η ικανότητα να αλληλεπιδρά κανείς αποτελεσματικά και συνειδητά με διάφορα περιβάλλοντα, υπερβαίνοντας κατά πολύ τα παραδοσιακά όρια της ανάγνωσης και της γραφής",
+        "fr": "la capacité d'interagir de manière efficace et consciente avec divers environnements, en allant bien au-delà des limites traditionnelles de la lecture et de l'écriture",
+        "it": "la capacità di interagire in modo efficace e consapevole con vari ambienti, andando ben oltre i confini tradizionali della lettura e della scrittura"
       },
       "wrongDescription": {
         "en": "continuous learning through reading and writing",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "διαρκής μάθηση μέσω ανάγνωσης και γραφής",
+        "fr": "apprentissage continu par la lecture et l'écriture",
+        "it": "apprendimento continuo attraverso la lettura e la scrittura"
       }
     },
-
     {
       "id": "holistic",
       "term": {
         "en": "Holistic approach",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Ολιστική προσέγγιση",
+        "fr": "Approche holistique",
+        "it": "Approccio olistico"
       },
       "correctDescription": {
         "en": "emphasising the physical, emotional, social, and cognitive spheres of the individual",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "δίνοντας έμφαση στις σωματικές, συναισθηματικές, κοινωνικές και γνωστικές σφαίρες του ατόμου",
+        "fr": "mettant l'accent sur les dimensions physiques, émotionnelles, sociales et cognitives de l'individu",
+        "it": "ponendo l'accent sugli aspetti fisici, emotivi, sociali e cognitivi dell'individuo"
       },
       "wrongDescription": {
         "en": "a philosophical approach to physical literacy that emphasises the emotional, social, and cognitive spheres of the individual, considering these elements as unrelated",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "μία φιλοσοφική προσέγγιση της φυσικής εγγραμματοσύνης που τονίζει τις συναισθηματικές, κοινωνικές και γνωστικές σφαίρες του ατόμου, θεωρώντας αυτά τα στοιχεία ως άσχετα μεταξύ τους",
+        "fr": "une approche philosophique de la littératie physique qui met l'accent sur les dimensions émotionnelles, sociales et cognitives de l'individu, tout en considérant ces éléments comme non liés",
+        "it": "un approccio filosofico all'alfabetizzazione fisica che sottolinea gli aspetti emotivi, sociali e cognitivi dell'individuo, considerandoli elementi non correlati tra loro"
       }
     },
-
     {
       "id": "physical_literacy",
       "term": {
         "en": "Physical literacy",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Φυσική εγγραμματοσύνη",
+        "fr": "Littératie physique",
+        "it": "Alfabetizzazione fisica"
       },
       "correctDescription": {
         "en": "the motivation, confidence, physical competence, knowledge and understanding to value and take responsibility for engagement in physical activities for life",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "το κίνητρο, η αυτοπεποίθηση, η σωματική ικανότητα, η γνώση και η κατανόηση να εκτιμά κανείς και να αναλαμβάνει την ευθύνη της ενασχόλησής του με σωματικές δραστηριότητες καθ’ όλη τη διάρκεια της ζωής",
+        "fr": "la motivation, la confiance, la compétence physique, les connaissances et la compréhension nécessaires pour valoriser et assumer la responsabilité de la participation à des activités physiques tout au long de la vie",
+        "it": "la motivazione, la fiducia, la competenza fisica, la conoscenza e la comprensione per valorizzare e assumersi la responsabilità di impegnarsi in attività fisiche per tutta la vita"
       },
       "wrongDescription": {
         "en": "the ability to read and write about physical exercise and sports rules",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "η ικανότητα να διαβάζει και να γράφει κανείς για τη σωματική άσκηση και τους κανόνες των αθλημάτων",
+        "fr": "la capacité de lire et d'écrire à propos de l'exercice physique et des règles sportives",
+        "it": "la capacità di leggere e scrivere riguardo l'esercizio fisico e le regole dello sport"
       }
     },
-
     {
       "id": "sport",
       "term": {
         "en": "Sport",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Άθλημα",
+        "fr": "Sport",
+        "it": "Sport"
       },
       "correctDescription": {
         "en": "game, competition, or activity requiring physical effort and skills that is played or done according to rules",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "παιχνίδι, διαγωνισμός ή δραστηριότητα που απαιτεί σωματική προσπάθεια και δεξιότητες και διεξάγεται σύμφωνα με κανόνες",
+        "fr": "jeu, compétition ou activité nécessitant un effort physique et des compétences, pratiqué selon des règles",
+        "it": "gioco, competizione o attività che richiede sforzo fisico e abilità e che si svolge secondo regole"
       },
       "wrongDescription": {
         "en": "planned, structured, repetitive physical activity carried out to improve or maintain one or more components of fitness",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "προγραμματισμένη, δομημένη, επαναλαμβανόμενη σωματική δραστηριότητα που πραγματοποιείται για να βελτιώσει ή να διατηρήσει ένα ή περισσότερα στοιχεία της φυσικής κατάστασης",
+        "fr": "activité physique planifiée, structurée et répétitive, réalisée pour améliorer ou maintenir un ou plusieurs composants de la condition physique",
+        "it": "attività fisica pianificata, strutturata e ripetitiva, svolta per migliorare o mantenere uno o più componenti della forma fisica"
       }
     },
-
     {
       "id": "physical_fitness",
       "term": {
         "en": "Physical fitness",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Φυσική κατάσταση",
+        "fr": "Condition physique",
+        "it": "Forma fisica"
       },
       "correctDescription": {
         "en": "set of attributes or characteristics individuals have or achieve that relates to their ability to perform physical activity",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "σύνολο χαρακτηριστικών ή γνωρισμάτων που τα άτομα διαθέτουν ή αποκτούν και που σχετίζονται με την ικανότητά τους να εκτελούν σωματικές δραστηριότητες",
+        "fr": "ensemble d'attributs ou de caractéristiques que les individus possèdent ou acquièrent et qui se rapportent à leur capacité à réaliser une activité physique",
+        "it": "insieme di attributi o caratteristiche che gli individui possiedono o acquisiscono e che riguardano la loro capacità di svolgere attività fisica"
       },
       "wrongDescription": {
         "en": "any body movement produced by the contraction of skeletal muscles",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "κάθε κίνηση του σώματος που παράγεται από τη σύσπαση των σκελετικών μυών",
+        "fr": "tout mouvement du corps produit par la contraction des muscles squelettiques",
+        "it": "qualsiasi movimento del corpo prodotto dalla contrazione dei muscoli scheletrici"
       }
     },
-
     {
       "id": "physical_education",
       "term": {
         "en": "Physical education",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "Φυσική αγωγή",
+        "fr": "Éducation physique",
+        "it": "Educazione fisica"
       },
       "correctDescription": {
         "en": "aims to develop students' motor, mental and social skills by participating in physical activities with defined learning sequences and educational objectives",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "στοχεύει στην ανάπτυξη των κινητικών, πνευματικών και κοινωνικών δεξιοτήτων των μαθητών μέσω της συμμετοχής τους σε σωματικές δραστηριότητες με καθορισμένες μαθησιακές ακολουθίες και εκπαιδευτικούς στόχους",
+        "fr": "vise à développer les compétences motrices, mentales et sociales des élèves en participant à des activités physiques avec des séquences d'apprentissage définies et des objectifs éducatifs",
+        "it": "mira a sviluppare le abilità motorie, mentali e sociali degli studenti attraverso la partecipazione ad attività fisiche con sequenze di apprendimento definite e obiettivi educativi"
       },
       "wrongDescription": {
         "en": "aims to develop students' motor, mental and social skills, promoting sport competitions",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "στοχεύει στην ανάπτυξη των κινητικών, πνευματικών και κοινωνικών δεξιοτήτων των μαθητών, προωθώντας αθλητικές διοργανώσεις",
+        "fr": "vise à développer les compétences motrices, mentales et sociales des élèves, en promouvant des compétitions sportives",
+        "it": "mira a sviluppare le abilità motorie, mentali e sociali degli studenti, promuovendo competizioni sportive"
       }
     }
   ]

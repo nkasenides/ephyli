@@ -5,24 +5,24 @@
       "id": "a",
       "term": {
         "en": "A",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "A",
+        "fr": "A",
+        "it": "A",
+        "pl": "A"
       },
       "correctDescription": {
         "en": "A-R",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "A-R",
+        "fr": "A-R",
+        "it": "A-R",
+        "pl": "A-R"
       },
       "wrongDescription": {
         "en": "A-W",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "A-W",
+        "fr": "A-W",
+        "it": "A-W",
+        "pl": "A-W"
       }
     },
 
@@ -30,24 +30,24 @@
       "id": "b",
       "term": {
         "en": "B",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "B",
+        "fr": "B",
+        "it": "B",
+        "pl": "B"
       },
       "correctDescription": {
         "en": "B_R",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "B_R",
+        "fr": "B_R",
+        "it": "B_R",
+        "pl": "B_R"
       },
       "wrongDescription": {
         "en": "B_W",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "B_W",
+        "fr": "B_W",
+        "it": "B_W",
+        "pl": "B_W"
       }
     },
 
@@ -55,24 +55,24 @@
       "id": "c",
       "term": {
         "en": "C",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "C",
+        "fr": "C",
+        "it": "C",
+        "pl": "C"
       },
       "correctDescription": {
         "en": "C_R",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "C_R",
+        "fr": "C_R",
+        "it": "C_R",
+        "pl": "C_R"
       },
       "wrongDescription": {
         "en": "C_W",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "C_W",
+        "fr": "C_W",
+        "it": "C_W",
+        "pl": "C_W"
       }
     },
 
@@ -80,24 +80,24 @@
       "id": "d",
       "term": {
         "en": "D",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "D",
+        "fr": "D",
+        "it": "D",
+        "pl": "D"
       },
       "correctDescription": {
         "en": "D_R",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "D_R",
+        "fr": "D_R",
+        "it": "D_R",
+        "pl": "D_R"
       },
       "wrongDescription": {
         "en": "D_W",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "D_W",
+        "fr": "D_W",
+        "it": "D_W",
+        "pl": "D_W"
       }
     },
 
@@ -105,49 +105,24 @@
       "id": "e",
       "term": {
         "en": "E",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "E",
+        "fr": "E",
+        "it": "E",
+        "pl": "E"
       },
       "correctDescription": {
         "en": "E_R",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "E_R",
+        "fr": "E_R",
+        "it": "E_R",
+        "pl": "E_R"
       },
       "wrongDescription": {
         "en": "E_W",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
-      }
-    },
-
-    {
-      "id": "f",
-      "term": {
-        "en": "F",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
-      },
-      "correctDescription": {
-        "en": "F_R",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
-      },
-      "wrongDescription": {
-        "en": "F_W",
-        "el": "",
-        "fr": "",
-        "it": "",
-        "pl": ""
+        "el": "E_W",
+        "fr": "E_W",
+        "it": "E_W",
+        "pl": "E_W"
       }
     }
   ]
