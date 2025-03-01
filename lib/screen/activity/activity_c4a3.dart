@@ -94,37 +94,39 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
       if (orientation == Orientation.portrait) {
         return Padding(
           padding: Themes.standardPadding,
-          child: Column(
-            children: [
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
 
-              InstructionsWidget(
-                prefs,
-                AppLocalizations.of(context)!.c4a3_info_message,
-                AppLocalizations.of(context)!.next,
-                    () {
-                  setState(() {
-                    stage = C4A3Stage.activity;
-                  });
-                },
-                middleWidget: Column(
-                  children: [
-                    WidgetZoom(
-                      heroAnimationTag: "model-img",
-                      zoomWidget: Image.asset(
-                        "assets/img/bauman_onion.png",
-                        width: MediaQuery.of(context).size.width,
+                InstructionsWidget(
+                  prefs,
+                  AppLocalizations.of(context)!.c4a3_info_message,
+                  AppLocalizations.of(context)!.next,
+                      () {
+                    setState(() {
+                      stage = C4A3Stage.activity;
+                    });
+                  },
+                  middleWidget: Column(
+                    children: [
+                      WidgetZoom(
+                        heroAnimationTag: "model-img",
+                        zoomWidget: Image.asset(
+                          "assets/img/bauman_onion.png",
+                          width: MediaQuery.of(context).size.width,
+                        ),
                       ),
-                    ),
 
-                    const Gap(20),
+                      const Gap(20),
 
-                    Text(AppLocalizations.of(context)!.screen_flip_notice)
+                      Text(AppLocalizations.of(context)!.screen_flip_notice)
 
-                  ],
+                    ],
+                  ),
                 ),
-              ),
 
-            ],
+              ],
+            ),
           ),
         );
       }
@@ -232,96 +234,100 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
 
     return OrientationBuilder(builder: (context, orientation) {
       if (orientation == Orientation.landscape) {
-        final screenWidth = MediaQuery.of(context).size.width;
-        final screenHeight = MediaQuery.of(context).size.height;
-        return Center(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              // Star shape layout for variables
-              Positioned(
-                top: screenHeight * 0.2,
-                left: screenWidth * 0.1,
-                child: buildVariableTarget(context, variables[0]), // Top left
-              ),
-              Positioned(
-                top: screenHeight * 0.1,
-                child: buildVariableTarget(context, variables[1]), // Top
-              ),
-              Positioned(
-                right: screenWidth * 0.1,
-                top: screenHeight * 0.2,
-                child: buildVariableTarget(context, variables[2]), // Top right
-              ),
-              Positioned(
-                bottom: screenHeight * 0.2,
-                left: screenWidth * 0.1,
-                child: buildVariableTarget(context, variables[3]), // Bottom left
-              ),
-              Positioned(
-                bottom: screenHeight * 0.05,
-                child: buildVariableTarget(context, variables[5]), // Bottom
-              ),
-              Positioned(
-                right: screenWidth * 0.1,
-                bottom: screenHeight * 0.2,
-                child: buildVariableTarget(context, variables[4]), // Bottom right
-              ),
+        return LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            final screenWidth = constraints.maxWidth;
+            final screenHeight = constraints.maxHeight;
+            return Center(
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  // Star shape layout for variables
+                  Positioned(
+                    top: screenHeight * 0.2,
+                    left: screenWidth * 0.1,
+                    child: buildVariableTarget(context, variables[0]), // Top left
+                  ),
+                  Positioned(
+                    top: screenHeight * 0.1,
+                    child: buildVariableTarget(context, variables[1]), // Top
+                  ),
+                  Positioned(
+                    right: screenWidth * 0.1,
+                    top: screenHeight * 0.2,
+                    child: buildVariableTarget(context, variables[2]), // Top right
+                  ),
+                  Positioned(
+                    bottom: screenHeight * 0.2,
+                    left: screenWidth * 0.1,
+                    child: buildVariableTarget(context, variables[3]), // Bottom left
+                  ),
+                  Positioned(
+                    bottom: screenHeight * 0.05,
+                    child: buildVariableTarget(context, variables[5]), // Bottom
+                  ),
+                  Positioned(
+                    right: screenWidth * 0.1,
+                    bottom: screenHeight * 0.2,
+                    child: buildVariableTarget(context, variables[4]), // Bottom right
+                  ),
 
-              // Draggable factor in the center
-              Positioned(
-                top: screenHeight * 0.35,
-                child: Draggable<String>(
-                  data: currentFactor,
-                  feedback: Material(
-                    color: Colors.transparent,
-                    child: Container(
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Themes.primaryColor,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Colors.black,
+                  // Draggable factor in the center
+                  Positioned(
+                    top: screenHeight * 0.40,
+                    child: Draggable<String>(
+                      data: currentFactor,
+                      feedback: Material(
+                        color: Colors.transparent,
+                        child: Container(
+                          padding: const EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Themes.primaryColor,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black,
+                            ),
+                          ),
+                          child: Text(
+                            currentFactor,
+                            style: const TextStyle(fontSize: 18, color: Colors.white),
+                          ),
                         ),
                       ),
-                      child: Text(
-                        currentFactor,
-                        style: const TextStyle(fontSize: 18, color: Colors.white),
+                      childWhenDragging: Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          border: Border.all(
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          currentFactor,
+                          style: const TextStyle(fontSize: 18, color: Colors.white),
+                        ),
+                      ),
+                      child: Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            color: Themes.primaryColor,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black,
+                            )
+                        ),
+                        child: Text(
+                          currentFactor,
+                          style: const TextStyle(fontSize: 18, color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
-                  childWhenDragging: Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      border: Border.all(
-                        color: Colors.black,
-                      ),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Text(
-                      currentFactor,
-                      style: const TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Themes.primaryColor,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: Colors.black,
-                      )
-                    ),
-                    child: Text(
-                      currentFactor,
-                      style: const TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
-                ),
+                ],
               ),
-            ],
-          ),
+            );
+          },
         );
       }
       else {
@@ -372,7 +378,7 @@ class _ActivityC4A3State extends State<ActivityC4A3> {
       },
       builder: (context, candidateData, rejectedData) {
         return Container(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: Themes.primaryColorDark,
             borderRadius: BorderRadius.circular(10),

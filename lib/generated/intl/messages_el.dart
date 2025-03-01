@@ -1118,7 +1118,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "c9a1_songs_and_stories": MessageLookupByLibrary.simpleMessage(
       "Τραγούδια και ιστορίες",
     ),
-    "c9a1_striking": MessageLookupByLibrary.simpleMessage("Χρύπημα"),
+    "c9a1_striking": MessageLookupByLibrary.simpleMessage("Χτύπημα"),
     "c9a1_throwing": MessageLookupByLibrary.simpleMessage("Πέταγμα"),
     "c9a2_activities_balanced": MessageLookupByLibrary.simpleMessage(
       "Δραστηριότητες ισορροπημένες με τις κινητικές δεξιότητες των μαθητών.",

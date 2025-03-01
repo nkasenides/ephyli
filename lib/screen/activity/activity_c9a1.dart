@@ -91,7 +91,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
     if (shuffledFactors.isEmpty) {
 
       factors =
-      !kDebugMode ?
+      kDebugMode ?
       [
         AppLocalizations.of(context)!.c9a1_throwing,
         AppLocalizations.of(context)!.c9a1_catching,
@@ -121,7 +121,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
       ;
 
       variables =
-      !kDebugMode ?
+      kDebugMode ?
       [
         AppLocalizations.of(context)!.c9a1_object_play,
         AppLocalizations.of(context)!.c9a1_exercise_play,
@@ -137,7 +137,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
       ;
 
       correctMappings =
-      !kDebugMode ?
+      kDebugMode ?
       {
         AppLocalizations.of(context)!.c9a1_throwing: AppLocalizations.of(context)!.c9a1_object_play,
         AppLocalizations.of(context)!.c9a1_catching: AppLocalizations.of(context)!.c9a1_object_play,
@@ -180,86 +180,90 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
 
     return OrientationBuilder(builder: (context, orientation) {
       if (orientation == Orientation.landscape) {
-        final screenWidth = MediaQuery.of(context).size.width;
-        final screenHeight = MediaQuery.of(context).size.height;
-        return Center(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              // Star shape layout for variables
-              Positioned(
-                top: screenHeight * 0.3,
-                left: screenWidth * 0.1,
-                child: buildVariableTarget(context, variables[0]), // left
-              ),
-              Positioned(
-                top: screenHeight * 0.05,
-                child: buildVariableTarget(context, variables[1]), // Top
-              ),
-              Positioned(
-                top: screenHeight * 0.3,
-                right: screenWidth * 0.1,
-                child: buildVariableTarget(context, variables[2]), // right
-              ),
-              Positioned(
-                bottom: screenHeight * 0.05,
-                child: buildVariableTarget(context, variables[3]), // Bottom
-              ),
+        return LayoutBuilder(
+          builder: (context, constraints) {
+            final screenWidth = constraints.maxWidth;
+            final screenHeight = constraints.maxHeight;
+            return Center(
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  // Star shape layout for variables
+                  Positioned(
+                    top: screenHeight * 0.3,
+                    left: screenWidth * 0.1,
+                    child: buildVariableTarget(context, variables[0]), // left
+                  ),
+                  Positioned(
+                    top: screenHeight * 0.05,
+                    child: buildVariableTarget(context, variables[1]), // Top
+                  ),
+                  Positioned(
+                    top: screenHeight * 0.3,
+                    right: screenWidth * 0.1,
+                    child: buildVariableTarget(context, variables[2]), // right
+                  ),
+                  Positioned(
+                    bottom: screenHeight * 0.05,
+                    child: buildVariableTarget(context, variables[3]), // Bottom
+                  ),
 
-              // Draggable factor in the center
-              Positioned(
-                top: screenHeight * 0.3,
-                child: Draggable<String>(
-                  data: currentFactor,
-                  feedback: Material(
-                    color: Colors.transparent,
-                    child: Container(
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Themes.primaryColor,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Colors.black,
+                  // Draggable factor in the center
+                  Positioned(
+                    top: screenHeight * 0.40,
+                    child: Draggable<String>(
+                      data: currentFactor,
+                      feedback: Material(
+                        color: Colors.transparent,
+                        child: Container(
+                          padding: const EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Themes.primaryColor,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black,
+                            ),
+                          ),
+                          child: Text(
+                            currentFactor,
+                            style: const TextStyle(fontSize: 18, color: Colors.white),
+                          ),
                         ),
                       ),
-                      child: Text(
-                        currentFactor,
-                        style: const TextStyle(fontSize: 18, color: Colors.white),
+                      childWhenDragging: Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          border: Border.all(
+                            color: Colors.black,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          currentFactor,
+                          style: const TextStyle(fontSize: 18, color: Colors.white),
+                        ),
+                      ),
+                      child: Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            color: Themes.primaryColor,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black,
+                            )
+                        ),
+                        child: Text(
+                          currentFactor,
+                          style: const TextStyle(fontSize: 18, color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
-                  childWhenDragging: Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      border: Border.all(
-                        color: Colors.black,
-                      ),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Text(
-                      currentFactor,
-                      style: const TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Themes.primaryColor,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: Colors.black,
-                      )
-                    ),
-                    child: Text(
-                      currentFactor,
-                      style: const TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
-                ),
+                ],
               ),
-            ],
-          ),
+            );
+          },
         );
       }
       else {
@@ -310,7 +314,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
       },
       builder: (context, candidateData, rejectedData) {
         return Container(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: Themes.primaryColorDark,
             borderRadius: BorderRadius.circular(10),
