@@ -93,15 +93,19 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
             messageShown ? widget.middleWidget != null ? const Gap(10) : Container() : Container(),
 
             messageShown
-                ? Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                widget.onButtonPressed != null ? ElevatedButton(
-                  onPressed: widget.onButtonPressed,
-                  child: Text(widget.buttonText),
-                ) : Container(),
-              ],
-            )
+                ? Align(
+              alignment: Alignment.centerRight,
+                  child: Wrap(
+                                direction: Axis.horizontal,
+                                alignment: WrapAlignment.start,
+                                children: [
+                  widget.onButtonPressed != null ? ElevatedButton(
+                    onPressed: widget.onButtonPressed,
+                    child: Text(widget.buttonText),
+                  ) : Container(),
+                                ],
+                              ),
+                )
                 : Container(),
           ],
         ),
