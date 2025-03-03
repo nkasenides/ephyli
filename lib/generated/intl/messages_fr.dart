@@ -1284,7 +1284,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "education_school": MessageLookupByLibrary.simpleMessage(
       "Éducation et secteur scolaire",
     ),
-    "english": MessageLookupByLibrary.simpleMessage("Anglaise\n"),
+    "english": MessageLookupByLibrary.simpleMessage("Anglaise"),
     "enjoyment": MessageLookupByLibrary.simpleMessage("Jouissance"),
     "enter_letter": MessageLookupByLibrary.simpleMessage("Entrez une lettre"),
     "enter_name": MessageLookupByLibrary.simpleMessage("Entrez votre nom"),
@@ -1299,7 +1299,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "family": MessageLookupByLibrary.simpleMessage("Famille"),
     "finish": MessageLookupByLibrary.simpleMessage("Finition"),
-    "french": MessageLookupByLibrary.simpleMessage("Français\n"),
+    "french": MessageLookupByLibrary.simpleMessage("Français"),
     "friends": MessageLookupByLibrary.simpleMessage("Amis"),
     "gameOver": MessageLookupByLibrary.simpleMessage("Jeu terminé"),
     "glossary": MessageLookupByLibrary.simpleMessage("Glossaire"),
@@ -1437,7 +1437,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "glossary_instructions": MessageLookupByLibrary.simpleMessage(
       "Il s\'agit d\'un glossaire - une liste de termes liés à la littératie physique et leurs descriptions. Faites défiler la liste ci-dessous pour trouver le terme dont vous avez besoin et cliquez dessus pour afficher sa description.",
     ),
-    "greek": MessageLookupByLibrary.simpleMessage("Grecque\n"),
+    "greek": MessageLookupByLibrary.simpleMessage("Grecque"),
     "guided_discovery": MessageLookupByLibrary.simpleMessage(
       "Découverte guidée",
     ),
@@ -1457,7 +1457,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "individual": MessageLookupByLibrary.simpleMessage("Individuel"),
     "invalidPersonName": MessageLookupByLibrary.simpleMessage("Nom invalide"),
-    "italian": MessageLookupByLibrary.simpleMessage("Italienne\n"),
+    "italian": MessageLookupByLibrary.simpleMessage("Italienne"),
     "lack_of_motivation": MessageLookupByLibrary.simpleMessage(
       "L\'élève ne souhaite pas participer aux cours d\'EPS à l\'école car il n\'a pas suffisamment confiance en lui ou n\'est pas suffisamment motivé (dimension affective).",
     ),
@@ -1472,7 +1472,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "L\'élève a une motricité très limitée et a de la difficulté à aborder les mouvements de base du volleyball (dimension physique).",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Locale"),
-    "luxenbourgese": MessageLookupByLibrary.simpleMessage("Luxembourgeois\n"),
+    "luxenbourgese": MessageLookupByLibrary.simpleMessage("Luxembourgeois"),
     "motivation": MessageLookupByLibrary.simpleMessage("Motivation"),
     "national": MessageLookupByLibrary.simpleMessage("National"),
     "natural_spaces": MessageLookupByLibrary.simpleMessage("Espaces naturels"),
@@ -1518,7 +1518,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseTurnDevice": MessageLookupByLibrary.simpleMessage(
       "Veuillez faire pivoter votre appareil.",
     ),
-    "polish": MessageLookupByLibrary.simpleMessage("Polonais\n"),
+    "polish": MessageLookupByLibrary.simpleMessage("Polonais"),
     "positive_social_support": MessageLookupByLibrary.simpleMessage(
       "L\'élève construit des relations positives qui le stimulent et le soutiennent dans sa participation à des activités sportives parascolaires (dimension sociale).",
     ),
@@ -1528,7 +1528,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "privacy_policy": MessageLookupByLibrary.simpleMessage(
       "Politique de confidentialité",
     ),
-    "proceed": MessageLookupByLibrary.simpleMessage("Procéder\n"),
+    "proceed": MessageLookupByLibrary.simpleMessage("Procéder"),
     "profile": MessageLookupByLibrary.simpleMessage("Profil"),
     "profile_description": MessageLookupByLibrary.simpleMessage(
       "Vous pouvez également gérer votre profil et vos préférences ici.",
@@ -1568,7 +1568,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "social_environment": MessageLookupByLibrary.simpleMessage(
       "Environnement social",
     ),
-    "start": MessageLookupByLibrary.simpleMessage("Commencer\n"),
+    "start": MessageLookupByLibrary.simpleMessage("Commencer"),
     "strategic_analysis": MessageLookupByLibrary.simpleMessage(
       "L\'étudiant peut analyser et adapter des stratégies à la situation de jeu de basket-ball et comprendre les bénéfices pour la santé liés à la pratique sportive (dimension cognitive).",
     ),
