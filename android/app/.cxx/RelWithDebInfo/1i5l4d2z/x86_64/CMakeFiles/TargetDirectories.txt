@@ -1,0 +1,2 @@
+C:/Users/hfnov/Software Development/Projects/ephyli/android/app/.cxx/RelWithDebInfo/1i5l4d2z/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/hfnov/Software Development/Projects/ephyli/android/app/.cxx/RelWithDebInfo/1i5l4d2z/x86_64/CMakeFiles/rebuild_cache.dir
