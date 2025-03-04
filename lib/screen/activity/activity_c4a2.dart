@@ -125,15 +125,15 @@ class _ActivityC4A2State extends State<ActivityC4A2> {
 
     return Padding(
       padding: Themes.standardPadding,
-      child: Column(
-        children: [
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
 
-          Text(AppLocalizations.of(context)!.c4a1_instruction_message),
+            Text(AppLocalizations.of(context)!.c4a1_instruction_message),
 
-          const Gap(20),
+            const Gap(20),
 
-          Expanded(
-            child: Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // Display the prompt
@@ -164,41 +164,41 @@ class _ActivityC4A2State extends State<ActivityC4A2> {
                 const SizedBox(height: 20),
               ],
             ),
-          ),
 
-          ElevatedButton(
-            child: Text(AppLocalizations.of(context)!.check_solution),
-            onPressed: () {
-              int correctsNotFound = 0;
-              for (int i = 0; i < correctness[promptIndex].length; i++) {
-                if (correctness[promptIndex][i] == Correctness.correct && buttonColors[i] != Correctness.correct.color) {
-                  correctsNotFound++;
+            ElevatedButton(
+              child: Text(AppLocalizations.of(context)!.check_solution),
+              onPressed: () {
+                int correctsNotFound = 0;
+                for (int i = 0; i < correctness[promptIndex].length; i++) {
+                  if (correctness[promptIndex][i] == Correctness.correct && buttonColors[i] != Correctness.correct.color) {
+                    correctsNotFound++;
+                  }
                 }
-              }
-              debugPrint("correctsNotFound: $correctsNotFound");
+                debugPrint("correctsNotFound: $correctsNotFound");
 
-              if (correctsNotFound > 0) {
-                UIUtils.showFeedbackBar(context, false);
-                resetRow();
-              }
-              else {
-                if (promptIndex < prompts.length - 1) { //Show next prompt
-                  UIUtils.showFeedbackBar(context, true);
-                  setState(() {
-                    promptIndex++;
-                    buttonColors = List.filled(4, noOptionColor);
-                  });
+                if (correctsNotFound > 0) {
+                  UIUtils.showFeedbackBar(context, false);
+                  resetRow();
                 }
-                else { //No more prompts, move to finish
-                  setState(() {
-                    stage = C4A2Stage.finish;
-                  });
+                else {
+                  if (promptIndex < prompts.length - 1) { //Show next prompt
+                    UIUtils.showFeedbackBar(context, true);
+                    setState(() {
+                      promptIndex++;
+                      buttonColors = List.filled(4, noOptionColor);
+                    });
+                  }
+                  else { //No more prompts, move to finish
+                    setState(() {
+                      stage = C4A2Stage.finish;
+                    });
+                  }
                 }
-              }
-            },
-          )
+              },
+            )
 
-        ],
+          ],
+        ),
       ),
     );
   }
