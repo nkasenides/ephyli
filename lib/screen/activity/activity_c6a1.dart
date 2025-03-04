@@ -335,49 +335,53 @@ class _ActivityC6A1State extends State<ActivityC6A1>
                         // Draggable words (Keys)
                         Expanded(
                           flex: 3,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: _termTexts.map((word) {
-                              return Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  color: Themes.primaryColor,
-                                  borderRadius: BorderRadius.circular(8),
-                                  border: Border.all(color: Themes.secondaryColor),
-                                ),
-                                margin: const EdgeInsets.symmetric(vertical: 8),
-                                child: Draggable<String>(
-                                  data: word,
-                                  feedback: Material(
-                                    color: Colors.transparent,
-                                    child: Container(
-                                      padding: const EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                        color: Themes.primaryColor,
-                                        borderRadius: BorderRadius.circular(8),
-                                        border: Border.all(color: Themes.secondaryColor),
+                          child: Scrollbar(
+                            child: SingleChildScrollView(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: _termTexts.map((word) {
+                                  return Container(
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                      color: Themes.primaryColor,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(color: Themes.secondaryColor),
+                                    ),
+                                    margin: const EdgeInsets.symmetric(vertical: 8),
+                                    child: Draggable<String>(
+                                      data: word,
+                                      feedback: Material(
+                                        color: Colors.transparent,
+                                        child: Container(
+                                          padding: const EdgeInsets.all(5),
+                                          decoration: BoxDecoration(
+                                            color: Themes.primaryColor,
+                                            borderRadius: BorderRadius.circular(8),
+                                            border: Border.all(color: Themes.secondaryColor),
+                                          ),
+                                          child: Text(
+                                            word,
+                                            style: const TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 18,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      childWhenDragging: Opacity(
+                                        opacity: 0.5,
+                                        child: Text(word),
                                       ),
                                       child: Text(
                                         word,
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                        ),
+                                        textAlign: TextAlign.center,
+                                        style: const TextStyle(fontSize: 18, color: Colors.white),
                                       ),
                                     ),
-                                  ),
-                                  childWhenDragging: Opacity(
-                                    opacity: 0.5,
-                                    child: Text(word),
-                                  ),
-                                  child: Text(
-                                    word,
-                                    textAlign: TextAlign.center,
-                                    style: const TextStyle(fontSize: 18, color: Colors.white),
-                                  ),
-                                ),
-                              );
-                            }).toList(),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
                           ),
                         ),
 
@@ -386,111 +390,115 @@ class _ActivityC6A1State extends State<ActivityC6A1>
                         // Drag Targets (Values)
                         Expanded(
                           flex: 7,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: _termDescriptions.map((definition) {
-                              return DragTarget<String>(
-                                onAccept: (receivedWord) {
-                                  if (isMatch(receivedWord, definition)) {
-                                    setState(() {
-                                      score += 100;
-                                      UIUtils.showFeedbackBar(context, true);
-
-                                      //Move the term to completed from shown:
-                                      _termsCompleted.add(getIDByTerm(receivedWord)!);
-                                      _termsShown.remove(getIDByTerm(receivedWord));
-
-                                      //Move the other terms from shown back to not shown:
-                                      _termsShown
-                                          .remove(matchingPairs.wrongPair1!.id);
-                                      _termsShown
-                                          .remove(matchingPairs.wrongPair2!.id);
-
-                                      if (!_termsCompleted
-                                          .contains(matchingPairs.wrongPair1!.id)) {
-                                        _termsNotShown
-                                            .add(matchingPairs.wrongPair1!.id);
-                                      }
-
-                                      if (!_termsCompleted
-                                          .contains(matchingPairs.wrongPair2!.id)) {
-                                        _termsNotShown
-                                            .add(matchingPairs.wrongPair2!.id);
-                                      }
-
-                                      debugPrint("Not shown: $_termsNotShown");
-                                      debugPrint("Shown: $_termsShown");
-                                      debugPrint("Completed: $_termsCompleted");
-
-                                      if (_termsNotShown.isEmpty) {
+                          child: Scrollbar(
+                            child: SingleChildScrollView(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: _termDescriptions.map((definition) {
+                                  return DragTarget<String>(
+                                    onAccept: (receivedWord) {
+                                      if (isMatch(receivedWord, definition)) {
                                         setState(() {
-                                          stage = C6A1Stage.finish;
+                                          score += 100;
+                                          UIUtils.showFeedbackBar(context, true);
+
+                                          //Move the term to completed from shown:
+                                          _termsCompleted.add(getIDByTerm(receivedWord)!);
+                                          _termsShown.remove(getIDByTerm(receivedWord));
+
+                                          //Move the other terms from shown back to not shown:
+                                          _termsShown
+                                              .remove(matchingPairs.wrongPair1!.id);
+                                          _termsShown
+                                              .remove(matchingPairs.wrongPair2!.id);
+
+                                          if (!_termsCompleted
+                                              .contains(matchingPairs.wrongPair1!.id)) {
+                                            _termsNotShown
+                                                .add(matchingPairs.wrongPair1!.id);
+                                          }
+
+                                          if (!_termsCompleted
+                                              .contains(matchingPairs.wrongPair2!.id)) {
+                                            _termsNotShown
+                                                .add(matchingPairs.wrongPair2!.id);
+                                          }
+
+                                          debugPrint("Not shown: $_termsNotShown");
+                                          debugPrint("Shown: $_termsShown");
+                                          debugPrint("Completed: $_termsCompleted");
+
+                                          if (_termsNotShown.isEmpty) {
+                                            setState(() {
+                                              stage = C6A1Stage.finish;
+                                            });
+                                          } else {
+                                            _findMatchingPairs();
+                                          }
                                         });
                                       } else {
-                                        _findMatchingPairs();
-                                      }
-                                    });
-                                  } else {
-                                    setState(() {
-                                      score -= 100;
-                                      UIUtils.showFeedbackBar(context, false);
+                                        setState(() {
+                                          score -= 100;
+                                          UIUtils.showFeedbackBar(context, false);
 
-                                      mistakeCounter++;
-                                      if (mistakeCounter >= 5) {
-                                        showDialog(
-                                            context: context,
-                                            builder: (context) {
-                                              return AlertDialog(
-                                                title: Text(
-                                                    AppLocalizations.of(context)!
-                                                        .gameOver),
-                                                content: Text(
-                                                    AppLocalizations.of(context)!
-                                                        .c1a1_5mistakesReset),
-                                                actions: [
-                                                  TextButton(
-                                                    onPressed: () {
-                                                      resetGame();
-                                                      Navigator.pop(context);
-                                                    },
-                                                    child: Text(
+                                          mistakeCounter++;
+                                          if (mistakeCounter >= 5) {
+                                            showDialog(
+                                                context: context,
+                                                builder: (context) {
+                                                  return AlertDialog(
+                                                    title: Text(
                                                         AppLocalizations.of(context)!
-                                                            .ok),
-                                                  )
-                                                ],
-                                              );
-                                            },
-                                            barrierDismissible: false);
+                                                            .gameOver),
+                                                    content: Text(
+                                                        AppLocalizations.of(context)!
+                                                            .c1a1_5mistakesReset),
+                                                    actions: [
+                                                      TextButton(
+                                                        onPressed: () {
+                                                          resetGame();
+                                                          Navigator.pop(context);
+                                                        },
+                                                        child: Text(
+                                                            AppLocalizations.of(context)!
+                                                                .ok),
+                                                      )
+                                                    ],
+                                                  );
+                                                },
+                                                barrierDismissible: false);
+                                          }
+                                        });
                                       }
-                                    });
-                                  }
-                                },
-                                builder: (context, candidateData, rejectedData) {
-                                  return Container(
-                                    padding: const EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      border:
-                                      Border.all(color: Themes.primaryColor),
-                                    ),
-                                    margin: EdgeInsets.symmetric(vertical: 8),
-                                    child: SizedBox(
-                                      width: 500,
-                                      child: Text(
-                                        definition,
-                                        textAlign: TextAlign.center,
-                                        style: const TextStyle(
-                                          fontSize: 16,
-                                          fontStyle: FontStyle.italic,
-                                          color: Colors.blueGrey,
+                                    },
+                                    builder: (context, candidateData, rejectedData) {
+                                      return Container(
+                                        padding: const EdgeInsets.all(5),
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(8),
+                                          border:
+                                          Border.all(color: Themes.primaryColor),
                                         ),
-                                      ),
-                                    ),
+                                        margin: EdgeInsets.symmetric(vertical: 8),
+                                        child: SizedBox(
+                                          width: 500,
+                                          child: Text(
+                                            definition,
+                                            textAlign: TextAlign.center,
+                                            style: const TextStyle(
+                                              fontSize: 16,
+                                              fontStyle: FontStyle.italic,
+                                              color: Colors.blueGrey,
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
                                   );
-                                },
-                              );
-                            }).toList(),
+                                }).toList(),
+                              ),
+                            ),
                           ),
                         ),
                       ],
