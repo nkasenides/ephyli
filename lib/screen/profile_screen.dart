@@ -1,5 +1,6 @@
 import 'package:ephyli/model/game_badge.dart';
 import 'package:ephyli/utils/i10n.dart';
+import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/language_selection_widget.dart';
 import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/material.dart';
@@ -9,12 +10,14 @@ import 'package:fluttermoji/fluttermojiCircleAvatar.dart';
 import 'package:fluttermoji/fluttermojiCustomizer.dart';
 import 'package:fluttermoji/fluttermojiFunctions.dart';
 import 'package:fluttermoji/fluttermojiThemeData.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../theme/themes.dart';
 import '../utils/constants.dart';
 import '../utils/pref_utils.dart';
+import '../utils/text_utils.dart';
 import '../widgets/badge_widget.dart';
 import '../widgets/buddy_avatar_widget.dart';
 
@@ -103,10 +106,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ],
                               ),
 
-                              // Name and Bio
-                              Text(
-                                prefs.getString(PrefUtils.username)!,
-                                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                              // name
+                              TextButton(
+                                onPressed: () {
+
+                                  TextEditingController nameController = TextEditingController(text: prefs.getString(PrefUtils.username));
+
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                        content: TextField(
+                                          controller: nameController,
+                                          decoration: InputDecoration(hintText: AppLocalizations.of(context)!.enter_name),
+                                        ),
+                                        actions: <Widget>[
+                                          TextButton(
+                                            child: Text(AppLocalizations.of(context)!.cancel),
+                                            onPressed: () => Navigator.pop(context),
+                                          ),
+                                          TextButton(
+                                            child: Text(AppLocalizations.of(context)!.ok),
+                                            onPressed: () {
+                                              final String name = nameController.text;
+                                              if (name.isValidPersonName) {
+                                                Navigator.pop(context);
+                                                prefs.setString(PrefUtils.username, nameController.text).then((value) => setState(() {}),);
+                                              }
+                                              else {
+                                                Fluttertoast.showToast(msg: AppLocalizations.of(context)!.invalidPersonName);
+                                              }
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+                                child: Text(
+                                  prefs.getString(PrefUtils.username)!,
+                                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+                                ),
                               ),
 
                               const Gap(20),
