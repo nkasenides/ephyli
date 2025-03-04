@@ -110,54 +110,57 @@ class _ActivityC3A1State extends State<ActivityC3A1> {
       if (orientation == Orientation.portrait) {
         return Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
 
-              Text(AppLocalizations.of(context)!.c3a1_activity_message),
-              const SizedBox(height: 20),
+                Text(AppLocalizations.of(context)!.c3a1_activity_message),
+                const SizedBox(height: 20),
 
-              // Draggable and reorderable card list
-              Expanded(
-                child: ReorderableListView.builder(
-                  itemCount: shuffledCards.length,
-                  onReorder: (oldIndex, newIndex) {
-                    if (newIndex > oldIndex) {
-                      newIndex -= 1;
-                    }
-                    _swapCards(oldIndex, newIndex);
-                  },
-                  itemBuilder: (context, index) {
-                    return Card(
-                      key: ValueKey(shuffledCards[index]),
-                      color: Themes.primaryColor,  // No background during drag
-                      child: ListTile(
-                        title: Text(
-                          shuffledCards[index],
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
+                // Draggable and reorderable card list
+                SizedBox(
+                  height: 275,
+                  child: ReorderableListView.builder(
+                    itemCount: shuffledCards.length,
+                    onReorder: (oldIndex, newIndex) {
+                      if (newIndex > oldIndex) {
+                        newIndex -= 1;
+                      }
+                      _swapCards(oldIndex, newIndex);
+                    },
+                    itemBuilder: (context, index) {
+                      return Card(
+                        key: ValueKey(shuffledCards[index]),
+                        color: Themes.primaryColor,  // No background during drag
+                        child: ListTile(
+                          title: Text(
+                            shuffledCards[index],
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white
+                            ),
                           ),
                         ),
-                      ),
-                    );
+                      );
+                    },
+                  ),
+                ),
+
+                ElevatedButton(
+                  child: Text(AppLocalizations.of(context)!.check_solution),
+                  onPressed: () {
+                    if (_isOrderCorrect()) {
+                      _showSuccessMessage();
+                    }
+                    else {
+                      _showFailMessage();
+                    }
                   },
                 ),
-              ),
 
-              ElevatedButton(
-                child: Text(AppLocalizations.of(context)!.check_solution),
-                onPressed: () {
-                  if (_isOrderCorrect()) {
-                    _showSuccessMessage();
-                  }
-                  else {
-                    _showFailMessage();
-                  }
-                },
-              ),
-
-            ],
+              ],
+            ),
           ),
         );
       }
