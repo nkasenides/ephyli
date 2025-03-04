@@ -160,7 +160,7 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
 
                   // Show the list of country options with flags in a grid
                   if (showPrompt) SizedBox(
-                    height: 300,
+                    height: 0.5 * MediaQuery.of(context).size.height,
                     child: GridView.builder(
                       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2, // Number of flags in one row
@@ -177,6 +177,7 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
                             backgroundColor: Colors.grey.shade100,
                             foregroundColor: Colors.black,
                             minimumSize: const Size(150, 150),
+                            maximumSize: const Size(150, 150),
                             padding: const EdgeInsets.all(5),
                           ),
                           child: Column(
