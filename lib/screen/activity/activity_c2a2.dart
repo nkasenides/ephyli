@@ -135,54 +135,55 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
 
     return OrientationBuilder(builder: (context, orientation) {
       if (orientation == Orientation.portrait) {
-        return Padding(
-          padding: Themes.standardPadding,
-          child: Center(
-            child: Column(
-              children: [
+        return SingleChildScrollView(
+          child: Padding(
+            padding: Themes.standardPadding,
+            child: Center(
+              child: Column(
+                children: [
 
-                Text(
-                  "\"$currentDefinition\"",
-                  style:  const TextStyle(fontSize: 18, fontStyle: FontStyle.italic),
-                  textAlign: TextAlign.justify,
-                ),
+                  Text(
+                    "\"$currentDefinition\"",
+                    style:  const TextStyle(fontSize: 18, fontStyle: FontStyle.italic),
+                    textAlign: TextAlign.center,
+                  ),
 
-                const SizedBox(height: 50),
+                  const SizedBox(height: 50),
 
-                showPrompt ? Text(
-                  AppLocalizations.of(context)!.c2a2_instruction,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontWeight: FontWeight.bold,),
-                ) : Container(),
+                  showPrompt ? Text(
+                    AppLocalizations.of(context)!.c2a2_instruction,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontWeight: FontWeight.bold,),
+                  ) : Container(),
 
-                const SizedBox(height: 50),
+                  const SizedBox(height: 50),
 
-                // Show the list of country options with flags in a grid
-                showPrompt ? Expanded(
-                  child: GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2, // Number of flags in one row
-                      childAspectRatio: 1.5,
-                      mainAxisSpacing: 20,
-                      crossAxisSpacing: 20,
-                    ),
-                    itemCount: countries.length,
-                    itemBuilder: (context, index) {
-                      String countryName = countries[index]["name"]!;
-                      String flagPath = countries[index]["flag"]!;
-                      return ElevatedButton(
-                        onPressed: () => handleCountrySelection(countryName),
-                        style: ElevatedButton.styleFrom(
+                  // Show the list of country options with flags in a grid
+                  if (showPrompt) SizedBox(
+                    height: 300,
+                    child: GridView.builder(
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2, // Number of flags in one row
+                        mainAxisSpacing: 20,
+                        crossAxisSpacing: 15,
+                      ),
+                      itemCount: countries.length,
+                      itemBuilder: (context, index) {
+                        String countryName = countries[index]["name"]!;
+                        String flagPath = countries[index]["flag"]!;
+                        return ElevatedButton(
+                          onPressed: () => handleCountrySelection(countryName),
+                          style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.grey.shade100,
-                            foregroundColor: Colors.black
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(5),
+                            foregroundColor: Colors.black,
+                            minimumSize: const Size(150, 150),
+                            padding: const EdgeInsets.all(5),
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
 
-                              const SizedBox(height: 10),
+                              // const SizedBox(height: 10),
 
                               // Country Flag
                               SizedBox(
@@ -194,27 +195,31 @@ class _ActivityC2A2State extends State<ActivityC2A2> {
                               ),
 
 
-                              const SizedBox(height: 15),
+                              const SizedBox(height: 10),
 
                               // Country Name
-                              Expanded(
-                                child: AutoSizeText(
-                                  countryName,
-                                  style: const TextStyle(fontSize: 16),
-                                  textAlign: TextAlign.center,
-                                ),
+                              Wrap(
+                                direction: Axis.horizontal,
+                                children: [
+                                  AutoSizeText(
+                                    countryName,
+                                    style: const TextStyle(fontSize: 14),
+                                    overflow: TextOverflow.fade,
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
                               ),
 
                             ],
                           ),
-                        ),
-                      );
-                    },
-                  ),
-                ) : Container(),
+                        );
+                      },
+                    ),
+                  ) else Container(),
 
 
-              ],
+                ],
+              ),
             ),
           ),
         );
