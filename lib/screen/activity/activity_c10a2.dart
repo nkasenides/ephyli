@@ -236,6 +236,7 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
           alignment: Alignment.center,
           child: Text(
             style,
+            textAlign: TextAlign.center,
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
         );
