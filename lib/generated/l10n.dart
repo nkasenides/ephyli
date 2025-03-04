@@ -5553,6 +5553,16 @@ class S {
     );
   }
 
+  /// `Lives remaining`
+  String get c13_lives_remaining {
+    return Intl.message(
+      'Lives remaining',
+      name: 'c13_lives_remaining',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Attributes`
   String get glossary_Attributes {
     return Intl.message(

@@ -814,6 +814,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "c13_9_wrong_8": MessageLookupByLibrary.simpleMessage(
       "Comment les mouvements/compétences pratiqués dans cette leçon peuvent-ils vous aider dans d’autres sports/activités ?",
     ),
+    "c13_lives_remaining": MessageLookupByLibrary.simpleMessage(
+      "Vies restantes",
+    ),
     "c13a1_finish": MessageLookupByLibrary.simpleMessage(
       "Bravo ! Vous avez terminé cette activité. Il vous en reste encore une pour terminer le dernier défi !",
     ),
