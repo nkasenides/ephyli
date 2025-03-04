@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:csv/csv.dart';
 
 Future<void> main() async {
-  var data = await File("fr.csv").readAsString();
+  var data = await File("el.csv").readAsString();
   List<List<String>> rowsAsListOfValues = const CsvToListConverter().convert(data);
   rowsAsListOfValues.removeAt(0); //Remove header
   final Map<String, String> translations = {};
@@ -25,7 +25,7 @@ Future<void> main() async {
 
 
   //OUTPUT:
-  var out = File('translated-fr.json').openWrite();
+  var out = File('translated-el.json').openWrite();
   out.write(jsonEncode(translations));
   out.close();
 

@@ -58,7 +58,7 @@ class _AboutScreenState extends State<AboutScreen> {
               padding: Themes.standardPadding,
               child: SingleChildScrollView(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
 
                     Image.asset(AppImages.logo, width: 200,),
@@ -104,8 +104,25 @@ class _AboutScreenState extends State<AboutScreen> {
 
                     const Gap(20),
 
+                    const Divider(),
+
+                    Wrap(
+                      alignment: WrapAlignment.spaceEvenly,
+                      children: [
+
+                        Image.asset("assets/img/uclan_logo.png", width: 100),
+                        Image.asset("assets/img/idl_logo.png", width: 100),
+                        Image.asset("assets/img/grantxpert_logo.png", width: 100),
+
+                      ],
+                    ),
+
+                    const Divider(),
+
+                    const Gap(20),
+
                     SwitchListTile(
-                      title: Text("Admin mode"), //todo
+                      title: Text("Admin mode"),
                       value: isInAdminMode,
                       onChanged: (value) {
                         if (value) {
@@ -159,7 +176,7 @@ class _AboutScreenState extends State<AboutScreen> {
 
                     const Gap(20),
 
-                    Text("Version: $version"),
+                    Text("Version: $version", textAlign: TextAlign.center,),
 
 
                   ],
