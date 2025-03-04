@@ -10,6 +10,7 @@ import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_image_map/flutter_image_map.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
@@ -200,111 +201,114 @@ class _ActivityC8A1State extends State<ActivityC8A1> {
       if (orientation == Orientation.portrait) {
         return Padding(
           padding: Themes.standardPadding,
-          child: Column(
-            children: [
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
 
-              //Bottles:
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  // Water Bottle 1
-                  WaterBottleWidget(level: motorSkillsLevel),
+                //Bottles:
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // Water Bottle 1
+                    WaterBottleWidget(level: motorSkillsLevel),
 
-                  // Water Bottle 2
-                  WaterBottleWidget(level: teamworkLevel),
+                    // Water Bottle 2
+                    WaterBottleWidget(level: teamworkLevel),
 
-                  // Water Bottle 3
-                  WaterBottleWidget(level: enjoymentLevel),
-                ],
-              ),
-
-              const Gap(20),
-
-              //Labels:
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-
-                  Expanded(
-                    child: Text(
-                      AppLocalizations.of(context)!.appropriate_motor_skills_background,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-
-                  Expanded(
-                    child: Text(
-                      AppLocalizations.of(context)!.inclusion_teamwork,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-
-                  Expanded(
-                    child: Text(
-                      AppLocalizations.of(context)!.enjoyment,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-
-                ],
-              ),
-
-              const Gap(5),
-
-              const Divider(),
-
-              const Gap(5),
-
-              Text(
-                AppLocalizations.of(context)!.c8a1_prompt,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-
-              const Gap(10),
-
-              Expanded(
-                child: ListView.builder(
-                  itemCount: shownOptions.length,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: const EdgeInsets.symmetric(vertical: 5),
-                      child: OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                          foregroundColor: Themes.primaryColorDark,
-                          backgroundColor: selectedOptionIndex == index ? Colors.yellow.shade500 : null,
-                        ),
-                        child: Text(
-                          shownOptions[index],
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        onPressed: () {
-                          setState(() {
-                            selectedOptionIndex = index;
-                            //Animate the bottles:
-                            final String optionSelected = shownOptions[selectedOptionIndex];
-                            motorSkillsLevel = optionPoints[optionSelected]![0];
-                            teamworkLevel = optionPoints[optionSelected]![1];
-                            enjoymentLevel = optionPoints[optionSelected]![2];
-                          });
-                        },
-                      ),
-                    );
-                  },
+                    // Water Bottle 3
+                    WaterBottleWidget(level: enjoymentLevel),
+                  ],
                 ),
-              ),
 
-              ElevatedButton.icon(
-                onPressed: () {
-                  checkOption();
-                },
-                iconAlignment: IconAlignment.end,
-                icon: const Icon(Icons.navigate_next_outlined),
-                label: Text(AppLocalizations.of(context)!.next),
-              )
+                const Gap(20),
 
-            ],
+                //Labels:
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+
+                    Expanded(
+                      child: Text(
+                        AppLocalizations.of(context)!.appropriate_motor_skills_background,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+
+                    Expanded(
+                      child: Text(
+                        AppLocalizations.of(context)!.inclusion_teamwork,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+
+                    Expanded(
+                      child: Text(
+                        AppLocalizations.of(context)!.enjoyment,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+
+                  ],
+                ),
+
+                const Gap(5),
+
+                const Divider(),
+
+                const Gap(5),
+
+                Text(
+                  AppLocalizations.of(context)!.c8a1_prompt,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                ),
+
+                const Gap(10),
+
+                SizedBox(
+                  height: 300,
+                  child: ListView.builder(
+                    itemCount: shownOptions.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: const EdgeInsets.symmetric(vertical: 5),
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                            foregroundColor: Themes.primaryColorDark,
+                            backgroundColor: selectedOptionIndex == index ? Colors.yellow.shade500 : null,
+                          ),
+                          child: Text(
+                            shownOptions[index],
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              selectedOptionIndex = index;
+                              //Animate the bottles:
+                              final String optionSelected = shownOptions[selectedOptionIndex];
+                              motorSkillsLevel = optionPoints[optionSelected]![0];
+                              teamworkLevel = optionPoints[optionSelected]![1];
+                              enjoymentLevel = optionPoints[optionSelected]![2];
+                            });
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                ),
+
+                ElevatedButton.icon(
+                  onPressed: () {
+                    checkOption();
+                  },
+                  iconAlignment: IconAlignment.end,
+                  icon: const Icon(Icons.navigate_next_outlined, color: Colors.white,),
+                  label: Text(AppLocalizations.of(context)!.next),
+                )
+
+              ],
+            ),
           ),
 
         );
