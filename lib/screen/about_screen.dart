@@ -80,16 +80,16 @@ class _AboutScreenState extends State<AboutScreen> {
                       },
                     ),
 
-                    const Gap(10),
+                    // const Gap(10),
 
-                    OutlinedButton.icon(
-                      iconAlignment: IconAlignment.end,
-                      icon: const Icon(Icons.open_in_new),
-                      label: Text(AppLocalizations.of(context)!.about_the_app),
-                      onPressed: () {
-                        UIUtils.visitLink("https://www.ephyliproject.eu/app");
-                      },
-                    ),
+                    // OutlinedButton.icon(
+                    //   iconAlignment: IconAlignment.end,
+                    //   icon: const Icon(Icons.open_in_new),
+                    //   label: Text(AppLocalizations.of(context)!.about_the_app),
+                    //   onPressed: () {
+                    //     UIUtils.visitLink("https://www.ephyliproject.eu/app");
+                    //   },
+                    // ),
 
                     const Gap(10),
 
