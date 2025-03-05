@@ -4,9 +4,9 @@ The ePhyLi project app aims to support the promotion of physical literacy in edu
 
 ## Current version
 
-The current version of the app is: 0.1.5+5 Beta. This version is meant for public testing purposes.
+The current version of the app is: 0.1.7+7 Beta. This version is meant for public testing purposes.
 
-## Download the Android Alpha
+## Download the Android Beta APK
 
 [ePhyLi Version 0.1.1 Beta](https://github.com/nkasenides/ephyli/raw/refs/heads/main/release/ephyli-0.1.1.apk) [~28MB]
 
