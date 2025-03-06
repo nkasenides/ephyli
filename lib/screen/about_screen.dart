@@ -113,6 +113,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         Image.asset("assets/img/uclan_logo.png", width: 100),
                         Image.asset("assets/img/idl_logo.png", width: 100),
                         Image.asset("assets/img/grantxpert_logo.png", width: 100),
+                        Image.asset("assets/img/eupea_logo.png", width: 100),
 
                       ],
                     ),
