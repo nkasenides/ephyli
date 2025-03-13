@@ -142,7 +142,7 @@
   "c4a1_intro_message": "Bienvenue au Défi 4. Vous serez plongé dans différents scénarios de la vie réelle. Réfléchissez aux facteurs ou aux stratégies qui influencent la motivation à s'engager dans une activité physique/un mouvement. Prêt ?",
   "c4a1_instruction_message": "C'est un dimanche ensoleillé. Décidez quelle activité de loisir conviendrait le mieux à un enfant. Cliquez sur les qualités affichées à l'écran pour chaque activité, en essayant d'identifier celles qui pourraient être proposées pour augmenter la littératie physique de l'enfant. Soyez prudent ! Si vous cliquez sur la mauvaise qualité, votre sélection sera réinitialisée. Lorsque vous avez terminé, cliquez sur « Vérifier la solution » pour vérifier votre solution.",
   "c4a1_finish_message": "Bravo ! Vous avez terminé l'activité. Passons à la suite !",
-  "c4a1_category_funny": "Drôle",
+  "c4a1_category_funny": "Amusant",
   "c4a1_category_social": "Sociale",
   "c4a1_category_active": "Actif",
   "c4a1_category_movements": "Comprend différents mouvements",
