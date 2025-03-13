@@ -147,7 +147,7 @@
   "c3a1_term11": "Improved health",
   "c3a1_term12": "Improved quality of life",
 
-  "c4a1_intro_message": "Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?",
+  "c4a1_intro_message": "Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. You need to pick the factors which apply to each scenario. In each scenario there can be more than one factor which applies. Ready?",
   "c4a1_instruction_message": "It's a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child's Physical Literacy. Be careful! If you click on the wrong quality your selection will be reset. When you are finished, click 'Check solution' to check your solution.",
   "c4a1_finish_message": "Well done! You have completed the activity. Let's move on!",
   "c4a1_category_funny": "Fun",
@@ -209,7 +209,7 @@
   "national": "National",
   "local": "Local",
 
-  "c5a1_intro_message": "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?",
+  "c5a1_intro_message": "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Click on the yellow boxes and then pick the right element for that part of the diagram. Ready?",
   "c5a1_finish_message": "Well done! You have completed the fifth challenge. Press 'Finish' to get your badge!",
   "c5a1_instruction_title": "Choose element",
   "c5a1_instruction_place": "Click the element you would like to place in this area:",
