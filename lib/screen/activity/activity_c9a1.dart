@@ -91,7 +91,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
     if (shuffledFactors.isEmpty) {
 
       factors =
-      kDebugMode ?
+      !kDebugMode ?
       [
         AppLocalizations.of(context)!.c9a1_throwing,
         AppLocalizations.of(context)!.c9a1_catching,
@@ -121,7 +121,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
       ;
 
       variables =
-      kDebugMode ?
+      !kDebugMode ?
       [
         AppLocalizations.of(context)!.c9a1_object_play,
         AppLocalizations.of(context)!.c9a1_exercise_play,
@@ -137,7 +137,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
       ;
 
       correctMappings =
-      kDebugMode ?
+      !kDebugMode ?
       {
         AppLocalizations.of(context)!.c9a1_throwing: AppLocalizations.of(context)!.c9a1_object_play,
         AppLocalizations.of(context)!.c9a1_catching: AppLocalizations.of(context)!.c9a1_object_play,
