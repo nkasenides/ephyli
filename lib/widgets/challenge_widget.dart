@@ -60,7 +60,6 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
             }
         },
 
-        //TODO - DEBUGGING ONLY REMOVE LATER
         onLongPress: widget.adminMode ? !widget.challenge.completed ? () {
           debugPrint("Long press complete test");
           for (String activityID in widget.challenge.activityIDs) {
