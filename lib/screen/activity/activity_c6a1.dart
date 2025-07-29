@@ -85,7 +85,6 @@ class _ActivityC6A1State extends State<ActivityC6A1>
     // Start the animation after 2 seconds
     Future.delayed(const Duration(seconds: 2)).then(
       (value) {
-        //TODO - Controller causes error when directly moving back from activity.
         _controller.forward().then(
           (value) {
             setState(() {
@@ -137,87 +136,55 @@ class _ActivityC6A1State extends State<ActivityC6A1>
   }
 
   void _findMatchingPairs() {
-    //Initialize matching pairs object, if not initialized:
     matchingPairs = MatchingPairs();
 
-    List<String> titles = [];
-    List<String> descriptions = [];
-
-    //Find correct pair:
+    // Pick a random term not yet shown
     int randomIndex = Random().nextInt(_termsNotShown.length);
-    String correctTermID = _termsNotShown[randomIndex];
-    Term? correctTerm = getTermByID(correctTermID);
-    MatchingPair correctPair = MatchingPair(
-        correctTerm!.id, correctTerm.text, correctTerm.correctDescription);
-    matchingPairs.correctPair = correctPair;
+    String currentTermID = _termsNotShown[randomIndex];
+    Term currentTerm = getTermByID(currentTermID)!;
 
-    _termsNotShown.remove(correctTerm.id);
-    _termsShown.add(correctTerm.id);
+    // Prepare the correct pair
+    matchingPairs.correctPair = MatchingPair(
+      currentTerm.id,
+      currentTerm.text,
+      currentTerm.correctDescription,
+    );
 
-    titles.add(correctTerm.text);
-    descriptions.add(correctTerm.correctDescription);
+    // Mark this term as shown
+    _termsNotShown.remove(currentTermID);
+    _termsShown.add(currentTermID);
 
-    //Find two other terms (extras):
-    List<String> otherTermIDs = [];
-    for (Term t in terms) {
-      if (t.id != correctTermID) {
-        otherTermIDs.add(t.id);
-      }
-    }
+    // Build the list of potential distractors
+    List<String> otherTermIDs = terms.where((t) => t.id != currentTermID).map((t) => t.id).toList();
     otherTermIDs.shuffle();
 
-    String extraTermID1 = otherTermIDs[0];
-    String extraTermID2 = otherTermIDs[1];
+    // Get one incorrect definition for the current term
+    String wrongForCurrent = currentTerm.wrongDescription;
 
-    Term extraTerm1 = getTermByID(extraTermID1)!;
-    Term extraTerm2 = getTermByID(extraTermID2)!;
+    // Get one correct definition from another term
+    String randomOtherCorrect = getTermByID(otherTermIDs.first)!.correctDescription;
 
-    titles.add(extraTerm1.text);
-    titles.add(extraTerm2.text);
+    // Prepare the definitions (1 correct, 1 wrong for this term, 1 correct from another term)
+    _termTexts = [currentTerm.text]; // Only one term shown now
+    _termDescriptions = [
+      currentTerm.correctDescription,
+      wrongForCurrent,
+      randomOtherCorrect,
+    ]..shuffle(); // Shuffle answers
 
-    //Add terms as shown:
-    _termsNotShown.remove(extraTermID1);
-    _termsNotShown.remove(extraTermID2);
-    _termsShown.add(extraTermID1);
-    _termsShown.add(extraTermID2);
+    // Save wrong pairs for state tracking
+    matchingPairs.wrongPair1 = MatchingPair(currentTerm.id, currentTerm.text, wrongForCurrent);
+    matchingPairs.wrongPair2 = MatchingPair(otherTermIDs.first, getTermByID(otherTermIDs.first)!.text, randomOtherCorrect);
 
-    //Find wrong pairs:
-    List<String> allWrongDescriptions = [];
-    for (Term t in terms) {
-      allWrongDescriptions.add(t.wrongDescription);
-      if (t.id != correctTerm.id &&
-          t.id != extraTermID1 &&
-          t.id != extraTermID2) {
-        allWrongDescriptions.add(t.correctDescription);
-      }
+    debugPrint("Current term: ${currentTerm.text}");
+    debugPrint("Descriptions: $_termDescriptions");
+
+    // Check if that was the last term
+    if (_termsNotShown.isEmpty) {
+      setState(() {
+        stage = C6A1Stage.finish;
+      });
     }
-
-    //Find wrong pairs:
-    int randomWrongIndex1 = Random().nextInt(allWrongDescriptions.length);
-    int randomWrongIndex2 = Random().nextInt(allWrongDescriptions.length);
-
-    //Make sure they are not the same:
-    while (randomWrongIndex2 == randomWrongIndex1) {
-      randomWrongIndex2 = Random().nextInt(allWrongDescriptions.length);
-    }
-    descriptions.add(allWrongDescriptions[randomWrongIndex1]);
-    descriptions.add(allWrongDescriptions[randomWrongIndex2]);
-
-    //Create the matched pairs:
-    matchingPairs.wrongPair1 = MatchingPair(
-        extraTermID1, extraTerm1.text, allWrongDescriptions[randomWrongIndex1]);
-    matchingPairs.wrongPair2 = MatchingPair(
-        extraTermID2, extraTerm2.text, allWrongDescriptions[randomWrongIndex2]);
-
-    //Randomize the lists and set for UI:
-    titles.shuffle();
-    descriptions.shuffle();
-    _termTexts = titles;
-    _termDescriptions = descriptions;
-
-    debugPrint(_termTexts.toString());
-
-    debugPrint(_termDescriptions.toString());
   }
 
   Future<void> loadData() async {
@@ -412,18 +379,6 @@ class _ActivityC6A1State extends State<ActivityC6A1>
                                               .remove(matchingPairs.wrongPair1!.id);
                                           _termsShown
                                               .remove(matchingPairs.wrongPair2!.id);
-
-                                          if (!_termsCompleted
-                                              .contains(matchingPairs.wrongPair1!.id)) {
-                                            _termsNotShown
-                                                .add(matchingPairs.wrongPair1!.id);
-                                          }
-
-                                          if (!_termsCompleted
-                                              .contains(matchingPairs.wrongPair2!.id)) {
-                                            _termsNotShown
-                                                .add(matchingPairs.wrongPair2!.id);
-                                          }
 
                                           debugPrint("Not shown: $_termsNotShown");
                                           debugPrint("Shown: $_termsShown");

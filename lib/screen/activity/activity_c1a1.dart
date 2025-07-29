@@ -257,22 +257,6 @@ class _ActivityC1a1State extends State<ActivityC1a1>
               padding: Themes.standardPadding,
               child: Column(
                 children: [
-                  // const Gap(20),
-                  // Container(
-                  //   decoration: BoxDecoration(
-                  //     color: Themes.secondaryColor,
-                  //     borderRadius: const BorderRadius.all(Radius.circular(10)),
-                  //     border: Border.all(
-                  //       color: Colors.black,
-                  //     ),
-                  //   ),
-                  //   child: Padding(
-                  //     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                  //     child: Text(
-                  //       'Score: $score',
-                  //     ),
-                  //   ),
-                  // ),
 
                   Expanded(
                     child: Row(
