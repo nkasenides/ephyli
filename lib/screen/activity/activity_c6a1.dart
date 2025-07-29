@@ -221,7 +221,7 @@ class _ActivityC6A1State extends State<ActivityC6A1>
   }
 
   Future<void> loadData() async {
-    const String filename = kDebugMode ? "assets/activity_data/activity1/test_terms.json" : "assets/activity_data/activity1/c6a1_terms.json";
+    const String filename = "assets/activity_data/activity1/c6a1_terms.json";
     await Future.wait([
       Term.readTermsFromJSONFile(filename).then(
         (value) {
