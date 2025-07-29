@@ -91,12 +91,7 @@ class _ActivityC7A1State extends State<ActivityC7A1> {
   Widget activityGameView() {
 
     if (statements.isEmpty) {
-      statements = kDebugMode ? [
-        { "text": "OPT-L1", "level": "L1" },
-        { "text": "OPT2-L1", "level": "L1" },
-        { "text": "OPT3-L2", "level": "L2" },
-        { "text": "OPT4-L1", "level": "L1" },
-      ] : [
+      statements = [
         { "text": AppLocalizations.of(context)!.limited_motor_skills, "level": AppLocalizations.of(context)!.preliminary_level},
         { "text": AppLocalizations.of(context)!.lack_of_rules_knowledge, "level": AppLocalizations.of(context)!.preliminary_level},
         { "text": AppLocalizations.of(context)!.lack_of_motivation, "level": AppLocalizations.of(context)!.preliminary_level},
@@ -114,10 +109,7 @@ class _ActivityC7A1State extends State<ActivityC7A1> {
     }
 
     if (levels.isEmpty) {
-      levels = kDebugMode ? [
-        "L1",
-        "L2"
-      ] : [
+      levels = [
         AppLocalizations.of(context)!.preliminary_level,
         AppLocalizations.of(context)!.developer_level,
         AppLocalizations.of(context)!.advanced_level,
