@@ -88,7 +88,7 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
 
     if (correctElementsToAreas.isEmpty) {
       correctElementsToAreas = {
-        "Physical Competence": "Element 1",
+        "Competence": "Element 1",
         "Confidence": "Element 2",
         "Valuation": "Element 3",
         "Motivation": "Element 4",
@@ -341,6 +341,16 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
                 Navigator.of(context).pop();
               },
             ),
+
+            areaToElementPlacements[regionID] != null ? TextButton(
+              child: Text(AppLocalizations.of(context)!.clear),
+              onPressed: () {
+                setState(() {
+                  areaToElementPlacements.remove(regionID);
+                });
+                Navigator.pop(context);
+              },
+            ) : Container(),
           ],
           actionsAlignment: MainAxisAlignment.start,
         );

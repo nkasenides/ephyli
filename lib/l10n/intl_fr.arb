@@ -84,6 +84,9 @@
   "about_the_app": "À propos de l'application",
   "change_language": "Changer de langue",
   "privacy_policy": "Politique de confidentialité",
+  "clear": "Effacer",
+
+
   "c1a1_welcome": "Bienvenue au défi 1. Associez les concepts présentés aux descriptions appropriées. Soyez prudent ! Si vous faites cinq erreurs, le défi recommencera depuis le début. Prêt ?",
   "c1a1_congrats": "Bien joué ! Tous les concepts correspondent correctement aux descriptions correspondantes.",
   "c1a1_reading_instruction": "Lisez l’extrait de l’article scientifique rapporté ci-dessous pour démarrer la prochaine étape du défi.",
