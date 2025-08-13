@@ -760,6 +760,11 @@ class S {
     );
   }
 
+  /// `Clear`
+  String get clear {
+    return Intl.message('Clear', name: 'clear', desc: '', args: []);
+  }
+
   /// `Welcome to challenge 1. Match the concepts presented below to the appropriate descriptions. Be careful! If you make five mistakes, the challenge will restart from the beginning. Ready?`
   String get c1a1_welcome {
     return Intl.message(
@@ -1218,10 +1223,10 @@ class S {
     );
   }
 
-  /// `Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?`
+  /// `Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. You need to pick the factors which apply to each scenario. In each scenario there can be more than one factor which applies. Ready?`
   String get c4a1_intro_message {
     return Intl.message(
-      'Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?',
+      'Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. You need to pick the factors which apply to each scenario. In each scenario there can be more than one factor which applies. Ready?',
       name: 'c4a1_intro_message',
       desc: '',
       args: [],
@@ -1248,14 +1253,9 @@ class S {
     );
   }
 
-  /// `Funny`
+  /// `Fun`
   String get c4a1_category_funny {
-    return Intl.message(
-      'Funny',
-      name: 'c4a1_category_funny',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Fun', name: 'c4a1_category_funny', desc: '', args: []);
   }
 
   /// `Social`
@@ -1678,10 +1678,10 @@ class S {
     return Intl.message('Local', name: 'local', desc: '', args: []);
   }
 
-  /// `Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?`
+  /// `Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Click on the yellow boxes and then pick the right element for that part of the diagram. Ready?`
   String get c5a1_intro_message {
     return Intl.message(
-      'Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?',
+      'Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Click on the yellow boxes and then pick the right element for that part of the diagram. Ready?',
       name: 'c5a1_intro_message',
       desc: '',
       args: [],

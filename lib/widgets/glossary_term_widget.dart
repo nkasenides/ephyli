@@ -2,7 +2,7 @@ import 'package:ephyli/model/game_badge.dart';
 import 'package:ephyli/screen/glossary_screen.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 class GlossaryTermWidget extends StatelessWidget {
 

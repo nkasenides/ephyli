@@ -3,7 +3,7 @@ import 'package:ephyli/widgets/glossary_term_widget.dart';
 import 'package:ephyli/widgets/instructions_widget.dart';
 import 'package:ephyli/widgets/rotate_device_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

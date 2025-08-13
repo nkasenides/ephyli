@@ -89,9 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Διαθέσιμες κάρτες",
     ),
     "back": MessageLookupByLibrary.simpleMessage("Πίσω"),
-    "badges_view_title": MessageLookupByLibrary.simpleMessage(
-      "Τα παρασήματά σας",
-    ),
+    "badges_view_title": MessageLookupByLibrary.simpleMessage("Τα σήματα σας"),
     "basic_rules_knowledge": MessageLookupByLibrary.simpleMessage(
       "Ο μαθητής μπορεί να περιγράψει τους κανόνες του παιχνιδιού της καλαθοσφαίρισης και να κατανοήσει τα οφέλη για την υγεία που σχετίζονται με την αθλητική πρακτική (γνωστική διάσταση).",
     ),
@@ -979,7 +977,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Διατήρηση σε νέες δραστηριότητες",
     ),
     "c4a1_category_active": MessageLookupByLibrary.simpleMessage("Δραστήριο"),
-    "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Αστείο"),
+    "c4a1_category_funny": MessageLookupByLibrary.simpleMessage(
+      "Διασκεδαστικό",
+    ),
     "c4a1_category_movements": MessageLookupByLibrary.simpleMessage(
       "Περιλαμβάνει διαφορετικές κινήσεις",
     ),
@@ -991,7 +991,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Είναι μια ηλιόλουστη Κυριακή. Αποφασίστε ποια δραστηριότητα αναψυχής θα ήταν η καλύτερη για ένα παιδί. Κάντε κλικ στις ιδιότητες που εμφανίζονται στην οθόνη για κάθε δραστηριότητα, προσπαθώντας να εντοπίσετε ποιες από αυτές θα μπορούσαν να προταθούν για την αύξηση του Σωματικού Γραμματισμού του παιδιού. Προσοχή! Αν κάνετε κλικ σε λάθος ιδιότητα, η επιλογή σας θα μηδενιστεί. Όταν τελειώσετε, κάντε κλικ στο «Έλεγχος λύσης» για να ελέγξετε τη λύση σας.",
     ),
     "c4a1_intro_message": MessageLookupByLibrary.simpleMessage(
-      "Καλώς ήρθατε στην πρόκληση 4. Θα ασχοληθείτε με διάφορα σενάρια της πραγματικής ζωής. Σκεφτείτε τους παράγοντες ή τις στρατηγικές που επηρεάζουν τα κίνητρα για σωματική δραστηριότητα/κίνηση. Έτοιμοι;",
+      "Καλώς ήρθατε στην τέταρτη πρόκληση. Θα διαβάσετε διαφορετικά πραγματικά σενάρια. Σκεφτείτε τους παράγοντες ή τις στρατηγικές που επηρεάζουν το κίνητρο για σωματική δραστηριότητα/κίνηση. Πρέπει να επιλέξετε τους παράγοντες που ισχύουν για κάθε σενάριο. Σε κάθε σενάριο μπορεί να υπάρχουν περισσότεροι από ένας παράγοντες που ισχύουν. Έτοιμοι;",
     ),
     "c4a1_term1": MessageLookupByLibrary.simpleMessage(
       "Παίζοντας βιντεοπαιχνίδια χρησιμοποιώντας tablet, smartphone ή υπολογιστή ή βλέποντας τηλεόραση μόνος του.",
@@ -1055,7 +1055,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Επιλέξτε στοιχείο",
     ),
     "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
-      "Καλώς ήρθατε στην πρόκληση 5. Προκαλείστε να συμπληρώσετε το διάγραμμα που ακολουθεί συμπληρώνοντας τα στοιχεία που λείπουν. Έτοιμοι;",
+      "Καλώς ήρθατε στην πρόκληση 5. Προκαλείστε να συμπληρώσετε το διάγραμμα που ακολουθεί συμπληρώνοντας τα στοιχεία που λείπουν. Κάντε κλικ στα κίτρινα πλαίσια και, στη συνέχεια, επιλέξτε το σωστό στοιχείο για αυτό το μέρος του διαγράμματος. Έτοιμοι;",
     ),
     "c6a1_congrats": MessageLookupByLibrary.simpleMessage(
       "Μπράβο! Όλες οι έννοιες έχουν αντιστοιχιστεί σωστά με τις σχετικές περιγραφές. Κάντε κλικ στο \'\'Ολοκλήρωση\'\' για να κερδίσετε ένα παράσημο.",
@@ -1229,6 +1229,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "change_language": MessageLookupByLibrary.simpleMessage("Αλλαγή γλώσσας"),
     "check_solution": MessageLookupByLibrary.simpleMessage("Ελέγξτε τη λύση"),
+    "clear": MessageLookupByLibrary.simpleMessage("Καθαρισμός"),
     "clickOKToContinue": MessageLookupByLibrary.simpleMessage(
       "Κάντε κλικ στο OK για να συνεχίσετε",
     ),

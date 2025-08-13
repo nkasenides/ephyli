@@ -1,7 +1,7 @@
 import 'package:ephyli/theme/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 class HealthBar extends StatelessWidget {
   final int lives; // Total number of lives (0-20)

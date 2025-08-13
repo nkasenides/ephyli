@@ -947,7 +947,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Retention in new activities",
     ),
     "c4a1_category_active": MessageLookupByLibrary.simpleMessage("Active"),
-    "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Funny"),
+    "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Fun"),
     "c4a1_category_movements": MessageLookupByLibrary.simpleMessage(
       "Includes different movements",
     ),
@@ -959,7 +959,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "It\'s a sunny Sunday. Decide which leisure activity would be best for a child. Click on the qualities shown on the screen for each activity, trying to identify which ones could be proposed to increase the child\'s Physical Literacy. Be careful! If you click on the wrong quality your selection will be reset. When you are finished, click \'Check solution\' to check your solution.",
     ),
     "c4a1_intro_message": MessageLookupByLibrary.simpleMessage(
-      "Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. Ready?",
+      "Welcome to Challenge 4. You will be immersed in different real-life scenarios. Think about the factors or strategies that influence the motivation to engage in physical activity/movement. You need to pick the factors which apply to each scenario. In each scenario there can be more than one factor which applies. Ready?",
     ),
     "c4a1_term1": MessageLookupByLibrary.simpleMessage(
       "Playing video games using tablet, smartphone or PC, or watching TV alone.",
@@ -1017,7 +1017,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Choose element",
     ),
     "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
-      "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Ready?",
+      "Welcome to Challenge 5. You are challenged to complete the diagram which follows by filling in the missing elements. Click on the yellow boxes and then pick the right element for that part of the diagram. Ready?",
     ),
     "c6a1_congrats": MessageLookupByLibrary.simpleMessage(
       "Well done! All concepts are correctly matched to the related descriptions. Click \'Finish\' to earn a badge.",
@@ -1181,6 +1181,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "change_language": MessageLookupByLibrary.simpleMessage("Change language"),
     "check_solution": MessageLookupByLibrary.simpleMessage("Check solution"),
+    "clear": MessageLookupByLibrary.simpleMessage("Clear"),
     "clickOKToContinue": MessageLookupByLibrary.simpleMessage(
       "Click OK to continue",
     ),

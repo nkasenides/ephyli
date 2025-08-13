@@ -14,7 +14,7 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../model/activity.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 class ActivityC10A1 extends StatefulWidget {
   @override
@@ -234,7 +234,7 @@ class _ActivityC10A1State extends State<ActivityC10A1> {
 
     if (terms.isEmpty) {
       // List of terms and hints with hidden letters
-      terms = kDebugMode ? [
+      terms = !kDebugMode ? [
         {"term": "JOHN", "hint": "John", "revealed": [true, false, false, true]},
         {"term": "SMITH", "hint": "Smith", "revealed": [true, false, false, true, false]},
       ] : [

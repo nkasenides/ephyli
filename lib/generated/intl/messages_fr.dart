@@ -975,7 +975,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Maintien dans de nouvelles activités",
     ),
     "c4a1_category_active": MessageLookupByLibrary.simpleMessage("Actif"),
-    "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Drôle"),
+    "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Amusant"),
     "c4a1_category_movements": MessageLookupByLibrary.simpleMessage(
       "Comprend différents mouvements",
     ),
@@ -987,7 +987,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "C\'est un dimanche ensoleillé. Décidez quelle activité de loisir conviendrait le mieux à un enfant. Cliquez sur les qualités affichées à l\'écran pour chaque activité, en essayant d\'identifier celles qui pourraient être proposées pour augmenter la littératie physique de l\'enfant. Soyez prudent ! Si vous cliquez sur la mauvaise qualité, votre sélection sera réinitialisée. Lorsque vous avez terminé, cliquez sur « Vérifier la solution » pour vérifier votre solution.",
     ),
     "c4a1_intro_message": MessageLookupByLibrary.simpleMessage(
-      "Bienvenue au Défi 4. Vous serez plongé dans différents scénarios de la vie réelle. Réfléchissez aux facteurs ou aux stratégies qui influencent la motivation à s\'engager dans une activité physique/un mouvement. Prêt ?",
+      "Bienvenue au Défi 4. Vous serez immergé dans différents scénarios réels. Réfléchissez aux facteurs ou stratégies qui influencent la motivation à pratiquer une activité physique. Vous devez sélectionner les facteurs qui s\'appliquent à chaque scénario. Chaque scénario peut comporter plusieurs facteurs. Prêt?",
     ),
     "c4a1_term1": MessageLookupByLibrary.simpleMessage(
       "Jouer à des jeux vidéo sur tablette, smartphone ou PC, ou regarder la télévision seul.",
@@ -1045,7 +1045,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Choisir l\'élément",
     ),
     "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
-      "Bienvenue au défi 5. Vous êtes mis au défi de compléter le diagramme qui suit en remplissant les éléments manquants. Prêt ?",
+      "Bienvenue au défi 5. Vous êtes mis au défi de compléter le diagramme qui suit en remplissant les éléments manquants. Cliquez sur les cases jaunes, puis sélectionnez l’élément approprié pour cette partie du diagramme. Prêt ?",
     ),
     "c6a1_congrats": MessageLookupByLibrary.simpleMessage(
       "Bien joué ! Tous les concepts correspondent correctement aux descriptions correspondantes. Cliquez sur « Terminer » pour gagner un badge.",
@@ -1223,6 +1223,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "check_solution": MessageLookupByLibrary.simpleMessage(
       "Vérifier la solution",
     ),
+    "clear": MessageLookupByLibrary.simpleMessage("Effacer"),
     "clickOKToContinue": MessageLookupByLibrary.simpleMessage(
       "Cliquez sur OK pour continuer",
     ),

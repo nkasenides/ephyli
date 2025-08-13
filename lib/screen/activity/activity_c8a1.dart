@@ -20,7 +20,7 @@ import 'package:widget_zoom/widget_zoom.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 import '../../widgets/rotate_device_widget.dart';
 import '../../widgets/water_bottle_widget.dart';

@@ -12,7 +12,7 @@ import 'package:feature_discovery/feature_discovery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'screen/welcome_screen.dart';
@@ -50,6 +50,7 @@ class _EPhyLiAppState extends State<EPhyLiApp> {
     TTS.init();
     return FeatureDiscovery(
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: "ePhyLi",
         home: FutureBuilder(
           future: dataFuture,

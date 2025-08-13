@@ -18,7 +18,7 @@ import 'package:widget_zoom/widget_zoom.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 class ActivityC9A2 extends StatefulWidget {
   @override

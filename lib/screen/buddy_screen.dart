@@ -14,7 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/constants.dart';
 import '../utils/pref_utils.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 import '../utils/ui_utils.dart';
 import '../widgets/page_indicator.dart';

@@ -1,0 +1,2302 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Italian (`it`).
+class AppLocalizationsIt extends AppLocalizations {
+  AppLocalizationsIt([String locale = 'it']) : super(locale);
+
+  @override
+  String get tagline => 'Benvenuti su ePhyLi!';
+
+  @override
+  String get welcomeText =>
+      'Il tuo viaggio nella physical literacy sta per iniziare!';
+
+  @override
+  String get english => 'Inglese';
+
+  @override
+  String get greek => 'Greco';
+
+  @override
+  String get italian => 'Italiano';
+
+  @override
+  String get french => 'Francese';
+
+  @override
+  String get luxenbourgese => 'Lussemburghese';
+
+  @override
+  String get polish => 'Polacco';
+
+  @override
+  String get start => 'Inizia';
+
+  @override
+  String get proceed => 'Avanti';
+
+  @override
+  String get whatIsYourName => 'Come ti chiami?';
+
+  @override
+  String get customizeAvatar => 'Personalizza il tuo avatar';
+
+  @override
+  String get pleaseProvideAValue =>
+      'Non è possibile usare numeri o caratteri speciali';
+
+  @override
+  String get invalidPersonName => 'Formato nome non valido';
+
+  @override
+  String get ePhyLiBuddy => 'ePhyLi Buddy';
+
+  @override
+  String get ePhyLiBuddyIntroHeadline => 'ePhyLi Buddy';
+
+  @override
+  String get buddyIntro =>
+      'Questo è l’ePhyLi Buddy. Può fornirti informazioni preziose sul gioco e guidarti a completare le sfide. Utilizza le frecce in basso per selezionare il Buddy che più ti piace e poi clicca su \"Avanti\".';
+
+  @override
+  String get buddy_description =>
+      'Puoi consultarmi se hai bisogno di aiuto per un\'attività. Ti fornirò un aiuto supplementare o suggerimenti.';
+
+  @override
+  String get news => 'Notizie';
+
+  @override
+  String get news_description =>
+      'Cliccando su questa icona, potrai avere accesso ad articoli, post e altro ancora sulla physical literacy.';
+
+  @override
+  String get glossary => 'Glossario';
+
+  @override
+  String get glossary_description =>
+      'Cliccando su questa icona, potrai consultare le definizioni dei termini relativi alla physical literacy utilizzati nel gioco.';
+
+  @override
+  String get profile => 'Profilo';
+
+  @override
+  String get profile_description =>
+      'Cliccando su questa icona, potrai gestire il tuo profilo e le tue preferenze.';
+
+  @override
+  String get tutorial_text =>
+      'Benvenuti in ePhyLi, il tuo viaggio nella physical literacy sta per iniziare!\n\nIntraprenderai una missione unica per trasformare la tua vita attraverso la conoscenza e l\'attività. Naviga tra le sfide e svela i segreti di uno stile di vita sano. Il tuo compito non sarà solo quello di giocare, ma di crescere, acquisendo nozioni di salute e benessere. Risolverai compiti e sfide, farai scelte importanti e traccerai i tuoi progressi in un mondo coinvolgente, dove ogni passo ti porterà sempre più vicino all’obiettivo finale: padroneggiare la physical literacy.\n\nPronti a iniziare la nostra avventura?';
+
+  @override
+  String get ready_letsgo => 'Iniziamo!';
+
+  @override
+  String get tutorial_text_buddy =>
+      'Ciao, sono ePhyLi Buddy, un amico virtuale che ti guiderà e ti assisterà durante il gioco. Ecco un breve tutorial per introdurre il gioco.';
+
+  @override
+  String get next => 'Avanti';
+
+  @override
+  String get tutorialTextChallenges =>
+      'Ben fatto! Ora ti darò alcune informazioni su come iniziare a giocare. Il gioco consiste in diverse sfide da completare secondo un ordine stabilito.\n\nHo già sbloccato la prima sfida per te. Una volta completata una sfida, verrà sbloccata la successiva. È inoltre possibile ottenere dei riconoscimenti (badge) attraverso le sfide o altre attività, interagendo con le varie funzioni dell\'applicazione.';
+
+  @override
+  String get exploreChallenges => 'Ok, esploriamo le sfide!';
+
+  @override
+  String get challengesTextTutorial =>
+      'Queste sono le sfide che dovrai completare. Una sfida può essere composta da più attività. Una volta completate tutte le attività di una sfida, sbloccherò la successiva. Ricorda, non esitare a chiedere il mio aiuto se non riesci a completare un\'attività o una sfida e di utilizzare le risorse a tua disposizione presenti nelle sezioni Notizie e Glossario.\n\nIl nostro tutorial è terminato. Immagino che tu sia pronto a iniziare adesso.';
+
+  @override
+  String get challengesTextNormal =>
+      'Hai completato %1 delle %2 sfide finora. Vuoi iniziare la prossima sfida?';
+
+  @override
+  String get ok => 'OK';
+
+  @override
+  String get newBadgeTitle => 'Badge collezionato.';
+
+  @override
+  String get newBadgeText =>
+      'Congratulazioni! Hai ricevuto un nuovo badge. Ben fatto!';
+
+  @override
+  String get viewBadges => 'Visualizza i badge';
+
+  @override
+  String get completed => 'Completato';
+
+  @override
+  String get activities => 'attività';
+
+  @override
+  String get challengesTextNormalInitial =>
+      'Ehi %1! È ora di iniziare! Vuoi intraprendere la prossima sfida?';
+
+  @override
+  String get challengesTextFinishedAll =>
+      'Congratulazioni! Hai completato tutte le sfide. Vuoi rigiocarne qualcuna?';
+
+  @override
+  String get nextChallengeUnlocked => 'La prossima sfida è stata sbloccata';
+
+  @override
+  String get challengeLocked => 'Questa sfida è bloccata';
+
+  @override
+  String get challengeLockedMessage =>
+      'Questa sfida è bloccata. Completa le sfide precedenti per sbloccarla.';
+
+  @override
+  String get activityLockedMessage =>
+      'Questa attività è bloccata. Completate le attività precedenti per sbloccarla.';
+
+  @override
+  String get error => 'Si è verificato un errore';
+
+  @override
+  String get lets_start => 'Iniziamo!';
+
+  @override
+  String get resetGame => 'Ricomincia';
+
+  @override
+  String get areYouSure => 'Sei sicuro?';
+
+  @override
+  String get resetLoseProgressMessage =>
+      'In questo modo cancellerai i tuoi progressi';
+
+  @override
+  String get cancel => 'Annulla';
+
+  @override
+  String get finish => 'Fine';
+
+  @override
+  String get gameOver => 'Hai perso';
+
+  @override
+  String get alreadyPlayedActivity =>
+      'Hai già concluso questa attività. Vuoi rigiocarla?';
+
+  @override
+  String get yes => 'Si';
+
+  @override
+  String get no => 'No';
+
+  @override
+  String get unableToStartActivity =>
+      'Errore - Questa attività non può essere avviata';
+
+  @override
+  String get clickOnImageToZoom => 'Premere sull\'immagine per ingrandire';
+
+  @override
+  String get clickToViewArticle => 'Clicca qui per leggere l\'articolo';
+
+  @override
+  String get clickOKToContinue => 'Clicca su OK per continuare';
+
+  @override
+  String get challenges_unlocked => 'La sfida %1 è stata sbloccata!';
+
+  @override
+  String get screen_flip_notice =>
+      'Ruota orizzontalmente il dispositivo per questa attività';
+
+  @override
+  String get drop_here => 'Sposta qui';
+
+  @override
+  String get available_cards => 'Carte disponibili';
+
+  @override
+  String get dragging => 'Trascinare...';
+
+  @override
+  String get well_done => 'Ben fatto!';
+
+  @override
+  String get try_again => 'Riprova';
+
+  @override
+  String get check_solution => 'Controlla la soluzione';
+
+  @override
+  String get back => 'Indietro';
+
+  @override
+  String get pleaseTurnDevice => 'Ruota il dispositivo';
+
+  @override
+  String get badges_view_title => 'I tuoi badge';
+
+  @override
+  String get you_have_earned_badge =>
+      'Ti sei guadagnato questo badge. Ben fatto!';
+
+  @override
+  String get save => 'Salva';
+
+  @override
+  String get glossary_instructions =>
+      'Questo è il glossario: un elenco di termini relativi alla physical literacy con le relative descrizioni. Scorri l\'elenco sottostante per trovare il termine desiderato e clicca su di esso per visualizzarne la descrizione.';
+
+  @override
+  String get under_construction => 'In sviluppo';
+
+  @override
+  String get enter_name => 'Inserisci il tuo nome';
+
+  @override
+  String get pick_avatar => 'Personalizza il tuo avatar';
+
+  @override
+  String get pick_buddy => 'Seleziona un ePhyLi Buddy';
+
+  @override
+  String get help => 'Aiuto';
+
+  @override
+  String get no_badges_yet =>
+      'Non hai ancora guadagnato nessun badge. Completa le sfide per ottenere i badge.';
+
+  @override
+  String get about => 'Circa';
+
+  @override
+  String get project_description =>
+      'ePhyLi è un progetto finanziato da Erasmus+ Sport con lo scopo di promuovere la physical literacy e l’adozione di stili di vita sani attraverso l’uso di strumenti digitali ideati per gli studenti universitari.';
+
+  @override
+  String get visit_website => 'Visita il sito web del progetto';
+
+  @override
+  String get about_the_app => 'Informazioni sull\'applicazione';
+
+  @override
+  String get change_language => 'Cambiare la lingua';
+
+  @override
+  String get privacy_policy => 'Informativa sulla privacy';
+
+  @override
+  String get clear => 'Chiaro';
+
+  @override
+  String get c1a1_welcome =>
+      'Siamo pronti per la sfida 1. Abbina i concetti alle descrizioni appropriate. Attenzione! Se commetterai cinque errori, la sfida ripartirà dall\'inizio. Iniziamo!';
+
+  @override
+  String get c1a1_congrats =>
+      'Ben fatto! Tutti i concetti sono stati abbinati correttamente alle relative descrizioni';
+
+  @override
+  String get c1a1_reading_instruction =>
+      'Leggi l\'estratto dell\'articolo scientifico riportato di seguito per iniziare il prossimo passo della sfida.';
+
+  @override
+  String get c1a1_5mistakesReset =>
+      'Hai commesso 5 errori, il gioco ricomincerà da capo';
+
+  @override
+  String get c1a2_bubble1 =>
+      'I progressi tecnologici e i cambiamenti nello stile di vita';
+
+  @override
+  String get c1a2_bubble2 =>
+      'riducono al minimo la necessità di interazione fisica con l\'ambiente.';
+
+  @override
+  String get c1a2_bubble3 =>
+      'Ad esempio, l’uso dei mezzi di trasporto pubblici o privati riducono la necessità di muoversi (fisicamente) per spostarsi.';
+
+  @override
+  String get c1a2_bubble4 =>
+      'Ciò comporta un aumento del rischio di sviluppare patologie.';
+
+  @override
+  String get c1a2_bubble5 =>
+      'I comportamenti sedentari influiscono negativamente sulla salute, ma hanno anche profonde implicazioni sul benessere mentale ed emotivo.';
+
+  @override
+  String get c1a2_bubbles_instructions =>
+      'Dopo aver letto quanto riportato nel riquadro, clicca su di esso per poter leggere il successivo.';
+
+  @override
+  String get c1a2_finish =>
+      'Ravvivare il nostro rapporto con l\'attività fisica e l\'ambiente è indispensabile per condurre una vita sana e soddisfacente. Leggi questo articolo scientifico per saperne di più.';
+
+  @override
+  String get c2a1_intro_message =>
+      'Siamo pronti per la sfida 2. Ci troviamo alla fine del XIX secolo. Associa ogni carta alla relativa data storica. Iniziamo!';
+
+  @override
+  String get c2a1_term1 =>
+      'Un capitano dell\'esercito americano ha usato il termine physical literacy per descrivere la fisicità o la qualità del movimento di una cultura indigena.';
+
+  @override
+  String get c2a1_term2 =>
+      'Gli educatori americani hanno dichiarato: “Dobbiamo prepararci alla physical literacy così come a quella mentale”, rispondendo a un\'imminente era di modernizzazione e reclutamento dell\'esercito.';
+
+  @override
+  String get c2a1_term3 =>
+      'Margaret Whitehead aprì una discussione sul concetto di physical literacy.';
+
+  @override
+  String get c2a1_term4 =>
+      'Il termine \"physical literacy\" è stato utilizzato per descrivere \"un controllo disciplinato del corpo\".';
+
+  @override
+  String get c2a1_term5 =>
+      'Margaret Whitehead ha pubblicato un articolo scientifico sull\'European Journal of Physical Education per promuovere un dibattito sul concetto di physical literacy.';
+
+  @override
+  String get c2a1_term6 =>
+      'Approccio olistico al concetto di physical literacy, che identifica quattro dimensioni: fisica, emotiva, sociale e cognitiva.';
+
+  @override
+  String get c2a1_finish_message =>
+      'Ben fatto! Tutte le carte sono disposte correttamente! Passiamo all\'attività successiva.';
+
+  @override
+  String get c2a2_intro_message =>
+      'Negli ultimi anni, diversi Paesi hanno adottato definizioni diverse di physical literacy. Nell\'attività che segue dovete associare la definizione di physical literacy al Paese in cui è stata adottata.';
+
+  @override
+  String get c2a2_finish_message =>
+      'Congratulazioni! Avete terminato questa sfida!';
+
+  @override
+  String get c2a2_instruction =>
+      'Chi ha adottato la definizione riportata sopra? Scegli un’opzione tra quelle riportate di seguito.';
+
+  @override
+  String get c2a2_term1 =>
+      'La physical literacy può essere descritta come la motivazione, la fiducia, la competenza fisica, la conoscenza e la comprensione per valorizzare e assumersi la responsabilità di impegnarsi nella pratica di attività fisica per tutta la vita.';
+
+  @override
+  String get c2a2_term2 =>
+      'La physical literacy consiste nel costruire le abilità, le conoscenze e i comportamenti che ci danno la fiducia e la motivazione per condurre una vita attiva.';
+
+  @override
+  String get c2a2_term3 =>
+      'La physical literacy è la capacità, la fiducia e il desiderio di essere fisicamente attivi per tutta la vita.';
+
+  @override
+  String get c2a2_term4 =>
+      'La physical literacy è il nostro rapporto con il movimento e la pratica di attività fisica nel corso della vita.';
+
+  @override
+  String get c2a2_option1 => 'IPLA, Irlanda, Irlanda del Nord, Canada';
+
+  @override
+  String get c2a2_option2 => 'Australia';
+
+  @override
+  String get c2a2_option3 => 'Stati Uniti d’America';
+
+  @override
+  String get c2a2_option4 => 'Inghilterra';
+
+  @override
+  String get c3a1_intro_message =>
+      'Disponi le caselle in ordine cronologico (dall\'alto verso il basso), in base alla spirale di Jurbala sullo sviluppo della physical literacy. Iniziamo!';
+
+  @override
+  String get c3a1_activity_message =>
+      'Trascina le caselle per ordinarle correttamente in base alla spirale della physical literacy di Jurbala. È possibile scorrere la schermata verso l\'alto o verso il basso per visualizzare tutte le opzioni. Tieni cliccata la casella per selezionarla, quindi trascinala.';
+
+  @override
+  String get c3a1_success =>
+      'Ben fatto! Hai ordinato correttamente le caselle!';
+
+  @override
+  String c3a1_fail(num count) {
+    final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
+      locale: localeName,
+    );
+    final String countString = countNumberFormat.format(count);
+
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Ci sono $countString errori nell\'ordine delle carte.',
+      one: 'C\'è 1 errore nell\'ordine delle carte.',
+      zero: 'Non ci sono errori.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get c3a1_finish_message =>
+      'Congratulazioni, hai terminato la sfida. Clicca su \"Fine\" per ottenere un badge!';
+
+  @override
+  String get c3a1_term1 => 'Ambiente ricco di movimento';
+
+  @override
+  String get c3a1_term2 => 'Partecipazione ampia allo sviluppo';
+
+  @override
+  String get c3a1_term3 => 'Aumento del repertorio motorio';
+
+  @override
+  String get c3a1_term4 => 'Maggiore competenza nel repertorio motorio';
+
+  @override
+  String get c3a1_term5 => 'Maggiore adattabilità a nuovi movimenti';
+
+  @override
+  String get c3a1_term6 => 'Maggiore autoefficacia';
+
+  @override
+  String get c3a1_term7 => 'Maggiore propensione a sperimentare nuove attività';
+
+  @override
+  String get c3a1_term8 => 'Maggiore successo nelle nuove attività';
+
+  @override
+  String get c3a1_term9 => 'Mantenimento delle nuove attività nel tempo';
+
+  @override
+  String get c3a1_term10 => 'Maggiore partecipazione';
+
+  @override
+  String get c3a1_term11 => 'Miglioramento dello stato di salute';
+
+  @override
+  String get c3a1_term12 => 'Miglioramento della qualità della vita';
+
+  @override
+  String get c4a1_intro_message =>
+      'Benvenuti alla Sfida 4. Sarai immerso in diversi scenari di vita reale. Pensa ai fattori o alle strategie che influenzano la motivazione a impegnarsi in attività fisica/movimento. Devi scegliere i fattori che si applicano a ogni scenario. In ogni scenario può esserci più di un fattore che si applica. Pronto?';
+
+  @override
+  String get c4a1_instruction_message =>
+      'È una domenica soleggiata. Scegli quale attività ricreativa sarebbe più adatta a un bambino. Clicca sulle qualità mostrate sullo schermo per ogni attività, cercando di individuare quali potrebbero essere proposte per aumentare la physical literacy del bambino. Attenzione! Se sceglierai la qualità sbagliata, dovrai ricominciare. Al termine della scelta, clicca su \"Verifica\".';
+
+  @override
+  String get c4a1_finish_message =>
+      'Ben fatto! Avete completato l\'attività. Andiamo avanti!';
+
+  @override
+  String get c4a1_category_funny => 'Divertimento';
+
+  @override
+  String get c4a1_category_social => 'Sociale';
+
+  @override
+  String get c4a1_category_active => 'Attivo';
+
+  @override
+  String get c4a1_category_movements => 'Include diversi movimenti';
+
+  @override
+  String get c4a1_term1 =>
+      'Giocare ai videogiochi con tablet, smartphone o PC o guardare la TV da soli';
+
+  @override
+  String get c4a1_term2 => 'Giocare a carte con gli amici a casa';
+
+  @override
+  String get c4a1_term3 => 'Giardinaggio con i propri familiari';
+
+  @override
+  String get c4a1_term4 => 'Giocare con il cane';
+
+  @override
+  String get c4a1_term5 => 'Raccontare storie seduti sul divano';
+
+  @override
+  String get c4a1_term6 => 'Passeggiare nel quartiere con i propri familiari';
+
+  @override
+  String get c4a2_instruction_message =>
+      'È una giornata soleggiata e ti trovi in una scuola elementare. Assumi il ruolo di un insegnante di educazione fisica e assegna delle qualità a ogni attività per individuare quali potrebbero essere proposte ai tuoi studenti per migliorare la loro physical literacy durante le pause.';
+
+  @override
+  String get c4a2_term1 => 'Giocare con tablet e smartphone.';
+
+  @override
+  String get c4a2_term2 => 'Disegnare e dipingere';
+
+  @override
+  String get c4a2_term3 => 'Raccontare storie seduti nel cortile della scuola';
+
+  @override
+  String get c4a2_term4 =>
+      'Raccontare una storia che richiede ai bambini di imitare i movimenti degli animali';
+
+  @override
+  String get c4a2_term5 => 'Giocare con la palla';
+
+  @override
+  String get c4a2_term6 => 'Giocare a nascondino';
+
+  @override
+  String get c4a3_intro_message =>
+      'Il nostro terzo scenario si basa su un modello ecologico delle determinanti dell\'attività fisica. Nella prossima attività, dovrai abbinare ogni fattore alla sua categoria corretta.';
+
+  @override
+  String get c4a3_instruction_message =>
+      'Sposta i fattori mostrati al centro che influenzano l\'impegno nella pratica di attività fisica verso le variabili corrette.';
+
+  @override
+  String get c4a3_info_message =>
+      'Ecco un rapido promemoria del modello. Clicca sull’immagine per ingrandirla.';
+
+  @override
+  String get c4a3_finish_message =>
+      'Ben fatto! Avete completato la quarta sfida. Premi \"Fine\" per ottenere il tuo badge!';
+
+  @override
+  String get individual => 'Individuale';
+
+  @override
+  String get social_environment => 'Ambiente sociale';
+
+  @override
+  String get organizations_and_institutions => 'Organizzazioni e istituzioni';
+
+  @override
+  String get physical_environment => 'Ambiente fisico';
+
+  @override
+  String get regional_or_national_policy => 'Politica regionale o nazionale';
+
+  @override
+  String get culture => 'Cultura';
+
+  @override
+  String get motivation => 'Motivazione';
+
+  @override
+  String get beliefs => 'Credenze';
+
+  @override
+  String get sex => 'Sesso';
+
+  @override
+  String get self_efficacy => 'Autoefficacia';
+
+  @override
+  String get family => 'Famiglia';
+
+  @override
+  String get friends => 'Amici';
+
+  @override
+  String get cultural_norms => 'Norme culturali';
+
+  @override
+  String get colleagues => 'Colleghi';
+
+  @override
+  String get schools => 'Scuole';
+
+  @override
+  String get community_clubs => 'Club comunitari';
+
+  @override
+  String get organizations => 'Organizzazioni';
+
+  @override
+  String get workplace => 'Luogo di lavoro';
+
+  @override
+  String get built_environment => 'Ambiente urbano';
+
+  @override
+  String get active_opportunities => 'Opportunità di viaggio attivo ';
+
+  @override
+  String get parks_recreation => 'Parchi e strutture ricreative';
+
+  @override
+  String get natural_spaces => 'Spazi naturali ';
+
+  @override
+  String get transport_systems => 'Sistemi di trasporto';
+
+  @override
+  String get health_sector => 'Settore sanitario';
+
+  @override
+  String get education_school => 'Settore educativo e scolastico';
+
+  @override
+  String get organized_sport => 'Settore dello sport organizzato';
+
+  @override
+  String get national => 'Nazionale';
+
+  @override
+  String get local => 'Locale';
+
+  @override
+  String get c5a1_intro_message =>
+      'Siamo pronti per la sfida 5. Completa il diagramma inserendo le parole mancanti. Fare clic sulle caselle gialle e quindi selezionare l\'elemento corretto per quella parte del diagramma. Iniziamo!';
+
+  @override
+  String get c5a1_finish_message =>
+      'Ben fatto! Hai completato la quinta sfida. Clicca \"Fine\" per ottenere il tuo badge!';
+
+  @override
+  String get c5a1_instruction_title => 'Scegli una delle seguenti opzioni';
+
+  @override
+  String get c5a1_instruction_place =>
+      'Clicca sull’opzione che si desidera inserire in quest\'area:';
+
+  @override
+  String get c5a1_help => 'Clicca su una casella gialla per selezionarla.';
+
+  @override
+  String get currentElement => 'Parola selezionata:';
+
+  @override
+  String get c6a1_welcome =>
+      'Siamo pronti per la sfida 6. Abbina i concetti alle descrizioni appropriate. Attenzione! Se commetterai 5 errori, la sfida ricomincerà da capo. Iniziamo!';
+
+  @override
+  String get c6a1_congrats =>
+      'Ben fatto! Tutti i concetti sono stati abbinati correttamente alle relative descrizioni. Fare clic su \"Fine\" per ottenere il badge.';
+
+  @override
+  String get c7a1_welcome =>
+      'Siamo pronti per la sfida 7. Ti verranno mostrati degli scenari che rappresentano i livelli di progressione della pratica sportiva di uno studente in relazione alle quattro dimensioni della physical literacy (fisica, affettiva, sociale e cognitiva). Per ogni scenario, dovrai identificare il livello di progressione corretto e successivamente trascinarlo al rispettivo livello. Iniziamo!';
+
+  @override
+  String get c7a1_instruction =>
+      'Identifica il livello corretto per questo scenario:';
+
+  @override
+  String get c7a1_finish_message =>
+      'Ben fatto! Avete completato la settima sfida. Premi \"Fine\" per ottenere il tuo badge!';
+
+  @override
+  String get limited_motor_skills =>
+      'Lo studente ha capacità motorie molto limitate e ha difficoltà ad eseguire i gesti tecnici principali della pallavolo (dimensione fisica)';
+
+  @override
+  String get lack_of_rules_knowledge =>
+      'Lo studente non conosce le regole del gioco della pallacanestro e non conosce i benefici per la salute legati alla pratica sportiva (dimensione cognitiva)';
+
+  @override
+  String get lack_of_motivation =>
+      'Lo studente non vuole partecipare alle lezioni di educazione fisica perché non è abbastanza sicuro di sé o motivato (dimensione affettiva)';
+
+  @override
+  String get lack_of_social_support =>
+      'Lo studente non ha relazioni che lo stimolino e lo sostengano nella partecipazione ad attività sportive extrascolastiche (dimensione sociale)';
+
+  @override
+  String get developing_motor_skills =>
+      'Lo studente sta sviluppando i fondamenti della pallavolo e ha una maggiore consapevolezza delle proprie capacità fisiche (dimensione fisica)';
+
+  @override
+  String get basic_rules_knowledge =>
+      'Lo studente è in grado di descrivere le regole del gioco della pallacanestro e di comprendere i benefici per la salute legati alla pratica sportiva (dimensione cognitiva)';
+
+  @override
+  String get wants_to_participate =>
+      'Lo studente desidera partecipare alle lezioni di educazione fisica ed è consapevole della possibilità di miglioramento (dimensione affettiva)';
+
+  @override
+  String get positive_social_support =>
+      'Lo studente costruisce relazioni positive che lo stimolano e lo sostengono nella partecipazione alle attività sportive extrascolastiche (dimensione sociale)';
+
+  @override
+  String get adapts_to_game =>
+      'Lo studente sa adattarsi alle situazioni di gioco della pallavolo ed è fisicamente in grado di affrontarle (dimensione fisica)';
+
+  @override
+  String get strategic_analysis =>
+      'Lo studente è in grado di analizzare e adattare le strategie alla situazione di gioco della pallacanestro e di comprendere i benefici per la salute legati alla pratica sportiva (dimensione cognitiva)';
+
+  @override
+  String get enthusiastic_participation =>
+      'Lo studente è entusiasta di partecipare alle lezioni di educazione fisica ed è consapevole del proprio livello di coinvolgimento (dimensione affettiva)';
+
+  @override
+  String get independent_and_socially_skilled =>
+      'Lo studente dimostra indipendenza e capacità relazionali positive che contribuiscono ad aumentare la partecipazione ad attività sportive extrascolastiche (dimensione sociale)';
+
+  @override
+  String get preliminary_level => 'Livello preliminare';
+
+  @override
+  String get developer_level => 'Livello intermedio';
+
+  @override
+  String get advanced_level => 'Livello avanzato';
+
+  @override
+  String get c8a1_instructions =>
+      'Siamo pronti per la sfida 8! Assumi il ruolo di un insegnante di educazione fisica di bambini di 6 anni e scegli tra tre giochi diversi per ogni lezione di educazione fisica per insegnare un’abilità o capacità motoria fondamentale. Ogni gioco è classificato in base a tre parametri, rappresentati da tre bottiglie: (I) background motorio adeguato, (II) inclusione/lavoro di squadra e (III) divertimento. Il punteggio per ogni parametro varia da 1 a 3 e rappresenta il livello di acqua che verrà versato nella bottiglia. Per superare la sfida è necessario riempire le tre bottiglie scegliendo il gioco più appropriato. Iniziamo!';
+
+  @override
+  String get c8a1_prompt =>
+      'Seleziona l\'opzione più appropriata per ottenere un equilibrio tra i tre parametri.';
+
+  @override
+  String get c8a1_wrong => 'Questa non è la scelta giusta. Riprova.';
+
+  @override
+  String get c8a1_please_select_option => 'Seleziona un\'opzione.';
+
+  @override
+  String get c8a1_finish_message =>
+      'Ben fatto! Hai completato l\'ottava sfida. Clicca su \"Fine\" per ottenere il tuo badge!';
+
+  @override
+  String get appropriate_motor_skills_background =>
+      'Un adeguato bagaglio di competenze motorie';
+
+  @override
+  String get inclusion_teamwork => 'Inclusione/lavoro di squadra';
+
+  @override
+  String get enjoyment => 'Piacere';
+
+  @override
+  String get activity_balance => 'Equilibrio';
+
+  @override
+  String get activity_balance_option_1 =>
+      'I bambini formano un grande cerchio al centro dell\'area di gioco. Uno di loro propone un esercizio di equilibrio. Gli altri bambini nel cerchio lo imitano, mantenendo la posizione per 3 secondi. Allo scadere del tempo, è il turno di un altro bambino.';
+
+  @override
+  String get activity_balance_option_2 =>
+      'Gara di carriole. Gli studenti sono divisi in coppie. Un compagno di squadra svolge il ruolo del conducente, mentre l\'altro quello della carriola. Il conducente sorregge le caviglie del compagno, mentre quest\'ultimo cammina sulle mani.';
+
+  @override
+  String get activity_balance_option_3 =>
+      'I bambini camminano in un\'area ampia. Possono cambiare direzione e velocità, ma devono evitare il contatto con gli altri. Quando l\'insegnante chiama un numero, i bambini devono formare dei gruppi corrispondenti a quel numero, disporsi a cerchio e saltare 5 volte su un piede. I bambini che non fanno parte di un gruppo devono eseguire un esercizio di equilibrio statico.';
+
+  @override
+  String get activity_throwing => 'Lanciare';
+
+  @override
+  String get activity_throwing_option_1 =>
+      'I bambini formano un grande cerchio al centro dell\'area di gioco. Uno di loro ha una palla sonora. Tutti i bambini devono chiudere gli occhi, tranne il bambino con la palla, il quale deve passarla a un compagno utilizzando entrambe le mani. Quando tutti hanno passato la palla con le mani, devono usare un\'altra parte del corpo, come il fianco, il ginocchio o il gomito.';
+
+  @override
+  String get activity_throwing_option_2 =>
+      'I bambini a gruppi di due/tre, a seconda del numero di studenti presenti in classe, si posizionano davanti a un muro. Un bambino deve lanciare la palla contro il muro e riprenderla il maggior numero di volte possibile in 20 secondi. Gli altri compagni contano i secondi e le esecuzioni corrette del compito.';
+
+  @override
+  String get activity_throwing_option_3 =>
+      'I bambini sono divisi in due squadre. L\'area di gioco è divisa in due. Ogni squadra costruisce tre castelli con i coni e li posiziona all\'estremità dei campi da gioco. Ogni squadra ha cinque palle morbide. I bambini devono lanciare le palle cercando di far cadere i castelli della squadra avversaria.';
+
+  @override
+  String get activity_striking => 'Colpire';
+
+  @override
+  String get activity_striking_option_1 =>
+      'Bambini in gruppi di tre/quattro, a seconda del numero di studenti presenti in classe. Ogni gruppo ha un palloncino che deve trasportare fino alla fine dell\'area di gioco senza farlo cadere a terra o tenerlo in mano. Ogni bambino deve passare il palloncino a un compagno prima di poterlo toccare di nuovo.';
+
+  @override
+  String get activity_striking_option_2 =>
+      'I bambini sono divisi in coppie. Ogni gruppo ha una palla di spugna e un telo. I bambini devono coordinare i loro movimenti per sollevare il telo, lanciare la palla in aria e riprenderla.';
+
+  @override
+  String get activity_striking_option_3 =>
+      'I bambini sono divisi in gruppi di quattro e disposti in cerchio. Al centro del cerchio è posto un hula hoop. Ogni bambino deve passare una palla ad un compagno di squadra facendola prima rimbalzare nel cerchio.';
+
+  @override
+  String get c9a1_instructions =>
+      'Siamo pronti per la sfida 9! Questa sfida si basa sugli ambienti stimolanti proposti da Almond e Lambden (2016). Trascinate i fattori che influenzano l\'impegno nell\'attività fisica (casella centrale) verso la rispettiva variabile (casella esterna).';
+
+  @override
+  String get c9a1_finish_message =>
+      'Ben fatto! Per ulteriori informazioni, leggi l\'articolo scientifico nella sezione notizie.';
+
+  @override
+  String get c9a1_object_play => 'Giochi con oggetti';
+
+  @override
+  String get c9a1_exercise_play => 'Esercizio fisico giocando';
+
+  @override
+  String get c9a1_expressive_movement => 'Movimento espressivo';
+
+  @override
+  String get c9a1_outdoor_play => 'Gioco all\'aperto';
+
+  @override
+  String get c9a1_throwing => 'Lanciare';
+
+  @override
+  String get c9a1_catching => 'Afferrare';
+
+  @override
+  String get c9a1_striking => 'Colpire';
+
+  @override
+  String get c9a1_rough_and_tumble => 'Giochi di lotta';
+
+  @override
+  String get c9a1_climbing => 'Arrampicarsi';
+
+  @override
+  String get c9a1_running => 'Correre';
+
+  @override
+  String get c9a1_chasing_games => 'Rincorrersi';
+
+  @override
+  String get c9a1_bikes_and_scooters => 'Biciclette e scooter';
+
+  @override
+  String get c9a1_pushing_and_pulling => 'Spingere e tirare';
+
+  @override
+  String get c9a1_dance => 'Danza';
+
+  @override
+  String get c9a1_gymnastics => 'Ginnastica';
+
+  @override
+  String get c9a1_action_rhymes => 'Filastrocche in movimento';
+
+  @override
+  String get c9a1_songs_and_stories => 'Canzoni e storie';
+
+  @override
+  String get c9a1_natural_surroundings => 'Ambiente naturale';
+
+  @override
+  String get c9a1_rocks_and_tress => 'Rocce e alberi';
+
+  @override
+  String get c9a1_challenges => 'Sfide';
+
+  @override
+  String get c9a2_intro_message =>
+      'In questa attività progetterai un curricolo di educazione fisica che includa attività curricolari ed extracurricolari, al fine di promuovere la physical literacy. La sfida consiste nel bilanciare vari elementi come l\'inclusività, il coinvolgimento e i risultati educativi. Sposta ogni caratteristica (mostrata in basso) nella casella \"Corretto\" se pensi che possa essere una caratteristica del curricolo, in caso contrario spostala nella casella \"Sbagliato\". Iniziamo!';
+
+  @override
+  String get c9a2_prompt =>
+      'Trascina ogni caratteristica nella casella corrispondente';
+
+  @override
+  String get c9a2_finish_message =>
+      'Ben fatto! Avete completato la nona sfida. Premi \"Fine\" per ottenere il tuo badge!';
+
+  @override
+  String get c9a2_correct => 'Corretto';
+
+  @override
+  String get c9a2_wrong => 'Sbagliato';
+
+  @override
+  String get c9a2_activities_balanced =>
+      'Attività equilibrate per le capacità motorie degli studenti';
+
+  @override
+  String get c9a2_pe_curriculum_guidelines =>
+      'Coerenza con le indicazioni nazionali per il curricolo di educazione fisica';
+
+  @override
+  String get c9a2_music_motor_skills =>
+      'Giochi/attività per imparare e sviluppare le capacità motorie degli studenti utilizzando la musica';
+
+  @override
+  String get c9a2_fitness_health_wellbeing =>
+      'Attività incentrate su fitness, salute e benessere';
+
+  @override
+  String get c9a2_evaluate_motor_skills =>
+      'Valutazione delle capacità motorie degli studenti attraverso la somministrazione di test specifici';
+
+  @override
+  String get c9a2_outdoor_play =>
+      'Passeggiate all\'aperto con momenti di gioco';
+
+  @override
+  String get c9a2_sports_oriented_motor_skills =>
+      'Attività orientate alla pratica sportiva per migliorare le capacità motorie degli studenti';
+
+  @override
+  String get c9a2_promote_self_knowledge =>
+      'Attività per promuovere la conoscenza di sé';
+
+  @override
+  String get c9a2_team_spirit_socialization =>
+      'Attività di gruppo per migliorare lo spirito di squadra e la socializzazione';
+
+  @override
+  String get c9a2_respect_game_rules =>
+      'Attività per promuovere il fair play e il rispetto delle regole';
+
+  @override
+  String get c9a2_inclusive_games =>
+      'Giochi o regole di gioco che richiedono la partecipazione di tutti gli studenti';
+
+  @override
+  String get c9a2_enjoyment_oriented => 'Attività orientate al divertimento';
+
+  @override
+  String get c9a2_varied_teaching_strategies =>
+      'Utilizzare un\'ampia gamma di strategie didattiche';
+
+  @override
+  String get c9a2_ego_oriented => 'Attività ego-orientate';
+
+  @override
+  String get c9a2_one_size_fits_all => 'Approccio unico per tutti';
+
+  @override
+  String get c9a2_summary_objectives => 'Definizione sintetica degli obiettivi';
+
+  @override
+  String get c9a2_win_at_all_costs =>
+      'Attività orientate alla mentalità del \"vincere a tutti i costi\"';
+
+  @override
+  String get c9a2_long_queues => 'Giochi con lunghe attese per i bambini';
+
+  @override
+  String get c9a2_gender_separated_activities =>
+      'Attività separate per maschi e femmine';
+
+  @override
+  String get c10a1_instructions =>
+      'Siamo pronti per la sfida 10. Lo spettro degli stili di insegnamento di Mosston classifica gli stili di insegnamento in base al grado di autorità decisionale attribuito all\'insegnante e all\'allievo. Lo spettro è composto da 11 stili di insegnamento, che vanno da approcci più incentrati sull\'insegnante ad approcci più incentrati sullo studente. Leggi gli indizi e identifica il relativo stile di insegnamento per risolvere il puzzle. Iniziamo!';
+
+  @override
+  String get c10a1_finish => 'Ben fatto! Ora puoi accedere alla prossima sfida';
+
+  @override
+  String get enter_letter => 'Inserire una lettera';
+
+  @override
+  String get hint => 'Suggerimento';
+
+  @override
+  String get hint_instruction =>
+      'Clicca sulle caselle per inserire le lettere mancanti e completare la parola';
+
+  @override
+  String get term1 => 'COMANDO';
+
+  @override
+  String get term2 => 'PRATICA';
+
+  @override
+  String get term3 => 'RECIPROCITÀ';
+
+  @override
+  String get term4 => 'AUTOVALUTAZIONE';
+
+  @override
+  String get term5 => 'INCLUSIONE';
+
+  @override
+  String get term6 => 'GUIDATO';
+
+  @override
+  String get term7 => 'CONVERGENTE';
+
+  @override
+  String get term8 => 'DIVERGENTE';
+
+  @override
+  String get term9 => 'PROGETTATO';
+
+  @override
+  String get term10 => 'AUTONOMO';
+
+  @override
+  String get term11 => 'AUTOAPPRENDIMENTO';
+
+  @override
+  String get term1_hint =>
+      'l\'insegnante mantiene un controllo diretto sulle attività di apprendimento.';
+
+  @override
+  String get term2_hint => 'L\'insegnante delega alcune decisioni agli alunni.';
+
+  @override
+  String get term3_hint =>
+      'Gruppi di studenti con ruoli assegnati: esercitarsi, osservare, valutare, correggere e aiutare.';
+
+  @override
+  String get term4_hint =>
+      'Autovalutazione dell\'esecuzione dell\'esercizio e dei risultati.';
+
+  @override
+  String get term5_hint =>
+      'Lavorare in gruppo per raggiungere obiettivi comuni.';
+
+  @override
+  String get term6_hint =>
+      'L\'insegnante guida gli studenti a scoprire autonomamente le soluzioni ponendo delle domande.';
+
+  @override
+  String get term7_hint =>
+      'Gli studenti analizzano e sviluppano strategie per risolvere il compito assegnato dall’insegnante.';
+
+  @override
+  String get term8_hint =>
+      'Incoraggiare la creatività con esercizi creati in autonomia.';
+
+  @override
+  String get term9_hint =>
+      'Un programma personalizzato basato sulle capacità individuali, con l\'insegnante che svolge il ruolo di consigliere.';
+
+  @override
+  String get term10_hint =>
+      'Guidato dagli studenti, dalla progettazione all\'esecuzione, con l\'insegnante che svolge il ruolo di consigliere.';
+
+  @override
+  String get term11_hint =>
+      'Gli studenti pianificano, eseguono e valutano il loro apprendimento.';
+
+  @override
+  String get c10a2_instructions =>
+      'In questa attività assumerai il ruolo di un insegnante di educazione fisica e dovrai abbinare alla lezione fornita il corretto stile di insegnamento utilizzato per svilupparla. Iniziamo!';
+
+  @override
+  String get c10a2_finish_message =>
+      'Ben fatto! Hai completato la decima sfida. Premi \"Fine\" per ottenere il tuo badge!';
+
+  @override
+  String get command => 'Comando';
+
+  @override
+  String get guided_discovery => 'Scoperta guidata';
+
+  @override
+  String get self_teaching => 'Autoapprendimento';
+
+  @override
+  String get command_lesson_1 =>
+      'La lezione mira a migliorare gli schemi motori di base. Gli studenti devono superare un percorso a ostacoli utilizzando i loro schemi motori di base (rotolare, saltare, correre, strisciare). L\'insegnante mostra come superare ogni ostacolo. Gli studenti iniziano il percorso al segnale dell\'insegnante, imitandone i movimenti.';
+
+  @override
+  String get command_lesson_2 =>
+      'La lezione mira a migliorare l’equilibrio. L\'insegnante mostra tre posizioni yoga alla volta (tavolo in equilibrio, re danzatore e mezza luna). Gli studenti devono mantenere una posizione per 15 secondi e cambiate posizione al comando dell\'insegnante.';
+
+  @override
+  String get command_lesson_3 =>
+      'La lezione mira a migliorare la conoscenza del proprio corpo. L\'insegnante racconta la storia di alcuni orsi nella foresta che compiono determinate azioni (mangiare, lavarsi, rotolare). Gli studenti devono immedesimarsi negli orsi e, su indicazione dell’insegnante, eseguire tali azioni.';
+
+  @override
+  String get command_lesson_4 =>
+      'La lezione mira a migliorare il servizio nella pallavolo. L\'insegnante mostra i diversi tipi di servizio (servizio dal basso, servizio dall’alto e servizio in salto). L\'insegnante pianifica due esercizi per ogni tipo di servizio, da svolgere individualmente o a coppie, spiegando che gli studenti devono iniziare con il servizio dal basso, poi con il servizio dall’alto e infine con il servizio in salto.';
+
+  @override
+  String get discovery_lesson_1 =>
+      'La lezione mira a migliorare gli schemi motori di base. Gli studenti devono affrontare un percorso a ostacoli, utilizzando alcuni schemi motori quali rotolare, saltare, correre e strisciare. L\'insegnante stimola la riflessione degli studenti, coinvolgendoli in un dialogo per aiutarli a capire quali schemi motori applicare per superare gli ostacoli. Inoltre, supporta le loro performance ponendo domande che li incoraggiano a esplorare diverse strategie per superare lo stesso ostacolo.';
+
+  @override
+  String get discovery_lesson_2 =>
+      'La lezione mira a migliorare l’equilibrio. L\'insegnante coinvolge gli studenti in un dialogo per aiutarli a riflettere sugli effetti della pratica dello yoga sull\'equilibrio. Inoltre, supporta gli studenti nella scelta delle posizioni ponendo domande che li stimolino a riflettere sul livello di difficoltà necessario per mantenere una posa. Il ragionamento e le strategie efficaci vengono premiati e rinforzati positivamente.';
+
+  @override
+  String get discovery_lesson_3 =>
+      'La lezione mira a migliorare la conoscenza del proprio corpo. Gli studenti devono sviluppare una storia impersonando degli orsi in una foresta che compiono determinate azioni come mangiare, lavarsi, rotolare. L\'insegnante pone diverse domande per invitare gli studenti a sviluppare la loro giornata da orso personalizzata (dal risveglio all’addormentamento). L\'insegnante incoraggia inoltre gli studenti a pensare a quali attività potrebbero essere introdotte nella storia per migliorare la conoscenza del proprio corpo. Il ragionamento e le strategie efficaci vengono premiati e rinforzati positivamente.';
+
+  @override
+  String get discovery_lesson_4 =>
+      'La lezione mira a migliorare il servizio di pallavolo. L\'insegnante coinvolge gli studenti in un dialogo per aiutarli a concentrarsi sulle sensazioni legate all\'esecuzione del servizio, in modo da ottenere prestazioni migliori. Inoltre, l\'insegnante incoraggia gli studenti a riflettere su quale tipo di servizio risulti più comodo e sulle sensazioni provate durante l\'esecuzione di esso. Basandosi su di esse, gli studenti sono invitati ad adattare gli altri tipi di servizio per renderli più confortevoli. Il ragionamento e le strategie efficaci vengono premiati e rinforzati positivamente.';
+
+  @override
+  String get self_teaching_lesson_1 =>
+      'La lezione mira a migliorare gli schemi motori di base. L\'insegnante fornisce informazioni sugli schemi motori di base come rotolare, saltare, correre e strisciare. Gli studenti sono poi chiamati a creare dei giochi che li aiutino a perfezionare questi schemi motori di base.';
+
+  @override
+  String get self_teaching_lesson_2 =>
+      'La lezione mira a migliorare l’equilibrio. L\'insegnante fornisce informazioni sugli effetti della pratica dello yoga sull\'equilibrio. Gli studenti devono cercare alcuni esercizi di yoga da svolgere in classe con tutti.';
+
+  @override
+  String get self_teaching_lesson_3 =>
+      'La lezione mira a migliorare la conoscenza del proprio corpo. Gli studenti devono creare una storia impersonando degli orsi in una foresta che compiono determinate azioni come mangiare, lavarsi, rotolare. Gli studenti devono trovare delle strategie divertenti per eseguire movimenti che si concentrano sull\'uso di una specifica parte del corpo. L\'insegnante fornisce indicazioni quando necessario.';
+
+  @override
+  String get self_teaching_lesson_4 =>
+      'La lezione mira a migliorare il servizio nella pallavolo. L\'insegnante mostra i diversi tipi di servizio (servizio dal basso, servizio dall’alto e servizio in salto). Gli studenti sono liberi di lavorare individualmente o in gruppo per creare alcuni esercizi per allenare il servizio.';
+
+  @override
+  String get c11a1_instructions =>
+      'Siamo pronti per la sfida 11. Assumerai il ruolo di insegnante di educazione fisica e dovrai creare una lezione seguendo il modello pedagogico che ti verrà fornito. Scegli la strategia giusta per applicare il modello e costruire la Torre dell’Educazione Fisica. Ogni modello rappresenta un piano della torre. Fai attenzione! Se commetti due errori, il pavimento della torre si romperà e dovrai ricominciare da capo. Iniziamo!';
+
+  @override
+  String get c11_instruction => 'Seleziona la risposta corretta';
+
+  @override
+  String get c11_floor0_model =>
+      'Modello d’insegnamento: insegnare i giochi per comprendere';
+
+  @override
+  String get c11_floor0_environment => 'Palestra della scuola';
+
+  @override
+  String get c11_floor0_statement =>
+      'Il modello sottolinea l\'importanza del gioco e della comprensione. Promuove un ambiente incentrato sullo studente, incoraggiando l\'esplorazione e la comprensione delle regole, delle tattiche e delle strategie di gioco, elementi che favoriscono un maggiore apprezzamento e divertimento.';
+
+  @override
+  String get c11_floor0_step1_instruction =>
+      'I bambini sono sparsi per la palestra. Accanto a ogni bambino è posizionato un cerchio con un cono al centro. I giocatori devono far cadere il cono degli avversari lanciando una palla o difendersi quando vengono attaccati. Una volta che tutti hanno attaccato o difeso, inizia la seconda fase.';
+
+  @override
+  String get c11_floor0_step1_correct => 'Avanti';
+
+  @override
+  String get c11_floor0_step2_correct =>
+      'Il bambino il cui cono è stato fatto cadere sposta l’attrezzatura in un\'altra zona della palestra e continuare a giocare. La fase 2 dura 10 minuti.';
+
+  @override
+  String get c11_floor0_step2_wrong =>
+      'Il bambino che fa cadere il cono di un avversario ottiene 1 punto. Il primo che ottiene 5 punti vince la partita.';
+
+  @override
+  String get c11_floor0_step3_correct =>
+      'Il giocatore che fa cadere il cono di un altro bambino forma una squadra con lui.';
+
+  @override
+  String get c11_floor0_step3_wrong =>
+      'Quando il cono di un bambino cade, quest\'ultimo viene eliminato dal gioco. Vince l\'ultimo giocatore che rimane in campo.';
+
+  @override
+  String get c11_floor0_step4_correct =>
+      'Con l\'aiuto di domande, commenti e modifiche al gioco da parte dell\'insegnante, gli studenti iniziano a comprendere i principi del gioco e a identificare le tattiche e le strategie chiave che possono portare alla vittoria.\n';
+
+  @override
+  String get c11_floor0_step4_wrong =>
+      'Per migliorare la conoscenza delle tattiche e delle strategie chiave da utilizzare in gioco, l\'insegnante modifica le regole della partita assegnando compiti specifici e fornendo strategie che possono portare a vincere la partita.';
+
+  @override
+  String get c11_floor0_step5_correct =>
+      'L\'insegnante coinvolge gli studenti in un dialogo sulla tattica di gioco per aiutarli a riflettere sulle decisioni prese in gioco al fine di vincere (ad esempio: Come stai avendo successo nel gioco?).';
+
+  @override
+  String get c11_floor0_step5_wrong =>
+      'I bambini, divisi in due squadre, giocano una partita cercando di capire i principi del gioco e di individuare le tattiche e le strategie chiave che possono portare a vincere la partita.';
+
+  @override
+  String get c11_floor0_step6_correct =>
+      'L\'insegnante modifica il gioco per enfatizzare le capacità che gli studenti hanno identificato come essenziali per la vittoria.';
+
+  @override
+  String get c11_floor0_step6_wrong =>
+      'L\'insegnante divide gli studenti in diversi gruppi in base alle dimensioni della classe e assegna loro compiti specifici per migliorare l\'efficacia della tecnica da utilizzare in partita.';
+
+  @override
+  String get c11_floor0_step7_correct =>
+      'L\'insegnante osserva i risultati dell\'apprendimento degli studenti attraverso il gioco, prestando attenzione non solo all\'efficacia della tecnica, ma anche alla pertinenza delle risposte durante tutta la partita.';
+
+  @override
+  String get c11_floor0_step7_wrong =>
+      'L\'insegnante osserva il risultato dell\'apprendimento degli studenti attraverso il gioco, prestando attenzione all\'efficienza della tecnica e ai risultati ottenuti in partita.';
+
+  @override
+  String get c11_floor1_model =>
+      'Modello d’insegnamento: apprendimento cooperativo';
+
+  @override
+  String get c11_floor1_environment => 'Palestra della scuola';
+
+  @override
+  String get c11_floor1_statement =>
+      'Il modello adotta una prospettiva sociale di apprendimento, in cui gli studenti lavorano insieme per raggiungere obiettivi comuni. Questo approccio sottolinea lo sviluppo delle abilità sociali, della comunicazione e del lavoro di squadra, così come la responsabilità individuale. Le attività sono progettate in modo che gli studenti dipendano l\'uno dall\'altro per avere successo, favorendo un ambiente di apprendimento inclusivo e di supporto.';
+
+  @override
+  String get c11_floor1_instruction =>
+      'In questa sfida, aiuterai i bambini a sviluppare le capacità motorie progettando e guidandoli attraverso un percorso a ostacoli. Scegli la strategia giusta per ogni fase per passare alla successiva. Se commetti due errori, la sfida ripartirà da capo. Iniziamo!';
+
+  @override
+  String get c11_floor1_step1_instruction =>
+      'L\'insegnante, aiutato dai bambini, crea un percorso a ostacoli. I bambini devono superare il percorso a ostacoli utilizzando gli schemi motori di base (rotolare, saltare, afferrare, lanciare, correre, strisciare).';
+
+  @override
+  String get c11_floor1_step1_correct => 'Avanti';
+
+  @override
+  String get c11_floor1_step2_correct =>
+      'I bambini, divisi in coppie, devono affrontare gli ostacoli lungo il percorso: uno supera gli ostacoli mentre l\'altro guida il compagno parlando.';
+
+  @override
+  String get c11_floor1_step2_wrong =>
+      'L\'insegnante e gli studenti decidono insieme quale schema motorio utilizzare per superare ogni ostacolo. Un bambino alla volta supera gli ostacoli.';
+
+  @override
+  String get c11_floor1_step3_correct =>
+      'I bambini, divisi a coppie, devono affrontare gli ostacoli lungo il percorso. L\'insegnante chiede alle squadre di superare gli ostacoli evitando di usare una parte del corpo a loro scelta (mani, gambe, occhi, ...).';
+
+  @override
+  String get c11_floor1_step3_wrong =>
+      'I bambini, divisi a coppie, devono affrontare gli ostacoli lungo il percorso. L\'insegnante chiede alle squadre di superare gli ostacoli ad occhi chiusi.';
+
+  @override
+  String get c11_floor1_step4_correct =>
+      'I bambini sono divisi in squadre da quattro giocatori. Prima di iniziare il percorso, i bambini decidono insieme come superare ogni ostacolo.';
+
+  @override
+  String get c11_floor1_step4_wrong =>
+      'I bambini vengono divisi in squadre da quattro giocatori. Devono completare una staffetta, in cui ogni bambino deve superare due ostacoli prima di passare il testimone. La squadra che termina il percorso per prima vince.';
+
+  @override
+  String get c11_floor1_step5_correct =>
+      'I bambini vengono divisi in squadre da tre giocatori. Due bambini devono tenere un frisbee con una palla da tennis sopra. Devono superare il percorso ad ostacoli senza far cadere la palla, mentre il terzo bambino li guida lungo il percorso, suggerendo come superare gli ostacoli.';
+
+  @override
+  String get c11_floor1_step5_wrong =>
+      'I bambini sono divisi in squadre da tre giocatori. Ogni gruppo ha in mano un frisbee con una pallina da tennis e deve superare il percorso a ostacoli senza far cadere la pallina. L\'insegnante li guida lungo il percorso suggerendo loro come superare gli ostacoli.';
+
+  @override
+  String get c11_floor1_step6_correct =>
+      'Durante l\'esecuzione del compito, l\'insegnante valuta il contributo degli studenti al lavoro di gruppo e/o la loro performance.';
+
+  @override
+  String get c11_floor1_step6_wrong =>
+      'Durante l\'esecuzione del compito, l\'insegnante cronometra il tempo impiegato da ciascun gruppo per completare il percorso e valuta gli studenti in base alle loro prestazioni.';
+
+  @override
+  String get c11_floor1_step7_correct =>
+      'Quando tutti i gruppi hanno svolto gli esercizi, l\'insegnante chiede agli studenti di riflettere su ciò che hanno imparato e su come possono migliorare la loro capacità di lavorare in gruppo, condividendo le loro esperienze con gli altri.';
+
+  @override
+  String get c11_floor1_step7_wrong =>
+      'Quando tutti i gruppi hanno svolto gli esercizi, l\'insegnante condivide con loro la valutazione di ogniuno su come hanno superato gli ostacoli e su come possano migliorare la loro capacità di lavorare in gruppo e affinare i loro schemi motori.';
+
+  @override
+  String get c11_floor2_model =>
+      'Modello d’insegnamento: educazione allo sport';
+
+  @override
+  String get c11_floor2_environment => 'Palestra della scuola';
+
+  @override
+  String get c11_floor2_statement =>
+      'Questo modello è progettato per riprodurre esperienze sportive autentiche, in cui gli studenti partecipano a stagioni sportive, assumono ruoli come giocatori, allenatori e arbitri e sperimentano la cultura dello sport.';
+
+  @override
+  String get c11_floor2_instruction =>
+      'In questa sfida, aiuterai gli studenti a pianificare e svolgere attività legate alla pallavolo.';
+
+  @override
+  String get c11_floor2_step1_instruction =>
+      'L\'insegnante e gli studenti si trovano nella palestra di una scuola e devono programmare le attività legate all\'apprendimento della pallavolo. L\'insegnante spiega le caratteristiche dello sport e le regole principali.';
+
+  @override
+  String get c11_floor2_step1_correct => 'Avanti';
+
+  @override
+  String get c11_floor2_step2_correct =>
+      'L\'insegnante fornisce alcune informazioni sul concetto di stagione sportiva. L\'insegnante fornisce inoltre informazioni sulle attività sportive che di solito vengono svolte durante le attività di inizio, durante e fine stagione nella pallavolo.';
+
+  @override
+  String get c11_floor2_step2_wrong =>
+      'L\'insegnante fornisce alcune informazioni sul concetto di stagione sportiva. Gli studenti vengono poi divisi in gruppi e viene chiesto loro di svolgere una ricerca sulle attività che di solito vengono svolte durante le attività di inizio, durante e fine stagione nella pallavolo.';
+
+  @override
+  String get c11_floor2_step3_correct =>
+      'Gli studenti, divisi in gruppi, ricevono dall\'insegnante materiali e strumenti per pianificare un lavoro di squadra. Ogni gruppo lavora per sviluppare strategie ed esercizi per imparare le meccaniche di gioco e migliorare le abilità motorie legate alla pallavolo (passaggio, alzata, schiacciata, muro, bagher e servizio).';
+
+  @override
+  String get c11_floor2_step3_wrong =>
+      'Gli studenti sono suddivisi in gruppi. L\'insegnante fornisce loro del materiale e degli strumenti e assegna a ogni gruppo esercizi per imparare le meccaniche di gioco e migliorare le abilità motorie legate alla pallavolo (passaggio, impostazione, battuta, muro, scavo e servizio). Ogni settimana vengono assegnati nuovi esercizi per migliorare tutte le abilità.';
+
+  @override
+  String get c11_floor2_step4_correct =>
+      'Ogni gruppo è libero di pianificare il lavoro di squadra. Possono decidere chi svolge il ruolo di coach, capitano, allenatore, arbitro o giocatore e pianificare le attività relative a ciascun ruolo.';
+
+  @override
+  String get c11_floor2_step4_wrong =>
+      'L\'insegnante supporta gli studenti nella pianificazione del lavoro di squadra. Al fine di evitare eventuali dispute, insegnante e studenti pianificano le attività e i ruoli degli studenti nel team. Decidono quindi chi sarà l\'allenatore, il capitano, il preparatore, l\'arbitro o i giocatori.';
+
+  @override
+  String get c11_floor2_step5_correct =>
+      'Il portfolio di ogni squadra è una componente fondamentale del modello di apprendimento. Nel portfolio, gli studenti possono descrivere le caratteristiche di ogni squadra, come il nome della squadra, i membri, i colori, la mascotte, il motto, i ruoli degli studenti e il programma delle attività. Possono anche descrivere i punti di forza e di debolezza della squadra.';
+
+  @override
+  String get c11_floor2_step5_wrong =>
+      'Il portfolio di ogni squadra è una componente fondamentale del modello di apprendimento. Nel portfolio, l\'insegnante può riportare informazioni utili per la valutazione degli studenti come i membri della squadra, i ruoli degli studenti e i programmi delle attività.';
+
+  @override
+  String get c11_floor2_step6_correct =>
+      'Il portfolio di gruppo può essere utilizzato anche per riportare informazioni sul processo di apprendimento, fornendo risultati di test e riflessioni sul miglioramento individuale e di gruppo.';
+
+  @override
+  String get c11_floor2_step6_wrong =>
+      'Sulla base dei contenuti del portfolio di ogni squadra, l\'insegnante pianifica dei test per valutare le conoscenze e le abilità degli studenti relative alla pallavolo.';
+
+  @override
+  String get c11_floor2_step7_correct =>
+      'L\'insegnante può collaborare con i colleghi della propria scuola per pianificare insieme gli strumenti, i materiali, le lezioni e la struttura delle unità didattiche da utilizzare. Alla fine dell\'anno scolastico, gli insegnanti organizzano un torneo per promuovere i valori dello sport (fair play, amicizia, rispetto, lavoro di squadra, ...).';
+
+  @override
+  String get c11_floor2_step7_wrong =>
+      'L\'insegnante può collaborare con i colleghi della propria scuola per pianificare insieme gli strumenti, i materiali, le lezioni e la struttura delle unità didattiche da utilizzare. Alla fine dell\'anno scolastico, gli insegnanti organizzano un torneo. La classe che vincerà potrà condividere con gli altri studenti il lavoro di squadra svolto.';
+
+  @override
+  String get c11_floor3_model =>
+      'Modello d’insegnamento della responsabilità personale e sociale';
+
+  @override
+  String get c11_floor3_environment => 'Palestra della scuola';
+
+  @override
+  String get c11_floor3_statement =>
+      'Si tratta di un approccio basato su valori che utilizzano l\'attività fisica per insegnare competenze di vita e promuovere la responsabilità personale e sociale. Questo modello è incentrato sull\'autonomia e sull\'interazione sociale positiva, enfatizzando il rispetto, l\'impegno, il miglioramento personale e l\'aiuto reciproco.';
+
+  @override
+  String get c11_floor3_instruction =>
+      'In questa sfida, aiuterai i bambini ad apprendere gli schemi motori di base e la responsabilità sociale attraverso un percorso a ostacoli e il lavoro di squadra. Seleziona la strategia corretta in ogni fase per passare alla successiva.';
+
+  @override
+  String get c11_floor3_step1_instruction =>
+      'I bambini vengono divisi in gruppi da tre. L\'insegnante, aiutato dai bambini, crea un percorso a ostacoli per ogni gruppo. Alla fine di ogni percorso viene costruita una torre Jenga. I bambini devono superare gli ostacoli usando gli schemi motori di base (rotolare, saltare, afferrare, lanciare, correre, strisciare) e rimuovere un pezzo dalla torre.';
+
+  @override
+  String get c11_floor3_step1_correct => 'Avanti';
+
+  @override
+  String get c11_floor3_step2_correct =>
+      'L\'insegnante descrive l’attività spiegando che gli studenti si eserciteranno ad aiutare gli altri fornendo feedback ai loro compagni di squadra, fornendo un aiuto specifico, dicendo qualcosa di carino e offrendo suggerimenti.';
+
+  @override
+  String get c11_floor3_step2_wrong =>
+      'L\'insegnante descrive l’attività spiegando che due studenti dovranno suggerire al terzo bambino come superare gli ostacoli per finire il percorso il più velocemente possibile. Al termine, un altro inizierà il percorso supportato dagli altri due.';
+
+  @override
+  String get c11_floor3_step3_correct =>
+      'Mentre aspettano il proprio turno, gli studenti devono aiutare il compagno di squadra fornendo un feedback (essere specifici, dire qualcosa di carino, offrire un suggerimento).';
+
+  @override
+  String get c11_floor3_step3_wrong =>
+      'Mentre aspettano il proprio turno, gli studenti devono incitare il loro compagno di squadra ad andare veloce, fornendo informazioni sullo stato di avanzamento degli avversari.';
+
+  @override
+  String get c11_floor3_step4_correct =>
+      'Durante l\'esecuzione del compito, l\'insegnante valuta il feedback degli studenti, il modo in cui lo forniscono e la loro capacità nel superare gli ostacoli.';
+
+  @override
+  String get c11_floor3_step4_wrong =>
+      'Durante l\'esecuzione del compito, l\'insegnante valuta gli studenti registrando il tempo impiegato per completarlo e la loro capacità nel superare gli ostacoli.';
+
+  @override
+  String get c11_floor3_step5_correct =>
+      'L\'insegnante dà il comando agli studenti di fermarsi e interagisce con loro, gratificando gli studenti che hanno fornito un buon feedback per aiutare gli altri e offrendo suggerimenti generali per migliorare.';
+
+  @override
+  String get c11_floor3_step5_wrong =>
+      'L\'insegnante interagisce con gli studenti, un gruppo alla volta, per fornire suggerimenti generali per migliorare il feedback.';
+
+  @override
+  String get c11_floor3_step6_correct =>
+      'Il gioco riprende. L\'insegnante valuta il feedback degli studenti e come lo hanno modificato in base ai suggerimenti.';
+
+  @override
+  String get c11_floor3_step6_wrong =>
+      'Durante l\'esecuzione del compito, l\'insegnante valuta le prestazioni degli studenti nel superare gli ostacoli.';
+
+  @override
+  String get c11_floor3_step7_correct =>
+      'L\'insegnante si confronta con gli studenti, spiegando nuovamente i punti chiave della responsabilità sociale e chiedendo loro di condividere con i compagni di squadra come si sono sentiti quando hanno dato o ricevuto un feedback.';
+
+  @override
+  String get c11_floor3_step7_wrong =>
+      'L\'insegnante spiega agli studenti i punti chiave della responsabilità sociale e fornisce un confronto tra ciò che hanno fatto e come potrebbero farlo meglio.';
+
+  @override
+  String get c11_floor4_model =>
+      'Modello d’insegnamento: educazione fisica basata sulla salute';
+
+  @override
+  String get c11_floor4_environment => 'Palestra della scuola';
+
+  @override
+  String get c11_floor4_statement =>
+      'L\'approccio pedagogico integra l\'attività fisica con l\'educazione alla salute, con l\'obiettivo di fornire agli studenti le conoscenze, le competenze e gli atteggiamenti necessari per condurre una vita sana. Sottolinea l\'importanza della fitness, dell\'alimentazione, del benessere mentale e del valore di impegnarsi in uno stile di vita attivo per tutta la vita.';
+
+  @override
+  String get c11_floor4_instruction =>
+      'In questa sfida, guiderai gli studenti nel comprendere la relazione tra attività fisica e salute attraverso il lavoro di squadra, la definizione degli obiettivi e il sostegno tra pari. Seleziona la strategia corretta in ogni fase per passare alla fase successiva.';
+
+  @override
+  String get c11_floor4_step1_instruction =>
+      'L\'insegnante e gli studenti sono seduti in cerchio. L\'insegnante introduce l\'obiettivo delle prossime tre lezioni spiegando la relazione tra attività fisica e salute.';
+
+  @override
+  String get c11_floor4_step1_correct => 'Avanti';
+
+  @override
+  String get c11_floor4_step2_correct =>
+      'Dopo aver fornito informazioni sulle linee guida nazionali e internazionali per mantenere uno stile di vita sano, l\'insegnante esegue un test fisico per mostrare come valutare il proprio livello di fitness e come confrontarlo con gli standard nazionali.';
+
+  @override
+  String get c11_floor4_step2_wrong =>
+      'L\'insegnante fornisce agli studenti informazioni dettagliate sulle linee guida nazionali e internazionali, su dove trovarle, su come autovalutare il proprio livello di fitness e su come confrontarlo con gli standard nazionali (lezione teorica).';
+
+  @override
+  String get c11_floor4_step3_correct =>
+      'L\'insegnante incoraggia il lavoro di squadra degli studenti per identificare, stabilire e raggiungere obiettivi o sfide di attività fisica.';
+
+  @override
+  String get c11_floor4_step3_wrong =>
+      'L\'insegnante incoraggia ogni studente a identificare, stabilire e raggiungere obiettivi correlati alla pratica di attività fisica personalizzati o sfide basate sui risultati dei test.';
+
+  @override
+  String get c11_floor4_step4_correct =>
+      'L\'insegnante fornisce esempi di esercizi che possono essere eseguiti dagli studenti per raggiungere i livelli di attività fisica promossi dalle linee guida nazionali/internazionali. L\'insegnante incoraggia inoltre gli studenti a lavorare in gruppo per supportare i loro compagni nella partecipazione all\'attività fisica.';
+
+  @override
+  String get c11_floor4_step4_wrong =>
+      'L\'insegnante fornisce esempi di esercizi che possono essere eseguiti dagli studenti per raggiungere i livelli di attività fisica promossi dalle linee guida nazionali/internazionali. L\'insegnante incoraggia il lavoro individuale per massimizzare i benefici dell\'esercizio.';
+
+  @override
+  String get c11_floor4_step5_correct =>
+      'L\'insegnante incoraggia gli studenti a diventare critici, fornendo feedback e suggerimenti ai compagni.';
+
+  @override
+  String get c11_floor4_step5_wrong =>
+      'L\'insegnante evita che gli studenti si critichino a vicenda, per evitare controversie.';
+
+  @override
+  String get c11_floor4_step6_correct =>
+      'L\'insegnante deve lanciare sfide agli studenti per promuovere l\'attività fisica tra i loro coetanei, ma anche tra i membri della famiglia (all\'interno e all\'esterno della scuola).';
+
+  @override
+  String get c11_floor4_step6_wrong =>
+      'Il modello non richiede di considerare le attività al di fuori della scuola.';
+
+  @override
+  String get c11_floor4_step7_correct =>
+      'Il modello didattico enfatizza il supporto dell\'insegnante nell\'identificare le barriere alla pratica di attività fisica, così come delle strategie per superarle.';
+
+  @override
+  String get c11_floor4_step7_wrong =>
+      'Il modello non prevede che l\'insegnante sostenga gli studenti nell\'identificare le barriere alla pratica di attività fisica, così come le strategie per superarle.';
+
+  @override
+  String get c11_mistakes => 'Errori';
+
+  @override
+  String get c11_mistakes_reached =>
+      'Hai commesso 2 errori in questo modello. La sfida ripartirà da questo modello.';
+
+  @override
+  String get c11_finish =>
+      'Ben fatto! Hai completato con successo la torre. Ora puoi accedere alla sfida successiva.';
+
+  @override
+  String get c12a1_instructions =>
+      'Siamo pronti per la sfida 12. Assumerai il ruolo di un insegnante di educazione fisica e svilupperai due lezioni per i tuoi studenti. Ti fornirò alcune informazioni sulle caratteristiche della tua classe, sullo scopo della lezione e sui risultati di apprendimento che ti aiuteranno nella creazione della lezione. Attenzione, una risposta sbagliata provoca un cambiamento nell\'espressione dell\'avatar (da felice ad arrabbiato). È possibile commettere tre errori per lezione, dopodiché la sfida ricomincerà. Iniziamo!';
+
+  @override
+  String get c12a1_finish =>
+      'Ben fatto! Hai programmato la lezione in base alle esigenze della classe. Per completare la sfida, devi sviluppare un\'ulteriore lezione per un\'altra classe.';
+
+  @override
+  String get c12_completed => 'Congratulazioni! Hai completato il gioco!';
+
+  @override
+  String get c12_mistakes => 'Hai commesso 3 errori. Il gioco ricomincia!';
+
+  @override
+  String get restart => 'Ricomincia';
+
+  @override
+  String get c12a2_instructions =>
+      'Si tratta di una classe di 25 bambini di 6 anni, uno dei quali con la sindrome di Asperger. All\'interno della classe è presente una normale varietà di abilità motorie: circa 1/3 della classe è abbastanza competente in ginnastica, 1/3 è nella norma e 1/3 è meno competente da un punto di vista pratico. Tutti i bambini sono motivati quando fanno educazione fisica. La lezione mira a insegnare gli schemi motori dell’afferrare e del lanciare.';
+
+  @override
+  String get c12a2_finish =>
+      'Ben fatto! Hai programmato le lezioni in base alle esigenze della classe. Hai completato la sfida!';
+
+  @override
+  String get c12a1_1_title => 'Passaggio dal petto';
+
+  @override
+  String get c12a1_1_question => 'Scegli il set di attrezzature corretto';
+
+  @override
+  String get c12a1_1_answer1 =>
+      'Palloni standard utilizzati nello sport della pallacanestro.';
+
+  @override
+  String get c12a1_1_answer2 =>
+      'Palloni di peso diverso per studenti maschi e studentesse femmine.';
+
+  @override
+  String get c12a1_1_answer3 =>
+      'Palloni di peso diverso per gli studenti in sedia a rotelle.';
+
+  @override
+  String get c12a1_2_title => 'Passaggio dal petto (lavoro individuale)';
+
+  @override
+  String get c12a1_2_question =>
+      'Ambientazione e regole\nUn quadrato di 1 metro disegnato su una parete, a 1 metro dal pavimento.\nUna linea tracciata a terra a 2 metri dal muro.\nGli studenti devono lanciare la palla all\'interno del quadrato e riprenderla dopo il rimbalzo. La palla deve essere lanciata da dietro la linea e il rimbalzo deve essere preso dietro la linea. La palla non può rimbalzare prima di colpire il muro. Eseguire l\'esercizio 5 volte.\n\nAdattamento per studenti in sedia a rotelle:';
+
+  @override
+  String get c12a1_2_answer1 => 'Non è necessario.';
+
+  @override
+  String get c12a1_2_answer2 =>
+      'La linea disegnata a terra è posta a 1 metro dal muro.';
+
+  @override
+  String get c12a1_2_answer3 =>
+      'Il quadrato è disegnato a 0,5 metri dal pavimento.';
+
+  @override
+  String get c12a1_3_title => 'Passaggio dal petto (lavoro di squadra)';
+
+  @override
+  String get c12a1_3_question =>
+      'Ambientazione e regole\nStudenti divisi in coppie, a 2 metri di distanza l\'uno dall\'altro.\nGli studenti devono lanciare la palla ai compagni, senza farla rimbalzare a terra. Eseguire l\'esercizio 10 volte.\nCostituzione delle squadre:';
+
+  @override
+  String get c12a1_3_answer1 =>
+      'Gli studenti sono divisi a coppie. Ogni studente in sedia a rotelle lavora con un compagno qualsiasi.';
+
+  @override
+  String get c12a1_3_answer2 =>
+      'Gli studenti sono divisi a coppie. Gli studenti in sedia a rotelle sono nello stesso gruppo.';
+
+  @override
+  String get c12a1_4_title => 'Tiro a canestro';
+
+  @override
+  String get c12a1_4_question =>
+      'Ambientazione e regole\nGli studenti lavorano su un campo di pallacanestro.\nGli studenti sono divisi in due gruppi.\nTre aree di tiro (a 1,6 metri dal canestro).\nOgni squadra è divisa in 3 sottogruppi, uno per ogni area di tiro. Gli studenti devono eseguire un tiro e spostarsi in un\'altra area. Ogni studente deve eseguire 4 tiri in ogni area per completare il compito.\nAdattamento per studenti in sedia a rotelle:';
+
+  @override
+  String get c12a1_4_answer1 => 'Non è necessario.';
+
+  @override
+  String get c12a1_4_answer2 => 'Le aree di tiro distano 1 metro dal canestro.';
+
+  @override
+  String get c12a1_4_answer3 =>
+      'Gli studenti in sedia a rotelle possono eseguire più tiri dei loro compagni di squadra.';
+
+  @override
+  String get c12a1_5_title => 'Attrezzatura';
+
+  @override
+  String get c12a1_5_question => '';
+
+  @override
+  String get c12a1_5_answer1 =>
+      'Canestri di diverse altezze, palloni dello stesso peso.';
+
+  @override
+  String get c12a1_5_answer2 =>
+      'Canestri della stessa altezza e palloni di peso diverso per i maschi.';
+
+  @override
+  String get c12a1_5_answer3 =>
+      'Canestri di diverse altezze e palloni di diverso peso per gli studenti in sedia a rotelle.';
+
+  @override
+  String get c12a1_6_title => 'Palleggio su dieci metri';
+
+  @override
+  String get c12a1_6_question =>
+      'Ambientazione e regole\nLinea lunga 10 metri.\nSei coni sulla linea, a 1,5 metri di distanza l\'uno dall\'altro.\nGli studenti sono divisi in gruppi.\nGli studenti devono palleggiare sulla linea il più velocemente possibile usando una sola mano e senza colpire il cono con la palla.\nGli studenti devono eseguire l\'esercizio 3 volte in turni non consecutivi.';
+
+  @override
+  String get c12a1_6_answer1 =>
+      'L\'esecuzione del palleggio deve essere adattata: far rimbalzare la palla una volta, posarla sulle gambe, spingere la sedia a rotelle e così via.';
+
+  @override
+  String get c12a1_6_answer2 => 'Non è necessario.';
+
+  @override
+  String get c12a1_6_answer3 =>
+      'Tre coni sulla linea per gli studenti in sedia a rotelle.';
+
+  @override
+  String get c12a2_1_title => 'Afferrare e lanciare';
+
+  @override
+  String get c12a2_1_question =>
+      'Regole\nI bambini sono divisi a coppie. Un bambino deve lanciare la palla al compagno senza farla cadere.\nAdattamento per studenti con sindrome di Asperger:';
+
+  @override
+  String get c12a2_1_answer1 =>
+      'L\'insegnante mostra allo studente con sindrome di Asperger una scheda con le azioni necessarie per svolgere il compito.';
+
+  @override
+  String get c12a2_1_answer2 =>
+      'L\'insegnante spiega accuratamente allo studente con sindrome di Asperger come eseguire il compito attraverso diverse dimostrazioni.';
+
+  @override
+  String get c12a2_1_answer3 => 'Non è necessario.';
+
+  @override
+  String get c12a2_2_title => 'Afferrare e lanciare';
+
+  @override
+  String get c12a2_2_question =>
+      'Regole\nI bambini sono divisi a coppie. Un bambino deve lanciare la palla al compagno senza farla cadere mentre cammina vicino a una linea.\nAdattamento per studenti con sindrome di Asperger:';
+
+  @override
+  String get c12a2_2_answer1 =>
+      'L\'insegnante divide il compito in due fasi. Nella prima parte, uno studente lancia la palla al compagno con sindrome di Asperger, quest’ultimo fa 5 passi e la rilancia al compagno (e così via). Nella seconda parte, i due bambini si lanciano la palla senza fermarsi e senza farla cadere.';
+
+  @override
+  String get c12a2_2_answer2 =>
+      'L\'insegnante divide il compito in due parti. Nella prima parte, l\'insegnante lancia la palla allo studente con sindrome di Asperger, quest\'ultimo fa 5 passi e la rilancia all’insegnante (e così via). Nella seconda parte, l\'insegnante e lo studente con sindrome di Asperger si lanciano la palla senza fermarsi e senza farla cadere.';
+
+  @override
+  String get c12a2_2_answer3 =>
+      'L\'insegnante gioca con lo studente con sindrome di Asperger. L\'insegnante e lo studente con sindrome di Asperger si lanciano la palla senza fermarsi e senza farla cadere.';
+
+  @override
+  String get c12a2_3_title => 'Afferrare e lanciare';
+
+  @override
+  String get c12a2_3_question =>
+      'Ambientazione e regole:\nLa palestra è divisa in quattro aree di gioco. I bambini sono divisi in otto squadre. Ogni area di gioco è divisa in due campi. Ogni squadra costruisce due castelli con i coni e li posiziona all\'estremità dei campi da gioco. Ogni squadra ha una palla morbida. I bambini devono eseguire almeno tre passaggi e solo dopo possono lanciare le palle cercando di far cadere i castelli degli avversari. Tutti gli studenti devono giocare con un livello di voce basso e chi grida riceve una penalità. Adattamento per studenti con sindrome di Asperger:';
+
+  @override
+  String get c12a2_3_answer1 =>
+      'Prima di lanciare la palla, gli studenti devono passarla al compagno di squadra con la sindrome di Asperger.';
+
+  @override
+  String get c12a2_3_answer2 =>
+      'Mentre gli studenti giocano, l\'insegnante fa lo stesso gioco con lo studente con sindrome di Asperger in un\'area riservata.';
+
+  @override
+  String get c12a2_3_answer3 =>
+      'L\'insegnante gioca nella squadra dello studente con sindrome di Asperger. Prima di lanciare la palla, i compagni e l\'insegnante devono passare la palla al compagno di squadra con la sindrome di Asperger.';
+
+  @override
+  String get c13a1_intro1 =>
+      'Siamo pronti per la sfida 13. Assumerai il ruolo di un insegnante di educazione fisica e dovrai creare una lezione. Ti fornirò alcune informazioni utili allo sviluppo della lezione, come le caratteristiche della classe, lo scopo della lezione e i risultati di apprendimento da raggiungere. Attenzione! Una risposta sbagliata causa la perdita di un cuore nella barra della vita dell\'avatar. Avrai a disposizione 20 cuori. Se li perderai tutti, dovrai ricominciare la sfida da capo. Iniziamo!';
+
+  @override
+  String get c13a1_intro2 =>
+      'Questa è una classe composta da 30 bambini. Grazie alle lezioni di educazione fisica degli anni precedenti, i bambini hanno acquisito una certa esperienza nella ginnastica e nella danza; hanno anche praticato atletica, nuoto, sport invernali e giochi tradizionali. La classe presenta una normale varietà di abilità motorie: circa 1/3 dei bambini è abbastanza competente in ginnastica, 1/3 è nella norma e 1/3 è meno competente. La maggior parte dei bambini è motivata quando svolge educazione fisica, anche se alcuni non hanno fiducia in sé stessi. La scuola ha una piccola palestra con alcuni attrezzi mobili (panche, plinti) che i bambini possono usare per svolgere esercizi di equilibrio, così come tappetini su cui lavorare. Se necessario, si può usare la musica per aggiungere stimoli alle sequenze motorie. Sono disponibili schede di lavoro contenenti descrizioni e immagini di esercizi di equilibrio da svolgere in coppia, oltre a suggerimenti su come svolgerli. I bambini hanno già scelto un compagno e hanno lavorato sulla creazione di spostamenti da fare insieme (movimenti speculari e corrispondenti, muoversi in direzioni diverse) e combinazioni di salti (utilizzando diversi tipi di salti e forme diverse). Hanno anche iniziato a creare una sequenza motoria che svilupperanno nelle settimane successive. La lezione mira a incoraggiare gli studenti a esplorare una serie di esercizi di equilibrio da fare a coppie, a modificarli se possibile e a combinarli come parte della loro sequenza motoria. I risultati di apprendimento della lezione coprono quattro aree:\n1. Fisico/Motorio: eseguire una serie di esercizi impegnativi di equilibrio in coppia che possano essere combinati per creare una sequenza motoria.\n2. Affettivo/Emotivo: acquisire la sicurezza e la motivazione nell’eseguire esercizi di equilibrio in coppia sempre più impegnativi.\n3. Cognitivo/Riflessivo: considerare gli esercizi del compagno come esempi per creare le proprie versioni, che verranno combinate per creare una sequenza motoria.\n4. Sociale/Connessione: lavorare in modo cooperativo per creare e perfezionare gli esercizi complessi di equilibrio da fare in coppia che verranno aggiunti alla sequenza motoria.';
+
+  @override
+  String get c13a1_intro3 =>
+      'Ora hai tutte le informazioni per iniziare a sviluppare le lezioni per i tuoi studenti. Se hai bisogno di leggere nuovamente le caratteristiche, lo scopo e i risultati di apprendimento della lezione, clicca sulla mia icona e vi fornirò tutte le informazioni.';
+
+  @override
+  String get c13a1_well_done =>
+      'Ben fatto! Avete selezionato le risposte corrette!';
+
+  @override
+  String get c13a1_mistakes => 'Sono state selezionate %1 opzioni sbagliate';
+
+  @override
+  String get c13a1_game_over =>
+      'Hai perso tutti i cuori, la sfida ricomincerà da capo';
+
+  @override
+  String get c13a1_stage => 'Fase %1';
+
+  @override
+  String get c13a1_finish =>
+      'Ben fatto! Avete completato questa attività. Ne manca ancora una per finire l\'ultima sfida!';
+
+  @override
+  String get c13_1_title => 'Introduzione';
+
+  @override
+  String get c13_1_question =>
+      'Sulla base delle informazioni fornite, scegli 2 abilità/qualità che verranno sviluppate dai bambini:';
+
+  @override
+  String get c13_1_correct_1 => 'Resilienza';
+
+  @override
+  String get c13_1_correct_2 => 'Indipendenza';
+
+  @override
+  String get c13_1_correct_3 => 'Comunicazione';
+
+  @override
+  String get c13_1_wrong_1 => 'Problem-solving';
+
+  @override
+  String get c13_1_wrong_2 => 'Intelligenza emotiva';
+
+  @override
+  String get c13_1_wrong_3 => 'Leadership';
+
+  @override
+  String get c13_1_wrong_4 => 'Valutazione';
+
+  @override
+  String get c13_1_wrong_5 => 'Personalità sportiva';
+
+  @override
+  String get c13_1_wrong_6 => 'Fiducia in sé stessi';
+
+  @override
+  String get c13_2_title => 'Stili o modelli di insegnamento';
+
+  @override
+  String get c13_2_question =>
+      'Stili o modelli di insegnamento: scegli 3 stili di Mosston che potresti utilizzare per raggiungere lo scopo della lezione';
+
+  @override
+  String get c13_2_correct_1 => 'Reciprocità';
+
+  @override
+  String get c13_2_correct_2 => 'Autovalutazione';
+
+  @override
+  String get c13_2_correct_3 => 'Scoperta divergente';
+
+  @override
+  String get c13_2_correct_4 => 'Programma individuale a scelta dello studente';
+
+  @override
+  String get c13_2_wrong_1 => 'Comando';
+
+  @override
+  String get c13_2_wrong_2 => 'Pratica';
+
+  @override
+  String get c13_2_wrong_3 => 'Inclusione';
+
+  @override
+  String get c13_2_wrong_4 => 'Scoperta guidata';
+
+  @override
+  String get c13_2_wrong_5 => 'Scoperta convergente';
+
+  @override
+  String get c13_2_wrong_6 => 'Autonomia dello studente';
+
+  @override
+  String get c13_2_wrong_7 => 'Autoapprendimento';
+
+  @override
+  String get c13_3_title => 'Modelli di insegnamento';
+
+  @override
+  String get c13_3_question =>
+      'Modelli didattici: tenendo a mente l\'obiettivo della lezione, scegli un modello didattico per migliorare la physical literacy degli studenti.';
+
+  @override
+  String get c13_3_correct_1 => 'Apprendimento cooperativo';
+
+  @override
+  String get c13_3_wrong_1 => 'Educazione allo sport';
+
+  @override
+  String get c13_3_wrong_2 =>
+      'Insegnamento della responsabilità personale e sociale';
+
+  @override
+  String get c13_3_wrong_3 => 'Educazione fisica basata sulla salute';
+
+  @override
+  String get c13_4_title => 'Compito';
+
+  @override
+  String get c13_4_question =>
+      'Compito: tenendo a mente l\'obiettivo della lezione e il modello didattico adottato, scegli un compito che possa aiutare gli studenti a migliorare le loro capacità.';
+
+  @override
+  String get c13_4_correct_1 =>
+      'I bambini possono scegliere gli esercizi di equilibri che vogliono fare e come combinarli nella sequenza motoria.';
+
+  @override
+  String get c13_4_wrong_1 =>
+      'Tutti i bambini devono svolgere gli stessi esercizi di equilibrio e le stesse sequenze motorie.';
+
+  @override
+  String get c13_4_wrong_2 =>
+      'I bambini devono svolgere gli stessi esercizi di equilibrio, ma possono scegliere come combinarli nella sequenza motoria.';
+
+  @override
+  String get c13_5_title => 'Supporto';
+
+  @override
+  String get c13_5_question =>
+      'Supporto: tenendo a mente l\'obiettivo della lezione e il modello didattico adottato, scegli un supporto che possa aiutare gli studenti a migliorare le loro capacità.';
+
+  @override
+  String get c13_5_correct_1 =>
+      'I bambini sono supportati dai loro compagni e da schede con immagini e testi che descrivono gli esercizi di equilibri e il modo in cui potrebbero essere combinati tra loro.';
+
+  @override
+  String get c13_5_wrong_1 =>
+      'L\'insegnante si muove all\'interno della classe per fornire supporto e consigli, se necessario.';
+
+  @override
+  String get c13_5_wrong_2 =>
+      'Alcuni studenti vengono nominati per fornire supporto e lavorare con un gruppo, fornendo consigli.';
+
+  @override
+  String get c13_6_title => 'Aspetti';
+
+  @override
+  String get c13_6_question =>
+      'Aspetti: Cosa modificheresti? Scegli due opzioni.';
+
+  @override
+  String get c13_6_correct_1 => 'Attività';
+
+  @override
+  String get c13_6_correct_2 => 'Attrezzature';
+
+  @override
+  String get c13_6_wrong_1 => 'Spazi';
+
+  @override
+  String get c13_6_wrong_2 => 'Gruppi';
+
+  @override
+  String get c13_6_wrong_3 => 'Condizioni';
+
+  @override
+  String get c13_6_wrong_4 => 'Tempo';
+
+  @override
+  String get c13_7_title => 'Priorità';
+
+  @override
+  String get c13_7_question =>
+      'Priorità: Quale sarebbe la tua priorità? Scegli due opzioni.';
+
+  @override
+  String get c13_7_correct_1 => 'Massima partecipazione';
+
+  @override
+  String get c13_7_correct_2 => 'Coinvolgimento';
+
+  @override
+  String get c13_7_correct_3 => 'Successo';
+
+  @override
+  String get c13_7_wrong_1 => 'Sicurezza';
+
+  @override
+  String get c13_7_wrong_2 => 'Apprendimento';
+
+  @override
+  String get c13_7_wrong_3 => 'Divertimento';
+
+  @override
+  String get c13_8_title => 'Strategia di valutazione';
+
+  @override
+  String get c13_8_question =>
+      'Strategia di valutazione: scegli la strategia di valutazione corretta per valutare l\'attività degli studenti.';
+
+  @override
+  String get c13_8_correct_1 =>
+      'Alla fine della lezione i bambini vengono divisi in due gruppi. Metà classe esegue la propria sequenza motoria e una coppia di osservatori fornisce un feedback su cosa hanno fatto bene e cosa potrebbero migliorare. Successivamente, l\'altra metà di classe esegue la propria sequenza e riceve anch’essa dei feedback da una coppia di osservatori.';
+
+  @override
+  String get c13_8_wrong_1 =>
+      'Alla fine della lezione ogni coppia deve eseguire la propria sequenza motoria di coppia davanti a tutti e l’insegnante dà loro un voto da 1 a 10.';
+
+  @override
+  String get c13_8_wrong_2 =>
+      'Gli studenti scrivono su un foglio di carta cosa hanno fatto bene e cosa potrebbero migliorare nella sequenza motoria di coppia.';
+
+  @override
+  String get c13a2_intro =>
+      'È necessario completare l\'ultima attività per superare la sfida finale.  Come descritto in precedenza, i risultati di apprendimento della lezione coprono quattro aree:\n1. Fisico/Motorio: eseguire una serie di esercizi impegnativi di equilibrio in coppia che possano essere combinati per creare una sequenza motoria\n2. Affettivo/Emotivo: acquisire la sicurezza e la motivazione nell’eseguire esercizi di equilibrio in coppia sempre più impegnativi\n3. Cognitivo/Riflessivo: considerare gli esercizi del compagno come esempi per creare le proprie versioni, che verranno combinate per creare una sequenza motoria\n4. Sociale/Connessione: lavorare in modo cooperativo per creare e perfezionare gli esercizi complessi di equilibrio da fare in coppia che verranno aggiunti alla sequenza motoria\n\nScegli 2 domande per ogni categoria.';
+
+  @override
+  String get c13a2_finish =>
+      'Ben fatto! Hai completato la sfida 13 e hai ritirato il tuo badge! Congratulazioni!!! Hai completato tutte le sfide!';
+
+  @override
+  String get c13_9_title => 'Fisico/Motorio';
+
+  @override
+  String get c13_9_question =>
+      'Fisico/Motorio: scegli due domande per far riflettere sul miglioramento motorio.';
+
+  @override
+  String get c13_9_correct_1 =>
+      'Quali miglioramenti hai apportato alle tue performance? Come lo sai?';
+
+  @override
+  String get c13_9_correct_2 =>
+      'Cosa sei capace di fare adesso che non riuscivi a fare prima della lezione?';
+
+  @override
+  String get c13_9_wrong_1 =>
+      'Quali nuove capacità hai imparato oggi? Puoi mostrarmi qual è la tecnica corretta?';
+
+  @override
+  String get c13_9_wrong_2 =>
+      'Quali nuove tattiche hai imparato oggi? Potresti dirmi perché sono importanti?';
+
+  @override
+  String get c13_9_wrong_3 =>
+      'Hai sviluppato qualche aspetto della tua fitness oggi? Come ti aiuterà e come potresti allenarla ulteriormente al di fuori delle lezioni di educazione fisica?';
+
+  @override
+  String get c13_9_wrong_4 =>
+      'Quale componente della fitness hai applicato in modo più efficace nella lezione di oggi e quando? Che impatto ha avuto?';
+
+  @override
+  String get c13_9_wrong_5 =>
+      'Mostra a un compagno i concetti che hai imparato oggi, senza usare le parole.';
+
+  @override
+  String get c13_9_wrong_6 =>
+      'Da 1 a 10, come valuteresti la tua abilità nei movimenti oggi? Cosa potrebbe migliorare il tuo punteggio?';
+
+  @override
+  String get c13_9_wrong_7 =>
+      'Se fossi tu l’insegnante, come insegneresti questa capacità?';
+
+  @override
+  String get c13_9_wrong_8 =>
+      'In che modo i movimenti/capacità usati in questa lezione possono aiutarvi in altri sport/attività?';
+
+  @override
+  String get c13_10_title => 'Affettivo/Emotivo';
+
+  @override
+  String get c13_10_question =>
+      'Affettivo/Emotivo: scegli due domande relative alle esperienze emotive vissute durante la lezione.';
+
+  @override
+  String get c13_10_correct_1 => 'Com\'è stato lavorare con gli altri oggi?';
+
+  @override
+  String get c13_10_correct_2 =>
+      'Quanto ti senti pronto a fare più attività di questo tipo?';
+
+  @override
+  String get c13_10_wrong_1 =>
+      'Cosa ti è piaciuto di più della lezione di oggi? Qual è stato il momento migliore?';
+
+  @override
+  String get c13_10_wrong_2 =>
+      'Ci sono stati parti della lezione che non ti sono piaciuti?';
+
+  @override
+  String get c13_10_wrong_3 =>
+      'Cosa avresti voluto che facessimo diversamente, di più o di meno?';
+
+  @override
+  String get c13_10_wrong_4 =>
+      'Di quale aspetto della tua lezione di EF sei più orgoglioso?';
+
+  @override
+  String get c13_10_wrong_5 =>
+      'Se potessi ripetere questa lezione, come l’avresti resa più divertente?';
+
+  @override
+  String get c13_10_wrong_6 =>
+      'Dopo la lezione di oggi, cosa vorresti imparare ora?';
+
+  @override
+  String get c13_10_wrong_7 => 'Ti senti apprezzato nella tua squadra/gruppo?';
+
+  @override
+  String get c13_10_wrong_8 =>
+      'Da 1 a 10, quanto divertente è stata questa lezione? Cosa si potrebbe fare per migliorare il punteggio?';
+
+  @override
+  String get c13_10_wrong_9 =>
+      'Quando hai dimostrato maggiore sicurezza nella lezione di oggi?';
+
+  @override
+  String get c13_10_wrong_10 =>
+      'Quando ti sei sentito fuori dalla tua zona di comfort oggi?';
+
+  @override
+  String get c13_10_wrong_11 =>
+      'Ti sei sentito al sicuro durante la lezione di oggi?';
+
+  @override
+  String get c13_11_title => 'Cognitivo/Riflessivo';
+
+  @override
+  String get c13_11_question =>
+      'Cognitivo/Riflessivo: scegli due domande relative al pensiero cognitivo e alla riflessione.';
+
+  @override
+  String get c13_11_correct_1 =>
+      'Su cosa hai bisogno di lavorare maggiormente per migliorare?';
+
+  @override
+  String get c13_11_correct_2 =>
+      'Quali ruoli potresti ricoprire nella lezione e quali competenze sono necessarie per ciascuno?';
+
+  @override
+  String get c13_11_wrong_1 =>
+      'Qual è stata la cosa più preziosa che hai imparato oggi? Come la utilizzerai in futuro?';
+
+  @override
+  String get c13_11_wrong_2 =>
+      'Come si potrebbe fare diversamente la prossima volta?';
+
+  @override
+  String get c13_11_wrong_3 =>
+      'Qual è per te la cosa più importante da ricordare oggi? Come la ricorderai?';
+
+  @override
+  String get c13_11_wrong_4 =>
+      'C\'è qualcosa che potresti fare prima della prossima lezione per approfondire o mettere in pratica ciò che abbiamo fatto oggi?';
+
+  @override
+  String get c13_11_wrong_5 =>
+      'C\'è un aspetto di questa attività su cui vorresti saperne di più?';
+
+  @override
+  String get c13_11_wrong_6 =>
+      'Quali regole o vincoli potresti aggiungere per rendere la lezione più difficile per te?';
+
+  @override
+  String get c13_11_wrong_7 =>
+      'Cosa potresti fare per rendere la lezione più semplice?';
+
+  @override
+  String get c13_11_wrong_8 =>
+      'Cosa farai per essere fisicamente attivo da qui alla prossima lezione?';
+
+  @override
+  String get c13_11_wrong_9 => 'Cosa ti piacerebbe approfondire?';
+
+  @override
+  String get c13_11_wrong_10 =>
+      'Se dovessi insegnare la lezione di oggi, come la struttureresti?';
+
+  @override
+  String get c13_12_title => 'Sociale/Connessione';
+
+  @override
+  String get c13_12_question =>
+      'Sociale/Connessione: scegli due domande relative alle interazioni sociali durante la lezione.';
+
+  @override
+  String get c13_12_correct_1 => 'Quanto hai lavorato bene con gli altri?';
+
+  @override
+  String get c13_12_correct_2 =>
+      'Chi ha dimostrato maggiore creatività oggi? Che impatto ha avuto?';
+
+  @override
+  String get c13_12_wrong_1 =>
+      'Chi è stato l’MVP (most valuable participant – miglior partecipante)? Perché?';
+
+  @override
+  String get c13_12_wrong_2 =>
+      'Chi ha dimostrato le migliori doti di leadership durante la lezione di oggi? Come ha fatto?';
+
+  @override
+  String get c13_12_wrong_3 =>
+      'Hai dimostrato gentilezza e rispetto per gli altri durante la lezione? Se sì, come?';
+
+  @override
+  String get c13_12_wrong_4 =>
+      'In che modo il relazionarsi con gli altri studenti ha influenzato i tuoi progressi in questa lezione?';
+
+  @override
+  String get c13_12_wrong_5 => 'Come insegneresti questa lezione a un amico?';
+
+  @override
+  String get c13_12_wrong_6 =>
+      'Descrivi un momento della lezione in cui hai aiutato un altro studente a fare progressi.';
+
+  @override
+  String get c13_12_wrong_7 =>
+      'Come hai contribuito al raggiungimento dell’obiettivo comune oggi?';
+
+  @override
+  String get c13_12_wrong_8 => 'Quanto hai comunicato bene con gli altri oggi?';
+
+  @override
+  String get c13_12_wrong_9 => 'Con chi hai lavorato bene oggi? Perché?';
+
+  @override
+  String get c13_12_wrong_10 =>
+      'Quale è il luogo migliore per giocare o fare ciò che abbiamo imparato oggi?';
+
+  @override
+  String get c13_12_wrong_11 =>
+      'Chi è il tuo modello di riferimento in questa classe? Perché?';
+
+  @override
+  String get c13_lives_remaining => 'Vite rimanenti';
+
+  @override
+  String get glossary_Attributes => 'Caratteristiche';
+
+  @override
+  String get glossary_AffectiveDomain => 'Dominio affettivo';
+
+  @override
+  String get glossary_CognitiveDomain => 'Dominio cognitivo ';
+
+  @override
+  String get glossary_Confidence => 'Fiducia';
+
+  @override
+  String get glossary_Domains => 'Domini';
+
+  @override
+  String get glossary_Dualism => 'Dualismo';
+
+  @override
+  String get glossary_Embodied => 'Embodied';
+
+  @override
+  String get glossary_Existentialism => 'Esistenzialismo';
+
+  @override
+  String get glossary_HealthLiteracy => 'Health literacy';
+
+  @override
+  String get glossary_HumanDimension => 'Dimensione umana';
+
+  @override
+  String get glossary_KnowledgeAndUnderstanding => 'Conoscenza e comprensione';
+
+  @override
+  String get glossary_Literacy => 'Literacy';
+
+  @override
+  String get glossary_Monism => 'Monismo';
+
+  @override
+  String get glossary_Motivation => 'Motivazione';
+
+  @override
+  String get glossary_MovementCapacities => 'Capacità motorie';
+
+  @override
+  String get glossary_MovementPatterns => 'Schemi motori';
+
+  @override
+  String get glossary_MovementVocabulary => 'Vocabolario motorio';
+
+  @override
+  String get glossary_Phenomenology => 'Fenomenologia';
+
+  @override
+  String get glossary_PhysicalActivity => 'Attività fisica';
+
+  @override
+  String get glossary_PhysicalCompetence => 'Competenza fisica';
+
+  @override
+  String get glossary_PhysicalDomain => 'Dominio fisico';
+
+  @override
+  String get glossary_PhysicalEducation => 'Educazione fisica';
+
+  @override
+  String get glossary_PhysicalLiteracy => 'Physical Literacy';
+
+  @override
+  String get glossary_Sport => 'Sport';
+
+  @override
+  String get glossary_Attributes_desc =>
+      'Sono gli elementi costitutivi della physical literacy, identificati nella definizione del concetto stesso. Durante lo sviluppo della physical literacy, le persone scopriranno di avere il potenziale per sviluppare tutte le caratteristiche identificate nella definizione completa.';
+
+  @override
+  String get glossary_AffectiveDomain_desc =>
+      'Il dominio affettivo si riferisce agli aspetti di motivazione, fiducia, autostima, sicurezza di sé e ad un positivo senso del sé, sviluppati e coltivati in diversi ambiti.';
+
+  @override
+  String get glossary_CognitiveDomain_desc =>
+      'Il dominio cognitivo riguarda la conoscenza e la comprensione della fitness (forma fisica) e della salute, inclusi esercizio, nutrizione, sonno e stile di vita, nonché lo sviluppo di azioni consapevoli, la comprensione del movimento e l’applicazione della creatività e dell’immaginazione in diversi ambiti.';
+
+  @override
+  String get glossary_Confidence_desc =>
+      'Può essere descritta come la percezione delle proprie capacità.';
+
+  @override
+  String get glossary_Domains_desc =>
+      'I domini della physical literacy includono i domini affettivo, fisico e cognitivo che sono interconnessi e alla base del concetto stesso di physical literacy. In letteratura vengono menzionati anche i domini comportamentale, sociale e ambientale.';
+
+  @override
+  String get glossary_Dualism_desc =>
+      'Si tratta della concezione secondo cui l’essere umano è costituito da due parti molto distinte e separate: il corpo e la mente.';
+
+  @override
+  String get glossary_Embodied_desc =>
+      'Nel contesto della physical literacy, il termine embodiment (incarnato) è usato specificamente per descrivere il potenziale che gli individui hanno di interagire con l\'ambiente tramite la loro dimensione embodied (incarnata). Questo comprende sia l\'embodiment come vissuto che come strumento o oggetto.';
+
+  @override
+  String get glossary_Existentialism_desc =>
+      'Una filosofia che si basa sul principio secondo cui l\'esistenza precede l\'essenza. In altre parole, la crescita personale avviene attraverso l’interazione con il mondo.';
+
+  @override
+  String get glossary_HealthLiteracy_desc =>
+      'Il grado con cui individui e gruppi possono ottenere, elaborare, comprendere, valutare e agire sulle informazioni necessarie per prendere decisioni in materia di salute pubblica a beneficio della comunità.';
+
+  @override
+  String get glossary_HumanDimension_desc =>
+      'Un aspetto dell\'essere umano attraverso il quale gli individui possono interagire con il mondo ed esprimersi. L\'embodiment è una di queste dimensioni (embodiment dimension).';
+
+  @override
+  String get glossary_KnowledgeAndUnderstanding_desc =>
+      'Si compone di due elementi principali. Il primo è legato alla comprensione dei principi fondamentali del movimento e delle prestazioni. Il secondo allo sviluppo della conoscenza e della comprensione della fitness e della salute, inclusa la comprensione del valore dell\'attività fisica, dell\'esercizio, di una dieta appropriata e della necessità di rilassarsi e dormire.';
+
+  @override
+  String get glossary_Literacy_desc =>
+      'La literacy (alfabetizzazione) è la nostra interazione embodied (incarnata) con l’ambiente. Comprende l\'uso di abilità e/o processi di pensiero critico e creativo, la trasmissione di informazioni attraverso varie forme di comunicazione e l\'applicazione di conoscenze e abilità per creare collegamenti tra vari contesti e al loro interno.';
+
+  @override
+  String get glossary_Monism_desc =>
+      'Si tratta della concezione secondo cui gli esseri umani sono un\'entità, un intero, e non sono divisibili in parti separate, come il corpo e la mente. Si parla anche di visione olistica o olismo, per indicare che gli esseri umani sono un intero indivisibile.';
+
+  @override
+  String get glossary_Motivation_desc =>
+      'Può essere definita come la direzione e l\'intensità dello sforzo personale.';
+
+  @override
+  String get glossary_MovementCapacities_desc =>
+      'Le capacità costitutive del movimento articolato.';
+
+  @override
+  String get glossary_MovementPatterns_desc =>
+      'Gli schemi motori generali comprendono l\'insieme dei movimenti che un individuo è in grado di eseguire. Gli schemi motori generali padroneggiati da un individuo possono essere definiti come il suo vocabolario motorio. Gli schemi motori specifici si sviluppano quando gli schemi di movimento vengono perfezionati e applicati in contesti di attività e forme di movimento specifici.';
+
+  @override
+  String get glossary_MovementVocabulary_desc =>
+      'Si riferisce all’insieme degli schemi motori.';
+
+  @override
+  String get glossary_Phenomenology_desc =>
+      'Una filosofia che si basa sul principio secondo cui noi, in quanto esseri umani, diamo significato al mondo nel momento in cui lo percepiamo. Gli oggetti nel mondo non hanno alcun significato prima che una persona ne percepisca le caratteristiche.';
+
+  @override
+  String get glossary_PhysicalActivity_desc =>
+      'Qualsiasi movimento prodotto dai muscoli scheletrici che richiede un costo energetico.';
+
+  @override
+  String get glossary_PhysicalCompetence_desc =>
+      'Può essere descritta come una sufficiente competenza nel vocabolario motorio, nelle capacità motorie e negli schemi motori, nonché del loro impiego in una serie di forme di movimento.';
+
+  @override
+  String get glossary_PhysicalDomain_desc =>
+      'Il dominio fisico incoraggia l\'acquisizione di competenze fisico-motorie in diversi ambiti, al fine di sviluppare un vocabolario motorio ricco e vario.';
+
+  @override
+  String get glossary_PhysicalEducation_desc =>
+      'L’educazione fisica è la materia scolastica, in cui i bambini praticano esercizio fisico e partecipano a giochi motori e sportivi.';
+
+  @override
+  String get glossary_PhysicalLiteracy_desc =>
+      'La physical literacy può essere descritta come la motivazione, fiducia, competenza fisica, conoscenza e comprensione necessarie per valorizzare e assumersi la responsabilità di impegnarsi nella pratica di attività fisica per tutta la vita.';
+
+  @override
+  String get glossary_Sport_desc =>
+      'Il termine sport è spesso utilizzato per indicare giochi o attività fisiche competitive. In questo contesto, gli sport sono disciplinati da un insieme di regole concordate e richiedono ai partecipanti di apprendere e mostrare abilità fisiche e atletiche. Gli sport fanno parte del programma di educazione fisica al fine di fornire esperienze di apprendimento.';
+}

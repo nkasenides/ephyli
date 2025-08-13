@@ -4,7 +4,7 @@ import 'package:ephyli/fragments/tutorial_step_2.dart';
 import 'package:ephyli/fragments/tutorial_step_3.dart';
 import 'package:flutter/material.dart';
 import 'package:fragment_navigate/navigate-control.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 import '../screen/view_activities_screen.dart';
 

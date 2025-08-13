@@ -2,7 +2,7 @@ import 'package:ephyli/screen/privacy_policy.dart';
 import 'package:ephyli/theme/themes.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:package_info_plus/package_info_plus.dart';
