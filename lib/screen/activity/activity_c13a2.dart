@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:math';
 
 import 'package:ephyli/controller/activity_manager.dart';
 import 'package:ephyli/theme/themes.dart';
@@ -44,13 +43,9 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
   int currentStage = 0;
   late int lives;
   Set<String> selectedAnswers = {}; // Track selected answers
-  bool showCorrect = false; // reveal mode after submit
 
   // List of stages with questions, correct and wrong answers
   List<Map<String, dynamic>> stages = [];
-
-  Set<String> _correctFor(int stageIndex) =>
-      (stages[stageIndex]["correct"] as List<String>).toSet();
 
   initializeStages() {
     stages = [
@@ -139,15 +134,9 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
 
   void handleSubmit() {
     final currentStageData = stages[currentStage];
-
-    final correct = _correctFor(currentStage);
-
-    final incorrectSelections = selectedAnswers.difference(correct).length;
-    final hasCorrectSelection = selectedAnswers.intersection(correct).isNotEmpty;
-
-    // List<String> correctAnswers = currentStageData["correct"];
-    // int incorrectSelections = selectedAnswers.difference(correctAnswers.toSet()).length;
-    // bool hasCorrectSelection = selectedAnswers.intersection(correctAnswers.toSet()).isNotEmpty;
+    List<String> correctAnswers = currentStageData["correct"];
+    int incorrectSelections = selectedAnswers.difference(correctAnswers.toSet()).length;
+    bool hasCorrectSelection = selectedAnswers.intersection(correctAnswers.toSet()).isNotEmpty;
 
     setState(() {
       if (!hasCorrectSelection) {
@@ -183,28 +172,6 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
             stage = C13A2Stage.finish;
           });
         }
-      }
-
-      // Reveal answers but do not advance yet
-      showCorrect = true;
-
-      if (lives <= 0) {
-        showCorrect = false; // override reveal on game over
-        _showGameOverDialog(AppLocalizations.of(context)!.c13a1_game_over);
-        _restartGame();
-      }
-
-    });
-  }
-
-  void _goToNextStage() {
-    setState(() {
-      if (currentStage < stages.length - 1) {
-        currentStage++;
-        selectedAnswers.clear();
-        showCorrect = false;
-      } else {
-        stage = C13A2Stage.finish;
       }
     });
   }
@@ -261,7 +228,7 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
         prefs,
         AppLocalizations.of(context)!.c13a2_intro,
         AppLocalizations.of(context)!.ready_letsgo,
-        () {
+            () {
           setState(() {
             stage = C13A2Stage.activity;
           });
@@ -270,18 +237,12 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
   }
 
   Widget activityGameView() {
+
     initializeStages();
 
     final currentStageData = stages[currentStage];
-    List<String> answerChoices = [
-      ...currentStageData["correct"],
-      ...currentStageData["wrong"]
-    ];
-
-    // Deterministic shuffle per stage to avoid thrash on rebuild
-    answerChoices.shuffle(Random(currentStage));
-
-    final correct = _correctFor(currentStage);
+    List<String> answerChoices = [...currentStageData["correct"], ...currentStageData["wrong"]];
+    answerChoices.sort((a, b) => a.compareTo(b),); // Randomize answer order
 
     return SingleChildScrollView(
       child: Padding(
@@ -289,6 +250,7 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+
             HealthBar(lives: lives),
 
             const Gap(20),
@@ -310,29 +272,9 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
 
             // Display Answer Choices (Selectable)
             ...answerChoices.map((answer) {
-              final isSelected = selectedAnswers.contains(answer);
-
-              Color tileColor;
-              IconData? trailingIcon;
-
-              if (showCorrect) {
-                if (correct.contains(answer)) {
-                  tileColor = Colors.green;
-                  trailingIcon = Icons.check;
-                } else if (isSelected) {
-                  tileColor = Colors.red;
-                  trailingIcon = Icons.close;
-                } else {
-                  tileColor = Colors.grey;
-                }
-              } else {
-                tileColor = isSelected ? Themes.primaryColor : Colors.grey;
-              }
-
+              bool isSelected = selectedAnswers.contains(answer);
               return GestureDetector(
-                onTap: showCorrect
-                    ? null
-                    : () {
+                onTap: () {
                   setState(() {
                     if (isSelected) {
                       selectedAnswers.remove(answer);
@@ -345,22 +287,13 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
                   padding: const EdgeInsets.all(12),
                   margin: const EdgeInsets.symmetric(vertical: 5),
                   decoration: BoxDecoration(
-                    color: tileColor,
+                    color: isSelected ? Themes.primaryColor : Colors.grey,
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: Colors.black),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          answer,
-                          style: const TextStyle(fontSize: 16, color: Colors.white),
-                        ),
-                      ),
-                      if (trailingIcon != null)
-                        Icon(trailingIcon, color: Colors.white),
-                    ],
+                  child: Text(
+                    answer,
+                    style: const TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
               );
@@ -368,36 +301,24 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
 
             const SizedBox(height: 20),
 
-            // Submit / Next Button
-            if (!showCorrect)
-              ElevatedButton(
-                onPressed: selectedAnswers.isNotEmpty ? handleSubmit : null,
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.all(16),
-                  backgroundColor: Colors.orange,
-                ),
-                child: const Text(
-                  "Submit Answers",
-                  style: TextStyle(fontSize: 18),
-                ),
-              )
-            else
-              ElevatedButton.icon(
-                onPressed: _goToNextStage,
-                icon: const Icon(Icons.arrow_forward),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.all(16),
-                  backgroundColor: Colors.blue,
-                ),
-                label: const Text(
-                  "Next",
-                  style: TextStyle(fontSize: 18),
-                ),
+            // Submit Button
+            ElevatedButton(
+              onPressed: selectedAnswers.isNotEmpty ? handleSubmit : null,
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(16),
+                backgroundColor: Colors.orange,
               ),
+              child: const Text(
+                "Submit Answers",
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+
           ],
         ),
       ),
     );
+
   }
 
   Widget activityFinishView() {
@@ -408,40 +329,40 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
             AppLocalizations.of(context)!.c13a2_finish,
             AppLocalizations.of(context)!.finish,
                 () {
-                  ActivityManager.completeActivity(activityID).then((value) {
-                    //Find all badges related to this activity and award them:
-                    for (var badgeID in Challenge.challenge13.badgeIDs) {
-                      var badge = GameBadge.findBadge(badgeID);
-                      badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
-                        if (!value) {
-                          badge.earn(context);
-                        }
-                      },);
+              ActivityManager.completeActivity(activityID).then((value) {
+                //Find all badges related to this activity and award them:
+                for (var badgeID in Challenge.challenge13.badgeIDs) {
+                  var badge = GameBadge.findBadge(badgeID);
+                  badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                    if (!value) {
+                      badge.earn(context);
                     }
-
-                    //Unlock next challenges:
-                    List<Future> unlockFutures = [];
-                    for (var challengeID in Challenge.challenge13.unlocksChallengesIDs) {
-                      Challenge challenge = Challenge.findChallenge(challengeID)!;
-                      challenge.isUnlocked().then((value) {
-                        if (!value) {
-                          unlockFutures.add(challenge.unlock());
-                        }
-                      },);
-                    }
-
-                    //Show toast and move back:
-                    Future.wait(unlockFutures).then((value) {
-                      if (unlockFutures.isNotEmpty) {
-                        Fluttertoast.showToast(
-                            msg: AppLocalizations.of(context)!
-                                .challenges_unlocked.replaceAll(
-                                "%1", unlockFutures.length.toString()));
-                      }
-                    },);
                   },);
-                  Navigator.pop(context, "_");
-                  Navigator.pop(context, "_");
+                }
+
+                //Unlock next challenges:
+                List<Future> unlockFutures = [];
+                for (var challengeID in Challenge.challenge13.unlocksChallengesIDs) {
+                  Challenge challenge = Challenge.findChallenge(challengeID)!;
+                  challenge.isUnlocked().then((value) {
+                    if (!value) {
+                      unlockFutures.add(challenge.unlock());
+                    }
+                  },);
+                }
+
+                //Show toast and move back:
+                Future.wait(unlockFutures).then((value) {
+                  if (unlockFutures.isNotEmpty) {
+                    Fluttertoast.showToast(
+                        msg: AppLocalizations.of(context)!
+                            .challenges_unlocked.replaceAll(
+                            "%1", unlockFutures.length.toString()));
+                  }
+                },);
+              },);
+              Navigator.pop(context, "_");
+              Navigator.pop(context, "_");
             }
         );
       }
