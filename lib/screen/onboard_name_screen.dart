@@ -131,7 +131,7 @@ class _OnboardNameScreenState extends State<OnboardNameScreen> {
                   height: 50,
                   width: MediaQuery.of(context).size.width * 2/3,
                   child: ElevatedButton(
-                    child: Text(AppLocalizations.of(context)!.proceed.toUpperCase()),
+                    child: Text(TextUtils.removeGreekAccents(AppLocalizations.of(context)!.proceed.toUpperCase())),
                     onPressed: () async {
 
                       if (_formKey.currentState!.validate()) {

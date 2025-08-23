@@ -10,6 +10,7 @@ import '../../l10n/app_localizations.dart';
 
 import '../theme/app_images.dart';
 import '../theme/themes.dart';
+import '../utils/text_utils.dart';
 import 'onboard_name_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -84,7 +85,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         MaterialPageRoute(builder: (context) => const OnboardNameScreen(),)
                       );
                     },
-                    child: Text(AppLocalizations.of(context)!.start.toUpperCase()),
+                    child: Text(TextUtils.removeGreekAccents(AppLocalizations.of(context)!.start.toUpperCase())),
                   ),
                 ),
 

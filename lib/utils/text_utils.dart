@@ -29,4 +29,15 @@ extension TextUtils on String {
         lengthReal, (_) => _chars.codeUnitAt(_rnd.nextInt(_chars.length))));
   }
 
+  /// Removes Greek accents from a string.
+  static removeGreekAccents(String text) {
+    text = text.replaceAll("Έ", "Ε");
+    text = text.replaceAll("Ή", "Η");
+    text = text.replaceAll("Ί", "Ι");
+    text = text.replaceAll("Ό", "Ο");
+    text = text.replaceAll("Ύ", "Υ");
+    text = text.replaceAll("Ώ", "Ω");
+    return text;
+  }
+
 }
