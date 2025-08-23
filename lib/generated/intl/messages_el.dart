@@ -89,7 +89,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Διαθέσιμες κάρτες",
     ),
     "back": MessageLookupByLibrary.simpleMessage("Πίσω"),
-    "badges_view_title": MessageLookupByLibrary.simpleMessage("Τα σήματα σας"),
+    "badges_view_title": MessageLookupByLibrary.simpleMessage(
+      "Τα παρασημά σας",
+    ),
     "basic_rules_knowledge": MessageLookupByLibrary.simpleMessage(
       "Ο μαθητής μπορεί να περιγράψει τους κανόνες του παιχνιδιού της καλαθοσφαίρισης και να κατανοήσει τα οφέλη για την υγεία που σχετίζονται με την αθλητική πρακτική (γνωστική διάσταση).",
     ),
@@ -1502,7 +1504,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "no": MessageLookupByLibrary.simpleMessage("Όχι"),
     "no_badges_yet": MessageLookupByLibrary.simpleMessage(
-      "Δεν έχετε κερδίσει ακόμα κανένα παράσημο. Ολοκληρώστε ορισμένες προκλήσεις για να κερδίσετε παράσημα.",
+      "Δεν έχετε κερδίσει κάποιο παράσημο. Ολοκληρώστε τις προκλήσεις για να κερδίσετε παράσημα.",
     ),
     "ok": MessageLookupByLibrary.simpleMessage("OK"),
     "organizations": MessageLookupByLibrary.simpleMessage("Οργανισμοί"),

@@ -235,7 +235,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get pleaseTurnDevice => 'Παρακαλώ περιστρέψτε τη συσκευή σας.';
 
   @override
-  String get badges_view_title => 'Τα σήματα σας';
+  String get badges_view_title => 'Τα παρασημά σας';
 
   @override
   String get you_have_earned_badge =>
@@ -265,7 +265,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get no_badges_yet =>
-      'Δεν έχετε κερδίσει ακόμα κανένα παράσημο. Ολοκληρώστε ορισμένες προκλήσεις για να κερδίσετε παράσημα.';
+      'Δεν έχετε κερδίσει κάποιο παράσημο. Ολοκληρώστε τις προκλήσεις για να κερδίσετε παράσημα.';
 
   @override
   String get about => 'Σχετικά με το';
