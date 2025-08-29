@@ -52,7 +52,6 @@ class _EPhyLiAppState extends State<EPhyLiApp> {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "ePhyLi",
-        debugShowCheckedModeBanner: false,
         home: FutureBuilder(
           future: dataFuture,
           builder: (context, snapshot) {
