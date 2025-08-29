@@ -13,25 +13,25 @@ class LessonBox extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width - 100,
       height: 120,
-      padding: const EdgeInsets.all(5),
-      decoration: BoxDecoration(
-        color: isDragging ? Colors.blue.withOpacity(0.7) : Colors.blueAccent,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          if (!isDragging)
-            const BoxShadow(
-              color: Colors.black26,
-              offset: Offset(2, 2),
-              blurRadius: 4,
-            ),
-        ],
-      ),
+      // padding: const EdgeInsets.all(5),
+      // decoration: BoxDecoration(
+      //   color: isDragging ? Colors.blue.withOpacity(0.7) : Colors.blueAccent,
+      //   borderRadius: BorderRadius.circular(8),
+      //   boxShadow: [
+      //     if (!isDragging)
+      //       const BoxShadow(
+      //         color: Colors.black26,
+      //         offset: Offset(2, 2),
+      //         blurRadius: 4,
+      //       ),
+      //   ],
+      // ),
       alignment: Alignment.center,
       child: Material(
         color: Colors.transparent,
         child: Text(
           lessonText,
-          style: const TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),
       ),

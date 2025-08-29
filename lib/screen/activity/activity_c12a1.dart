@@ -17,7 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 import '../../widgets/lesson_box.dart';
 import '../../widgets/tower_widget.dart';

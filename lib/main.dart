@@ -9,6 +9,7 @@ import 'app.dart';
 main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
+  debugPrint("App running");
 
   //Load Language preference:
   var sharedPreferences = await SharedPreferences.getInstance();

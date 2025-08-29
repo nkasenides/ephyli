@@ -15,7 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 import '../../utils/pref_utils.dart';
 
@@ -228,7 +228,7 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
         prefs,
         AppLocalizations.of(context)!.c13a2_intro,
         AppLocalizations.of(context)!.ready_letsgo,
-        () {
+            () {
           setState(() {
             stage = C13A2Stage.activity;
           });
@@ -329,40 +329,40 @@ class _ActivityC13A2State extends State<ActivityC13A2> {
             AppLocalizations.of(context)!.c13a2_finish,
             AppLocalizations.of(context)!.finish,
                 () {
-                  ActivityManager.completeActivity(activityID).then((value) {
-                    //Find all badges related to this activity and award them:
-                    for (var badgeID in Challenge.challenge13.badgeIDs) {
-                      var badge = GameBadge.findBadge(badgeID);
-                      badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
-                        if (!value) {
-                          badge.earn(context);
-                        }
-                      },);
+              ActivityManager.completeActivity(activityID).then((value) {
+                //Find all badges related to this activity and award them:
+                for (var badgeID in Challenge.challenge13.badgeIDs) {
+                  var badge = GameBadge.findBadge(badgeID);
+                  badge!.isEarned().then((value) { //only award badge if it has not been earned yet.
+                    if (!value) {
+                      badge.earn(context);
                     }
-
-                    //Unlock next challenges:
-                    List<Future> unlockFutures = [];
-                    for (var challengeID in Challenge.challenge13.unlocksChallengesIDs) {
-                      Challenge challenge = Challenge.findChallenge(challengeID)!;
-                      challenge.isUnlocked().then((value) {
-                        if (!value) {
-                          unlockFutures.add(challenge.unlock());
-                        }
-                      },);
-                    }
-
-                    //Show toast and move back:
-                    Future.wait(unlockFutures).then((value) {
-                      if (unlockFutures.isNotEmpty) {
-                        Fluttertoast.showToast(
-                            msg: AppLocalizations.of(context)!
-                                .challenges_unlocked.replaceAll(
-                                "%1", unlockFutures.length.toString()));
-                      }
-                    },);
                   },);
-                  Navigator.pop(context, "_");
-                  Navigator.pop(context, "_");
+                }
+
+                //Unlock next challenges:
+                List<Future> unlockFutures = [];
+                for (var challengeID in Challenge.challenge13.unlocksChallengesIDs) {
+                  Challenge challenge = Challenge.findChallenge(challengeID)!;
+                  challenge.isUnlocked().then((value) {
+                    if (!value) {
+                      unlockFutures.add(challenge.unlock());
+                    }
+                  },);
+                }
+
+                //Show toast and move back:
+                Future.wait(unlockFutures).then((value) {
+                  if (unlockFutures.isNotEmpty) {
+                    Fluttertoast.showToast(
+                        msg: AppLocalizations.of(context)!
+                            .challenges_unlocked.replaceAll(
+                            "%1", unlockFutures.length.toString()));
+                  }
+                },);
+              },);
+              Navigator.pop(context, "_");
+              Navigator.pop(context, "_");
             }
         );
       }

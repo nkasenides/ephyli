@@ -14,8 +14,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/constants.dart';
 import '../utils/pref_utils.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
+import '../utils/text_utils.dart';
 import '../utils/ui_utils.dart';
 import '../widgets/page_indicator.dart';
 
@@ -128,7 +129,7 @@ class _BuddyScreenState extends State<BuddyScreen> with TickerProviderStateMixin
                 height: 50,
                 width: MediaQuery.of(context).size.width * 2/3,
                 child: ElevatedButton(
-                  child: Text(AppLocalizations.of(context)!.proceed.toUpperCase()),
+                  child: Text(TextUtils.removeGreekAccents(AppLocalizations.of(context)!.proceed.toUpperCase())),
                   onPressed: () async {
 
                     //Save to prefs and move on:

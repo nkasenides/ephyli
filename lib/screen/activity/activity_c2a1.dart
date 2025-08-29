@@ -15,7 +15,7 @@ import '../../utils/constants.dart';
 import '../../utils/pref_utils.dart';
 import '../../widgets/buddy_avatar_widget.dart';
 import '../../widgets/chat_bubble.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 class ActivityC2A1 extends StatefulWidget {
   @override
@@ -96,7 +96,7 @@ class _ActivityC2A1State extends State<ActivityC2A1> {
       events = [
         {"event": AppLocalizations.of(context)!.c2a1_term1, "date": "1884"},
         {"event": AppLocalizations.of(context)!.c2a1_term2, "date": "1920"},
-        {"event": AppLocalizations.of(context)!.c2a1_term3, "date": "1933"},
+        // {"event": AppLocalizations.of(context)!.c2a1_term3, "date": "1933"}, // Removed based on Nigel's comments
         {"event": AppLocalizations.of(context)!.c2a1_term4, "date": "1937"},
         {"event": AppLocalizations.of(context)!.c2a1_term5, "date": "2001"},
         {"event": AppLocalizations.of(context)!.c2a1_term6, "date": "2017"},

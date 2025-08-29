@@ -19,7 +19,7 @@ import 'package:widget_zoom/widget_zoom.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 class ActivityC5A1 extends StatefulWidget {
   @override
@@ -57,6 +57,8 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
     activity = Activity.activities[activityID]!;
   }
 
+  List<String> elementTexts = List.filled(10, "?");
+
   @override
   void initState() {
     //Initialize prefs & activity data:
@@ -86,11 +88,11 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
 
     if (correctElementsToAreas.isEmpty) {
       correctElementsToAreas = {
-        "Physical Competence": "Element 1",
+        "Competence": "Element 1",
         "Confidence": "Element 2",
         "Valuation": "Element 3",
         "Motivation": "Element 4",
-        "Self-Confidence": "Element 5",
+        "Self-Competence": "Element 5",
         "Agency": "Element 6",
         "Relatedness": "Element 7",
         "Connectedness": "Element 8",
@@ -141,7 +143,6 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
                 child: ImageMap(
                   image: Image.asset('assets/img/diagram_noanswers.jpg'),
                   regions: [
-
                     //Element 1:
                     ImageMapRegion.fromRect(
                         rect: const Rect.fromLTRB(360, 360, 225, 328),
@@ -165,9 +166,9 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
 
                     //Element 4:
                     ImageMapRegion.fromRect(
-                        rect: const Rect.fromLTRB(622, 323, 749, 349),
-                        color: getColorFromCurrentPlacement("Element 4"),
-                        title: "Element 4"
+                      rect: const Rect.fromLTRB(622, 323, 749, 349),
+                      color: getColorFromCurrentPlacement("Element 4"),
+                      title: "Element 4",
                     ),
 
                     //Element 5:
@@ -211,14 +212,32 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
                         color: getColorFromCurrentPlacement("Element 10"),
                         title: "Element 10"
                     ),
-
-
                   ],
                   onTap: (ImageMapRegion region) {
                     _showDialog(context, region.title!);
                   },
                 ),
               ),
+
+              // //Labels:
+              // Positioned( //LABEL 1
+              //   left: 303,
+              //   top: 224,
+              //   child: Text(elementTexts[0], textAlign: TextAlign.center,)
+              // ),
+              //
+              // Positioned( //LABEL 2
+              //     left: 452,
+              //     top: 108,
+              //     child: Text(elementTexts[1], textAlign: TextAlign.center,)
+              // ),
+              //
+              // Positioned( //LABEL 3
+              //     left: 452,
+              //     top: 108,
+              //     child: Text(elementTexts[1], textAlign: TextAlign.center,)
+              // ),
+
             ],
           );
         }
@@ -322,6 +341,16 @@ class _ActivityC5A1State extends State<ActivityC5A1> {
                 Navigator.of(context).pop();
               },
             ),
+
+            areaToElementPlacements[regionID] != null ? TextButton(
+              child: Text(AppLocalizations.of(context)!.clear),
+              onPressed: () {
+                setState(() {
+                  areaToElementPlacements.remove(regionID);
+                });
+                Navigator.pop(context);
+              },
+            ) : Container(),
           ],
           actionsAlignment: MainAxisAlignment.start,
         );

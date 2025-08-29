@@ -15,7 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 import '../../utils/pref_utils.dart';
 
@@ -259,7 +259,7 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
         prefs,
         AppLocalizations.of(context)!.c13a1_intro1,
         AppLocalizations.of(context)!.ready_letsgo,
-        () {
+            () {
           setState(() {
             stage = C13A1Stage.introduction2;
           });
@@ -388,12 +388,12 @@ class _ActivityC13A1State extends State<ActivityC13A1> {
             AppLocalizations.of(context)!.c13a1_finish,
             AppLocalizations.of(context)!.finish,
                 () {
-                  //Save the remaining lives:
-                  prefs.setInt(PrefUtils.remaining_lives_c13, lives);
+              //Save the remaining lives:
+              prefs.setInt(PrefUtils.remaining_lives_c13, lives);
 
-                  ActivityManager.completeActivity(activityID).then((value) {
-                    Navigator.pop(context, "_");
-                  },);
+              ActivityManager.completeActivity(activityID).then((value) {
+                Navigator.pop(context, "_");
+              },);
             }
         );
       }

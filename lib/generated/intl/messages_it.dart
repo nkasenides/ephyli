@@ -975,7 +975,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mantenimento delle nuove attività nel tempo",
     ),
     "c4a1_category_active": MessageLookupByLibrary.simpleMessage("Attivo"),
-    "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Divertente"),
+    "c4a1_category_funny": MessageLookupByLibrary.simpleMessage("Divertimento"),
     "c4a1_category_movements": MessageLookupByLibrary.simpleMessage(
       "Include diversi movimenti",
     ),
@@ -987,7 +987,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "È una domenica soleggiata. Scegli quale attività ricreativa sarebbe più adatta a un bambino. Clicca sulle qualità mostrate sullo schermo per ogni attività, cercando di individuare quali potrebbero essere proposte per aumentare la physical literacy del bambino. Attenzione! Se sceglierai la qualità sbagliata, dovrai ricominciare. Al termine della scelta, clicca su \"Verifica\".",
     ),
     "c4a1_intro_message": MessageLookupByLibrary.simpleMessage(
-      "Siamo pronti per la sfida 4. Sarai immerso in diversi scenari di vita reale. Pensa ai fattori o alle strategie che influenzano la motivazione a praticare attività fisica/movimento. Iniziamo?",
+      "Benvenuti alla Sfida 4. Sarai immerso in diversi scenari di vita reale. Pensa ai fattori o alle strategie che influenzano la motivazione a impegnarsi in attività fisica/movimento. Devi scegliere i fattori che si applicano a ogni scenario. In ogni scenario può esserci più di un fattore che si applica. Pronto?",
     ),
     "c4a1_term1": MessageLookupByLibrary.simpleMessage(
       "Giocare ai videogiochi con tablet, smartphone o PC o guardare la TV da soli",
@@ -1045,7 +1045,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Scegli una delle seguenti opzioni",
     ),
     "c5a1_intro_message": MessageLookupByLibrary.simpleMessage(
-      "Siamo pronti per la sfida 5. Completa il diagramma inserendo le parole mancanti. Iniziamo!",
+      "Siamo pronti per la sfida 5. Completa il diagramma inserendo le parole mancanti. Fare clic sulle caselle gialle e quindi selezionare l\'elemento corretto per quella parte del diagramma. Iniziamo!",
     ),
     "c6a1_congrats": MessageLookupByLibrary.simpleMessage(
       "Ben fatto! Tutti i concetti sono stati abbinati correttamente alle relative descrizioni. Fare clic su \"Fine\" per ottenere il badge.",
@@ -1221,6 +1221,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "check_solution": MessageLookupByLibrary.simpleMessage(
       "Controlla la soluzione",
     ),
+    "clear": MessageLookupByLibrary.simpleMessage("Chiaro"),
     "clickOKToContinue": MessageLookupByLibrary.simpleMessage(
       "Clicca su OK per continuare",
     ),

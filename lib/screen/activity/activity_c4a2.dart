@@ -20,7 +20,7 @@ import '../../utils/constants.dart';
 import '../../utils/pref_utils.dart';
 import '../../widgets/buddy_avatar_widget.dart';
 import '../../widgets/chat_bubble.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 class ActivityC4A2 extends StatefulWidget {
   @override

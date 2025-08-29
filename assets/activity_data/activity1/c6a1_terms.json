@@ -15,10 +15,10 @@
         "it": "L'acquisizione di informazioni non collegate non ha organizzazione e non ha alcun senso."
       },
       "wrongDescription": {
-        "en": "The base of the structure",
-        "el": "Η βάση της δομής",
-        "fr": "La base de la structure",
-        "it": "La base della struttura"
+        "en": "Before a building is constructed",
+        "el": "Πριν κατασκευαστεί ένα κτίριο",
+        "fr": "Avant la construction d'un bâtiment",
+        "it": "Prima che un edificio venga costruito"
       }
     },
     {
@@ -36,10 +36,10 @@
         "it": "Vengono stabiliti collegamenti semplici e ovvi, ma non se ne coglie l'importanza."
       },
       "wrongDescription": {
-        "en": "One skill is learnt and applied.",
-        "el": "Μία δεξιότητα μαθαίνεται και εφαρμόζεται.",
-        "fr": "Une compétence est apprise et appliquée.",
-        "it": "Si apprende e si applica una sola competenza."
+        "en": "One building is constructed",
+        "el": "Ένα κτίριο κατασκευάζεται",
+        "fr": "Un bâtiment est construit",
+        "it": "Un edificio è costruito"
       }
     },
     {
@@ -57,10 +57,10 @@
         "it": "Vengono stabiliti diversi collegamenti, ma si perdono le meta-connessioni tra di essi, così come la loro importanza per l'insieme."
       },
       "wrongDescription": {
-        "en": "Lots of skills are performed",
-        "el": "Πολλές δεξιότητες εφαρμόζονται",
-        "fr": "De nombreuses compétences sont mises en œuvre",
-        "it": "Vengono svolte molte abilità"
+        "en": "Many buildings are constructed",
+        "el": "Πολλά κτίρια κατασκευάζονται",
+        "fr": "De nombreux bâtiments sont construits",
+        "it": "Molti edifici sono costruiti"
       }
     },
     {
@@ -79,7 +79,7 @@
       },
       "wrongDescription": {
         "en": "Students work cooperatively together ",
-        "el": "Οι μαθητές εργάζονται συνεργατικά μεταξύ τους",
+        "el": "Οι μαθητές συνεργάζονται μεταξύ τους",
         "fr": "Les élèves travaillent ensemble de manière coopérative",
         "it": "Gli studenti lavorano insieme in modo cooperativo"
       }

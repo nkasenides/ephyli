@@ -9,7 +9,7 @@ import 'package:ephyli/widgets/buddy_avatar_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../widgets/chat_bubble.dart';

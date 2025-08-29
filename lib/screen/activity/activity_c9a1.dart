@@ -15,10 +15,10 @@ import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:widget_zoom/widget_zoom.dart';
 
+import '../../l10n/app_localizations.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ActivityC9A1 extends StatefulWidget {
   @override
@@ -90,9 +90,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
 
     if (shuffledFactors.isEmpty) {
 
-      factors =
-      kDebugMode ?
-      [
+      factors = [
         AppLocalizations.of(context)!.c9a1_throwing,
         AppLocalizations.of(context)!.c9a1_catching,
         AppLocalizations.of(context)!.c9a1_striking,
@@ -112,33 +110,16 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
         AppLocalizations.of(context)!.c9a1_natural_surroundings,
         AppLocalizations.of(context)!.c9a1_rocks_and_tress,
         AppLocalizations.of(context)!.c9a1_challenges,
-      ]
-      : [
-        "A1",
-        "B1",
-        "C2"
-      ]
-      ;
+      ];
 
-      variables =
-      kDebugMode ?
-      [
+      variables = [
         AppLocalizations.of(context)!.c9a1_object_play,
         AppLocalizations.of(context)!.c9a1_exercise_play,
         AppLocalizations.of(context)!.c9a1_expressive_movement,
         AppLocalizations.of(context)!.c9a1_outdoor_play,
-      ]
-      : [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
-      ;
+      ];
 
-      correctMappings =
-      kDebugMode ?
-      {
+      correctMappings = {
         AppLocalizations.of(context)!.c9a1_throwing: AppLocalizations.of(context)!.c9a1_object_play,
         AppLocalizations.of(context)!.c9a1_catching: AppLocalizations.of(context)!.c9a1_object_play,
         AppLocalizations.of(context)!.c9a1_striking: AppLocalizations.of(context)!.c9a1_object_play,
@@ -158,13 +139,7 @@ class _ActivityC9A1State extends State<ActivityC9A1> {
         AppLocalizations.of(context)!.c9a1_natural_surroundings: AppLocalizations.of(context)!.c9a1_outdoor_play,
         AppLocalizations.of(context)!.c9a1_rocks_and_tress: AppLocalizations.of(context)!.c9a1_outdoor_play,
         AppLocalizations.of(context)!.c9a1_challenges: AppLocalizations.of(context)!.c9a1_outdoor_play,
-      }
-      : {
-        "A1": "1",
-        "B1": "1",
-        "C2": "2",
-      }
-      ;
+      };
 
       shuffledFactors = List.from(factors);
       shuffledFactors.shuffle();

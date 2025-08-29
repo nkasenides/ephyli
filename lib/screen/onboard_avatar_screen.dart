@@ -13,11 +13,12 @@ import 'package:fluttermoji/fluttermojiCustomizer.dart';
 import 'package:fluttermoji/fluttermojiFunctions.dart';
 import 'package:fluttermoji/fluttermojiSaveWidget.dart';
 import 'package:fluttermoji/fluttermojiThemeData.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 import 'package:gap/gap.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../utils/pref_utils.dart';
+import '../utils/text_utils.dart';
 
 class OnboardAvatarScreen extends StatefulWidget {
 
@@ -96,7 +97,7 @@ class _OnboardAvatarScreenState extends State<OnboardAvatarScreen> {
                 height: 50,
                 width: MediaQuery.of(context).size.width * 2/3,
                 child: ElevatedButton(
-                  child: Text(AppLocalizations.of(context)!.proceed.toUpperCase()),
+                  child: Text(TextUtils.removeGreekAccents(AppLocalizations.of(context)!.proceed.toUpperCase())),
                   onPressed: () async {
 
                     //Encode avatar data:

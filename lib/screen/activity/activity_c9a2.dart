@@ -18,7 +18,7 @@ import 'package:widget_zoom/widget_zoom.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 class ActivityC9A2 extends StatefulWidget {
   @override
@@ -102,13 +102,7 @@ class _ActivityC9A2State extends State<ActivityC9A2> {
   Widget activityGameView() {
 
     if (statements.isEmpty) {
-      statements = kDebugMode ? [
-        {"text": "Correct1", "type": AppLocalizations.of(context)!.c9a2_correct},
-        {"text": "Correct2", "type": AppLocalizations.of(context)!.c9a2_correct},
-        {"text": "Wrong3", "type": AppLocalizations.of(context)!.c9a2_wrong},
-        {"text": "Wrong4", "type": AppLocalizations.of(context)!.c9a2_wrong},
-        {"text": "Wrong5", "type": AppLocalizations.of(context)!.c9a2_wrong},
-      ] : [
+      statements = [
         {"text": AppLocalizations.of(context)!.c9a2_activities_balanced, "type": AppLocalizations.of(context)!.c9a2_correct},
         {"text": AppLocalizations.of(context)!.c9a2_pe_curriculum_guidelines, "type": AppLocalizations.of(context)!.c9a2_correct},
         {"text": AppLocalizations.of(context)!.c9a2_music_motor_skills, "type": AppLocalizations.of(context)!.c9a2_correct},

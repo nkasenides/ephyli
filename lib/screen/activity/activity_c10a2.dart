@@ -14,7 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../model/activity.dart';
 import '../../model/challenge.dart';
 import '../../model/game_badge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 import '../../widgets/lesson_box.dart';
 
@@ -79,7 +79,6 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
   }
 
   Widget activityGameView() {
-
     if (teachingStyles.isEmpty) {
       teachingStyles = [
         AppLocalizations.of(context)!.command,
@@ -89,16 +88,7 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
     }
 
     if (lessons.isEmpty) {
-      lessons = kDebugMode ? [
-        {
-          "text": "Command1",
-          "style": AppLocalizations.of(context)!.command
-        },
-        {
-          "text": "Selfteaching1",
-          "style": AppLocalizations.of(context)!.self_teaching
-        },
-      ] : [
+      lessons = [
         // Command Style Lessons
         {
           "text": AppLocalizations.of(context)!.command_lesson_1,
@@ -116,7 +106,6 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
           "text": AppLocalizations.of(context)!.command_lesson_4,
           "style": AppLocalizations.of(context)!.command
         },
-
         // Guided Discovery Style Lessons
         {
           "text": AppLocalizations.of(context)!.discovery_lesson_1,
@@ -134,7 +123,6 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
           "text": AppLocalizations.of(context)!.discovery_lesson_4,
           "style": AppLocalizations.of(context)!.guided_discovery
         },
-
         // Self-Teaching Style Lessons
         {
           "text": AppLocalizations.of(context)!.self_teaching_lesson_1,
@@ -162,46 +150,84 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
           return Center(child: RotateDeviceWidget(Orientation.landscape));
         }
         return Padding(
-          padding: Themes.standardPadding,
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
           child: Column(
             children: [
-              // Teaching Styles as drop targets
+              const SizedBox(height: 10),
+
+              // Current lesson shown in the center
+              Expanded(
+                child: LessonBox(
+                  lessonText: lessons[currentLessonIndex]["text"]!,
+                ),
+              ),
+
+              const SizedBox(height: 20,),
+
+              Text(
+                AppLocalizations.of(context)!.c8a1_please_select_option,
+                style: const TextStyle(fontSize: 16),
+              ),
+
+              const SizedBox(height: 20,),
+
+              // Teaching style choices as tappable buttons
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: teachingStyles.map((style) {
-                  return buildTeachingStyleBox(style);
+                  return Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: GestureDetector(
+                        onTap: () => onTeachingStyleSelected(style),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          decoration: BoxDecoration(
+                            color: Colors.blue[100],
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.blue, width: 2),
+                          ),
+                          alignment: Alignment.center,
+                          child: Text(
+                            style,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
                 }).toList(),
               ),
 
-              const SizedBox(height: 40),
-
-              // Current Lesson to Drag
-              Expanded(
-                child: Center(
-                  child: Draggable<String>(
-                    data: lessons[currentLessonIndex]["style"],
-                    feedback: LessonBox(
-                      lessonText: lessons[currentLessonIndex]["text"]!,
-                      isDragging: true,
-                    ),
-                    childWhenDragging: Opacity(
-                      opacity: 0.3,
-                      child: LessonBox(
-                        lessonText: lessons[currentLessonIndex]["text"]!,
-                      ),
-                    ),
-                    child: LessonBox(
-                      lessonText: lessons[currentLessonIndex]["text"]!,
-                    ),
-                  ),
-                ),
-              ),
+              const SizedBox(height: 20),
             ],
           ),
         );
       },
     );
   }
+
+  void onTeachingStyleSelected(String selectedStyle) {
+    String correctStyle = lessons[currentLessonIndex]["style"]!;
+    if (selectedStyle == correctStyle) {
+      UIUtils.showFeedbackBar(context, true);
+
+      if (currentLessonIndex == lessons.length - 1) {
+        setState(() {
+          stage = C19A2Stage.finish;
+        });
+      } else {
+        setState(() {
+          currentLessonIndex++;
+        });
+      }
+    } else {
+      UIUtils.showFeedbackBar(context, false);
+    }
+  }
+
 
   // Build a box for each teaching style
   Widget buildTeachingStyleBox(String style) {
@@ -227,7 +253,7 @@ class _ActivityC10A2State extends State<ActivityC10A2> {
       builder: (context, candidateData, rejectedData) {
         return Container(
           width: MediaQuery.of(context).size.width * 0.25,
-          height: 100,
+          height: 60,
           decoration: BoxDecoration(
             color: Colors.blue[100],
             borderRadius: BorderRadius.circular(10),

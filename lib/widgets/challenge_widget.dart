@@ -12,7 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../fragments/fragments.dart';
 import '../model/activity.dart';
 import '../model/challenge.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 import '../model/game_badge.dart';
 import '../utils/pref_utils.dart';
@@ -60,7 +60,6 @@ class _ChallengeWidgetState extends State<ChallengeWidget> {
             }
         },
 
-        //TODO - DEBUGGING ONLY REMOVE LATER
         onLongPress: widget.adminMode ? !widget.challenge.completed ? () {
           debugPrint("Long press complete test");
           for (String activityID in widget.challenge.activityIDs) {

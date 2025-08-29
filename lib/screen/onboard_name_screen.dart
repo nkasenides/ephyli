@@ -6,7 +6,7 @@ import 'package:ephyli/utils/text_utils.dart';
 import 'package:ephyli/utils/ui_utils.dart';
 import 'package:ephyli/widgets/ephyli_gradient.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttermoji/fluttermoji.dart';
 import 'package:fluttermoji/fluttermojiFunctions.dart';
@@ -131,7 +131,7 @@ class _OnboardNameScreenState extends State<OnboardNameScreen> {
                   height: 50,
                   width: MediaQuery.of(context).size.width * 2/3,
                   child: ElevatedButton(
-                    child: Text(AppLocalizations.of(context)!.proceed.toUpperCase()),
+                    child: Text(TextUtils.removeGreekAccents(AppLocalizations.of(context)!.proceed.toUpperCase())),
                     onPressed: () async {
 
                       if (_formKey.currentState!.validate()) {
