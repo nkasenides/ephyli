@@ -106,30 +106,42 @@ class _AboutScreenState extends State<AboutScreen> {
 
                     const Divider(),
 
+                    const Gap(20),
+
                     Wrap(
                       alignment: WrapAlignment.spaceEvenly,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      runSpacing: 20,
                       children: [
 
-                        Image.asset("assets/img/uclan_logo.png", width: 100),
-                        Image.asset("assets/img/idl_logo.png", width: 100),
-                        Image.asset("assets/img/grantxpert_logo.png", width: 100),
-                        Image.asset("assets/img/eupea_logo.png", width: 100),
+                        Image.asset("assets/img/uclan_logo.png", height: 50),
+                        const Gap(5),
+                        Image.asset("assets/img/idl_logo.png", height: 50),
+                        const Gap(5),
+                        Image.asset("assets/img/grantxpert_logo.png", height: 50),
+                        const Gap(5),
+                        Image.asset("assets/img/eupea_logo.png", height: 50),
+                        const Gap(5),
+                        Image.asset("assets/img/unibz_logo.png", height: 50),
+
 
                       ],
                     ),
+
+                    const Gap(20),
 
                     const Divider(),
 
                     const Gap(20),
 
                     SwitchListTile(
-                      title: Text("Admin mode"),
+                      title: const Text("Admin mode"),
                       value: isInAdminMode,
                       onChanged: (value) {
                         if (value) {
                           showDialog(context: context, builder: (context) {
                             return AlertDialog(
-                              title: Text("Enter admin password"),
+                              title: const Text("Enter admin password"),
                               content: TextFormField(
                                 controller: passwordController,
                                 obscureText: true,
@@ -177,7 +189,9 @@ class _AboutScreenState extends State<AboutScreen> {
 
                     const Gap(20),
 
-                    Text("Version: $version", textAlign: TextAlign.center,),
+                    Text("Version: $version", textAlign: TextAlign.center, style: const TextStyle(color: Colors.grey),),
+
+                    const Gap(20),
 
 
                   ],
